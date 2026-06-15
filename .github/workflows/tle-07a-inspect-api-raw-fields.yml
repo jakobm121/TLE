@@ -1,0 +1,47 @@
+name: TLE 07a Inspect API Raw Fields
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  inspect-api-raw-fields:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Inspect API raw fields
+        run: |
+          python -m tle_machine.inspect_api_raw_fields
+
+      - name: Commit API inspect reports
+        if: always()
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/reports/api_tennis/api_raw_fields_inspect.json || true
+          git add data/reports/api_tennis/api_raw_field_values.csv || true
+          git add data/reports/api_tennis/api_raw_fixture_samples.json || true
+          git add data/reports/api_tennis/api_unknown_surface_samples.csv || true
+
+          if git diff --cached --quiet; then
+            echo "No API inspect report changes to commit."
+          else
+            git commit -m "Inspect API raw fields"
+            git push
+          fi
