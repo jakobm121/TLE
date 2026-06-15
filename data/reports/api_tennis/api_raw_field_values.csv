@@ -1,0 +1,734 @@
+group,field,presence,coverage_pct,value,count
+tournament_like,event_date,6347,100.0,2026-06-10,579
+tournament_like,event_date,6347,100.0,2026-05-27,512
+tournament_like,event_date,6347,100.0,2026-06-11,495
+tournament_like,event_date,6347,100.0,2026-06-04,477
+tournament_like,event_date,6347,100.0,2026-06-03,456
+tournament_like,event_date,6347,100.0,2026-05-28,428
+tournament_like,event_date,6347,100.0,2026-06-09,404
+tournament_like,event_date,6347,100.0,2026-06-02,386
+tournament_like,event_date,6347,100.0,2026-05-26,374
+tournament_like,event_date,6347,100.0,2026-06-12,317
+tournament_like,event_date,6347,100.0,2026-06-05,257
+tournament_like,event_date,6347,100.0,2026-05-29,241
+tournament_like,event_date,6347,100.0,2026-06-13,205
+tournament_like,event_date,6347,100.0,2026-05-31,178
+tournament_like,event_date,6347,100.0,2026-06-15,176
+tournament_like,event_date,6347,100.0,2026-05-30,169
+tournament_like,event_date,6347,100.0,2026-06-06,154
+tournament_like,event_date,6347,100.0,2026-06-07,149
+tournament_like,event_date,6347,100.0,2026-06-01,146
+tournament_like,event_date,6347,100.0,2026-06-14,143
+tournament_like,event_date,6347,100.0,2026-06-08,101
+tournament_like,event_final_result,6347,100.0,2 - 0,2066
+tournament_like,event_final_result,6347,100.0,0 - 2,1910
+tournament_like,event_final_result,6347,100.0,2 - 1,897
+tournament_like,event_final_result,6347,100.0,1 - 2,860
+tournament_like,event_final_result,6347,100.0,-,346
+tournament_like,event_final_result,6347,100.0,0 - 1,52
+tournament_like,event_final_result,6347,100.0,1 - 0,52
+tournament_like,event_final_result,6347,100.0,0 - 0,47
+tournament_like,event_final_result,6347,100.0,1 - 1,29
+tournament_like,event_final_result,6347,100.0,3 - 0,19
+tournament_like,event_final_result,6347,100.0,0 - 3,18
+tournament_like,event_final_result,6347,100.0,1 - 3,17
+tournament_like,event_final_result,6347,100.0,3 - 2,14
+tournament_like,event_final_result,6347,100.0,2 - 3,12
+tournament_like,event_final_result,6347,100.0,3 - 1,8
+tournament_like,event_first_player,6347,100.0,H. Barton,9
+tournament_like,event_first_player,6347,100.0,F. Auger-Aliassime,7
+tournament_like,event_first_player,6347,100.0,I. Jovic,7
+tournament_like,event_first_player,6347,100.0,A. Walton,6
+tournament_like,event_first_player,6347,100.0,S. Baez,6
+tournament_like,event_first_player,6347,100.0,A. Ruzic,6
+tournament_like,event_first_player,6347,100.0,F. Peliwo,6
+tournament_like,event_first_player,6347,100.0,D. Vekic,5
+tournament_like,event_first_player,6347,100.0,A. Sabalenka,5
+tournament_like,event_first_player,6347,100.0,M. Landaluce,5
+tournament_like,event_first_player,6347,100.0,Ruehl/ Veldheer,5
+tournament_like,event_first_player,6347,100.0,D. Blanch,5
+tournament_like,event_first_player,6347,100.0,J. Fearnley,4
+tournament_like,event_first_player,6347,100.0,V. Mboko,4
+tournament_like,event_first_player,6347,100.0,A. Kalinskaya,4
+tournament_like,event_first_player,6347,100.0,P. Henning,4
+tournament_like,event_first_player,6347,100.0,T. Griekspoor,3
+tournament_like,event_first_player,6347,100.0,S. Waltert,3
+tournament_like,event_first_player,6347,100.0,H. Vandewinkel,3
+tournament_like,event_first_player,6347,100.0,L. Siegemund,3
+tournament_like,event_first_player,6347,100.0,C. Gauff,3
+tournament_like,event_first_player,6347,100.0,T. Faurel,3
+tournament_like,event_first_player,6347,100.0,J. Faria,3
+tournament_like,event_first_player,6347,100.0,F. Diaz Acosta,3
+tournament_like,event_first_player,6347,100.0,M. Alkaya,3
+tournament_like,event_first_player,6347,100.0,C. Hemery,3
+tournament_like,event_first_player,6347,100.0,R. Strombachs,3
+tournament_like,event_first_player,6347,100.0,A. Nedic,3
+tournament_like,event_first_player,6347,100.0,A. Tabilo,2
+tournament_like,event_first_player,6347,100.0,J. Sinner,2
+tournament_like,event_first_player,6347,100.0,S. Ofner,2
+tournament_like,event_first_player,6347,100.0,M. Cilic,2
+tournament_like,event_first_player,6347,100.0,A. Bublik,2
+tournament_like,event_first_player,6347,100.0,E. Navarro,2
+tournament_like,event_first_player,6347,100.0,A. Li,2
+tournament_like,event_first_player,6347,100.0,E. Pridankina,2
+tournament_like,event_first_player,6347,100.0,A. Korneeva,2
+tournament_like,event_first_player,6347,100.0,Nam Ji/ Niklas-Salminen,2
+tournament_like,event_first_player,6347,100.0,D. Badenhorst,2
+tournament_like,event_first_player,6347,100.0,M. Sasikumar,2
+tournament_like,event_first_player,6347,100.0,L. Djere,2
+tournament_like,event_first_player,6347,100.0,P. Kotov,2
+tournament_like,event_first_player,6347,100.0,F. Maestrelli,2
+tournament_like,event_first_player,6347,100.0,E. Quinn,1
+tournament_like,event_first_player,6347,100.0,A. Popyrin,1
+tournament_like,event_first_player,6347,100.0,C. Norrie,1
+tournament_like,event_first_player,6347,100.0,A. Muller,1
+tournament_like,event_first_player,6347,100.0,V. Kopriva,1
+tournament_like,event_first_player,6347,100.0,C. Garin,1
+tournament_like,event_first_player,6347,100.0,L. Noskova,1
+tournament_like,event_first_player_logo,6347,100.0,<null>,3090
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/2241_h-barton.jpg,9
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/2073_f-auger-aliassime.jpg,7
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/58226_i-jovic.jpg,7
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/10070_a-walton.jpg,6
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/1101_s-baez.jpg,6
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/168_a-ruzic.jpg,6
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/1313_f-peliwo.jpg,6
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/455_d-vekic.jpg,5
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/1989_a-sabalenka.jpg,5
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/1314_d-blanch.jpg,5
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/1242_m-kasnikowski.jpg,5
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/12951_j-fearnley.jpg,4
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/9527_v-mboko.jpg,4
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/1820_a-kalinskaya.jpg,4
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/39864_m-landaluce.jpg,4
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/23664_p-henning.jpg,4
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/427_t-griekspoor.jpg,3
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/493_s-waltert.jpg,3
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/9254_h-vandewinkel.jpg,3
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/464_l-siegemund.jpg,3
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/2176_c-gauff.jpg,3
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/65519_t-faurel.jpg,3
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/824_j-faria.jpg,3
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/2002_f-diaz-acosta.jpg,3
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/8972_m-alkaya.jpg,3
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/1206_c-hemery.jpg,3
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/7489_r-strombachs.jpg,3
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/9640_-a-nedic.jpg,3
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/1739_j-clarke.jpg,3
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/2982_a-tabilo.jpg,2
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/2072_j-sinner.jpg,2
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/359_s-ofner.jpg,2
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/2167_m-cilic.jpg,2
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/1895_a-bublik.jpg,2
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/2823_e-navarro.jpg,2
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/2997_a-li.jpg,2
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/9399_e-pridankina.jpg,2
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/14547_a-korneeva.jpg,2
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/14373_d-badenhorst.jpg,2
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/1200_s-k-mukund.jpg,2
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/2386_l-djere.jpg,2
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/415_p-kotov.jpg,2
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/1180_f-maestrelli.jpg,2
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/1297_k-feldbausch.jpg,2
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/9225_e-quinn.jpg,1
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/1926_al-popyrin.jpg,1
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/1103_c-norrie.jpg,1
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/374_a-muller.jpg,1
+tournament_like,event_first_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/1083_v-kopriva.jpg,1
+tournament_like,event_game_result,6347,100.0,-,6241
+tournament_like,event_game_result,6347,100.0,0 - 0,63
+tournament_like,event_game_result,6347,100.0,15 - 15,8
+tournament_like,event_game_result,6347,100.0,15 - 0,6
+tournament_like,event_game_result,6347,100.0,0 - 30,5
+tournament_like,event_game_result,6347,100.0,30 - 0,5
+tournament_like,event_game_result,6347,100.0,40 - 40,5
+tournament_like,event_game_result,6347,100.0,0 - 15,3
+tournament_like,event_game_result,6347,100.0,40 - 0,3
+tournament_like,event_game_result,6347,100.0,30 - 30,2
+tournament_like,event_game_result,6347,100.0,15 - 40,1
+tournament_like,event_game_result,6347,100.0,30 - 40,1
+tournament_like,event_game_result,6347,100.0,A - 40,1
+tournament_like,event_game_result,6347,100.0,30 - 15,1
+tournament_like,event_game_result,6347,100.0,40 - 30,1
+tournament_like,event_game_result,6347,100.0,15 - 30,1
+tournament_like,event_key,6347,100.0,12129875,1
+tournament_like,event_key,6347,100.0,12129877,1
+tournament_like,event_key,6347,100.0,12129879,1
+tournament_like,event_key,6347,100.0,12129881,1
+tournament_like,event_key,6347,100.0,12129882,1
+tournament_like,event_key,6347,100.0,12129883,1
+tournament_like,event_key,6347,100.0,12129884,1
+tournament_like,event_key,6347,100.0,12129887,1
+tournament_like,event_key,6347,100.0,12129893,1
+tournament_like,event_key,6347,100.0,12129900,1
+tournament_like,event_key,6347,100.0,12129902,1
+tournament_like,event_key,6347,100.0,12129905,1
+tournament_like,event_key,6347,100.0,12129911,1
+tournament_like,event_key,6347,100.0,12129915,1
+tournament_like,event_key,6347,100.0,12129918,1
+tournament_like,event_key,6347,100.0,12129919,1
+tournament_like,event_key,6347,100.0,12129921,1
+tournament_like,event_key,6347,100.0,12129923,1
+tournament_like,event_key,6347,100.0,12129924,1
+tournament_like,event_key,6347,100.0,12129933,1
+tournament_like,event_key,6347,100.0,12129936,1
+tournament_like,event_key,6347,100.0,12129944,1
+tournament_like,event_key,6347,100.0,12129945,1
+tournament_like,event_key,6347,100.0,12129946,1
+tournament_like,event_key,6347,100.0,12129949,1
+tournament_like,event_key,6347,100.0,12129953,1
+tournament_like,event_key,6347,100.0,12129954,1
+tournament_like,event_key,6347,100.0,12129955,1
+tournament_like,event_key,6347,100.0,12129960,1
+tournament_like,event_key,6347,100.0,12129965,1
+tournament_like,event_key,6347,100.0,12130168,1
+tournament_like,event_key,6347,100.0,12130171,1
+tournament_like,event_key,6347,100.0,12130172,1
+tournament_like,event_key,6347,100.0,12130173,1
+tournament_like,event_key,6347,100.0,12130179,1
+tournament_like,event_key,6347,100.0,12130181,1
+tournament_like,event_key,6347,100.0,12130182,1
+tournament_like,event_key,6347,100.0,12130185,1
+tournament_like,event_key,6347,100.0,12130188,1
+tournament_like,event_key,6347,100.0,12130189,1
+tournament_like,event_key,6347,100.0,12130290,1
+tournament_like,event_key,6347,100.0,12130292,1
+tournament_like,event_key,6347,100.0,12130294,1
+tournament_like,event_key,6347,100.0,12130313,1
+tournament_like,event_key,6347,100.0,12130316,1
+tournament_like,event_key,6347,100.0,12130395,1
+tournament_like,event_key,6347,100.0,12130396,1
+tournament_like,event_key,6347,100.0,12130398,1
+tournament_like,event_key,6347,100.0,12130399,1
+tournament_like,event_key,6347,100.0,12130401,1
+tournament_like,event_live,6347,100.0,0,6319
+tournament_like,event_live,6347,100.0,1,28
+tournament_like,event_qualification,6347,100.0,False,5716
+tournament_like,event_qualification,6347,100.0,True,552
+tournament_like,event_qualification,6347,100.0,<null>,79
+tournament_like,event_second_player,6347,100.0,K. Majchrzak,7
+tournament_like,event_second_player,6347,100.0,A. Krueger,6
+tournament_like,event_second_player,6347,100.0,E. Winter,6
+tournament_like,event_second_player,6347,100.0,G. Onclin,6
+tournament_like,event_second_player,6347,100.0,J. Tjen,5
+tournament_like,event_second_player,6347,100.0,Z. Zhang,5
+tournament_like,event_second_player,6347,100.0,M. Sherif,5
+tournament_like,event_second_player,6347,100.0,T. Skatov,5
+tournament_like,event_second_player,6347,100.0,C. Tabur,4
+tournament_like,event_second_player,6347,100.0,Z. Svajda,4
+tournament_like,event_second_player,6347,100.0,L. Tien,4
+tournament_like,event_second_player,6347,100.0,N. Osaka,4
+tournament_like,event_second_player,6347,100.0,Pokorny/ Poljak,4
+tournament_like,event_second_player,6347,100.0,F. Agamenone,4
+tournament_like,event_second_player,6347,100.0,K. Coppejans,4
+tournament_like,event_second_player,6347,100.0,A. Shelbayh,4
+tournament_like,event_second_player,6347,100.0,C. Moutet,3
+tournament_like,event_second_player,6347,100.0,M. Arnaldi,3
+tournament_like,event_second_player,6347,100.0,M. Keys,3
+tournament_like,event_second_player,6347,100.0,S. Zhang,3
+tournament_like,event_second_player,6347,100.0,D. Parry,3
+tournament_like,event_second_player,6347,100.0,A. Eala,3
+tournament_like,event_second_player,6347,100.0,D. Shapovalov,3
+tournament_like,event_second_player,6347,100.0,E. Jacquemot,3
+tournament_like,event_second_player,6347,100.0,Bondioli/ Caniato,3
+tournament_like,event_second_player,6347,100.0,Jung/ Uesugi,3
+tournament_like,event_second_player,6347,100.0,K. Montsi,3
+tournament_like,event_second_player,6347,100.0,Z. Kolar,3
+tournament_like,event_second_player,6347,100.0,C. A. Caniato,3
+tournament_like,event_second_player,6347,100.0,D. Medvedev,2
+tournament_like,event_second_player,6347,100.0,F. Comesana,2
+tournament_like,event_second_player,6347,100.0,L. Darderi,2
+tournament_like,event_second_player,6347,100.0,S. Tsitsipas,2
+tournament_like,event_second_player,6347,100.0,J. M. Cerundolo,2
+tournament_like,event_second_player,6347,100.0,M. Kouame,2
+tournament_like,event_second_player,6347,100.0,R. A. Burruchaga,2
+tournament_like,event_second_player,6347,100.0,D. Altmaier,2
+tournament_like,event_second_player,6347,100.0,K. Siniakova,2
+tournament_like,event_second_player,6347,100.0,A. Tubello,2
+tournament_like,event_second_player,6347,100.0,J. Bouzas Maneiro,2
+tournament_like,event_second_player,6347,100.0,M. Sakkari,2
+tournament_like,event_second_player,6347,100.0,N. Bartunkova,2
+tournament_like,event_second_player,6347,100.0,V. Vacherot,2
+tournament_like,event_second_player,6347,100.0,O. Oliynykova,2
+tournament_like,event_second_player,6347,100.0,M. Uchijima,2
+tournament_like,event_second_player,6347,100.0,Hurrion/ Hussey,2
+tournament_like,event_second_player,6347,100.0,Y. Takahashi,2
+tournament_like,event_second_player,6347,100.0,A. Santillan,2
+tournament_like,event_second_player,6347,100.0,C. H. van Schalkwyk,2
+tournament_like,event_second_player,6347,100.0,A. Azkara,2
+tournament_like,event_second_player_logo,6347,100.0,<null>,3131
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/1096_k-majchrzak.jpg,7
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/817_m-karol.jpg,7
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/196_a-krueger.jpg,6
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/3318_e-winter.jpg,6
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/818_g-onclin.jpg,6
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/28551_j-tjen.jpg,5
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/590_z-zhang.jpg,5
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/510_m-sherif.jpg,5
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/362_t-skatov.jpg,5
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/1762_c-tabur.jpg,4
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/2986_z-svajda.jpg,4
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/10520_l-tien.jpg,4
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/2685_n-osaka.jpg,4
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/373_f-agamenone.jpg,4
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/1205_k-coppejans.jpg,4
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/9219_a-shelbayh.jpg,4
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/397_n-gombos.jpg,4
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/2674_c-moutet.jpg,3
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/1192_m-arnaldi.jpg,3
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/2692_m-keys.jpg,3
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/1825_s-zhang.jpg,3
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/1833_d-parry.jpg,3
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/3490_a-eala.jpg,3
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/431_d-shapovalov.jpg,3
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/1823_e-jacquemot.jpg,3
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/786_k-montsi.jpg,3
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/384_z-kolar.jpg,3
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/24283_c-a-caniato.jpg,3
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/823_f-roncadelli.jpg,3
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/907_h-squire.jpg,3
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/1093_d-medvedev.jpg,2
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/2084_f-comesana.jpg,2
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/8781_l-darderi.jpg,2
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/1906_s-tsitsipas.jpg,2
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/388_j-m-cerundolo.jpg,2
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/68751_m-kouame.jpg,2
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/9596_r-a-burruchaga.jpg,2
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/1099_d-altmaier.jpg,2
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/3006_k-siniakova.jpg,2
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/154_j-bouzas-maneiro.jpg,2
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/2076_m-sakkari.jpg,2
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/9196_n-bartunkova.jpg,2
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/1852_v-vacherot.jpg,2
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/12876_o-oliynykova.jpg,2
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/460_m-uchijima.jpg,2
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/2508_y-takahashi.jpg,2
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/868_a-santillan.jpg,2
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/33897_a-azkara.jpg,2
+tournament_like,event_second_player_logo,6347,100.0,https://api.api-tennis.com/logo-tennis/2407_g-a-olivieri.jpg,2
+tournament_like,event_serve,6347,100.0,<null>,6321
+tournament_like,event_serve,6347,100.0,First Player,16
+tournament_like,event_serve,6347,100.0,Second Player,10
+tournament_like,event_status,6347,100.0,Finished,5820
+tournament_like,event_status,6347,100.0,Retired,154
+tournament_like,event_status,6347,100.0,Walk Over,120
+tournament_like,event_status,6347,100.0,<blank>,114
+tournament_like,event_status,6347,100.0,Cancelled,111
+tournament_like,event_status,6347,100.0,Set 2,11
+tournament_like,event_status,6347,100.0,Set 1,10
+tournament_like,event_status,6347,100.0,Set 3,6
+tournament_like,event_status,6347,100.0,Interrupted,1
+tournament_like,event_time,6347,100.0,15:00,162
+tournament_like,event_time,6347,100.0,11:10,161
+tournament_like,event_time,6347,100.0,13:00,161
+tournament_like,event_time,6347,100.0,14:30,122
+tournament_like,event_time,6347,100.0,10:10,112
+tournament_like,event_time,6347,100.0,17:00,98
+tournament_like,event_time,6347,100.0,15:30,91
+tournament_like,event_time,6347,100.0,18:00,90
+tournament_like,event_time,6347,100.0,16:30,89
+tournament_like,event_time,6347,100.0,12:10,86
+tournament_like,event_time,6347,100.0,19:00,80
+tournament_like,event_time,6347,100.0,15:10,71
+tournament_like,event_time,6347,100.0,04:00,60
+tournament_like,event_time,6347,100.0,17:10,59
+tournament_like,event_time,6347,100.0,20:00,46
+tournament_like,event_time,6347,100.0,10:40,42
+tournament_like,event_time,6347,100.0,18:30,41
+tournament_like,event_time,6347,100.0,15:40,38
+tournament_like,event_time,6347,100.0,14:15,37
+tournament_like,event_time,6347,100.0,13:45,36
+tournament_like,event_time,6347,100.0,15:15,34
+tournament_like,event_time,6347,100.0,12:55,33
+tournament_like,event_time,6347,100.0,12:45,33
+tournament_like,event_time,6347,100.0,13:25,33
+tournament_like,event_time,6347,100.0,18:10,32
+tournament_like,event_time,6347,100.0,12:40,30
+tournament_like,event_time,6347,100.0,13:15,29
+tournament_like,event_time,6347,100.0,13:40,29
+tournament_like,event_time,6347,100.0,18:15,28
+tournament_like,event_time,6347,100.0,10:05,27
+tournament_like,event_time,6347,100.0,20:30,26
+tournament_like,event_time,6347,100.0,16:45,26
+tournament_like,event_time,6347,100.0,14:25,25
+tournament_like,event_time,6347,100.0,17:15,25
+tournament_like,event_time,6347,100.0,14:50,25
+tournament_like,event_time,6347,100.0,12:05,25
+tournament_like,event_time,6347,100.0,12:25,24
+tournament_like,event_time,6347,100.0,15:05,23
+tournament_like,event_time,6347,100.0,16:25,22
+tournament_like,event_time,6347,100.0,14:35,22
+tournament_like,event_time,6347,100.0,17:25,22
+tournament_like,event_time,6347,100.0,15:35,22
+tournament_like,event_time,6347,100.0,11:15,21
+tournament_like,event_time,6347,100.0,14:55,20
+tournament_like,event_time,6347,100.0,17:40,20
+tournament_like,event_time,6347,100.0,15:25,19
+tournament_like,event_time,6347,100.0,18:40,19
+tournament_like,event_time,6347,100.0,17:05,18
+tournament_like,event_time,6347,100.0,13:50,17
+tournament_like,event_time,6347,100.0,18:05,15
+surface_like,event_type_type,6347,100.0,Itf Men Singles,1366
+surface_like,event_type_type,6347,100.0,Itf Women Singles,1344
+surface_like,event_type_type,6347,100.0,Challenger Men Singles,842
+surface_like,event_type_type,6347,100.0,Itf Men Doubles,670
+surface_like,event_type_type,6347,100.0,Itf Women Doubles,613
+surface_like,event_type_type,6347,100.0,Challenger Men Doubles,248
+surface_like,event_type_type,6347,100.0,Challenger Women Singles,245
+surface_like,event_type_type,6347,100.0,Wta Singles,229
+surface_like,event_type_type,6347,100.0,Atp Singles,200
+surface_like,event_type_type,6347,100.0,Atp Doubles,112
+surface_like,event_type_type,6347,100.0,Wta Doubles,102
+surface_like,event_type_type,6347,100.0,Boys Singles,87
+surface_like,event_type_type,6347,100.0,Girls Singles,87
+surface_like,event_type_type,6347,100.0,Challenger Women Doubles,55
+surface_like,event_type_type,6347,100.0,Teams Men,35
+surface_like,event_type_type,6347,100.0,Mixed Doubles,33
+surface_like,event_type_type,6347,100.0,Boys Doubles,31
+surface_like,event_type_type,6347,100.0,Girls Doubles,31
+surface_like,event_type_type,6347,100.0,Teams Women,8
+surface_like,event_type_type,6347,100.0,Itf Men - Doubles,5
+surface_like,event_type_type,6347,100.0,Itf Men - Singles,4
+tournament_like,event_winner,6347,100.0,First Player,3142
+tournament_like,event_winner,6347,100.0,Second Player,2952
+tournament_like,event_winner,6347,100.0,<null>,253
+player_like,first_player_key,6347,100.0,2241,9
+player_like,first_player_key,6347,100.0,2073,7
+player_like,first_player_key,6347,100.0,58226,7
+player_like,first_player_key,6347,100.0,10070,6
+player_like,first_player_key,6347,100.0,1101,6
+player_like,first_player_key,6347,100.0,168,6
+player_like,first_player_key,6347,100.0,1313,6
+player_like,first_player_key,6347,100.0,455,5
+player_like,first_player_key,6347,100.0,1989,5
+player_like,first_player_key,6347,100.0,97037,5
+player_like,first_player_key,6347,100.0,1314,5
+player_like,first_player_key,6347,100.0,12951,4
+player_like,first_player_key,6347,100.0,9527,4
+player_like,first_player_key,6347,100.0,1820,4
+player_like,first_player_key,6347,100.0,39864,4
+player_like,first_player_key,6347,100.0,23664,4
+player_like,first_player_key,6347,100.0,427,3
+player_like,first_player_key,6347,100.0,493,3
+player_like,first_player_key,6347,100.0,9254,3
+player_like,first_player_key,6347,100.0,464,3
+player_like,first_player_key,6347,100.0,2176,3
+player_like,first_player_key,6347,100.0,65519,3
+player_like,first_player_key,6347,100.0,824,3
+player_like,first_player_key,6347,100.0,2002,3
+player_like,first_player_key,6347,100.0,8972,3
+player_like,first_player_key,6347,100.0,1206,3
+player_like,first_player_key,6347,100.0,7489,3
+player_like,first_player_key,6347,100.0,9640,3
+player_like,first_player_key,6347,100.0,2982,2
+player_like,first_player_key,6347,100.0,2072,2
+player_like,first_player_key,6347,100.0,359,2
+player_like,first_player_key,6347,100.0,2167,2
+player_like,first_player_key,6347,100.0,1895,2
+player_like,first_player_key,6347,100.0,2823,2
+player_like,first_player_key,6347,100.0,2997,2
+player_like,first_player_key,6347,100.0,9399,2
+player_like,first_player_key,6347,100.0,14547,2
+player_like,first_player_key,6347,100.0,66862,2
+player_like,first_player_key,6347,100.0,14373,2
+player_like,first_player_key,6347,100.0,1200,2
+player_like,first_player_key,6347,100.0,2386,2
+player_like,first_player_key,6347,100.0,415,2
+player_like,first_player_key,6347,100.0,1180,2
+player_like,first_player_key,6347,100.0,9225,1
+player_like,first_player_key,6347,100.0,1926,1
+player_like,first_player_key,6347,100.0,1103,1
+player_like,first_player_key,6347,100.0,374,1
+player_like,first_player_key,6347,100.0,1083,1
+player_like,first_player_key,6347,100.0,2071,1
+player_like,first_player_key,6347,100.0,447,1
+other,pointbypoint,6347,100.0,<list:0>,2865
+other,pointbypoint,6347,100.0,<list:17>,298
+other,pointbypoint,6347,100.0,<list:18>,289
+other,pointbypoint,6347,100.0,<list:19>,258
+other,pointbypoint,6347,100.0,<list:16>,239
+other,pointbypoint,6347,100.0,<list:20>,194
+other,pointbypoint,6347,100.0,<list:15>,155
+other,pointbypoint,6347,100.0,<list:14>,104
+other,pointbypoint,6347,100.0,<list:22>,84
+other,pointbypoint,6347,100.0,<list:27>,82
+other,pointbypoint,6347,100.0,<list:34>,81
+other,pointbypoint,6347,100.0,<list:33>,80
+other,pointbypoint,6347,100.0,<list:21>,79
+other,pointbypoint,6347,100.0,<list:26>,78
+other,pointbypoint,6347,100.0,<list:29>,76
+other,pointbypoint,6347,100.0,<list:32>,74
+other,pointbypoint,6347,100.0,<list:30>,72
+other,pointbypoint,6347,100.0,<list:31>,71
+other,pointbypoint,6347,100.0,<list:28>,70
+other,pointbypoint,6347,100.0,<list:35>,66
+other,pointbypoint,6347,100.0,<list:24>,64
+other,pointbypoint,6347,100.0,<list:36>,58
+other,pointbypoint,6347,100.0,<list:37>,57
+other,pointbypoint,6347,100.0,<list:13>,55
+other,pointbypoint,6347,100.0,<list:25>,48
+other,pointbypoint,6347,100.0,<list:38>,44
+other,pointbypoint,6347,100.0,<list:42>,42
+other,pointbypoint,6347,100.0,<list:39>,40
+other,pointbypoint,6347,100.0,<list:41>,40
+other,pointbypoint,6347,100.0,<list:43>,39
+other,pointbypoint,6347,100.0,<list:40>,38
+other,pointbypoint,6347,100.0,<list:47>,31
+other,pointbypoint,6347,100.0,<list:46>,30
+other,pointbypoint,6347,100.0,<list:12>,29
+other,pointbypoint,6347,100.0,<list:44>,26
+other,pointbypoint,6347,100.0,<list:52>,25
+other,pointbypoint,6347,100.0,<list:49>,23
+other,pointbypoint,6347,100.0,<list:48>,23
+other,pointbypoint,6347,100.0,<list:23>,23
+other,pointbypoint,6347,100.0,<list:53>,21
+other,pointbypoint,6347,100.0,<list:50>,19
+other,pointbypoint,6347,100.0,<list:11>,13
+other,pointbypoint,6347,100.0,<list:61>,12
+other,pointbypoint,6347,100.0,<list:54>,11
+other,pointbypoint,6347,100.0,<list:9>,10
+other,pointbypoint,6347,100.0,<list:55>,9
+other,pointbypoint,6347,100.0,<list:7>,9
+other,pointbypoint,6347,100.0,<list:3>,8
+other,pointbypoint,6347,100.0,<list:64>,8
+other,pointbypoint,6347,100.0,<list:60>,7
+other,scores,6347,100.0,<list:2>,4047
+other,scores,6347,100.0,<list:3>,1799
+other,scores,6347,100.0,<list:1>,421
+other,scores,6347,100.0,<list:0>,28
+other,scores,6347,100.0,<list:5>,26
+other,scores,6347,100.0,<list:4>,26
+player_like,second_player_key,6347,100.0,1096,7
+player_like,second_player_key,6347,100.0,196,6
+player_like,second_player_key,6347,100.0,3318,6
+player_like,second_player_key,6347,100.0,818,6
+player_like,second_player_key,6347,100.0,28551,5
+player_like,second_player_key,6347,100.0,590,5
+player_like,second_player_key,6347,100.0,510,5
+player_like,second_player_key,6347,100.0,362,5
+player_like,second_player_key,6347,100.0,1762,4
+player_like,second_player_key,6347,100.0,2986,4
+player_like,second_player_key,6347,100.0,10520,4
+player_like,second_player_key,6347,100.0,2685,4
+player_like,second_player_key,6347,100.0,64432,4
+player_like,second_player_key,6347,100.0,373,4
+player_like,second_player_key,6347,100.0,1205,4
+player_like,second_player_key,6347,100.0,9219,4
+player_like,second_player_key,6347,100.0,2674,3
+player_like,second_player_key,6347,100.0,1192,3
+player_like,second_player_key,6347,100.0,2692,3
+player_like,second_player_key,6347,100.0,1825,3
+player_like,second_player_key,6347,100.0,1833,3
+player_like,second_player_key,6347,100.0,3490,3
+player_like,second_player_key,6347,100.0,431,3
+player_like,second_player_key,6347,100.0,1823,3
+player_like,second_player_key,6347,100.0,63765,3
+player_like,second_player_key,6347,100.0,94608,3
+player_like,second_player_key,6347,100.0,786,3
+player_like,second_player_key,6347,100.0,384,3
+player_like,second_player_key,6347,100.0,24283,3
+player_like,second_player_key,6347,100.0,1093,2
+player_like,second_player_key,6347,100.0,2084,2
+player_like,second_player_key,6347,100.0,8781,2
+player_like,second_player_key,6347,100.0,1906,2
+player_like,second_player_key,6347,100.0,388,2
+player_like,second_player_key,6347,100.0,68751,2
+player_like,second_player_key,6347,100.0,9596,2
+player_like,second_player_key,6347,100.0,1099,2
+player_like,second_player_key,6347,100.0,3006,2
+player_like,second_player_key,6347,100.0,7522,2
+player_like,second_player_key,6347,100.0,154,2
+player_like,second_player_key,6347,100.0,2076,2
+player_like,second_player_key,6347,100.0,9196,2
+player_like,second_player_key,6347,100.0,1852,2
+player_like,second_player_key,6347,100.0,12876,2
+player_like,second_player_key,6347,100.0,460,2
+player_like,second_player_key,6347,100.0,51790,2
+player_like,second_player_key,6347,100.0,2508,2
+player_like,second_player_key,6347,100.0,868,2
+player_like,second_player_key,6347,100.0,10849,2
+player_like,second_player_key,6347,100.0,33897,2
+other,statistics,6347,100.0,<list:0>,4505
+other,statistics,6347,100.0,<list:98>,455
+other,statistics,6347,100.0,<list:110>,450
+other,statistics,6347,100.0,<list:146>,261
+other,statistics,6347,100.0,<list:130>,246
+other,statistics,6347,100.0,<list:116>,182
+other,statistics,6347,100.0,<list:154>,122
+other,statistics,6347,100.0,<list:114>,26
+other,statistics,6347,100.0,<list:230>,22
+other,statistics,6347,100.0,<list:192>,21
+other,statistics,6347,100.0,<list:150>,8
+other,statistics,6347,100.0,<list:66>,8
+other,statistics,6347,100.0,<list:120>,7
+other,statistics,6347,100.0,<list:158>,5
+other,statistics,6347,100.0,<list:196>,4
+other,statistics,6347,100.0,<list:74>,4
+other,statistics,6347,100.0,<list:138>,3
+other,statistics,6347,100.0,<list:104>,3
+other,statistics,6347,100.0,<list:152>,3
+other,statistics,6347,100.0,<list:78>,2
+other,statistics,6347,100.0,<list:234>,1
+other,statistics,6347,100.0,<list:122>,1
+other,statistics,6347,100.0,<list:190>,1
+other,statistics,6347,100.0,<list:224>,1
+other,statistics,6347,100.0,<list:222>,1
+other,statistics,6347,100.0,<list:228>,1
+other,statistics,6347,100.0,<list:195>,1
+other,statistics,6347,100.0,<list:6>,1
+other,statistics,6347,100.0,<list:112>,1
+other,statistics,6347,100.0,<list:165>,1
+tournament_like,tournament_key,6347,100.0,2155,83
+tournament_like,tournament_key,6347,100.0,2156,83
+tournament_like,tournament_key,6347,100.0,2157,70
+tournament_like,tournament_key,6347,100.0,2158,68
+tournament_like,tournament_key,6347,100.0,13921,32
+tournament_like,tournament_key,6347,100.0,13519,31
+tournament_like,tournament_key,6347,100.0,9636,31
+tournament_like,tournament_key,6347,100.0,9482,31
+tournament_like,tournament_key,6347,100.0,13916,31
+tournament_like,tournament_key,6347,100.0,11451,31
+tournament_like,tournament_key,6347,100.0,11884,31
+tournament_like,tournament_key,6347,100.0,11929,31
+tournament_like,tournament_key,6347,100.0,12541,31
+tournament_like,tournament_key,6347,100.0,12547,31
+tournament_like,tournament_key,6347,100.0,12568,31
+tournament_like,tournament_key,6347,100.0,4081,31
+tournament_like,tournament_key,6347,100.0,13918,31
+tournament_like,tournament_key,6347,100.0,4876,31
+tournament_like,tournament_key,6347,100.0,13919,31
+tournament_like,tournament_key,6347,100.0,9554,31
+tournament_like,tournament_key,6347,100.0,13920,31
+tournament_like,tournament_key,6347,100.0,4150,31
+tournament_like,tournament_key,6347,100.0,13922,31
+tournament_like,tournament_key,6347,100.0,11202,31
+tournament_like,tournament_key,6347,100.0,7441,31
+tournament_like,tournament_key,6347,100.0,7440,31
+tournament_like,tournament_key,6347,100.0,3130,30
+tournament_like,tournament_key,6347,100.0,13913,28
+tournament_like,tournament_key,6347,100.0,12527,27
+tournament_like,tournament_key,6347,100.0,2569,27
+tournament_like,tournament_key,6347,100.0,2542,27
+tournament_like,tournament_key,6347,100.0,9628,26
+tournament_like,tournament_key,6347,100.0,13914,26
+tournament_like,tournament_key,6347,100.0,11912,16
+tournament_like,tournament_key,6347,100.0,13924,16
+tournament_like,tournament_key,6347,100.0,13912,15
+tournament_like,tournament_key,6347,100.0,8818,15
+tournament_like,tournament_key,6347,100.0,13520,15
+tournament_like,tournament_key,6347,100.0,9637,15
+tournament_like,tournament_key,6347,100.0,13218,15
+tournament_like,tournament_key,6347,100.0,9483,15
+tournament_like,tournament_key,6347,100.0,13917,15
+tournament_like,tournament_key,6347,100.0,11470,15
+tournament_like,tournament_key,6347,100.0,11874,15
+tournament_like,tournament_key,6347,100.0,11885,15
+tournament_like,tournament_key,6347,100.0,12542,15
+tournament_like,tournament_key,6347,100.0,12543,15
+tournament_like,tournament_key,6347,100.0,4085,15
+tournament_like,tournament_key,6347,100.0,7119,15
+tournament_like,tournament_key,6347,100.0,9657,15
+tournament_like,tournament_name,6347,100.0,French Open,573
+tournament_like,tournament_name,6347,100.0,Birmingham,133
+tournament_like,tournament_name,6347,100.0,Perugia,68
+tournament_like,tournament_name,6347,100.0,Heilbronn,66
+tournament_like,tournament_name,6347,100.0,Tyler,66
+tournament_like,tournament_name,6347,100.0,Prostejov,65
+tournament_like,tournament_name,6347,100.0,Centurion 2 (South Africa) - Qualification,49
+tournament_like,tournament_name,6347,100.0,M15 Luan 2,47
+tournament_like,tournament_name,6347,100.0,M15 Kayseri 2,47
+tournament_like,tournament_name,6347,100.0,M25 Grado (Italy),47
+tournament_like,tournament_name,6347,100.0,M25 Caltanissetta (Italy),47
+tournament_like,tournament_name,6347,100.0,W50 Wuning,47
+tournament_like,tournament_name,6347,100.0,M15 Luan 3,47
+tournament_like,tournament_name,6347,100.0,M15 Kayseri 3,47
+tournament_like,tournament_name,6347,100.0,M15 Gimcheon 2,46
+tournament_like,tournament_name,6347,100.0,M15 Karuizawa,46
+tournament_like,tournament_name,6347,100.0,W15 Fukui,46
+tournament_like,tournament_name,6347,100.0,W35 Wuning 2 (China),46
+tournament_like,tournament_name,6347,100.0,W75 Kursumlijska Banja,46
+tournament_like,tournament_name,6347,100.0,M15 Tsaghkadzor,46
+tournament_like,tournament_name,6347,100.0,W15 Tsaghkadzor 2,46
+tournament_like,tournament_name,6347,100.0,W35 Bol 2,46
+tournament_like,tournament_name,6347,100.0,M25 Bol 2,46
+tournament_like,tournament_name,6347,100.0,W15 Kayseri 2,46
+tournament_like,tournament_name,6347,100.0,M15 Brcko,46
+tournament_like,tournament_name,6347,100.0,M15 Monastir 20,46
+tournament_like,tournament_name,6347,100.0,M25 Kursumlijska Banja,46
+tournament_like,tournament_name,6347,100.0,M25 Troisdorf (Germany),46
+tournament_like,tournament_name,6347,100.0,W15 Szentendre (Hungary),46
+tournament_like,tournament_name,6347,100.0,"W35 Wichita, KS",46
+tournament_like,tournament_name,6347,100.0,"W15 Lakewood, CA",46
+tournament_like,tournament_name,6347,100.0,"M15 Lakewood, CA",46
+tournament_like,tournament_name,6347,100.0,M15 Szentendre,46
+tournament_like,tournament_name,6347,100.0,M15 Tsaghkadzor 2,46
+tournament_like,tournament_name,6347,100.0,W15 Osijek,46
+tournament_like,tournament_name,6347,100.0,M15 Harmon,46
+tournament_like,tournament_name,6347,100.0,M15 Kursumlijska Banja 3,46
+tournament_like,tournament_name,6347,100.0,M15 Ljubljana,46
+tournament_like,tournament_name,6347,100.0,M15 Monastir 21,46
+tournament_like,tournament_name,6347,100.0,W15 Kayseri 3,46
+tournament_like,tournament_name,6347,100.0,Little Rock,45
+tournament_like,tournament_name,6347,100.0,M15 Rosbach (Germany),45
+tournament_like,tournament_name,6347,100.0,W15 Kursumlijska Banja 3,45
+tournament_like,tournament_name,6347,100.0,W15 Monastir 16,45
+tournament_like,tournament_name,6347,100.0,W15 Monastir 15,44
+tournament_like,tournament_name,6347,100.0,W15 Oliva (Spain),44
+tournament_like,tournament_name,6347,100.0,W75 Zaragoza (Spain),44
+tournament_like,tournament_name,6347,100.0,Makarska,44
+tournament_like,tournament_name,6347,100.0,W50 Montemor-o-Novo,44
+tournament_like,tournament_name,6347,100.0,M15 Kranjska Gora (Slovenia),43
+tournament_like,tournament_round,6347,100.0,ATP French Open - 1/32-finals,71
+tournament_like,tournament_round,6347,100.0,WTA French Open - 1/32-finals,69
+tournament_like,tournament_round,6347,100.0,ATP French Open - 1/64-finals,20
+tournament_like,tournament_round,6347,100.0,WTA French Open - 1/64-finals,20
+tournament_like,tournament_round,6347,100.0,M15 Kayseri 2 - 1/8-finals,17
+tournament_like,tournament_round,6347,100.0,W15 Oliva - 1/16-finals,17
+tournament_like,tournament_round,6347,100.0,M25 Grado - 1/8-finals,17
+tournament_like,tournament_round,6347,100.0,Centurion - 1/8-finals,16
+tournament_like,tournament_round,6347,100.0,Kosice - 1/8-finals,16
+tournament_like,tournament_round,6347,100.0,M15 Gimcheon 2 - 1/16-finals,16
+tournament_like,tournament_round,6347,100.0,M15 Karuizawa - 1/16-finals,16
+tournament_like,tournament_round,6347,100.0,W15 Fukui - 1/16-finals,16
+tournament_like,tournament_round,6347,100.0,W35 Wuning 2 - 1/16-finals,16
+tournament_like,tournament_round,6347,100.0,M15 Gimcheon 2 - 1/8-finals,16
+tournament_like,tournament_round,6347,100.0,M15 Karuizawa - 1/8-finals,16
+tournament_like,tournament_round,6347,100.0,M15 Luan 2 - 1/8-finals,16
+tournament_like,tournament_round,6347,100.0,W15 Fukui - 1/8-finals,16
+tournament_like,tournament_round,6347,100.0,W35 Wuning 2 - 1/8-finals,16
+tournament_like,tournament_round,6347,100.0,W75 Kursumlijska Banja - 1/16-finals,16
+tournament_like,tournament_round,6347,100.0,W75 Kursumlijska Banja - 1/8-finals,16
+tournament_like,tournament_round,6347,100.0,M15 Tsaghkadzor - 1/8-finals,16
+tournament_like,tournament_round,6347,100.0,W15 Tsaghkadzor 2 - 1/16-finals,16
+tournament_like,tournament_round,6347,100.0,W15 Tsaghkadzor 2 - 1/8-finals,16
+tournament_like,tournament_round,6347,100.0,M15 Kayseri 2 - 1/16-finals,16
+tournament_like,tournament_round,6347,100.0,W35 Bol 2 - 1/16-finals,16
+tournament_like,tournament_round,6347,100.0,W35 Bol 2 - 1/8-finals,16
+tournament_like,tournament_round,6347,100.0,M25 Bol 2 - 1/8-finals,16
+tournament_like,tournament_round,6347,100.0,M25 Bol 2 - 1/16-finals,16
+tournament_like,tournament_round,6347,100.0,W15 Kayseri 2 - 1/16-finals,16
+tournament_like,tournament_round,6347,100.0,M15 Brcko - 1/16-finals,16
+tournament_like,tournament_round,6347,100.0,M15 Kranjska Gora - 1/16-finals,16
+tournament_like,tournament_round,6347,100.0,M15 Monastir 20 - 1/16-finals,16
+tournament_like,tournament_round,6347,100.0,M25 Grado - 1/16-finals,16
+tournament_like,tournament_round,6347,100.0,M25 Kursumlijska Banja - 1/16-finals,16
+tournament_like,tournament_round,6347,100.0,M25 Troisdorf - 1/16-finals,16
+tournament_like,tournament_round,6347,100.0,W15 Monastir 15 - 1/16-finals,16
+tournament_like,tournament_round,6347,100.0,W15 Szentendre - 1/16-finals,16
+tournament_like,tournament_round,6347,100.0,M15 Brcko - 1/8-finals,16
+tournament_like,tournament_round,6347,100.0,M15 Monastir 20 - 1/8-finals,16
+tournament_like,tournament_round,6347,100.0,M25 Carnac - 1/8-finals,16
+tournament_like,tournament_round,6347,100.0,M25 Kursumlijska Banja - 1/8-finals,16
+tournament_like,tournament_round,6347,100.0,M25 Troisdorf - 1/8-finals,16
+tournament_like,tournament_round,6347,100.0,W15 Kayseri 2 - 1/8-finals,16
+tournament_like,tournament_round,6347,100.0,"W35 Wichita, KS - 1/16-finals",16
+tournament_like,tournament_round,6347,100.0,"W35 Wichita, KS - 1/8-finals",16
+tournament_like,tournament_round,6347,100.0,"W15 Lakewood, CA - 1/16-finals",16
+tournament_like,tournament_round,6347,100.0,"W15 Lakewood, CA - 1/8-finals",16
+tournament_like,tournament_round,6347,100.0,"M15 Lakewood, CA - 1/16-finals",16
+tournament_like,tournament_round,6347,100.0,Vicenza - 1/8-finals,15
+tournament_like,tournament_round,6347,100.0,Little Rock - 1/16-finals,15
+tournament_like,tournament_season,6347,100.0,2026,6280
+tournament_like,tournament_season,6347,100.0,2025,56
+tournament_like,tournament_season,6347,100.0,<blank>,9
+tournament_like,tournament_season,6347,100.0,2024,2

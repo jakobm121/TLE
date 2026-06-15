@@ -1,0 +1,1868 @@
+{
+  "field_group_counts": {
+    "other": 19041,
+    "player_like": 12694,
+    "surface_like": 6347,
+    "tournament_like": 114246
+  },
+  "files": [
+    {
+      "fixtures": 374,
+      "path": "data/raw/api_tennis/results/2026-05-26.json"
+    },
+    {
+      "fixtures": 512,
+      "path": "data/raw/api_tennis/results/2026-05-27.json"
+    },
+    {
+      "fixtures": 428,
+      "path": "data/raw/api_tennis/results/2026-05-28.json"
+    },
+    {
+      "fixtures": 241,
+      "path": "data/raw/api_tennis/results/2026-05-29.json"
+    },
+    {
+      "fixtures": 169,
+      "path": "data/raw/api_tennis/results/2026-05-30.json"
+    },
+    {
+      "fixtures": 178,
+      "path": "data/raw/api_tennis/results/2026-05-31.json"
+    },
+    {
+      "fixtures": 146,
+      "path": "data/raw/api_tennis/results/2026-06-01.json"
+    },
+    {
+      "fixtures": 386,
+      "path": "data/raw/api_tennis/results/2026-06-02.json"
+    },
+    {
+      "fixtures": 456,
+      "path": "data/raw/api_tennis/results/2026-06-03.json"
+    },
+    {
+      "fixtures": 477,
+      "path": "data/raw/api_tennis/results/2026-06-04.json"
+    },
+    {
+      "fixtures": 257,
+      "path": "data/raw/api_tennis/results/2026-06-05.json"
+    },
+    {
+      "fixtures": 154,
+      "path": "data/raw/api_tennis/results/2026-06-06.json"
+    },
+    {
+      "fixtures": 149,
+      "path": "data/raw/api_tennis/results/2026-06-07.json"
+    },
+    {
+      "fixtures": 101,
+      "path": "data/raw/api_tennis/results/2026-06-08.json"
+    },
+    {
+      "fixtures": 404,
+      "path": "data/raw/api_tennis/results/2026-06-09.json"
+    },
+    {
+      "fixtures": 579,
+      "path": "data/raw/api_tennis/results/2026-06-10.json"
+    },
+    {
+      "fixtures": 495,
+      "path": "data/raw/api_tennis/results/2026-06-11.json"
+    },
+    {
+      "fixtures": 317,
+      "path": "data/raw/api_tennis/results/2026-06-12.json"
+    },
+    {
+      "fixtures": 205,
+      "path": "data/raw/api_tennis/results/2026-06-13.json"
+    },
+    {
+      "fixtures": 143,
+      "path": "data/raw/api_tennis/results/2026-06-14.json"
+    },
+    {
+      "fixtures": 176,
+      "path": "data/raw/api_tennis/results/2026-06-15.json"
+    }
+  ],
+  "files_read": 21,
+  "fixtures_total": 6347,
+  "generated_at": "2026-06-15T12:43:14+00:00",
+  "outputs": {
+    "field_values_csv": "data/reports/api_tennis/api_raw_field_values.csv",
+    "samples_json": "data/reports/api_tennis/api_raw_fixture_samples.json",
+    "summary_json": "data/reports/api_tennis/api_raw_fields_inspect.json",
+    "unknown_surface_samples_csv": "data/reports/api_tennis/api_unknown_surface_samples.csv"
+  },
+  "player_like_fields": [
+    {
+      "coverage_pct": 100.0,
+      "field": "first_player_key",
+      "presence": 6347,
+      "top_values": [
+        [
+          "2241",
+          9
+        ],
+        [
+          "2073",
+          7
+        ],
+        [
+          "58226",
+          7
+        ],
+        [
+          "10070",
+          6
+        ],
+        [
+          "1101",
+          6
+        ],
+        [
+          "168",
+          6
+        ],
+        [
+          "1313",
+          6
+        ],
+        [
+          "455",
+          5
+        ],
+        [
+          "1989",
+          5
+        ],
+        [
+          "97037",
+          5
+        ],
+        [
+          "1314",
+          5
+        ],
+        [
+          "12951",
+          4
+        ],
+        [
+          "9527",
+          4
+        ],
+        [
+          "1820",
+          4
+        ],
+        [
+          "39864",
+          4
+        ],
+        [
+          "23664",
+          4
+        ],
+        [
+          "427",
+          3
+        ],
+        [
+          "493",
+          3
+        ],
+        [
+          "9254",
+          3
+        ],
+        [
+          "464",
+          3
+        ],
+        [
+          "2176",
+          3
+        ],
+        [
+          "65519",
+          3
+        ],
+        [
+          "824",
+          3
+        ],
+        [
+          "2002",
+          3
+        ],
+        [
+          "8972",
+          3
+        ]
+      ]
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "second_player_key",
+      "presence": 6347,
+      "top_values": [
+        [
+          "1096",
+          7
+        ],
+        [
+          "196",
+          6
+        ],
+        [
+          "3318",
+          6
+        ],
+        [
+          "818",
+          6
+        ],
+        [
+          "28551",
+          5
+        ],
+        [
+          "590",
+          5
+        ],
+        [
+          "510",
+          5
+        ],
+        [
+          "362",
+          5
+        ],
+        [
+          "1762",
+          4
+        ],
+        [
+          "2986",
+          4
+        ],
+        [
+          "10520",
+          4
+        ],
+        [
+          "2685",
+          4
+        ],
+        [
+          "64432",
+          4
+        ],
+        [
+          "373",
+          4
+        ],
+        [
+          "1205",
+          4
+        ],
+        [
+          "9219",
+          4
+        ],
+        [
+          "2674",
+          3
+        ],
+        [
+          "1192",
+          3
+        ],
+        [
+          "2692",
+          3
+        ],
+        [
+          "1825",
+          3
+        ],
+        [
+          "1833",
+          3
+        ],
+        [
+          "3490",
+          3
+        ],
+        [
+          "431",
+          3
+        ],
+        [
+          "1823",
+          3
+        ],
+        [
+          "63765",
+          3
+        ]
+      ]
+    }
+  ],
+  "raw_results_dir": "data/raw/api_tennis/results",
+  "status_like_fields": [],
+  "surface_like_fields": [
+    {
+      "coverage_pct": 100.0,
+      "field": "event_type_type",
+      "presence": 6347,
+      "top_values": [
+        [
+          "Itf Men Singles",
+          1366
+        ],
+        [
+          "Itf Women Singles",
+          1344
+        ],
+        [
+          "Challenger Men Singles",
+          842
+        ],
+        [
+          "Itf Men Doubles",
+          670
+        ],
+        [
+          "Itf Women Doubles",
+          613
+        ],
+        [
+          "Challenger Men Doubles",
+          248
+        ],
+        [
+          "Challenger Women Singles",
+          245
+        ],
+        [
+          "Wta Singles",
+          229
+        ],
+        [
+          "Atp Singles",
+          200
+        ],
+        [
+          "Atp Doubles",
+          112
+        ],
+        [
+          "Wta Doubles",
+          102
+        ],
+        [
+          "Boys Singles",
+          87
+        ],
+        [
+          "Girls Singles",
+          87
+        ],
+        [
+          "Challenger Women Doubles",
+          55
+        ],
+        [
+          "Teams Men",
+          35
+        ],
+        [
+          "Mixed Doubles",
+          33
+        ],
+        [
+          "Boys Doubles",
+          31
+        ],
+        [
+          "Girls Doubles",
+          31
+        ],
+        [
+          "Teams Women",
+          8
+        ],
+        [
+          "Itf Men - Doubles",
+          5
+        ],
+        [
+          "Itf Men - Singles",
+          4
+        ]
+      ]
+    }
+  ],
+  "top_fields": [
+    {
+      "coverage_pct": 100.0,
+      "field": "event_date",
+      "presence": 6347
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_final_result",
+      "presence": 6347
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_first_player",
+      "presence": 6347
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_first_player_logo",
+      "presence": 6347
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_game_result",
+      "presence": 6347
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_key",
+      "presence": 6347
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_live",
+      "presence": 6347
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_qualification",
+      "presence": 6347
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_second_player",
+      "presence": 6347
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_second_player_logo",
+      "presence": 6347
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_serve",
+      "presence": 6347
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_status",
+      "presence": 6347
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_time",
+      "presence": 6347
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_type_type",
+      "presence": 6347
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_winner",
+      "presence": 6347
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "first_player_key",
+      "presence": 6347
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "pointbypoint",
+      "presence": 6347
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "scores",
+      "presence": 6347
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "second_player_key",
+      "presence": 6347
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "statistics",
+      "presence": 6347
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "tournament_key",
+      "presence": 6347
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "tournament_name",
+      "presence": 6347
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "tournament_round",
+      "presence": 6347
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "tournament_season",
+      "presence": 6347
+    }
+  ],
+  "tournament_like_fields": [
+    {
+      "coverage_pct": 100.0,
+      "field": "event_date",
+      "presence": 6347,
+      "top_values": [
+        [
+          "2026-06-10",
+          579
+        ],
+        [
+          "2026-05-27",
+          512
+        ],
+        [
+          "2026-06-11",
+          495
+        ],
+        [
+          "2026-06-04",
+          477
+        ],
+        [
+          "2026-06-03",
+          456
+        ],
+        [
+          "2026-05-28",
+          428
+        ],
+        [
+          "2026-06-09",
+          404
+        ],
+        [
+          "2026-06-02",
+          386
+        ],
+        [
+          "2026-05-26",
+          374
+        ],
+        [
+          "2026-06-12",
+          317
+        ],
+        [
+          "2026-06-05",
+          257
+        ],
+        [
+          "2026-05-29",
+          241
+        ],
+        [
+          "2026-06-13",
+          205
+        ],
+        [
+          "2026-05-31",
+          178
+        ],
+        [
+          "2026-06-15",
+          176
+        ],
+        [
+          "2026-05-30",
+          169
+        ],
+        [
+          "2026-06-06",
+          154
+        ],
+        [
+          "2026-06-07",
+          149
+        ],
+        [
+          "2026-06-01",
+          146
+        ],
+        [
+          "2026-06-14",
+          143
+        ],
+        [
+          "2026-06-08",
+          101
+        ]
+      ]
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_final_result",
+      "presence": 6347,
+      "top_values": [
+        [
+          "2 - 0",
+          2066
+        ],
+        [
+          "0 - 2",
+          1910
+        ],
+        [
+          "2 - 1",
+          897
+        ],
+        [
+          "1 - 2",
+          860
+        ],
+        [
+          "-",
+          346
+        ],
+        [
+          "0 - 1",
+          52
+        ],
+        [
+          "1 - 0",
+          52
+        ],
+        [
+          "0 - 0",
+          47
+        ],
+        [
+          "1 - 1",
+          29
+        ],
+        [
+          "3 - 0",
+          19
+        ],
+        [
+          "0 - 3",
+          18
+        ],
+        [
+          "1 - 3",
+          17
+        ],
+        [
+          "3 - 2",
+          14
+        ],
+        [
+          "2 - 3",
+          12
+        ],
+        [
+          "3 - 1",
+          8
+        ]
+      ]
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_first_player",
+      "presence": 6347,
+      "top_values": [
+        [
+          "H. Barton",
+          9
+        ],
+        [
+          "F. Auger-Aliassime",
+          7
+        ],
+        [
+          "I. Jovic",
+          7
+        ],
+        [
+          "A. Walton",
+          6
+        ],
+        [
+          "S. Baez",
+          6
+        ],
+        [
+          "A. Ruzic",
+          6
+        ],
+        [
+          "F. Peliwo",
+          6
+        ],
+        [
+          "D. Vekic",
+          5
+        ],
+        [
+          "A. Sabalenka",
+          5
+        ],
+        [
+          "M. Landaluce",
+          5
+        ],
+        [
+          "Ruehl/ Veldheer",
+          5
+        ],
+        [
+          "D. Blanch",
+          5
+        ],
+        [
+          "J. Fearnley",
+          4
+        ],
+        [
+          "V. Mboko",
+          4
+        ],
+        [
+          "A. Kalinskaya",
+          4
+        ],
+        [
+          "P. Henning",
+          4
+        ],
+        [
+          "T. Griekspoor",
+          3
+        ],
+        [
+          "S. Waltert",
+          3
+        ],
+        [
+          "H. Vandewinkel",
+          3
+        ],
+        [
+          "L. Siegemund",
+          3
+        ],
+        [
+          "C. Gauff",
+          3
+        ],
+        [
+          "T. Faurel",
+          3
+        ],
+        [
+          "J. Faria",
+          3
+        ],
+        [
+          "F. Diaz Acosta",
+          3
+        ],
+        [
+          "M. Alkaya",
+          3
+        ]
+      ]
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_first_player_logo",
+      "presence": 6347,
+      "top_values": [
+        [
+          "<null>",
+          3090
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/2241_h-barton.jpg",
+          9
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/2073_f-auger-aliassime.jpg",
+          7
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/58226_i-jovic.jpg",
+          7
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/10070_a-walton.jpg",
+          6
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/1101_s-baez.jpg",
+          6
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/168_a-ruzic.jpg",
+          6
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/1313_f-peliwo.jpg",
+          6
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/455_d-vekic.jpg",
+          5
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/1989_a-sabalenka.jpg",
+          5
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/1314_d-blanch.jpg",
+          5
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/1242_m-kasnikowski.jpg",
+          5
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/12951_j-fearnley.jpg",
+          4
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/9527_v-mboko.jpg",
+          4
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/1820_a-kalinskaya.jpg",
+          4
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/39864_m-landaluce.jpg",
+          4
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/23664_p-henning.jpg",
+          4
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/427_t-griekspoor.jpg",
+          3
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/493_s-waltert.jpg",
+          3
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/9254_h-vandewinkel.jpg",
+          3
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/464_l-siegemund.jpg",
+          3
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/2176_c-gauff.jpg",
+          3
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/65519_t-faurel.jpg",
+          3
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/824_j-faria.jpg",
+          3
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/2002_f-diaz-acosta.jpg",
+          3
+        ]
+      ]
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_game_result",
+      "presence": 6347,
+      "top_values": [
+        [
+          "-",
+          6241
+        ],
+        [
+          "0 - 0",
+          63
+        ],
+        [
+          "15 - 15",
+          8
+        ],
+        [
+          "15 - 0",
+          6
+        ],
+        [
+          "0 - 30",
+          5
+        ],
+        [
+          "30 - 0",
+          5
+        ],
+        [
+          "40 - 40",
+          5
+        ],
+        [
+          "0 - 15",
+          3
+        ],
+        [
+          "40 - 0",
+          3
+        ],
+        [
+          "30 - 30",
+          2
+        ],
+        [
+          "15 - 40",
+          1
+        ],
+        [
+          "30 - 40",
+          1
+        ],
+        [
+          "A - 40",
+          1
+        ],
+        [
+          "30 - 15",
+          1
+        ],
+        [
+          "40 - 30",
+          1
+        ],
+        [
+          "15 - 30",
+          1
+        ]
+      ]
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_key",
+      "presence": 6347,
+      "top_values": [
+        [
+          "12129875",
+          1
+        ],
+        [
+          "12129877",
+          1
+        ],
+        [
+          "12129879",
+          1
+        ],
+        [
+          "12129881",
+          1
+        ],
+        [
+          "12129882",
+          1
+        ],
+        [
+          "12129883",
+          1
+        ],
+        [
+          "12129884",
+          1
+        ],
+        [
+          "12129887",
+          1
+        ],
+        [
+          "12129893",
+          1
+        ],
+        [
+          "12129900",
+          1
+        ],
+        [
+          "12129902",
+          1
+        ],
+        [
+          "12129905",
+          1
+        ],
+        [
+          "12129911",
+          1
+        ],
+        [
+          "12129915",
+          1
+        ],
+        [
+          "12129918",
+          1
+        ],
+        [
+          "12129919",
+          1
+        ],
+        [
+          "12129921",
+          1
+        ],
+        [
+          "12129923",
+          1
+        ],
+        [
+          "12129924",
+          1
+        ],
+        [
+          "12129933",
+          1
+        ],
+        [
+          "12129936",
+          1
+        ],
+        [
+          "12129944",
+          1
+        ],
+        [
+          "12129945",
+          1
+        ],
+        [
+          "12129946",
+          1
+        ],
+        [
+          "12129949",
+          1
+        ]
+      ]
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_live",
+      "presence": 6347,
+      "top_values": [
+        [
+          "0",
+          6319
+        ],
+        [
+          "1",
+          28
+        ]
+      ]
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_qualification",
+      "presence": 6347,
+      "top_values": [
+        [
+          "False",
+          5716
+        ],
+        [
+          "True",
+          552
+        ],
+        [
+          "<null>",
+          79
+        ]
+      ]
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_second_player",
+      "presence": 6347,
+      "top_values": [
+        [
+          "K. Majchrzak",
+          7
+        ],
+        [
+          "A. Krueger",
+          6
+        ],
+        [
+          "E. Winter",
+          6
+        ],
+        [
+          "G. Onclin",
+          6
+        ],
+        [
+          "J. Tjen",
+          5
+        ],
+        [
+          "Z. Zhang",
+          5
+        ],
+        [
+          "M. Sherif",
+          5
+        ],
+        [
+          "T. Skatov",
+          5
+        ],
+        [
+          "C. Tabur",
+          4
+        ],
+        [
+          "Z. Svajda",
+          4
+        ],
+        [
+          "L. Tien",
+          4
+        ],
+        [
+          "N. Osaka",
+          4
+        ],
+        [
+          "Pokorny/ Poljak",
+          4
+        ],
+        [
+          "F. Agamenone",
+          4
+        ],
+        [
+          "K. Coppejans",
+          4
+        ],
+        [
+          "A. Shelbayh",
+          4
+        ],
+        [
+          "C. Moutet",
+          3
+        ],
+        [
+          "M. Arnaldi",
+          3
+        ],
+        [
+          "M. Keys",
+          3
+        ],
+        [
+          "S. Zhang",
+          3
+        ],
+        [
+          "D. Parry",
+          3
+        ],
+        [
+          "A. Eala",
+          3
+        ],
+        [
+          "D. Shapovalov",
+          3
+        ],
+        [
+          "E. Jacquemot",
+          3
+        ],
+        [
+          "Bondioli/ Caniato",
+          3
+        ]
+      ]
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_second_player_logo",
+      "presence": 6347,
+      "top_values": [
+        [
+          "<null>",
+          3131
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/1096_k-majchrzak.jpg",
+          7
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/817_m-karol.jpg",
+          7
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/196_a-krueger.jpg",
+          6
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/3318_e-winter.jpg",
+          6
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/818_g-onclin.jpg",
+          6
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/28551_j-tjen.jpg",
+          5
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/590_z-zhang.jpg",
+          5
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/510_m-sherif.jpg",
+          5
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/362_t-skatov.jpg",
+          5
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/1762_c-tabur.jpg",
+          4
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/2986_z-svajda.jpg",
+          4
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/10520_l-tien.jpg",
+          4
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/2685_n-osaka.jpg",
+          4
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/373_f-agamenone.jpg",
+          4
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/1205_k-coppejans.jpg",
+          4
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/9219_a-shelbayh.jpg",
+          4
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/397_n-gombos.jpg",
+          4
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/2674_c-moutet.jpg",
+          3
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/1192_m-arnaldi.jpg",
+          3
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/2692_m-keys.jpg",
+          3
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/1825_s-zhang.jpg",
+          3
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/1833_d-parry.jpg",
+          3
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/3490_a-eala.jpg",
+          3
+        ],
+        [
+          "https://api.api-tennis.com/logo-tennis/431_d-shapovalov.jpg",
+          3
+        ]
+      ]
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_serve",
+      "presence": 6347,
+      "top_values": [
+        [
+          "<null>",
+          6321
+        ],
+        [
+          "First Player",
+          16
+        ],
+        [
+          "Second Player",
+          10
+        ]
+      ]
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_status",
+      "presence": 6347,
+      "top_values": [
+        [
+          "Finished",
+          5820
+        ],
+        [
+          "Retired",
+          154
+        ],
+        [
+          "Walk Over",
+          120
+        ],
+        [
+          "<blank>",
+          114
+        ],
+        [
+          "Cancelled",
+          111
+        ],
+        [
+          "Set 2",
+          11
+        ],
+        [
+          "Set 1",
+          10
+        ],
+        [
+          "Set 3",
+          6
+        ],
+        [
+          "Interrupted",
+          1
+        ]
+      ]
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_time",
+      "presence": 6347,
+      "top_values": [
+        [
+          "15:00",
+          162
+        ],
+        [
+          "11:10",
+          161
+        ],
+        [
+          "13:00",
+          161
+        ],
+        [
+          "14:30",
+          122
+        ],
+        [
+          "10:10",
+          112
+        ],
+        [
+          "17:00",
+          98
+        ],
+        [
+          "15:30",
+          91
+        ],
+        [
+          "18:00",
+          90
+        ],
+        [
+          "16:30",
+          89
+        ],
+        [
+          "12:10",
+          86
+        ],
+        [
+          "19:00",
+          80
+        ],
+        [
+          "15:10",
+          71
+        ],
+        [
+          "04:00",
+          60
+        ],
+        [
+          "17:10",
+          59
+        ],
+        [
+          "20:00",
+          46
+        ],
+        [
+          "10:40",
+          42
+        ],
+        [
+          "18:30",
+          41
+        ],
+        [
+          "15:40",
+          38
+        ],
+        [
+          "14:15",
+          37
+        ],
+        [
+          "13:45",
+          36
+        ],
+        [
+          "15:15",
+          34
+        ],
+        [
+          "12:55",
+          33
+        ],
+        [
+          "12:45",
+          33
+        ],
+        [
+          "13:25",
+          33
+        ],
+        [
+          "18:10",
+          32
+        ]
+      ]
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "event_winner",
+      "presence": 6347,
+      "top_values": [
+        [
+          "First Player",
+          3142
+        ],
+        [
+          "Second Player",
+          2952
+        ],
+        [
+          "<null>",
+          253
+        ]
+      ]
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "tournament_key",
+      "presence": 6347,
+      "top_values": [
+        [
+          "2155",
+          83
+        ],
+        [
+          "2156",
+          83
+        ],
+        [
+          "2157",
+          70
+        ],
+        [
+          "2158",
+          68
+        ],
+        [
+          "13921",
+          32
+        ],
+        [
+          "13519",
+          31
+        ],
+        [
+          "9636",
+          31
+        ],
+        [
+          "9482",
+          31
+        ],
+        [
+          "13916",
+          31
+        ],
+        [
+          "11451",
+          31
+        ],
+        [
+          "11884",
+          31
+        ],
+        [
+          "11929",
+          31
+        ],
+        [
+          "12541",
+          31
+        ],
+        [
+          "12547",
+          31
+        ],
+        [
+          "12568",
+          31
+        ],
+        [
+          "4081",
+          31
+        ],
+        [
+          "13918",
+          31
+        ],
+        [
+          "4876",
+          31
+        ],
+        [
+          "13919",
+          31
+        ],
+        [
+          "9554",
+          31
+        ],
+        [
+          "13920",
+          31
+        ],
+        [
+          "4150",
+          31
+        ],
+        [
+          "13922",
+          31
+        ],
+        [
+          "11202",
+          31
+        ],
+        [
+          "7441",
+          31
+        ]
+      ]
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "tournament_name",
+      "presence": 6347,
+      "top_values": [
+        [
+          "French Open",
+          573
+        ],
+        [
+          "Birmingham",
+          133
+        ],
+        [
+          "Perugia",
+          68
+        ],
+        [
+          "Heilbronn",
+          66
+        ],
+        [
+          "Tyler",
+          66
+        ],
+        [
+          "Prostejov",
+          65
+        ],
+        [
+          "Centurion 2 (South Africa) - Qualification",
+          49
+        ],
+        [
+          "M15 Luan 2",
+          47
+        ],
+        [
+          "M15 Kayseri 2",
+          47
+        ],
+        [
+          "M25 Grado (Italy)",
+          47
+        ],
+        [
+          "M25 Caltanissetta (Italy)",
+          47
+        ],
+        [
+          "W50 Wuning",
+          47
+        ],
+        [
+          "M15 Luan 3",
+          47
+        ],
+        [
+          "M15 Kayseri 3",
+          47
+        ],
+        [
+          "M15 Gimcheon 2",
+          46
+        ],
+        [
+          "M15 Karuizawa",
+          46
+        ],
+        [
+          "W15 Fukui",
+          46
+        ],
+        [
+          "W35 Wuning 2 (China)",
+          46
+        ],
+        [
+          "W75 Kursumlijska Banja",
+          46
+        ],
+        [
+          "M15 Tsaghkadzor",
+          46
+        ],
+        [
+          "W15 Tsaghkadzor 2",
+          46
+        ],
+        [
+          "W35 Bol 2",
+          46
+        ],
+        [
+          "M25 Bol 2",
+          46
+        ],
+        [
+          "W15 Kayseri 2",
+          46
+        ],
+        [
+          "M15 Brcko",
+          46
+        ]
+      ]
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "tournament_round",
+      "presence": 6347,
+      "top_values": [
+        [
+          "ATP French Open - 1/32-finals",
+          71
+        ],
+        [
+          "WTA French Open - 1/32-finals",
+          69
+        ],
+        [
+          "ATP French Open - 1/64-finals",
+          20
+        ],
+        [
+          "WTA French Open - 1/64-finals",
+          20
+        ],
+        [
+          "M15 Kayseri 2 - 1/8-finals",
+          17
+        ],
+        [
+          "W15 Oliva - 1/16-finals",
+          17
+        ],
+        [
+          "M25 Grado - 1/8-finals",
+          17
+        ],
+        [
+          "Centurion - 1/8-finals",
+          16
+        ],
+        [
+          "Kosice - 1/8-finals",
+          16
+        ],
+        [
+          "M15 Gimcheon 2 - 1/16-finals",
+          16
+        ],
+        [
+          "M15 Karuizawa - 1/16-finals",
+          16
+        ],
+        [
+          "W15 Fukui - 1/16-finals",
+          16
+        ],
+        [
+          "W35 Wuning 2 - 1/16-finals",
+          16
+        ],
+        [
+          "M15 Gimcheon 2 - 1/8-finals",
+          16
+        ],
+        [
+          "M15 Karuizawa - 1/8-finals",
+          16
+        ],
+        [
+          "M15 Luan 2 - 1/8-finals",
+          16
+        ],
+        [
+          "W15 Fukui - 1/8-finals",
+          16
+        ],
+        [
+          "W35 Wuning 2 - 1/8-finals",
+          16
+        ],
+        [
+          "W75 Kursumlijska Banja - 1/16-finals",
+          16
+        ],
+        [
+          "W75 Kursumlijska Banja - 1/8-finals",
+          16
+        ],
+        [
+          "M15 Tsaghkadzor - 1/8-finals",
+          16
+        ],
+        [
+          "W15 Tsaghkadzor 2 - 1/16-finals",
+          16
+        ],
+        [
+          "W15 Tsaghkadzor 2 - 1/8-finals",
+          16
+        ],
+        [
+          "M15 Kayseri 2 - 1/16-finals",
+          16
+        ],
+        [
+          "W35 Bol 2 - 1/16-finals",
+          16
+        ]
+      ]
+    },
+    {
+      "coverage_pct": 100.0,
+      "field": "tournament_season",
+      "presence": 6347,
+      "top_values": [
+        [
+          "2026",
+          6280
+        ],
+        [
+          "2025",
+          56
+        ],
+        [
+          "<blank>",
+          9
+        ],
+        [
+          "2024",
+          2
+        ]
+      ]
+    }
+  ]
+}
