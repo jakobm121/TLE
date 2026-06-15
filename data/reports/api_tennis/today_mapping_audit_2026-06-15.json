@@ -1,23 +1,25 @@
 {
-  "blocked_matches": 18,
+  "blocked_matches": 8,
   "counters": {
-    "blocked_matches": 18,
-    "mapped_players": 249,
-    "match_coverage_both_mapped": 127,
-    "match_coverage_none_mapped": 1,
-    "match_coverage_one_mapped": 17,
+    "blocked_matches": 8,
+    "mapped_from_mapping_json": 235,
+    "mapped_from_overrides": 25,
+    "mapped_players": 260,
+    "match_coverage_both_mapped": 137,
+    "match_coverage_one_mapped": 8,
     "raw_skipped_non_singles": 31,
     "today_matches": 145,
     "today_players": 268,
-    "unmapped_players": 19
+    "unmapped_players": 8
   },
   "date": "2026-06-15",
-  "generated_at": "2026-06-15T22:16:54+00:00",
-  "mapped_players": 249,
+  "generated_at": "2026-06-15T22:22:44+00:00",
+  "mapped_players": 260,
   "mapping_path": "data/metadata/api_tennis/player_mapping.json",
   "notes": [
     "Default audit is singles-only; doubles/team fixtures are skipped for betting scanner mapping.",
-    "Scanner should block/NO_BET every singles match where coverage is not both_mapped. Use today_mapping_review.csv for confirmed overrides, then rerun 09, 10, and this audit."
+    "Today audit checks both player_mapping.json and player_mapping_overrides.json, so manual daily overrides work immediately.",
+    "Scanner should block/NO_BET every singles match where coverage is not both_mapped."
   ],
   "outputs": {
     "audit_json": "data/reports/api_tennis/today_mapping_audit_2026-06-15.json",
@@ -25,11 +27,12 @@
     "latest_review_csv": "data/reports/api_tennis/today_mapping_review.csv",
     "review_csv": "data/reports/api_tennis/today_mapping_review_2026-06-15.csv"
   },
+  "overrides_path": "data/metadata/api_tennis/player_mapping_overrides.json",
   "raw_root": "data/raw/api_tennis",
   "scanner_ready": false,
   "source_used": "raw",
   "status": "ok",
   "today_matches": 145,
   "today_players": 268,
-  "unmapped_players": 19
+  "unmapped_players": 8
 }
