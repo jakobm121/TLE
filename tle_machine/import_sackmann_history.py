@@ -38,7 +38,9 @@ def infer_level(row: dict[str, str], source_name: str, level_hint: str | None) -
 
     if tourney_level == "G":
         return "grand_slam"
-    if tourney_level in {"M", "A", "F", "D"}:
+    if tourney_level == "D":
+        return "team_cup"
+    if tourney_level in {"M", "A", "F"}:
         return "atp_wta"
     if tourney_level == "C":
         return "challenger"
@@ -52,6 +54,27 @@ def infer_level(row: dict[str, str], source_name: str, level_hint: str | None) -
         return "challenger"
     return "itf"
 
+
+
+
+def is_team_competition(row: dict[str, str], level: str) -> bool:
+    """Return True for Davis Cup / BJK Cup / Fed Cup style team competitions.
+
+    Sackmann marks these with tourney_level == "D" and often leaves surface blank.
+    We keep them out of TLE ratings because they are not standard tour/level events.
+    """
+    tourney_level = (row.get("tourney_level") or "").strip().upper()
+    tourney_id = (row.get("tourney_id") or "").upper()
+    name = (row.get("tourney_name") or "").lower()
+    return (
+        level == "team_cup"
+        or tourney_level == "D"
+        or "-DC-" in tourney_id
+        or "-FC-" in tourney_id
+        or "davis cup" in name
+        or "bjk cup" in name
+        or "fed cup" in name
+    )
 
 def iter_raw_rows(start_year: int, end_year: int):
     for year in range(start_year, end_year + 1):
@@ -258,6 +281,24 @@ def main(argv: list[str] | None = None) -> None:
                 surface=surface,
             )
             continue
+        if is_team_competition(row, level):
+            skip_row(
+                skipped_rows=skipped_rows,
+                counters=counters,
+                source_file_audit=source_file_audit,
+                filename=filename,
+                row_number=row_number,
+                year=year,
+                source_name=source_name,
+                cfg=cfg,
+                row=row,
+                reason="team_competition_excluded",
+                date=date,
+                level=level,
+                surface=surface,
+            )
+            continue
+
         if surface == "unknown" and level not in {"itf", "qualifying"}:
             skip_row(
                 skipped_rows=skipped_rows,
