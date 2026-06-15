@@ -1,115 +1,157 @@
 {
-  "event_type_counts": {},
+  "event_type_counts": {
+    "Atp Doubles": 112,
+    "Atp Singles": 200,
+    "Boys Doubles": 31,
+    "Boys Singles": 87,
+    "Challenger Men Doubles": 248,
+    "Challenger Men Singles": 842,
+    "Challenger Women Doubles": 55,
+    "Challenger Women Singles": 245,
+    "Girls Doubles": 31,
+    "Girls Singles": 87,
+    "Itf Men - Doubles": 5,
+    "Itf Men - Singles": 4,
+    "Itf Men Doubles": 670,
+    "Itf Men Singles": 1366,
+    "Itf Women Doubles": 613,
+    "Itf Women Singles": 1344,
+    "Mixed Doubles": 33,
+    "Teams Men": 35,
+    "Teams Women": 8,
+    "Wta Doubles": 102,
+    "Wta Singles": 229
+  },
   "files": {
     "2026-05-26.json": {
-      "imported": 0,
-      "raw_fixtures": 0,
-      "skipped": 0
+      "imported": 132,
+      "raw_fixtures": 374,
+      "skipped": 242
     },
     "2026-05-27.json": {
-      "imported": 0,
-      "raw_fixtures": 0,
-      "skipped": 0
+      "imported": 314,
+      "raw_fixtures": 512,
+      "skipped": 198
     },
     "2026-05-28.json": {
-      "imported": 0,
-      "raw_fixtures": 0,
-      "skipped": 0
+      "imported": 203,
+      "raw_fixtures": 428,
+      "skipped": 225
     },
     "2026-05-29.json": {
-      "imported": 0,
-      "raw_fixtures": 0,
-      "skipped": 0
+      "imported": 121,
+      "raw_fixtures": 241,
+      "skipped": 120
     },
     "2026-05-30.json": {
-      "imported": 0,
-      "raw_fixtures": 0,
-      "skipped": 0
+      "imported": 74,
+      "raw_fixtures": 169,
+      "skipped": 95
     },
     "2026-05-31.json": {
-      "imported": 0,
-      "raw_fixtures": 0,
-      "skipped": 0
+      "imported": 38,
+      "raw_fixtures": 178,
+      "skipped": 140
     },
     "2026-06-01.json": {
-      "imported": 0,
-      "raw_fixtures": 0,
-      "skipped": 0
+      "imported": 12,
+      "raw_fixtures": 146,
+      "skipped": 134
     },
     "2026-06-02.json": {
-      "imported": 0,
-      "raw_fixtures": 0,
-      "skipped": 0
+      "imported": 141,
+      "raw_fixtures": 386,
+      "skipped": 245
     },
     "2026-06-03.json": {
-      "imported": 0,
-      "raw_fixtures": 0,
-      "skipped": 0
+      "imported": 247,
+      "raw_fixtures": 456,
+      "skipped": 209
     },
     "2026-06-04.json": {
-      "imported": 0,
-      "raw_fixtures": 0,
-      "skipped": 0
+      "imported": 259,
+      "raw_fixtures": 477,
+      "skipped": 218
     },
     "2026-06-05.json": {
-      "imported": 0,
-      "raw_fixtures": 0,
-      "skipped": 0
+      "imported": 159,
+      "raw_fixtures": 257,
+      "skipped": 98
     },
     "2026-06-06.json": {
-      "imported": 0,
-      "raw_fixtures": 0,
-      "skipped": 0
+      "imported": 59,
+      "raw_fixtures": 154,
+      "skipped": 95
     },
     "2026-06-07.json": {
-      "imported": 0,
-      "raw_fixtures": 0,
-      "skipped": 0
+      "imported": 44,
+      "raw_fixtures": 149,
+      "skipped": 105
     },
     "2026-06-08.json": {
-      "imported": 0,
-      "raw_fixtures": 0,
-      "skipped": 0
+      "imported": 19,
+      "raw_fixtures": 101,
+      "skipped": 82
     },
     "2026-06-09.json": {
-      "imported": 0,
-      "raw_fixtures": 0,
-      "skipped": 0
+      "imported": 172,
+      "raw_fixtures": 404,
+      "skipped": 232
     },
     "2026-06-10.json": {
-      "imported": 0,
-      "raw_fixtures": 0,
-      "skipped": 0
+      "imported": 373,
+      "raw_fixtures": 579,
+      "skipped": 206
     },
     "2026-06-11.json": {
-      "imported": 0,
-      "raw_fixtures": 0,
-      "skipped": 0
+      "imported": 275,
+      "raw_fixtures": 495,
+      "skipped": 220
     },
     "2026-06-12.json": {
-      "imported": 0,
-      "raw_fixtures": 0,
-      "skipped": 0
+      "imported": 174,
+      "raw_fixtures": 317,
+      "skipped": 143
     },
     "2026-06-13.json": {
-      "imported": 0,
-      "raw_fixtures": 0,
-      "skipped": 0
+      "imported": 82,
+      "raw_fixtures": 205,
+      "skipped": 123
     },
     "2026-06-14.json": {
-      "imported": 0,
-      "raw_fixtures": 0,
-      "skipped": 0
+      "imported": 71,
+      "raw_fixtures": 143,
+      "skipped": 72
     },
     "2026-06-15.json": {
-      "imported": 0,
-      "raw_fixtures": 0,
-      "skipped": 0
+      "imported": 8,
+      "raw_fixtures": 176,
+      "skipped": 168
     }
   },
-  "gender_counts": {},
-  "level_counts": {},
-  "raw_surface_counts": {},
-  "status_counts": {},
-  "surface_counts": {}
+  "gender_counts": {
+    "men": 1565,
+    "women": 1412
+  },
+  "level_counts": {
+    "itf": 2335,
+    "qualifying": 642
+  },
+  "raw_surface_counts": {
+    "<blank>": 4262
+  },
+  "status_counts": {
+    "<blank>": 114,
+    "Cancelled": 111,
+    "Finished": 5820,
+    "Interrupted": 1,
+    "Retired": 154,
+    "Set 1": 10,
+    "Set 2": 11,
+    "Set 3": 6,
+    "Walk Over": 120
+  },
+  "surface_counts": {
+    "unknown": 2977
+  }
 }

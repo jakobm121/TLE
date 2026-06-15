@@ -1,9 +1,21 @@
 {
   "counters": {
-    "raw_fixtures": 0
+    "gender_men": 1565,
+    "gender_women": 1412,
+    "imported": 2977,
+    "input_fixtures": 6347,
+    "level_itf": 2335,
+    "level_qualifying": 642,
+    "raw_fixtures": 6347,
+    "skipped_doubles_or_team_match": 1901,
+    "skipped_missing_or_unresolved_winner": 26,
+    "skipped_not_finished": 157,
+    "skipped_unknown_level": 1,
+    "skipped_unknown_surface_not_allowed": 1285,
+    "surface_unknown": 2977
   },
-  "generated_at": "2026-06-15T12:35:56+00:00",
-  "matches": 0,
+  "generated_at": "2026-06-15T12:38:58+00:00",
+  "matches": 2977,
   "outputs": {
     "duplicates_csv": "data/reports/api_tennis/duplicate_api_matches.csv",
     "field_audit": "data/reports/api_tennis/api_field_audit.json",
@@ -13,5 +25,12 @@
   },
   "raw_results_dir": "data/raw/api_tennis/results",
   "source": "api_tennis",
-  "year_files": []
+  "year_files": [
+    {
+      "created_at": "2026-06-15T12:38:58+00:00",
+      "matches": 2977,
+      "path": "data/source/api_tennis/tle_api_matches_2026.jsonl.gz",
+      "year": 2026
+    }
+  ]
 }
