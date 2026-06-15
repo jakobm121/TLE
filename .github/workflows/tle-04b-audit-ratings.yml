@@ -1,0 +1,45 @@
+name: TLE 04b Audit Ratings
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit-ratings:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Audit ratings integrity
+        run: |
+          python -m tle_machine.audit_ratings
+
+      - name: Commit audit reports
+        if: always()
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/reports/ratings/rating_integrity_audit.json || true
+          git add data/reports/ratings/rating_integrity_issues.csv || true
+
+          if git diff --cached --quiet; then
+            echo "No audit report changes to commit."
+          else
+            git commit -m "Audit TLE ratings integrity"
+            git push
+          fi
