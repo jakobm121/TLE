@@ -181,6 +181,21 @@ def event_type_raw(fx: dict[str, Any]) -> str:
     return str(get_any(fx, ["event_type_type", "event_type", "type", "category_name"]) or "").strip()
 
 
+def looks_non_singles_event(event_type: str, tournament: str, first_name: str = "", second_name: str = "") -> bool:
+    blob = " ".join([event_type or "", tournament or "", first_name or "", second_name or ""]).lower()
+    if "doubles" in blob or "double" in blob:
+        return True
+    if "teams" in blob or "team" in blob:
+        return True
+    if "davis cup" in blob or "billie jean king cup" in blob or "bjk cup" in blob or "fed cup" in blob:
+        return True
+    # API represents doubles pairs as "Name/ Name". Do not audit those for singles scanner mapping.
+    if "/" in (first_name or "") or "/" in (second_name or ""):
+        return True
+    # Country-team rows often arrive as "Something W" vs "Something W" in Teams Women.
+    return False
+
+
 def load_today_raw(date_s: str, explicit_inputs: list[Path]) -> list[dict[str, Any]]:
     paths: list[Path] = []
     if explicit_inputs:
@@ -261,6 +276,7 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--date", default=datetime.now(timezone.utc).date().isoformat(), help="UTC date YYYY-MM-DD. Default: today UTC.")
     parser.add_argument("--input", action="append", default=[], help="Optional explicit raw JSON file. Can be repeated.")
     parser.add_argument("--source-fallback", action="store_true", help="If no raw odds/fixtures found, audit imported API source matches for the date.")
+    parser.add_argument("--include-non-singles", action="store_true", help="Include doubles/team fixtures. Default is singles-only for betting scanner mapping.")
     args = parser.parse_args(argv)
 
     date_s = args.date
@@ -306,6 +322,9 @@ def main(argv: list[str] | None = None) -> None:
             tid = fixture_id(fx)
             tournament = tournament_name_raw(fx)
             etype = event_type_raw(fx)
+            if not args.include_non_singles and looks_non_singles_event(etype, tournament, fname, sname):
+                counters["raw_skipped_non_singles"] += 1
+                continue
             f_map_key = resolve_mapping_key(mapping, fkey, gender)
             s_map_key = resolve_mapping_key(mapping, skey, gender)
             for raw_key, map_key, name, side in ((fkey, f_map_key, fname, "first"), (skey, s_map_key, sname, "second")):
@@ -346,6 +365,9 @@ def main(argv: list[str] | None = None) -> None:
             gender = str(m.get("gender") or "")
             tournament = str(m.get("tourney_name") or m.get("tournament_name") or "")
             level = str(m.get("level") or "")
+            if not args.include_non_singles and looks_non_singles_event(level, tournament, wn, ln):
+                counters["source_skipped_non_singles"] += 1
+                continue
             mid = str(m.get("match_id") or m.get("api_event_key") or m.get("event_key") or "")
             wk_map_key = resolve_mapping_key(mapping, wk, gender)
             lk_map_key = resolve_mapping_key(mapping, lk, gender)
@@ -426,8 +448,8 @@ def main(argv: list[str] | None = None) -> None:
         "blocked_matches": counters["blocked_matches"],
         "outputs": {"audit_json": str(out_json), "latest_audit_json": str(latest_json), "review_csv": str(out_review), "latest_review_csv": str(latest_review)},
         "notes": [
-            "Scanner should block/NO_BET every match where coverage is not both_mapped.",
-            "Use today_mapping_review.csv to add only confirmed mappings into player_mapping_overrides.json, then rerun 09, 10, and this audit.",
+            "Default audit is singles-only; doubles/team fixtures are skipped for betting scanner mapping.",
+            "Scanner should block/NO_BET every singles match where coverage is not both_mapped. Use today_mapping_review.csv for confirmed overrides, then rerun 09, 10, and this audit.",
         ],
     }
     write_json(out_json, report)
