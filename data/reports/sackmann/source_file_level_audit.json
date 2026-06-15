@@ -3,11 +3,12 @@
     "gender_counts": {
       "men": 2986
     },
-    "imported": 2933,
+    "imported": 2766,
     "input_rows": 2986,
     "normalized_level_counts": {
-      "atp_wta": 2478,
-      "grand_slam": 508
+      "atp_wta": 2258,
+      "grand_slam": 508,
+      "team_cup": 220
     },
     "normalized_surface_counts": {
       "clay": 901,
@@ -39,18 +40,19 @@
       "M": 695
     },
     "skipped_by_reason": {
-      "unknown_surface_not_allowed": 53
+      "team_competition_excluded": 220
     }
   },
   "atp_matches_2024.csv": {
     "gender_counts": {
       "men": 3076
     },
-    "imported": 3076,
+    "imported": 2816,
     "input_rows": 3076,
     "normalized_level_counts": {
-      "atp_wta": 2568,
-      "grand_slam": 508
+      "atp_wta": 2308,
+      "grand_slam": 508,
+      "team_cup": 260
     },
     "normalized_surface_counts": {
       "clay": 980,
@@ -81,17 +83,20 @@
       "M": 695,
       "O": 64
     },
-    "skipped_by_reason": {}
+    "skipped_by_reason": {
+      "team_competition_excluded": 260
+    }
   },
   "atp_matches_2025.csv": {
     "gender_counts": {
       "men": 2944
     },
-    "imported": 2944,
+    "imported": 2692,
     "input_rows": 2944,
     "normalized_level_counts": {
-      "atp_wta": 2436,
-      "grand_slam": 508
+      "atp_wta": 2184,
+      "grand_slam": 508,
+      "team_cup": 252
     },
     "normalized_surface_counts": {
       "clay": 820,
@@ -120,17 +125,20 @@
       "G": 508,
       "M": 775
     },
-    "skipped_by_reason": {}
+    "skipped_by_reason": {
+      "team_competition_excluded": 252
+    }
   },
   "atp_matches_2026.csv": {
     "gender_counts": {
       "men": 1449
     },
-    "imported": 1449,
+    "imported": 1321,
     "input_rows": 1449,
     "normalized_level_counts": {
-      "atp_wta": 1195,
-      "grand_slam": 254
+      "atp_wta": 1067,
+      "grand_slam": 254,
+      "team_cup": 128
     },
     "normalized_surface_counts": {
       "clay": 682,
@@ -158,7 +166,9 @@
       "G": 254,
       "M": 435
     },
-    "skipped_by_reason": {}
+    "skipped_by_reason": {
+      "team_competition_excluded": 128
+    }
   },
   "atp_matches_futures_2023.csv": {
     "gender_counts": {
@@ -460,11 +470,12 @@
     "gender_counts": {
       "women": 2810
     },
-    "imported": 2810,
+    "imported": 2538,
     "input_rows": 2810,
     "normalized_level_counts": {
-      "atp_wta": 2302,
-      "grand_slam": 508
+      "atp_wta": 2030,
+      "grand_slam": 508,
+      "team_cup": 272
     },
     "normalized_surface_counts": {
       "clay": 784,
@@ -494,17 +505,20 @@
       "P": 584,
       "PM": 439
     },
-    "skipped_by_reason": {}
+    "skipped_by_reason": {
+      "team_competition_excluded": 272
+    }
   },
   "wta_matches_2024.csv": {
     "gender_counts": {
       "women": 2689
     },
-    "imported": 2632,
+    "imported": 2610,
     "input_rows": 2689,
     "normalized_level_counts": {
-      "atp_wta": 2181,
-      "grand_slam": 508
+      "atp_wta": 2102,
+      "grand_slam": 508,
+      "team_cup": 79
     },
     "normalized_surface_counts": {
       "clay": 729,
@@ -540,18 +554,19 @@
       "W": 31
     },
     "skipped_by_reason": {
-      "unknown_surface_not_allowed": 57
+      "team_competition_excluded": 79
     }
   },
   "wta_matches_2025.csv": {
     "gender_counts": {
       "women": 2795
     },
-    "imported": 2759,
+    "imported": 2745,
     "input_rows": 2795,
     "normalized_level_counts": {
-      "atp_wta": 2287,
-      "grand_slam": 508
+      "atp_wta": 2237,
+      "grand_slam": 508,
+      "team_cup": 50
     },
     "normalized_surface_counts": {
       "clay": 697,
@@ -587,7 +602,7 @@
       "PM": 830
     },
     "skipped_by_reason": {
-      "unknown_surface_not_allowed": 36
+      "team_competition_excluded": 50
     }
   },
   "wta_matches_2026.csv": {
@@ -597,8 +612,9 @@
     "imported": 1273,
     "input_rows": 1295,
     "normalized_level_counts": {
-      "atp_wta": 1041,
-      "grand_slam": 254
+      "atp_wta": 1019,
+      "grand_slam": 254,
+      "team_cup": 22
     },
     "normalized_surface_counts": {
       "clay": 538,
@@ -628,7 +644,7 @@
       "PM": 490
     },
     "skipped_by_reason": {
-      "unknown_surface_not_allowed": 22
+      "team_competition_excluded": 22
     }
   },
   "wta_matches_qual_itf_2023.csv": {
