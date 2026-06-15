@@ -29,23 +29,45 @@ REPORT_DIR = Path("data/reports/api_tennis")
 ACCEPTED_STATUSES = {"auto_mapped", "manual_mapped"}
 
 
-def api_mapping_key(raw_key: Any, gender: str) -> str:
-    """Return the exact key format used by player_mapping.json.
+def api_key_variants(raw_key: Any, gender: str = "") -> list[str]:
+    """Possible API player key formats used across our scripts.
 
-    The global mapper stores API players as e.g.
-    men:api_tennis:12345 / women:api_tennis:67890.
-    Raw get_fixtures usually contains only bare numeric keys, so today audit
-    must add the gender/source prefix before checking mapping.
+    Current player_mapping.json stores keys as men:api:<id> / women:api:<id>.
+    Some earlier drafts used men:api_tennis:<id>. Raw API fixtures usually have
+    only the bare numeric key. Today audit tries all safe variants.
     """
     k = str(raw_key or "").strip()
     if not k:
+        return []
+    if re.match(r"^(men|women):api(_tennis)?:", k):
+        return [k]
+    genders = [str(gender or "").strip().lower()] if str(gender or "").strip().lower() in {"men", "women"} else ["men", "women"]
+    out: list[str] = []
+    for g in genders:
+        out.append(f"{g}:api:{k}")
+        out.append(f"{g}:api_tennis:{k}")
+    return out
+
+
+def resolve_mapping_key(mapping: dict[str, Any], raw_key: Any, gender: str = "") -> str:
+    """Return the mapping key that exists in player_mapping.json, if any.
+
+    If no entry exists, return the first canonical variant so the review CSV still
+    gives a useful override key.
+    """
+    variants = api_key_variants(raw_key, gender)
+    if not variants:
         return ""
-    if ":api_tennis:" in k:
-        return k
-    g = str(gender or "").strip().lower()
-    if g not in {"men", "women"}:
-        return k
-    return f"{g}:api_tennis:{k}"
+    for v in variants:
+        if v in mapping:
+            return v
+    return variants[0]
+
+
+def api_mapping_key(raw_key: Any, gender: str) -> str:
+    # Backward-compatible wrapper for places that do not have mapping available.
+    variants = api_key_variants(raw_key, gender)
+    return variants[0] if variants else ""
 
 
 def read_json(path: Path) -> Any:
@@ -230,7 +252,8 @@ def suggested_override(api_gender: str, api_key: str, cand: dict[str, str]) -> s
     if not target:
         return ""
     # Target already includes gender in our current mapping/rating keys.
-    return json.dumps({f"{api_gender}:api_tennis:{api_key}": target}, ensure_ascii=False)
+    key = api_key if re.match(r"^(men|women):api(_tennis)?:", str(api_key)) else api_mapping_key(api_key, api_gender)
+    return json.dumps({key: target}, ensure_ascii=False)
 
 
 def main(argv: list[str] | None = None) -> None:
@@ -283,8 +306,8 @@ def main(argv: list[str] | None = None) -> None:
             tid = fixture_id(fx)
             tournament = tournament_name_raw(fx)
             etype = event_type_raw(fx)
-            f_map_key = api_mapping_key(fkey, gender)
-            s_map_key = api_mapping_key(skey, gender)
+            f_map_key = resolve_mapping_key(mapping, fkey, gender)
+            s_map_key = resolve_mapping_key(mapping, skey, gender)
             for raw_key, map_key, name, side in ((fkey, f_map_key, fname, "first"), (skey, s_map_key, sname, "second")):
                 if not map_key:
                     continue
@@ -324,8 +347,8 @@ def main(argv: list[str] | None = None) -> None:
             tournament = str(m.get("tourney_name") or m.get("tournament_name") or "")
             level = str(m.get("level") or "")
             mid = str(m.get("match_id") or m.get("api_event_key") or m.get("event_key") or "")
-            wk_map_key = api_mapping_key(wk, gender)
-            lk_map_key = api_mapping_key(lk, gender)
+            wk_map_key = resolve_mapping_key(mapping, wk, gender)
+            lk_map_key = resolve_mapping_key(mapping, lk, gender)
             for raw_key, key, name, opp in ((wk, wk_map_key, wn, ln), (lk, lk_map_key, ln, wn)):
                 if not key:
                     continue
