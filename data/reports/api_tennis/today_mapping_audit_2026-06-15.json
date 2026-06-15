@@ -1,0 +1,32 @@
+{
+  "blocked_matches": 176,
+  "counters": {
+    "blocked_matches": 176,
+    "mapped_players": 0,
+    "match_coverage_none_mapped": 176,
+    "today_matches": 176,
+    "today_players": 330,
+    "unmapped_players": 330
+  },
+  "date": "2026-06-15",
+  "generated_at": "2026-06-15T21:21:09+00:00",
+  "mapped_players": 0,
+  "mapping_path": "data/metadata/api_tennis/player_mapping.json",
+  "notes": [
+    "Scanner should block/NO_BET every match where coverage is not both_mapped.",
+    "Use today_mapping_review.csv to add only confirmed mappings into player_mapping_overrides.json, then rerun 09, 10, and this audit."
+  ],
+  "outputs": {
+    "audit_json": "data/reports/api_tennis/today_mapping_audit_2026-06-15.json",
+    "latest_audit_json": "data/reports/api_tennis/today_mapping_audit.json",
+    "latest_review_csv": "data/reports/api_tennis/today_mapping_review.csv",
+    "review_csv": "data/reports/api_tennis/today_mapping_review_2026-06-15.csv"
+  },
+  "raw_root": "data/raw/api_tennis",
+  "scanner_ready": false,
+  "source_used": "raw",
+  "status": "ok",
+  "today_matches": 176,
+  "today_players": 330,
+  "unmapped_players": 330
+}
