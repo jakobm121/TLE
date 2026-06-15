@@ -1,0 +1,64 @@
+{
+  "counters": {
+    "file_tle_api_matches_2026.jsonl.gz": 4231,
+    "files_read": 1,
+    "gender_men": 2387,
+    "gender_women": 1844,
+    "level_atp_wta": 205,
+    "level_challenger": 709,
+    "level_grand_slam": 340,
+    "level_itf": 2335,
+    "level_qualifying": 642,
+    "matches_checked": 4231,
+    "possible_sackmann_overlaps": 75,
+    "rows_in_tle_api_matches_2026.jsonl.gz": 4231,
+    "sackmann_overlap_index_keys": 222041,
+    "surface_clay": 2403,
+    "surface_grass": 434,
+    "surface_hard": 1394
+  },
+  "duplicate_rows_from_import": 0,
+  "errors_total": 0,
+  "files": [
+    "data/source/api_tennis/tle_api_matches_2026.jsonl.gz"
+  ],
+  "generated_at": "2026-06-15T13:06:37+00:00",
+  "issue_counts": {},
+  "issues_total": 0,
+  "level_surface_counts": {
+    "atp_wta|clay": 45,
+    "atp_wta|grass": 160,
+    "challenger|clay": 416,
+    "challenger|grass": 201,
+    "challenger|hard": 92,
+    "grand_slam|clay": 340,
+    "itf|clay": 1264,
+    "itf|grass": 27,
+    "itf|hard": 1044,
+    "qualifying|clay": 338,
+    "qualifying|grass": 46,
+    "qualifying|hard": 258
+  },
+  "matches_checked": 4231,
+  "notes": [
+    "Sackmann overlap candidates are heuristic only because API player names are abbreviated and not yet canonically mapped.",
+    "Authoritative Sackmann/API dedup will be done later in combined canonical merge after player mapping."
+  ],
+  "outputs": {
+    "audit_json": "data/reports/api_tennis/api_source_audit.json",
+    "issues_csv": "data/reports/api_tennis/api_source_issues.csv",
+    "sackmann_overlap_candidates_csv": "data/reports/api_tennis/api_sackmann_overlap_candidates.csv"
+  },
+  "possible_sackmann_overlap_candidates": 75,
+  "skipped_reasons_from_import": {
+    "doubles_or_team_match": 1901,
+    "missing_or_unresolved_winner": 26,
+    "not_finished": 157,
+    "unknown_level": 1,
+    "unknown_surface_not_allowed": 31
+  },
+  "source": "api_tennis",
+  "source_manifest": "data/source/api_tennis/manifest.json",
+  "status": "ok",
+  "warnings_total": 0
+}
