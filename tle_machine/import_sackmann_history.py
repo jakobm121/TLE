@@ -36,39 +36,38 @@ def infer_level(row: dict[str, str], source_name: str, level_hint: str | None) -
     name = (row.get("tourney_name") or "").lower()
     round_name = (row.get("round") or "").strip().upper()
 
+    # Grand Slami ostanejo posebni level.
     if tourney_level == "G":
         return "grand_slam"
+
+    # Davis Cup / BJK Cup / Fed Cup štejemo v atp_wta.
+    # Če nimajo surface, jih kasneje skipamo kot unknown_surface_not_allowed.
     if tourney_level == "D":
-        return "team_cup"
+        return "atp_wta"
+
+    # Main tour.
     if tourney_level in {"M", "A", "F"}:
         return "atp_wta"
+
+    # Challenger.
     if tourney_level == "C":
         return "challenger"
+
+    # Qualifying, če je eksplicitno označen.
     if tourney_level == "Q":
         return "qualifying"
+
     if round_name == "Q" or "qual" in name:
         return "qualifying"
+
+    # Fallback iz configa / source imena.
     if level_hint:
         return level_hint
+
     if "chall" in source_name:
         return "challenger"
+
     return "itf"
-
-
-def is_team_competition(row: dict[str, str], level: str) -> bool:
-    tourney_level = (row.get("tourney_level") or "").strip().upper()
-    tourney_id = (row.get("tourney_id") or "").upper()
-    name = (row.get("tourney_name") or "").lower()
-
-    return (
-        level == "team_cup"
-        or tourney_level == "D"
-        or "-DC-" in tourney_id
-        or "-FC-" in tourney_id
-        or "davis cup" in name
-        or "bjk cup" in name
-        or "fed cup" in name
-    )
 
 
 def iter_raw_rows(start_year: int, end_year: int):
@@ -295,24 +294,8 @@ def main(argv: list[str] | None = None) -> None:
             )
             continue
 
-        if is_team_competition(row, level):
-            skip_row(
-                skipped_rows=skipped_rows,
-                counters=counters,
-                source_file_audit=source_file_audit,
-                filename=filename,
-                row_number=row_number,
-                year=year,
-                source_name=source_name,
-                cfg=cfg,
-                row=row,
-                reason="team_competition_excluded",
-                date=date,
-                level=level,
-                surface=surface,
-            )
-            continue
-
+        # Surface mora biti znan za atp_wta, grand_slam in challenger.
+        # ITF in qualifying lahko ostaneta unknown, ker jih lahko uporabljamo kot level-overall.
         if surface == "unknown" and level not in {"itf", "qualifying"}:
             skip_row(
                 skipped_rows=skipped_rows,
