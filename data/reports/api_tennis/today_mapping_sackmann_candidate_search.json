@@ -1,0 +1,17 @@
+{
+  "counters": {
+    "no_candidate": 8,
+    "review_players": 20,
+    "safe_override": 12
+  },
+  "generated_at": "2026-06-15T21:58:27+00:00",
+  "outputs": {
+    "csv": "data/reports/api_tennis/today_mapping_sackmann_candidate_search.csv",
+    "json": "data/reports/api_tennis/today_mapping_sackmann_candidate_search.json"
+  },
+  "players_in_review": 20,
+  "sackmann_manifest": "data/source/sackmann/manifest.json",
+  "sackmann_players": 12045,
+  "status": "ok",
+  "today_review": "data/reports/api_tennis/today_mapping_review.csv"
+}
