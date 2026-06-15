@@ -175,11 +175,25 @@ def load_json(path: Path) -> Any:
 
 
 def extract_fixtures(payload: Any) -> list[dict[str, Any]]:
+    """Extract fixtures from raw API-Tennis payloads.
+
+    Fetch step stores a wrapper like:
+      {schema_version, source, method, date, request, response: {success, result}}
+
+    This importer also accepts direct API responses and a few common alternate
+    shapes so it can be rerun after future fetch changes.
+    """
     if isinstance(payload, list):
         return [x for x in payload if isinstance(x, dict)]
 
     if not isinstance(payload, dict):
         return []
+
+    # Our raw fetch wrapper puts the real API response under "response".
+    # Unwrap once, then continue with the same generic extraction logic.
+    response = payload.get("response")
+    if isinstance(response, dict):
+        return extract_fixtures(response)
 
     result = payload.get("result")
     if isinstance(result, list):
@@ -197,6 +211,10 @@ def extract_fixtures(payload: Any) -> list[dict[str, Any]]:
         value = payload.get(key)
         if isinstance(value, list):
             return [x for x in value if isinstance(x, dict)]
+        if isinstance(value, dict):
+            nested = extract_fixtures(value)
+            if nested:
+                return nested
 
     return []
 
