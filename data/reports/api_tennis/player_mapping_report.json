@@ -1,0 +1,23 @@
+{
+  "api_players": 2778,
+  "counters": {
+    "ambiguous": 138,
+    "api_gender_men": 1544,
+    "api_gender_women": 1234,
+    "api_players": 2778,
+    "auto_mapped": 2501,
+    "unmapped": 139
+  },
+  "generated_at": "2026-06-15T13:27:12+00:00",
+  "issues_total": 0,
+  "outputs": {
+    "candidates_csv": "data/reports/api_tennis/player_mapping_candidates.csv",
+    "issues_csv": "data/reports/api_tennis/player_mapping_issues.csv",
+    "mapping_json": "data/metadata/api_tennis/player_mapping.json",
+    "overrides_json": "data/metadata/api_tennis/player_mapping_overrides.json",
+    "review_csv": "data/reports/api_tennis/player_mapping_review.csv"
+  },
+  "review_needed": 277,
+  "sackmann_players": 12045,
+  "status": "ok"
+}
