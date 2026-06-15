@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15T13:22:29+00:00",
+  "generated_at": "2026-06-15T21:43:46+00:00",
   "mapping": {
     "men:api:100041": {
       "api_levels": {
@@ -6571,25 +6571,13 @@
       "top_candidate": null
     },
     "men:api:17463": {
-      "api_levels": {
-        "challenger": 1,
-        "qualifying": 1
-      },
       "api_matches": 2,
       "api_name": "Dar. Blanch",
-      "api_name_variants": {
-        "Dar. Blanch": 2
-      },
-      "api_surfaces": {
-        "grass": 2
-      },
-      "confidence": 0.975375,
+      "confidence": 1.0,
       "gender": "men",
-      "margin": 0.000448,
-      "method": "exact_initial_form",
-      "sackmann_player_key": null,
-      "status": "ambiguous",
-      "top_candidate": null
+      "method": "manual_override",
+      "sackmann_player_key": "men:sackmann:209898",
+      "status": "manual_mapped"
     },
     "men:api:1748": {
       "api_levels": {
@@ -16967,25 +16955,13 @@
       "top_candidate": null
     },
     "men:api:54466": {
-      "api_levels": {
-        "challenger": 5,
-        "qualifying": 1
-      },
       "api_matches": 6,
       "api_name": "C. Smith",
-      "api_name_variants": {
-        "C. Smith": 6
-      },
-      "api_surfaces": {
-        "hard": 6
-      },
-      "confidence": 0.97482,
+      "confidence": 1.0,
       "gender": "men",
-      "margin": 0.004127,
-      "method": "exact_initial_form",
-      "sackmann_player_key": null,
-      "status": "ambiguous",
-      "top_candidate": null
+      "method": "manual_override",
+      "sackmann_player_key": "men:sackmann:212256",
+      "status": "manual_mapped"
     },
     "men:api:54468": {
       "api_levels": {
@@ -19160,28 +19136,13 @@
       "top_candidate": null
     },
     "men:api:590": {
-      "api_levels": {
-        "atp_wta": 2,
-        "challenger": 5,
-        "grand_slam": 1,
-        "qualifying": 1
-      },
       "api_matches": 9,
       "api_name": "Z. Zhang",
-      "api_name_variants": {
-        "Z. Zhang": 9
-      },
-      "api_surfaces": {
-        "clay": 1,
-        "grass": 8
-      },
-      "confidence": 0.975069,
+      "confidence": 1.0,
       "gender": "men",
-      "margin": 0.00397,
-      "method": "exact_initial_form",
-      "sackmann_player_key": null,
-      "status": "ambiguous",
-      "top_candidate": null
+      "method": "manual_override",
+      "sackmann_player_key": "men:sackmann:111190",
+      "status": "manual_mapped"
     },
     "men:api:59061": {
       "api_levels": {
@@ -27494,24 +27455,13 @@
       "top_candidate": null
     },
     "men:api:851": {
-      "api_levels": {
-        "challenger": 4
-      },
       "api_matches": 4,
       "api_name": "T. Compagnucci",
-      "api_name_variants": {
-        "T. Compagnucci": 4
-      },
-      "api_surfaces": {
-        "clay": 4
-      },
-      "confidence": 0.975209,
+      "confidence": 1.0,
       "gender": "men",
-      "margin": 0.001278,
-      "method": "exact_initial_form",
-      "sackmann_player_key": null,
-      "status": "ambiguous",
-      "top_candidate": null
+      "method": "manual_override",
+      "sackmann_player_key": "men:sackmann:206867",
+      "status": "manual_mapped"
     },
     "men:api:85184": {
       "api_levels": {
@@ -34532,45 +34482,22 @@
       "top_candidate": null
     },
     "women:api:122": {
-      "api_levels": {
-        "itf": 2
-      },
       "api_matches": 2,
       "api_name": "D. Marcinkevica",
-      "api_name_variants": {
-        "D. Marcinkevica": 2
-      },
-      "api_surfaces": {
-        "clay": 1,
-        "hard": 1
-      },
-      "confidence": 0.975147,
+      "confidence": 1.0,
       "gender": "women",
-      "margin": 0.003202,
-      "method": "exact_initial_form",
-      "sackmann_player_key": null,
-      "status": "ambiguous",
-      "top_candidate": null
+      "method": "manual_override",
+      "sackmann_player_key": "women:sackmann:203509",
+      "status": "manual_mapped"
     },
     "women:api:123": {
-      "api_levels": {
-        "itf": 3
-      },
       "api_matches": 3,
       "api_name": "A. S. Sanchez",
-      "api_name_variants": {
-        "A. S. Sanchez": 3
-      },
-      "api_surfaces": {
-        "hard": 3
-      },
-      "confidence": 0.935947,
+      "confidence": 1.0,
       "gender": "women",
-      "margin": 0.011023,
-      "method": "initial_surname",
-      "sackmann_player_key": null,
-      "status": "ambiguous",
-      "top_candidate": null
+      "method": "manual_override",
+      "sackmann_player_key": "women:sackmann:204419",
+      "status": "manual_mapped"
     },
     "women:api:124": {
       "api_levels": {
@@ -34737,25 +34664,13 @@
       "top_candidate": null
     },
     "women:api:12869": {
-      "api_levels": {
-        "challenger": 4,
-        "qualifying": 1
-      },
       "api_matches": 5,
       "api_name": "M. Timofeeva",
-      "api_name_variants": {
-        "M. Timofeeva": 5
-      },
-      "api_surfaces": {
-        "clay": 5
-      },
-      "confidence": 0.975226,
+      "confidence": 1.0,
       "gender": "women",
-      "margin": 0.004533,
-      "method": "exact_initial_form",
-      "sackmann_player_key": null,
-      "status": "ambiguous",
-      "top_candidate": null
+      "method": "manual_override",
+      "sackmann_player_key": "women:sackmann:221237",
+      "status": "manual_mapped"
     },
     "women:api:12876": {
       "api_levels": {
@@ -37671,25 +37586,13 @@
       "top_candidate": null
     },
     "women:api:17346": {
-      "api_levels": {
-        "itf": 1,
-        "qualifying": 1
-      },
       "api_matches": 2,
       "api_name": "A. Smith",
-      "api_name_variants": {
-        "A. Smith": 2
-      },
-      "api_surfaces": {
-        "hard": 2
-      },
-      "confidence": 0.974977,
+      "confidence": 1.0,
       "gender": "women",
-      "margin": 0.000522,
-      "method": "exact_initial_form",
-      "sackmann_player_key": null,
-      "status": "ambiguous",
-      "top_candidate": null
+      "method": "manual_override",
+      "sackmann_player_key": "women:sackmann:220673",
+      "status": "manual_mapped"
     },
     "women:api:17377": {
       "api_levels": {
@@ -38205,26 +38108,13 @@
       "top_candidate": null
     },
     "women:api:1815": {
-      "api_levels": {
-        "atp_wta": 1,
-        "challenger": 3
-      },
       "api_matches": 4,
       "api_name": "L. Sun",
-      "api_name_variants": {
-        "L. Sun": 4
-      },
-      "api_surfaces": {
-        "clay": 1,
-        "grass": 3
-      },
-      "confidence": 0.975242,
+      "confidence": 1.0,
       "gender": "women",
-      "margin": 0.002603,
-      "method": "exact_initial_form",
-      "sackmann_player_key": null,
-      "status": "ambiguous",
-      "top_candidate": null
+      "method": "manual_override",
+      "sackmann_player_key": "women:sackmann:215138",
+      "status": "manual_mapped"
     },
     "women:api:1819": {
       "api_levels": {
@@ -40595,24 +40485,13 @@
       "top_candidate": null
     },
     "women:api:2394": {
-      "api_levels": {
-        "atp_wta": 1
-      },
       "api_matches": 1,
       "api_name": "L. Fernandez",
-      "api_name_variants": {
-        "L. Fernandez": 1
-      },
-      "api_surfaces": {
-        "grass": 1
-      },
-      "confidence": 0.975338,
+      "confidence": 1.0,
       "gender": "women",
-      "margin": 0.0016,
-      "method": "exact_initial_form",
-      "sackmann_player_key": null,
-      "status": "ambiguous",
-      "top_candidate": null
+      "method": "manual_override",
+      "sackmann_player_key": "women:sackmann:220367",
+      "status": "manual_mapped"
     },
     "women:api:24135": {
       "api_levels": {
@@ -42969,24 +42848,13 @@
       "top_candidate": null
     },
     "women:api:37886": {
-      "api_levels": {
-        "qualifying": 2
-      },
       "api_matches": 2,
       "api_name": "T. Rakotomanga Rajaonah",
-      "api_name_variants": {
-        "T. Rakotomanga Rajaonah": 2
-      },
-      "api_surfaces": {
-        "clay": 2
-      },
-      "confidence": 0.945964,
+      "confidence": 1.0,
       "gender": "women",
-      "margin": 0.000566,
-      "method": "initial_surname",
-      "sackmann_player_key": null,
-      "status": "ambiguous",
-      "top_candidate": null
+      "method": "manual_override",
+      "sackmann_player_key": "women:sackmann:266531",
+      "status": "manual_mapped"
     },
     "women:api:37889": {
       "api_levels": {
@@ -44751,25 +44619,13 @@
       "top_candidate": null
     },
     "women:api:451": {
-      "api_levels": {
-        "atp_wta": 3
-      },
       "api_matches": 3,
       "api_name": "L. Zhu",
-      "api_name_variants": {
-        "L. Zhu": 3
-      },
-      "api_surfaces": {
-        "clay": 1,
-        "grass": 2
-      },
-      "confidence": 0.97497,
+      "confidence": 1.0,
       "gender": "women",
-      "margin": 0.003871,
-      "method": "exact_initial_form",
-      "sackmann_player_key": null,
-      "status": "ambiguous",
-      "top_candidate": null
+      "method": "manual_override",
+      "sackmann_player_key": "women:sackmann:202684",
+      "status": "manual_mapped"
     },
     "women:api:4526": {
       "api_levels": {
@@ -50190,24 +50046,13 @@
       "top_candidate": null
     },
     "women:api:68376": {
-      "api_levels": {
-        "atp_wta": 1
-      },
       "api_matches": 1,
       "api_name": "L. Samsonova",
-      "api_name_variants": {
-        "L. Samsonova": 1
-      },
-      "api_surfaces": {
-        "grass": 1
-      },
-      "confidence": 0.975215,
+      "confidence": 1.0,
       "gender": "women",
-      "margin": 0.004522,
-      "method": "exact_initial_form",
-      "sackmann_player_key": null,
-      "status": "ambiguous",
-      "top_candidate": null
+      "method": "manual_override",
+      "sackmann_player_key": "women:sackmann:214643",
+      "status": "manual_mapped"
     },
     "women:api:68442": {
       "api_levels": {
@@ -57034,11 +56879,12 @@
   },
   "source": "api_tennis",
   "summary": {
-    "ambiguous": 138,
+    "ambiguous": 125,
     "api_gender_men": 1544,
     "api_gender_women": 1234,
     "api_players": 2778,
     "auto_mapped": 2501,
+    "manual_mapped": 13,
     "unmapped": 139
   },
   "target": "sackmann"
