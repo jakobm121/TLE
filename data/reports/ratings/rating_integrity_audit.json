@@ -1,0 +1,24 @@
+{
+  "counters": {
+    "players_checked": 12045,
+    "players_men": 5259,
+    "players_with_level": 12045,
+    "players_with_level_surface": 12045,
+    "players_with_surface": 12045,
+    "players_women": 6786
+  },
+  "generated_at": "2026-06-15T11:32:29+00:00",
+  "issue_counts": {},
+  "issues_total": 0,
+  "outputs": {
+    "audit_json": "data/reports/ratings/rating_integrity_audit.json",
+    "issues_csv": "data/reports/ratings/rating_integrity_issues.csv"
+  },
+  "players_checked": 12045,
+  "rating_range_policy": {
+    "max_reasonable_rating": 2800.0,
+    "min_reasonable_rating": 700.0
+  },
+  "ratings_path": "data/ratings/tle_player_ratings.json",
+  "status": "ok"
+}
