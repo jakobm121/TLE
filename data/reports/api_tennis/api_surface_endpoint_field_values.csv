@@ -1,0 +1,272 @@
+group,field,presence,coverage_pct,value,count
+get_events,event_type_key,27,100.0,267,1
+get_events,event_type_key,27,100.0,265,1
+get_events,event_type_key,27,100.0,279,1
+get_events,event_type_key,27,100.0,277,1
+get_events,event_type_key,27,100.0,282,1
+get_events,event_type_key,27,100.0,281,1
+get_events,event_type_key,27,100.0,275,1
+get_events,event_type_key,27,100.0,272,1
+get_events,event_type_key,27,100.0,284,1
+get_events,event_type_key,27,100.0,288,1
+get_events,event_type_key,27,100.0,283,1
+get_events,event_type_key,27,100.0,305,1
+get_events,event_type_key,27,100.0,289,1
+get_events,event_type_key,27,100.0,286,1
+get_events,event_type_key,27,100.0,276,1
+get_events,event_type_key,27,100.0,280,1
+get_events,event_type_key,27,100.0,278,1
+get_events,event_type_key,27,100.0,264,1
+get_events,event_type_key,27,100.0,270,1
+get_events,event_type_key,27,100.0,287,1
+get_events,event_type_type,27,100.0,Atp Doubles,1
+get_events,event_type_type,27,100.0,Atp Singles,1
+get_events,event_type_type,27,100.0,Boys Doubles,1
+get_events,event_type_type,27,100.0,Boys Singles,1
+get_events,event_type_type,27,100.0,Challenger Men Doubles,1
+get_events,event_type_type,27,100.0,Challenger Men Singles,1
+get_events,event_type_type,27,100.0,Challenger Women Doubles,1
+get_events,event_type_type,27,100.0,Challenger Women Singles,1
+get_events,event_type_type,27,100.0,Exhibition Doubles Men,1
+get_events,event_type_type,27,100.0,Exhibition Doubles Women,1
+get_events,event_type_type,27,100.0,Exhibition Men,1
+get_events,event_type_type,27,100.0,Exhibition Mixed,1
+get_events,event_type_type,27,100.0,Exhibition Mixed Doubles,1
+get_events,event_type_type,27,100.0,Exhibition Teams,1
+get_events,event_type_type,27,100.0,Exhibition Women,1
+get_events,event_type_type,27,100.0,Girls Doubles,1
+get_events,event_type_type,27,100.0,Girls Singles,1
+get_events,event_type_type,27,100.0,Itf Men Doubles,1
+get_events,event_type_type,27,100.0,Itf Men Singles,1
+get_events,event_type_type,27,100.0,Itf Women Doubles,1
+get_tournaments,tournament_key,10047,100.0,13759,1
+get_tournaments,tournament_key,10047,100.0,13760,1
+get_tournaments,tournament_key,10047,100.0,2833,1
+get_tournaments,tournament_key,10047,100.0,12400,1
+get_tournaments,tournament_key,10047,100.0,12399,1
+get_tournaments,tournament_key,10047,100.0,12417,1
+get_tournaments,tournament_key,10047,100.0,12422,1
+get_tournaments,tournament_key,10047,100.0,2655,1
+get_tournaments,tournament_key,10047,100.0,2801,1
+get_tournaments,tournament_key,10047,100.0,2131,1
+get_tournaments,tournament_key,10047,100.0,2130,1
+get_tournaments,tournament_key,10047,100.0,8690,1
+get_tournaments,tournament_key,10047,100.0,10891,1
+get_tournaments,tournament_key,10047,100.0,10887,1
+get_tournaments,tournament_key,10047,100.0,3223,1
+get_tournaments,tournament_key,10047,100.0,5171,1
+get_tournaments,tournament_key,10047,100.0,5172,1
+get_tournaments,tournament_key,10047,100.0,5170,1
+get_tournaments,tournament_key,10047,100.0,5174,1
+get_tournaments,tournament_key,10047,100.0,3548,1
+get_tournaments,tournament_name,10047,100.0,Mallorca,12
+get_tournaments,tournament_name,10047,100.0,Bucharest,11
+get_tournaments,tournament_name,10047,100.0,Rome,11
+get_tournaments,tournament_name,10047,100.0,Antalya,10
+get_tournaments,tournament_name,10047,100.0,Bastad,10
+get_tournaments,tournament_name,10047,100.0,Birmingham,10
+get_tournaments,tournament_name,10047,100.0,Moscow,10
+get_tournaments,tournament_name,10047,100.0,Seoul,10
+get_tournaments,tournament_name,10047,100.0,Taipei,10
+get_tournaments,tournament_name,10047,100.0,Belgrade,9
+get_tournaments,tournament_name,10047,100.0,Bogota,9
+get_tournaments,tournament_name,10047,100.0,Budapest,9
+get_tournaments,tournament_name,10047,100.0,Buenos Aires,9
+get_tournaments,tournament_name,10047,100.0,French Open,9
+get_tournaments,tournament_name,10047,100.0,Hamburg,9
+get_tournaments,tournament_name,10047,100.0,Hong Kong,9
+get_tournaments,tournament_name,10047,100.0,Houston,9
+get_tournaments,tournament_name,10047,100.0,Istanbul,9
+get_tournaments,tournament_name,10047,100.0,Madrid,9
+get_tournaments,tournament_name,10047,100.0,Parma,9
+get_tournaments,event_type_key,10047,100.0,271,2232
+get_tournaments,event_type_key,10047,100.0,270,2021
+get_tournaments,event_type_key,10047,100.0,287,1876
+get_tournaments,event_type_key,10047,100.0,264,1553
+get_tournaments,event_type_key,10047,100.0,281,589
+get_tournaments,event_type_key,10047,100.0,282,537
+get_tournaments,event_type_key,10047,100.0,266,228
+get_tournaments,event_type_key,10047,100.0,268,223
+get_tournaments,event_type_key,10047,100.0,265,198
+get_tournaments,event_type_key,10047,100.0,267,194
+get_tournaments,event_type_key,10047,100.0,272,112
+get_tournaments,event_type_key,10047,100.0,275,110
+get_tournaments,event_type_key,10047,100.0,283,54
+get_tournaments,event_type_key,10047,100.0,276,43
+get_tournaments,event_type_key,10047,100.0,284,11
+get_tournaments,event_type_key,10047,100.0,285,10
+get_tournaments,event_type_key,10047,100.0,269,9
+get_tournaments,event_type_key,10047,100.0,273,7
+get_tournaments,event_type_key,10047,100.0,289,6
+get_tournaments,event_type_key,10047,100.0,274,6
+get_tournaments,event_type_type,10047,100.0,Itf Women Singles,2232
+get_tournaments,event_type_type,10047,100.0,Itf Men Singles,2021
+get_tournaments,event_type_type,10047,100.0,Itf Women Doubles,1876
+get_tournaments,event_type_type,10047,100.0,Itf Men Doubles,1553
+get_tournaments,event_type_type,10047,100.0,Challenger Men Singles,589
+get_tournaments,event_type_type,10047,100.0,Challenger Men Doubles,537
+get_tournaments,event_type_type,10047,100.0,Wta Singles,228
+get_tournaments,event_type_type,10047,100.0,Wta Doubles,223
+get_tournaments,event_type_type,10047,100.0,Atp Singles,198
+get_tournaments,event_type_type,10047,100.0,Atp Doubles,194
+get_tournaments,event_type_type,10047,100.0,Challenger Women Singles,112
+get_tournaments,event_type_type,10047,100.0,Challenger Women Doubles,110
+get_tournaments,event_type_type,10047,100.0,Exhibition Men,54
+get_tournaments,event_type_type,10047,100.0,Exhibition Women,43
+get_tournaments,event_type_type,10047,100.0,Exhibition Doubles Men,11
+get_tournaments,event_type_type,10047,100.0,Teams Men,10
+get_tournaments,event_type_type,10047,100.0,Mixed Doubles,9
+get_tournaments,event_type_type,10047,100.0,Teams Women,7
+get_tournaments,event_type_type,10047,100.0,Exhibition Mixed Doubles,6
+get_tournaments,event_type_type,10047,100.0,Teams Mix,6
+get_tournaments,tournament_sourface,10047,100.0,Hard,4831
+get_tournaments,tournament_sourface,10047,100.0,Clay,4309
+get_tournaments,tournament_sourface,10047,100.0,Hard (Indoor),635
+get_tournaments,tournament_sourface,10047,100.0,Grass,147
+get_tournaments,tournament_sourface,10047,100.0,Clay (Indoor),43
+get_tournaments,tournament_sourface,10047,100.0,,39
+get_tournaments,tournament_sourface,10047,100.0,hard,13
+get_tournaments,tournament_sourface,10047,100.0,- Promotion,8
+get_tournaments,tournament_sourface,10047,100.0,clay,6
+get_tournaments,tournament_sourface,10047,100.0,- Preliminary,5
+get_tournaments,tournament_sourface,10047,100.0,<null>,5
+get_tournaments,tournament_sourface,10047,100.0,- Play Offs,2
+get_tournaments,tournament_sourface,10047,100.0,Grass (Indoor),2
+get_tournaments,tournament_sourface,10047,100.0,- Relegation,1
+get_tournaments,tournament_sourface,10047,100.0,- Qualification,1
+get_fixtures_match_key,event_key,15,100.0,12129875,1
+get_fixtures_match_key,event_key,15,100.0,12129877,1
+get_fixtures_match_key,event_key,15,100.0,12129879,1
+get_fixtures_match_key,event_key,15,100.0,12129881,1
+get_fixtures_match_key,event_key,15,100.0,12129882,1
+get_fixtures_match_key,event_key,15,100.0,12129883,1
+get_fixtures_match_key,event_key,15,100.0,12129893,1
+get_fixtures_match_key,event_key,15,100.0,12129900,1
+get_fixtures_match_key,event_key,15,100.0,12129902,1
+get_fixtures_match_key,event_key,15,100.0,12129905,1
+get_fixtures_match_key,event_key,15,100.0,12129911,1
+get_fixtures_match_key,event_key,15,100.0,12129915,1
+get_fixtures_match_key,event_key,15,100.0,12129919,1
+get_fixtures_match_key,event_key,15,100.0,12129921,1
+get_fixtures_match_key,event_key,15,100.0,12129923,1
+get_fixtures_match_key,event_date,15,100.0,2026-05-26,15
+get_fixtures_match_key,event_time,15,100.0,11:10,6
+get_fixtures_match_key,event_time,15,100.0,18:15,2
+get_fixtures_match_key,event_time,15,100.0,20:30,1
+get_fixtures_match_key,event_time,15,100.0,18:10,1
+get_fixtures_match_key,event_time,15,100.0,14:15,1
+get_fixtures_match_key,event_time,15,100.0,15:10,1
+get_fixtures_match_key,event_time,15,100.0,18:00,1
+get_fixtures_match_key,event_time,15,100.0,16:25,1
+get_fixtures_match_key,event_time,15,100.0,19:00,1
+get_fixtures_match_key,event_first_player,15,100.0,A. Walton,1
+get_fixtures_match_key,event_first_player,15,100.0,A. Tabilo,1
+get_fixtures_match_key,event_first_player,15,100.0,J. Sinner,1
+get_fixtures_match_key,event_first_player,15,100.0,E. Quinn,1
+get_fixtures_match_key,event_first_player,15,100.0,A. Popyrin,1
+get_fixtures_match_key,event_first_player,15,100.0,S. Ofner,1
+get_fixtures_match_key,event_first_player,15,100.0,V. Kopriva,1
+get_fixtures_match_key,event_first_player,15,100.0,T. Griekspoor,1
+get_fixtures_match_key,event_first_player,15,100.0,C. Garin,1
+get_fixtures_match_key,event_first_player,15,100.0,J. Fearnley,1
+get_fixtures_match_key,event_first_player,15,100.0,M. Cilic,1
+get_fixtures_match_key,event_first_player,15,100.0,A. Bublik,1
+get_fixtures_match_key,event_first_player,15,100.0,F. Auger-Aliassime,1
+get_fixtures_match_key,event_first_player,15,100.0,S. Waltert,1
+get_fixtures_match_key,event_first_player,15,100.0,D. Vekic,1
+get_fixtures_match_key,first_player_key,15,100.0,10070,1
+get_fixtures_match_key,first_player_key,15,100.0,2982,1
+get_fixtures_match_key,first_player_key,15,100.0,2072,1
+get_fixtures_match_key,first_player_key,15,100.0,9225,1
+get_fixtures_match_key,first_player_key,15,100.0,1926,1
+get_fixtures_match_key,first_player_key,15,100.0,359,1
+get_fixtures_match_key,first_player_key,15,100.0,1083,1
+get_fixtures_match_key,first_player_key,15,100.0,427,1
+get_fixtures_match_key,first_player_key,15,100.0,2071,1
+get_fixtures_match_key,first_player_key,15,100.0,12951,1
+get_fixtures_match_key,first_player_key,15,100.0,2167,1
+get_fixtures_match_key,first_player_key,15,100.0,1895,1
+get_fixtures_match_key,first_player_key,15,100.0,2073,1
+get_fixtures_match_key,first_player_key,15,100.0,493,1
+get_fixtures_match_key,first_player_key,15,100.0,455,1
+get_fixtures_match_key,event_second_player,15,100.0,D. Medvedev,1
+get_fixtures_match_key,event_second_player,15,100.0,K. Majchrzak,1
+get_fixtures_match_key,event_second_player,15,100.0,C. Tabur,1
+get_fixtures_match_key,event_second_player,15,100.0,F. Comesana,1
+get_fixtures_match_key,event_second_player,15,100.0,Z. Svajda,1
+get_fixtures_match_key,event_second_player,15,100.0,L. Darderi,1
+get_fixtures_match_key,event_second_player,15,100.0,C. Moutet,1
+get_fixtures_match_key,event_second_player,15,100.0,M. Arnaldi,1
+get_fixtures_match_key,event_second_player,15,100.0,L. Tien,1
+get_fixtures_match_key,event_second_player,15,100.0,J. M. Cerundolo,1
+get_fixtures_match_key,event_second_player,15,100.0,M. Kouame,1
+get_fixtures_match_key,event_second_player,15,100.0,J-L. Struff,1
+get_fixtures_match_key,event_second_player,15,100.0,D. Altmaier,1
+get_fixtures_match_key,event_second_player,15,100.0,K. Siniakova,1
+get_fixtures_match_key,event_second_player,15,100.0,A. Tubello,1
+get_fixtures_match_key,second_player_key,15,100.0,1093,1
+get_fixtures_match_key,second_player_key,15,100.0,1096,1
+get_fixtures_match_key,second_player_key,15,100.0,1762,1
+get_fixtures_match_key,second_player_key,15,100.0,2084,1
+get_fixtures_match_key,second_player_key,15,100.0,2986,1
+get_fixtures_match_key,second_player_key,15,100.0,8781,1
+get_fixtures_match_key,second_player_key,15,100.0,2674,1
+get_fixtures_match_key,second_player_key,15,100.0,1192,1
+get_fixtures_match_key,second_player_key,15,100.0,10520,1
+get_fixtures_match_key,second_player_key,15,100.0,388,1
+get_fixtures_match_key,second_player_key,15,100.0,68751,1
+get_fixtures_match_key,second_player_key,15,100.0,2831,1
+get_fixtures_match_key,second_player_key,15,100.0,1099,1
+get_fixtures_match_key,second_player_key,15,100.0,3006,1
+get_fixtures_match_key,second_player_key,15,100.0,7522,1
+get_fixtures_match_key,event_final_result,15,100.0,0 - 3,4
+get_fixtures_match_key,event_final_result,15,100.0,1 - 3,4
+get_fixtures_match_key,event_final_result,15,100.0,3 - 2,3
+get_fixtures_match_key,event_final_result,15,100.0,3 - 0,2
+get_fixtures_match_key,event_final_result,15,100.0,0 - 2,1
+get_fixtures_match_key,event_final_result,15,100.0,2 - 0,1
+get_fixtures_match_key,event_game_result,15,100.0,-,15
+get_fixtures_match_key,event_serve,15,100.0,<null>,15
+get_fixtures_match_key,event_winner,15,100.0,Second Player,9
+get_fixtures_match_key,event_winner,15,100.0,First Player,6
+get_fixtures_match_key,event_status,15,100.0,Finished,15
+get_fixtures_match_key,event_type_type,15,100.0,Atp Singles,13
+get_fixtures_match_key,event_type_type,15,100.0,Wta Singles,2
+get_fixtures_match_key,tournament_name,15,100.0,French Open,15
+get_fixtures_match_key,tournament_key,15,100.0,2155,13
+get_fixtures_match_key,tournament_key,15,100.0,2156,2
+get_fixtures_match_key,tournament_round,15,100.0,ATP French Open - 1/64-finals,13
+get_fixtures_match_key,tournament_round,15,100.0,WTA French Open - 1/64-finals,2
+get_fixtures_match_key,tournament_season,15,100.0,2026,15
+get_fixtures_match_key,event_live,15,100.0,0,15
+get_fixtures_match_key,event_first_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/10070_a-walton.jpg,1
+get_fixtures_match_key,event_first_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/2982_a-tabilo.jpg,1
+get_fixtures_match_key,event_first_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/2072_j-sinner.jpg,1
+get_fixtures_match_key,event_first_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/9225_e-quinn.jpg,1
+get_fixtures_match_key,event_first_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/1926_al-popyrin.jpg,1
+get_fixtures_match_key,event_first_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/359_s-ofner.jpg,1
+get_fixtures_match_key,event_first_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/1083_v-kopriva.jpg,1
+get_fixtures_match_key,event_first_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/427_t-griekspoor.jpg,1
+get_fixtures_match_key,event_first_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/2071_c-garin.jpg,1
+get_fixtures_match_key,event_first_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/12951_j-fearnley.jpg,1
+get_fixtures_match_key,event_first_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/2167_m-cilic.jpg,1
+get_fixtures_match_key,event_first_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/1895_a-bublik.jpg,1
+get_fixtures_match_key,event_first_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/2073_f-auger-aliassime.jpg,1
+get_fixtures_match_key,event_first_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/493_s-waltert.jpg,1
+get_fixtures_match_key,event_first_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/455_d-vekic.jpg,1
+get_fixtures_match_key,event_second_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/1093_d-medvedev.jpg,1
+get_fixtures_match_key,event_second_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/1096_k-majchrzak.jpg,1
+get_fixtures_match_key,event_second_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/1762_c-tabur.jpg,1
+get_fixtures_match_key,event_second_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/2084_f-comesana.jpg,1
+get_fixtures_match_key,event_second_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/2986_z-svajda.jpg,1
+get_fixtures_match_key,event_second_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/8781_l-darderi.jpg,1
+get_fixtures_match_key,event_second_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/2674_c-moutet.jpg,1
+get_fixtures_match_key,event_second_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/1192_m-arnaldi.jpg,1
+get_fixtures_match_key,event_second_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/10520_l-tien.jpg,1
+get_fixtures_match_key,event_second_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/388_j-m-cerundolo.jpg,1
+get_fixtures_match_key,event_second_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/68751_m-kouame.jpg,1
+get_fixtures_match_key,event_second_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/2831_j-l-struff.jpg,1
+get_fixtures_match_key,event_second_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/1099_d-altmaier.jpg,1
+get_fixtures_match_key,event_second_player_logo,15,100.0,https://api.api-tennis.com/logo-tennis/3006_k-siniakova.jpg,1
+get_fixtures_match_key,event_second_player_logo,15,100.0,<null>,1
+get_fixtures_match_key,event_qualification,15,100.0,False,15

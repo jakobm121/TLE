@@ -1,0 +1,207 @@
+{
+  "conclusion_hint": "If surface_like_fields contains only event_type_type or empty lists, API does not expose usable surface directly in these endpoints.",
+  "csv_outputs": {
+    "field_values": "data/reports/api_tennis/api_surface_endpoint_field_values.csv"
+  },
+  "errors": [],
+  "generated_at": "2026-06-15T12:54:33+00:00",
+  "groups": {
+    "get_events": {
+      "rows": 27,
+      "surface_like_fields": [],
+      "top_fields": [
+        {
+          "coverage_pct": 100.0,
+          "field": "event_type_key",
+          "presence": 27
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "event_type_type",
+          "presence": 27
+        }
+      ]
+    },
+    "get_fixtures_match_key": {
+      "rows": 15,
+      "surface_like_fields": [],
+      "top_fields": [
+        {
+          "coverage_pct": 100.0,
+          "field": "event_key",
+          "presence": 15
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "event_date",
+          "presence": 15
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "event_time",
+          "presence": 15
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "event_first_player",
+          "presence": 15
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "first_player_key",
+          "presence": 15
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "event_second_player",
+          "presence": 15
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "second_player_key",
+          "presence": 15
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "event_final_result",
+          "presence": 15
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "event_game_result",
+          "presence": 15
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "event_serve",
+          "presence": 15
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "event_winner",
+          "presence": 15
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "event_status",
+          "presence": 15
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "event_type_type",
+          "presence": 15
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "tournament_name",
+          "presence": 15
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "tournament_key",
+          "presence": 15
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "tournament_round",
+          "presence": 15
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "tournament_season",
+          "presence": 15
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "event_live",
+          "presence": 15
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "event_first_player_logo",
+          "presence": 15
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "event_second_player_logo",
+          "presence": 15
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "event_qualification",
+          "presence": 15
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "pointbypoint",
+          "presence": 15
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "scores",
+          "presence": 15
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "statistics",
+          "presence": 15
+        }
+      ]
+    },
+    "get_tournaments": {
+      "rows": 10047,
+      "surface_like_fields": [],
+      "top_fields": [
+        {
+          "coverage_pct": 100.0,
+          "field": "tournament_key",
+          "presence": 10047
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "tournament_name",
+          "presence": 10047
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "event_type_key",
+          "presence": 10047
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "event_type_type",
+          "presence": 10047
+        },
+        {
+          "coverage_pct": 100.0,
+          "field": "tournament_sourface",
+          "presence": 10047
+        }
+      ]
+    }
+  },
+  "purpose": "Check whether API-Tennis exposes surface/court fields directly in metadata or match detail endpoints.",
+  "raw_outputs": {
+    "events": "data/raw/api_tennis/metadata/get_events.json",
+    "match_detail_samples": "data/raw/api_tennis/metadata/get_fixtures_match_key_samples.json",
+    "tournaments": "data/raw/api_tennis/metadata/get_tournaments.json"
+  },
+  "sample_match_keys": [
+    "12129875",
+    "12129877",
+    "12129879",
+    "12129881",
+    "12129882",
+    "12129883",
+    "12129893",
+    "12129900",
+    "12129902",
+    "12129905",
+    "12129911",
+    "12129915",
+    "12129919",
+    "12129921",
+    "12129923"
+  ],
+  "source": "api_tennis"
+}
