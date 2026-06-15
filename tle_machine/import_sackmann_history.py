@@ -5,9 +5,16 @@ import csv
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Any
 
 from .config import RAW_ATP_DIR, RAW_WTA_DIR, SACKMANN_FILES, SOURCE_SACKMANN_DIR, START_YEAR, SURFACES
 from .utils import ensure_dirs, now_utc_iso, player_key, write_json, write_jsonl_gz
+
+REPORT_DIR = Path("data/reports/sackmann")
+SKIPPED_CSV = REPORT_DIR / "skipped_sackmann_matches.csv"
+SKIPPED_SUMMARY_JSON = REPORT_DIR / "skipped_sackmann_matches_summary.json"
+SOURCE_FILE_LEVEL_AUDIT_JSON = REPORT_DIR / "source_file_level_audit.json"
+IMPORT_REPORT_JSON = REPORT_DIR / "import_report.json"
 
 
 def parse_date(value: str) -> str | None:
@@ -27,6 +34,8 @@ def normalize_surface(surface: str | None) -> str:
 def infer_level(row: dict[str, str], source_name: str, level_hint: str | None) -> str:
     tourney_level = (row.get("tourney_level") or "").strip().upper()
     name = (row.get("tourney_name") or "").lower()
+    round_name = (row.get("round") or "").strip().upper()
+
     if tourney_level == "G":
         return "grand_slam"
     if tourney_level in {"M", "A", "F", "D"}:
@@ -35,7 +44,7 @@ def infer_level(row: dict[str, str], source_name: str, level_hint: str | None) -
         return "challenger"
     if tourney_level == "Q":
         return "qualifying"
-    if "qual" in name:
+    if round_name == "Q" or "qual" in name:
         return "qualifying"
     if level_hint:
         return level_hint
@@ -53,28 +62,19 @@ def iter_raw_rows(start_year: int, end_year: int):
                 continue
             with path.open("r", encoding="utf-8", newline="") as fh:
                 reader = csv.DictReader(fh)
-                for row in reader:
-                    yield year, source_name, cfg, row
+                for row_number, row in enumerate(reader, start=2):
+                    yield year, source_name, filename, row_number, cfg, row
 
 
-def convert_row(year: int, source_name: str, cfg: dict, row: dict[str, str]) -> tuple[dict | None, str | None]:
-    date = parse_date(row.get("tourney_date", ""))
+def build_match(year: int, filename: str, gender: str, level: str, surface: str, date: str, row: dict[str, str]) -> dict[str, Any]:
     winner_name = row.get("winner_name") or ""
     loser_name = row.get("loser_name") or ""
-    if not date or not winner_name or not loser_name:
-        return None, "missing_required"
-    gender = cfg["gender"]
-    level = infer_level(row, source_name, cfg.get("level_hint"))
-    surface = normalize_surface(row.get("surface"))
-    if surface == "unknown" and level not in {"itf", "qualifying"}:
-        return None, "unknown_surface_not_allowed"
-
     winner_id = row.get("winner_id") or ""
     loser_id = row.get("loser_id") or ""
-    match = {
+    return {
         "match_id": f"sackmann:{gender}:{row.get('tourney_id','')}:{row.get('match_num','')}:{winner_id}:{loser_id}",
         "source": "sackmann",
-        "source_file": cfg["template"].format(year=year),
+        "source_file": filename,
         "date": date,
         "year": int(date[:4]),
         "gender": gender,
@@ -95,7 +95,89 @@ def convert_row(year: int, source_name: str, cfg: dict, row: dict[str, str]) -> 
             "player_key": player_key(gender, loser_id, loser_name),
         },
     }
-    return match, None
+
+
+def skip_row(
+    *,
+    skipped_rows: list[dict[str, Any]],
+    counters: Counter,
+    source_file_audit: dict[str, Any],
+    filename: str,
+    row_number: int,
+    year: int,
+    source_name: str,
+    cfg: dict[str, Any],
+    row: dict[str, str],
+    reason: str,
+    date: str | None,
+    level: str | None,
+    surface: str | None,
+) -> None:
+    counters[f"skipped_{reason}"] += 1
+    source_file_audit[filename]["skipped_by_reason"][reason] += 1
+    skipped_rows.append(
+        {
+            "source_file": filename,
+            "source_name": source_name,
+            "row_number": row_number,
+            "year": year,
+            "gender": cfg.get("gender", ""),
+            "date": date or parse_date(row.get("tourney_date", "")) or "",
+            "raw_tourney_date": row.get("tourney_date", ""),
+            "tourney_id": row.get("tourney_id", ""),
+            "tourney_name": row.get("tourney_name", ""),
+            "raw_tourney_level": row.get("tourney_level", ""),
+            "raw_round": row.get("round", ""),
+            "raw_surface": row.get("surface", ""),
+            "normalized_level": level or "",
+            "normalized_surface": surface or "",
+            "winner_id": row.get("winner_id", ""),
+            "winner_name": row.get("winner_name", ""),
+            "loser_id": row.get("loser_id", ""),
+            "loser_name": row.get("loser_name", ""),
+            "skip_reason": reason,
+        }
+    )
+
+
+def write_skipped_csv(path: Path, rows: list[dict[str, Any]]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fieldnames = [
+        "source_file",
+        "source_name",
+        "row_number",
+        "year",
+        "gender",
+        "date",
+        "raw_tourney_date",
+        "tourney_id",
+        "tourney_name",
+        "raw_tourney_level",
+        "raw_round",
+        "raw_surface",
+        "normalized_level",
+        "normalized_surface",
+        "winner_id",
+        "winner_name",
+        "loser_id",
+        "loser_name",
+        "skip_reason",
+    ]
+    with path.open("w", encoding="utf-8", newline="") as fh:
+        writer = csv.DictWriter(fh, fieldnames=fieldnames)
+        writer.writeheader()
+        for row in rows:
+            writer.writerow(row)
+
+
+def counter_to_dict(obj: Any) -> Any:
+    if isinstance(obj, Counter):
+        return dict(obj)
+    if isinstance(obj, defaultdict):
+        return {k: counter_to_dict(v) for k, v in obj.items()}
+    if isinstance(obj, dict):
+        return {k: counter_to_dict(v) for k, v in obj.items()}
+    return obj
 
 
 def main(argv: list[str] | None = None) -> None:
@@ -104,19 +186,102 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--end-year", type=int, default=datetime.now(timezone.utc).year)
     args = parser.parse_args(argv)
 
-    ensure_dirs(SOURCE_SACKMANN_DIR)
-    by_year: dict[int, list[dict]] = defaultdict(list)
+    ensure_dirs(SOURCE_SACKMANN_DIR, REPORT_DIR)
+
+    by_year: dict[int, list[dict[str, Any]]] = defaultdict(list)
     counters = Counter()
-    for year, source_name, cfg, row in iter_raw_rows(args.start_year, args.end_year):
+    skipped_rows: list[dict[str, Any]] = []
+
+    source_file_audit: dict[str, Any] = defaultdict(
+        lambda: {
+            "input_rows": 0,
+            "imported": 0,
+            "gender_counts": Counter(),
+            "raw_tourney_level_counts": Counter(),
+            "raw_round_counts": Counter(),
+            "raw_surface_counts": Counter(),
+            "normalized_level_counts": Counter(),
+            "normalized_surface_counts": Counter(),
+            "skipped_by_reason": Counter(),
+        }
+    )
+
+    for year, source_name, filename, row_number, cfg, row in iter_raw_rows(args.start_year, args.end_year):
         counters["input_rows"] += 1
-        match, reason = convert_row(year, source_name, cfg, row)
-        if reason:
-            counters[f"skipped_{reason}"] += 1
+        audit = source_file_audit[filename]
+        audit["input_rows"] += 1
+        audit["gender_counts"][cfg["gender"]] += 1
+        audit["raw_tourney_level_counts"][(row.get("tourney_level") or "").strip() or "<blank>"] += 1
+        audit["raw_round_counts"][(row.get("round") or "").strip() or "<blank>"] += 1
+        audit["raw_surface_counts"][(row.get("surface") or "").strip() or "<blank>"] += 1
+
+        date = parse_date(row.get("tourney_date", ""))
+        gender = cfg["gender"]
+        level = infer_level(row, source_name, cfg.get("level_hint"))
+        surface = normalize_surface(row.get("surface"))
+        audit["normalized_level_counts"][level] += 1
+        audit["normalized_surface_counts"][surface] += 1
+
+        winner_name = row.get("winner_name") or ""
+        loser_name = row.get("loser_name") or ""
+        if not date:
+            skip_row(
+                skipped_rows=skipped_rows,
+                counters=counters,
+                source_file_audit=source_file_audit,
+                filename=filename,
+                row_number=row_number,
+                year=year,
+                source_name=source_name,
+                cfg=cfg,
+                row=row,
+                reason="missing_or_invalid_date",
+                date=date,
+                level=level,
+                surface=surface,
+            )
             continue
+        if not winner_name or not loser_name:
+            skip_row(
+                skipped_rows=skipped_rows,
+                counters=counters,
+                source_file_audit=source_file_audit,
+                filename=filename,
+                row_number=row_number,
+                year=year,
+                source_name=source_name,
+                cfg=cfg,
+                row=row,
+                reason="missing_player_name",
+                date=date,
+                level=level,
+                surface=surface,
+            )
+            continue
+        if surface == "unknown" and level not in {"itf", "qualifying"}:
+            skip_row(
+                skipped_rows=skipped_rows,
+                counters=counters,
+                source_file_audit=source_file_audit,
+                filename=filename,
+                row_number=row_number,
+                year=year,
+                source_name=source_name,
+                cfg=cfg,
+                row=row,
+                reason="unknown_surface_not_allowed",
+                date=date,
+                level=level,
+                surface=surface,
+            )
+            continue
+
+        match = build_match(year, filename, gender, level, surface, date, row)
         counters["imported"] += 1
-        counters[f"level_{match['level']}"] += 1
-        counters[f"surface_{match['surface']}"] += 1
-        counters[f"gender_{match['gender']}"] += 1
+        counters[f"level_{level}"] += 1
+        counters[f"surface_{surface}"] += 1
+        counters[f"gender_{gender}"] += 1
+        audit["imported"] += 1
         by_year[match["year"]].append(match)
 
     year_files = []
@@ -126,6 +291,21 @@ def main(argv: list[str] | None = None) -> None:
         count = write_jsonl_gz(path, rows)
         year_files.append({"year": year, "path": str(path), "matches": count, "created_at": now_utc_iso()})
 
+    skipped_summary = {
+        "generated_at": now_utc_iso(),
+        "skipped_total": len(skipped_rows),
+        "skipped_by_reason": {k.replace("skipped_", ""): v for k, v in counters.items() if k.startswith("skipped_")},
+        "skipped_by_file": {},
+        "skipped_by_level_surface": Counter(),
+        "sample_limit_note": "Full skipped rows are in skipped_sackmann_matches.csv",
+    }
+    for row in skipped_rows:
+        skipped_summary["skipped_by_file"].setdefault(row["source_file"], Counter())
+        skipped_summary["skipped_by_file"][row["source_file"]][row["skip_reason"]] += 1
+        skipped_summary["skipped_by_level_surface"][f"{row['normalized_level']}|{row['normalized_surface']}"] += 1
+    skipped_summary = counter_to_dict(skipped_summary)
+
+    source_file_audit_dict = counter_to_dict(source_file_audit)
     manifest = {
         "generated_at": now_utc_iso(),
         "source": "sackmann",
@@ -134,9 +314,20 @@ def main(argv: list[str] | None = None) -> None:
         "matches": counters["imported"],
         "year_files": year_files,
         "counters": dict(counters),
+        "audit_outputs": {
+            "import_report": str(IMPORT_REPORT_JSON),
+            "skipped_matches_csv": str(SKIPPED_CSV),
+            "skipped_summary": str(SKIPPED_SUMMARY_JSON),
+            "source_file_level_audit": str(SOURCE_FILE_LEVEL_AUDIT_JSON),
+        },
     }
+
     write_json(SOURCE_SACKMANN_DIR / "manifest.json", manifest)
-    write_json(Path("data/reports/sackmann/import_report.json"), manifest)
+    write_json(IMPORT_REPORT_JSON, manifest)
+    write_json(SKIPPED_SUMMARY_JSON, skipped_summary)
+    write_json(SOURCE_FILE_LEVEL_AUDIT_JSON, source_file_audit_dict)
+    write_skipped_csv(SKIPPED_CSV, skipped_rows)
+
     print(manifest)
 
 
