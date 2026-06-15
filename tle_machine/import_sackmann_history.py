@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from .config import RAW_ATP_DIR, RAW_WTA_DIR, SACKMANN_FILES, SOURCE_SACKMANN_DIR, START_YEAR, SURFACES
+from .config import SOURCE_SACKMANN_DIR, START_YEAR, SURFACES, SACKMANN_FILES
 from .utils import ensure_dirs, now_utc_iso, player_key, write_json, write_jsonl_gz
 
 REPORT_DIR = Path("data/reports/sackmann")
@@ -55,17 +55,11 @@ def infer_level(row: dict[str, str], source_name: str, level_hint: str | None) -
     return "itf"
 
 
-
-
 def is_team_competition(row: dict[str, str], level: str) -> bool:
-    """Return True for Davis Cup / BJK Cup / Fed Cup style team competitions.
-
-    Sackmann marks these with tourney_level == "D" and often leaves surface blank.
-    We keep them out of TLE ratings because they are not standard tour/level events.
-    """
     tourney_level = (row.get("tourney_level") or "").strip().upper()
     tourney_id = (row.get("tourney_id") or "").upper()
     name = (row.get("tourney_name") or "").lower()
+
     return (
         level == "team_cup"
         or tourney_level == "D"
@@ -76,24 +70,36 @@ def is_team_competition(row: dict[str, str], level: str) -> bool:
         or "fed cup" in name
     )
 
+
 def iter_raw_rows(start_year: int, end_year: int):
     for year in range(start_year, end_year + 1):
         for source_name, cfg in SACKMANN_FILES.items():
             filename = cfg["template"].format(year=year)
             path = cfg["raw_dir"] / filename
+
             if not path.exists() or path.stat().st_size == 0:
                 continue
+
             with path.open("r", encoding="utf-8", newline="") as fh:
                 reader = csv.DictReader(fh)
                 for row_number, row in enumerate(reader, start=2):
                     yield year, source_name, filename, row_number, cfg, row
 
 
-def build_match(year: int, filename: str, gender: str, level: str, surface: str, date: str, row: dict[str, str]) -> dict[str, Any]:
+def build_match(
+    year: int,
+    filename: str,
+    gender: str,
+    level: str,
+    surface: str,
+    date: str,
+    row: dict[str, str],
+) -> dict[str, Any]:
     winner_name = row.get("winner_name") or ""
     loser_name = row.get("loser_name") or ""
     winner_id = row.get("winner_id") or ""
     loser_id = row.get("loser_id") or ""
+
     return {
         "match_id": f"sackmann:{gender}:{row.get('tourney_id','')}:{row.get('match_num','')}:{winner_id}:{loser_id}",
         "source": "sackmann",
@@ -138,6 +144,7 @@ def skip_row(
 ) -> None:
     counters[f"skipped_{reason}"] += 1
     source_file_audit[filename]["skipped_by_reason"][reason] += 1
+
     skipped_rows.append(
         {
             "source_file": filename,
@@ -165,6 +172,7 @@ def skip_row(
 
 def write_skipped_csv(path: Path, rows: list[dict[str, Any]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
+
     fieldnames = [
         "source_file",
         "source_name",
@@ -186,6 +194,7 @@ def write_skipped_csv(path: Path, rows: list[dict[str, Any]]) -> None:
         "loser_name",
         "skip_reason",
     ]
+
     with path.open("w", encoding="utf-8", newline="") as fh:
         writer = csv.DictWriter(fh, fieldnames=fieldnames)
         writer.writeheader()
@@ -231,6 +240,7 @@ def main(argv: list[str] | None = None) -> None:
 
     for year, source_name, filename, row_number, cfg, row in iter_raw_rows(args.start_year, args.end_year):
         counters["input_rows"] += 1
+
         audit = source_file_audit[filename]
         audit["input_rows"] += 1
         audit["gender_counts"][cfg["gender"]] += 1
@@ -242,11 +252,13 @@ def main(argv: list[str] | None = None) -> None:
         gender = cfg["gender"]
         level = infer_level(row, source_name, cfg.get("level_hint"))
         surface = normalize_surface(row.get("surface"))
+
         audit["normalized_level_counts"][level] += 1
         audit["normalized_surface_counts"][surface] += 1
 
         winner_name = row.get("winner_name") or ""
         loser_name = row.get("loser_name") or ""
+
         if not date:
             skip_row(
                 skipped_rows=skipped_rows,
@@ -264,6 +276,7 @@ def main(argv: list[str] | None = None) -> None:
                 surface=surface,
             )
             continue
+
         if not winner_name or not loser_name:
             skip_row(
                 skipped_rows=skipped_rows,
@@ -281,6 +294,7 @@ def main(argv: list[str] | None = None) -> None:
                 surface=surface,
             )
             continue
+
         if is_team_competition(row, level):
             skip_row(
                 skipped_rows=skipped_rows,
@@ -318,35 +332,54 @@ def main(argv: list[str] | None = None) -> None:
             continue
 
         match = build_match(year, filename, gender, level, surface, date, row)
+
         counters["imported"] += 1
         counters[f"level_{level}"] += 1
         counters[f"surface_{surface}"] += 1
         counters[f"gender_{gender}"] += 1
+
         audit["imported"] += 1
         by_year[match["year"]].append(match)
 
     year_files = []
     for year, rows in sorted(by_year.items()):
         rows.sort(key=lambda r: (r["date"], r["match_id"]))
+
         path = SOURCE_SACKMANN_DIR / f"tle_sackmann_matches_{year}.jsonl.gz"
         count = write_jsonl_gz(path, rows)
-        year_files.append({"year": year, "path": str(path), "matches": count, "created_at": now_utc_iso()})
+
+        year_files.append(
+            {
+                "year": year,
+                "path": str(path),
+                "matches": count,
+                "created_at": now_utc_iso(),
+            }
+        )
 
     skipped_summary = {
         "generated_at": now_utc_iso(),
         "skipped_total": len(skipped_rows),
-        "skipped_by_reason": {k.replace("skipped_", ""): v for k, v in counters.items() if k.startswith("skipped_")},
+        "skipped_by_reason": {
+            k.replace("skipped_", ""): v
+            for k, v in counters.items()
+            if k.startswith("skipped_")
+        },
         "skipped_by_file": {},
         "skipped_by_level_surface": Counter(),
         "sample_limit_note": "Full skipped rows are in skipped_sackmann_matches.csv",
     }
+
     for row in skipped_rows:
         skipped_summary["skipped_by_file"].setdefault(row["source_file"], Counter())
         skipped_summary["skipped_by_file"][row["source_file"]][row["skip_reason"]] += 1
-        skipped_summary["skipped_by_level_surface"][f"{row['normalized_level']}|{row['normalized_surface']}"] += 1
-    skipped_summary = counter_to_dict(skipped_summary)
+        skipped_summary["skipped_by_level_surface"][
+            f"{row['normalized_level']}|{row['normalized_surface']}"
+        ] += 1
 
+    skipped_summary = counter_to_dict(skipped_summary)
     source_file_audit_dict = counter_to_dict(source_file_audit)
+
     manifest = {
         "generated_at": now_utc_iso(),
         "source": "sackmann",
