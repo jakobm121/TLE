@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-06-15T09:46:26+00:00",
+  "sample_limit_note": "Full skipped rows are in skipped_sackmann_matches.csv",
+  "skipped_by_file": {
+    "atp_matches_2023.csv": {
+      "unknown_surface_not_allowed": 53
+    },
+    "wta_matches_2024.csv": {
+      "unknown_surface_not_allowed": 57
+    },
+    "wta_matches_2025.csv": {
+      "unknown_surface_not_allowed": 36
+    },
+    "wta_matches_2026.csv": {
+      "unknown_surface_not_allowed": 22
+    }
+  },
+  "skipped_by_level_surface": {
+    "atp_wta|unknown": 168
+  },
+  "skipped_by_reason": {
+    "unknown_surface_not_allowed": 168
+  },
+  "skipped_total": 168
+}

@@ -1,0 +1,828 @@
+{
+  "atp_matches_2023.csv": {
+    "gender_counts": {
+      "men": 2986
+    },
+    "imported": 2933,
+    "input_rows": 2986,
+    "normalized_level_counts": {
+      "atp_wta": 2478,
+      "grand_slam": 508
+    },
+    "normalized_surface_counts": {
+      "clay": 901,
+      "grass": 328,
+      "hard": 1704,
+      "unknown": 53
+    },
+    "raw_round_counts": {
+      "F": 68,
+      "QF": 256,
+      "R128": 416,
+      "R16": 512,
+      "R32": 880,
+      "R64": 432,
+      "RR": 286,
+      "SF": 136
+    },
+    "raw_surface_counts": {
+      "<blank>": 53,
+      "Clay": 901,
+      "Grass": 328,
+      "Hard": 1704
+    },
+    "raw_tourney_level_counts": {
+      "A": 1548,
+      "D": 220,
+      "F": 15,
+      "G": 508,
+      "M": 695
+    },
+    "skipped_by_reason": {
+      "unknown_surface_not_allowed": 53
+    }
+  },
+  "atp_matches_2024.csv": {
+    "gender_counts": {
+      "men": 3076
+    },
+    "imported": 3076,
+    "input_rows": 3076,
+    "normalized_level_counts": {
+      "atp_wta": 2568,
+      "grand_slam": 508
+    },
+    "normalized_surface_counts": {
+      "clay": 980,
+      "grass": 327,
+      "hard": 1769
+    },
+    "raw_round_counts": {
+      "BR": 1,
+      "F": 68,
+      "QF": 264,
+      "R128": 416,
+      "R16": 520,
+      "R32": 896,
+      "R64": 464,
+      "RR": 311,
+      "SF": 136
+    },
+    "raw_surface_counts": {
+      "Clay": 980,
+      "Grass": 327,
+      "Hard": 1769
+    },
+    "raw_tourney_level_counts": {
+      "A": 1519,
+      "D": 260,
+      "F": 30,
+      "G": 508,
+      "M": 695,
+      "O": 64
+    },
+    "skipped_by_reason": {}
+  },
+  "atp_matches_2025.csv": {
+    "gender_counts": {
+      "men": 2944
+    },
+    "imported": 2944,
+    "input_rows": 2944,
+    "normalized_level_counts": {
+      "atp_wta": 2436,
+      "grand_slam": 508
+    },
+    "normalized_surface_counts": {
+      "clay": 820,
+      "grass": 297,
+      "hard": 1827
+    },
+    "raw_round_counts": {
+      "F": 62,
+      "QF": 239,
+      "R128": 480,
+      "R16": 472,
+      "R32": 832,
+      "R64": 432,
+      "RR": 303,
+      "SF": 124
+    },
+    "raw_surface_counts": {
+      "Clay": 820,
+      "Grass": 297,
+      "Hard": 1827
+    },
+    "raw_tourney_level_counts": {
+      "A": 1379,
+      "D": 252,
+      "F": 30,
+      "G": 508,
+      "M": 775
+    },
+    "skipped_by_reason": {}
+  },
+  "atp_matches_2026.csv": {
+    "gender_counts": {
+      "men": 1449
+    },
+    "imported": 1449,
+    "input_rows": 1449,
+    "normalized_level_counts": {
+      "atp_wta": 1195,
+      "grand_slam": 254
+    },
+    "normalized_surface_counts": {
+      "clay": 682,
+      "grass": 4,
+      "hard": 763
+    },
+    "raw_round_counts": {
+      "F": 29,
+      "QF": 116,
+      "R128": 256,
+      "R16": 224,
+      "R32": 404,
+      "R64": 216,
+      "RR": 146,
+      "SF": 58
+    },
+    "raw_surface_counts": {
+      "Clay": 682,
+      "Grass": 4,
+      "Hard": 763
+    },
+    "raw_tourney_level_counts": {
+      "A": 632,
+      "D": 128,
+      "G": 254,
+      "M": 435
+    },
+    "skipped_by_reason": {}
+  },
+  "atp_matches_futures_2023.csv": {
+    "gender_counts": {
+      "men": 17626
+    },
+    "imported": 17626,
+    "input_rows": 17626,
+    "normalized_level_counts": {
+      "itf": 17626
+    },
+    "normalized_surface_counts": {
+      "carpet": 155,
+      "clay": 7994,
+      "grass": 124,
+      "hard": 9353
+    },
+    "raw_round_counts": {
+      "F": 559,
+      "QF": 2276,
+      "R16": 4552,
+      "R32": 9104,
+      "SF": 1135
+    },
+    "raw_surface_counts": {
+      "Carpet": 155,
+      "Clay": 7994,
+      "Grass": 124,
+      "Hard": 9353
+    },
+    "raw_tourney_level_counts": {
+      "15": 9757,
+      "25": 7869
+    },
+    "skipped_by_reason": {}
+  },
+  "atp_matches_futures_2024.csv": {
+    "gender_counts": {
+      "men": 18423
+    },
+    "imported": 18423,
+    "input_rows": 18423,
+    "normalized_level_counts": {
+      "itf": 18423
+    },
+    "normalized_surface_counts": {
+      "carpet": 186,
+      "clay": 8575,
+      "grass": 62,
+      "hard": 9600
+    },
+    "raw_round_counts": {
+      "F": 575,
+      "QF": 2376,
+      "R16": 4760,
+      "R32": 9536,
+      "SF": 1176
+    },
+    "raw_surface_counts": {
+      "Carpet": 186,
+      "Clay": 8575,
+      "Grass": 62,
+      "Hard": 9600
+    },
+    "raw_tourney_level_counts": {
+      "15": 11145,
+      "25": 7278
+    },
+    "skipped_by_reason": {}
+  },
+  "atp_matches_futures_2025.csv": {
+    "gender_counts": {
+      "men": 17906
+    },
+    "imported": 17906,
+    "input_rows": 17906,
+    "normalized_level_counts": {
+      "itf": 17906
+    },
+    "normalized_surface_counts": {
+      "carpet": 149,
+      "clay": 7995,
+      "grass": 62,
+      "hard": 9700
+    },
+    "raw_round_counts": {
+      "F": 595,
+      "QF": 2286,
+      "R16": 4597,
+      "R32": 9288,
+      "SF": 1140
+    },
+    "raw_surface_counts": {
+      "Carpet": 118,
+      "Clay": 6851,
+      "Grass": 62,
+      "Hard": 9700,
+      "carpet": 31,
+      "clay": 1144
+    },
+    "raw_tourney_level_counts": {
+      "15": 11278,
+      "25": 6628
+    },
+    "skipped_by_reason": {}
+  },
+  "atp_matches_futures_2026.csv": {
+    "gender_counts": {
+      "men": 6894
+    },
+    "imported": 6894,
+    "input_rows": 6894,
+    "normalized_level_counts": {
+      "itf": 6894
+    },
+    "normalized_surface_counts": {
+      "carpet": 62,
+      "clay": 2435,
+      "grass": 61,
+      "hard": 4336
+    },
+    "raw_round_counts": {
+      "F": 224,
+      "QF": 892,
+      "R16": 1773,
+      "R32": 3573,
+      "SF": 432
+    },
+    "raw_surface_counts": {
+      "Clay": 2435,
+      "Grass": 61,
+      "Hard": 4336,
+      "carpet": 62
+    },
+    "raw_tourney_level_counts": {
+      "15": 4362,
+      "25": 2532
+    },
+    "skipped_by_reason": {}
+  },
+  "atp_matches_qual_chall_2023.csv": {
+    "gender_counts": {
+      "men": 10663
+    },
+    "imported": 10663,
+    "input_rows": 10663,
+    "normalized_level_counts": {
+      "atp_wta": 886,
+      "challenger": 9329,
+      "grand_slam": 448
+    },
+    "normalized_surface_counts": {
+      "carpet": 49,
+      "clay": 5011,
+      "grass": 343,
+      "hard": 5260
+    },
+    "raw_round_counts": {
+      "F": 196,
+      "Q1": 2967,
+      "Q2": 1582,
+      "Q3": 64,
+      "QF": 784,
+      "R16": 1567,
+      "R32": 3111,
+      "SF": 392
+    },
+    "raw_surface_counts": {
+      "Carpet": 49,
+      "Clay": 5011,
+      "Grass": 343,
+      "Hard": 5260
+    },
+    "raw_tourney_level_counts": {
+      "A": 622,
+      "C": 9329,
+      "G": 448,
+      "M": 264
+    },
+    "skipped_by_reason": {}
+  },
+  "atp_matches_qual_chall_2024.csv": {
+    "gender_counts": {
+      "men": 11190
+    },
+    "imported": 11190,
+    "input_rows": 11190,
+    "normalized_level_counts": {
+      "atp_wta": 890,
+      "challenger": 9852,
+      "grand_slam": 448
+    },
+    "normalized_surface_counts": {
+      "clay": 5334,
+      "grass": 343,
+      "hard": 5513
+    },
+    "raw_round_counts": {
+      "F": 207,
+      "Q1": 3119,
+      "Q2": 1640,
+      "Q3": 64,
+      "QF": 824,
+      "R16": 1648,
+      "R32": 3276,
+      "SF": 412
+    },
+    "raw_surface_counts": {
+      "Clay": 5334,
+      "Grass": 343,
+      "Hard": 5513
+    },
+    "raw_tourney_level_counts": {
+      "A": 627,
+      "C": 9852,
+      "G": 448,
+      "M": 263
+    },
+    "skipped_by_reason": {}
+  },
+  "atp_matches_qual_chall_2025.csv": {
+    "gender_counts": {
+      "men": 11629
+    },
+    "imported": 11629,
+    "input_rows": 11629,
+    "normalized_level_counts": {
+      "atp_wta": 844,
+      "challenger": 10337,
+      "grand_slam": 448
+    },
+    "normalized_surface_counts": {
+      "clay": 5243,
+      "grass": 429,
+      "hard": 5957
+    },
+    "raw_round_counts": {
+      "F": 218,
+      "Q1": 3187,
+      "Q2": 1674,
+      "Q3": 64,
+      "QF": 868,
+      "R16": 1736,
+      "R32": 3448,
+      "SF": 434
+    },
+    "raw_surface_counts": {
+      "Clay": 5243,
+      "Grass": 429,
+      "Hard": 5957
+    },
+    "raw_tourney_level_counts": {
+      "A": 570,
+      "C": 10337,
+      "G": 448,
+      "M": 274
+    },
+    "skipped_by_reason": {}
+  },
+  "atp_matches_qual_chall_2026.csv": {
+    "gender_counts": {
+      "men": 5745
+    },
+    "imported": 5745,
+    "input_rows": 5745,
+    "normalized_level_counts": {
+      "atp_wta": 429,
+      "challenger": 5204,
+      "grand_slam": 112
+    },
+    "normalized_surface_counts": {
+      "clay": 2752,
+      "grass": 48,
+      "hard": 2945
+    },
+    "raw_round_counts": {
+      "F": 111,
+      "Q1": 1522,
+      "Q2": 820,
+      "Q3": 16,
+      "QF": 440,
+      "R16": 880,
+      "R32": 1736,
+      "SF": 220
+    },
+    "raw_surface_counts": {
+      "Clay": 2752,
+      "Grass": 48,
+      "Hard": 2945
+    },
+    "raw_tourney_level_counts": {
+      "A": 264,
+      "C": 5204,
+      "G": 112,
+      "M": 165
+    },
+    "skipped_by_reason": {}
+  },
+  "wta_matches_2023.csv": {
+    "gender_counts": {
+      "women": 2810
+    },
+    "imported": 2810,
+    "input_rows": 2810,
+    "normalized_level_counts": {
+      "atp_wta": 2302,
+      "grand_slam": 508
+    },
+    "normalized_surface_counts": {
+      "clay": 784,
+      "grass": 313,
+      "hard": 1713
+    },
+    "raw_round_counts": {
+      "F": 61,
+      "QF": 220,
+      "R128": 384,
+      "R16": 440,
+      "R32": 847,
+      "R64": 404,
+      "RR": 332,
+      "SF": 122
+    },
+    "raw_surface_counts": {
+      "Clay": 784,
+      "Grass": 313,
+      "Hard": 1713
+    },
+    "raw_tourney_level_counts": {
+      "D": 272,
+      "F": 30,
+      "G": 508,
+      "I": 977,
+      "P": 584,
+      "PM": 439
+    },
+    "skipped_by_reason": {}
+  },
+  "wta_matches_2024.csv": {
+    "gender_counts": {
+      "women": 2689
+    },
+    "imported": 2632,
+    "input_rows": 2689,
+    "normalized_level_counts": {
+      "atp_wta": 2181,
+      "grand_slam": 508
+    },
+    "normalized_surface_counts": {
+      "clay": 729,
+      "grass": 305,
+      "hard": 1598,
+      "unknown": 57
+    },
+    "raw_round_counts": {
+      "BR": 1,
+      "F": 60,
+      "QF": 236,
+      "R128": 416,
+      "R16": 456,
+      "R32": 841,
+      "R64": 472,
+      "RR": 87,
+      "SF": 120
+    },
+    "raw_surface_counts": {
+      "<blank>": 57,
+      "Clay": 729,
+      "Grass": 305,
+      "Hard": 1598
+    },
+    "raw_tourney_level_counts": {
+      "D": 79,
+      "F": 15,
+      "G": 508,
+      "I": 764,
+      "O": 64,
+      "P": 588,
+      "PM": 640,
+      "W": 31
+    },
+    "skipped_by_reason": {
+      "unknown_surface_not_allowed": 57
+    }
+  },
+  "wta_matches_2025.csv": {
+    "gender_counts": {
+      "women": 2795
+    },
+    "imported": 2759,
+    "input_rows": 2795,
+    "normalized_level_counts": {
+      "atp_wta": 2287,
+      "grand_slam": 508
+    },
+    "normalized_surface_counts": {
+      "clay": 697,
+      "grass": 301,
+      "hard": 1761,
+      "unknown": 36
+    },
+    "raw_round_counts": {
+      "F": 61,
+      "QF": 240,
+      "R128": 480,
+      "R16": 472,
+      "R32": 885,
+      "R64": 456,
+      "RR": 80,
+      "SF": 121
+    },
+    "raw_surface_counts": {
+      "<blank>": 36,
+      "Clay": 666,
+      "Grass": 301,
+      "Hard": 1761,
+      "clay": 31
+    },
+    "raw_tourney_level_counts": {
+      "35+H": 31,
+      "50+H": 184,
+      "D": 50,
+      "F": 15,
+      "G": 508,
+      "I": 703,
+      "P": 474,
+      "PM": 830
+    },
+    "skipped_by_reason": {
+      "unknown_surface_not_allowed": 36
+    }
+  },
+  "wta_matches_2026.csv": {
+    "gender_counts": {
+      "women": 1295
+    },
+    "imported": 1273,
+    "input_rows": 1295,
+    "normalized_level_counts": {
+      "atp_wta": 1041,
+      "grand_slam": 254
+    },
+    "normalized_surface_counts": {
+      "clay": 538,
+      "hard": 735,
+      "unknown": 22
+    },
+    "raw_round_counts": {
+      "F": 25,
+      "QF": 100,
+      "R128": 256,
+      "R16": 192,
+      "R32": 360,
+      "R64": 272,
+      "RR": 40,
+      "SF": 50
+    },
+    "raw_surface_counts": {
+      "<blank>": 22,
+      "Clay": 538,
+      "Hard": 735
+    },
+    "raw_tourney_level_counts": {
+      "D": 22,
+      "G": 254,
+      "I": 271,
+      "P": 258,
+      "PM": 490
+    },
+    "skipped_by_reason": {
+      "unknown_surface_not_allowed": 22
+    }
+  },
+  "wta_matches_qual_itf_2023.csv": {
+    "gender_counts": {
+      "women": 34322
+    },
+    "imported": 34322,
+    "input_rows": 34322,
+    "normalized_level_counts": {
+      "challenger": 1128,
+      "grand_slam": 448,
+      "itf": 32746
+    },
+    "normalized_surface_counts": {
+      "carpet": 535,
+      "clay": 14873,
+      "grass": 573,
+      "hard": 18341
+    },
+    "raw_round_counts": {
+      "F": 586,
+      "Q1": 8202,
+      "Q2": 5874,
+      "Q3": 1500,
+      "QF": 2367,
+      "R16": 4734,
+      "R32": 9464,
+      "R64": 416,
+      "SF": 1179
+    },
+    "raw_surface_counts": {
+      "Carpet": 535,
+      "Clay": 14873,
+      "Grass": 573,
+      "Hard": 18341
+    },
+    "raw_tourney_level_counts": {
+      "100": 1118,
+      "15": 12961,
+      "25": 10658,
+      "40": 2741,
+      "60": 3990,
+      "80": 352,
+      "C": 1128,
+      "G": 448,
+      "I": 445,
+      "P": 313,
+      "PM": 168
+    },
+    "skipped_by_reason": {}
+  },
+  "wta_matches_qual_itf_2024.csv": {
+    "gender_counts": {
+      "women": 38281
+    },
+    "imported": 38281,
+    "input_rows": 38281,
+    "normalized_level_counts": {
+      "challenger": 1420,
+      "grand_slam": 448,
+      "itf": 36413
+    },
+    "normalized_surface_counts": {
+      "carpet": 716,
+      "clay": 17112,
+      "grass": 461,
+      "hard": 19992
+    },
+    "raw_round_counts": {
+      "F": 617,
+      "Q1": 9751,
+      "Q2": 6947,
+      "Q3": 1710,
+      "QF": 2520,
+      "R16": 5048,
+      "R32": 10127,
+      "R64": 304,
+      "SF": 1257
+    },
+    "raw_surface_counts": {
+      "Carpet": 716,
+      "Clay": 17112,
+      "Grass": 461,
+      "Hard": 19992
+    },
+    "raw_tourney_level_counts": {
+      "100": 1367,
+      "15": 16300,
+      "35": 10350,
+      "50": 3683,
+      "75": 3774,
+      "C": 1420,
+      "G": 448,
+      "I": 393,
+      "P": 295,
+      "PM": 251
+    },
+    "skipped_by_reason": {}
+  },
+  "wta_matches_qual_itf_2025.csv": {
+    "gender_counts": {
+      "women": 21615
+    },
+    "imported": 21615,
+    "input_rows": 21615,
+    "normalized_level_counts": {
+      "challenger": 2286,
+      "grand_slam": 448,
+      "itf": 18881
+    },
+    "normalized_surface_counts": {
+      "carpet": 370,
+      "clay": 9295,
+      "grass": 439,
+      "hard": 11511
+    },
+    "raw_round_counts": {
+      "F": 640,
+      "Q1": 1289,
+      "Q2": 676,
+      "Q3": 64,
+      "QF": 2488,
+      "R16": 4988,
+      "R32": 10077,
+      "R64": 144,
+      "SF": 1249
+    },
+    "raw_surface_counts": {
+      "Carpet": 370,
+      "Clay": 8429,
+      "Grass": 439,
+      "Hard": 11511,
+      "clay": 866
+    },
+    "raw_tourney_level_counts": {
+      "100": 663,
+      "15": 8930,
+      "35": 4941,
+      "50": 1625,
+      "75": 1815,
+      "C": 2286,
+      "G": 448,
+      "I": 359,
+      "P": 261,
+      "PM": 287
+    },
+    "skipped_by_reason": {}
+  },
+  "wta_matches_qual_itf_2026.csv": {
+    "gender_counts": {
+      "women": 8975
+    },
+    "imported": 8975,
+    "input_rows": 8975,
+    "normalized_level_counts": {
+      "challenger": 1207,
+      "grand_slam": 112,
+      "itf": 7656
+    },
+    "normalized_surface_counts": {
+      "carpet": 92,
+      "clay": 3455,
+      "grass": 129,
+      "hard": 5299
+    },
+    "raw_round_counts": {
+      "F": 259,
+      "Q1": 626,
+      "Q2": 334,
+      "Q3": 16,
+      "QF": 1031,
+      "R16": 2050,
+      "R32": 4121,
+      "R64": 32,
+      "SF": 506
+    },
+    "raw_surface_counts": {
+      "Carpet": 92,
+      "Clay": 3455,
+      "Grass": 129,
+      "Hard": 5299
+    },
+    "raw_tourney_level_counts": {
+      "100": 337,
+      "15": 3179,
+      "35": 2147,
+      "50": 664,
+      "75": 897,
+      "C": 1207,
+      "G": 112,
+      "I": 122,
+      "P": 119,
+      "PM": 191
+    },
+    "skipped_by_reason": {}
+  }
+}
