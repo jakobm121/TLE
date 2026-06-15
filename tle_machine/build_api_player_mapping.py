@@ -8,7 +8,7 @@ import math
 import re
 import unicodedata
 from collections import Counter, defaultdict
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any
@@ -77,17 +77,15 @@ def normalize_name(s: str) -> str:
     return s
 
 
+def tokens_from_norm(norm: str) -> list[str]:
+    return [t for t in (norm or "").split() if t]
+
+
 def tokens(s: str) -> list[str]:
-    return [t for t in normalize_name(s).split() if t]
+    return tokens_from_norm(normalize_name(s))
 
 
-def last_token(s: str) -> str:
-    ts = tokens(s)
-    return ts[-1] if ts else ""
-
-
-def surname_tokens(s: str) -> list[str]:
-    ts = tokens(s)
+def surname_tokens_from_tokens(ts: list[str]) -> list[str]:
     if not ts:
         return []
     if len(ts) >= 2 and f"{ts[-2]} {ts[-1]}" in PARTICLES:
@@ -95,12 +93,44 @@ def surname_tokens(s: str) -> list[str]:
     return [ts[-1]]
 
 
+def surname_key_from_tokens(ts: list[str]) -> str:
+    return " ".join(surname_tokens_from_tokens(ts))
+
+
+def compact_initial_from_tokens(ts: list[str]) -> str:
+    if not ts:
+        return ""
+    if len(ts) == 1:
+        return ts[0]
+    return f"{ts[0][0]} {' '.join(ts[1:])}"
+
+
+def initials_from_tokens(ts: list[str]) -> str:
+    return "".join(t[0] for t in ts if t)
+
+
+def last_token_from_norm(norm: str) -> str:
+    ts = tokens_from_norm(norm)
+    return ts[-1] if ts else ""
+
+
+def last_token(s: str) -> str:
+    return last_token_from_norm(normalize_name(s))
+
+
+def surname_tokens(s: str) -> list[str]:
+    return surname_tokens_from_tokens(tokens(s))
+
+
 def initials(s: str) -> str:
-    return "".join(t[0] for t in tokens(s) if t)
+    return initials_from_tokens(tokens(s))
+
+
+def compact_initial_form(s: str) -> str:
+    return compact_initial_from_tokens(tokens(s))
 
 
 def looks_like_doubles_or_team(name: str) -> bool:
-    n = normalize_name(name)
     if "/" in (name or ""):
         return True
     ts = tokens(name)
@@ -109,73 +139,24 @@ def looks_like_doubles_or_team(name: str) -> bool:
     return False
 
 
-def ratio(a: str, b: str) -> float:
+def ratio_norm(a: str, b: str) -> float:
     if not a or not b:
         return 0.0
     return SequenceMatcher(None, a, b).ratio()
 
 
-def token_jaccard(a: str, b: str) -> float:
-    aa, bb = set(tokens(a)), set(tokens(b))
+def token_jaccard_norm(an: str, sn: str) -> float:
+    aa, bb = set(tokens_from_norm(an)), set(tokens_from_norm(sn))
     if not aa or not bb:
         return 0.0
     return len(aa & bb) / len(aa | bb)
 
 
-def initial_surname_match(api_name: str, sack_name: str) -> bool:
-    api_ts = tokens(api_name)
-    sack_ts = tokens(sack_name)
-    if len(api_ts) < 2 or len(sack_ts) < 2:
-        return False
-    api_last = surname_tokens(api_name)
-    sack_last = surname_tokens(sack_name)
-    if not api_last or not sack_last:
-        return False
-    if " ".join(api_last) != " ".join(sack_last):
-        return False
-    return api_ts[0][0] == sack_ts[0][0]
+def initial_surname_match_pre(api_initial: str, api_surname: str, sack_initial: str, sack_surname: str) -> bool:
+    return bool(api_initial and api_surname and api_surname == sack_surname and api_initial == sack_initial)
 
 
-def compact_initial_form(s: str) -> str:
-    ts = tokens(s)
-    if not ts:
-        return ""
-    if len(ts) == 1:
-        return ts[0]
-    return f"{ts[0][0]} {' '.join(ts[1:])}"
-
-
-def score_candidate(api_name: str, sack_name: str) -> tuple[float, str]:
-    an = normalize_name(api_name)
-    sn = normalize_name(sack_name)
-    if not an or not sn:
-        return 0.0, "empty"
-    if an == sn:
-        return 1.0, "exact_normalized"
-
-    api_compact = compact_initial_form(api_name)
-    sack_compact = compact_initial_form(sack_name)
-    if api_compact and api_compact == sack_compact:
-        return 0.970, "exact_initial_form"
-
-    if initial_surname_match(api_name, sack_name):
-        base = ratio(an, sn)
-        tj = token_jaccard(api_name, sack_name)
-        score = max(0.900, min(0.970, 0.84 + 0.10 * base + 0.06 * tj))
-        return score, "initial_surname"
-
-    r = ratio(an, sn)
-    tj = token_jaccard(api_name, sack_name)
-    last_bonus = 0.06 if last_token(api_name) and last_token(api_name) == last_token(sack_name) else 0.0
-    init_bonus = 0.03 if initials(api_name) and initials(sack_name) and initials(api_name)[0] == initials(sack_name)[0] else 0.0
-    score = min(0.999, 0.72 * r + 0.18 * tj + last_bonus + init_bonus)
-    method = "fuzzy"
-    if last_bonus:
-        method = "fuzzy_same_last"
-    return score, method
-
-
-@dataclass
+@dataclass(slots=True)
 class SackPlayer:
     key: str
     gender: str
@@ -183,9 +164,15 @@ class SackPlayer:
     matches: int
     levels: dict[str, Any]
     surfaces: dict[str, Any]
+    norm: str = ""
+    toks: list[str] = field(default_factory=list)
+    last: str = ""
+    surname: str = ""
+    initial: str = ""
+    compact: str = ""
 
 
-@dataclass
+@dataclass(slots=True)
 class ApiPlayer:
     key: str
     gender: str
@@ -201,6 +188,29 @@ class ApiPlayer:
         return self.names.most_common(1)[0][0] if self.names else ""
 
 
+def decorate_sack_player(sp: SackPlayer) -> SackPlayer:
+    sp.norm = normalize_name(sp.name)
+    sp.toks = tokens_from_norm(sp.norm)
+    sp.last = sp.toks[-1] if sp.toks else ""
+    sp.surname = surname_key_from_tokens(sp.toks)
+    sp.initial = sp.toks[0][0] if sp.toks else ""
+    sp.compact = compact_initial_from_tokens(sp.toks)
+    return sp
+
+
+def api_key_variants(api_key: str, gender: str) -> list[str]:
+    raw = str(api_key)
+    if raw.startswith("men:api") or raw.startswith("women:api"):
+        bare = raw.split(":")[-1]
+    else:
+        bare = raw
+    return [
+        raw,
+        f"{gender}:api:{bare}",
+        f"{gender}:api_tennis:{bare}",
+    ]
+
+
 def load_sack_players() -> dict[str, SackPlayer]:
     path = RATINGS_JSON if RATINGS_JSON.exists() else RATINGS_JSON_GZ
     data = read_json_any(path)
@@ -211,7 +221,7 @@ def load_sack_players() -> dict[str, SackPlayer]:
         name = p.get("name") or ""
         if not gender or not name:
             continue
-        out[key] = SackPlayer(
+        sp = SackPlayer(
             key=key,
             gender=gender,
             name=name,
@@ -219,6 +229,7 @@ def load_sack_players() -> dict[str, SackPlayer]:
             levels=dict(p.get("level") or {}),
             surfaces=dict(p.get("surface") or {}),
         )
+        out[key] = decorate_sack_player(sp)
     return out
 
 
@@ -245,12 +256,13 @@ def load_api_players() -> dict[str, ApiPlayer]:
             l = extract_player(m, "loser")
             if not w or not l or gender not in {"men", "women"}:
                 continue
-            for (key, name), (opp_key, opp_name) in ((w, l), (l, w)):
+            for (key, name), (_opp_key, opp_name) in ((w, l), (l, w)):
                 if looks_like_doubles_or_team(name):
                     continue
-                if key not in api_players:
-                    api_players[key] = ApiPlayer(
-                        key=key,
+                canonical_api_key = key if key.startswith(f"{gender}:api") else f"{gender}:api:{key}"
+                if canonical_api_key not in api_players:
+                    api_players[canonical_api_key] = ApiPlayer(
+                        key=canonical_api_key,
                         gender=gender,
                         names=Counter(),
                         matches=0,
@@ -259,7 +271,7 @@ def load_api_players() -> dict[str, ApiPlayer]:
                         opponents=Counter(),
                         tournaments=Counter(),
                     )
-                ap = api_players[key]
+                ap = api_players[canonical_api_key]
                 ap.names[name] += 1
                 ap.matches += 1
                 ap.levels[level] += 1
@@ -267,6 +279,15 @@ def load_api_players() -> dict[str, ApiPlayer]:
                 ap.opponents[opp_name] += 1
                 ap.tournaments[tournament] += 1
     return api_players
+
+
+def parse_override_value(v: Any) -> str | None:
+    if v in {None, "", "null"}:
+        return None
+    if isinstance(v, dict):
+        t = v.get("target_player_key") or v.get("sackmann_player_key") or v.get("target")
+        return None if t in {None, "", "null"} else str(t)
+    return str(v)
 
 
 def load_overrides() -> dict[str, str | None]:
@@ -277,36 +298,124 @@ def load_overrides() -> dict[str, str | None]:
     data = read_json_any(OVERRIDES_JSON)
     if not isinstance(data, dict):
         return {}
-    return {str(k): (None if v in {None, "", "null"} else str(v)) for k, v in data.items()}
+    return {str(k): parse_override_value(v) for k, v in data.items()}
 
 
-def candidate_pool(api_player: ApiPlayer, sack_by_gender: dict[str, list[SackPlayer]]) -> list[SackPlayer]:
-    name = api_player.name
-    lt = last_token(name)
-    st = " ".join(surname_tokens(name))
-    init = initials(name)[:1]
-    pool = []
-    for sp in sack_by_gender.get(api_player.gender, []):
-        if lt and lt == last_token(sp.name):
-            pool.append(sp)
-            continue
-        if st and st == " ".join(surname_tokens(sp.name)):
-            pool.append(sp)
-            continue
-        if init and initials(sp.name).startswith(init):
-            # Keep only plausible fuzzy candidates to avoid O(N) huge list.
-            if ratio(normalize_name(name), normalize_name(sp.name)) >= 0.55:
-                pool.append(sp)
-    if not pool:
-        # rare fallback for transliteration: top fuzzy from all same-gender players
-        scored = []
-        for sp in sack_by_gender.get(api_player.gender, []):
-            sc, _ = score_candidate(name, sp.name)
+@dataclass
+class SackIndex:
+    by_gender: dict[str, list[SackPlayer]]
+    by_norm: dict[tuple[str, str], list[SackPlayer]]
+    by_compact: dict[tuple[str, str], list[SackPlayer]]
+    by_last: dict[tuple[str, str], list[SackPlayer]]
+    by_surname: dict[tuple[str, str], list[SackPlayer]]
+    by_initial: dict[tuple[str, str], list[SackPlayer]]
+
+
+def build_sack_index(sack_players: dict[str, SackPlayer]) -> SackIndex:
+    idx = SackIndex(defaultdict(list), defaultdict(list), defaultdict(list), defaultdict(list), defaultdict(list), defaultdict(list))
+    for sp in sack_players.values():
+        idx.by_gender[sp.gender].append(sp)
+        if sp.norm:
+            idx.by_norm[(sp.gender, sp.norm)].append(sp)
+        if sp.compact:
+            idx.by_compact[(sp.gender, sp.compact)].append(sp)
+        if sp.last:
+            idx.by_last[(sp.gender, sp.last)].append(sp)
+        if sp.surname:
+            idx.by_surname[(sp.gender, sp.surname)].append(sp)
+        if sp.initial:
+            idx.by_initial[(sp.gender, sp.initial)].append(sp)
+    return idx
+
+
+def api_name_features(name: str) -> dict[str, Any]:
+    norm = normalize_name(name)
+    ts = tokens_from_norm(norm)
+    return {
+        "norm": norm,
+        "tokens": ts,
+        "last": ts[-1] if ts else "",
+        "surname": surname_key_from_tokens(ts),
+        "initial": ts[0][0] if ts else "",
+        "compact": compact_initial_from_tokens(ts),
+    }
+
+
+def score_candidate_features(api_feat: dict[str, Any], sp: SackPlayer) -> tuple[float, str]:
+    an = api_feat["norm"]
+    sn = sp.norm
+    if not an or not sn:
+        return 0.0, "empty"
+    if an == sn:
+        return 1.0, "exact_normalized"
+
+    if api_feat["compact"] and api_feat["compact"] == sp.compact:
+        return 0.970, "exact_initial_form"
+
+    if initial_surname_match_pre(api_feat["initial"], api_feat["surname"], sp.initial, sp.surname):
+        base = ratio_norm(an, sn)
+        tj = token_jaccard_norm(an, sn)
+        score = max(0.900, min(0.970, 0.84 + 0.10 * base + 0.06 * tj))
+        return score, "initial_surname"
+
+    r = ratio_norm(an, sn)
+    tj = token_jaccard_norm(an, sn)
+    last_bonus = 0.06 if api_feat["last"] and api_feat["last"] == sp.last else 0.0
+    init_bonus = 0.03 if api_feat["initial"] and api_feat["initial"] == sp.initial else 0.0
+    score = min(0.999, 0.72 * r + 0.18 * tj + last_bonus + init_bonus)
+    method = "fuzzy_same_last" if last_bonus else "fuzzy"
+    return score, method
+
+
+def candidate_pool_fast(api_player: ApiPlayer, idx: SackIndex) -> list[SackPlayer]:
+    feat = api_name_features(api_player.name)
+    gender = api_player.gender
+    pool_by_key: dict[str, SackPlayer] = {}
+
+    def add_many(items: list[SackPlayer]) -> None:
+        for sp in items:
+            pool_by_key[sp.key] = sp
+
+    # Strong, cheap candidate sets first.
+    if feat["norm"]:
+        add_many(idx.by_norm.get((gender, feat["norm"]), []))
+    if feat["compact"]:
+        add_many(idx.by_compact.get((gender, feat["compact"]), []))
+    if feat["surname"]:
+        add_many(idx.by_surname.get((gender, feat["surname"]), []))
+    if feat["last"]:
+        add_many(idx.by_last.get((gender, feat["last"]), []))
+
+    # If still too few candidates, use same initial but cheaply pre-filter by token overlap / short ratio.
+    if len(pool_by_key) < 4 and feat["initial"]:
+        an = feat["norm"]
+        api_token_set = set(feat["tokens"])
+        for sp in idx.by_initial.get((gender, feat["initial"]), []):
+            if sp.key in pool_by_key:
+                continue
+            # Avoid old O(N) fuzzy over all players; this is initial bucket only.
+            if api_token_set & set(sp.toks) or ratio_norm(an, sp.norm) >= 0.55:
+                pool_by_key[sp.key] = sp
+
+    # Rare fallback for transliteration / API typo. This can still scan same-gender, but only when indexed pool failed.
+    if not pool_by_key:
+        scored: list[tuple[float, SackPlayer]] = []
+        for sp in idx.by_gender.get(gender, []):
+            sc, _ = score_candidate_features(feat, sp)
             if sc >= 0.78:
                 scored.append((sc, sp))
         scored.sort(key=lambda x: x[0], reverse=True)
-        pool = [sp for _, sp in scored[:20]]
-    return pool
+        for _, sp in scored[:20]:
+            pool_by_key[sp.key] = sp
+
+    return list(pool_by_key.values())
+
+
+def find_override(api_key: str, gender: str, overrides: dict[str, str | None]) -> tuple[bool, str | None, str | None]:
+    for k in api_key_variants(api_key, gender):
+        if k in overrides:
+            return True, overrides[k], k
+    return False, None, None
 
 
 def build_mapping() -> None:
@@ -316,10 +425,7 @@ def build_mapping() -> None:
     sack_players = load_sack_players()
     api_players = load_api_players()
     overrides = load_overrides()
-
-    sack_by_gender: dict[str, list[SackPlayer]] = defaultdict(list)
-    for sp in sack_players.values():
-        sack_by_gender[sp.gender].append(sp)
+    sack_index = build_sack_index(sack_players)
 
     mapping: dict[str, Any] = {
         "generated_at": now_utc_iso(),
@@ -329,9 +435,9 @@ def build_mapping() -> None:
     }
 
     counters = Counter()
-    review_rows = []
-    candidate_rows = []
-    issue_rows = []
+    review_rows: list[dict[str, Any]] = []
+    candidate_rows: list[dict[str, Any]] = []
+    issue_rows: list[dict[str, Any]] = []
     reverse: dict[str, list[str]] = defaultdict(list)
 
     for api_key, ap in sorted(api_players.items()):
@@ -339,8 +445,8 @@ def build_mapping() -> None:
         counters[f"api_gender_{ap.gender}"] += 1
         name = ap.name
 
-        if api_key in overrides:
-            target = overrides[api_key]
+        has_override, target, override_key = find_override(api_key, ap.gender, overrides)
+        if has_override:
             status = "manual_unmapped" if target is None else "manual_mapped"
             if target and target not in sack_players:
                 status = "manual_invalid_target"
@@ -353,6 +459,7 @@ def build_mapping() -> None:
                 "gender": ap.gender,
                 "confidence": 1.0 if target else 0.0,
                 "method": "manual_override",
+                "override_key": override_key,
                 "api_matches": ap.matches,
             }
             counters[status] += 1
@@ -360,12 +467,12 @@ def build_mapping() -> None:
                 reverse[target].append(api_key)
             continue
 
-        candidates = []
-        for sp in candidate_pool(ap, sack_by_gender):
-            sc, method = score_candidate(name, sp.name)
+        feat = api_name_features(name)
+        candidates: list[tuple[float, str, SackPlayer]] = []
+        for sp in candidate_pool_fast(ap, sack_index):
+            sc, method = score_candidate_features(feat, sp)
             if sc < 0.760:
                 continue
-            # Slightly prefer active/relevant players with more matches, but cap the bonus.
             match_bonus = min(0.012, math.log1p(max(sp.matches, 0)) / 1000.0)
             final_score = min(0.999, sc + match_bonus)
             candidates.append((final_score, method, sp))
@@ -403,7 +510,6 @@ def build_mapping() -> None:
             elif best_method in {"exact_normalized", "exact_initial_form"} and best_sc >= 0.965 and margin >= 0.020:
                 accept = True
             elif best_method == "initial_surname" and best_sc >= INITIAL_SURNAME_SCORE_MIN and margin >= AUTO_MARGIN_MIN:
-                # Accept only if surname+initial is essentially unique.
                 same_initial_surname = [c for c in top if c[1] == "initial_surname" and c[0] >= best_sc - AMBIGUOUS_MARGIN]
                 accept = len(same_initial_surname) == 1
 
@@ -430,7 +536,6 @@ def build_mapping() -> None:
             "api_name_variants": dict(ap.names.most_common(10)),
             "api_levels": dict(ap.levels),
             "api_surfaces": dict(ap.surfaces),
-            "top_candidate": candidate_rows[-1] if False else None,
         }
         counters[status] += 1
         if target:
@@ -452,7 +557,6 @@ def build_mapping() -> None:
                 "api_surfaces": json.dumps(dict(ap.surfaces), ensure_ascii=False, sort_keys=True),
             })
 
-    # one Sackmann player can have API aliases, but too many is suspicious.
     for sack_key, api_keys in reverse.items():
         if len(api_keys) > 3:
             issue_rows.append({
@@ -470,6 +574,7 @@ def build_mapping() -> None:
         "initial_surname_score_min": INITIAL_SURNAME_SCORE_MIN,
         "manual_overrides": str(OVERRIDES_JSON),
         "principle": "Accept only high-confidence or unique initial-surname matches; ambiguous candidates are sent to review.",
+        "performance_note": "Fast version uses indexed candidate pools by gender/name/surname/initial; acceptance thresholds are unchanged.",
     }
 
     write_json(MAPPING_JSON, mapping)
