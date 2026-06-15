@@ -1,0 +1,52 @@
+name: TLE 11 Merge Canonical With API
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  merge-canonical-with-api:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Merge canonical with API
+        run: |
+          python -m tle_machine.merge_canonical_with_api
+
+      - name: Commit combined canonical
+        if: always()
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/canonical/manifest.json || true
+          git add data/canonical/tle_matches_manifest.json || true
+          git add data/canonical/tle_matches_*.jsonl.gz || true
+
+          git add data/reports/canonical/merge_report.json || true
+          git add data/reports/canonical/api_merge_added.csv || true
+          git add data/reports/canonical/api_merge_skipped.csv || true
+          git add data/reports/canonical/api_merge_duplicates.csv || true
+          git add data/reports/canonical/api_merge_conflicts.csv || true
+
+          if git diff --cached --quiet; then
+            echo "No canonical merge changes to commit."
+          else
+            git commit -m "Merge canonical with API source"
+            git push
+          fi
