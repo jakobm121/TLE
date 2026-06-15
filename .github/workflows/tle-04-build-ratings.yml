@@ -1,0 +1,46 @@
+name: TLE 04 Build Ratings
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-ratings:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Build TLE ratings
+        env:
+          PYTHONPATH: ${{ github.workspace }}
+        run: |
+          python -m tle_machine.build_ratings
+
+      - name: Show ratings report
+        run: |
+          cat data/reports/ratings/rating_build_report.json || true
+          cat data/ratings/manifest.json || true
+
+      - name: Commit ratings
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ratings data/reports/ratings
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          git commit -m "Build TLE ratings"
+          git push
