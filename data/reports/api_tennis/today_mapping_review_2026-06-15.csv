@@ -2,33 +2,20 @@ api_player_key,api_raw_player_key,api_name,gender,mapping_status,today_match_cou
 women:api:4363,4363,A. Aksu,women,missing_mapping_entry,1,A. S. Sanchez,Figueira Da Foz (Portugal) - Qualification,Challenger Women Singles,,,,,,
 men:api:53732,53732,A. Blus,men,unmapped,1,N. Gombos,Poznan,Challenger Men Singles,,,,,,
 men:api:2188,2188,A. Huertas Del Pino Cordova,men,unmapped,1,G. Ribeiro de Almeida,Asuncion 2 (Paraguay) - Qualification,Challenger Men Singles,,,,,,
-women:api:123,123,A. S. Sanchez,women,ambiguous,1,A. Aksu,Figueira Da Foz (Portugal) - Qualification,Challenger Women Singles,women:sackmann:204419,Ana Sofia Sanchez,0.935947,,initial_surname,"{""women:api:123"": ""women:sackmann:204419""}"
-women:api:17346,17346,A. Smith,women,ambiguous,1,V. Ryser,Figueira Da Foz (Portugal) - Qualification,Challenger Women Singles,women:sackmann:220673,Alana Smith,0.974977,,exact_initial_form,"{""women:api:17346"": ""women:sackmann:220673""}"
 women:api:13987,13987,A. Sobolieva,women,unmapped,1,K. Deichmann,Brescia (Italy) - Qualification,Challenger Women Singles,,,,,,
 men:api:421,421,C. O'Connell,men,unmapped,1,H. Rocha,Nottingham,Challenger Men Singles,,,,,,
-men:api:54466,54466,C. Smith,men,ambiguous,1,C. Chidekh,Dublin (Ireland) - Qualification,Challenger Men Singles,men:sackmann:212256,Colton Smith,0.97482,,exact_initial_form,"{""men:api:54466"": ""men:sackmann:212256""}"
 men:api:7498,7498,D. De Jonge,men,missing_mapping_entry,1,M. Zhu,Royan,Challenger Men Singles,,,,,,
-women:api:122,122,D. Marcinkevica,women,ambiguous,1,J. G. Gerald Gonzalez,W35+H Tauste,Itf Women Singles,women:sackmann:203509,Diana Marcinkevica,0.975147,,exact_initial_form,"{""women:api:122"": ""women:sackmann:203509""}"
-men:api:17463,17463,Dar. Blanch,men,ambiguous,1,Z. Zhang,Nottingham,Challenger Men Singles,men:sackmann:209898,Dali Blanch,0.975375,,exact_initial_form,"{""men:api:17463"": ""men:sackmann:209898""}"
 men:api:63483,63483,E. Kohlmann,men,unmapped,1,C. Huertas Del Pino,Asuncion 2 (Paraguay) - Qualification,Challenger Men Singles,,,,,,
 men:api:103853,103853,F. Busciola,men,missing_mapping_entry,1,G. La Vela,"M25 Milano (Italy), Clay",Itf Men - Singles,,,,,,
 men:api:5673,5673,F. Iannaccone,men,missing_mapping_entry,1,P. Nesterov,"M25 Milano (Italy), Clay",Itf Men - Singles,,,,,,
 women:api:10909,10909,H. Kinoshita,women,missing_mapping_entry,1,V. Hruncakova,Figueira Da Foz (Portugal) - Qualification,Challenger Women Singles,,,,,,
-women:api:2394,2394,L. Fernandez,women,ambiguous,1,J. Tjen,Nottingham,Wta Singles,women:sackmann:220367,Leylah Fernandez,0.975338,,exact_initial_form,"{""women:api:2394"": ""women:sackmann:220367""}"
 men:api:15252,15252,L. Malgaroli,men,missing_mapping_entry,1,I. Radulov,"M25 Milano (Italy), Clay",Itf Men - Singles,,,,,,
-women:api:68376,68376,L. Samsonova,women,ambiguous,1,E. Mertens,Berlin,Wta Singles,women:sackmann:214643,Liudmila Samsonova,0.975215,,exact_initial_form,"{""women:api:68376"": ""women:sackmann:214643""}"
-women:api:1815,1815,L. Sun,women,ambiguous,1,A. Kalinina,Berlin,Wta Singles,women:sackmann:215138,Lulu Sun,0.975242,,exact_initial_form,"{""women:api:1815"": ""women:sackmann:215138""}"
-women:api:451,451,L. Zhu,women,ambiguous,1,S. Kraus,Berlin,Wta Singles,women:sackmann:202684,Lin Zhu,0.97497,,exact_initial_form,"{""women:api:451"": ""women:sackmann:202684""}"
-women:api:12869,12869,M. Timofeeva,women,ambiguous,1,R. Zarazua,Berlin,Wta Singles,women:sackmann:221237,Maria Timofeeva,0.975226,,exact_initial_form,"{""women:api:12869"": ""women:sackmann:221237""}"
 men:api:778,778,P. Delage,men,missing_mapping_entry,1,S. Gulin,Royan,Challenger Men Singles,,,,,,
 men:api:11781,11781,P. Dev S D,men,unmapped,1,C. Rolland de Ravel,Royan,Challenger Men Singles,,,,,,
 men:api:80068,80068,P. Lagutin,men,missing_mapping_entry,1,P. Marino,M15 Mungia-Laukariz,Itf Men Singles,,,,,,
 women:api:19429,19429,S. Rutlauka,women,missing_mapping_entry,1,V. Turini,W35+H Tauste,Itf Women Singles,,,,,,
-men:api:851,851,T. Compagnucci,men,ambiguous,1,J. C. Martin Manzano,Parma,Challenger Men Singles,men:sackmann:206867,Tommaso Compagnucci,0.975209,,exact_initial_form,"{""men:api:851"": ""men:sackmann:206867""}"
 women:api:40904,40904,T. Lemaitre,women,missing_mapping_entry,1,Z. Kardava,W35+H Tauste,Itf Women Singles,,,,,,
-women:api:37886,37886,T. Rakotomanga Rajaonah,women,ambiguous,1,Y. Lizarazo,Brescia (Italy) - Qualification,Challenger Women Singles,women:sackmann:266531,Tiantsoa Sarah Rakotomanga Rajaonah,0.945964,,initial_surname,"{""women:api:37886"": ""women:sackmann:266531""}"
 men:api:9229,9229,V. C. Loureiro J.,men,unmapped,1,M. Zeitune,Asuncion 2 (Paraguay) - Qualification,Challenger Men Singles,,,,,,
 women:api:2822,2822,V. Zvonareva,women,missing_mapping_entry,1,S. Bandecchi,Figueira Da Foz (Portugal) - Qualification,Challenger Women Singles,,,,,,
 women:api:150,150,Y. Lizarazo,women,missing_mapping_entry,1,T. Rakotomanga Rajaonah,Brescia (Italy) - Qualification,Challenger Women Singles,,,,,,
 women:api:11480,11480,Z. Kardava,women,missing_mapping_entry,1,T. Lemaitre,W35+H Tauste,Itf Women Singles,,,,,,
-men:api:590,590,Z. Zhang,men,ambiguous,1,Dar. Blanch,Nottingham,Challenger Men Singles,men:sackmann:111190,Zhizhen Zhang,0.975069,,exact_initial_form,"{""men:api:590"": ""men:sackmann:111190""}"

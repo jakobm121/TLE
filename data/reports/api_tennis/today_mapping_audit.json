@@ -1,19 +1,19 @@
 {
-  "blocked_matches": 29,
+  "blocked_matches": 19,
   "counters": {
-    "blocked_matches": 29,
-    "mapped_players": 235,
-    "match_coverage_both_mapped": 116,
-    "match_coverage_none_mapped": 4,
-    "match_coverage_one_mapped": 25,
+    "blocked_matches": 19,
+    "mapped_players": 248,
+    "match_coverage_both_mapped": 126,
+    "match_coverage_none_mapped": 1,
+    "match_coverage_one_mapped": 18,
     "raw_skipped_non_singles": 31,
     "today_matches": 145,
     "today_players": 268,
-    "unmapped_players": 33
+    "unmapped_players": 20
   },
   "date": "2026-06-15",
-  "generated_at": "2026-06-15T21:34:09+00:00",
-  "mapped_players": 235,
+  "generated_at": "2026-06-15T21:49:53+00:00",
+  "mapped_players": 248,
   "mapping_path": "data/metadata/api_tennis/player_mapping.json",
   "notes": [
     "Default audit is singles-only; doubles/team fixtures are skipped for betting scanner mapping.",
@@ -31,5 +31,5 @@
   "status": "ok",
   "today_matches": 145,
   "today_players": 268,
-  "unmapped_players": 33
+  "unmapped_players": 20
 }
