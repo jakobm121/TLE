@@ -29,6 +29,25 @@ REPORT_DIR = Path("data/reports/api_tennis")
 ACCEPTED_STATUSES = {"auto_mapped", "manual_mapped"}
 
 
+def api_mapping_key(raw_key: Any, gender: str) -> str:
+    """Return the exact key format used by player_mapping.json.
+
+    The global mapper stores API players as e.g.
+    men:api_tennis:12345 / women:api_tennis:67890.
+    Raw get_fixtures usually contains only bare numeric keys, so today audit
+    must add the gender/source prefix before checking mapping.
+    """
+    k = str(raw_key or "").strip()
+    if not k:
+        return ""
+    if ":api_tennis:" in k:
+        return k
+    g = str(gender or "").strip().lower()
+    if g not in {"men", "women"}:
+        return k
+    return f"{g}:api_tennis:{k}"
+
+
 def read_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -264,13 +283,16 @@ def main(argv: list[str] | None = None) -> None:
             tid = fixture_id(fx)
             tournament = tournament_name_raw(fx)
             etype = event_type_raw(fx)
-            for key, name, side in ((fkey, fname, "first"), (skey, sname, "second")):
-                if not key:
+            f_map_key = api_mapping_key(fkey, gender)
+            s_map_key = api_mapping_key(skey, gender)
+            for raw_key, map_key, name, side in ((fkey, f_map_key, fname, "first"), (skey, s_map_key, sname, "second")):
+                if not map_key:
                     continue
-                e = mapping_entry(mapping, key)
-                mapped = is_mapped(mapping, key)
-                p = players.setdefault(key, {
-                    "api_player_key": key,
+                e = mapping_entry(mapping, map_key)
+                mapped = is_mapped(mapping, map_key)
+                p = players.setdefault(map_key, {
+                    "api_player_key": map_key,
+                    "api_raw_player_key": raw_key,
                     "api_name": name,
                     "gender": e.get("gender") or gender,
                     "mapping_status": e.get("status", "missing_mapping_entry"),
@@ -287,12 +309,12 @@ def main(argv: list[str] | None = None) -> None:
                 opp = sname if side == "first" else fname
                 if opp:
                     p["opponents_today"][opp] += 1
-            fm = is_mapped(mapping, fkey)
-            sm = is_mapped(mapping, skey)
+            fm = is_mapped(mapping, f_map_key)
+            sm = is_mapped(mapping, s_map_key)
             coverage = "both_mapped" if fm and sm else "one_mapped" if fm or sm else "none_mapped"
             matches.append({"match_id": tid, "date": date_s, "gender": gender, "event_type_type": etype, "tournament": tournament,
-                            "first_api_key": fkey, "first_name": fname, "first_mapped": fm,
-                            "second_api_key": skey, "second_name": sname, "second_mapped": sm,
+                            "first_api_key": f_map_key, "first_raw_key": fkey, "first_name": fname, "first_mapped": fm,
+                            "second_api_key": s_map_key, "second_raw_key": skey, "second_name": sname, "second_mapped": sm,
                             "coverage": coverage, "source_path": fx.get("_source_path", "")})
     else:
         for m in source_rows:
@@ -302,12 +324,14 @@ def main(argv: list[str] | None = None) -> None:
             tournament = str(m.get("tourney_name") or m.get("tournament_name") or "")
             level = str(m.get("level") or "")
             mid = str(m.get("match_id") or m.get("api_event_key") or m.get("event_key") or "")
-            for key, name, opp in ((wk, wn, ln), (lk, ln, wn)):
+            wk_map_key = api_mapping_key(wk, gender)
+            lk_map_key = api_mapping_key(lk, gender)
+            for raw_key, key, name, opp in ((wk, wk_map_key, wn, ln), (lk, lk_map_key, ln, wn)):
                 if not key:
                     continue
                 e = mapping_entry(mapping, key)
                 mapped = is_mapped(mapping, key)
-                p = players.setdefault(key, {"api_player_key": key, "api_name": name, "gender": e.get("gender") or gender,
+                p = players.setdefault(key, {"api_player_key": key, "api_raw_player_key": raw_key, "api_name": name, "gender": e.get("gender") or gender,
                     "mapping_status": e.get("status", "missing_mapping_entry"), "sackmann_player_key": e.get("sackmann_player_key", ""),
                     "today_match_count": 0, "opponents_today": Counter(), "event_names": Counter(), "event_type_types": Counter(), "mapped": mapped})
                 p["today_match_count"] += 1
@@ -315,12 +339,12 @@ def main(argv: list[str] | None = None) -> None:
                 p["event_type_types"][level] += 1
                 if opp:
                     p["opponents_today"][opp] += 1
-            wm = is_mapped(mapping, wk)
-            lm = is_mapped(mapping, lk)
+            wm = is_mapped(mapping, wk_map_key)
+            lm = is_mapped(mapping, lk_map_key)
             coverage = "both_mapped" if wm and lm else "one_mapped" if wm or lm else "none_mapped"
             matches.append({"match_id": mid, "date": date_s, "gender": gender, "event_type_type": level, "tournament": tournament,
-                            "first_api_key": wk, "first_name": wn, "first_mapped": wm,
-                            "second_api_key": lk, "second_name": ln, "second_mapped": lm,
+                            "first_api_key": wk_map_key, "first_raw_key": wk, "first_name": wn, "first_mapped": wm,
+                            "second_api_key": lk_map_key, "second_raw_key": lk, "second_name": ln, "second_mapped": lm,
                             "coverage": coverage, "source_path": m.get("_source_path", "")})
 
     for m in matches:
@@ -343,6 +367,7 @@ def main(argv: list[str] | None = None) -> None:
         target_name = cand.get("sackmann_name") or cand.get("candidate_name") or cand.get("candidate_sackmann_name") or ""
         review_rows.append({
             "api_player_key": key,
+            "api_raw_player_key": p.get("api_raw_player_key", ""),
             "api_name": p["api_name"],
             "gender": p["gender"],
             "mapping_status": p["mapping_status"],
@@ -358,7 +383,7 @@ def main(argv: list[str] | None = None) -> None:
             "suggested_override_json": suggested_override(str(p["gender"]), key, cand),
         })
 
-    fieldnames = ["api_player_key", "api_name", "gender", "mapping_status", "today_match_count", "opponents_today", "event_names", "event_type_types", "best_candidate_key", "best_candidate_name", "score", "margin", "method", "suggested_override_json"]
+    fieldnames = ["api_player_key", "api_raw_player_key", "api_name", "gender", "mapping_status", "today_match_count", "opponents_today", "event_names", "event_type_types", "best_candidate_key", "best_candidate_name", "score", "margin", "method", "suggested_override_json"]
     write_csv(out_review, review_rows, fieldnames)
     write_csv(latest_review, review_rows, fieldnames)
 
