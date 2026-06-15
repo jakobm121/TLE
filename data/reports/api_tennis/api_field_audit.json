@@ -1,0 +1,115 @@
+{
+  "event_type_counts": {},
+  "files": {
+    "2026-05-26.json": {
+      "imported": 0,
+      "raw_fixtures": 0,
+      "skipped": 0
+    },
+    "2026-05-27.json": {
+      "imported": 0,
+      "raw_fixtures": 0,
+      "skipped": 0
+    },
+    "2026-05-28.json": {
+      "imported": 0,
+      "raw_fixtures": 0,
+      "skipped": 0
+    },
+    "2026-05-29.json": {
+      "imported": 0,
+      "raw_fixtures": 0,
+      "skipped": 0
+    },
+    "2026-05-30.json": {
+      "imported": 0,
+      "raw_fixtures": 0,
+      "skipped": 0
+    },
+    "2026-05-31.json": {
+      "imported": 0,
+      "raw_fixtures": 0,
+      "skipped": 0
+    },
+    "2026-06-01.json": {
+      "imported": 0,
+      "raw_fixtures": 0,
+      "skipped": 0
+    },
+    "2026-06-02.json": {
+      "imported": 0,
+      "raw_fixtures": 0,
+      "skipped": 0
+    },
+    "2026-06-03.json": {
+      "imported": 0,
+      "raw_fixtures": 0,
+      "skipped": 0
+    },
+    "2026-06-04.json": {
+      "imported": 0,
+      "raw_fixtures": 0,
+      "skipped": 0
+    },
+    "2026-06-05.json": {
+      "imported": 0,
+      "raw_fixtures": 0,
+      "skipped": 0
+    },
+    "2026-06-06.json": {
+      "imported": 0,
+      "raw_fixtures": 0,
+      "skipped": 0
+    },
+    "2026-06-07.json": {
+      "imported": 0,
+      "raw_fixtures": 0,
+      "skipped": 0
+    },
+    "2026-06-08.json": {
+      "imported": 0,
+      "raw_fixtures": 0,
+      "skipped": 0
+    },
+    "2026-06-09.json": {
+      "imported": 0,
+      "raw_fixtures": 0,
+      "skipped": 0
+    },
+    "2026-06-10.json": {
+      "imported": 0,
+      "raw_fixtures": 0,
+      "skipped": 0
+    },
+    "2026-06-11.json": {
+      "imported": 0,
+      "raw_fixtures": 0,
+      "skipped": 0
+    },
+    "2026-06-12.json": {
+      "imported": 0,
+      "raw_fixtures": 0,
+      "skipped": 0
+    },
+    "2026-06-13.json": {
+      "imported": 0,
+      "raw_fixtures": 0,
+      "skipped": 0
+    },
+    "2026-06-14.json": {
+      "imported": 0,
+      "raw_fixtures": 0,
+      "skipped": 0
+    },
+    "2026-06-15.json": {
+      "imported": 0,
+      "raw_fixtures": 0,
+      "skipped": 0
+    }
+  },
+  "gender_counts": {},
+  "level_counts": {},
+  "raw_surface_counts": {},
+  "status_counts": {},
+  "surface_counts": {}
+}
