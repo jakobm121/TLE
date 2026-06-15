@@ -24,121 +24,129 @@
   },
   "files": {
     "2026-05-26.json": {
-      "imported": 132,
+      "imported": 219,
       "raw_fixtures": 374,
-      "skipped": 242
+      "skipped": 155
     },
     "2026-05-27.json": {
-      "imported": 314,
+      "imported": 364,
       "raw_fixtures": 512,
-      "skipped": 198
+      "skipped": 148
     },
     "2026-05-28.json": {
-      "imported": 203,
+      "imported": 280,
       "raw_fixtures": 428,
-      "skipped": 225
+      "skipped": 148
     },
     "2026-05-29.json": {
-      "imported": 121,
+      "imported": 156,
       "raw_fixtures": 241,
-      "skipped": 120
+      "skipped": 85
     },
     "2026-05-30.json": {
-      "imported": 74,
+      "imported": 109,
       "raw_fixtures": 169,
-      "skipped": 95
+      "skipped": 60
     },
     "2026-05-31.json": {
-      "imported": 38,
+      "imported": 153,
       "raw_fixtures": 178,
-      "skipped": 140
+      "skipped": 25
     },
     "2026-06-01.json": {
-      "imported": 12,
+      "imported": 114,
       "raw_fixtures": 146,
-      "skipped": 134
+      "skipped": 32
     },
     "2026-06-02.json": {
-      "imported": 141,
+      "imported": 240,
       "raw_fixtures": 386,
-      "skipped": 245
+      "skipped": 146
     },
     "2026-06-03.json": {
-      "imported": 247,
+      "imported": 308,
       "raw_fixtures": 456,
-      "skipped": 209
+      "skipped": 148
     },
     "2026-06-04.json": {
-      "imported": 259,
+      "imported": 328,
       "raw_fixtures": 477,
-      "skipped": 218
+      "skipped": 149
     },
     "2026-06-05.json": {
-      "imported": 159,
+      "imported": 166,
       "raw_fixtures": 257,
-      "skipped": 98
+      "skipped": 91
     },
     "2026-06-06.json": {
-      "imported": 59,
+      "imported": 100,
       "raw_fixtures": 154,
-      "skipped": 95
+      "skipped": 54
     },
     "2026-06-07.json": {
-      "imported": 44,
+      "imported": 139,
       "raw_fixtures": 149,
-      "skipped": 105
+      "skipped": 10
     },
     "2026-06-08.json": {
-      "imported": 19,
+      "imported": 82,
       "raw_fixtures": 101,
-      "skipped": 82
+      "skipped": 19
     },
     "2026-06-09.json": {
-      "imported": 172,
+      "imported": 241,
       "raw_fixtures": 404,
-      "skipped": 232
+      "skipped": 163
     },
     "2026-06-10.json": {
-      "imported": 373,
+      "imported": 423,
       "raw_fixtures": 579,
-      "skipped": 206
+      "skipped": 156
     },
     "2026-06-11.json": {
-      "imported": 275,
+      "imported": 307,
       "raw_fixtures": 495,
-      "skipped": 220
+      "skipped": 188
     },
     "2026-06-12.json": {
-      "imported": 174,
+      "imported": 200,
       "raw_fixtures": 317,
-      "skipped": 143
+      "skipped": 117
     },
     "2026-06-13.json": {
-      "imported": 82,
+      "imported": 144,
       "raw_fixtures": 205,
-      "skipped": 123
+      "skipped": 61
     },
     "2026-06-14.json": {
-      "imported": 71,
+      "imported": 128,
       "raw_fixtures": 143,
-      "skipped": 72
+      "skipped": 15
     },
     "2026-06-15.json": {
-      "imported": 8,
+      "imported": 30,
       "raw_fixtures": 176,
-      "skipped": 168
+      "skipped": 146
     }
   },
   "gender_counts": {
-    "men": 1565,
-    "women": 1412
+    "men": 2387,
+    "women": 1844
   },
   "level_counts": {
+    "atp_wta": 205,
+    "challenger": 709,
+    "grand_slam": 340,
     "itf": 2335,
     "qualifying": 642
   },
   "raw_surface_counts": {
-    "<blank>": 4262
+    "<blank>": 31,
+    "api_tournament_metadata:Clay": 2372,
+    "api_tournament_metadata:Clay (Indoor)": 31,
+    "api_tournament_metadata:Grass": 434,
+    "api_tournament_metadata:Hard": 1363,
+    "api_tournament_metadata:hard": 31
   },
   "status_counts": {
     "<blank>": 114,
@@ -152,6 +160,37 @@
     "Walk Over": 120
   },
   "surface_counts": {
-    "unknown": 2977
+    "clay": 2403,
+    "grass": 434,
+    "hard": 1394
+  },
+  "tournament_surface_map": {
+    "exists": true,
+    "mapped_tournaments": 9986,
+    "missing_key": 0,
+    "path": "data/raw/api_tennis/metadata/get_tournaments.json",
+    "raw_surface_field_counts": {
+      "- Play Offs": 2,
+      "- Preliminary": 5,
+      "- Promotion": 8,
+      "- Qualification": 1,
+      "- Relegation": 1,
+      "<blank>": 44,
+      "Clay": 4309,
+      "Clay (Indoor)": 43,
+      "Grass": 147,
+      "Grass (Indoor)": 2,
+      "Hard": 4831,
+      "Hard (Indoor)": 635,
+      "clay": 6,
+      "hard": 13
+    },
+    "rows": 10047,
+    "surface_counts": {
+      "clay": 4358,
+      "grass": 149,
+      "hard": 5479,
+      "unknown": 61
+    }
   }
 }

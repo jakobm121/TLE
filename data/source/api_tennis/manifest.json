@@ -1,9 +1,12 @@
 {
   "counters": {
-    "gender_men": 1565,
-    "gender_women": 1412,
-    "imported": 2977,
+    "gender_men": 2387,
+    "gender_women": 1844,
+    "imported": 4231,
     "input_fixtures": 6347,
+    "level_atp_wta": 205,
+    "level_challenger": 709,
+    "level_grand_slam": 340,
     "level_itf": 2335,
     "level_qualifying": 642,
     "raw_fixtures": 6347,
@@ -11,11 +14,15 @@
     "skipped_missing_or_unresolved_winner": 26,
     "skipped_not_finished": 157,
     "skipped_unknown_level": 1,
-    "skipped_unknown_surface_not_allowed": 1285,
-    "surface_unknown": 2977
+    "skipped_unknown_surface_not_allowed": 31,
+    "surface_clay": 2403,
+    "surface_grass": 434,
+    "surface_hard": 1394,
+    "tournament_surface_map_entries": 9986,
+    "tournament_surface_map_rows": 10047
   },
-  "generated_at": "2026-06-15T12:38:58+00:00",
-  "matches": 2977,
+  "generated_at": "2026-06-15T13:00:21+00:00",
+  "matches": 4231,
   "outputs": {
     "duplicates_csv": "data/reports/api_tennis/duplicate_api_matches.csv",
     "field_audit": "data/reports/api_tennis/api_field_audit.json",
@@ -25,10 +32,39 @@
   },
   "raw_results_dir": "data/raw/api_tennis/results",
   "source": "api_tennis",
+  "tournaments_metadata": {
+    "exists": true,
+    "mapped_tournaments": 9986,
+    "missing_key": 0,
+    "path": "data/raw/api_tennis/metadata/get_tournaments.json",
+    "raw_surface_field_counts": {
+      "- Play Offs": 2,
+      "- Preliminary": 5,
+      "- Promotion": 8,
+      "- Qualification": 1,
+      "- Relegation": 1,
+      "<blank>": 44,
+      "Clay": 4309,
+      "Clay (Indoor)": 43,
+      "Grass": 147,
+      "Grass (Indoor)": 2,
+      "Hard": 4831,
+      "Hard (Indoor)": 635,
+      "clay": 6,
+      "hard": 13
+    },
+    "rows": 10047,
+    "surface_counts": {
+      "clay": 4358,
+      "grass": 149,
+      "hard": 5479,
+      "unknown": 61
+    }
+  },
   "year_files": [
     {
-      "created_at": "2026-06-15T12:38:58+00:00",
-      "matches": 2977,
+      "created_at": "2026-06-15T13:00:21+00:00",
+      "matches": 4231,
       "path": "data/source/api_tennis/tle_api_matches_2026.jsonl.gz",
       "year": 2026
     }
