@@ -480,6 +480,7 @@ api_tennis:12132719,2026-06-03,women,challenger,clay,Foggia (Italy),women:api:14
 api_tennis:12132720,2026-06-03,women,challenger,clay,Foggia (Italy),women:api:5151,L. Mair,auto_mapped,women:sackmann:220827,women:api:53147,Y. Dang,auto_mapped,women:sackmann:222330,both_mapped
 api_tennis:12132751,2026-06-03,men,challenger,grass,Birmingham,men:api:1096,K. Majchrzak,auto_mapped,men:sackmann:111794,men:api:1882,J. McCabe,auto_mapped,men:sackmann:210317,both_mapped
 api_tennis:12132752,2026-06-03,men,challenger,grass,Birmingham,men:api:767,O. Virtanen,auto_mapped,men:sackmann:202261,men:api:590,Z. Zhang,manual_mapped,men:sackmann:111190,both_mapped
+api_tennis:12132753,2026-06-03,men,challenger,grass,Birmingham,men:api:1082,E. Ymer,auto_mapped,men:sackmann:111200,men:api:421,C. O'Connell,manual_mapped,men:sackmann:106331,both_mapped
 api_tennis:12132909,2026-06-03,women,challenger,clay,Foggia (Italy),women:api:1426,T. Pieri,auto_mapped,women:sackmann:214301,women:api:9248,S. Costoulas,auto_mapped,women:sackmann:223321,both_mapped
 api_tennis:12132911,2026-06-03,women,challenger,clay,Makarska,women:api:1117,A. Lazaro Garcia,auto_mapped,women:sackmann:210622,women:api:2815,L. Samson,auto_mapped,women:sackmann:266671,both_mapped
 api_tennis:12132913,2026-06-03,women,challenger,clay,Makarska,women:api:2280,B. Palicova,auto_mapped,women:sackmann:223323,women:api:2575,L. Ciric Bagaric,auto_mapped,women:sackmann:239156,both_mapped
@@ -3560,7 +3561,6 @@ api_tennis:12136877,2026-06-15,men,qualifying,grass,Dublin (Ireland) - Qualifica
 api_tennis:12136878,2026-06-15,men,qualifying,grass,Dublin (Ireland) - Qualification,men:api:5778,Q. Vandecasteele,auto_mapped,men:sackmann:209088,men:api:76018,C. Hewitt,auto_mapped,men:sackmann:213178,both_mapped
 api_tennis:12132297,2026-05-31,men,challenger,clay,Prostejov,men:api:2481,A. Ayeni,unmapped,,men:api:2516,J. Nicod,ambiguous,,none_mapped
 api_tennis:12133343,2026-06-04,men,challenger,clay,Heilbronn,men:api:55858,D. Dedura,unmapped,,men:api:2408,J. Reis Da Silva,ambiguous,,none_mapped
-api_tennis:12134460,2026-06-10,men,challenger,grass,Ilkley,men:api:66839,Dar. Blanch,ambiguous,,men:api:421,C. O'Connell,unmapped,,none_mapped
 api_tennis:12131720,2026-05-28,men,grand_slam,clay,French Open,men:api:101032,S. Azam,unmapped,,men:api:102989,E. Giurescu,unmapped,,none_mapped
 api_tennis:12131721,2026-05-28,men,grand_slam,clay,French Open,men:api:102991,C. Thies,unmapped,,men:api:102990,A. Dubreuil,unmapped,,none_mapped
 api_tennis:12131735,2026-05-28,women,grand_slam,clay,French Open,women:api:102994,M. V. Pop,unmapped,,women:api:89210,R. Yoshida,ambiguous,,none_mapped
@@ -3647,7 +3647,6 @@ api_tennis:12132709,2026-06-02,men,challenger,clay,Prostejov,men:api:1083,V. Kop
 api_tennis:12132760,2026-06-02,men,challenger,clay,Heilbronn,men:api:55858,D. Dedura,unmapped,,men:api:9110,M. Wiskandt,auto_mapped,men:sackmann:208328,one_mapped
 api_tennis:12132440,2026-06-03,men,challenger,hard,Tyler,men:api:1056,A. Martin,ambiguous,,men:api:7890,B. Ellis,auto_mapped,men:sackmann:134329,one_mapped
 api_tennis:12132444,2026-06-03,men,challenger,hard,Tyler,men:api:10070,A. Walton,auto_mapped,men:sackmann:200443,men:api:1062,Wu Tung-Lin,unmapped,,one_mapped
-api_tennis:12132753,2026-06-03,men,challenger,grass,Birmingham,men:api:1082,E. Ymer,auto_mapped,men:sackmann:111200,men:api:421,C. O'Connell,unmapped,,one_mapped
 api_tennis:12132908,2026-06-03,men,challenger,clay,Heilbronn,men:api:567,E. Nava,ambiguous,,men:api:833,M. Topo,auto_mapped,men:sackmann:209916,one_mapped
 api_tennis:12133233,2026-06-04,men,challenger,grass,Birmingham,men:api:796,Y. Bu,unmapped,,men:api:1186,B. Harris,auto_mapped,men:sackmann:126129,one_mapped
 api_tennis:12133710,2026-06-05,men,challenger,hard,Tyler,men:api:10070,A. Walton,auto_mapped,men:sackmann:200443,men:api:1056,A. Martin,ambiguous,,one_mapped
@@ -3673,6 +3672,7 @@ api_tennis:12134663,2026-06-09,men,challenger,clay,Lyon,men:api:1314,D. Blanch,a
 api_tennis:12134695,2026-06-09,women,challenger,grass,Ilkley,women:api:10911,C. Naef,auto_mapped,women:sackmann:232447,women:api:14547,A. Korneeva,ambiguous,,one_mapped
 api_tennis:12134764,2026-06-09,men,challenger,clay,Bratislava,men:api:1056,A. Martin,ambiguous,,men:api:4077,T. Pereira,auto_mapped,men:sackmann:211500,one_mapped
 api_tennis:12134398,2026-06-10,men,challenger,clay,Bratislava,men:api:2408,J. Reis Da Silva,ambiguous,,men:api:9159,A. Donski,auto_mapped,men:sackmann:200574,one_mapped
+api_tennis:12134460,2026-06-10,men,challenger,grass,Ilkley,men:api:66839,Dar. Blanch,ambiguous,,men:api:421,C. O'Connell,manual_mapped,men:sackmann:106331,one_mapped
 api_tennis:12134462,2026-06-10,men,challenger,grass,Ilkley,men:api:796,Y. Bu,unmapped,,men:api:5980,C. Rodesch,auto_mapped,men:sackmann:208210,one_mapped
 api_tennis:12134473,2026-06-10,women,challenger,grass,Ilkley,women:api:507,D. Galfi,auto_mapped,women:sackmann:213646,women:api:10924,E. Jones,ambiguous,,one_mapped
 api_tennis:12135233,2026-06-10,men,challenger,clay,Bratislava,men:api:38921,P. Brunclik,auto_mapped,men:sackmann:210557,men:api:1056,A. Martin,ambiguous,,one_mapped

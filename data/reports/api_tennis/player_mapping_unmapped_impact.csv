@@ -112,7 +112,6 @@ men:api:2838,B. Nakashima,men,ambiguous,2,"{""grand_slam"": 2}","{""clay"": 2}",
 men:api:76298,B. Seleznev,men,unmapped,2,"{""itf"": 2}","{""hard"": 2}","{""M15 Kayseri 3"": 1, ""M15 Kayseri 4"": 1}"
 men:api:13283,C. Bittoun,men,unmapped,2,"{""qualifying"": 2}","{""hard"": 2}","{""Centurion (South Africa) - Qualification"": 1, ""Centurion 2 (South Africa) - Qualification"": 1}"
 men:api:10849,C. H. van Schalkwyk,men,ambiguous,2,"{""qualifying"": 2}","{""hard"": 2}","{""Centurion (South Africa) - Qualification"": 1, ""Centurion 2 (South Africa) - Qualification"": 1}"
-men:api:421,C. O'Connell,men,unmapped,2,"{""challenger"": 2}","{""grass"": 2}","{""Birmingham"": 1, ""Ilkley"": 1}"
 women:api:33851,Cam. Markus,women,ambiguous,2,"{""itf"": 2}","{""clay"": 1, ""hard"": 1}","{""W15 Brasilia (Brazil)"": 1, ""W35 Cuiaba"": 1}"
 men:api:83534,Cho Seung Woo,men,unmapped,2,"{""itf"": 2}","{""hard"": 2}","{""M15 Gimcheon 2"": 2}"
 women:api:10924,E. Jones,women,ambiguous,2,"{""challenger"": 2}","{""grass"": 2}","{""Birmingham"": 1, ""Ilkley"": 1}"
