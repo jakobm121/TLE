@@ -1,0 +1,82 @@
+name: TLE 05 Sackmann Core Full
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 5 * * 1"
+
+permissions:
+  contents: write
+
+jobs:
+  sackmann-core-full:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Fetch Sackmann CSV files
+        env:
+          PYTHONPATH: ${{ github.workspace }}
+        run: |
+          python -m tle_machine.fetch_sackmann_data
+
+      - name: Import Sackmann history
+        env:
+          PYTHONPATH: ${{ github.workspace }}
+        run: |
+          python -m tle_machine.import_sackmann_history
+
+      - name: Merge canonical database
+        env:
+          PYTHONPATH: ${{ github.workspace }}
+        run: |
+          python -m tle_machine.merge_canonical
+
+      - name: Build TLE ratings
+        env:
+          PYTHONPATH: ${{ github.workspace }}
+        run: |
+          python -m tle_machine.build_ratings
+
+      - name: Show final reports
+        run: |
+          echo "=== Sackmann source manifest ==="
+          cat data/source/sackmann/manifest.json || true
+
+          echo "=== Canonical manifest ==="
+          cat data/canonical/manifest.json || true
+
+          echo "=== Rating build report ==="
+          cat data/reports/ratings/rating_build_report.json || true
+
+          echo "=== Ratings manifest ==="
+          cat data/ratings/manifest.json || true
+
+      - name: Commit Sackmann core outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/raw/sackmann
+          git add data/source/sackmann
+          git add data/canonical
+          git add data/ratings
+          git add data/reports
+
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+
+          git commit -m "Run Sackmann core refresh"
+          git push
