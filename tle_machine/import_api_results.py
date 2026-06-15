@@ -20,6 +20,8 @@ IMPORT_REPORT_JSON = REPORT_DIR / "import_api_results_report.json"
 SKIPPED_CSV = REPORT_DIR / "skipped_api_matches.csv"
 FIELD_AUDIT_JSON = REPORT_DIR / "api_field_audit.json"
 DUPLICATES_CSV = REPORT_DIR / "duplicate_api_matches.csv"
+RAW_METADATA_DIR = Path("data/raw/api_tennis/metadata")
+TOURNAMENTS_METADATA_JSON = RAW_METADATA_DIR / "get_tournaments.json"
 
 SURFACES = {"hard", "clay", "grass", "carpet"}
 
@@ -256,40 +258,104 @@ def infer_gender(fixture: dict[str, Any]) -> str:
     return "unknown"
 
 
-def normalize_surface(fixture: dict[str, Any]) -> tuple[str, str]:
+def normalize_surface_value(raw: Any) -> str:
+    text = lower_text(raw)
+    if "hard" in text:
+        return "hard"
+    if "clay" in text:
+        return "clay"
+    if "grass" in text:
+        return "grass"
+    if "carpet" in text:
+        return "carpet"
+    return "unknown"
+
+
+def load_tournament_surface_map(path: Path = TOURNAMENTS_METADATA_JSON) -> tuple[dict[str, dict[str, str]], dict[str, Any]]:
+    report = {
+        "path": str(path),
+        "exists": path.exists(),
+        "rows": 0,
+        "mapped_tournaments": 0,
+        "surface_counts": Counter(),
+        "raw_surface_field_counts": Counter(),
+        "missing_key": 0,
+    }
+    surface_map: dict[str, dict[str, str]] = {}
+    if not path.exists():
+        return surface_map, report
+
+    try:
+        payload = load_json(path)
+        rows = extract_fixtures(payload)
+    except Exception as exc:
+        report["error"] = str(exc)
+        return surface_map, report
+
+    report["rows"] = len(rows)
+    for row in rows:
+        key = get_first(row, ("tournament_key", "league_key", "id"))
+        if not key:
+            report["missing_key"] += 1
+            continue
+
+        raw_surface = get_first(
+            row,
+            (
+                "tournament_sourface",  # API-Tennis typo, confirmed by live inspect.
+                "tournament_surface",
+                "surface",
+                "court_surface",
+                "court_type",
+            ),
+        )
+        surface = normalize_surface_value(raw_surface)
+        report["raw_surface_field_counts"][raw_surface or "<blank>"] += 1
+        report["surface_counts"][surface] += 1
+
+        if surface != "unknown":
+            surface_map[str(key)] = {
+                "surface": surface,
+                "raw_surface": raw_surface,
+                "tournament_name": get_first(row, ("tournament_name", "league_name")),
+                "event_type_type": get_first(row, ("event_type_type", "event_type")),
+            }
+
+    report["mapped_tournaments"] = len(surface_map)
+    return surface_map, report
+
+
+def normalize_surface(fixture: dict[str, Any], tournament_surface_map: dict[str, dict[str, str]] | None = None) -> tuple[str, str]:
     raw = get_first(
         fixture,
         (
             "event_surface",
             "surface",
             "tournament_surface",
+            "tournament_sourface",
             "league_surface",
             "court_surface",
+            "court_type",
         ),
     )
-    text = lower_text(raw)
 
-    if "hard" in text:
-        return "hard", raw
-    if "clay" in text:
-        return "clay", raw
-    if "grass" in text:
-        return "grass", raw
-    if "carpet" in text:
-        return "carpet", raw
+    surface = normalize_surface_value(raw)
+    if surface != "unknown":
+        return surface, raw
+
+    tournament_key = get_first(fixture, ("tournament_key", "league_key"))
+    if tournament_surface_map and tournament_key:
+        meta = tournament_surface_map.get(str(tournament_key))
+        if meta and meta.get("surface") in SURFACES:
+            return meta["surface"], f"api_tournament_metadata:{meta.get('raw_surface', '')}"
 
     joined = " | ".join(
         lower_text(fixture.get(k))
         for k in ("league_name", "tournament_name", "event_name")
     )
-    if "clay" in joined:
-        return "clay", raw
-    if "grass" in joined:
-        return "grass", raw
-    if "carpet" in joined:
-        return "carpet", raw
-    if "hard" in joined:
-        return "hard", raw
+    guessed = normalize_surface_value(joined)
+    if guessed != "unknown":
+        return guessed, f"name_guess:{joined[:120]}"
 
     return "unknown", raw
 
@@ -494,11 +560,16 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--source-dir", type=Path, default=SOURCE_API_DIR)
     parser.add_argument("--start-date", default="")
     parser.add_argument("--end-date", default="")
+    parser.add_argument("--tournaments-metadata", type=Path, default=TOURNAMENTS_METADATA_JSON)
     args = parser.parse_args(argv)
 
     ensure_dirs(args.source_dir, REPORT_DIR)
 
+    tournament_surface_map, tournament_surface_map_report = load_tournament_surface_map(args.tournaments_metadata)
+
     counters = Counter()
+    counters["tournament_surface_map_rows"] = tournament_surface_map_report.get("rows", 0)
+    counters["tournament_surface_map_entries"] = len(tournament_surface_map)
     skipped_rows: list[dict[str, Any]] = []
     duplicate_rows: list[dict[str, Any]] = []
     by_year: dict[int, list[dict[str, Any]]] = defaultdict(list)
@@ -577,7 +648,7 @@ def main(argv: list[str] | None = None) -> None:
                 field_audit["files"][path.name]["skipped"] += 1
                 continue
 
-            surface, surface_raw = normalize_surface(fixture)
+            surface, surface_raw = normalize_surface(fixture, tournament_surface_map)
             field_audit["raw_surface_counts"][surface_raw or "<blank>"] += 1
             if surface == "unknown" and level not in {"itf", "qualifying"}:
                 skip_row(skipped_rows, counters, path.name, raw_index, fixture, "unknown_surface_not_allowed", date=date, gender=gender, level=level, surface=surface, surface_raw=surface_raw, winner_side=winner_side, winner_name=winner_name, loser_name=loser_name)
@@ -641,6 +712,7 @@ def main(argv: list[str] | None = None) -> None:
         "generated_at": now_utc_iso(),
         "source": "api_tennis",
         "raw_results_dir": str(args.raw_dir),
+        "tournaments_metadata": tournament_surface_map_report,
         "matches": counters["imported"],
         "year_files": year_files,
         "counters": dict(counters),
@@ -653,6 +725,7 @@ def main(argv: list[str] | None = None) -> None:
         },
     }
 
+    field_audit["tournament_surface_map"] = tournament_surface_map_report
     serial_field_audit = json.loads(json.dumps(field_audit, default=dict))
     write_json(MANIFEST_JSON, manifest)
     write_json(IMPORT_REPORT_JSON, manifest)
