@@ -1,0 +1,45 @@
+name: TLE 07b Inspect API Surface Endpoints
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  inspect-api-surface-endpoints:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Inspect API surface endpoints
+        env:
+          API_TENNIS_KEY: ${{ secrets.API_TENNIS_KEY }}
+        run: |
+          python -m tle_machine.inspect_api_surface_endpoints --sample-matches 15
+
+      - name: Commit API surface inspect reports
+        if: always()
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/raw/api_tennis/metadata/get_events.json || true
+          git add data/raw/api_tennis/metadata/get_tournaments.json || true
+          git add data/raw/api_tennis/metadata/get_fixtures_match_key_samples.json || true
+          git add data/reports/api_tennis/api_surface_endpoint_inspect.json || true
+          git add data/reports/api_tennis/api_surface_endpoint_field_values.csv || true
+
+          if git diff --cached --quiet; then
+            echo "No API surface inspect changes to commit."
+          else
+            git commit -m "Inspect API surface endpoints"
+            git push
+          fi
