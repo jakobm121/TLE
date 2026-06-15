@@ -1,0 +1,40 @@
+name: TLE 10d Search Today Unmapped Sackmann Candidates
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  search-today-unmapped-candidates:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Search Sackmann candidates for today unmapped players
+        run: |
+          python -m tle_machine.search_today_unmapped_sackmann_candidates
+
+      - name: Commit candidate search report
+        if: always()
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/reports/api_tennis/today_mapping_sackmann_candidate_search.csv || true
+          git add data/reports/api_tennis/today_mapping_sackmann_candidate_search.json || true
+
+          if git diff --cached --quiet; then
+            echo "No candidate search changes to commit."
+          else
+            git commit -m "Search Sackmann candidates for today unmapped API players"
+            git push
+          fi
