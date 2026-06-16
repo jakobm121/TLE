@@ -1,0 +1,67 @@
+name: TLE 06b Fetch API Player Details
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: "Optional start date YYYY-MM-DD"
+        required: false
+        default: ""
+      end_date:
+        description: "Optional end date YYYY-MM-DD"
+        required: false
+        default: ""
+      refresh_existing:
+        description: "Refetch existing cached players"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-api-player-details:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch API player details
+        env:
+          API_TENNIS_KEY: ${{ secrets.API_TENNIS_KEY }}
+        run: |
+          ARGS=""
+          if [ -n "${{ github.event.inputs.start_date }}" ]; then
+            ARGS="$ARGS --start-date ${{ github.event.inputs.start_date }}"
+          fi
+          if [ -n "${{ github.event.inputs.end_date }}" ]; then
+            ARGS="$ARGS --end-date ${{ github.event.inputs.end_date }}"
+          fi
+          if [ "${{ github.event.inputs.refresh_existing }}" = "true" ]; then
+            ARGS="$ARGS --refresh-existing"
+          fi
+
+          python -m tle_machine.fetch_api_player_details $ARGS
+
+      - name: Commit API player details
+        if: always()
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/raw/api_tennis/players/api_players.json || true
+          git add data/reports/api_tennis/fetch_api_player_details_report.json || true
+          git add data/reports/api_tennis/fetch_api_player_details_raw_responses.json || true
+
+          if git diff --cached --quiet; then
+            echo "No API player details changes to commit."
+          else
+            git commit -m "Fetch API player details"
+            git push
+          fi
