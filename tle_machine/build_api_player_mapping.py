@@ -11,7 +11,7 @@ from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 from difflib import SequenceMatcher
 from pathlib import Path
-from typing import Any
+from typing import Any, Iterable
 
 try:
     from .utils import now_utc_iso, write_json
@@ -26,6 +26,7 @@ except Exception:
 
 
 API_SOURCE_DIR = Path("data/source/api_tennis")
+API_RAW_ROOT = Path("data/raw/api_tennis")
 API_PLAYER_CACHE_JSON = Path("data/raw/api_tennis/players/api_players.json")
 
 RATINGS_JSON = Path("data/ratings/tle_player_ratings.json")
@@ -103,11 +104,13 @@ def read_json_safe(path: Path, default: Any) -> Any:
         return default
 
 
-def read_jsonl_gz(path: Path):
+def read_jsonl_gz(path: Path) -> Iterable[dict[str, Any]]:
     with gzip.open(path, "rt", encoding="utf-8") as f:
         for line in f:
             if line.strip():
-                yield json.loads(line)
+                obj = json.loads(line)
+                if isinstance(obj, dict):
+                    yield obj
 
 
 def write_csv(path: Path, rows: list[dict[str, Any]], fieldnames: list[str]) -> None:
@@ -121,6 +124,28 @@ def write_csv(path: Path, rows: list[dict[str, Any]], fieldnames: list[str]) -> 
 
 def norm_text(value: Any) -> str:
     return str(value or "").strip()
+
+
+def get_any(d: dict[str, Any], keys: Iterable[str]) -> Any:
+    for key in keys:
+        value = d.get(key)
+        if value is not None and str(value).strip() != "":
+            return value
+    return None
+
+
+def unwrap_api_result(obj: Any) -> list[Any]:
+    if isinstance(obj, dict):
+        if isinstance(obj.get("result"), list):
+            return obj["result"]
+        response = obj.get("response")
+        if isinstance(response, dict) and isinstance(response.get("result"), list):
+            return response["result"]
+        if isinstance(obj.get("data"), list):
+            return obj["data"]
+    if isinstance(obj, list):
+        return obj
+    return []
 
 
 def strip_accents(s: str) -> str:
@@ -167,34 +192,56 @@ def initials_from_tokens(ts: list[str]) -> str:
     return "".join(t[0] for t in ts if t)
 
 
-def last_token_from_norm(norm: str) -> str:
-    ts = tokens_from_norm(norm)
-    return ts[-1] if ts else ""
-
-
-def last_token(s: str) -> str:
-    return last_token_from_norm(normalize_name(s))
-
-
-def surname_tokens(s: str) -> list[str]:
-    return surname_tokens_from_tokens(tokens(s))
-
-
-def initials(s: str) -> str:
-    return initials_from_tokens(tokens(s))
-
-
-def compact_initial_form(s: str) -> str:
-    return compact_initial_from_tokens(tokens(s))
-
-
 def looks_like_doubles_or_team(name: str) -> bool:
     if "/" in (name or ""):
+        return True
+    if " & " in (name or "").lower():
         return True
     ts = tokens(name)
     if len(ts) <= 2 and any(t in COUNTRY_WORDS for t in ts):
         return True
     return False
+
+
+def is_non_singles_raw(fx: dict[str, Any], fname: str = "", sname: str = "") -> bool:
+    etype = str(get_any(fx, ("event_type_type", "event_type", "type", "category_name")) or "").lower()
+    tourn = str(get_any(fx, ("tournament_name", "event_name", "league_name", "tournament", "league")) or "").lower()
+    names = f"{fname} {sname}".lower()
+
+    if "double" in etype or "doubles" in etype:
+        return True
+    if "team" in etype or "teams" in etype:
+        return True
+    if "davis cup" in tourn or "billie jean" in tourn or "bjk cup" in tourn or "fed cup" in tourn:
+        return True
+    if "/" in names or " & " in names:
+        return True
+
+    return False
+
+
+def normalize_gender(raw: Any) -> str:
+    s = str(raw or "").lower()
+    if "women" in s or "wta" in s or "female" in s or "girls" in s:
+        return "women"
+    if "men" in s or "atp" in s or "male" in s or "boys" in s or "challenger" in s:
+        return "men"
+    return ""
+
+
+def infer_raw_gender(fx: dict[str, Any]) -> str:
+    text = " | ".join(
+        str(get_any(fx, (key,)) or "")
+        for key in (
+            "event_type_type",
+            "event_type",
+            "league_name",
+            "tournament_name",
+            "event_name",
+            "category_name",
+        )
+    )
+    return normalize_gender(text)
 
 
 def ratio_norm(a: str, b: str) -> float:
@@ -241,6 +288,7 @@ class ApiPlayer:
     opponents: Counter
     tournaments: Counter
     name_sources: Counter = field(default_factory=Counter)
+    data_sources: Counter = field(default_factory=Counter)
 
     @property
     def name(self) -> str:
@@ -372,12 +420,74 @@ def extract_player(match: dict[str, Any], side: str) -> tuple[str, str] | None:
     return str(key), str(name)
 
 
-def load_api_players(
+def upsert_api_player(
+    api_players: dict[str, ApiPlayer],
+    counters: Counter,
+    *,
+    gender: str,
+    raw_key: str,
+    raw_name: str,
+    opponent_name: str = "",
+    level: str = "unknown",
+    surface: str = "unknown",
+    tournament: str = "",
+    data_source: str,
+    api_player_cache: dict[str, dict[str, Any]],
+) -> None:
+    if gender not in {"men", "women"}:
+        counters["skipped_unknown_gender"] += 1
+        return
+
+    if not raw_key or not raw_name:
+        counters["skipped_missing_key_or_name"] += 1
+        return
+
+    if looks_like_doubles_or_team(raw_name):
+        counters["skipped_doubles_or_team_player_name"] += 1
+        return
+
+    bare = canonical_bare_api_key(raw_key)
+    canonical_api_key = f"{gender}:api:{bare}" if bare else str(raw_key)
+
+    name, name_source = cached_api_player_name(api_player_cache, canonical_api_key, raw_name)
+    opp_name, _ = cached_api_player_name(api_player_cache, opponent_name, opponent_name)
+
+    if name_source == "api_cache_full_name":
+        counters["api_player_cache_full_name_used"] += 1
+    elif name_source == "api_cache_short_name":
+        counters["api_player_cache_short_name_used"] += 1
+
+    if name != raw_name:
+        counters["api_player_cache_name_changed"] += 1
+
+    if canonical_api_key not in api_players:
+        api_players[canonical_api_key] = ApiPlayer(
+            key=canonical_api_key,
+            gender=gender,
+            names=Counter(),
+            matches=0,
+            levels=Counter(),
+            surfaces=Counter(),
+            opponents=Counter(),
+            tournaments=Counter(),
+        )
+
+    ap = api_players[canonical_api_key]
+    ap.names[name] += 1
+    ap.matches += 1
+    ap.levels[level] += 1
+    ap.surfaces[surface] += 1
+    ap.opponents[opp_name or opponent_name] += 1
+    ap.tournaments[tournament] += 1
+    ap.name_sources[name_source] += 1
+    ap.data_sources[data_source] += 1
+
+
+def load_api_players_from_source(
+    api_players: dict[str, ApiPlayer],
     api_player_cache: dict[str, dict[str, Any]],
     counters: Counter,
-) -> dict[str, ApiPlayer]:
-    api_players: dict[str, ApiPlayer] = {}
-
+) -> None:
     for path in sorted(API_SOURCE_DIR.glob("tle_api_matches_*.jsonl.gz")):
         for m in read_jsonl_gz(path):
             gender = m.get("gender") or ""
@@ -387,47 +497,143 @@ def load_api_players(
 
             w = extract_player(m, "winner")
             l = extract_player(m, "loser")
-            if not w or not l or gender not in {"men", "women"}:
+            if not w or not l:
                 continue
 
-            for (key, raw_name), (_opp_key, raw_opp_name) in ((w, l), (l, w)):
-                if looks_like_doubles_or_team(raw_name):
-                    continue
+            upsert_api_player(
+                api_players,
+                counters,
+                gender=gender,
+                raw_key=w[0],
+                raw_name=w[1],
+                opponent_name=l[1],
+                level=level,
+                surface=surface,
+                tournament=tournament,
+                data_source="api_source",
+                api_player_cache=api_player_cache,
+            )
+            upsert_api_player(
+                api_players,
+                counters,
+                gender=gender,
+                raw_key=l[0],
+                raw_name=l[1],
+                opponent_name=w[1],
+                level=level,
+                surface=surface,
+                tournament=tournament,
+                data_source="api_source",
+                api_player_cache=api_player_cache,
+            )
 
-                bare = canonical_bare_api_key(key)
-                canonical_api_key = f"{gender}:api:{bare}" if bare else str(key)
 
-                name, name_source = cached_api_player_name(api_player_cache, canonical_api_key, raw_name)
-                opp_name, _opp_name_source = cached_api_player_name(api_player_cache, _opp_key, raw_opp_name)
+def raw_player_from_fixture(fx: dict[str, Any], side: str) -> tuple[str, str]:
+    if side == "first":
+        key = get_any(fx, ("first_player_key", "event_first_player_key", "player_key", "home_player_key", "home_team_key"))
+        name = get_any(fx, ("event_first_player", "first_player", "first_player_name", "player_name", "event_home_team", "home_player", "home_team"))
+    else:
+        key = get_any(fx, ("second_player_key", "event_second_player_key", "away_player_key", "away_team_key"))
+        name = get_any(fx, ("event_second_player", "second_player", "second_player_name", "event_away_team", "away_player", "away_team"))
+    return norm_text(key), norm_text(name)
 
-                if name_source == "api_cache_full_name":
-                    counters["api_player_cache_full_name_used"] += 1
-                elif name_source == "api_cache_short_name":
-                    counters["api_player_cache_short_name_used"] += 1
 
-                if name != raw_name:
-                    counters["api_player_cache_name_changed"] += 1
+def raw_files(root: Path) -> list[Path]:
+    candidates: list[Path] = []
 
-                if canonical_api_key not in api_players:
-                    api_players[canonical_api_key] = ApiPlayer(
-                        key=canonical_api_key,
-                        gender=gender,
-                        names=Counter(),
-                        matches=0,
-                        levels=Counter(),
-                        surfaces=Counter(),
-                        opponents=Counter(),
-                        tournaments=Counter(),
-                    )
+    for subdir in ("odds", "fixtures", "results"):
+        d = root / subdir
+        if d.exists():
+            candidates.extend(sorted(d.glob("*.json")))
 
-                ap = api_players[canonical_api_key]
-                ap.names[name] += 1
-                ap.matches += 1
-                ap.levels[level] += 1
-                ap.surfaces[surface] += 1
-                ap.opponents[opp_name] += 1
-                ap.tournaments[tournament] += 1
-                ap.name_sources[name_source] += 1
+    candidates.extend(sorted(root.glob("odds_*.json")))
+    candidates.extend(sorted(root.glob("fixtures_*.json")))
+    candidates.extend(sorted(root.glob("*.json")))
+
+    # Keep only real raw payload files. Exclude player cache/metadata/report-like files.
+    out: list[Path] = []
+    seen: set[Path] = set()
+    for path in candidates:
+        if path in seen:
+            continue
+        seen.add(path)
+        parts = set(path.parts)
+        if "players" in parts or "metadata" in parts:
+            continue
+        out.append(path)
+
+    return out
+
+
+def load_api_players_from_raw(
+    api_players: dict[str, ApiPlayer],
+    api_player_cache: dict[str, dict[str, Any]],
+    counters: Counter,
+    raw_root: Path = API_RAW_ROOT,
+) -> None:
+    for path in raw_files(raw_root):
+        payload = read_json_safe(path, {})
+        rows = unwrap_api_result(payload)
+        counters["raw_mapping_files_seen"] += 1
+        counters["raw_mapping_rows_seen"] += len(rows)
+
+        for fx in rows:
+            if not isinstance(fx, dict):
+                continue
+
+            fkey, fname = raw_player_from_fixture(fx, "first")
+            skey, sname = raw_player_from_fixture(fx, "second")
+
+            if is_non_singles_raw(fx, fname, sname):
+                counters["raw_mapping_skipped_non_singles"] += 1
+                continue
+
+            gender = infer_raw_gender(fx)
+            level = str(get_any(fx, ("event_type_type", "event_type", "type", "category_name")) or "raw")
+            tournament = str(get_any(fx, ("tournament_name", "event_name", "league_name", "tournament", "league")) or "")
+            surface = str(get_any(fx, ("event_surface", "surface", "tournament_surface", "league_surface")) or "unknown")
+
+            upsert_api_player(
+                api_players,
+                counters,
+                gender=gender,
+                raw_key=fkey,
+                raw_name=fname,
+                opponent_name=sname,
+                level=level,
+                surface=surface,
+                tournament=tournament,
+                data_source="api_raw",
+                api_player_cache=api_player_cache,
+            )
+            upsert_api_player(
+                api_players,
+                counters,
+                gender=gender,
+                raw_key=skey,
+                raw_name=sname,
+                opponent_name=fname,
+                level=level,
+                surface=surface,
+                tournament=tournament,
+                data_source="api_raw",
+                api_player_cache=api_player_cache,
+            )
+
+
+def load_api_players(
+    api_player_cache: dict[str, dict[str, Any]],
+    counters: Counter,
+    include_raw: bool,
+    raw_root: Path,
+) -> dict[str, ApiPlayer]:
+    api_players: dict[str, ApiPlayer] = {}
+    load_api_players_from_source(api_players, api_player_cache, counters)
+    counters["api_players_after_source"] = len(api_players)
+
+    if include_raw:
+        load_api_players_from_raw(api_players, api_player_cache, counters, raw_root)
+        counters["api_players_after_raw"] = len(api_players)
 
     return api_players
 
@@ -531,7 +737,6 @@ def candidate_pool_fast(api_player: ApiPlayer, idx: SackIndex) -> list[SackPlaye
         for sp in items:
             pool_by_key[sp.key] = sp
 
-    # Strong, cheap candidate sets first.
     if feat["norm"]:
         add_many(idx.by_norm.get((gender, feat["norm"]), []))
     if feat["compact"]:
@@ -541,7 +746,6 @@ def candidate_pool_fast(api_player: ApiPlayer, idx: SackIndex) -> list[SackPlaye
     if feat["last"]:
         add_many(idx.by_last.get((gender, feat["last"]), []))
 
-    # If still too few candidates, use same initial but cheaply pre-filter by token overlap / short ratio.
     if len(pool_by_key) < 4 and feat["initial"]:
         an = feat["norm"]
         api_token_set = set(feat["tokens"])
@@ -551,7 +755,6 @@ def candidate_pool_fast(api_player: ApiPlayer, idx: SackIndex) -> list[SackPlaye
             if api_token_set & set(sp.toks) or ratio_norm(an, sp.norm) >= 0.55:
                 pool_by_key[sp.key] = sp
 
-    # Rare fallback for transliteration / API typo.
     if not pool_by_key:
         scored: list[tuple[float, SackPlayer]] = []
         for sp in idx.by_gender.get(gender, []):
@@ -572,7 +775,7 @@ def find_override(api_key: str, gender: str, overrides: dict[str, str | None]) -
     return False, None, None
 
 
-def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON) -> None:
+def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_raw: bool = True, raw_root: Path = API_RAW_ROOT) -> None:
     METADATA_DIR.mkdir(parents=True, exist_ok=True)
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -580,7 +783,7 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON) -> None:
 
     sack_players = load_sack_players()
     api_player_cache, api_player_cache_report = load_api_player_cache(api_player_cache_path)
-    api_players = load_api_players(api_player_cache, counters)
+    api_players = load_api_players(api_player_cache, counters, include_raw, raw_root)
     overrides = load_overrides()
     sack_index = build_sack_index(sack_players)
 
@@ -626,6 +829,7 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON) -> None:
                 "api_matches": ap.matches,
                 "api_name_variants": dict(ap.names.most_common(10)),
                 "api_name_sources": dict(ap.name_sources),
+                "api_data_sources": dict(ap.data_sources),
             }
             counters[status] += 1
             if target:
@@ -704,6 +908,7 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON) -> None:
             "api_matches": ap.matches,
             "api_name_variants": dict(ap.names.most_common(10)),
             "api_name_sources": dict(ap.name_sources),
+            "api_data_sources": dict(ap.data_sources),
             "api_levels": dict(ap.levels),
             "api_surfaces": dict(ap.surfaces),
         }
@@ -727,6 +932,7 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON) -> None:
                     "best_sackmann_name": best.name if best else "",
                     "second_score_margin": "" if margin is None else round(margin, 6),
                     "api_name_sources": json.dumps(dict(ap.name_sources), ensure_ascii=False, sort_keys=True),
+                    "api_data_sources": json.dumps(dict(ap.data_sources), ensure_ascii=False, sort_keys=True),
                     "api_levels": json.dumps(dict(ap.levels), ensure_ascii=False, sort_keys=True),
                     "api_surfaces": json.dumps(dict(ap.surfaces), ensure_ascii=False, sort_keys=True),
                 }
@@ -753,7 +959,8 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON) -> None:
         "manual_overrides": str(OVERRIDES_JSON),
         "principle": "Accept only high-confidence or unique initial-surname matches; ambiguous candidates are sent to review.",
         "performance_note": "Fast version uses indexed candidate pools by gender/name/surname/initial; acceptance thresholds are unchanged.",
-        "name_enrichment": "API source names are enriched from data/raw/api_tennis/players/api_players.json before matching.",
+        "name_enrichment": "API names are enriched from data/raw/api_tennis/players/api_players.json before matching.",
+        "raw_player_inclusion": "Mapping includes both imported API source players and raw API odds/fixtures/results players, so today upcoming players get mapping entries before they have finished results.",
     }
 
     write_json(MAPPING_JSON, mapping)
@@ -792,6 +999,7 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON) -> None:
             "best_sackmann_name",
             "second_score_margin",
             "api_name_sources",
+            "api_data_sources",
             "api_levels",
             "api_surfaces",
         ],
@@ -820,8 +1028,10 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON) -> None:
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--api-player-cache", type=Path, default=API_PLAYER_CACHE_JSON)
+    parser.add_argument("--raw-root", type=Path, default=API_RAW_ROOT)
+    parser.add_argument("--no-raw", action="store_true", help="Only map players from imported API source; skip raw odds/fixtures/results players.")
     args = parser.parse_args(argv)
-    build_mapping(args.api_player_cache)
+    build_mapping(args.api_player_cache, include_raw=not args.no_raw, raw_root=args.raw_root)
 
 
 if __name__ == "__main__":
