@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       refresh:
-        description: "Redownload Sackmann player CSV files"
+        description: "Refresh Sackmann player CSV files from external repos"
         required: false
-        default: "false"
+        default: "true"
 
 permissions:
   contents: write
@@ -16,24 +16,46 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout TLE repo
         uses: actions/checkout@v4
+        with:
+          path: TLE
+
+      - name: Checkout Sackmann ATP repo
+        uses: actions/checkout@v4
+        with:
+          repository: JeffSackmann/tennis_atp
+          path: sackmann_atp
+
+      - name: Checkout Sackmann WTA repo
+        uses: actions/checkout@v4
+        with:
+          repository: JeffSackmann/tennis_wta
+          path: sackmann_wta
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Build Sackmann player metadata
+      - name: Copy Sackmann player CSV files
         run: |
-          ARGS=""
-          if [ "${{ github.event.inputs.refresh }}" = "true" ]; then
-            ARGS="$ARGS --refresh"
-          fi
+          mkdir -p TLE/data/raw/sackmann
+          cp sackmann_atp/atp_players.csv TLE/data/raw/sackmann/atp_players.csv
+          cp sackmann_wta/wta_players.csv TLE/data/raw/sackmann/wta_players.csv
 
-          python -m tle_machine.build_sackmann_player_metadata $ARGS
+          echo "ATP players:"
+          head -n 2 TLE/data/raw/sackmann/atp_players.csv
+          echo "WTA players:"
+          head -n 2 TLE/data/raw/sackmann/wta_players.csv
+
+      - name: Build Sackmann player metadata
+        working-directory: TLE
+        run: |
+          python -m tle_machine.build_sackmann_player_metadata
 
       - name: Commit Sackmann player metadata
+        working-directory: TLE
         if: always()
         run: |
           git config user.name "github-actions"
