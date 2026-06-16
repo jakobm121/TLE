@@ -20,15 +20,15 @@
     "api_players": 2954,
     "api_players_after_raw": 2954,
     "api_players_after_source": 2814,
-    "auto_mapped": 2541,
+    "auto_mapped": 2721,
     "manual_mapped": 53,
     "manual_unmapped": 1,
     "raw_mapping_files_seen": 22,
     "raw_mapping_rows_seen": 6867,
     "raw_mapping_skipped_non_singles": 2123,
-    "unmapped": 317
+    "unmapped": 137
   },
-  "generated_at": "2026-06-16T19:43:00+00:00",
+  "generated_at": "2026-06-16T20:14:16+00:00",
   "issues_total": 0,
   "outputs": {
     "candidates_csv": "data/reports/api_tennis/player_mapping_candidates.csv",
@@ -37,7 +37,7 @@
     "overrides_json": "data/metadata/api_tennis/player_mapping_overrides.json",
     "review_csv": "data/reports/api_tennis/player_mapping_review.csv"
   },
-  "review_needed": 359,
+  "review_needed": 179,
   "sackmann_players": 12045,
   "status": "ok"
 }
