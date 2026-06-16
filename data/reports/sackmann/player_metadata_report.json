@@ -1,0 +1,57 @@
+{
+  "counts": {
+    "input_csv_files": 20,
+    "match_files_read": 20,
+    "metadata_men": 5265,
+    "metadata_players_not_in_ratings": 7,
+    "metadata_players_total": 12052,
+    "metadata_women": 6787,
+    "rating_players_missing_metadata": 0,
+    "rating_players_total": 12045,
+    "rating_players_with_metadata": 12045,
+    "rows_match_player_sides": 446626,
+    "with_approx_birth_year": 7868,
+    "with_birth_date_exact": 0,
+    "with_country_code": 12050,
+    "with_hand": 12048,
+    "with_height": 2003
+  },
+  "generated_at": "2026-06-16T21:32:46+00:00",
+  "inputs": {
+    "csv_files": [
+      "data/raw/sackmann/atp/atp_matches_2023.csv",
+      "data/raw/sackmann/atp/atp_matches_2024.csv",
+      "data/raw/sackmann/atp/atp_matches_2025.csv",
+      "data/raw/sackmann/atp/atp_matches_2026.csv",
+      "data/raw/sackmann/atp/atp_matches_futures_2023.csv",
+      "data/raw/sackmann/atp/atp_matches_futures_2024.csv",
+      "data/raw/sackmann/atp/atp_matches_futures_2025.csv",
+      "data/raw/sackmann/atp/atp_matches_futures_2026.csv",
+      "data/raw/sackmann/atp/atp_matches_qual_chall_2023.csv",
+      "data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv",
+      "data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv",
+      "data/raw/sackmann/atp/atp_matches_qual_chall_2026.csv",
+      "data/raw/sackmann/wta/wta_matches_2023.csv",
+      "data/raw/sackmann/wta/wta_matches_2024.csv",
+      "data/raw/sackmann/wta/wta_matches_2025.csv",
+      "data/raw/sackmann/wta/wta_matches_2026.csv",
+      "data/raw/sackmann/wta/wta_matches_qual_itf_2023.csv",
+      "data/raw/sackmann/wta/wta_matches_qual_itf_2024.csv",
+      "data/raw/sackmann/wta/wta_matches_qual_itf_2025.csv",
+      "data/raw/sackmann/wta/wta_matches_qual_itf_2026.csv"
+    ],
+    "raw_dir": "data/raw/sackmann"
+  },
+  "notes": [
+    "This version does not download external Sackmann player files.",
+    "It builds metadata from already-fetched Sackmann match CSVs in data/raw/sackmann.",
+    "Exact birth_date is only available if atp_players.csv/wta_players.csv already exist locally.",
+    "approx_birth_year is derived from match date and match age, and should not be treated as exact DOB.",
+    "country_code is derived from winner_ioc/loser_ioc in match CSVs."
+  ],
+  "outputs": {
+    "metadata_json": "data/metadata/sackmann/players.json",
+    "report_json": "data/reports/sackmann/player_metadata_report.json"
+  },
+  "status": "ok"
+}
