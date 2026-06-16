@@ -4,15 +4,19 @@ on:
   workflow_dispatch:
     inputs:
       start_date:
-        description: "Optional start date YYYY-MM-DD"
+        description: "Optional start date YYYY-MM-DD. If empty, defaults to today UTC."
         required: false
         default: ""
       end_date:
-        description: "Optional end date YYYY-MM-DD"
+        description: "Optional end date YYYY-MM-DD. If empty, defaults to start_date."
         required: false
         default: ""
       refresh_existing:
         description: "Refetch existing cached players"
+        required: false
+        default: "false"
+      save_raw_responses:
+        description: "Save limited raw API responses for debugging"
         required: false
         default: "false"
 
@@ -36,18 +40,32 @@ jobs:
         env:
           API_TENNIS_KEY: ${{ secrets.API_TENNIS_KEY }}
         run: |
-          ARGS=""
-          if [ -n "${{ github.event.inputs.start_date }}" ]; then
-            ARGS="$ARGS --start-date ${{ github.event.inputs.start_date }}"
+          TODAY=$(date -u +%F)
+
+          START_DATE="${{ github.event.inputs.start_date }}"
+          END_DATE="${{ github.event.inputs.end_date }}"
+
+          if [ -z "$START_DATE" ]; then
+            START_DATE="$TODAY"
           fi
-          if [ -n "${{ github.event.inputs.end_date }}" ]; then
-            ARGS="$ARGS --end-date ${{ github.event.inputs.end_date }}"
+
+          if [ -z "$END_DATE" ]; then
+            END_DATE="$START_DATE"
           fi
+
+          ARGS="--start-date $START_DATE --end-date $END_DATE"
+
           if [ "${{ github.event.inputs.refresh_existing }}" = "true" ]; then
             ARGS="$ARGS --refresh-existing"
           fi
 
-          python -m tle_machine.fetch_api_player_details $ARGS
+          if [ "${{ github.event.inputs.save_raw_responses }}" = "true" ]; then
+            ARGS="$ARGS --save-raw-responses"
+          fi
+
+          python -m tle_machine.fetch_api_player_details $ARGS \
+            --timeout 10 \
+            --sleep-seconds 0.05
 
       - name: Commit API player details
         if: always()
@@ -57,7 +75,10 @@ jobs:
 
           git add data/raw/api_tennis/players/api_players.json || true
           git add data/reports/api_tennis/fetch_api_player_details_report.json || true
-          git add data/reports/api_tennis/fetch_api_player_details_raw_responses.json || true
+
+          if [ "${{ github.event.inputs.save_raw_responses }}" = "true" ]; then
+            git add data/reports/api_tennis/fetch_api_player_details_raw_responses.json || true
+          fi
 
           if git diff --cached --quiet; then
             echo "No API player details changes to commit."
