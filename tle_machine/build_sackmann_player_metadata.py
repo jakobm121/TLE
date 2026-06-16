@@ -4,6 +4,7 @@ import argparse
 import csv
 import gzip
 import json
+import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -14,8 +15,20 @@ RAW_DIR = Path("data/raw/sackmann")
 OUT_JSON = Path("data/metadata/sackmann/players.json")
 REPORT_JSON = Path("data/reports/sackmann/player_metadata_report.json")
 
-ATP_URL = "https://raw.githubusercontent.com/JeffSackmann/tennis_atp/master/atp_players.csv"
-WTA_URL = "https://raw.githubusercontent.com/JeffSackmann/tennis_wta/master/wta_players.csv"
+# Correct Sackmann player filenames are:
+# ATP: atp_players.csv
+# WTA: wta_players.csv
+# Keep fallback URLs because GitHub raw occasionally behaves differently.
+ATP_URLS = [
+    "https://raw.githubusercontent.com/JeffSackmann/tennis_atp/master/atp_players.csv",
+    "https://github.com/JeffSackmann/tennis_atp/raw/refs/heads/master/atp_players.csv",
+    "https://github.com/JeffSackmann/tennis_atp/raw/master/atp_players.csv",
+]
+WTA_URLS = [
+    "https://raw.githubusercontent.com/JeffSackmann/tennis_wta/master/wta_players.csv",
+    "https://github.com/JeffSackmann/tennis_wta/raw/refs/heads/master/wta_players.csv",
+    "https://github.com/JeffSackmann/tennis_wta/raw/master/wta_players.csv",
+]
 
 RATINGS_JSON = Path("data/ratings/tle_player_ratings.json")
 RATINGS_JSON_GZ = Path("data/ratings/tle_player_ratings.json.gz")
@@ -37,14 +50,53 @@ def read_json_any(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def download_if_needed(url: str, path: Path, refresh: bool = False) -> bool:
+def download_from_urls(urls: list[str], path: Path, refresh: bool = False) -> dict[str, Any]:
     path.parent.mkdir(parents=True, exist_ok=True)
+
+    report = {
+        "path": str(path),
+        "downloaded": False,
+        "used_url": "",
+        "attempts": [],
+    }
+
     if path.exists() and not refresh:
-        return False
-    with urllib.request.urlopen(url, timeout=60) as r:
-        data = r.read()
-    path.write_bytes(data)
-    return True
+        report["status"] = "cached"
+        return report
+
+    last_error = ""
+    for url in urls:
+        try:
+            req = urllib.request.Request(
+                url,
+                headers={
+                    "User-Agent": "TLE-Sackmann-Metadata/1.0",
+                    "Accept": "text/csv,text/plain,*/*",
+                },
+            )
+            with urllib.request.urlopen(req, timeout=60) as r:
+                data = r.read()
+
+            # Basic guard: player CSV must have player_id header.
+            head = data[:300].decode("utf-8", errors="replace").lower()
+            if "player_id" not in head:
+                raise RuntimeError(f"Downloaded content does not look like player CSV. First bytes: {head[:120]!r}")
+
+            path.write_bytes(data)
+            report["downloaded"] = True
+            report["used_url"] = url
+            report["status"] = "downloaded"
+            report["attempts"].append({"url": url, "status": "ok", "bytes": len(data)})
+            return report
+
+        except Exception as e:
+            last_error = f"{type(e).__name__}: {e}"
+            status_code = getattr(e, "code", "")
+            report["attempts"].append({"url": url, "status": "error", "code": status_code, "error": last_error})
+
+    report["status"] = "error"
+    report["error"] = last_error
+    raise RuntimeError(f"Could not download {path.name}. Attempts: {json.dumps(report['attempts'], ensure_ascii=False)}")
 
 
 def normalize_birth_date(value: Any) -> str:
@@ -75,6 +127,12 @@ def read_players_csv(path: Path, gender: str) -> dict[str, dict[str, Any]]:
 
     with path.open("r", encoding="utf-8", newline="") as f:
         reader = csv.DictReader(f)
+
+        required = {"player_id", "first_name", "last_name"}
+        missing = required - set(reader.fieldnames or [])
+        if missing:
+            raise RuntimeError(f"{path} is missing required columns: {sorted(missing)}")
+
         for row in reader:
             player_id = clean_text(row.get("player_id"))
             if not player_id:
@@ -124,8 +182,8 @@ def main(argv: list[str] | None = None) -> None:
     atp_path = args.raw_dir / "atp_players.csv"
     wta_path = args.raw_dir / "wta_players.csv"
 
-    downloaded_atp = download_if_needed(ATP_URL, atp_path, refresh=args.refresh)
-    downloaded_wta = download_if_needed(WTA_URL, wta_path, refresh=args.refresh)
+    atp_download_report = download_from_urls(ATP_URLS, atp_path, refresh=args.refresh)
+    wta_download_report = download_from_urls(WTA_URLS, wta_path, refresh=args.refresh)
 
     metadata: dict[str, dict[str, Any]] = {}
     men = read_players_csv(atp_path, "men")
@@ -140,12 +198,8 @@ def main(argv: list[str] | None = None) -> None:
         "generated_at": now_utc_iso(),
         "status": "ok",
         "inputs": {
-            "atp_url": ATP_URL,
-            "wta_url": WTA_URL,
-            "atp_csv": str(atp_path),
-            "wta_csv": str(wta_path),
-            "downloaded_atp": downloaded_atp,
-            "downloaded_wta": downloaded_wta,
+            "atp_download": atp_download_report,
+            "wta_download": wta_download_report,
         },
         "outputs": {
             "metadata_json": str(args.out),
@@ -165,6 +219,7 @@ def main(argv: list[str] | None = None) -> None:
         "notes": [
             "This file does not replace ratings. It enriches existing Sackmann keys using the original Sackmann player_id.",
             "Key format is gender:sackmann:player_id, for example men:sackmann:210150.",
+            "Correct Sackmann filenames are atp_players.csv and wta_players.csv.",
         ],
     }
 
