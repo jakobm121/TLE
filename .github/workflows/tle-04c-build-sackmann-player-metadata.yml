@@ -1,0 +1,52 @@
+name: TLE 04c Build Sackmann Player Metadata
+
+on:
+  workflow_dispatch:
+    inputs:
+      refresh:
+        description: "Redownload Sackmann player CSV files"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+
+jobs:
+  build-sackmann-player-metadata:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build Sackmann player metadata
+        run: |
+          ARGS=""
+          if [ "${{ github.event.inputs.refresh }}" = "true" ]; then
+            ARGS="$ARGS --refresh"
+          fi
+
+          python -m tle_machine.build_sackmann_player_metadata $ARGS
+
+      - name: Commit Sackmann player metadata
+        if: always()
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/raw/sackmann/atp_players.csv || true
+          git add data/raw/sackmann/wta_players.csv || true
+          git add data/metadata/sackmann/players.json || true
+          git add data/reports/sackmann/player_metadata_report.json || true
+
+          if git diff --cached --quiet; then
+            echo "No Sackmann player metadata changes to commit."
+          else
+            git commit -m "Build Sackmann player metadata"
+            git push
+          fi
