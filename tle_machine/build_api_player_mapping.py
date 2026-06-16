@@ -131,22 +131,6 @@ def normalize_api_birth_date(value: Any) -> str:
     return ""
 
 
-def year_from_date(value: Any) -> str:
-    s = str(value or "").strip()
-    if re.match(r"^\d{4}-", s):
-        return s[:4]
-    return ""
-
-
-def normalize_year(value: Any) -> str:
-    s = str(value or "").strip()
-    if re.match(r"^\d{4}$", s):
-        return s
-    if re.match(r"^\d{4}\.0$", s):
-        return s[:4]
-    return ""
-
-
 def normalize_country_code(value: Any) -> str:
     s = strip_accents(str(value or "").strip()).lower()
     if not s:
@@ -379,10 +363,6 @@ class ApiPlayer:
         return self.birth_dates.most_common(1)[0][0] if self.birth_dates else ""
 
     @property
-    def birth_year(self) -> str:
-        return year_from_date(self.birth_date)
-
-    @property
     def country_code(self) -> str:
         return self.countries.most_common(1)[0][0] if self.countries else ""
 
@@ -456,7 +436,6 @@ def load_sackmann_player_metadata(path: Path = SACKMANN_PLAYER_METADATA_JSON) ->
         "exists": path.exists(),
         "entries": 0,
         "with_birth_date": 0,
-        "with_approx_birth_year": 0,
         "with_country_code": 0,
     }
 
@@ -472,7 +451,6 @@ def load_sackmann_player_metadata(path: Path = SACKMANN_PLAYER_METADATA_JSON) ->
 
     report["entries"] = len(metadata)
     report["with_birth_date"] = sum(1 for v in metadata.values() if norm_text(v.get("birth_date")))
-    report["with_approx_birth_year"] = sum(1 for v in metadata.values() if normalize_year(v.get("approx_birth_year")))
     report["with_country_code"] = sum(1 for v in metadata.values() if norm_text(v.get("country_code")))
 
     return metadata, report
@@ -810,6 +788,43 @@ def load_overrides() -> dict[str, str | None]:
     return {str(k): parse_override_value(v) for k, v in data.items()}
 
 
+def load_existing_mapping() -> dict[str, Any]:
+    """Load previous player_mapping.json so 09 can work incrementally.
+
+    Existing confident mappings are treated as the persistent mapping database.
+    Manual corrections should still live in player_mapping_overrides.json and
+    always take priority over this generated file.
+    """
+    if not MAPPING_JSON.exists():
+        return {}
+
+    try:
+        data = read_json_any(MAPPING_JSON)
+    except Exception:
+        return {}
+
+    if not isinstance(data, dict):
+        return {}
+
+    m = data.get("mapping", {})
+    return m if isinstance(m, dict) else {}
+
+
+def existing_mapping_target(entry: Any) -> str | None:
+    if not isinstance(entry, dict):
+        return None
+
+    status = str(entry.get("status") or "")
+    target = entry.get("sackmann_player_key")
+
+    # Only reuse entries that actually point to a Sackmann player. Do not freeze
+    # old ambiguous/unmapped rows; those should be retried as the system improves.
+    if status in {"auto_mapped", "existing_mapping_reused", "manual_mapped"} and target:
+        return str(target)
+
+    return None
+
+
 @dataclass
 class SackIndex:
     by_gender: dict[str, list[SackPlayer]]
@@ -958,11 +973,9 @@ def apply_metadata_score_adjustment(
 ) -> tuple[float, str]:
     md = sackmann_metadata.get(sack_player.key) or {}
     sack_birth_date = norm_text(md.get("birth_date"))
-    sack_approx_birth_year = normalize_year(md.get("approx_birth_year"))
     sack_country_code = norm_text(md.get("country_code")).upper()
 
     api_birth_date = api_player.birth_date
-    api_birth_year = api_player.birth_year
     api_country_code = api_player.country_code
 
     adjusted = score
@@ -977,20 +990,6 @@ def apply_metadata_score_adjustment(
             adjusted -= 0.050
             method_parts.append("dob_mismatch")
             counters["candidate_dob_mismatch"] += 1
-    elif api_birth_year and sack_approx_birth_year:
-        diff = abs(int(api_birth_year) - int(sack_approx_birth_year))
-        if diff == 0:
-            adjusted += 0.020
-            method_parts.append("birth_year")
-            counters["candidate_birth_year_match"] += 1
-        elif diff == 1:
-            adjusted += 0.008
-            method_parts.append("birth_year_near")
-            counters["candidate_birth_year_near"] += 1
-        else:
-            adjusted -= 0.035
-            method_parts.append("birth_year_mismatch")
-            counters["candidate_birth_year_mismatch"] += 1
 
     if api_country_code and sack_country_code:
         if api_country_code == sack_country_code:
@@ -1016,6 +1015,7 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
     api_player_cache, api_player_cache_report = load_api_player_cache(api_player_cache_path)
     api_players = load_api_players(api_player_cache, counters, include_raw, raw_root)
     overrides = load_overrides()
+    existing_mapping = load_existing_mapping()
     sack_index = build_sack_index(sack_players)
 
     counters["api_player_cache_entries"] = api_player_cache_report.get("entries", 0)
@@ -1023,8 +1023,8 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
     counters["api_player_cache_with_short_name"] = api_player_cache_report.get("with_short_name", 0)
     counters["sackmann_metadata_entries"] = sackmann_metadata_report.get("entries", 0)
     counters["sackmann_metadata_with_birth_date"] = sackmann_metadata_report.get("with_birth_date", 0)
-    counters["sackmann_metadata_with_approx_birth_year"] = sackmann_metadata_report.get("with_approx_birth_year", 0)
     counters["sackmann_metadata_with_country_code"] = sackmann_metadata_report.get("with_country_code", 0)
+    counters["existing_mapping_entries"] = len(existing_mapping)
 
     mapping: dict[str, Any] = {
         "generated_at": now_utc_iso(),
@@ -1066,13 +1066,48 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
                 "api_name_sources": dict(ap.name_sources),
                 "api_data_sources": dict(ap.data_sources),
                 "api_birth_dates": dict(ap.birth_dates),
-                "api_birth_year": ap.birth_year,
                 "api_countries": dict(ap.countries),
             }
             counters[status] += 1
             if target:
                 reverse[target].append(api_key)
             continue
+
+        existing_entry = existing_mapping.get(api_key)
+        existing_target = existing_mapping_target(existing_entry)
+        if existing_target:
+            if existing_target in sack_players:
+                mapping["mapping"][api_key] = {
+                    **existing_entry,
+                    "status": "auto_mapped",
+                    "sackmann_player_key": existing_target,
+                    "api_name": name,
+                    "gender": ap.gender,
+                    "method": str(existing_entry.get("method") or "existing_mapping") + "+reused_existing",
+                    "api_matches": ap.matches,
+                    "api_name_variants": dict(ap.names.most_common(10)),
+                    "api_name_sources": dict(ap.name_sources),
+                    "api_data_sources": dict(ap.data_sources),
+                    "api_birth_dates": dict(ap.birth_dates),
+                    "api_countries": dict(ap.countries),
+                    "api_levels": dict(ap.levels),
+                    "api_surfaces": dict(ap.surfaces),
+                    "reused_from_previous_mapping": True,
+                }
+                counters["auto_mapped"] += 1
+                counters["existing_mapping_reused"] += 1
+                reverse[existing_target].append(api_key)
+                continue
+
+            issue_rows.append(
+                {
+                    "api_player_key": api_key,
+                    "api_name": name,
+                    "issue": "existing_mapping_invalid_target",
+                    "detail": existing_target,
+                }
+            )
+            counters["issue_existing_mapping_invalid_target"] += 1
 
         feat = api_name_features(name)
         candidates: list[tuple[float, str, SackPlayer]] = []
@@ -1109,11 +1144,6 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
                     "sackmann_matches": sp.matches,
                     "score": round(sc, 6),
                     "method": method,
-                    "api_birth_year": ap.birth_year,
-                    "api_country_code": ap.country_code,
-                    "sackmann_country_code": norm_text((sackmann_metadata.get(sp.key) or {}).get("country_code")).upper(),
-                    "sackmann_birth_date": norm_text((sackmann_metadata.get(sp.key) or {}).get("birth_date")),
-                    "sackmann_approx_birth_year": normalize_year((sackmann_metadata.get(sp.key) or {}).get("approx_birth_year")),
                 }
             )
 
@@ -1131,16 +1161,10 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
             accept = False
             best_base_method = best_method.split("+", 1)[0]
             best_has_dob = "+dob" in best_method
-            best_has_birth_year = "+birth_year" in best_method
 
             if best_has_dob and best_sc >= 0.950:
                 same_dob = [c for c in top if "+dob" in c[1] and c[0] >= best_sc - 0.003]
                 accept = len(same_dob) == 1
-            elif best_has_birth_year and best_sc >= 0.955:
-                # Approx year is weaker than exact DOB, so require a strong underlying name score
-                # and uniqueness among candidates with the same birth-year support.
-                same_birth_year = [c for c in top if "+birth_year" in c[1] and c[0] >= best_sc - 0.004]
-                accept = len(same_birth_year) == 1
             elif best_base_method == "exact_normalized" and best_sc >= 0.999:
                 same_exact = [c for c in top if c[1].split("+", 1)[0] == "exact_normalized" and c[0] >= best_sc - 0.001]
                 accept = len(same_exact) == 1
@@ -1182,7 +1206,6 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
             "api_name_sources": dict(ap.name_sources),
             "api_data_sources": dict(ap.data_sources),
                 "api_birth_dates": dict(ap.birth_dates),
-                "api_birth_year": ap.birth_year,
                 "api_countries": dict(ap.countries),
             "api_levels": dict(ap.levels),
             "api_surfaces": dict(ap.surfaces),
@@ -1191,6 +1214,10 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
         }
 
         counters[status] += 1
+        if status == "auto_mapped":
+            counters["new_auto_mapped"] += 1
+        elif status in {"ambiguous", "unmapped"}:
+            counters[f"new_{status}"] += 1
         if target:
             reverse[target].append(api_key)
 
@@ -1217,6 +1244,23 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
                 }
             )
 
+    # Preserve old mapping entries for API players that are not present in today's/current
+    # API source set. This makes player_mapping.json a growing mapping database
+    # instead of a daily-only rebuild output.
+    for old_api_key, old_entry in sorted(existing_mapping.items()):
+        if old_api_key in mapping["mapping"]:
+            continue
+
+        old_target = existing_mapping_target(old_entry)
+        if old_target and old_target in sack_players:
+            preserved = dict(old_entry)
+            preserved["preserved_from_previous_mapping"] = True
+            preserved["status"] = preserved.get("status") or "auto_mapped"
+            mapping["mapping"][old_api_key] = preserved
+            counters["existing_mapping_preserved_not_seen"] += 1
+            counters["auto_mapped"] += 1
+            reverse[old_target].append(old_api_key)
+
     for sack_key, api_keys in reverse.items():
         if len(api_keys) > 3:
             issue_rows.append(
@@ -1237,11 +1281,12 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
         "auto_margin_min": AUTO_MARGIN_MIN,
         "initial_surname_score_min": INITIAL_SURNAME_SCORE_MIN,
         "manual_overrides": str(OVERRIDES_JSON),
-        "principle": "Accept only high-confidence or unique initial-surname matches; ambiguous candidates are sent to review.",
+        "principle": "Incremental mapping: existing confident mappings are reused, only new/previously unresolved API players are searched; ambiguous candidates are sent to review.",
         "performance_note": "Fast version uses indexed candidate pools by gender/name/surname/initial; acceptance thresholds are unchanged.",
         "name_enrichment": "API names are enriched from data/raw/api_tennis/players/api_players.json before matching.",
         "raw_player_inclusion": "Mapping includes both imported API source players and raw API odds/fixtures/results players, so today upcoming players get mapping entries before they have finished results.",
-        "metadata_matching": "If available, API player_bday/player_country are compared with Sackmann exact birth_date, approx_birth_year, and country_code. Approx birth year is used only as a small tie-breaker, not as a standalone match rule.",
+        "metadata_matching": "If available, API player_bday/player_country are compared with Sackmann birth_date/approx_birth_year/country_code and used only as cautious tie-breakers.",
+        "incremental_mapping": "Existing auto_mapped rows in player_mapping.json are reused and preserved; manual overrides always take priority.",
     }
 
     write_json(MAPPING_JSON, mapping)
@@ -1302,11 +1347,6 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
             "sackmann_matches",
             "score",
             "method",
-            "api_birth_year",
-            "api_country_code",
-            "sackmann_country_code",
-            "sackmann_birth_date",
-            "sackmann_approx_birth_year",
         ],
     )
     write_csv(ISSUES_CSV, issue_rows, ["api_player_key", "api_name", "issue", "detail"])
