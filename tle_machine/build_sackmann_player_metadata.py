@@ -20,14 +20,14 @@ REPORT_JSON = Path("data/reports/sackmann/player_metadata_report.json")
 # WTA: wta_players.csv
 # Keep fallback URLs because GitHub raw occasionally behaves differently.
 ATP_URLS = [
-    "https://raw.githubusercontent.com/JeffSackmann/tennis_atp/master/atp_players.csv",
+    "https://raw.githubusercontent.com/JeffSackmann/tennis_atp/refs/heads/master/atp_players.csv",
+    "https://raw.githubusercontent.com/jeffsackmann/tennis_atp/refs/heads/master/atp_players.csv",
     "https://github.com/JeffSackmann/tennis_atp/raw/refs/heads/master/atp_players.csv",
-    "https://github.com/JeffSackmann/tennis_atp/raw/master/atp_players.csv",
 ]
 WTA_URLS = [
-    "https://raw.githubusercontent.com/JeffSackmann/tennis_wta/master/wta_players.csv",
+    "https://raw.githubusercontent.com/JeffSackmann/tennis_wta/refs/heads/master/wta_players.csv",
+    "https://raw.githubusercontent.com/jeffsackmann/tennis_wta/refs/heads/master/wta_players.csv",
     "https://github.com/JeffSackmann/tennis_wta/raw/refs/heads/master/wta_players.csv",
-    "https://github.com/JeffSackmann/tennis_wta/raw/master/wta_players.csv",
 ]
 
 RATINGS_JSON = Path("data/ratings/tle_player_ratings.json")
