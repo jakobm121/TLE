@@ -28,6 +28,7 @@ except Exception:
 API_SOURCE_DIR = Path("data/source/api_tennis")
 API_RAW_ROOT = Path("data/raw/api_tennis")
 API_PLAYER_CACHE_JSON = Path("data/raw/api_tennis/players/api_players.json")
+SACKMANN_PLAYER_METADATA_JSON = Path("data/metadata/sackmann/players.json")
 
 RATINGS_JSON = Path("data/ratings/tle_player_ratings.json")
 RATINGS_JSON_GZ = Path("data/ratings/tle_player_ratings.json.gz")
@@ -86,6 +87,57 @@ COUNTRY_WORDS = {
     "ukraine",
     "kazakhstan",
 }
+
+COUNTRY_NAME_TO_CODE = {
+    "argentina": "ARG", "australia": "AUS", "austria": "AUT", "belarus": "BLR",
+    "belgium": "BEL", "bosnia and herzegovina": "BIH", "brazil": "BRA",
+    "bulgaria": "BUL", "canada": "CAN", "chile": "CHI", "china": "CHN",
+    "chinese taipei": "TPE", "colombia": "COL", "croatia": "CRO",
+    "cyprus": "CYP", "czech republic": "CZE", "czechia": "CZE",
+    "denmark": "DEN", "egypt": "EGY", "estonia": "EST", "finland": "FIN",
+    "france": "FRA", "georgia": "GEO", "germany": "GER",
+    "great britain": "GBR", "greece": "GRE", "hong kong": "HKG",
+    "hungary": "HUN", "india": "IND", "ireland": "IRL", "israel": "ISR",
+    "italy": "ITA", "japan": "JPN", "kazakhstan": "KAZ", "latvia": "LAT",
+    "lithuania": "LTU", "mexico": "MEX", "moldova": "MDA",
+    "netherlands": "NED", "new zealand": "NZL", "norway": "NOR",
+    "poland": "POL", "portugal": "POR", "romania": "ROU", "russia": "RUS",
+    "serbia": "SRB", "slovakia": "SVK", "slovenia": "SLO",
+    "south africa": "RSA", "south korea": "KOR", "spain": "ESP",
+    "sweden": "SWE", "switzerland": "SUI", "taiwan": "TPE",
+    "thailand": "THA", "tunisia": "TUN", "turkey": "TUR",
+    "ukraine": "UKR", "united kingdom": "GBR", "united states": "USA",
+    "usa": "USA",
+}
+
+
+def normalize_api_birth_date(value: Any) -> str:
+    s = str(value or "").strip()
+    if not s:
+        return ""
+
+    # API-Tennis usually returns DD.MM.YYYY.
+    m = re.match(r"^(\d{2})\.(\d{2})\.(\d{4})$", s)
+    if m:
+        dd, mm, yyyy = m.group(1), m.group(2), m.group(3)
+        if yyyy == "0000" or mm == "00" or dd == "00":
+            return ""
+        return f"{yyyy}-{mm}-{dd}"
+
+    # ISO fallback.
+    if re.match(r"^\d{4}-\d{2}-\d{2}", s):
+        return s[:10]
+
+    return ""
+
+
+def normalize_country_code(value: Any) -> str:
+    s = strip_accents(str(value or "").strip()).lower()
+    if not s:
+        return ""
+    if len(s) == 3 and s.isalpha():
+        return s.upper()
+    return COUNTRY_NAME_TO_CODE.get(s, "")
 
 
 def read_json_any(path: Path) -> Any:
@@ -299,10 +351,20 @@ class ApiPlayer:
     tournaments: Counter
     name_sources: Counter = field(default_factory=Counter)
     data_sources: Counter = field(default_factory=Counter)
+    birth_dates: Counter = field(default_factory=Counter)
+    countries: Counter = field(default_factory=Counter)
 
     @property
     def name(self) -> str:
         return self.names.most_common(1)[0][0] if self.names else ""
+
+    @property
+    def birth_date(self) -> str:
+        return self.birth_dates.most_common(1)[0][0] if self.birth_dates else ""
+
+    @property
+    def country_code(self) -> str:
+        return self.countries.most_common(1)[0][0] if self.countries else ""
 
 
 def decorate_sack_player(sp: SackPlayer) -> SackPlayer:
@@ -365,6 +427,50 @@ def load_api_player_cache(path: Path = API_PLAYER_CACHE_JSON) -> tuple[dict[str,
     report["with_short_name"] = sum(1 for v in cache.values() if norm_text(v.get("player_name")))
 
     return cache, report
+
+
+
+def load_sackmann_player_metadata(path: Path = SACKMANN_PLAYER_METADATA_JSON) -> tuple[dict[str, dict[str, Any]], dict[str, Any]]:
+    report = {
+        "path": str(path),
+        "exists": path.exists(),
+        "entries": 0,
+        "with_birth_date": 0,
+        "with_country_code": 0,
+    }
+
+    data = read_json_safe(path, {})
+    if not isinstance(data, dict):
+        report["error"] = "metadata is not a JSON object"
+        return {}, report
+
+    metadata: dict[str, dict[str, Any]] = {}
+    for key, value in data.items():
+        if isinstance(value, dict):
+            metadata[str(key)] = value
+
+    report["entries"] = len(metadata)
+    report["with_birth_date"] = sum(1 for v in metadata.values() if norm_text(v.get("birth_date")))
+    report["with_country_code"] = sum(1 for v in metadata.values() if norm_text(v.get("country_code")))
+
+    return metadata, report
+
+
+def cached_api_player_metadata(
+    api_player_cache: dict[str, dict[str, Any]],
+    api_key: str,
+) -> tuple[str, str]:
+    bare = canonical_bare_api_key(api_key)
+    if not bare:
+        return "", ""
+
+    row = api_player_cache.get(bare)
+    if not isinstance(row, dict):
+        return "", ""
+
+    birth_date = normalize_api_birth_date(row.get("player_bday"))
+    country_code = normalize_country_code(row.get("player_country"))
+    return birth_date, country_code
 
 
 def cached_api_player_name(
@@ -472,6 +578,12 @@ def upsert_api_player(
     if name != raw_name:
         counters["api_player_cache_name_changed"] += 1
 
+    api_birth_date, api_country_code = cached_api_player_metadata(api_player_cache, canonical_api_key)
+    if api_birth_date:
+        counters["api_player_cache_birth_date_used"] += 1
+    if api_country_code:
+        counters["api_player_cache_country_used"] += 1
+
     if canonical_api_key not in api_players:
         api_players[canonical_api_key] = ApiPlayer(
             key=canonical_api_key,
@@ -493,6 +605,10 @@ def upsert_api_player(
     ap.tournaments[tournament] += 1
     ap.name_sources[name_source] += 1
     ap.data_sources[data_source] += 1
+    if api_birth_date:
+        ap.birth_dates[api_birth_date] += 1
+    if api_country_code:
+        ap.countries[api_country_code] += 1
 
 
 def load_api_players_from_source(
@@ -735,9 +851,7 @@ def score_candidate_features(api_feat: dict[str, Any], sp: SackPlayer) -> tuple[
     if api_feat.get("token_signature") and api_feat.get("token_signature") == sp.token_signature:
         return 0.985, "token_set_exact"
 
-    # Handles apostrophe/space variants:
-    #   Stefano D Agostino vs Stefano Dagostino
-    #   Francesca Dell Edera vs Francesca Delledera
+    # Handles apostrophe/space variants.
     if api_feat.get("compact_no_space") and api_feat.get("compact_no_space") == sp.compact_no_space:
         return 0.982, "compact_no_space"
 
@@ -810,13 +924,57 @@ def find_override(api_key: str, gender: str, overrides: dict[str, str | None]) -
     return False, None, None
 
 
-def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_raw: bool = True, raw_root: Path = API_RAW_ROOT) -> None:
+
+def apply_metadata_score_adjustment(
+    *,
+    api_player: ApiPlayer,
+    sack_player: SackPlayer,
+    score: float,
+    method: str,
+    sackmann_metadata: dict[str, dict[str, Any]],
+    counters: Counter,
+) -> tuple[float, str]:
+    md = sackmann_metadata.get(sack_player.key) or {}
+    sack_birth_date = norm_text(md.get("birth_date"))
+    sack_country_code = norm_text(md.get("country_code")).upper()
+
+    api_birth_date = api_player.birth_date
+    api_country_code = api_player.country_code
+
+    adjusted = score
+    method_parts = [method]
+
+    if api_birth_date and sack_birth_date:
+        if api_birth_date == sack_birth_date:
+            adjusted += 0.030
+            method_parts.append("dob")
+            counters["candidate_dob_match"] += 1
+        else:
+            adjusted -= 0.050
+            method_parts.append("dob_mismatch")
+            counters["candidate_dob_mismatch"] += 1
+
+    if api_country_code and sack_country_code:
+        if api_country_code == sack_country_code:
+            adjusted += 0.006
+            method_parts.append("country")
+            counters["candidate_country_match"] += 1
+        else:
+            adjusted -= 0.004
+            method_parts.append("country_mismatch")
+            counters["candidate_country_mismatch"] += 1
+
+    return max(0.0, min(1.0, adjusted)), "+".join(method_parts)
+
+
+def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_raw: bool = True, raw_root: Path = API_RAW_ROOT, sackmann_metadata_path: Path = SACKMANN_PLAYER_METADATA_JSON) -> None:
     METADATA_DIR.mkdir(parents=True, exist_ok=True)
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
 
     counters = Counter()
 
     sack_players = load_sack_players()
+    sackmann_metadata, sackmann_metadata_report = load_sackmann_player_metadata(sackmann_metadata_path)
     api_player_cache, api_player_cache_report = load_api_player_cache(api_player_cache_path)
     api_players = load_api_players(api_player_cache, counters, include_raw, raw_root)
     overrides = load_overrides()
@@ -825,6 +983,9 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
     counters["api_player_cache_entries"] = api_player_cache_report.get("entries", 0)
     counters["api_player_cache_with_full_name"] = api_player_cache_report.get("with_full_name", 0)
     counters["api_player_cache_with_short_name"] = api_player_cache_report.get("with_short_name", 0)
+    counters["sackmann_metadata_entries"] = sackmann_metadata_report.get("entries", 0)
+    counters["sackmann_metadata_with_birth_date"] = sackmann_metadata_report.get("with_birth_date", 0)
+    counters["sackmann_metadata_with_country_code"] = sackmann_metadata_report.get("with_country_code", 0)
 
     mapping: dict[str, Any] = {
         "generated_at": now_utc_iso(),
@@ -865,6 +1026,8 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
                 "api_name_variants": dict(ap.names.most_common(10)),
                 "api_name_sources": dict(ap.name_sources),
                 "api_data_sources": dict(ap.data_sources),
+                "api_birth_dates": dict(ap.birth_dates),
+                "api_countries": dict(ap.countries),
             }
             counters[status] += 1
             if target:
@@ -880,6 +1043,14 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
                 continue
             match_bonus = min(0.012, math.log1p(max(sp.matches, 0)) / 1000.0)
             final_score = min(0.999, sc + match_bonus)
+            final_score, method = apply_metadata_score_adjustment(
+                api_player=ap,
+                sack_player=sp,
+                score=final_score,
+                method=method,
+                sackmann_metadata=sackmann_metadata,
+                counters=counters,
+            )
             candidates.append((final_score, method, sp))
 
         candidates.sort(key=lambda x: x[0], reverse=True)
@@ -913,24 +1084,27 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
             margin = best_sc - second_sc
 
             accept = False
+            best_base_method = best_method.split("+", 1)[0]
+            best_has_dob = "+dob" in best_method
 
-            # Strong deterministic matches do not need a large margin.
-            # They only need to be unique among candidates with the same strong method.
-            if best_method == "exact_normalized" and best_sc >= 0.999:
-                same_exact = [c for c in top if c[1] == "exact_normalized" and c[0] >= best_sc - 0.001]
+            if best_has_dob and best_sc >= 0.950:
+                same_dob = [c for c in top if "+dob" in c[1] and c[0] >= best_sc - 0.003]
+                accept = len(same_dob) == 1
+            elif best_base_method == "exact_normalized" and best_sc >= 0.999:
+                same_exact = [c for c in top if c[1].split("+", 1)[0] == "exact_normalized" and c[0] >= best_sc - 0.001]
                 accept = len(same_exact) == 1
-            elif best_method == "token_set_exact" and best_sc >= 0.980:
-                same_token_exact = [c for c in top if c[1] == "token_set_exact" and c[0] >= best_sc - 0.005]
+            elif best_base_method == "token_set_exact" and best_sc >= 0.980:
+                same_token_exact = [c for c in top if c[1].split("+", 1)[0] == "token_set_exact" and c[0] >= best_sc - 0.005]
                 accept = len(same_token_exact) == 1
-            elif best_method == "compact_no_space" and best_sc >= 0.980:
-                same_compact = [c for c in top if c[1] == "compact_no_space" and c[0] >= best_sc - 0.005]
+            elif best_base_method == "compact_no_space" and best_sc >= 0.980:
+                same_compact = [c for c in top if c[1].split("+", 1)[0] == "compact_no_space" and c[0] >= best_sc - 0.005]
                 accept = len(same_compact) == 1
-            elif best_method == "exact_initial_form" and best_sc >= 0.965 and margin >= 0.020:
+            elif best_base_method == "exact_initial_form" and best_sc >= 0.965 and margin >= 0.020:
                 accept = True
             elif best_sc >= AUTO_SCORE_MIN and margin >= AUTO_MARGIN_MIN:
                 accept = True
-            elif best_method == "initial_surname" and best_sc >= INITIAL_SURNAME_SCORE_MIN and margin >= AUTO_MARGIN_MIN:
-                same_initial_surname = [c for c in top if c[1] == "initial_surname" and c[0] >= best_sc - AMBIGUOUS_MARGIN]
+            elif best_base_method == "initial_surname" and best_sc >= INITIAL_SURNAME_SCORE_MIN and margin >= AUTO_MARGIN_MIN:
+                same_initial_surname = [c for c in top if c[1].split("+", 1)[0] == "initial_surname" and c[0] >= best_sc - AMBIGUOUS_MARGIN]
                 accept = len(same_initial_surname) == 1
 
             if accept:
@@ -956,8 +1130,12 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
             "api_name_variants": dict(ap.names.most_common(10)),
             "api_name_sources": dict(ap.name_sources),
             "api_data_sources": dict(ap.data_sources),
+                "api_birth_dates": dict(ap.birth_dates),
+                "api_countries": dict(ap.countries),
             "api_levels": dict(ap.levels),
             "api_surfaces": dict(ap.surfaces),
+            "api_birth_dates": dict(ap.birth_dates),
+            "api_countries": dict(ap.countries),
         }
 
         counters[status] += 1
@@ -980,6 +1158,8 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
                     "second_score_margin": "" if margin is None else round(margin, 6),
                     "api_name_sources": json.dumps(dict(ap.name_sources), ensure_ascii=False, sort_keys=True),
                     "api_data_sources": json.dumps(dict(ap.data_sources), ensure_ascii=False, sort_keys=True),
+                    "api_birth_dates": json.dumps(dict(ap.birth_dates), ensure_ascii=False, sort_keys=True),
+                    "api_countries": json.dumps(dict(ap.countries), ensure_ascii=False, sort_keys=True),
                     "api_levels": json.dumps(dict(ap.levels), ensure_ascii=False, sort_keys=True),
                     "api_surfaces": json.dumps(dict(ap.surfaces), ensure_ascii=False, sort_keys=True),
                 }
@@ -999,6 +1179,7 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
 
     mapping["summary"] = dict(counters)
     mapping["api_player_cache"] = api_player_cache_report
+    mapping["sackmann_player_metadata"] = sackmann_metadata_report
     mapping["policy"] = {
         "auto_score_min": AUTO_SCORE_MIN,
         "auto_margin_min": AUTO_MARGIN_MIN,
@@ -1008,7 +1189,7 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
         "performance_note": "Fast version uses indexed candidate pools by gender/name/surname/initial; acceptance thresholds are unchanged.",
         "name_enrichment": "API names are enriched from data/raw/api_tennis/players/api_players.json before matching.",
         "raw_player_inclusion": "Mapping includes both imported API source players and raw API odds/fixtures/results players, so today upcoming players get mapping entries before they have finished results.",
-        "strong_auto_accept": "Unique exact_normalized, token_set_exact, and compact_no_space matches are auto-accepted even when score margin is small.",
+        "metadata_matching": "If available, API player_bday/player_country are compared with Sackmann birth_date/country_code and used to resolve duplicate or ambiguous name matches.",
     }
 
     write_json(MAPPING_JSON, mapping)
@@ -1024,6 +1205,7 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
             "overrides_json": str(OVERRIDES_JSON),
         },
         "api_player_cache": api_player_cache_report,
+        "sackmann_player_metadata": sackmann_metadata_report,
         "counters": dict(counters),
         "api_players": len(api_players),
         "sackmann_players": len(sack_players),
@@ -1048,6 +1230,8 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
             "second_score_margin",
             "api_name_sources",
             "api_data_sources",
+            "api_birth_dates",
+            "api_countries",
             "api_levels",
             "api_surfaces",
         ],
@@ -1077,9 +1261,15 @@ def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--api-player-cache", type=Path, default=API_PLAYER_CACHE_JSON)
     parser.add_argument("--raw-root", type=Path, default=API_RAW_ROOT)
+    parser.add_argument("--sackmann-metadata", type=Path, default=SACKMANN_PLAYER_METADATA_JSON)
     parser.add_argument("--no-raw", action="store_true", help="Only map players from imported API source; skip raw odds/fixtures/results players.")
     args = parser.parse_args(argv)
-    build_mapping(args.api_player_cache, include_raw=not args.no_raw, raw_root=args.raw_root)
+    build_mapping(
+        args.api_player_cache,
+        include_raw=not args.no_raw,
+        raw_root=args.raw_root,
+        sackmann_metadata_path=args.sackmann_metadata,
+    )
 
 
 if __name__ == "__main__":
