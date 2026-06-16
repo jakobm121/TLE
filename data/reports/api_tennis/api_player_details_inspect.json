@@ -1,0 +1,948 @@
+{
+  "date": "2026-06-16",
+  "endpoint_summary": {
+    "1056": {
+      "get_player": {
+        "error": "HTTP Error 404: Not Found",
+        "ok": false
+      },
+      "get_players": {
+        "name_like_fields_sample": [
+          {
+            "player_bday": "07.07.2001",
+            "player_country": "USA",
+            "player_full_name": "Andres Martin",
+            "player_key": 1056,
+            "player_logo": "https://api.api-tennis.com/logo-tennis/1056_a-martin.jpg",
+            "player_name": "A. Martin",
+            "tournaments": [
+              {
+                "name": "Losinj (Challenger)",
+                "prize": "€44,820",
+                "season": "2021",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "Almaty (Challenger)",
+                "prize": "$54,160",
+                "season": "2019",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "Banja Luka (Challenger)",
+                "prize": "€85,000",
+                "season": "2018",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "Casablanca (Challenger)",
+                "prize": "€42,500",
+                "season": "2016",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "Como (Challenger)",
+                "prize": "€42,500",
+                "season": "2016",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "Turin (Challenger)",
+                "prize": "€42,500",
+                "season": "2016",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "Montevideo (Challenger)",
+                "prize": "$50,000",
+                "season": "2015",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "Lima (Challenger)",
+                "prize": "$50,000",
+                "season": "2015",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "Cordenons (Challenger)",
+                "prize": "€42,500",
+                "season": "2015",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "Liberec (Challenger)",
+                "prize": "€42,500",
+                "season": "2015",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "Biella (Challenger)",
+                "prize": "€42,500",
+                "season": "2015",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "Ostrava (Challenger)",
+                "prize": "€42,500",
+                "season": "2015",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "Vicenza (Challenger)",
+                "prize": "€42,500",
+                "season": "2014",
+                "surface": "",
+                "type": "doubles"
+              },
+              {
+                "name": "Morelos (Challenger)",
+                "prize": "$75,000",
+                "season": "2014",
+                "surface": "hard",
+                "type": "doubles"
+              },
+              {
+                "name": "Bergamo (Challenger)",
+                "prize": "€42,500",
+                "season": "2013",
+                "surface": "hard (indoor)",
+                "type": "doubles"
+              },
+              {
+                "name": "Faro 2 (ITF)",
+                "prize": "$10,000",
+                "season": "2012",
+                "surface": "hard",
+                "type": "doubles"
+              },
+              {
+                "name": "Shymkent 2 (Challenger)",
+                "prize": "$54,160",
+                "season": "2019",
+                "surface": "clay",
+                "type": "singles"
+              },
+              {
+                "name": "Shymkent (Challenger)",
+                "prize": "$54,160",
+                "season": "2019",
+                "surface": "clay",
+                "type": "singles"
+              },
+              {
+                "name": "Nanchang (Challenger)",
+                "prize": "$54,160",
+                "season": "2019",
+                "surface": "clay (indoor)",
+                "type": "singles"
+              },
+              {
+                "name": "Liberec (Challenger)",
+                "prize": "€43,000",
+                "season": "2018",
+                "surface": "clay",
+                "type": "singles"
+              },
+              {
+                "name": "Prague (Challenger)",
+                "prize": "€43,000",
+                "season": "2017",
+                "surface": "clay",
+                "type": "singles"
+              },
+              {
+                "name": "San Luis Potosi (Challenger)",
+                "prize": "$50,000",
+                "season": "2017",
+                "surface": "clay",
+                "type": "singles"
+              },
+              {
+                "name": "Biella (Challenger)",
+                "prize": "€42,500",
+                "season": "2015",
+                "surface": "clay",
+                "type": "singles"
+              },
+              {
+                "name": "Padova (Challenger)",
+                "prize": "€42,500",
+                "season": "2015",
+                "surface": "clay",
+                "type": "singles"
+              },
+              {
+                "name": "Liberec (Challenger)",
+                "prize": "€35,000",
+                "season": "2014",
+                "surface": "clay",
+                "type": "singles"
+              },
+              {
+                "name": "San Benedetto (Challenger)",
+                "prize": "€30,000",
+                "season": "2013",
+                "surface": "clay",
+                "type": "singles"
+              },
+              {
+                "name": "Mexico City (Challenger)",
+                "prize": "$35,000",
+                "season": "2013",
+                "surface": "hard",
+                "type": "singles"
+              },
+              {
+                "name": "Dubrovnik (ITF)",
+                "prize": "$15,000",
+                "season": "2012",
+                "surface": "clay",
+                "type": "singles"
+              },
+              {
+                "name": "Solin (ITF)",
+                "prize": "$10,000",
+                "season": "2012",
+                "surface": "clay",
+                "type": "singles"
+              },
+              {
+                "name": "Piestany (ITF)",
+                "prize": "$10,000",
+                "season": "2012",
+                "surface": "clay",
+                "type": "singles"
+              },
+              {
+                "name": "Jablonec nad Nisou (ITF)",
+                "prize": "$10,000",
+                "season": "2012",
+                "surface": "clay",
+                "type": "singles"
+              },
+              {
+                "name": "Faro 2 (ITF)",
+                "prize": "$10,000",
+                "season": "2012",
+                "surface": "hard",
+                "type": "singles"
+              },
+              {
+                "name": "Samarkand (Challenger)",
+                "prize": "$35,000",
+                "season": "2010",
+                "surface": "clay",
+                "type": "singles"
+              },
+              {
+                "name": "M15 Monastir 38 (ITF)",
+                "prize": "$15,000",
+                "season": "2023",
+                "surface": "hard",
+                "type": "doubles"
+              },
+              {
+                "name": "M15 Monastir 38 (ITF)",
+                "prize": "$15,000",
+                "season": "2023",
+                "surface": "hard",
+                "type": "singles"
+              },
+              {
+                "name": "M15 Naples, FL (ITF)",
+                "prize": "$15,000",
+                "season": "2025",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "M25 Bakersfield, CA (ITF)",
+                "prize": "$30,000",
+                "season": "2025",
+                "surface": "hard",
+                "type": "doubles"
+              },
+              {
+                "name": "M25 Nottingham (ITF)",
+                "prize": "$30,000",
+                "season": "2025",
+                "surface": "hard",
+                "type": "doubles"
+              },
+              {
+                "name": "Winnipeg (Challenger)",
+                "prize": "$100,000",
+                "season": "2025",
+                "surface": "hard",
+                "type": "doubles"
+              }
+            ]
+          }
+        ],
+        "ok": true,
+        "result_count": 1,
+        "top_level_keys": [
+          "success",
+          "result"
+        ]
+      },
+      "get_rankings": {
+        "error": "HTTP Error 404: Not Found",
+        "ok": false
+      }
+    },
+    "11781": {
+      "get_player": {
+        "error": "HTTP Error 404: Not Found",
+        "ok": false
+      },
+      "get_players": {
+        "name_like_fields_sample": [
+          {
+            "player_bday": "27.05.1996",
+            "player_country": "India",
+            "player_full_name": "Prajwal Dev S D",
+            "player_key": 11781,
+            "player_logo": "https://api.api-tennis.com/logo-tennis/11781_p-dev-s-d.jpg",
+            "player_name": "P. Dev S D",
+            "tournaments": [
+              {
+                "name": "M15 Sharm ElSheikh 3 (ITF)",
+                "prize": "$15,000",
+                "season": "2023",
+                "surface": "hard",
+                "type": "doubles"
+              },
+              {
+                "name": "M15 Sharm ElSheikh (ITF)",
+                "prize": "$15,000",
+                "season": "2023",
+                "surface": "hard",
+                "type": "doubles"
+              },
+              {
+                "name": "M15 Colombo (ITF)",
+                "prize": "$15,000",
+                "season": "2022",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "M15 Addis Ababa 2 (ITF)",
+                "prize": "$15,000",
+                "season": "2023",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "M15 Jakarta 5 (ITF)",
+                "prize": "$15,000",
+                "season": "2023",
+                "surface": "hard",
+                "type": "doubles"
+              },
+              {
+                "name": "Astana (Challenger)",
+                "prize": "$40,000",
+                "season": "2023",
+                "surface": "hard",
+                "type": "doubles"
+              },
+              {
+                "name": "M15 Ahmedabad (ITF)",
+                "prize": "$15,000",
+                "season": "2023",
+                "surface": "hard",
+                "type": "doubles"
+              },
+              {
+                "name": "M25 Dharwad (ITF)",
+                "prize": "$25,000",
+                "season": "2023",
+                "surface": "hard",
+                "type": "doubles"
+              },
+              {
+                "name": "M25 Brazzaville (ITF)",
+                "prize": "$25,000",
+                "season": "2024",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "M25 Brazzaville 2 (ITF)",
+                "prize": "$25,000",
+                "season": "2024",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "M15 Tehran (ITF)",
+                "prize": "$15,000",
+                "season": "2024",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "M25 Mumbai (ITF)",
+                "prize": "$25,000",
+                "season": "2024",
+                "surface": "hard",
+                "type": "doubles"
+              },
+              {
+                "name": "M15 Monastir 24 (ITF)",
+                "prize": "$15,000",
+                "season": "2025",
+                "surface": "hard",
+                "type": "doubles"
+              },
+              {
+                "name": "M15 Tehran 2 (ITF)",
+                "prize": "$15,000",
+                "season": "2025",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "M25 Denia (ITF)",
+                "prize": "$30,000",
+                "season": "2025",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "M15 Bhubaneswar (ITF)",
+                "prize": "$15,000",
+                "season": "2025",
+                "surface": "hard",
+                "type": "doubles"
+              },
+              {
+                "name": "M15 Bhubaneswar (ITF)",
+                "prize": "$15,000",
+                "season": "2025",
+                "surface": "hard",
+                "type": "singles"
+              }
+            ]
+          }
+        ],
+        "ok": true,
+        "result_count": 1,
+        "top_level_keys": [
+          "success",
+          "result"
+        ]
+      },
+      "get_rankings": {
+        "error": "HTTP Error 404: Not Found",
+        "ok": false
+      }
+    },
+    "17463": {
+      "get_player": {
+        "error": "HTTP Error 404: Not Found",
+        "ok": false
+      },
+      "get_players": {
+        "name_like_fields_sample": [
+          {
+            "player_bday": "28.09.2007",
+            "player_country": "USA",
+            "player_full_name": "Darwin Blanch",
+            "player_key": 17463,
+            "player_logo": "https://api.api-tennis.com/logo-tennis/17463_d-blanch.jpg",
+            "player_name": "D. Blanch",
+            "tournaments": [
+              {
+                "name": "M15 Villena (ITF)",
+                "prize": "$15,000",
+                "season": "2025",
+                "surface": "hard",
+                "type": "singles"
+              },
+              {
+                "name": "M25 Martos (ITF)",
+                "prize": "$30,000",
+                "season": "2025",
+                "surface": "hard",
+                "type": "singles"
+              }
+            ]
+          }
+        ],
+        "ok": true,
+        "result_count": 1,
+        "top_level_keys": [
+          "success",
+          "result"
+        ]
+      },
+      "get_rankings": {
+        "error": "HTTP Error 404: Not Found",
+        "ok": false
+      }
+    },
+    "2188": {
+      "get_player": {
+        "error": "HTTP Error 404: Not Found",
+        "ok": false
+      },
+      "get_players": {
+        "name_like_fields_sample": [
+          {
+            "player_bday": "16.07.1994",
+            "player_country": "Peru",
+            "player_full_name": "Arklon Huertas Del Pino Cordova",
+            "player_key": 2188,
+            "player_logo": "https://api.api-tennis.com/logo-tennis/2188_a-huertas-del-pino.jpg",
+            "player_name": "A. Huertas Del Pino",
+            "tournaments": [
+              {
+                "name": "M25 Rosario, Santa Fe 2 (ITF)",
+                "prize": "$25,000",
+                "season": "2022",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "M25 Rosario, Santa Fe (ITF)",
+                "prize": "$25,000",
+                "season": "2022",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "M25 Anapoima (ITF)",
+                "prize": "$25,000",
+                "season": "2022",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "M15 Cancun 3 (ITF)",
+                "prize": "$15,000",
+                "season": "2022",
+                "surface": "hard",
+                "type": "doubles"
+              },
+              {
+                "name": "M15 Cancun 9 (ITF)",
+                "prize": "$15,000",
+                "season": "2021",
+                "surface": "hard",
+                "type": "doubles"
+              },
+              {
+                "name": "M25 Lima 2 (ITF)",
+                "prize": "$25,000",
+                "season": "2021",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "M15 Quito 2 (ITF)",
+                "prize": "$15,000",
+                "season": "2022",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "Buenos Aires (Challenger)",
+                "prize": "$37,520",
+                "season": "2022",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "M25 Ibague (ITF)",
+                "prize": "$25,000",
+                "season": "2022",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "M25 Santo Domingo 2 (ITF)",
+                "prize": "$25,000",
+                "season": "2023",
+                "surface": "hard",
+                "type": "doubles"
+              },
+              {
+                "name": "M25 Santo Domingo (ITF)",
+                "prize": "$25,000",
+                "season": "2023",
+                "surface": "hard",
+                "type": "doubles"
+              },
+              {
+                "name": "M15 Arequipa (ITF)",
+                "prize": "$15,000",
+                "season": "2023",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "M25 Mendoza (ITF)",
+                "prize": "$25,000",
+                "season": "2023",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "Guayaquil (Challenger)",
+                "prize": "$80,000",
+                "season": "2023",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "Buenos Aires (Challenger)",
+                "prize": "$41,000",
+                "season": "2024",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "M15 Santa Cruz 2 (ITF)",
+                "prize": "$15,000",
+                "season": "2023",
+                "surface": "clay",
+                "type": "doubles"
+              },
+              {
+                "name": "M25 Portoviejo (ITF)",
+                "prize": "$25,000",
+                "season": "2021",
+                "surface": "clay",
+                "type": "singles"
+              }
+            ]
+          }
+        ],
+        "ok": true,
+        "result_count": 1,
+        "top_level_keys": [
+          "success",
+          "result"
+        ]
+      },
+      "get_rankings": {
+        "error": "HTTP Error 404: Not Found",
+        "ok": false
+      }
+    },
+    "53732": {
+      "get_player": {
+        "error": "HTTP Error 404: Not Found",
+        "ok": false
+      },
+      "get_players": {
+        "name_like_fields_sample": [
+          {
+            "player_bday": "01.01.1970",
+            "player_country": "Poland",
+            "player_full_name": null,
+            "player_key": 53732,
+            "player_logo": null,
+            "player_name": "A. Blus",
+            "tournaments": []
+          }
+        ],
+        "ok": true,
+        "result_count": 1,
+        "top_level_keys": [
+          "success",
+          "result"
+        ]
+      },
+      "get_rankings": {
+        "error": "HTTP Error 404: Not Found",
+        "ok": false
+      }
+    },
+    "9514": {
+      "get_player": {
+        "error": "HTTP Error 404: Not Found",
+        "ok": false
+      },
+      "get_players": {
+        "name_like_fields_sample": [
+          {
+            "player_bday": "25.03.2004",
+            "player_country": "Peru",
+            "player_full_name": "Ignacio Buse",
+            "player_key": 9514,
+            "player_logo": "https://api.api-tennis.com/logo-tennis/9514_i-buse.jpg",
+            "player_name": "I. Buse",
+            "tournaments": [
+              {
+                "name": "M25 Vic (ITF)",
+                "prize": "$25,000",
+                "season": "2024",
+                "surface": "clay",
+                "type": "singles"
+              },
+              {
+                "name": "M25 Zapopan (ITF)",
+                "prize": "$25,000",
+                "season": "2023",
+                "surface": "clay",
+                "type": "singles"
+              },
+              {
+                "name": "M25 Mendoza (ITF)",
+                "prize": "$25,000",
+                "season": "2023",
+                "surface": "clay",
+                "type": "singles"
+              },
+              {
+                "name": "M15 Cancun 11 (ITF)",
+                "prize": "$15,000",
+                "season": "2022",
+                "surface": "hard",
+                "type": "doubles"
+              },
+              {
+                "name": "Heilbronn (Challenger)",
+                "prize": "€145,250",
+                "season": "2025",
+                "surface": "clay",
+                "type": "singles"
+              },
+              {
+                "name": "Seville (Challenger)",
+                "prize": "€181,250",
+                "season": "2025",
+                "surface": "clay",
+                "type": "singles"
+              }
+            ]
+          }
+        ],
+        "ok": true,
+        "result_count": 1,
+        "top_level_keys": [
+          "success",
+          "result"
+        ]
+      },
+      "get_rankings": {
+        "error": "HTTP Error 404: Not Found",
+        "ok": false
+      }
+    }
+  },
+  "generated_at": "2026-06-16T10:07:36+00:00",
+  "methods_checked": [
+    "get_players",
+    "get_player",
+    "get_rankings"
+  ],
+  "outputs": {
+    "raw_responses_json": "data/reports/api_tennis/api_player_details_raw_responses.json",
+    "summary_json": "data/reports/api_tennis/api_player_details_inspect.json"
+  },
+  "player_keys_checked": [
+    "53732",
+    "2188",
+    "11781",
+    "1056",
+    "17463",
+    "9514"
+  ],
+  "purpose": "Check whether API-Tennis raw fixtures or player endpoints expose full player names for mapping.",
+  "raw_fixture_hits": [
+    {
+      "fixture": {
+        "event_date": "2026-06-16",
+        "event_final_result": "-",
+        "event_first_player": "I. Buse",
+        "event_first_player_logo": "https://api.api-tennis.com/logo-tennis/9514_i-buse.jpg",
+        "event_game_result": "-",
+        "event_key": 12136529,
+        "event_live": "0",
+        "event_qualification": "False",
+        "event_second_player": "R. Jodar",
+        "event_second_player_logo": "https://api.api-tennis.com/logo-tennis/50323_r-jodar.jpg",
+        "event_serve": null,
+        "event_status": "Cancelled",
+        "event_time": "12:30",
+        "event_type_type": "Atp Singles",
+        "event_winner": null,
+        "first_player_key": 9514,
+        "pointbypoint": [],
+        "scores": [
+          {
+            "score_first": "0",
+            "score_second": "0",
+            "score_set": "1"
+          }
+        ],
+        "second_player_key": 50323,
+        "statistics": [],
+        "tournament_key": 2042,
+        "tournament_name": "London",
+        "tournament_round": "ATP London - 1/16-finals",
+        "tournament_season": "2026"
+      },
+      "raw_index": 22
+    },
+    {
+      "fixture": {
+        "event_date": "2026-06-16",
+        "event_final_result": "-",
+        "event_first_player": "I. Buse",
+        "event_first_player_logo": "https://api.api-tennis.com/logo-tennis/9514_i-buse.jpg",
+        "event_game_result": "-",
+        "event_key": 12137081,
+        "event_live": "0",
+        "event_qualification": "False",
+        "event_second_player": "M. Giron",
+        "event_second_player_logo": "https://api.api-tennis.com/logo-tennis/1766_m-giron.jpg",
+        "event_serve": null,
+        "event_status": "",
+        "event_time": "12:30",
+        "event_type_type": "Atp Singles",
+        "event_winner": null,
+        "first_player_key": 9514,
+        "pointbypoint": [],
+        "scores": [
+          {
+            "score_first": "0",
+            "score_second": "0",
+            "score_set": "1"
+          }
+        ],
+        "second_player_key": 1766,
+        "statistics": [],
+        "tournament_key": 2042,
+        "tournament_name": "London",
+        "tournament_round": "ATP London - 1/16-finals",
+        "tournament_season": "2026"
+      },
+      "raw_index": 233
+    },
+    {
+      "fixture": {
+        "event_date": "2026-06-16",
+        "event_final_result": "-",
+        "event_first_player": "A. Burdet",
+        "event_first_player_logo": "https://api.api-tennis.com/logo-tennis/40101_a-burdet.jpg",
+        "event_game_result": "-",
+        "event_key": 12137117,
+        "event_live": "0",
+        "event_qualification": "False",
+        "event_second_player": "A. Martin",
+        "event_second_player_logo": "https://api.api-tennis.com/logo-tennis/1056_a-martin.jpg",
+        "event_serve": null,
+        "event_status": "",
+        "event_time": "13:30",
+        "event_type_type": "Itf Men Singles",
+        "event_winner": null,
+        "first_player_key": 40101,
+        "pointbypoint": [],
+        "scores": [
+          {
+            "score_first": "0",
+            "score_second": "0",
+            "score_set": "1"
+          }
+        ],
+        "second_player_key": 1056,
+        "statistics": [],
+        "tournament_key": 3591,
+        "tournament_name": "M25 Klosters",
+        "tournament_round": "M25 Klosters - 1/16-finals",
+        "tournament_season": "2026"
+      },
+      "raw_index": 269
+    },
+    {
+      "fixture": {
+        "event_date": "2026-06-16",
+        "event_final_result": "-",
+        "event_first_player": "R. Cruz",
+        "event_first_player_logo": null,
+        "event_game_result": "-",
+        "event_key": 12137442,
+        "event_live": "0",
+        "event_qualification": "False",
+        "event_second_player": "O. A. Martinez De Freitas",
+        "event_second_player_logo": null,
+        "event_serve": null,
+        "event_status": "",
+        "event_time": "12:30",
+        "event_type_type": "Itf Men Singles",
+        "event_winner": null,
+        "first_player_key": 104063,
+        "pointbypoint": [],
+        "scores": [
+          {
+            "score_first": "0",
+            "score_second": "0",
+            "score_set": "1"
+          }
+        ],
+        "second_player_key": 104064,
+        "statistics": [],
+        "tournament_key": 13999,
+        "tournament_name": "M25 Lourinha (Portugal)",
+        "tournament_round": "M25 Lourinha - 1/16-finals",
+        "tournament_season": "2026"
+      },
+      "raw_index": 491
+    },
+    {
+      "fixture": {
+        "event_date": "2026-06-16",
+        "event_final_result": "-",
+        "event_first_player": "A. Martin",
+        "event_first_player_logo": "https://api.api-tennis.com/logo-tennis/1056_a-martin.jpg",
+        "event_game_result": "-",
+        "event_key": 12137451,
+        "event_live": "0",
+        "event_qualification": "False",
+        "event_second_player": "M. Farzam",
+        "event_second_player_logo": null,
+        "event_serve": null,
+        "event_status": "",
+        "event_time": "20:00",
+        "event_type_type": "Itf Men Singles",
+        "event_winner": null,
+        "first_player_key": 1056,
+        "pointbypoint": [],
+        "scores": [
+          {
+            "score_first": "0",
+            "score_second": "0",
+            "score_set": "1"
+          }
+        ],
+        "second_player_key": 67513,
+        "statistics": [],
+        "tournament_key": 4219,
+        "tournament_name": "M25 Tulsa, OK",
+        "tournament_round": "M25 Tulsa, OK - 1/16-finals",
+        "tournament_season": "2026"
+      },
+      "raw_index": 500
+    }
+  ],
+  "raw_fixture_hits_count": 5
+}

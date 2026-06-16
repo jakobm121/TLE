@@ -1,0 +1,2062 @@
+{
+  "1056": {
+    "get_player": {
+      "error": "HTTP Error 404: Not Found"
+    },
+    "get_players": {
+      "result": [
+        {
+          "player_bday": "07.07.2001",
+          "player_country": "USA",
+          "player_full_name": "Andres Martin",
+          "player_key": 1056,
+          "player_logo": "https://api.api-tennis.com/logo-tennis/1056_a-martin.jpg",
+          "player_name": "A. Martin",
+          "stats": [
+            {
+              "clay_lost": "",
+              "clay_won": "",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "2",
+              "hard_won": "0",
+              "matches_lost": "2",
+              "matches_won": "0",
+              "rank": "",
+              "season": "2022",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "",
+              "clay_won": "",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "1",
+              "hard_won": "0",
+              "matches_lost": "1",
+              "matches_won": "0",
+              "rank": "",
+              "season": "2021",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "0",
+              "clay_won": "1",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "",
+              "hard_won": "",
+              "matches_lost": "0",
+              "matches_won": "1",
+              "rank": "397",
+              "season": "2020",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "",
+              "clay_won": "",
+              "grass_lost": "1",
+              "grass_won": "0",
+              "hard_lost": "1",
+              "hard_won": "1",
+              "matches_lost": "2",
+              "matches_won": "1",
+              "rank": "",
+              "season": "2019",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "11",
+              "clay_won": "16",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "4",
+              "hard_won": "4",
+              "matches_lost": "15",
+              "matches_won": "20",
+              "rank": "171",
+              "season": "2018",
+              "titles": "1",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "8",
+              "clay_won": "3",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "2",
+              "hard_won": "0",
+              "matches_lost": "10",
+              "matches_won": "3",
+              "rank": "704",
+              "season": "2017",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "20",
+              "clay_won": "38",
+              "grass_lost": "2",
+              "grass_won": "1",
+              "hard_lost": "3",
+              "hard_won": "3",
+              "matches_lost": "25",
+              "matches_won": "42",
+              "rank": "82",
+              "season": "2016",
+              "titles": "3",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "15",
+              "clay_won": "38",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "5",
+              "hard_won": "4",
+              "matches_lost": "20",
+              "matches_won": "42",
+              "rank": "92",
+              "season": "2015",
+              "titles": "6",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "8",
+              "clay_won": "5",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "0",
+              "hard_won": "5",
+              "matches_lost": "8",
+              "matches_won": "14",
+              "rank": "269",
+              "season": "2014",
+              "titles": "2",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "13",
+              "clay_won": "4",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "8",
+              "hard_won": "7",
+              "matches_lost": "21",
+              "matches_won": "11",
+              "rank": "312",
+              "season": "2013",
+              "titles": "1",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "9",
+              "clay_won": "8",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "3",
+              "hard_won": "5",
+              "matches_lost": "12",
+              "matches_won": "13",
+              "rank": "371",
+              "season": "2012",
+              "titles": "1",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "3",
+              "clay_won": "2",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "",
+              "hard_won": "",
+              "matches_lost": "3",
+              "matches_won": "2",
+              "rank": "383",
+              "season": "2011",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "",
+              "clay_won": "",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "8",
+              "hard_won": "12",
+              "matches_lost": "8",
+              "matches_won": "12",
+              "rank": "",
+              "season": "2022",
+              "titles": "0",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "33",
+              "clay_won": "40",
+              "grass_lost": "1",
+              "grass_won": "1",
+              "hard_lost": "3",
+              "hard_won": "0",
+              "matches_lost": "37",
+              "matches_won": "41",
+              "rank": "116",
+              "season": "2021",
+              "titles": "0",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "12",
+              "clay_won": "14",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "6",
+              "hard_won": "2",
+              "matches_lost": "18",
+              "matches_won": "16",
+              "rank": "101",
+              "season": "2020",
+              "titles": "0",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "1",
+              "clay_won": "0",
+              "grass_lost": "1",
+              "grass_won": "2",
+              "hard_lost": "1",
+              "hard_won": "0",
+              "matches_lost": "3",
+              "matches_won": "2",
+              "rank": "",
+              "season": "2019",
+              "titles": "0",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "19",
+              "clay_won": "19",
+              "grass_lost": "2",
+              "grass_won": "0",
+              "hard_lost": "5",
+              "hard_won": "2",
+              "matches_lost": "26",
+              "matches_won": "21",
+              "rank": "183",
+              "season": "2018",
+              "titles": "1",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "19",
+              "clay_won": "30",
+              "grass_lost": "1",
+              "grass_won": "0",
+              "hard_lost": "2",
+              "hard_won": "1",
+              "matches_lost": "22",
+              "matches_won": "31",
+              "rank": "160",
+              "season": "2017",
+              "titles": "2",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "25",
+              "clay_won": "30",
+              "grass_lost": "2",
+              "grass_won": "0",
+              "hard_lost": "4",
+              "hard_won": "1",
+              "matches_lost": "31",
+              "matches_won": "31",
+              "rank": "137",
+              "season": "2016",
+              "titles": "0",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "23",
+              "clay_won": "32",
+              "grass_lost": "1",
+              "grass_won": "0",
+              "hard_lost": "6",
+              "hard_won": "2",
+              "matches_lost": "30",
+              "matches_won": "34",
+              "rank": "146",
+              "season": "2015",
+              "titles": "2",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "11",
+              "clay_won": "24",
+              "grass_lost": "1",
+              "grass_won": "0",
+              "hard_lost": "9",
+              "hard_won": "8",
+              "matches_lost": "21",
+              "matches_won": "32",
+              "rank": "179",
+              "season": "2014",
+              "titles": "1",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "17",
+              "clay_won": "20",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "16",
+              "hard_won": "16",
+              "matches_lost": "33",
+              "matches_won": "36",
+              "rank": "128",
+              "season": "2013",
+              "titles": "2",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "15",
+              "clay_won": "37",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "8",
+              "hard_won": "10",
+              "matches_lost": "23",
+              "matches_won": "47",
+              "rank": "203",
+              "season": "2012",
+              "titles": "5",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "10",
+              "clay_won": "5",
+              "grass_lost": "1",
+              "grass_won": "0",
+              "hard_lost": "12",
+              "hard_won": "14",
+              "matches_lost": "23",
+              "matches_won": "19",
+              "rank": "309",
+              "season": "2011",
+              "titles": "0",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "5",
+              "clay_won": "8",
+              "grass_lost": "1",
+              "grass_won": "1",
+              "hard_lost": "10",
+              "hard_won": "14",
+              "matches_lost": "16",
+              "matches_won": "23",
+              "rank": "177",
+              "season": "2010",
+              "titles": "1",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "1",
+              "clay_won": "0",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "1",
+              "hard_won": "1",
+              "matches_lost": "2",
+              "matches_won": "1",
+              "rank": "423",
+              "season": "2009",
+              "titles": "0",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "1",
+              "clay_won": "0",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "8",
+              "hard_won": "12",
+              "matches_lost": "9",
+              "matches_won": "12",
+              "rank": "860",
+              "season": "2023",
+              "titles": "1",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "2",
+              "clay_won": "1",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "14",
+              "hard_won": "20",
+              "matches_lost": "16",
+              "matches_won": "21",
+              "rank": "510",
+              "season": "2023",
+              "titles": "1",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "1",
+              "clay_won": "0",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "15",
+              "hard_won": "19",
+              "matches_lost": "16",
+              "matches_won": "19",
+              "rank": "587",
+              "season": "2024",
+              "titles": "0",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "",
+              "clay_won": "",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "7",
+              "hard_won": "4",
+              "matches_lost": "7",
+              "matches_won": "4",
+              "rank": "1025",
+              "season": "2024",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "2",
+              "clay_won": "7",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "8",
+              "hard_won": "15",
+              "matches_lost": "10",
+              "matches_won": "22",
+              "rank": "349",
+              "season": "2025",
+              "titles": "4",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "4",
+              "clay_won": "9",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "24",
+              "hard_won": "38",
+              "matches_lost": "28",
+              "matches_won": "47",
+              "rank": "271",
+              "season": "2025",
+              "titles": "0",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "",
+              "clay_won": "",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "1",
+              "hard_won": "0",
+              "matches_lost": "1",
+              "matches_won": "0",
+              "rank": "269",
+              "season": "2026",
+              "titles": "0",
+              "type": "singles"
+            }
+          ],
+          "tournaments": [
+            {
+              "name": "Losinj (Challenger)",
+              "prize": "€44,820",
+              "season": "2021",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "Almaty (Challenger)",
+              "prize": "$54,160",
+              "season": "2019",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "Banja Luka (Challenger)",
+              "prize": "€85,000",
+              "season": "2018",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "Casablanca (Challenger)",
+              "prize": "€42,500",
+              "season": "2016",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "Como (Challenger)",
+              "prize": "€42,500",
+              "season": "2016",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "Turin (Challenger)",
+              "prize": "€42,500",
+              "season": "2016",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "Montevideo (Challenger)",
+              "prize": "$50,000",
+              "season": "2015",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "Lima (Challenger)",
+              "prize": "$50,000",
+              "season": "2015",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "Cordenons (Challenger)",
+              "prize": "€42,500",
+              "season": "2015",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "Liberec (Challenger)",
+              "prize": "€42,500",
+              "season": "2015",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "Biella (Challenger)",
+              "prize": "€42,500",
+              "season": "2015",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "Ostrava (Challenger)",
+              "prize": "€42,500",
+              "season": "2015",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "Vicenza (Challenger)",
+              "prize": "€42,500",
+              "season": "2014",
+              "surface": "",
+              "type": "doubles"
+            },
+            {
+              "name": "Morelos (Challenger)",
+              "prize": "$75,000",
+              "season": "2014",
+              "surface": "hard",
+              "type": "doubles"
+            },
+            {
+              "name": "Bergamo (Challenger)",
+              "prize": "€42,500",
+              "season": "2013",
+              "surface": "hard (indoor)",
+              "type": "doubles"
+            },
+            {
+              "name": "Faro 2 (ITF)",
+              "prize": "$10,000",
+              "season": "2012",
+              "surface": "hard",
+              "type": "doubles"
+            },
+            {
+              "name": "Shymkent 2 (Challenger)",
+              "prize": "$54,160",
+              "season": "2019",
+              "surface": "clay",
+              "type": "singles"
+            },
+            {
+              "name": "Shymkent (Challenger)",
+              "prize": "$54,160",
+              "season": "2019",
+              "surface": "clay",
+              "type": "singles"
+            },
+            {
+              "name": "Nanchang (Challenger)",
+              "prize": "$54,160",
+              "season": "2019",
+              "surface": "clay (indoor)",
+              "type": "singles"
+            },
+            {
+              "name": "Liberec (Challenger)",
+              "prize": "€43,000",
+              "season": "2018",
+              "surface": "clay",
+              "type": "singles"
+            },
+            {
+              "name": "Prague (Challenger)",
+              "prize": "€43,000",
+              "season": "2017",
+              "surface": "clay",
+              "type": "singles"
+            },
+            {
+              "name": "San Luis Potosi (Challenger)",
+              "prize": "$50,000",
+              "season": "2017",
+              "surface": "clay",
+              "type": "singles"
+            },
+            {
+              "name": "Biella (Challenger)",
+              "prize": "€42,500",
+              "season": "2015",
+              "surface": "clay",
+              "type": "singles"
+            },
+            {
+              "name": "Padova (Challenger)",
+              "prize": "€42,500",
+              "season": "2015",
+              "surface": "clay",
+              "type": "singles"
+            },
+            {
+              "name": "Liberec (Challenger)",
+              "prize": "€35,000",
+              "season": "2014",
+              "surface": "clay",
+              "type": "singles"
+            },
+            {
+              "name": "San Benedetto (Challenger)",
+              "prize": "€30,000",
+              "season": "2013",
+              "surface": "clay",
+              "type": "singles"
+            },
+            {
+              "name": "Mexico City (Challenger)",
+              "prize": "$35,000",
+              "season": "2013",
+              "surface": "hard",
+              "type": "singles"
+            },
+            {
+              "name": "Dubrovnik (ITF)",
+              "prize": "$15,000",
+              "season": "2012",
+              "surface": "clay",
+              "type": "singles"
+            },
+            {
+              "name": "Solin (ITF)",
+              "prize": "$10,000",
+              "season": "2012",
+              "surface": "clay",
+              "type": "singles"
+            },
+            {
+              "name": "Piestany (ITF)",
+              "prize": "$10,000",
+              "season": "2012",
+              "surface": "clay",
+              "type": "singles"
+            },
+            {
+              "name": "Jablonec nad Nisou (ITF)",
+              "prize": "$10,000",
+              "season": "2012",
+              "surface": "clay",
+              "type": "singles"
+            },
+            {
+              "name": "Faro 2 (ITF)",
+              "prize": "$10,000",
+              "season": "2012",
+              "surface": "hard",
+              "type": "singles"
+            },
+            {
+              "name": "Samarkand (Challenger)",
+              "prize": "$35,000",
+              "season": "2010",
+              "surface": "clay",
+              "type": "singles"
+            },
+            {
+              "name": "M15 Monastir 38 (ITF)",
+              "prize": "$15,000",
+              "season": "2023",
+              "surface": "hard",
+              "type": "doubles"
+            },
+            {
+              "name": "M15 Monastir 38 (ITF)",
+              "prize": "$15,000",
+              "season": "2023",
+              "surface": "hard",
+              "type": "singles"
+            },
+            {
+              "name": "M15 Naples, FL (ITF)",
+              "prize": "$15,000",
+              "season": "2025",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "M25 Bakersfield, CA (ITF)",
+              "prize": "$30,000",
+              "season": "2025",
+              "surface": "hard",
+              "type": "doubles"
+            },
+            {
+              "name": "M25 Nottingham (ITF)",
+              "prize": "$30,000",
+              "season": "2025",
+              "surface": "hard",
+              "type": "doubles"
+            },
+            {
+              "name": "Winnipeg (Challenger)",
+              "prize": "$100,000",
+              "season": "2025",
+              "surface": "hard",
+              "type": "doubles"
+            }
+          ]
+        }
+      ],
+      "success": 1
+    },
+    "get_rankings": {
+      "error": "HTTP Error 404: Not Found"
+    }
+  },
+  "11781": {
+    "get_player": {
+      "error": "HTTP Error 404: Not Found"
+    },
+    "get_players": {
+      "result": [
+        {
+          "player_bday": "27.05.1996",
+          "player_country": "India",
+          "player_full_name": "Prajwal Dev S D",
+          "player_key": 11781,
+          "player_logo": "https://api.api-tennis.com/logo-tennis/11781_p-dev-s-d.jpg",
+          "player_name": "P. Dev S D",
+          "stats": [
+            {
+              "clay_lost": "5",
+              "clay_won": "12",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "12",
+              "hard_won": "32",
+              "matches_lost": "17",
+              "matches_won": "44",
+              "rank": "304",
+              "season": "2023",
+              "titles": "7",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "1",
+              "clay_won": "6",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "14",
+              "hard_won": "11",
+              "matches_lost": "15",
+              "matches_won": "17",
+              "rank": "742",
+              "season": "2022",
+              "titles": "1",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "3",
+              "clay_won": "2",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "7",
+              "hard_won": "7",
+              "matches_lost": "10",
+              "matches_won": "9",
+              "rank": "841",
+              "season": "2021",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "4",
+              "clay_won": "1",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "1",
+              "hard_won": "0",
+              "matches_lost": "5",
+              "matches_won": "1",
+              "rank": "693",
+              "season": "2020",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "",
+              "clay_won": "",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "1",
+              "hard_won": "1",
+              "matches_lost": "1",
+              "matches_won": "1",
+              "rank": "534",
+              "season": "2018",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "6",
+              "clay_won": "11",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "23",
+              "hard_won": "29",
+              "matches_lost": "29",
+              "matches_won": "40",
+              "rank": "615",
+              "season": "2023",
+              "titles": "0",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "2",
+              "clay_won": "5",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "17",
+              "hard_won": "15",
+              "matches_lost": "19",
+              "matches_won": "20",
+              "rank": "735",
+              "season": "2022",
+              "titles": "0",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "2",
+              "clay_won": "0",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "8",
+              "hard_won": "8",
+              "matches_lost": "10",
+              "matches_won": "8",
+              "rank": "958",
+              "season": "2021",
+              "titles": "0",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "4",
+              "clay_won": "0",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "1",
+              "hard_won": "0",
+              "matches_lost": "5",
+              "matches_won": "0",
+              "rank": "995",
+              "season": "2020",
+              "titles": "0",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "7",
+              "clay_won": "26",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "11",
+              "hard_won": "13",
+              "matches_lost": "18",
+              "matches_won": "39",
+              "rank": "342",
+              "season": "2024",
+              "titles": "4",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "10",
+              "clay_won": "10",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "12",
+              "hard_won": "14",
+              "matches_lost": "22",
+              "matches_won": "24",
+              "rank": "776",
+              "season": "2024",
+              "titles": "0",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "6",
+              "clay_won": "11",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "19",
+              "hard_won": "32",
+              "matches_lost": "25",
+              "matches_won": "43",
+              "rank": "230",
+              "season": "2025",
+              "titles": "4",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "9",
+              "clay_won": "5",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "19",
+              "hard_won": "25",
+              "matches_lost": "28",
+              "matches_won": "30",
+              "rank": "632",
+              "season": "2025",
+              "titles": "1",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "",
+              "clay_won": "",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "1",
+              "hard_won": "1",
+              "matches_lost": "1",
+              "matches_won": "1",
+              "rank": "228",
+              "season": "2026",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "2",
+              "clay_won": "0",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "7",
+              "hard_won": "6",
+              "matches_lost": "9",
+              "matches_won": "6",
+              "rank": "632",
+              "season": "2026",
+              "titles": "0",
+              "type": "singles"
+            }
+          ],
+          "tournaments": [
+            {
+              "name": "M15 Sharm ElSheikh 3 (ITF)",
+              "prize": "$15,000",
+              "season": "2023",
+              "surface": "hard",
+              "type": "doubles"
+            },
+            {
+              "name": "M15 Sharm ElSheikh (ITF)",
+              "prize": "$15,000",
+              "season": "2023",
+              "surface": "hard",
+              "type": "doubles"
+            },
+            {
+              "name": "M15 Colombo (ITF)",
+              "prize": "$15,000",
+              "season": "2022",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "M15 Addis Ababa 2 (ITF)",
+              "prize": "$15,000",
+              "season": "2023",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "M15 Jakarta 5 (ITF)",
+              "prize": "$15,000",
+              "season": "2023",
+              "surface": "hard",
+              "type": "doubles"
+            },
+            {
+              "name": "Astana (Challenger)",
+              "prize": "$40,000",
+              "season": "2023",
+              "surface": "hard",
+              "type": "doubles"
+            },
+            {
+              "name": "M15 Ahmedabad (ITF)",
+              "prize": "$15,000",
+              "season": "2023",
+              "surface": "hard",
+              "type": "doubles"
+            },
+            {
+              "name": "M25 Dharwad (ITF)",
+              "prize": "$25,000",
+              "season": "2023",
+              "surface": "hard",
+              "type": "doubles"
+            },
+            {
+              "name": "M25 Brazzaville (ITF)",
+              "prize": "$25,000",
+              "season": "2024",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "M25 Brazzaville 2 (ITF)",
+              "prize": "$25,000",
+              "season": "2024",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "M15 Tehran (ITF)",
+              "prize": "$15,000",
+              "season": "2024",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "M25 Mumbai (ITF)",
+              "prize": "$25,000",
+              "season": "2024",
+              "surface": "hard",
+              "type": "doubles"
+            },
+            {
+              "name": "M15 Monastir 24 (ITF)",
+              "prize": "$15,000",
+              "season": "2025",
+              "surface": "hard",
+              "type": "doubles"
+            },
+            {
+              "name": "M15 Tehran 2 (ITF)",
+              "prize": "$15,000",
+              "season": "2025",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "M25 Denia (ITF)",
+              "prize": "$30,000",
+              "season": "2025",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "M15 Bhubaneswar (ITF)",
+              "prize": "$15,000",
+              "season": "2025",
+              "surface": "hard",
+              "type": "doubles"
+            },
+            {
+              "name": "M15 Bhubaneswar (ITF)",
+              "prize": "$15,000",
+              "season": "2025",
+              "surface": "hard",
+              "type": "singles"
+            }
+          ]
+        }
+      ],
+      "success": 1
+    },
+    "get_rankings": {
+      "error": "HTTP Error 404: Not Found"
+    }
+  },
+  "17463": {
+    "get_player": {
+      "error": "HTTP Error 404: Not Found"
+    },
+    "get_players": {
+      "result": [
+        {
+          "player_bday": "28.09.2007",
+          "player_country": "USA",
+          "player_full_name": "Darwin Blanch",
+          "player_key": 17463,
+          "player_logo": "https://api.api-tennis.com/logo-tennis/17463_d-blanch.jpg",
+          "player_name": "D. Blanch",
+          "stats": [
+            {
+              "clay_lost": "",
+              "clay_won": "",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "",
+              "hard_won": "",
+              "matches_lost": "",
+              "matches_won": "",
+              "rank": "",
+              "season": "",
+              "titles": "",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "3",
+              "clay_won": "3",
+              "grass_lost": "3",
+              "grass_won": "3",
+              "hard_lost": "3",
+              "hard_won": "3",
+              "matches_lost": "3",
+              "matches_won": "3",
+              "rank": "3",
+              "season": "3",
+              "titles": "3",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "2",
+              "clay_won": "2",
+              "grass_lost": "2",
+              "grass_won": "2",
+              "hard_lost": "2",
+              "hard_won": "2",
+              "matches_lost": "2",
+              "matches_won": "2",
+              "rank": "2",
+              "season": "2",
+              "titles": "2",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "1",
+              "clay_won": "1",
+              "grass_lost": "1",
+              "grass_won": "1",
+              "hard_lost": "1",
+              "hard_won": "1",
+              "matches_lost": "1",
+              "matches_won": "1",
+              "rank": "1",
+              "season": "1",
+              "titles": "1",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "0",
+              "clay_won": "0",
+              "grass_lost": "0",
+              "grass_won": "0",
+              "hard_lost": "0",
+              "hard_won": "0",
+              "matches_lost": "0",
+              "matches_won": "0",
+              "rank": "0",
+              "season": "0",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "6",
+              "clay_won": "8",
+              "grass_lost": "1",
+              "grass_won": "4",
+              "hard_lost": "3",
+              "hard_won": "2",
+              "matches_lost": "10",
+              "matches_won": "14",
+              "rank": "1246",
+              "season": "2023",
+              "titles": "0",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "",
+              "clay_won": "",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "5",
+              "hard_won": "3",
+              "matches_lost": "5",
+              "matches_won": "3",
+              "rank": "1517",
+              "season": "2022",
+              "titles": "0",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "1",
+              "clay_won": "1",
+              "grass_lost": "1",
+              "grass_won": "3",
+              "hard_lost": "1",
+              "hard_won": "0",
+              "matches_lost": "3",
+              "matches_won": "4",
+              "rank": "",
+              "season": "2023",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "",
+              "clay_won": "",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "3",
+              "hard_won": "2",
+              "matches_lost": "3",
+              "matches_won": "2",
+              "rank": "1657",
+              "season": "2022",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "9",
+              "clay_won": "5",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "10",
+              "hard_won": "13",
+              "matches_lost": "19",
+              "matches_won": "18",
+              "rank": "804",
+              "season": "2024",
+              "titles": "0",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "1",
+              "clay_won": "0",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "1",
+              "hard_won": "0",
+              "matches_lost": "2",
+              "matches_won": "0",
+              "rank": "",
+              "season": "2024",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "",
+              "clay_won": "",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "1",
+              "hard_won": "1",
+              "matches_lost": "1",
+              "matches_won": "1",
+              "rank": "",
+              "season": "2025",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "3",
+              "clay_won": "2",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "19",
+              "hard_won": "38",
+              "matches_lost": "22",
+              "matches_won": "40",
+              "rank": "285",
+              "season": "2025",
+              "titles": "2",
+              "type": "singles"
+            }
+          ],
+          "tournaments": [
+            {
+              "name": "M15 Villena (ITF)",
+              "prize": "$15,000",
+              "season": "2025",
+              "surface": "hard",
+              "type": "singles"
+            },
+            {
+              "name": "M25 Martos (ITF)",
+              "prize": "$30,000",
+              "season": "2025",
+              "surface": "hard",
+              "type": "singles"
+            }
+          ]
+        }
+      ],
+      "success": 1
+    },
+    "get_rankings": {
+      "error": "HTTP Error 404: Not Found"
+    }
+  },
+  "2188": {
+    "get_player": {
+      "error": "HTTP Error 404: Not Found"
+    },
+    "get_players": {
+      "result": [
+        {
+          "player_bday": "16.07.1994",
+          "player_country": "Peru",
+          "player_full_name": "Arklon Huertas Del Pino Cordova",
+          "player_key": 2188,
+          "player_logo": "https://api.api-tennis.com/logo-tennis/2188_a-huertas-del-pino.jpg",
+          "player_name": "A. Huertas Del Pino",
+          "stats": [
+            {
+              "clay_lost": "12",
+              "clay_won": "37",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "1",
+              "hard_won": "6",
+              "matches_lost": "14",
+              "matches_won": "43",
+              "rank": "243",
+              "season": "2022",
+              "titles": "7",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "5",
+              "clay_won": "7",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "1",
+              "hard_won": "6",
+              "matches_lost": "6",
+              "matches_won": "13",
+              "rank": "791",
+              "season": "2021",
+              "titles": "2",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "1",
+              "clay_won": "1",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "",
+              "hard_won": "",
+              "matches_lost": "1",
+              "matches_won": "1",
+              "rank": "324",
+              "season": "2019",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "1",
+              "clay_won": "0",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "",
+              "hard_won": "",
+              "matches_lost": "1",
+              "matches_won": "0",
+              "rank": "",
+              "season": "2018",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "20",
+              "clay_won": "29",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "2",
+              "hard_won": "0",
+              "matches_lost": "22",
+              "matches_won": "29",
+              "rank": "491",
+              "season": "2022",
+              "titles": "0",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "7",
+              "clay_won": "9",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "3",
+              "hard_won": "3",
+              "matches_lost": "10",
+              "matches_won": "12",
+              "rank": "764",
+              "season": "2021",
+              "titles": "1",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "3",
+              "clay_won": "1",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "",
+              "hard_won": "",
+              "matches_lost": "3",
+              "matches_won": "1",
+              "rank": "573",
+              "season": "2019",
+              "titles": "0",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "16",
+              "clay_won": "30",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "2",
+              "hard_won": "8",
+              "matches_lost": "18",
+              "matches_won": "39",
+              "rank": "182",
+              "season": "2023",
+              "titles": "6",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "21",
+              "clay_won": "26",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "4",
+              "hard_won": "3",
+              "matches_lost": "25",
+              "matches_won": "30",
+              "rank": "582",
+              "season": "2023",
+              "titles": "0",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "7",
+              "clay_won": "9",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "3",
+              "hard_won": "2",
+              "matches_lost": "11",
+              "matches_won": "12",
+              "rank": "377",
+              "season": "2024",
+              "titles": "1",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "5",
+              "clay_won": "3",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "3",
+              "hard_won": "0",
+              "matches_lost": "8",
+              "matches_won": "3",
+              "rank": "1322",
+              "season": "2024",
+              "titles": "0",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "22",
+              "clay_won": "21",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "1",
+              "hard_won": "1",
+              "matches_lost": "23",
+              "matches_won": "22",
+              "rank": "232",
+              "season": "2025",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "16",
+              "clay_won": "9",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "1",
+              "hard_won": "0",
+              "matches_lost": "17",
+              "matches_won": "9",
+              "rank": "886",
+              "season": "2025",
+              "titles": "0",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "0",
+              "clay_won": "0",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "",
+              "hard_won": "",
+              "matches_lost": "0",
+              "matches_won": "0",
+              "rank": "230",
+              "season": "2026",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "9",
+              "clay_won": "5",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "",
+              "hard_won": "",
+              "matches_lost": "9",
+              "matches_won": "5",
+              "rank": "816",
+              "season": "2026",
+              "titles": "0",
+              "type": "singles"
+            }
+          ],
+          "tournaments": [
+            {
+              "name": "M25 Rosario, Santa Fe 2 (ITF)",
+              "prize": "$25,000",
+              "season": "2022",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "M25 Rosario, Santa Fe (ITF)",
+              "prize": "$25,000",
+              "season": "2022",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "M25 Anapoima (ITF)",
+              "prize": "$25,000",
+              "season": "2022",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "M15 Cancun 3 (ITF)",
+              "prize": "$15,000",
+              "season": "2022",
+              "surface": "hard",
+              "type": "doubles"
+            },
+            {
+              "name": "M15 Cancun 9 (ITF)",
+              "prize": "$15,000",
+              "season": "2021",
+              "surface": "hard",
+              "type": "doubles"
+            },
+            {
+              "name": "M25 Lima 2 (ITF)",
+              "prize": "$25,000",
+              "season": "2021",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "M15 Quito 2 (ITF)",
+              "prize": "$15,000",
+              "season": "2022",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "Buenos Aires (Challenger)",
+              "prize": "$37,520",
+              "season": "2022",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "M25 Ibague (ITF)",
+              "prize": "$25,000",
+              "season": "2022",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "M25 Santo Domingo 2 (ITF)",
+              "prize": "$25,000",
+              "season": "2023",
+              "surface": "hard",
+              "type": "doubles"
+            },
+            {
+              "name": "M25 Santo Domingo (ITF)",
+              "prize": "$25,000",
+              "season": "2023",
+              "surface": "hard",
+              "type": "doubles"
+            },
+            {
+              "name": "M15 Arequipa (ITF)",
+              "prize": "$15,000",
+              "season": "2023",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "M25 Mendoza (ITF)",
+              "prize": "$25,000",
+              "season": "2023",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "Guayaquil (Challenger)",
+              "prize": "$80,000",
+              "season": "2023",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "Buenos Aires (Challenger)",
+              "prize": "$41,000",
+              "season": "2024",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "M15 Santa Cruz 2 (ITF)",
+              "prize": "$15,000",
+              "season": "2023",
+              "surface": "clay",
+              "type": "doubles"
+            },
+            {
+              "name": "M25 Portoviejo (ITF)",
+              "prize": "$25,000",
+              "season": "2021",
+              "surface": "clay",
+              "type": "singles"
+            }
+          ]
+        }
+      ],
+      "success": 1
+    },
+    "get_rankings": {
+      "error": "HTTP Error 404: Not Found"
+    }
+  },
+  "53732": {
+    "get_player": {
+      "error": "HTTP Error 404: Not Found"
+    },
+    "get_players": {
+      "result": [
+        {
+          "player_bday": "01.01.1970",
+          "player_country": "Poland",
+          "player_full_name": null,
+          "player_key": 53732,
+          "player_logo": null,
+          "player_name": "A. Blus",
+          "stats": [
+            {
+              "clay_lost": "1",
+              "clay_won": "0",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "",
+              "hard_won": "",
+              "matches_lost": "1",
+              "matches_won": "0",
+              "rank": "",
+              "season": "2024",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "1",
+              "clay_won": "0",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "",
+              "hard_won": "",
+              "matches_lost": "1",
+              "matches_won": "0",
+              "rank": "",
+              "season": "2024",
+              "titles": "0",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "1",
+              "clay_won": "0",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "",
+              "hard_won": "",
+              "matches_lost": "1",
+              "matches_won": "0",
+              "rank": "",
+              "season": "2023",
+              "titles": "0",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "1",
+              "clay_won": "1",
+              "grass_lost": "1",
+              "grass_won": "1",
+              "hard_lost": "1",
+              "hard_won": "1",
+              "matches_lost": "1",
+              "matches_won": "1",
+              "rank": "1",
+              "season": "1",
+              "titles": "1",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "0",
+              "clay_won": "0",
+              "grass_lost": "0",
+              "grass_won": "0",
+              "hard_lost": "0",
+              "hard_won": "0",
+              "matches_lost": "0",
+              "matches_won": "0",
+              "rank": "0",
+              "season": "0",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "",
+              "clay_won": "",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "",
+              "hard_won": "",
+              "matches_lost": "",
+              "matches_won": "",
+              "rank": "",
+              "season": "",
+              "titles": "",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "2",
+              "clay_won": "2",
+              "grass_lost": "2",
+              "grass_won": "2",
+              "hard_lost": "2",
+              "hard_won": "2",
+              "matches_lost": "2",
+              "matches_won": "2",
+              "rank": "2",
+              "season": "2",
+              "titles": "2",
+              "type": "doubles"
+            }
+          ],
+          "tournaments": []
+        }
+      ],
+      "success": 1
+    },
+    "get_rankings": {
+      "error": "HTTP Error 404: Not Found"
+    }
+  },
+  "9514": {
+    "get_player": {
+      "error": "HTTP Error 404: Not Found"
+    },
+    "get_players": {
+      "result": [
+        {
+          "player_bday": "25.03.2004",
+          "player_country": "Peru",
+          "player_full_name": "Ignacio Buse",
+          "player_key": 9514,
+          "player_logo": "https://api.api-tennis.com/logo-tennis/9514_i-buse.jpg",
+          "player_name": "I. Buse",
+          "stats": [
+            {
+              "clay_lost": "6",
+              "clay_won": "11",
+              "grass_lost": "1",
+              "grass_won": "0",
+              "hard_lost": "3",
+              "hard_won": "7",
+              "matches_lost": "10",
+              "matches_won": "18",
+              "rank": "646",
+              "season": "2022",
+              "titles": "1",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "4",
+              "clay_won": "5",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "1",
+              "hard_won": "0",
+              "matches_lost": "5",
+              "matches_won": "5",
+              "rank": "798",
+              "season": "2021",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "2",
+              "clay_won": "0",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "",
+              "hard_won": "",
+              "matches_lost": "2",
+              "matches_won": "0",
+              "rank": "1988",
+              "season": "2020",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "7",
+              "clay_won": "10",
+              "grass_lost": "1",
+              "grass_won": "1",
+              "hard_lost": "4",
+              "hard_won": "4",
+              "matches_lost": "12",
+              "matches_won": "15",
+              "rank": "721",
+              "season": "2022",
+              "titles": "0",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "4",
+              "clay_won": "0",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "1",
+              "hard_won": "1",
+              "matches_lost": "5",
+              "matches_won": "1",
+              "rank": "",
+              "season": "2021",
+              "titles": "0",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "15",
+              "clay_won": "19",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "2",
+              "hard_won": "2",
+              "matches_lost": "17",
+              "matches_won": "22",
+              "rank": "496",
+              "season": "2023",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "16",
+              "clay_won": "27",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "3",
+              "hard_won": "7",
+              "matches_lost": "19",
+              "matches_won": "35",
+              "rank": "444",
+              "season": "2023",
+              "titles": "2",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "4",
+              "clay_won": "2",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "1",
+              "hard_won": "1",
+              "matches_lost": "5",
+              "matches_won": "3",
+              "rank": "2313",
+              "season": "2024",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "24",
+              "clay_won": "44",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "2",
+              "hard_won": "2",
+              "matches_lost": "28",
+              "matches_won": "47",
+              "rank": "234",
+              "season": "2024",
+              "titles": "1",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "19",
+              "clay_won": "39",
+              "grass_lost": "1",
+              "grass_won": "0",
+              "hard_lost": "8",
+              "hard_won": "7",
+              "matches_lost": "28",
+              "matches_won": "49",
+              "rank": "102",
+              "season": "2025",
+              "titles": "2",
+              "type": "singles"
+            },
+            {
+              "clay_lost": "3",
+              "clay_won": "1",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "1",
+              "hard_won": "0",
+              "matches_lost": "5",
+              "matches_won": "2",
+              "rank": "897",
+              "season": "2025",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "3",
+              "clay_won": "0",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "",
+              "hard_won": "",
+              "matches_lost": "4",
+              "matches_won": "0",
+              "rank": "",
+              "season": "2026",
+              "titles": "0",
+              "type": "doubles"
+            },
+            {
+              "clay_lost": "8",
+              "clay_won": "8",
+              "grass_lost": "",
+              "grass_won": "",
+              "hard_lost": "2",
+              "hard_won": "3",
+              "matches_lost": "10",
+              "matches_won": "11",
+              "rank": "62",
+              "season": "2026",
+              "titles": "0",
+              "type": "singles"
+            }
+          ],
+          "tournaments": [
+            {
+              "name": "M25 Vic (ITF)",
+              "prize": "$25,000",
+              "season": "2024",
+              "surface": "clay",
+              "type": "singles"
+            },
+            {
+              "name": "M25 Zapopan (ITF)",
+              "prize": "$25,000",
+              "season": "2023",
+              "surface": "clay",
+              "type": "singles"
+            },
+            {
+              "name": "M25 Mendoza (ITF)",
+              "prize": "$25,000",
+              "season": "2023",
+              "surface": "clay",
+              "type": "singles"
+            },
+            {
+              "name": "M15 Cancun 11 (ITF)",
+              "prize": "$15,000",
+              "season": "2022",
+              "surface": "hard",
+              "type": "doubles"
+            },
+            {
+              "name": "Heilbronn (Challenger)",
+              "prize": "€145,250",
+              "season": "2025",
+              "surface": "clay",
+              "type": "singles"
+            },
+            {
+              "name": "Seville (Challenger)",
+              "prize": "€181,250",
+              "season": "2025",
+              "surface": "clay",
+              "type": "singles"
+            }
+          ]
+        }
+      ],
+      "success": 1
+    },
+    "get_rankings": {
+      "error": "HTTP Error 404: Not Found"
+    }
+  }
+}
