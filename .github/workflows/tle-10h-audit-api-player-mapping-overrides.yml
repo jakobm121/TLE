@@ -1,0 +1,40 @@
+name: TLE 10h Audit API Player Mapping Overrides
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit-api-player-mapping-overrides:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Audit API player mapping overrides
+        run: |
+          python -m tle_machine.audit_api_player_mapping_overrides
+
+      - name: Commit override audit reports
+        if: always()
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/reports/api_tennis/player_mapping_overrides_audit.csv || true
+          git add data/reports/api_tennis/player_mapping_overrides_audit.json || true
+
+          if git diff --cached --quiet; then
+            echo "No override audit report changes to commit."
+          else
+            git commit -m "Audit API player mapping overrides"
+            git push
+          fi
