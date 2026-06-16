@@ -1,0 +1,253 @@
+{
+  "cache_path": "data/raw/api_tennis/players/api_players.json",
+  "cache_total_after": 5051,
+  "cache_with_full_name_after": 2467,
+  "counters": {
+    "cache_existing_before": 0,
+    "candidate_player_ids": 5051,
+    "fetched": 5051,
+    "fetched_missing_full_name": 2584,
+    "fetched_with_full_name": 2467,
+    "to_fetch": 5051
+  },
+  "date_filter": {
+    "end_date": "",
+    "start_date": ""
+  },
+  "errors": [],
+  "generated_at": "2026-06-16T11:44:33+00:00",
+  "method": "get_players",
+  "outputs": {
+    "cache": "data/raw/api_tennis/players/api_players.json",
+    "raw_responses": "data/reports/api_tennis/fetch_api_player_details_raw_responses.json",
+    "report": "data/reports/api_tennis/fetch_api_player_details_report.json"
+  },
+  "raw_files": {
+    "2026-05-26.json": 374,
+    "2026-05-27.json": 512,
+    "2026-05-28.json": 428,
+    "2026-05-29.json": 241,
+    "2026-05-30.json": 169,
+    "2026-05-31.json": 178,
+    "2026-06-01.json": 146,
+    "2026-06-02.json": 386,
+    "2026-06-03.json": 456,
+    "2026-06-04.json": 477,
+    "2026-06-05.json": 257,
+    "2026-06-06.json": 154,
+    "2026-06-07.json": 149,
+    "2026-06-08.json": 101,
+    "2026-06-09.json": 404,
+    "2026-06-10.json": 579,
+    "2026-06-11.json": 495,
+    "2026-06-12.json": 317,
+    "2026-06-13.json": 205,
+    "2026-06-14.json": 143,
+    "2026-06-15.json": 175,
+    "2026-06-16.json": 521
+  },
+  "raw_results_dir": "data/raw/api_tennis/results",
+  "sample_fetched": [
+    {
+      "player_bday": "02.05.1994",
+      "player_country": "Bolivia",
+      "player_full_name": "Noelia Zeballos",
+      "player_key": "6",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/6_n-zeballos.jpg",
+      "player_name": "N. Zeballos",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-16T10:45:08+00:00"
+    },
+    {
+      "player_bday": "28.06.1996",
+      "player_country": "Italy",
+      "player_full_name": "Francesca Dell'Edera",
+      "player_key": "17",
+      "player_logo": "",
+      "player_name": "F. Dell&apos;edera",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-16T10:45:09+00:00"
+    },
+    {
+      "player_bday": "07.04.2004",
+      "player_country": "France",
+      "player_full_name": "Laia Petretic",
+      "player_key": "22",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/22_l-petretic.jpg",
+      "player_name": "L. Petretic",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-16T10:45:10+00:00"
+    },
+    {
+      "player_bday": "12.06.2001",
+      "player_country": "Ukraine",
+      "player_full_name": "Mariia Bergen",
+      "player_key": "23",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/23_m-bergen.jpg",
+      "player_name": "M. Bergen",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-16T10:45:10+00:00"
+    },
+    {
+      "player_bday": "11.11.2003",
+      "player_country": "Romania",
+      "player_full_name": "Bianca Barbulescu",
+      "player_key": "29",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/29_b-e-barbulescu-.jpg",
+      "player_name": "B. E. Barbulescu .",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-16T10:45:11+00:00"
+    },
+    {
+      "player_bday": "30.07.2002",
+      "player_country": "Romania",
+      "player_full_name": "Dalina Amariei Ilinca",
+      "player_key": "30",
+      "player_logo": "",
+      "player_name": "I. D. Amariei",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-16T10:45:12+00:00"
+    },
+    {
+      "player_bday": "09.01.2002",
+      "player_country": "Uzbekistan",
+      "player_full_name": "Sevil Yuldasheva",
+      "player_key": "32",
+      "player_logo": "",
+      "player_name": "S. Yuldasheva",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-16T10:45:12+00:00"
+    },
+    {
+      "player_bday": "26.04.1997",
+      "player_country": "Greece",
+      "player_full_name": "Martha Matoula",
+      "player_key": "34",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/34_m-matoula.jpg",
+      "player_name": "M. Matoula",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-16T10:45:13+00:00"
+    },
+    {
+      "player_bday": "05.12.2003",
+      "player_country": "China",
+      "player_full_name": "Sijia Wei",
+      "player_key": "40",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/40_s-wei.jpg",
+      "player_name": "S. Wei",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-16T10:45:14+00:00"
+    },
+    {
+      "player_bday": "15.05.2001",
+      "player_country": "France",
+      "player_full_name": "Yasmine Mansouri",
+      "player_key": "42",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/42_y-mansouri.jpg",
+      "player_name": "Y. Mansouri",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-16T10:45:15+00:00"
+    },
+    {
+      "player_bday": "20.10.2003",
+      "player_country": "China",
+      "player_full_name": "Xinxin Yao",
+      "player_key": "46",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/46_x-yao.jpg",
+      "player_name": "X. Yao",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-16T10:45:16+00:00"
+    },
+    {
+      "player_bday": "31.01.2002",
+      "player_country": "Germany",
+      "player_full_name": "Luisa Meyer Auf Der Heide",
+      "player_key": "53",
+      "player_logo": "",
+      "player_name": "L. Meyer Auf Der Heide",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-16T10:45:16+00:00"
+    },
+    {
+      "player_bday": "29.09.2000",
+      "player_country": "World",
+      "player_full_name": "Sofya Lansere",
+      "player_key": "69",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/69_s-lansere.jpg",
+      "player_name": "S. Lansere",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-16T10:45:17+00:00"
+    },
+    {
+      "player_bday": "10.03.2001",
+      "player_country": "Slovakia",
+      "player_full_name": "Viktoria Morvayova",
+      "player_key": "72",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/72_v-morvayova.jpg",
+      "player_name": "V. Morvayova",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-16T10:45:18+00:00"
+    },
+    {
+      "player_bday": "17.10.2000",
+      "player_country": "Japan",
+      "player_full_name": "Rina Saigo",
+      "player_key": "73",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/73_r-saigo.jpg",
+      "player_name": "R. Saigo",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-16T10:45:19+00:00"
+    },
+    {
+      "player_bday": "27.10.1999",
+      "player_country": "Japan",
+      "player_full_name": "Haruna Arakawa",
+      "player_key": "75",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/75_h-arakawa.jpg",
+      "player_name": "H. Arakawa",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-16T10:45:19+00:00"
+    },
+    {
+      "player_bday": "24.02.1994",
+      "player_country": "Romania",
+      "player_full_name": "Elena-Teodora Cadar",
+      "player_key": "77",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/77_e-t-cadar.jpg",
+      "player_name": "E.-T. Cadar",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-16T10:45:20+00:00"
+    },
+    {
+      "player_bday": "02.01.2004",
+      "player_country": "Canada",
+      "player_full_name": "Ana Grubor",
+      "player_key": "89",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/89_a-grubor.jpg",
+      "player_name": "A. Grubor",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-16T10:45:21+00:00"
+    },
+    {
+      "player_bday": "29.04.1998",
+      "player_country": "Australia",
+      "player_full_name": "Kimberly Birrell",
+      "player_key": "92",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/92_k-birrell.jpg",
+      "player_name": "K. Birrell",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-16T10:45:21+00:00"
+    },
+    {
+      "player_bday": "07.04.2004",
+      "player_country": "Portugal",
+      "player_full_name": "Matilde Jorge",
+      "player_key": "97",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/97_m-jorge.jpg",
+      "player_name": "M. Jorge",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-16T10:45:22+00:00"
+    }
+  ],
+  "source": "api_tennis"
+}
