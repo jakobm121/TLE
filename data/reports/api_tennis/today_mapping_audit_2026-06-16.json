@@ -1,6 +1,21 @@
 {
+  "api_player_cache": {
+    "entries": 5051,
+    "exists": true,
+    "path": "data/raw/api_tennis/players/api_players.json",
+    "with_full_name": 2467,
+    "with_short_name": 5051
+  },
   "blocked_matches": 134,
   "counters": {
+    "api_player_cache_entries": 5051,
+    "api_player_cache_first_name_changed": 316,
+    "api_player_cache_full_name_used": 632,
+    "api_player_cache_name_changed": 633,
+    "api_player_cache_second_name_changed": 317,
+    "api_player_cache_short_name_used": 52,
+    "api_player_cache_with_full_name": 2467,
+    "api_player_cache_with_short_name": 5051,
     "blocked_matches": 134,
     "mapped_from_mapping_json": 499,
     "mapped_from_overrides": 30,
@@ -14,12 +29,13 @@
     "unmapped_players": 150
   },
   "date": "2026-06-16",
-  "generated_at": "2026-06-16T19:16:44+00:00",
+  "generated_at": "2026-06-16T19:25:04+00:00",
   "mapped_players": 529,
   "mapping_path": "data/metadata/api_tennis/player_mapping.json",
   "notes": [
     "Default audit is singles-only; doubles/team fixtures are skipped for betting scanner mapping.",
     "Today audit checks both player_mapping.json and player_mapping_overrides.json, so manual daily overrides work immediately.",
+    "Raw-mode audit now enriches display names from data/raw/api_tennis/players/api_players.json.",
     "Scanner should block/NO_BET every singles match where coverage is not both_mapped."
   ],
   "outputs": {
