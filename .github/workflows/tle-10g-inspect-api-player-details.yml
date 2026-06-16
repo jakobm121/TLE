@@ -1,0 +1,55 @@
+name: TLE 10g Inspect API Player Details
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Date YYYY-MM-DD, empty = today UTC"
+        required: false
+        default: ""
+      player_keys:
+        description: "Comma-separated API player keys"
+        required: false
+        default: "53732,2188,11781,1056,17463,9514"
+
+permissions:
+  contents: write
+
+jobs:
+  inspect-api-player-details:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Inspect API player details
+        env:
+          API_TENNIS_KEY: ${{ secrets.API_TENNIS_KEY }}
+        run: |
+          if [ -z "${{ github.event.inputs.date }}" ]; then
+            python -m tle_machine.inspect_api_player_details --player-keys "${{ github.event.inputs.player_keys }}"
+          else
+            python -m tle_machine.inspect_api_player_details --date "${{ github.event.inputs.date }}" --player-keys "${{ github.event.inputs.player_keys }}"
+          fi
+
+      - name: Commit API player details inspect
+        if: always()
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/reports/api_tennis/api_player_details_inspect.json || true
+          git add data/reports/api_tennis/api_player_details_raw_responses.json || true
+
+          if git diff --cached --quiet; then
+            echo "No API player details inspect changes to commit."
+          else
+            git commit -m "Inspect API player detail endpoints"
+            git push
+          fi
