@@ -1,5 +1,4 @@
 api_player_key,raw_api_player_key,api_name,api_name_source,gender,mapping_status,today_match_count,opponents_today,event_names,event_type_types,best_candidate_key,best_candidate_name,score,margin,method,suggested_override_json
-men:api:1056,1056,Andres Martin,api_cache_full_name,men,manual_unmapped,2,Adrien Burdet | Matisse Farzam,"M25 Klosters | M25 Tulsa, OK",Itf Men Singles,,,,,,
 men:api:103890,103890,A. Kothari,api_cache_short_name,men,unmapped,1,Muzammil Murtaza,M15 Kayseri 5,Itf Men Singles,,,,,,
 men:api:9221,9221,Alexander Rodriguez Johan,api_cache_full_name,men,unmapped,1,Matias Soto,Asuncion 2 (Paraguay) - Qualification,Challenger Men Singles,,,,,,
 men:api:103889,103889,B. S. Takacs,api_cache_short_name,men,unmapped,1,Abel Forger,M15 Gyula,Itf Men Singles,,,,,,
@@ -9,16 +8,12 @@ women:api:103895,103895,I. Ivankovic,api_cache_short_name,women,unmapped,1,Luisa
 men:api:902,902,Jakub Mensik,api_cache_full_name,men,ambiguous,1,Adrian Mannarino,London,Atp Singles,men:sackmann:210084,Jakub Mensik,1.0,,exact_normalized+country,"{""men:api:902"": ""men:sackmann:210084""}"
 men:api:2853,2853,John Wolf Jeffrey,api_cache_full_name,men,unmapped,1,Axel Nefve,"M25 Tulsa, OK",Itf Men Singles,,,,,,
 women:api:103894,103894,L. M. Oprescu,api_cache_short_name,women,unmapped,1,A. Ivanovskaya,W35+H Tauste,Itf Women Singles,,,,,,
-women:api:1356,1356,Lya Fernandez,api_cache_full_name,women,ambiguous,1,Leonie Rabl,W35 Mohammedia,Itf Women Singles,women:sackmann:248660,Lya Fernandez,1.0,,exact_normalized+country,"{""women:api:1356"": ""women:sackmann:248660""}"
 men:api:102651,102651,M. Bekeni,api_cache_short_name,men,unmapped,1,A. Daskalovic,M15 Kursumlijska Banja 5,Itf Men Singles,,,,,,
 women:api:104052,104052,M. Estrella,api_cache_short_name,women,unmapped,1,Sofia Meabe,W15 Luque,Itf Women Singles,,,,,,
 women:api:103897,103897,M. Gospodinova,api_cache_short_name,women,unmapped,1,Martha Matoula,W50 Haskovo (Bulgaria),Itf Women Singles,,,,,,
 women:api:103892,103892,M. Yildirim,api_cache_short_name,women,unmapped,1,Jana Hossam Salah,W15 Kayseri 5,Itf Women Singles,,,,,,
-men:api:100794,100794,Nikita Belozertsev,api_cache_full_name,men,unmapped,1,Alexander Bernard,M15 Kursumlijska Banja 5,Itf Men Singles,men:sackmann:212756,Nikita Bilozertsev,0.773829,,fuzzy,"{""men:api:100794"": ""men:sackmann:212756""}"
 men:api:14638,14638,Nikita Mashtakov,api_cache_full_name,men,unmapped,1,Bor Artnak,M25 Samobor (Croatia),Itf Men Singles,,,,,,
 women:api:104053,104053,P. Franco,api_cache_short_name,women,unmapped,1,A. J. Lopez Ocampos,W15 Luque,Itf Women Singles,,,,,,
 men:api:104063,104063,R. Cruz,api_cache_short_name,men,unmapped,1,O. A. Martinez De Freitas,M25 Lourinha (Portugal),Itf Men Singles,,,,,,
 women:api:103891,103891,R. T. Le,api_cache_short_name,women,unmapped,1,Lena Thomas Iglesias,W15 Dinard,Itf Women Singles,,,,,,
 men:api:103877,103877,S. Okabe,api_cache_short_name,men,unmapped,1,Hikaru Shiraishi,M15 Tokyo 2,Itf Men Singles,,,,,,
-women:api:104082,104082,S. Webster,api_cache_short_name,women,ambiguous,1,Klara Kosan,"W15 Irvine, CA",Itf Women Singles,women:sackmann:260046,Sophia Webster,0.972639,,exact_initial_form,"{""women:api:104082"": ""women:sackmann:260046""}"
-women:api:84923,84923,Y. Tsai,api_cache_short_name,women,ambiguous,1,Dayeon Back,W35 Taipei,Itf Women Singles,women:sackmann:264178,Yu Chin Tsai,0.929276,,initial_surname+country,"{""women:api:84923"": ""women:sackmann:264178""}"
