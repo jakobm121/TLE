@@ -131,6 +131,22 @@ def normalize_api_birth_date(value: Any) -> str:
     return ""
 
 
+def year_from_date(value: Any) -> str:
+    s = str(value or "").strip()
+    if re.match(r"^\d{4}-", s):
+        return s[:4]
+    return ""
+
+
+def normalize_year(value: Any) -> str:
+    s = str(value or "").strip()
+    if re.match(r"^\d{4}$", s):
+        return s
+    if re.match(r"^\d{4}\.0$", s):
+        return s[:4]
+    return ""
+
+
 def normalize_country_code(value: Any) -> str:
     s = strip_accents(str(value or "").strip()).lower()
     if not s:
@@ -363,6 +379,10 @@ class ApiPlayer:
         return self.birth_dates.most_common(1)[0][0] if self.birth_dates else ""
 
     @property
+    def birth_year(self) -> str:
+        return year_from_date(self.birth_date)
+
+    @property
     def country_code(self) -> str:
         return self.countries.most_common(1)[0][0] if self.countries else ""
 
@@ -436,6 +456,7 @@ def load_sackmann_player_metadata(path: Path = SACKMANN_PLAYER_METADATA_JSON) ->
         "exists": path.exists(),
         "entries": 0,
         "with_birth_date": 0,
+        "with_approx_birth_year": 0,
         "with_country_code": 0,
     }
 
@@ -451,6 +472,7 @@ def load_sackmann_player_metadata(path: Path = SACKMANN_PLAYER_METADATA_JSON) ->
 
     report["entries"] = len(metadata)
     report["with_birth_date"] = sum(1 for v in metadata.values() if norm_text(v.get("birth_date")))
+    report["with_approx_birth_year"] = sum(1 for v in metadata.values() if normalize_year(v.get("approx_birth_year")))
     report["with_country_code"] = sum(1 for v in metadata.values() if norm_text(v.get("country_code")))
 
     return metadata, report
@@ -936,9 +958,11 @@ def apply_metadata_score_adjustment(
 ) -> tuple[float, str]:
     md = sackmann_metadata.get(sack_player.key) or {}
     sack_birth_date = norm_text(md.get("birth_date"))
+    sack_approx_birth_year = normalize_year(md.get("approx_birth_year"))
     sack_country_code = norm_text(md.get("country_code")).upper()
 
     api_birth_date = api_player.birth_date
+    api_birth_year = api_player.birth_year
     api_country_code = api_player.country_code
 
     adjusted = score
@@ -953,6 +977,20 @@ def apply_metadata_score_adjustment(
             adjusted -= 0.050
             method_parts.append("dob_mismatch")
             counters["candidate_dob_mismatch"] += 1
+    elif api_birth_year and sack_approx_birth_year:
+        diff = abs(int(api_birth_year) - int(sack_approx_birth_year))
+        if diff == 0:
+            adjusted += 0.020
+            method_parts.append("birth_year")
+            counters["candidate_birth_year_match"] += 1
+        elif diff == 1:
+            adjusted += 0.008
+            method_parts.append("birth_year_near")
+            counters["candidate_birth_year_near"] += 1
+        else:
+            adjusted -= 0.035
+            method_parts.append("birth_year_mismatch")
+            counters["candidate_birth_year_mismatch"] += 1
 
     if api_country_code and sack_country_code:
         if api_country_code == sack_country_code:
@@ -985,6 +1023,7 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
     counters["api_player_cache_with_short_name"] = api_player_cache_report.get("with_short_name", 0)
     counters["sackmann_metadata_entries"] = sackmann_metadata_report.get("entries", 0)
     counters["sackmann_metadata_with_birth_date"] = sackmann_metadata_report.get("with_birth_date", 0)
+    counters["sackmann_metadata_with_approx_birth_year"] = sackmann_metadata_report.get("with_approx_birth_year", 0)
     counters["sackmann_metadata_with_country_code"] = sackmann_metadata_report.get("with_country_code", 0)
 
     mapping: dict[str, Any] = {
@@ -1027,6 +1066,7 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
                 "api_name_sources": dict(ap.name_sources),
                 "api_data_sources": dict(ap.data_sources),
                 "api_birth_dates": dict(ap.birth_dates),
+                "api_birth_year": ap.birth_year,
                 "api_countries": dict(ap.countries),
             }
             counters[status] += 1
@@ -1069,6 +1109,11 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
                     "sackmann_matches": sp.matches,
                     "score": round(sc, 6),
                     "method": method,
+                    "api_birth_year": ap.birth_year,
+                    "api_country_code": ap.country_code,
+                    "sackmann_country_code": norm_text((sackmann_metadata.get(sp.key) or {}).get("country_code")).upper(),
+                    "sackmann_birth_date": norm_text((sackmann_metadata.get(sp.key) or {}).get("birth_date")),
+                    "sackmann_approx_birth_year": normalize_year((sackmann_metadata.get(sp.key) or {}).get("approx_birth_year")),
                 }
             )
 
@@ -1086,10 +1131,16 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
             accept = False
             best_base_method = best_method.split("+", 1)[0]
             best_has_dob = "+dob" in best_method
+            best_has_birth_year = "+birth_year" in best_method
 
             if best_has_dob and best_sc >= 0.950:
                 same_dob = [c for c in top if "+dob" in c[1] and c[0] >= best_sc - 0.003]
                 accept = len(same_dob) == 1
+            elif best_has_birth_year and best_sc >= 0.955:
+                # Approx year is weaker than exact DOB, so require a strong underlying name score
+                # and uniqueness among candidates with the same birth-year support.
+                same_birth_year = [c for c in top if "+birth_year" in c[1] and c[0] >= best_sc - 0.004]
+                accept = len(same_birth_year) == 1
             elif best_base_method == "exact_normalized" and best_sc >= 0.999:
                 same_exact = [c for c in top if c[1].split("+", 1)[0] == "exact_normalized" and c[0] >= best_sc - 0.001]
                 accept = len(same_exact) == 1
@@ -1131,6 +1182,7 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
             "api_name_sources": dict(ap.name_sources),
             "api_data_sources": dict(ap.data_sources),
                 "api_birth_dates": dict(ap.birth_dates),
+                "api_birth_year": ap.birth_year,
                 "api_countries": dict(ap.countries),
             "api_levels": dict(ap.levels),
             "api_surfaces": dict(ap.surfaces),
@@ -1189,7 +1241,7 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
         "performance_note": "Fast version uses indexed candidate pools by gender/name/surname/initial; acceptance thresholds are unchanged.",
         "name_enrichment": "API names are enriched from data/raw/api_tennis/players/api_players.json before matching.",
         "raw_player_inclusion": "Mapping includes both imported API source players and raw API odds/fixtures/results players, so today upcoming players get mapping entries before they have finished results.",
-        "metadata_matching": "If available, API player_bday/player_country are compared with Sackmann birth_date/country_code and used to resolve duplicate or ambiguous name matches.",
+        "metadata_matching": "If available, API player_bday/player_country are compared with Sackmann exact birth_date, approx_birth_year, and country_code. Approx birth year is used only as a small tie-breaker, not as a standalone match rule.",
     }
 
     write_json(MAPPING_JSON, mapping)
@@ -1250,6 +1302,11 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, include_r
             "sackmann_matches",
             "score",
             "method",
+            "api_birth_year",
+            "api_country_code",
+            "sackmann_country_code",
+            "sackmann_birth_date",
+            "sackmann_approx_birth_year",
         ],
     )
     write_csv(ISSUES_CSV, issue_rows, ["api_player_key", "api_name", "issue", "detail"])
