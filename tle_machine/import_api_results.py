@@ -20,8 +20,12 @@ IMPORT_REPORT_JSON = REPORT_DIR / "import_api_results_report.json"
 SKIPPED_CSV = REPORT_DIR / "skipped_api_matches.csv"
 FIELD_AUDIT_JSON = REPORT_DIR / "api_field_audit.json"
 DUPLICATES_CSV = REPORT_DIR / "duplicate_api_matches.csv"
+
 RAW_METADATA_DIR = Path("data/raw/api_tennis/metadata")
 TOURNAMENTS_METADATA_JSON = RAW_METADATA_DIR / "get_tournaments.json"
+
+RAW_PLAYERS_DIR = Path("data/raw/api_tennis/players")
+API_PLAYER_CACHE_JSON = RAW_PLAYERS_DIR / "api_players.json"
 
 SURFACES = {"hard", "clay", "grass", "carpet"}
 
@@ -174,6 +178,15 @@ def parse_date(value: Any, fallback: str = "") -> str:
 
 def load_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def read_json(path: Path, default: Any) -> Any:
+    if not path.exists():
+        return default
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return default
 
 
 def extract_fixtures(payload: Any) -> list[dict[str, Any]]:
@@ -413,6 +426,102 @@ def player_fields(fixture: dict[str, Any]) -> dict[str, str]:
     }
 
 
+def load_api_player_cache(path: Path = API_PLAYER_CACHE_JSON) -> tuple[dict[str, dict[str, Any]], dict[str, Any]]:
+    report = {
+        "path": str(path),
+        "exists": path.exists(),
+        "entries": 0,
+        "with_full_name": 0,
+        "with_short_name": 0,
+    }
+
+    payload = read_json(path, {})
+    if not isinstance(payload, dict):
+        report["error"] = "cache is not a JSON object"
+        return {}, report
+
+    cache: dict[str, dict[str, Any]] = {}
+    for key, value in payload.items():
+        if not isinstance(value, dict):
+            continue
+        pid = norm_text(value.get("player_key")) or norm_text(key)
+        if not pid:
+            continue
+        cache[pid] = value
+
+    report["entries"] = len(cache)
+    report["with_full_name"] = sum(1 for v in cache.values() if norm_text(v.get("player_full_name")))
+    report["with_short_name"] = sum(1 for v in cache.values() if norm_text(v.get("player_name")))
+
+    return cache, report
+
+
+def cached_player_name(api_player_cache: dict[str, dict[str, Any]], api_player_id: str, fallback_name: str) -> tuple[str, str]:
+    """Return best API-Tennis name for a player.
+
+    Priority:
+    1. player_full_name from 06b cache
+    2. player_name from 06b cache
+    3. raw fixture name
+    """
+    pid = norm_text(api_player_id)
+    fallback = norm_text(fallback_name)
+
+    if not pid:
+        return fallback, "fixture"
+
+    row = api_player_cache.get(pid)
+    if not isinstance(row, dict):
+        return fallback, "fixture"
+
+    full_name = norm_text(row.get("player_full_name"))
+    if full_name:
+        return full_name, "api_cache_full_name"
+
+    short_name = norm_text(row.get("player_name"))
+    if short_name:
+        return short_name, "api_cache_short_name"
+
+    return fallback, "fixture"
+
+
+def enrich_players_from_api_cache(
+    players: dict[str, str],
+    api_player_cache: dict[str, dict[str, Any]],
+    counters: Counter,
+) -> dict[str, str]:
+    enriched = dict(players)
+
+    first_name, first_source = cached_player_name(api_player_cache, players.get("first_id", ""), players.get("first_name", ""))
+    second_name, second_source = cached_player_name(api_player_cache, players.get("second_id", ""), players.get("second_name", ""))
+
+    if first_source == "api_cache_full_name":
+        counters["api_player_cache_first_full_name_used"] += 1
+    elif first_source == "api_cache_short_name":
+        counters["api_player_cache_first_short_name_used"] += 1
+
+    if second_source == "api_cache_full_name":
+        counters["api_player_cache_second_full_name_used"] += 1
+    elif second_source == "api_cache_short_name":
+        counters["api_player_cache_second_short_name_used"] += 1
+
+    if first_name and first_name != players.get("first_name", ""):
+        counters["api_player_cache_name_changed"] += 1
+        counters["api_player_cache_first_name_changed"] += 1
+    if second_name and second_name != players.get("second_name", ""):
+        counters["api_player_cache_name_changed"] += 1
+        counters["api_player_cache_second_name_changed"] += 1
+
+    if first_name and not players.get("first_name"):
+        counters["api_player_cache_filled_missing_name"] += 1
+    if second_name and not players.get("second_name"):
+        counters["api_player_cache_filled_missing_name"] += 1
+
+    enriched["first_name"] = first_name
+    enriched["second_name"] = second_name
+    return enriched
+
+
 def infer_winner_loser(fixture: dict[str, Any], players: dict[str, str]) -> tuple[str, str, str, str, str]:
     winner_raw = get_first(fixture, ("event_winner", "winner", "event_winner_code", "event_winner_type"))
     wr = lower_text(winner_raw)
@@ -561,15 +670,21 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--start-date", default="")
     parser.add_argument("--end-date", default="")
     parser.add_argument("--tournaments-metadata", type=Path, default=TOURNAMENTS_METADATA_JSON)
+    parser.add_argument("--api-player-cache", type=Path, default=API_PLAYER_CACHE_JSON)
     args = parser.parse_args(argv)
 
     ensure_dirs(args.source_dir, REPORT_DIR)
 
     tournament_surface_map, tournament_surface_map_report = load_tournament_surface_map(args.tournaments_metadata)
+    api_player_cache, api_player_cache_report = load_api_player_cache(args.api_player_cache)
 
     counters = Counter()
     counters["tournament_surface_map_rows"] = tournament_surface_map_report.get("rows", 0)
     counters["tournament_surface_map_entries"] = len(tournament_surface_map)
+    counters["api_player_cache_entries"] = api_player_cache_report.get("entries", 0)
+    counters["api_player_cache_with_full_name"] = api_player_cache_report.get("with_full_name", 0)
+    counters["api_player_cache_with_short_name"] = api_player_cache_report.get("with_short_name", 0)
+
     skipped_rows: list[dict[str, Any]] = []
     duplicate_rows: list[dict[str, Any]] = []
     by_year: dict[int, list[dict[str, Any]]] = defaultdict(list)
@@ -631,6 +746,8 @@ def main(argv: list[str] | None = None) -> None:
                 continue
 
             players = player_fields(fixture)
+            players = enrich_players_from_api_cache(players, api_player_cache, counters)
+
             if not players["first_name"] or not players["second_name"]:
                 skip_row(skipped_rows, counters, path.name, raw_index, fixture, "missing_player_name", date=date, gender=gender)
                 field_audit["files"][path.name]["skipped"] += 1
@@ -713,6 +830,7 @@ def main(argv: list[str] | None = None) -> None:
         "source": "api_tennis",
         "raw_results_dir": str(args.raw_dir),
         "tournaments_metadata": tournament_surface_map_report,
+        "api_player_cache": api_player_cache_report,
         "matches": counters["imported"],
         "year_files": year_files,
         "counters": dict(counters),
@@ -726,6 +844,7 @@ def main(argv: list[str] | None = None) -> None:
     }
 
     field_audit["tournament_surface_map"] = tournament_surface_map_report
+    field_audit["api_player_cache"] = api_player_cache_report
     serial_field_audit = json.loads(json.dumps(field_audit, default=dict))
     write_json(MANIFEST_JSON, manifest)
     write_json(IMPORT_REPORT_JSON, manifest)
