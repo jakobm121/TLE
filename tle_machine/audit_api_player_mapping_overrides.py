@@ -41,6 +41,7 @@ COUNTRY_NAME_TO_CODE = {
     "czech republic": "CZE",
     "czechia": "CZE",
     "denmark": "DEN",
+    "ecuador": "ECU",
     "egypt": "EGY",
     "estonia": "EST",
     "finland": "FIN",
@@ -129,6 +130,13 @@ def compact(s: Any) -> str:
     return re.sub(r"[^a-z0-9]+", "", norm_text(s))
 
 
+def parse_api_key(api_key: str) -> tuple[str, str]:
+    parts = str(api_key).split(":")
+    if len(parts) == 3 and parts[1] == "api":
+        return parts[0], parts[2]
+    return "", str(api_key)
+
+
 def parse_api_birth_year(value: Any) -> str:
     s = str(value or "").strip()
     if not s:
@@ -157,65 +165,135 @@ def normalize_api_country(value: Any) -> str:
     return COUNTRY_NAME_TO_CODE.get(norm_text(s), "")
 
 
-def load_api_players(path: Path) -> dict[str, dict[str, Any]]:
+def make_api_info(row: dict[str, Any], *, api_key: str, gender: str, api_id: str) -> dict[str, Any]:
+    full_name = (
+        row.get("player_full_name")
+        or row.get("full_name")
+        or row.get("player_complete_name")
+        or ""
+    )
+    short_name = (
+        row.get("player_name")
+        or row.get("short_name")
+        or row.get("name")
+        or ""
+    )
+    display_name = full_name or short_name
+
+    bday = (
+        row.get("player_bday")
+        or row.get("birth_date")
+        or row.get("birthday")
+        or row.get("bday")
+        or ""
+    )
+    country = (
+        row.get("player_country")
+        or row.get("country")
+        or row.get("country_code")
+        or ""
+    )
+
+    return {
+        "api_player_key": api_key,
+        "api_player_id": api_id,
+        "gender": gender,
+        "api_name": str(display_name or "").strip(),
+        "api_full_name": str(full_name or "").strip(),
+        "api_short_name": str(short_name or "").strip(),
+        "api_bday": str(bday or "").strip(),
+        "api_birth_year": parse_api_birth_year(bday),
+        "api_country_raw": str(country or "").strip(),
+        "api_country_code": normalize_api_country(country),
+    }
+
+
+def load_api_cache(path: Path) -> tuple[dict[str, dict[str, Any]], dict[str, list[dict[str, Any]]]]:
+    """Load API cache robustly.
+
+    Returns:
+      api_by_exact_key: records keyed by men:api:123 / women:api:123 if known
+      api_by_id: records keyed by plain API id, because api_players.json is often keyed by id only.
+    """
     data = read_json(path, default={})
-    out: dict[str, dict[str, Any]] = {}
+    by_key: dict[str, dict[str, Any]] = {}
+    by_id: dict[str, list[dict[str, Any]]] = defaultdict(list)
 
     if isinstance(data, dict):
-        iterable = data.items()
+        iterable = list(data.items())
     elif isinstance(data, list):
         iterable = []
         for row in data:
-            if not isinstance(row, dict):
-                continue
-            pid = row.get("player_key") or row.get("api_player_key") or row.get("player_id") or row.get("id")
-            if pid:
-                iterable.append((str(pid), row))
+            if isinstance(row, dict):
+                raw_id = row.get("player_id") or row.get("id") or row.get("api_player_id")
+                if raw_id is not None:
+                    iterable.append((str(raw_id), row))
     else:
-        return out
+        return by_key, by_id
 
     for raw_key, row in iterable:
         if not isinstance(row, dict):
             continue
 
-        # Support either "men:api:123" keys or plain API id inside cache.
-        gender = row.get("gender") or row.get("player_gender") or ""
-        player_id = str(row.get("player_id") or row.get("id") or raw_key).strip()
+        raw_key = str(raw_key)
+        gender = str(row.get("gender") or row.get("player_gender") or "").strip()
+        player_id = str(
+            row.get("player_id")
+            or row.get("id")
+            or row.get("api_player_id")
+            or raw_key.split(":")[-1]
+        ).strip()
 
-        if str(raw_key).startswith(("men:api:", "women:api:")):
-            key = str(raw_key)
-        elif str(player_id).startswith(("men:api:", "women:api:")):
-            key = str(player_id)
-        elif gender in {"men", "women"} and player_id:
-            key = f"{gender}:api:{player_id}"
-        else:
-            # Cannot infer gender from cache-only record.
+        if raw_key.startswith(("men:api:", "women:api:")):
+            g, pid = parse_api_key(raw_key)
+            key = raw_key
+            info = make_api_info(row, api_key=key, gender=g, api_id=pid)
+            by_key[key] = info
+            by_id[pid].append(info)
             continue
 
-        full_name = (
-            row.get("player_full_name")
-            or row.get("full_name")
-            or row.get("player_name")
-            or row.get("name")
-            or ""
-        )
-        short_name = row.get("player_name") or row.get("short_name") or row.get("name") or ""
-        bday = row.get("player_bday") or row.get("birth_date") or row.get("birthday") or ""
-        country = row.get("player_country") or row.get("country") or row.get("country_code") or ""
+        if player_id.startswith(("men:api:", "women:api:")):
+            g, pid = parse_api_key(player_id)
+            key = player_id
+            info = make_api_info(row, api_key=key, gender=g, api_id=pid)
+            by_key[key] = info
+            by_id[pid].append(info)
+            continue
 
-        out[key] = {
-            "api_player_key": key,
-            "api_player_id": key.split(":")[-1],
-            "gender": key.split(":")[0],
-            "api_name": str(full_name or short_name or "").strip(),
-            "api_full_name": str(full_name or "").strip(),
-            "api_short_name": str(short_name or "").strip(),
-            "api_bday": str(bday or "").strip(),
-            "api_birth_year": parse_api_birth_year(bday),
-            "api_country_raw": str(country or "").strip(),
-            "api_country_code": normalize_api_country(country),
-        }
+        # Most common case: cache key/id is plain numeric. Gender is unknown here.
+        # We keep it by id and later inject gender from override key.
+        info = make_api_info(row, api_key="", gender=gender, api_id=player_id)
+        by_id[player_id].append(info)
 
+        if gender in {"men", "women"} and player_id:
+            key = f"{gender}:api:{player_id}"
+            by_key[key] = make_api_info(row, api_key=key, gender=gender, api_id=player_id)
+
+    return by_key, by_id
+
+
+def resolve_api_info(api_key: str, by_key: dict[str, dict[str, Any]], by_id: dict[str, list[dict[str, Any]]]) -> dict[str, Any]:
+    if api_key in by_key:
+        return by_key[api_key]
+
+    gender, api_id = parse_api_key(api_key)
+    rows = by_id.get(api_id, [])
+    if not rows:
+        return {}
+
+    # Prefer same gender if cache has gender; otherwise use the first id match and inject override gender/key.
+    chosen = None
+    for row in rows:
+        if row.get("gender") == gender:
+            chosen = row
+            break
+    if chosen is None:
+        chosen = rows[0]
+
+    out = dict(chosen)
+    out["api_player_key"] = api_key
+    out["api_player_id"] = api_id
+    out["gender"] = gender
     return out
 
 
@@ -319,11 +397,9 @@ def classify_name(api_name: str, sack_name: str) -> tuple[str, str]:
         if api_t[0] == sack_t[0][:1] and api_t[-1] == sack_t[-1]:
             return "initial_surname", "Initial + surname matches Sackmann full name."
 
-    # Surname-only-ish short forms.
     if api_t and sack_t and api_t[-1] == sack_t[-1]:
         return "same_surname", "Same surname, but not enough name evidence."
 
-    # Transliteration/fuzzy clue: high overlap by token starts.
     if api_t and sack_t:
         common = set(api_t) & set(sack_t)
         if common:
@@ -374,7 +450,6 @@ def verdict_for_row(
     candidate_score = ""
     candidate_method = ""
     if candidate_rows:
-        # Keep first matching candidate row; report fields vary by builder version.
         row = candidate_rows[0]
         for k in ("score", "candidate_score", "best_score"):
             if row.get(k):
@@ -390,27 +465,23 @@ def verdict_for_row(
     if name_status in {"exact", "token_set_exact", "compact_exact"}:
         if country_status in {"match", "unknown"} and year_status in {"match", "near", "unknown"}:
             verdict = "SAFE"
-            reasons.append(name_note)
         else:
             verdict = "CHECK"
-            reasons.append(name_note)
+        reasons.append(name_note)
     elif name_status == "initial_surname":
         if country_status == "match" or year_status in {"match", "near"}:
             verdict = "LIKELY_OK"
-            reasons.append(name_note)
         else:
             verdict = "CHECK"
-            reasons.append(name_note)
+        reasons.append(name_note)
     elif name_status in {"same_surname", "partial_token_overlap"}:
         if country_status == "match" and year_status in {"match", "near"}:
             verdict = "LIKELY_OK"
-            reasons.append(name_note)
         elif country_status == "match" or year_status in {"match", "near"}:
             verdict = "CHECK"
-            reasons.append(name_note)
         else:
             verdict = "RISKY"
-            reasons.append(name_note)
+        reasons.append(name_note)
     else:
         verdict = "RISKY"
         reasons.append(name_note)
@@ -448,7 +519,7 @@ def main(argv: list[str] | None = None) -> None:
     args = parser.parse_args(argv)
 
     overrides = read_json(args.overrides, default={}) or {}
-    api_players = load_api_players(args.api_players)
+    api_by_key, api_by_id = load_api_cache(args.api_players)
     sackmann_players = load_sackmann_players(args.sackmann_metadata, SACKMANN_RATINGS_JSON, SACKMANN_RATINGS_JSON_GZ)
     candidates = load_candidates(args.candidates)
 
@@ -459,13 +530,13 @@ def main(argv: list[str] | None = None) -> None:
         api_key = str(api_key)
         sack_key = str(sack_key)
 
-        api = api_players.get(api_key, {})
+        api = resolve_api_info(api_key, api_by_key, api_by_id)
         sack = sackmann_players.get(sack_key, {})
         candidate_rows = candidates.get((api_key, sack_key), [])
 
         if not api:
             verdict = "CHECK"
-            reason = "API player not found in api_players cache."
+            reason = "API player not found in api_players cache by exact key or numeric id."
         elif not sack:
             verdict = "RISKY"
             reason = "Sackmann player key not found in metadata/ratings."
@@ -541,7 +612,8 @@ def main(argv: list[str] | None = None) -> None:
         },
         "counts": {
             "overrides_total": len(overrides),
-            "api_players_loaded": len(api_players),
+            "api_cache_exact_keys_loaded": len(api_by_key),
+            "api_cache_numeric_ids_loaded": len(api_by_id),
             "sackmann_players_loaded": len(sackmann_players),
             **dict(sorted(counts.items())),
         },
@@ -550,6 +622,7 @@ def main(argv: list[str] | None = None) -> None:
             "LIKELY_OK means acceptable manual override but not strong enough for broad auto-rule.",
             "CHECK means keep only if manually verified.",
             "RISKY means remove or verify deeply before use.",
+            "The audit resolves API records by numeric id when api_players.json is keyed without gender.",
         ],
         "rows": rows,
     }
