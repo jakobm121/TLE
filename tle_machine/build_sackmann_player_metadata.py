@@ -4,7 +4,9 @@ import argparse
 import csv
 import gzip
 import json
-import urllib.error
+import shutil
+import subprocess
+import tempfile
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -15,19 +17,21 @@ RAW_DIR = Path("data/raw/sackmann")
 OUT_JSON = Path("data/metadata/sackmann/players.json")
 REPORT_JSON = Path("data/reports/sackmann/player_metadata_report.json")
 
-# Correct Sackmann player filenames are:
-# ATP: atp_players.csv
-# WTA: wta_players.csv
-# Keep fallback URLs because GitHub raw occasionally behaves differently.
+ATP_REPO = "https://github.com/JeffSackmann/tennis_atp.git"
+WTA_REPO = "https://github.com/JeffSackmann/tennis_wta.git"
+ATP_FILE = "atp_players.csv"
+WTA_FILE = "wta_players.csv"
+
+# Keep raw URLs as first attempt, but fall back to sparse git clone.
 ATP_URLS = [
-    "https://raw.githubusercontent.com/JeffSackmann/tennis_atp/refs/heads/master/atp_players.csv",
-    "https://raw.githubusercontent.com/jeffsackmann/tennis_atp/refs/heads/master/atp_players.csv",
     "https://github.com/JeffSackmann/tennis_atp/raw/refs/heads/master/atp_players.csv",
+    "https://raw.githubusercontent.com/JeffSackmann/tennis_atp/refs/heads/master/atp_players.csv",
+    "https://raw.githubusercontent.com/JeffSackmann/tennis_atp/master/atp_players.csv",
 ]
 WTA_URLS = [
-    "https://raw.githubusercontent.com/JeffSackmann/tennis_wta/refs/heads/master/wta_players.csv",
-    "https://raw.githubusercontent.com/jeffsackmann/tennis_wta/refs/heads/master/wta_players.csv",
     "https://github.com/JeffSackmann/tennis_wta/raw/refs/heads/master/wta_players.csv",
+    "https://raw.githubusercontent.com/JeffSackmann/tennis_wta/refs/heads/master/wta_players.csv",
+    "https://raw.githubusercontent.com/JeffSackmann/tennis_wta/master/wta_players.csv",
 ]
 
 RATINGS_JSON = Path("data/ratings/tle_player_ratings.json")
@@ -50,22 +54,31 @@ def read_json_any(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def looks_like_player_csv(path: Path) -> bool:
+    if not path.exists() or path.stat().st_size < 20:
+        return False
+    head = path.read_bytes()[:500].decode("utf-8", errors="replace").lower()
+    return "player_id" in head and "first_name" in head and "last_name" in head
+
+
 def download_from_urls(urls: list[str], path: Path, refresh: bool = False) -> dict[str, Any]:
     path.parent.mkdir(parents=True, exist_ok=True)
 
     report = {
+        "method": "url",
         "path": str(path),
         "downloaded": False,
         "used_url": "",
         "attempts": [],
     }
 
-    if path.exists() and not refresh:
+    if path.exists() and not refresh and looks_like_player_csv(path):
         report["status"] = "cached"
         return report
 
     last_error = ""
     for url in urls:
+        tmp = path.with_suffix(path.suffix + ".tmp")
         try:
             req = urllib.request.Request(
                 url,
@@ -74,15 +87,15 @@ def download_from_urls(urls: list[str], path: Path, refresh: bool = False) -> di
                     "Accept": "text/csv,text/plain,*/*",
                 },
             )
-            with urllib.request.urlopen(req, timeout=60) as r:
+            with urllib.request.urlopen(req, timeout=90) as r:
                 data = r.read()
 
-            # Basic guard: player CSV must have player_id header.
-            head = data[:300].decode("utf-8", errors="replace").lower()
-            if "player_id" not in head:
-                raise RuntimeError(f"Downloaded content does not look like player CSV. First bytes: {head[:120]!r}")
+            tmp.write_bytes(data)
+            if not looks_like_player_csv(tmp):
+                head = data[:200].decode("utf-8", errors="replace")
+                raise RuntimeError(f"Downloaded content is not player CSV. First bytes: {head!r}")
 
-            path.write_bytes(data)
+            tmp.replace(path)
             report["downloaded"] = True
             report["used_url"] = url
             report["status"] = "downloaded"
@@ -90,13 +103,82 @@ def download_from_urls(urls: list[str], path: Path, refresh: bool = False) -> di
             return report
 
         except Exception as e:
+            if tmp.exists():
+                tmp.unlink()
             last_error = f"{type(e).__name__}: {e}"
             status_code = getattr(e, "code", "")
             report["attempts"].append({"url": url, "status": "error", "code": status_code, "error": last_error})
 
     report["status"] = "error"
     report["error"] = last_error
-    raise RuntimeError(f"Could not download {path.name}. Attempts: {json.dumps(report['attempts'], ensure_ascii=False)}")
+    return report
+
+
+def run_cmd(cmd: list[str], cwd: Path | None = None) -> str:
+    p = subprocess.run(cmd, cwd=str(cwd) if cwd else None, text=True, capture_output=True)
+    if p.returncode != 0:
+        raise RuntimeError(
+            "Command failed:\n"
+            f"cmd={' '.join(cmd)}\n"
+            f"stdout={p.stdout[-2000:]}\n"
+            f"stderr={p.stderr[-2000:]}"
+        )
+    return p.stdout.strip()
+
+
+def fetch_by_sparse_git(repo_url: str, filename: str, path: Path, refresh: bool = False) -> dict[str, Any]:
+    report = {
+        "method": "git_sparse_checkout",
+        "repo_url": repo_url,
+        "filename": filename,
+        "path": str(path),
+        "downloaded": False,
+        "attempts": [],
+    }
+
+    if path.exists() and not refresh and looks_like_player_csv(path):
+        report["status"] = "cached"
+        return report
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+
+    with tempfile.TemporaryDirectory(prefix="sackmann_players_") as td:
+        tmp_root = Path(td)
+        repo_dir = tmp_root / "repo"
+        try:
+            run_cmd(["git", "clone", "--depth", "1", "--filter=blob:none", "--sparse", repo_url, str(repo_dir)])
+            run_cmd(["git", "-C", str(repo_dir), "sparse-checkout", "set", filename])
+            src = repo_dir / filename
+            if not looks_like_player_csv(src):
+                raise RuntimeError(f"{filename} not found or not a player CSV after sparse checkout.")
+            shutil.copyfile(src, path)
+            report["status"] = "downloaded"
+            report["downloaded"] = True
+            report["bytes"] = path.stat().st_size
+            report["attempts"].append({"status": "ok"})
+            return report
+        except Exception as e:
+            report["status"] = "error"
+            report["error"] = f"{type(e).__name__}: {e}"
+            report["attempts"].append({"status": "error", "error": report["error"]})
+            raise
+
+
+def fetch_player_file(
+    *,
+    urls: list[str],
+    repo_url: str,
+    filename: str,
+    path: Path,
+    refresh: bool,
+) -> dict[str, Any]:
+    url_report = download_from_urls(urls, path, refresh=refresh)
+    if url_report.get("status") in {"cached", "downloaded"} and looks_like_player_csv(path):
+        return url_report
+
+    git_report = fetch_by_sparse_git(repo_url, filename, path, refresh=True)
+    git_report["url_fallback_report"] = url_report
+    return git_report
 
 
 def normalize_birth_date(value: Any) -> str:
@@ -179,11 +261,23 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--out", type=Path, default=OUT_JSON)
     args = parser.parse_args(argv)
 
-    atp_path = args.raw_dir / "atp_players.csv"
-    wta_path = args.raw_dir / "wta_players.csv"
+    atp_path = args.raw_dir / ATP_FILE
+    wta_path = args.raw_dir / WTA_FILE
 
-    atp_download_report = download_from_urls(ATP_URLS, atp_path, refresh=args.refresh)
-    wta_download_report = download_from_urls(WTA_URLS, wta_path, refresh=args.refresh)
+    atp_download_report = fetch_player_file(
+        urls=ATP_URLS,
+        repo_url=ATP_REPO,
+        filename=ATP_FILE,
+        path=atp_path,
+        refresh=args.refresh,
+    )
+    wta_download_report = fetch_player_file(
+        urls=WTA_URLS,
+        repo_url=WTA_REPO,
+        filename=WTA_FILE,
+        path=wta_path,
+        refresh=args.refresh,
+    )
 
     metadata: dict[str, dict[str, Any]] = {}
     men = read_players_csv(atp_path, "men")
@@ -219,7 +313,7 @@ def main(argv: list[str] | None = None) -> None:
         "notes": [
             "This file does not replace ratings. It enriches existing Sackmann keys using the original Sackmann player_id.",
             "Key format is gender:sackmann:player_id, for example men:sackmann:210150.",
-            "Correct Sackmann filenames are atp_players.csv and wta_players.csv.",
+            "The script first tries raw GitHub URLs and falls back to sparse git checkout if raw download fails.",
         ],
     }
 
