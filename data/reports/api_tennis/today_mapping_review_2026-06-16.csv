@@ -1,34 +1,9 @@
 api_player_key,raw_api_player_key,api_name,gender,mapping_status,today_match_count,opponents_today,event_names,event_type_types,best_candidate_key,best_candidate_name,score,margin,method,suggested_override_json
-men:api:1056,1056,A. Martin,men,ambiguous,2,A. Burdet | M. Farzam,"M25 Klosters | M25 Tulsa, OK",Itf Men Singles,men:sackmann:211346,Andres Martin,0.975147,,exact_initial_form,"{""men:api:1056"": ""men:sackmann:211346""}"
-men:api:9514,9514,I. Buse,men,missing_mapping_entry,2,R. Jodar | M. Giron,London,Atp Singles,,,,,,
-men:api:1250,1250,A. Bernard,men,missing_mapping_entry,1,N. Belozertsev,M15 Kursumlijska Banja 5,Itf Men Singles,,,,,,
-men:api:28511,28511,A. Bonnaud,men,missing_mapping_entry,1,A. Garcian,M15 Bourg-En-Bresse (France),Itf Men Singles,,,,,,
-women:api:85934,85934,A. Breaz,women,missing_mapping_entry,1,L. Luciano,W15 Bucharest 2,Itf Women Singles,,,,,,
-women:api:13324,13324,A. Cirotte,women,missing_mapping_entry,1,D. Papamichail,W75 Blois,Itf Women Singles,,,,,,
-men:api:69711,69711,A. Daskalovic,men,missing_mapping_entry,1,M. Bekeni,M15 Kursumlijska Banja 5,Itf Men Singles,,,,,,
-men:api:57239,57239,A. Forger,men,missing_mapping_entry,1,B. S. Takacs,M15 Gyula,Itf Men Singles,,,,,,
-women:api:69485,69485,A. Hejtmanek,women,missing_mapping_entry,1,A. Corvi,W15 Kursumlijska Banja 5,Itf Women Singles,,,,,,
-women:api:92499,92499,A. Iankovskaia,women,missing_mapping_entry,1,L. M. Oprescu,W35+H Tauste,Itf Women Singles,,,,,,
-women:api:76964,76964,A. J. Lopez Ocampos,women,missing_mapping_entry,1,P. Franco,W15 Luque,Itf Women Singles,,,,,,
-men:api:69525,69525,A. Jacome Jaramillo,men,missing_mapping_entry,1,J. Cui,"M25 Tulsa, OK",Itf Men Singles,,,,,,
-men:api:72052,72052,A. Jimenez,men,missing_mapping_entry,1,N. Lopez Cherubino,M15 Mungia-Laukariz,Itf Men Singles,,,,,,
-men:api:52069,52069,A. Juan Mano,men,missing_mapping_entry,1,E. Talavera Cortes,M15 Mungia-Laukariz,Itf Men Singles,,,,,,
-women:api:14547,14547,A. Korneeva,women,ambiguous,1,F. Tian,Figueira Da Foz (Portugal) - Qualification,Challenger Women Singles,women:sackmann:252499,Alina Korneeva,0.974977,,exact_initial_form,"{""women:api:14547"": ""women:sackmann:252499""}"
+men:api:1056,1056,A. Martin,men,manual_unmapped,2,A. Burdet | M. Farzam,"M25 Klosters | M25 Tulsa, OK",Itf Men Singles,men:sackmann:211346,Andres Martin,0.975147,,exact_initial_form,"{""men:api:1056"": ""men:sackmann:211346""}"
 men:api:103890,103890,A. Kothari,men,missing_mapping_entry,1,M. Murtaza,M15 Kayseri 5,Itf Men Singles,,,,,,
-women:api:1417,1417,A. Kubareva,women,missing_mapping_entry,1,E. Lopez Alcaraz,W35+H Tauste,Itf Women Singles,,,,,,
-men:api:38777,38777,A. M'Chich,men,missing_mapping_entry,1,H. Car,M15 Bourg-En-Bresse (France),Itf Men Singles,,,,,,
-men:api:8129,8129,A. Nefve,men,missing_mapping_entry,1,J.J. Wolf,"M25 Tulsa, OK",Itf Men Singles,,,,,,
-men:api:1926,1926,A. Popyrin,men,ambiguous,1,R. Collignon,Halle,Atp Singles,men:sackmann:200615,Alexei Popyrin,0.975209,,exact_initial_form,"{""men:api:1926"": ""men:sackmann:200615""}"
 men:api:74738,74738,A. S. Nunez Vera,men,missing_mapping_entry,1,T. Seyboth Wild,Asuncion 2 (Paraguay) - Qualification,Challenger Men Singles,,,,,,
-men:api:71815,71815,A. Santamarta Roig,men,missing_mapping_entry,1,M. Alcala Gurri,Royan,Challenger Men Singles,,,,,,
-men:api:14613,14613,A. Spadola,men,missing_mapping_entry,1,N. Toffanin,M25 Milano (Italy),Itf Men Singles,,,,,,
-women:api:70319,70319,A. Stoyanov,women,missing_mapping_entry,1,V. Van De Peer,W15 Dinard,Itf Women Singles,,,,,,
-men:api:5909,5909,A. Walch,men,missing_mapping_entry,1,S. Corbinais,M15 Bourg-En-Bresse (France),Itf Men Singles,,,,,,
-men:api:35791,35791,B. Guerra,men,missing_mapping_entry,1,F. Thomas,M25 Klosters,Itf Men Singles,women:sackmann:264027,Beatriz Guerra,0.972773,,exact_initial_form,"{""men:api:35791"": ""women:sackmann:264027""}"
-men:api:2838,2838,B. Nakashima,men,ambiguous,1,M. Fucsovics,London,Atp Singles,men:sackmann:206909,Brandon Nakashima,0.975451,,exact_initial_form,"{""men:api:2838"": ""men:sackmann:206909""}"
 men:api:103889,103889,B. S. Takacs,men,missing_mapping_entry,1,A. Forger,M15 Gyula,Itf Men Singles,,,,,,
 women:api:73134,73134,B. Straszewska,women,missing_mapping_entry,1,I. Wawrzkiewicz,W35 Bolszewo (Poland),Itf Women Singles,,,,,,
-men:api:61814,61814,C. Cordoba,men,ambiguous,1,B. Munk Mesa,M15 Mungia-Laukariz,Itf Men Singles,men:sackmann:213059,Carles Cordoba,0.973871,,exact_initial_form,"{""men:api:61814"": ""men:sackmann:213059""}"
 women:api:103893,103893,C. Konuralp,women,missing_mapping_entry,1,S. Bielinska,W15 Kayseri 5,Itf Women Singles,,,,,,
 women:api:89411,89411,C. Lesdos,women,missing_mapping_entry,1,C. Noel,W15 Dinard,Itf Women Singles,,,,,,
 women:api:88830,88830,C. Narti,women,missing_mapping_entry,1,Z. Ulrich,W15 Dinard,Itf Women Singles,,,,,,
@@ -38,7 +13,6 @@ women:api:2524,2524,D. Kovinic,women,missing_mapping_entry,1,M. Bulgaru,Brescia 
 women:api:57515,57515,D. S. Malaescu,women,missing_mapping_entry,1,L. Sevcikova,W15 Bucharest 2,Itf Women Singles,,,,,,
 men:api:10842,10842,D. Verbeek,men,missing_mapping_entry,1,E. M. Garay,M15 Mungia-Laukariz,Itf Men Singles,,,,,,
 women:api:83146,83146,E. Combs,women,missing_mapping_entry,1,I. C. Millan,"W15 Irvine, CA",Itf Women Singles,,,,,,
-women:api:26931,26931,E. Lee,women,ambiguous,1,E. Sema,W35 Taipei,Itf Women Singles,women:sackmann:215501,Eunhye Lee,0.975263,,exact_initial_form,"{""women:api:26931"": ""women:sackmann:215501""}"
 men:api:103886,103886,E. M. Garay,men,missing_mapping_entry,1,D. Verbeek,M15 Mungia-Laukariz,Itf Men Singles,,,,,,
 women:api:38158,38158,E. Renard,women,missing_mapping_entry,1,L. Ipunesso,W15 Dinard,Itf Women Singles,,,,,,
 men:api:20215,20215,E. Villoslada,men,missing_mapping_entry,1,C. Rojas,M15 Mungia-Laukariz,Itf Men Singles,,,,,,
@@ -46,12 +20,10 @@ men:api:1240,1240,F. Arnaboldi,men,missing_mapping_entry,1,G. Ravasio,M25 Milano
 women:api:17,17,F. Dell'Edera,women,unmapped,1,A. Schueller,W15 Monastir 18,Itf Women Singles,,,,,,
 women:api:526,526,F. Ferro,women,missing_mapping_entry,1,K. Rinaldo Persson,Brescia (Italy) - Qualification,Challenger Women Singles,,,,,,
 men:api:8324,8324,F. Moroni,men,missing_mapping_entry,1,F. Andaloro,M25 Lourinha (Portugal),Itf Men Singles,,,,,,
-men:api:8442,8442,F. Passaro,men,missing_mapping_entry,1,O. Roca Batalla,Parma,Challenger Men Singles,,,,,,
 men:api:87125,87125,G. Crivellaro,men,missing_mapping_entry,1,G. Kravchenko,M25 Milano (Italy),Itf Men Singles,,,,,,
 men:api:2384,2384,G. Dimitrov,men,missing_mapping_entry,1,C. Rodesch,Dublin (Ireland) - Qualification,Challenger Men Singles,,,,,,
 women:api:38149,38149,G. Feistel,women,missing_mapping_entry,1,M. Rasim,W50 Haskovo (Bulgaria),Itf Women Singles,,,,,,
 men:api:2410,2410,G. Heide,men,missing_mapping_entry,1,D. Michalski,Poznan,Challenger Men Singles,,,,,,
-women:api:32808,32808,G. Jang,women,ambiguous,1,S. Nishimoto,W15 Sapporo,Itf Women Singles,women:sackmann:260638,Gaeul Jang,0.974431,,exact_initial_form,"{""women:api:32808"": ""women:sackmann:260638""}"
 men:api:66629,66629,H. Haupt,men,missing_mapping_entry,1,M. Balciunas,M15 Saarlouis,Itf Men Singles,,,,,,
 men:api:2215,2215,H. J. Escurra Isnardi,men,missing_mapping_entry,1,H. Casanova,Asuncion 2 (Paraguay) - Qualification,Challenger Men Singles,,,,,,
 women:api:31159,31159,H. Shi,women,missing_mapping_entry,1,C. Yuan,W35 Zhengzhou (China),Itf Women Singles,,,,,,
