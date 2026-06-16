@@ -22,7 +22,7 @@
     "tournament_surface_map_entries": 9986,
     "tournament_surface_map_rows": 10047
   },
-  "generated_at": "2026-06-16T08:42:01+00:00",
+  "generated_at": "2026-06-16T10:40:35+00:00",
   "matches": 4366,
   "outputs": {
     "duplicates_csv": "data/reports/api_tennis/duplicate_api_matches.csv",
@@ -64,7 +64,7 @@
   },
   "year_files": [
     {
-      "created_at": "2026-06-16T08:42:01+00:00",
+      "created_at": "2026-06-16T10:40:35+00:00",
       "matches": 4366,
       "path": "data/source/api_tennis/tle_api_matches_2026.jsonl.gz",
       "year": 2026
