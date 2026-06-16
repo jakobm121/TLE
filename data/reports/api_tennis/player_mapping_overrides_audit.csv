@@ -1,58 +1,58 @@
 verdict,api_player_key,api_name,api_full_name,api_short_name,api_country_raw,api_country_code,api_bday,api_birth_year,sackmann_player_key,sackmann_name,sackmann_country_code,sackmann_birth_date,sackmann_birth_year,sackmann_approx_birth_year,sackmann_hand,sackmann_height,name_match_type,candidate_rows_found,reason
-CHECK,men:api:100794,,,,,,,,men:sackmann:212756,Nikita Bilozertsev,UKR,,,2008,U,,,0,API player not found in api_players cache.
-CHECK,men:api:1250,,,,,,,,men:sackmann:209060,Alexander Bernard,USA,,,2003,L,175,,0,API player not found in api_players cache.
-CHECK,men:api:14613,,,,,,,,men:sackmann:210331,Alessandro Spadola,ITA,,,2003,L,178,,0,API player not found in api_players cache.
-CHECK,men:api:15252,,,,,,,,men:sackmann:209999,Leonardo Malgaroli,ITA,,,2002,U,,,0,API player not found in api_players cache.
-CHECK,men:api:17463,,,,,,,,men:sackmann:210464,Darwin Blanch,USA,,,2008,L,185,,0,API player not found in api_players cache.
-CHECK,men:api:1926,,,,,,,,men:sackmann:200615,Alexei Popyrin,AUS,,,1999,R,196,,0,API player not found in api_players cache.
-CHECK,men:api:2838,,,,,,,,men:sackmann:206909,Brandon Nakashima,USA,,,2001,R,188,,0,API player not found in api_players cache.
-CHECK,men:api:28511,,,,,,,,men:sackmann:210733,Arthur Bonnaud,FRA,,,1997,L,175,,0,API player not found in api_players cache.
-CHECK,men:api:35791,,,,,,,,men:sackmann:211706,Batiste Guerra,SUI,,,,U,,,0,API player not found in api_players cache.
-CHECK,men:api:38777,,,,,,,,men:sackmann:210749,Andrea M'Chich,FRA,,,,U,,,0,API player not found in api_players cache.
-CHECK,men:api:421,,,,,,,,men:sackmann:106331,Christopher Oconnell,AUS,,,1994,R,183,,0,API player not found in api_players cache.
-CHECK,men:api:52069,,,,,,,,men:sackmann:210629,Alejandro Juan Mano,ESP,,,2005,U,,,0,API player not found in api_players cache.
-CHECK,men:api:54466,,,,,,,,men:sackmann:212256,Colton Smith,USA,,,2003,U,,,0,API player not found in api_players cache.
-CHECK,men:api:5673,,,,,,,,men:sackmann:200713,Federico Iannaccone,ITA,,,1999,R,183,,0,API player not found in api_players cache.
-CHECK,men:api:57239,,,,,,,,men:sackmann:211524,Abel Forger,NED,,,2005,R,,,0,API player not found in api_players cache.
-CHECK,men:api:590,,,,,,,,men:sackmann:111190,Zhizhen Zhang,CHN,,,1996,R,193,,0,API player not found in api_players cache.
-CHECK,men:api:5909,,,,,,,,men:sackmann:126505,Antoine Walch,FRA,,,1993,U,,,0,API player not found in api_players cache.
-CHECK,men:api:61814,,,,,,,,men:sackmann:213059,Carles Cordoba,ESP,,,,U,,,0,API player not found in api_players cache.
-CHECK,men:api:69525,,,,,,,,men:sackmann:212990,Alejandro Jacome Jaramillo,ECU,,,,U,,,0,API player not found in api_players cache.
-CHECK,men:api:69711,,,,,,,,men:sackmann:213015,Aleksandar Daskalovic,GBR,,,,U,,,0,API player not found in api_players cache.
-CHECK,men:api:71815,,,,,,,,men:sackmann:212749,Andres Santamarta Roig,ESP,,,2007,R,,,0,API player not found in api_players cache.
-CHECK,men:api:72052,,,,,,,,men:sackmann:213097,Alvaro Jimenez,ESP,,,,U,,,0,API player not found in api_players cache.
-CHECK,men:api:7498,,,,,,,,men:sackmann:207893,Daniel De Jonge,NED,,,1999,U,,,0,API player not found in api_players cache.
-CHECK,men:api:778,,,,,,,,men:sackmann:208265,Pierre Delage,FRA,,,2001,R,198,,0,API player not found in api_players cache.
-CHECK,men:api:80068,,,,,,,,men:sackmann:213760,Pavel Lagutin,RUS,,,2005,U,,,0,API player not found in api_players cache.
-CHECK,men:api:8129,,,,,,,,men:sackmann:208051,Axel Nefve,USA,,,2000,L,193,,0,API player not found in api_players cache.
-CHECK,men:api:8442,,,,,,,,men:sackmann:208859,Francesco Passaro,ITA,,,2001,R,180,,0,API player not found in api_players cache.
-CHECK,men:api:851,,,,,,,,men:sackmann:206867,Tommaso Compagnucci,ITA,,,2000,R,173,,0,API player not found in api_players cache.
-CHECK,men:api:9514,,,,,,,,men:sackmann:209860,Ignacio Buse,PER,,,2004,R,185,,0,API player not found in api_players cache.
-CHECK,women:api:104082,,,,,,,,women:sackmann:260046,Sophia Webster,USA,,,2005,U,,,0,API player not found in api_players cache.
-CHECK,women:api:10909,,,,,,,,women:sackmann:260171,Hayu Kinoshita,JPN,,,2006,U,,,0,API player not found in api_players cache.
-CHECK,women:api:11480,,,,,,,,women:sackmann:216180,Zoziya Kardava,RUS,,,2001,R,,,0,API player not found in api_players cache.
-CHECK,women:api:122,,,,,,,,women:sackmann:203509,Diana Marcinkevica,LAT,,,1992,R,170,,0,API player not found in api_players cache.
-CHECK,women:api:123,,,,,,,,women:sackmann:204419,Ana Sofia Sanchez,MEX,,,1994,L,,,0,API player not found in api_players cache.
-CHECK,women:api:12869,,,,,,,,women:sackmann:221237,Maria Timofeeva,UZB,,,2004,R,,,0,API player not found in api_players cache.
-CHECK,women:api:13324,,,,,,,,women:sackmann:236980,Astrid Cirotte,FRA,,,2004,U,,,0,API player not found in api_players cache.
-CHECK,women:api:1356,,,,,,,,women:sackmann:248660,Lya Fernandez,MEX,,,2008,U,,,0,API player not found in api_players cache.
-CHECK,women:api:1417,,,,,,,,women:sackmann:215707,Anna Kubareva,BLR,,,2001,U,,,0,API player not found in api_players cache.
-CHECK,women:api:14547,,,,,,,,women:sackmann:252499,Alina Korneeva,RUS,,,2007,U,,,0,API player not found in api_players cache.
-CHECK,women:api:150,,,,,,,,women:sackmann:202464,Yuliana Lizarazo,COL,,,1993,R,175,,0,API player not found in api_players cache.
-CHECK,women:api:17346,,,,,,,,women:sackmann:220673,Alana Smith,USA,,,1999,U,,,0,API player not found in api_players cache.
-CHECK,women:api:1815,,,,,,,,women:sackmann:215138,Lulu Sun,NZL,,,2001,L,,,0,API player not found in api_players cache.
-CHECK,women:api:19429,,,,,,,,women:sackmann:223404,Sabine Rutlauka,LAT,,,2002,U,,,0,API player not found in api_players cache.
-CHECK,women:api:2394,,,,,,,,women:sackmann:220367,Leylah Fernandez,CAN,,,2002,L,168,,0,API player not found in api_players cache.
-CHECK,women:api:26931,,,,,,,,women:sackmann:215501,Eunhye Lee,KOR,,,2000,U,,,0,API player not found in api_players cache.
-CHECK,women:api:2822,,,,,,,,women:sackmann:201329,Vera Zvonareva,RUS,,,1984,R,172,,0,API player not found in api_players cache.
-CHECK,women:api:32808,,,,,,,,women:sackmann:260638,Gaeul Jang,KOR,,,2006,U,,,0,API player not found in api_players cache.
-CHECK,women:api:37886,,,,,,,,women:sackmann:266531,Tiantsoa Sarah Rakotomanga Rajaonah,FRA,,,,U,,,0,API player not found in api_players cache.
-CHECK,women:api:4363,,,,,,,,women:sackmann:213767,Ayla Aksu,USA,,,1996,R,170,,0,API player not found in api_players cache.
-CHECK,women:api:451,,,,,,,,women:sackmann:202684,Lin Zhu,CHN,,,1994,R,173,,0,API player not found in api_players cache.
-CHECK,women:api:68376,,,,,,,,women:sackmann:214643,Liudmila Samsonova,RUS,,,1998,R,180,,0,API player not found in api_players cache.
-CHECK,women:api:69485,,,,,,,,women:sackmann:260323,Amelie Justine Hejtmanek,GER,,,,U,,,0,API player not found in api_players cache.
-CHECK,women:api:70319,,,,,,,,women:sackmann:267422,Antonia Stoyanov,NED,,,2009,U,,,0,API player not found in api_players cache.
-CHECK,women:api:76964,,,,,,,,women:sackmann:269888,Ana Julieta Lopez Ocampos,PRY,,,,U,,,0,API player not found in api_players cache.
-CHECK,women:api:84923,,,,,,,,women:sackmann:264178,Yu Chin Tsai,TPE,,,,U,,,0,API player not found in api_players cache.
-CHECK,women:api:85934,,,,,,,,women:sackmann:270165,Alesia Breaz,ROU,,,,U,,,0,API player not found in api_players cache.
-CHECK,women:api:92499,,,,,,,,women:sackmann:260054,Aleksandra Iankovskaia,RUS,,,2007,U,,,0,API player not found in api_players cache.
+RISKY,men:api:100794,Nikita Belozertsev,Nikita Belozertsev,N. Belozertsev,Uzbekistan,UZB,,,men:sackmann:212756,Nikita Bilozertsev,UKR,,,2008,U,,partial_token_overlap,0,"Shared tokens: nikita. Country mismatch: API UZB, Sackmann UKR."
+SAFE,men:api:1250,Alexander Bernard,Alexander Bernard,A. Bernard,USA,USA,13.08.2003,2003,men:sackmann:209060,Alexander Bernard,USA,,,2003,L,175,exact,0,Exact normalized name match. Country match: USA. Birth year match: 2003 == 2003.
+SAFE,men:api:14613,Alessandro Spadola,Alessandro Spadola,A. Spadola,Italy,ITA,05.03.2003,2003,men:sackmann:210331,Alessandro Spadola,ITA,,,2003,L,178,exact,0,Exact normalized name match. Country match: ITA. Birth year match: 2003 == 2003.
+SAFE,men:api:15252,Leonardo Malgaroli,Leonardo Malgaroli,L. Malgaroli,Italy,ITA,07.08.2002,2002,men:sackmann:209999,Leonardo Malgaroli,ITA,,,2002,U,,exact,0,Exact normalized name match. Country match: ITA. Birth year match: 2002 == 2002.
+SAFE,men:api:17463,Darwin Blanch,Darwin Blanch,D. Blanch,USA,USA,28.09.2007,2007,men:sackmann:210464,Darwin Blanch,USA,,,2008,L,185,exact,0,Exact normalized name match. Country match: USA. Birth year near: 2007 vs 2008.
+SAFE,men:api:1926,Alexei Popyrin,Alexei Popyrin,Al. Popyrin,Australia,AUS,05.08.1999,1999,men:sackmann:200615,Alexei Popyrin,AUS,,,1999,R,196,exact,0,Exact normalized name match. Country match: AUS. Birth year match: 1999 == 1999.
+SAFE,men:api:2838,Brandon Nakashima,Brandon Nakashima,B. Nakashima,USA,USA,03.08.2001,2001,men:sackmann:206909,Brandon Nakashima,USA,,,2001,R,188,exact,0,Exact normalized name match. Country match: USA. Birth year match: 2001 == 2001.
+SAFE,men:api:28511,Arthur Bonnaud,Arthur Bonnaud,A. Bonnaud,France,FRA,30.03.1997,1997,men:sackmann:210733,Arthur Bonnaud,FRA,,,1997,L,175,exact,0,Exact normalized name match. Country match: FRA. Birth year match: 1997 == 1997.
+RISKY,men:api:35791,B. Guerra,,B. Guerra,Brazil,BRA,01.01.1970,1970,men:sackmann:211706,Batiste Guerra,SUI,,,,U,,initial_surname,0,"Initial + surname matches Sackmann full name. Country mismatch: API BRA, Sackmann SUI."
+SAFE,men:api:38777,Andrea M'Chich,Andrea M'Chich,A. Mchich,France,FRA,03.10.2005,2005,men:sackmann:210749,Andrea M'Chich,FRA,,,,U,,exact,0,Exact normalized name match. Country match: FRA.
+SAFE,men:api:421,Christopher O'Connell,Christopher O'Connell,C. O&apos;Connell,Australia,AUS,03.06.1994,1994,men:sackmann:106331,Christopher Oconnell,AUS,,,1994,R,183,compact_exact,0,Names match after removing spaces/punctuation. Country match: AUS. Birth year match: 1994 == 1994.
+SAFE,men:api:52069,Alejandro Juan Mano,Alejandro Juan Mano,A. Juan Mano,Spain,ESP,14.01.2005,2005,men:sackmann:210629,Alejandro Juan Mano,ESP,,,2005,U,,exact,0,Exact normalized name match. Country match: ESP. Birth year match: 2005 == 2005.
+SAFE,men:api:54466,Colton Smith,Colton Smith,C. Smith,USA,USA,05.03.2003,2003,men:sackmann:212256,Colton Smith,USA,,,2003,U,,exact,0,Exact normalized name match. Country match: USA. Birth year match: 2003 == 2003.
+SAFE,men:api:5673,Federico Iannaccone,Federico Iannaccone,F. Iannaccone,Italy,ITA,26.03.1999,1999,men:sackmann:200713,Federico Iannaccone,ITA,,,1999,R,183,exact,0,Exact normalized name match. Country match: ITA. Birth year match: 1999 == 1999.
+SAFE,men:api:57239,Abel Forger,Abel Forger,A. Forger,Netherlands,NED,25.07.2005,2005,men:sackmann:211524,Abel Forger,NED,,,2005,R,,exact,0,Exact normalized name match. Country match: NED. Birth year match: 2005 == 2005.
+SAFE,men:api:590,Zhizhen Zhang,Zhizhen Zhang,Z. Zhang,China,CHN,16.10.1996,1996,men:sackmann:111190,Zhizhen Zhang,CHN,,,1996,R,193,exact,0,Exact normalized name match. Country match: CHN. Birth year match: 1996 == 1996.
+SAFE,men:api:5909,Antoine Walch,Antoine Walch,A. Walch,France,FRA,29.10.1993,1993,men:sackmann:126505,Antoine Walch,FRA,,,1993,U,,exact,0,Exact normalized name match. Country match: FRA. Birth year match: 1993 == 1993.
+SAFE,men:api:61814,Carles Cordoba,Carles Cordoba,C. Cordoba,Spain,ESP,18.01.2006,2006,men:sackmann:213059,Carles Cordoba,ESP,,,,U,,exact,0,Exact normalized name match. Country match: ESP.
+SAFE,men:api:69525,Alejandro Jacome Jaramillo,Alejandro Jacome Jaramillo,A. Jacome Jaramillo,Ecuador,ECU,30.09.2003,2003,men:sackmann:212990,Alejandro Jacome Jaramillo,ECU,,,,U,,exact,0,Exact normalized name match. Country match: ECU.
+RISKY,men:api:69711,A. Daskalovic,,A. Daskalovic,Serbia,SRB,24.01.2006,2006,men:sackmann:213015,Aleksandar Daskalovic,GBR,,,,U,,initial_surname,0,"Initial + surname matches Sackmann full name. Country mismatch: API SRB, Sackmann GBR."
+SAFE,men:api:71815,Andres Santamarta Roig,Andres Santamarta Roig,A. Santamarta Roig,Spain,ESP,23.01.2007,2007,men:sackmann:212749,Andres Santamarta Roig,ESP,,,2007,R,,exact,0,Exact normalized name match. Country match: ESP. Birth year match: 2007 == 2007.
+SAFE,men:api:72052,Alvaro Jimenez,Alvaro Jimenez,A. Jimenez,Spain,ESP,08.01.2007,2007,men:sackmann:213097,Alvaro Jimenez,ESP,,,,U,,exact,0,Exact normalized name match. Country match: ESP.
+SAFE,men:api:7498,Daniel De Jonge,Daniel De Jonge,D. De Jonge,Netherlands,NED,17.08.1999,1999,men:sackmann:207893,Daniel De Jonge,NED,,,1999,U,,exact,0,Exact normalized name match. Country match: NED. Birth year match: 1999 == 1999.
+SAFE,men:api:778,Pierre Delage,Pierre Delage,P. Delage,France,FRA,22.01.2001,2001,men:sackmann:208265,Pierre Delage,FRA,,,2001,R,198,exact,0,Exact normalized name match. Country match: FRA. Birth year match: 2001 == 2001.
+CHECK,men:api:80068,Pavel Lagutin,Pavel Lagutin,P. Lagutin,World,,01.01.1970,1970,men:sackmann:213760,Pavel Lagutin,RUS,,,2005,U,,exact,0,Exact normalized name match. Birth year mismatch: 1970 vs 2005.
+SAFE,men:api:8129,Axel Nefve,Axel Nefve,A. Nefve,USA,USA,22.07.2000,2000,men:sackmann:208051,Axel Nefve,USA,,,2000,L,193,exact,0,Exact normalized name match. Country match: USA. Birth year match: 2000 == 2000.
+SAFE,men:api:8442,Francesco Passaro,Francesco Passaro,F. Passaro,Italy,ITA,07.01.2001,2001,men:sackmann:208859,Francesco Passaro,ITA,,,2001,R,180,exact,0,Exact normalized name match. Country match: ITA. Birth year match: 2001 == 2001.
+SAFE,men:api:851,Tommaso Compagnucci,Tommaso Compagnucci,T. Compagnucci,Italy,ITA,05.11.1999,1999,men:sackmann:206867,Tommaso Compagnucci,ITA,,,2000,R,173,exact,0,Exact normalized name match. Country match: ITA. Birth year near: 1999 vs 2000.
+SAFE,men:api:9514,Ignacio Buse,Ignacio Buse,I. Buse,Peru,PER,25.03.2004,2004,men:sackmann:209860,Ignacio Buse,PER,,,2004,R,185,exact,0,Exact normalized name match. Country match: PER. Birth year match: 2004 == 2004.
+CHECK,women:api:104082,S. Webster,,S. Webster,,,,,women:sackmann:260046,Sophia Webster,USA,,,2005,U,,initial_surname,0,Initial + surname matches Sackmann full name.
+SAFE,women:api:10909,Hayu Kinoshita,Hayu Kinoshita,H. Kinoshita,Japan,JPN,27.10.2006,2006,women:sackmann:260171,Hayu Kinoshita,JPN,,,2006,U,,exact,0,Exact normalized name match. Country match: JPN. Birth year match: 2006 == 2006.
+CHECK,women:api:11480,Zoziya Kardava,Zoziya Kardava,Z. Kardava,Georgia,GEO,15.07.2001,2001,women:sackmann:216180,Zoziya Kardava,RUS,,,2001,R,,exact,0,"Exact normalized name match. Country mismatch: API GEO, Sackmann RUS. Birth year match: 2001 == 2001."
+SAFE,women:api:122,Diana Marcinkevica,Diana Marcinkevica,D. Marcinkevica,Latvia,LAT,03.08.1992,1992,women:sackmann:203509,Diana Marcinkevica,LAT,,,1992,R,170,exact,0,Exact normalized name match. Country match: LAT. Birth year match: 1992 == 1992.
+SAFE,women:api:123,Sofia Sanchez Ana,Sofia Sanchez Ana,A. S. Sanchez,Mexico,MEX,13.04.1994,1994,women:sackmann:204419,Ana Sofia Sanchez,MEX,,,1994,L,,token_set_exact,0,Same name tokens in different order. Country match: MEX. Birth year match: 1994 == 1994.
+SAFE,women:api:12869,Maria Timofeeva,Maria Timofeeva,M. Timofeeva,Uzbekistan,UZB,18.11.2003,2003,women:sackmann:221237,Maria Timofeeva,UZB,,,2004,R,,exact,0,Exact normalized name match. Country match: UZB. Birth year near: 2003 vs 2004.
+SAFE,women:api:13324,Astrid Cirotte,Astrid Cirotte,A. Cirotte,France,FRA,16.12.2003,2003,women:sackmann:236980,Astrid Cirotte,FRA,,,2004,U,,exact,0,Exact normalized name match. Country match: FRA. Birth year near: 2003 vs 2004.
+SAFE,women:api:1356,Lya Fernandez,Lya Fernandez,L. Fernandez,Mexico,MEX,24.07.2007,2007,women:sackmann:248660,Lya Fernandez,MEX,,,2008,U,,exact,0,Exact normalized name match. Country match: MEX. Birth year near: 2007 vs 2008.
+SAFE,women:api:1417,Anna Kubareva,Anna Kubareva,A. Kubareva,World,,06.02.2001,2001,women:sackmann:215707,Anna Kubareva,BLR,,,2001,U,,exact,0,Exact normalized name match. Birth year match: 2001 == 2001.
+CHECK,women:api:14547,Alina Korneeva,Alina Korneeva,A. Korneeva,Armenia,,11.03.2009,2009,women:sackmann:252499,Alina Korneeva,RUS,,,2007,U,,exact,0,Exact normalized name match. Birth year mismatch: 2009 vs 2007.
+SAFE,women:api:150,Yuliana Lizarazo,Yuliana Lizarazo,Y. Lizarazo,Colombia,COL,23.05.1993,1993,women:sackmann:202464,Yuliana Lizarazo,COL,,,1993,R,175,exact,0,Exact normalized name match. Country match: COL. Birth year match: 1993 == 1993.
+SAFE,women:api:17346,Alana Smith,Alana Smith,A. Smith,USA,USA,09.11.1999,1999,women:sackmann:220673,Alana Smith,USA,,,1999,U,,exact,0,Exact normalized name match. Country match: USA. Birth year match: 1999 == 1999.
+SAFE,women:api:1815,Lulu Sun,Lulu Sun,L. Sun,New Zealand,NZL,14.04.2001,2001,women:sackmann:215138,Lulu Sun,NZL,,,2001,L,,exact,0,Exact normalized name match. Country match: NZL. Birth year match: 2001 == 2001.
+SAFE,women:api:19429,Sabine Rutlauka,Sabine Rutlauka,S. Rutlauka,Latvia,LAT,11.10.2002,2002,women:sackmann:223404,Sabine Rutlauka,LAT,,,2002,U,,exact,0,Exact normalized name match. Country match: LAT. Birth year match: 2002 == 2002.
+SAFE,women:api:2394,Leylah Fernandez,Leylah Fernandez,L. A. Fernandez,Canada,CAN,06.09.2002,2002,women:sackmann:220367,Leylah Fernandez,CAN,,,2002,L,168,exact,0,Exact normalized name match. Country match: CAN. Birth year match: 2002 == 2002.
+CHECK,women:api:26931,Eunhye Lee,Eunhye Lee,E. Lee,Singapore,,16.04.2008,2008,women:sackmann:215501,Eunhye Lee,KOR,,,2000,U,,exact,0,Exact normalized name match. Birth year mismatch: 2008 vs 2000.
+SAFE,women:api:2822,Vera Zvonareva,Vera Zvonareva,V. Zvonareva,World,,07.09.1984,1984,women:sackmann:201329,Vera Zvonareva,RUS,,,1984,R,172,exact,0,Exact normalized name match. Birth year match: 1984 == 1984.
+SAFE,women:api:32808,Gaeul Jang,Gaeul Jang,G. Jang,South Korea,KOR,30.09.2006,2006,women:sackmann:260638,Gaeul Jang,KOR,,,2006,U,,exact,0,Exact normalized name match. Country match: KOR. Birth year match: 2006 == 2006.
+SAFE,women:api:37886,Sarah Rakotomanga Rajaonah Tiantsoa,Sarah Rakotomanga Rajaonah Tiantsoa,T. Rakotomanga Rajaonah,France,FRA,15.12.2005,2005,women:sackmann:266531,Tiantsoa Sarah Rakotomanga Rajaonah,FRA,,,,U,,token_set_exact,0,Same name tokens in different order. Country match: FRA.
+CHECK,women:api:4363,Ayla Aksu,Ayla Aksu,A. Aksu,Turkey,TUR,15.07.1996,1996,women:sackmann:213767,Ayla Aksu,USA,,,1996,R,170,exact,0,"Exact normalized name match. Country mismatch: API TUR, Sackmann USA. Birth year match: 1996 == 1996."
+SAFE,women:api:451,Lin Zhu,Lin Zhu,L. Zhu,China,CHN,28.01.1994,1994,women:sackmann:202684,Lin Zhu,CHN,,,1994,R,173,exact,0,Exact normalized name match. Country match: CHN. Birth year match: 1994 == 1994.
+SAFE,women:api:68376,Liudmila Samsonova,Liudmila Samsonova,L. Samsonova,World,,11.11.1998,1998,women:sackmann:214643,Liudmila Samsonova,RUS,,,1998,R,180,exact,0,Exact normalized name match. Birth year match: 1998 == 1998.
+RISKY,women:api:69485,Amelie Hejtmanek,Amelie Hejtmanek,A. J. Hejtmanek,Czech Republic,CZE,13.11.2007,2007,women:sackmann:260323,Amelie Justine Hejtmanek,GER,,,,U,,same_surname,0,"Same surname, but not enough name evidence. Country mismatch: API CZE, Sackmann GER."
+SAFE,women:api:70319,Antonia Stoyanov,Antonia Stoyanov,A. Stoyanov,Netherlands,NED,15.09.2009,2009,women:sackmann:267422,Antonia Stoyanov,NED,,,2009,U,,exact,0,Exact normalized name match. Country match: NED. Birth year match: 2009 == 2009.
+RISKY,women:api:76964,A. J. Lopez Ocampos,,A. J. Lopez Ocampos,Paraguay,PAR,01.01.1970,1970,women:sackmann:269888,Ana Julieta Lopez Ocampos,PRY,,,,U,,same_surname,0,"Same surname, but not enough name evidence. Country mismatch: API PAR, Sackmann PRY."
+LIKELY_OK,women:api:84923,Y. Tsai,,Y. Tsai,Taiwan,TPE,06.03.2008,2008,women:sackmann:264178,Yu Chin Tsai,TPE,,,,U,,initial_surname,0,Initial + surname matches Sackmann full name. Country match: TPE.
+SAFE,women:api:85934,Alesia Breaz,Alesia Breaz,A. Breaz,Romania,ROU,01.01.1970,1970,women:sackmann:270165,Alesia Breaz,ROU,,,,U,,exact,0,Exact normalized name match. Country match: ROU.
+RISKY,women:api:92499,A. Ivanovskaya,,A. Ivanovskaya,World,,14.06.1989,1989,women:sackmann:260054,Aleksandra Iankovskaia,RUS,,,2007,U,,weak,0,Weak or no name evidence. Birth year mismatch: 1989 vs 2007.
