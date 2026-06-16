@@ -8,9 +8,11 @@
   },
   "api_players": 2954,
   "counters": {
-    "ambiguous": 42,
+    "ambiguous": 43,
     "api_gender_men": 1625,
     "api_gender_women": 1329,
+    "api_player_cache_birth_date_used": 17534,
+    "api_player_cache_country_used": 15971,
     "api_player_cache_entries": 5051,
     "api_player_cache_full_name_used": 16771,
     "api_player_cache_name_changed": 8752,
@@ -20,15 +22,20 @@
     "api_players": 2954,
     "api_players_after_raw": 2954,
     "api_players_after_source": 2814,
-    "auto_mapped": 2721,
+    "auto_mapped": 2720,
+    "candidate_country_match": 2482,
+    "candidate_country_mismatch": 117,
     "manual_mapped": 53,
     "manual_unmapped": 1,
     "raw_mapping_files_seen": 22,
     "raw_mapping_rows_seen": 6867,
     "raw_mapping_skipped_non_singles": 2123,
+    "sackmann_metadata_entries": 12052,
+    "sackmann_metadata_with_birth_date": 0,
+    "sackmann_metadata_with_country_code": 12050,
     "unmapped": 137
   },
-  "generated_at": "2026-06-16T20:14:16+00:00",
+  "generated_at": "2026-06-16T21:46:07+00:00",
   "issues_total": 0,
   "outputs": {
     "candidates_csv": "data/reports/api_tennis/player_mapping_candidates.csv",
@@ -37,7 +44,14 @@
     "overrides_json": "data/metadata/api_tennis/player_mapping_overrides.json",
     "review_csv": "data/reports/api_tennis/player_mapping_review.csv"
   },
-  "review_needed": 179,
+  "review_needed": 180,
+  "sackmann_player_metadata": {
+    "entries": 12052,
+    "exists": true,
+    "path": "data/metadata/sackmann/players.json",
+    "with_birth_date": 0,
+    "with_country_code": 12050
+  },
   "sackmann_players": 12045,
   "status": "ok"
 }
