@@ -1,0 +1,26 @@
+{
+  "counters": {
+    "candidate_action_manual_review": 125,
+    "candidate_action_no_candidate": 125,
+    "candidate_action_safe_override": 3,
+    "candidate_action_weak_candidate": 10,
+    "players_in_queue": 263,
+    "priority_challenger": 34,
+    "priority_high_level": 48,
+    "priority_low_priority": 148,
+    "priority_many_matches": 30,
+    "priority_safe_candidate": 3
+  },
+  "generated_at": "2026-06-16T00:06:25+00:00",
+  "notes": [
+    "Use search_query_hint to verify exact match online before adding manual overrides.",
+    "Only add overrides when the full player identity and Sackmann key are both confirmed."
+  ],
+  "outputs": {
+    "queue_csv": "data/reports/api_tennis/player_mapping_manual_verification_queue.csv",
+    "queue_json": "data/reports/api_tennis/player_mapping_manual_verification_queue.json"
+  },
+  "rows_written": 514,
+  "status": "ok",
+  "unresolved_players_from_review": 263
+}
