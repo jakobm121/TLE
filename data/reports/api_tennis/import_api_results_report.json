@@ -1,5 +1,22 @@
 {
+  "api_player_cache": {
+    "entries": 5051,
+    "exists": true,
+    "path": "data/raw/api_tennis/players/api_players.json",
+    "with_full_name": 2467,
+    "with_short_name": 5051
+  },
   "counters": {
+    "api_player_cache_entries": 5051,
+    "api_player_cache_first_full_name_used": 4046,
+    "api_player_cache_first_name_changed": 4054,
+    "api_player_cache_first_short_name_used": 386,
+    "api_player_cache_name_changed": 8093,
+    "api_player_cache_second_full_name_used": 4034,
+    "api_player_cache_second_name_changed": 4039,
+    "api_player_cache_second_short_name_used": 398,
+    "api_player_cache_with_full_name": 2467,
+    "api_player_cache_with_short_name": 5051,
     "gender_men": 2463,
     "gender_women": 1903,
     "imported": 4366,
@@ -22,7 +39,7 @@
     "tournament_surface_map_entries": 9986,
     "tournament_surface_map_rows": 10047
   },
-  "generated_at": "2026-06-16T10:40:35+00:00",
+  "generated_at": "2026-06-16T19:13:37+00:00",
   "matches": 4366,
   "outputs": {
     "duplicates_csv": "data/reports/api_tennis/duplicate_api_matches.csv",
@@ -64,7 +81,7 @@
   },
   "year_files": [
     {
-      "created_at": "2026-06-16T10:40:35+00:00",
+      "created_at": "2026-06-16T19:13:37+00:00",
       "matches": 4366,
       "path": "data/source/api_tennis/tle_api_matches_2026.jsonl.gz",
       "year": 2026
