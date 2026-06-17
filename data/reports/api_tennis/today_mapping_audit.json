@@ -24,12 +24,15 @@
     "match_coverage_none_mapped": 1,
     "match_coverage_one_mapped": 35,
     "raw_skipped_non_singles": 182,
+    "review_ambiguous_candidates": 8,
+    "review_candidates_available": 10,
+    "review_no_candidates_suppressed": 27,
     "today_matches": 415,
     "today_players": 827,
     "unmapped_players": 37
   },
   "date": "2026-06-17",
-  "generated_at": "2026-06-17T16:42:45+00:00",
+  "generated_at": "2026-06-17T16:59:42+00:00",
   "mapped_players": 790,
   "mapping_path": "data/metadata/api_tennis/player_mapping.json",
   "notes": [
