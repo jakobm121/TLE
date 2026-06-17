@@ -1,0 +1,224 @@
+source,file,gender,player_id,player_key,player_name,result,opponent_id,opponent_key,opponent_name,date,tournament,level,surface,round,score
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,208532,men:sackmann:208532,Thiago Cigarran,20230828,M15 Buenos Aires,15,Clay,R32,6-3 7-6(6)
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,109946,men:sackmann:109946,Pedro Rodrigues,20230828,M15 Buenos Aires,15,Clay,R16,6-3 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,210719,men:sackmann:210719,Francisco Pini,20230828,M15 Buenos Aires,15,Clay,QF,6-4 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,210510,men:sackmann:210510,Lautaro Midon,20230828,M15 Buenos Aires,15,Clay,SF,6-4 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,210218,men:sackmann:210218,Bruno Fernandez,20230925,M25 Lujan,25,Clay,R32,6-2 6-1
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,208223,men:sackmann:208223,Alvaro Guillen Meza,20230925,M25 Lujan,25,Clay,R16,7-6(7) 6-1
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,211694,men:sackmann:211694,Gino Romano,20231009,M25 Lajeado,25,Clay,R32,6-2 6-1
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,200331,men:sackmann:200331,Leonardo Aboian,20231009,M25 Lajeado,25,Clay,R16,6-3 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,212551,men:sackmann:212551,Jossting Cruz,20231106,M15 Santo Domingo,15,Hard,R32,6-2 6-1
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,208821,men:sackmann:208821,Ondrej Horak,20231106,M15 Santo Domingo,15,Hard,R16,3-6 7-6(3) 7-6(1)
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,111579,men:sackmann:111579,Henrik Wiersholm,20231106,M15 Santo Domingo,15,Hard,QF,6-4 1-6 10-5
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,200228,men:sackmann:200228,Felix Corwin,20231106,M15 Santo Domingo,15,Hard,SF,6-4 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,212157,men:sackmann:212157,Timofei Derepasko,20231113,M15 Santo Domingo,15,Hard,R32,6-4 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,109207,men:sackmann:109207,Enrique Pena,20231113,M15 Santo Domingo,15,Hard,R16,6-3 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,111579,men:sackmann:111579,Henrik Wiersholm,20231113,M15 Santo Domingo,15,Hard,QF,6-2 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,126209,men:sackmann:126209,Peter Bertran,20231113,M15 Santo Domingo,15,Hard,SF,6-4 7-5
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,132573,men:sackmann:132573,Luca Castelnuovo,20230116,M15 Bressuire,15,Hard,R32,6-4 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,210745,men:sackmann:210745,Matthias Ujvary,20230320,M15 Antalya,15,Clay,R32,6-4 6-1
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,211451,men:sackmann:211451,Gilles Arnaud Bailly,20230320,M15 Antalya,15,Clay,R16,3-6 7-6(5) 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,210536,men:sackmann:210536,Rei Sakamoto,20230327,M15 Antalya,15,Clay,R32,4-6 6-3 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,208533,men:sackmann:208533,Joao Victor Couto Loureiro,20230918,M15 Punta del Este,15,Clay,R32,6-3 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,202275,men:sackmann:202275,Fermin Tenti,20230918,M15 Punta del Este,15,Clay,R16,6-1 7-6(2)
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,211389,men:sackmann:211389,Manuel Mouilleron Salvo,20230918,M15 Punta del Este,15,Clay,QF,6-4 7-5
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,126183,men:sackmann:126183,Mariano Kestelboim,20230918,M15 Punta del Este,15,Clay,SF,6-3 6-0
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,208223,men:sackmann:208223,Alvaro Guillen Meza,20230918,M15 Punta del Este,15,Clay,F,6-7(3) 6-1 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,212047,men:sackmann:212047,Danil Panarin,20230206,M15 Palm Coast FL,15,Clay,R32,6-7(3) 6-4 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,210098,men:sackmann:210098,Victor Lilov,20230206,M15 Palm Coast FL,15,Clay,R16,6-1 0-6 6-1
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,206589,men:sackmann:206589,Gabi Adrian Boitan,20230206,M15 Palm Coast FL,15,Clay,QF,7-6(3) 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,207130,men:sackmann:207130,Matias Soto,20230213,M15 Weston FL,15,Clay,R32,6-2 7-6(5)
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,210098,men:sackmann:210098,Victor Lilov,20230213,M15 Weston FL,15,Clay,R16,6-2 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,210077,men:sackmann:210077,Aidan Kim,20230213,M15 Weston FL,15,Clay,QF,6-3 7-5
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,210416,men:sackmann:210416,Bryce Nakashima,20230220,M15 Naples FL,15,Clay,R32,6-2 7-5
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,202345,men:sackmann:202345,Arvid Nordquist,20230220,M15 Naples FL,15,Clay,R16,5-7 7-5 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,210028,men:sackmann:210028,Ozan Baris,20230220,M15 Naples FL,15,Clay,QF,6-4 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,206589,men:sackmann:206589,Gabi Adrian Boitan,20230220,M15 Naples FL,15,Clay,SF,6-1 7-6(4)
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,210536,men:sackmann:210536,Rei Sakamoto,20230501,M15 Orange Park FL,15,Clay,R32,7-6(4) 4-6 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,210599,men:sackmann:210599,Ryan Dickerson,20230515,M25 Pensacola FL,25,Clay,R32,4-6 7-5 7-5
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,106232,men:sackmann:106232,Roberto Cid,20230515,M25 Pensacola FL,25,Clay,R16,3-6 6-3 6-1
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,207220,men:sackmann:207220,Taha Baadi,20230612,M25 Wichita,25,Hard,R32,7-5 7-5
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,208143,men:sackmann:208143,Garrett Johns,20230612,M25 Wichita,25,Hard,R16,6-4 7-6(8)
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,210478,men:sackmann:210478,Sebastian Gorzny,20230612,M25 Wichita,25,Hard,QF,6-4 1-6 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,148678,men:sackmann:148678,Cyrus Mahjoob,20230724,M15 Pittsburgh,15,Clay,R32,6-0 6-0
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,208467,men:sackmann:208467,Alexander Kotzen,20230724,M15 Pittsburgh,15,Clay,R16,4-6 7-6(11) 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,200228,men:sackmann:200228,Felix Corwin,20230724,M15 Pittsburgh,15,Clay,QF,6-3 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,106352,men:sackmann:106352,Matias Franco Descotte,20230814,M25 Trujillo,25,Clay,R32,2-6 6-1 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,105944,men:sackmann:105944,Juan Sebastian Gomez,20230814,M25 Trujillo,25,Clay,R16,6-4 7-6(1)
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,208293,men:sackmann:208293,Gonzalo Bueno,20230814,M25 Trujillo,25,Clay,QF,6-1 7-6(6)
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,200253,men:sackmann:200253,Alejandro Hoyos Franco,20240205,M15 Sunrise FL,15,Clay,R32,6-2 6-0
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,210733,men:sackmann:210733,Arthur Bonnaud,20240205,M15 Sunrise FL,15,Clay,R16,6-1 6-0
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,126209,men:sackmann:126209,Peter Bertran,20240205,M15 Sunrise FL,15,Clay,QF,2-6 6-2 7-5
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,200253,men:sackmann:200253,Alejandro Hoyos Franco,20240212,M15 Palm Coast FL,15,Clay,R32,4-6 6-1 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,208485,men:sackmann:208485,Kiranpal Pannu,20240212,M15 Palm Coast FL,15,Clay,R16,6-3 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,206589,men:sackmann:206589,Gabi Adrian Boitan,20240212,M15 Palm Coast FL,15,Clay,QF,6-2 6-1
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,211333,men:sackmann:211333,Vito Tonejc,20240219,M25 Naples FL,25,Clay,R32,4-6 6-3 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,200748,men:sackmann:200748,Andres Andrade,20240219,M25 Naples FL,25,Clay,R16,6-2 7-5
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,212906,men:sackmann:212906,Lachlan Gaskell,20240513,M25 Pensacola FL,25,Clay,R32,6-4 6-1
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,208117,men:sackmann:208117,Adam Neff,20240513,M25 Pensacola FL,25,Clay,R16,6-4 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,132054,men:sackmann:132054,Nathan Ponwith,20240513,M25 Pensacola FL,25,Clay,QF,6-3 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,200273,men:sackmann:200273,Hady Habib,20240513,M25 Pensacola FL,25,Clay,SF,6-4 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,144731,men:sackmann:144731,Kody Pearson,20240610,M25 Wichita KS,25,Hard,R32,2-6 6-0 6-1
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,210077,men:sackmann:210077,Aidan Kim,20240617,M25 Tulsa OK,25,Hard,R32,7-6(5) 6-7(6) 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,207181,men:sackmann:207181,Govind Nanda,20240617,M25 Tulsa OK,25,Hard,R16,7-6(5) 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,202271,men:sackmann:202271,Lorenzo Joaquin Rodriguez,20250120,M15 Santiago,15,Clay,QF,6-0 7-6(5)
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,212591,men:sackmann:212591,Denis Constantin Spiridon,20250203,M15 Sunrise FL,15,Clay,R32,6-1 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,209416,men:sackmann:209416,Juan Carlos Aguilar,20250203,M15 Sunrise FL,15,Clay,R16,3-6 7-6(6) 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,124014,men:sackmann:124014,Ernesto Escobedo,20250203,M15 Sunrise FL,15,Clay,QF,7-5 6-0
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,208342,men:sackmann:208342,Tyler Zink,20250203,M15 Sunrise FL,15,Clay,SF,6-3 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,208143,men:sackmann:208143,Garrett Johns,20250203,M15 Sunrise FL,15,Clay,F,6-1 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,208342,men:sackmann:208342,Tyler Zink,20250210,M15 Naples FL,15,Clay,R32,4-6 6-0 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,207340,men:sackmann:207340,Daniel Paty,20250210,M15 Naples FL,15,Clay,R16,6-3 5-7 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,202271,men:sackmann:202271,Lorenzo Joaquin Rodriguez,20250210,M15 Naples FL,15,Clay,QF,6-2 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,208386,men:sackmann:208386,Matt Kuhar,20250303,M15 Sherbrooke,15,Hard,R32,6-4 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,211411,men:sackmann:211411,Tyler Stice,20250317,M25 Santo Domingo,25,Hard,R32,3-6 6-2 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,208466,men:sackmann:208466,Evan Bynoe,20250519,M25 Orlando FL,25,Clay,R32,6-3 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,206703,men:sackmann:206703,Paul Jubb,20250519,M25 Orlando FL,25,Clay,R16,3-6 6-3 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,106232,men:sackmann:106232,Roberto Cid,20250519,M25 Orlando FL,25,Clay,QF,6-2 4-6 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,210486,men:sackmann:210486,Nicholas Godsick,20250707,M25 Dallas TX,25,Hard,R32,6-3 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,202290,men:sackmann:202290,Dhakshineswar Suresh,20250707,M25 Dallas TX,25,Hard,R16,3-6 7-5 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,208844,men:sackmann:208844,Keshav Chopra,20250714,M25 Louisville,25,Hard,R32,7-6(5) 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,212158,men:sackmann:212158,Will Mayew,20250714,M25 Louisville,25,Hard,R16,6-4 3-6 6-1
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,149842,men:sackmann:149842,Nicolas Ian Kotzen,20250714,M25 Louisville,25,Hard,QF,6-3 7-6(4)
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,211711,men:sackmann:211711,Braden Shick,20250721,M25 Champaign IL,25,Hard,R32,6-3 6-1
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,211577,men:sackmann:211577,Antoine Ghibaudo,20250721,M25 Champaign IL,25,Hard,R16,5-7 6-1 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,209088,men:sackmann:209088,Quinn Vandecasteele,20250721,M25 Champaign IL,25,Hard,QF,6-3 1-6 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,211501,men:sackmann:211501,Kenta Miyoshi,20250728,M25 Edwardsville IL,25,Hard,R32,6-3 3-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,213139,men:sackmann:213139,Marvin Spiering,20250908,M25 Cuiaba,25,Clay,R32,6-2 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,105868,men:sackmann:105868,Wilson Leite,20250908,M25 Cuiaba,25,Clay,R16,7-6(4) 6-1
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,208046,men:sackmann:208046,Pedro Boscardin Dias,20250908,M25 Cuiaba,25,Clay,QF,4-6 6-3 7-5
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,127123,men:sackmann:127123,Mateus Alves,20250908,M25 Cuiaba,25,Clay,SF,6-4 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,212192,men:sackmann:212192,Victor Bini,20250915,M25 Londrina,25,clay,R32,6-2 6-0
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,105868,men:sackmann:105868,Wilson Leite,20250915,M25 Londrina,25,clay,R16,6-3 7-5
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,208361,men:sackmann:208361,Gustavo Heide,20250915,M25 Londrina,25,clay,QF,6-1 6-0
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,213814,men:sackmann:213814,Gustavo Albieri,20250922,M25 Barueri,25,Hard,R32,6-2 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,200214,men:sackmann:200214,Alan Fernando Rubio Fierros,20250922,M25 Barueri,25,Hard,R16,6-4 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,208361,men:sackmann:208361,Gustavo Heide,20250922,M25 Barueri,25,Hard,QF,6-7(4) 6-2 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,200214,men:sackmann:200214,Alan Fernando Rubio Fierros,20250929,M25 Salvador,25,Hard,R32,6-4 7-6(3)
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,207799,men:sackmann:207799,Matheus Pucinelli De Almeida,20251027,M25 Lajeado,25,Clay,R16,6-3 7-5
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,208532,men:sackmann:208532,Thiago Cigarran,20251103,M25 Santa Cruz do Sul,25,Clay,R32,6-3 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,212192,men:sackmann:212192,Victor Bini,20251110,M15 Criciuma,15,Clay,R32,6-4 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,212876,men:sackmann:212876,Pedro Andre De Almeida Santos,20251110,M15 Criciuma,15,Clay,R16,6-0 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,212545,men:sackmann:212545,Henry Lieberman,20260202,M15 Palm Coast FL,15,Clay,R32,6-2 2-6 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,210146,men:sackmann:210146,Martin Katz,20260209,M15 Sunrise FL,15,Clay,R32,6-3 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,210242,men:sackmann:210242,Ryan Colby,20260209,M15 Sunrise FL,15,Clay,R16,7-5 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,208051,men:sackmann:208051,Axel Nefve,20260209,M15 Sunrise FL,15,Clay,QF,6-4 6-7(1) 6-1
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,213965,men:sackmann:213965,Andrew Johnson,20260209,M15 Sunrise FL,15,Clay,SF,6-2 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,211603,men:sackmann:211603,Freddie Ridout,20260216,M15 Naples FL,15,Clay,R32,6-1 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,208190,men:sackmann:208190,Davide Tortora,20260216,M15 Naples FL,15,Clay,R16,7-6(4) 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,213761,men:sackmann:213761,Jack Secord,20260223,M15 Naples FL,15,Clay,R32,6-1 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,212529,men:sackmann:212529,Alex Finkelstein,20260511,M25 Pensacola FL,25,Clay,R32,6-3 1-0 RET
+raw_csv,data/raw/sackmann/atp/atp_matches_futures_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,213175,men:sackmann:213175,Lucca Liu,20260511,M25 Pensacola FL,25,Clay,R16,6-3 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,124154,men:sackmann:124154,Sasi Kumar Mukund,20230731,Washington,A,Hard,Q1,6-4 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,208485,men:sackmann:208485,Kiranpal Pannu,20230731,Washington,A,Hard,Q2,3-6 6-2 7-6(6)
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2023.csv,men,210029,men:sackmann:210029,Bruno Kuzuhara,loss,208021,men:sackmann:208021,Kyrian Jacquet,20230417,Tallahassee CH,C,Clay,R32,6-2 6-1
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,207736,men:sackmann:207736,Arklon Huertas Del Pino,20230821,Lima CH,C,Clay,R32,6-4 1-6 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,207799,men:sackmann:207799,Matheus Pucinelli De Almeida,20231127,Temuco CH,C,Hard,R32,3-6 6-3 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2023.csv,men,210029,men:sackmann:210029,Bruno Kuzuhara,loss,105700,men:sackmann:105700,Jose Pereira,20230312,Vina Del Mar CH,C,Clay,Q1,6-2 7-5
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2023.csv,men,210029,men:sackmann:210029,Bruno Kuzuhara,loss,105376,men:sackmann:105376,Peter Gojowczyk,20230605,Tyler CH,C,Hard,R32,7-5 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2023.csv,men,210029,men:sackmann:210029,Bruno Kuzuhara,win,105960,men:sackmann:105960,Evan King,20230626,Medellin CH,C,Clay,Q1,3-6 7-5 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2023.csv,men,210029,men:sackmann:210029,Bruno Kuzuhara,loss,105944,men:sackmann:105944,Juan Sebastian Gomez,20230626,Medellin CH,C,Clay,Q2,4-6 6-3 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2023.csv,men,210029,men:sackmann:210029,Bruno Kuzuhara,win,200031,men:sackmann:200031,Lucas Catarina,20230703,Santa Fe CH,C,Clay,R32,6-2 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2023.csv,men,210029,men:sackmann:210029,Bruno Kuzuhara,loss,208046,men:sackmann:208046,Pedro Boscardin Dias,20230703,Santa Fe CH,C,Clay,R16,7-6(6) 4-6 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,200335,men:sackmann:200335,Felipe Meligeni Alves,20231023,Curitiba CH,C,Clay,R32,7-6(6) 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2023.csv,men,210029,men:sackmann:210029,Bruno Kuzuhara,loss,105487,men:sackmann:105487,Facundo Bagnis,20230306,Santiago CH,C,Clay,R32,6-0 6-1
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2023.csv,men,210029,men:sackmann:210029,Bruno Kuzuhara,win,122078,men:sackmann:122078,Dmitry Popko,20230424,Savannah CH,C,Clay,Q1,7-6(4) 2-6 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2023.csv,men,210029,men:sackmann:210029,Bruno Kuzuhara,win,209124,men:sackmann:209124,Blu Baker,20230424,Savannah CH,C,Clay,Q2,6-4 4-6 6-1
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2023.csv,men,210029,men:sackmann:210029,Bruno Kuzuhara,loss,106283,men:sackmann:106283,Mitchell Krueger,20230424,Savannah CH,C,Clay,R32,7-5 7-6(13)
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2023.csv,men,210029,men:sackmann:210029,Bruno Kuzuhara,win,121411,men:sackmann:121411,Moez Echargui,20230410,Sarasota CH,C,Clay,Q1,7-6(4) 7-6(3)
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2023.csv,men,210029,men:sackmann:210029,Bruno Kuzuhara,loss,126206,men:sackmann:126206,Alex Rybakov,20230410,Sarasota CH,C,Clay,Q2,5-7 6-3 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,111581,men:sackmann:111581,Michael Mmoh,20230116,Australian Open,G,Hard,Q1,6-1 6-0
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,207803,men:sackmann:207803,Igor Gimenez,20231002,Campinas CH,C,Clay,Q1,6-1 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2023.csv,men,210029,men:sackmann:210029,Bruno Kuzuhara,loss,126555,men:sackmann:126555,Tung Lin Wu,20230529,Little Rock CH,C,Hard,R32,6-3 4-6 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2023.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,126197,men:sackmann:126197,Orlando Luz,20230911,Santa Cruz De La Sierra CH,C,Clay,R32,7-5 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,208843,men:sackmann:208843,Jerome Kym,20240826,Us Open,G,Hard,Q1,6-1 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,111515,men:sackmann:111515,Thai Son Kwiatkowski,20240115,Indian Wells 1 CH,C,Hard,R32,6-3 7-6(6)
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,200587,men:sackmann:200587,Brandon Holt,20240122,Indian Wells 2 CH,C,Hard,R16,6-3 6-1
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,123896,men:sackmann:123896,Matija Pecotic,20240122,Indian Wells 2 CH,C,Hard,R32,7-6(5) 0-6 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,111578,men:sackmann:111578,Stefan Kozlov,20240122,Indian Wells 2 CH,C,Hard,Q2,7-6(6) 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,122548,men:sackmann:122548,Edan Leshem,20240122,Indian Wells 2 CH,C,Hard,Q1,7-5 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,209088,men:sackmann:209088,Quinn Vandecasteele,20240129,Cleveland CH,C,Hard,R32,6-4 4-6 7-6(3)
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,106203,men:sackmann:106203,Pedro Sakamoto,20240325,Sao Leopoldo CH,C,Clay,R32,6-2 6-0
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,207815,men:sackmann:207815,Guido Ivan Justo,20240325,Sao Leopoldo CH,C,Clay,Q2,7-6(5) 2-6 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,207803,men:sackmann:207803,Igor Gimenez,20240325,Sao Leopoldo CH,C,Clay,Q1,3-6 6-4 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,207595,men:sackmann:207595,Mateo Barreiros Reyes,20240401,Florianopolis CH,C,Clay,Q1,4-6 7-6(6) 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,122669,men:sackmann:122669,Juan Pablo Varillas,20240408,Sarasota CH,C,Clay,R32,6-0 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,106310,men:sackmann:106310,Alexander Ritschard,20240415,Tallahassee CH,C,Clay,R32,6-4 7-5
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,126206,men:sackmann:126206,Alex Rybakov,20240415,Tallahassee CH,C,Clay,Q2,7-6(3) 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,208051,men:sackmann:208051,Axel Nefve,20240415,Tallahassee CH,C,Clay,Q1,6-4 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,122078,men:sackmann:122078,Dmitry Popko,20240422,Savannah CH,C,Clay,R32,6-3 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,144985,men:sackmann:144985,Ergi Kirkin,20240429,Porto Alegre CH,C,Clay,R16,3-6 6-4 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,207803,men:sackmann:207803,Igor Gimenez,20240429,Porto Alegre CH,C,Clay,R32,7-6(5) 7-5
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,200273,men:sackmann:200273,Hady Habib,20240506,Santos CH,C,Clay,QF,7-6(5) 1-6 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,144985,men:sackmann:144985,Ergi Kirkin,20240506,Santos CH,C,Clay,R16,6-3 4-6 7-5
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,106057,men:sackmann:106057,Facundo Mena,20240506,Santos CH,C,Clay,R32,6-3 7-6(5)
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,211346,men:sackmann:211346,Andres Martin,20240527,Little Rock CH,C,Hard,Q2,6-1 4-6 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,206309,men:sackmann:206309,Boris Kozlov,20240527,Little Rock CH,C,Hard,Q1,3-6 6-2 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,209406,men:sackmann:209406,Abedallah Shelbayh,20240603,Tyler CH,C,Hard,R16,6-2 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,207728,men:sackmann:207728,Moerani Bouzige,20240603,Tyler CH,C,Hard,R32,6-7(6) 7-6(7) 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,132052,men:sackmann:132052,Christian Langmo,20240701,Bloomfield Hills CH,C,Hard,Q2,3-6 7-6(3) 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,144731,men:sackmann:144731,Kody Pearson,20240701,Bloomfield Hills CH,C,Hard,Q1,6-1 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,207352,men:sackmann:207352,Bu Yunchaokete,20240715,Granby CH,C,Hard,QF,4-6 6-4 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,200677,men:sackmann:200677,Rio Noguchi,20240715,Granby CH,C,Hard,R16,6-3 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,200008,men:sackmann:200008,Alexis Galarneau,20240715,Granby CH,C,Hard,R32,5-7 7-5 6-1
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,210460,men:sackmann:210460,Nishesh Basavareddy,20240715,Granby CH,C,Hard,Q2,1-6 7-6(7) 1-1 RET
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,210691,men:sackmann:210691,Joshua Lapadat,20240715,Granby CH,C,Hard,Q1,6-3 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,210136,men:sackmann:210136,Mark Lajal,20240722,Chicago CH,C,Hard,Q1,6-3 7-6(1)
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,209334,men:sackmann:209334,Micah Braswell,20240729,Lexington CH,C,Hard,R32,7-6(4) 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,207987,men:sackmann:207987,Ryuki Matsuda,20240805,Lincoln CH,C,Hard,Q2,6-4 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,106254,men:sackmann:106254,Calum Puttergill,20240805,Lincoln CH,C,Hard,Q1,6-4 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,208118,men:sackmann:208118,Eliot Spizzirri,20240909,Las Vegas CH,C,Hard,R32,7-5 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,200748,men:sackmann:200748,Andres Andrade,20240916,Columbus CH,C,Hard,R32,6-1 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,208342,men:sackmann:208342,Tyler Zink,20240923,Charleston CH,C,Hard,Q1,6-2 3-6 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,209326,men:sackmann:209326,Murphy Cassone,20240930,Tiburon CH,C,Hard,Q1,6-3 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,209262,men:sackmann:209262,Tristan Schoolkate,20241007,Fairfield CH,C,Hard,R32,6-3 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,200711,men:sackmann:200711,Nicolas Mejia,20241014,Calgary CH,C,Hard,R32,6-4 7-6(0)
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,111788,men:sackmann:111788,Naoki Nakagawa,20241028,Charlottesville CH,C,Hard,Q2,6-1 7-6(4)
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,202333,men:sackmann:202333,Keegan Smith,20241028,Charlottesville CH,C,Hard,Q1,6-4 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2024.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,211501,men:sackmann:211501,Kenta Miyoshi,20241104,Knoxville CH,C,Hard,Q1,6-2 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,106172,men:sackmann:106172,Maxime Chazal,20250113,Buenos Aires Tigre CH,C,Clay,Q1,6-3 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,207663,men:sackmann:207663,Nikolas Sanchez Izquierdo,20250127,Piracicaba CH,C,Clay,Q1,6-3 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,212218,men:sackmann:212218,Rohan  Murali,20250224,San Diego CH,C,Hard,Q1,6-4 7-5
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,105180,men:sackmann:105180,Daniel Dutra Da Silva,20250407,Sarasota CH,C,Clay,Q2,6-4 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,208132,men:sackmann:208132,Noah Schachter,20250407,Sarasota CH,C,Clay,Q1,6-3 6-0
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,210178,men:sackmann:210178,Juan Carlos Prado Angelo,20250414,Tallahassee CH,C,Clay,Q1,6-4 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,200516,men:sackmann:200516,Patrick Kypson,20250421,Savannah CH,C,Clay,Q2,6-3 7-6(4)
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,207181,men:sackmann:207181,Govind Nanda,20250421,Savannah CH,C,Clay,Q1,7-6(7) 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,209875,men:sackmann:209875,Alex Barrena,20250428,Porto Alegre CH,C,Clay,R32,6-2 6-1
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,209254,men:sackmann:209254,Valerio Aboian,20250428,Porto Alegre CH,C,Clay,Q2,6-4 6-1
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,212496,men:sackmann:212496,Pedro Pinto,20250428,Porto Alegre CH,C,Clay,Q1,6-1 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,208223,men:sackmann:208223,Alvaro Guillen Meza,20250505,Santos CH,C,Clay,R16,1-6 6-4 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,138485,men:sackmann:138485,Conner Huertas Del Pino,20250505,Santos CH,C,Clay,R32,6-4 3-6 6-1
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,133820,men:sackmann:133820,Ignacio Monzon,20250505,Santos CH,C,Clay,Q2,6-2 7-5
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,208411,men:sackmann:208411,Daniel Antonio Nunez,20250505,Santos CH,C,Clay,Q1,6-4 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,202271,men:sackmann:202271,Lorenzo Joaquin Rodriguez,20250512,Bogota CH,C,Clay,R32,6-4 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,209898,men:sackmann:209898,Dali Blanch,20250609,Santa Fe CH,C,Clay,R16,7-5 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,208364,men:sackmann:208364,Franco Roncadelli,20250609,Santa Fe CH,C,Clay,R32,6-0 2-6 7-5
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,210545,men:sackmann:210545,Luis Carlos Alvarez,20250616,Santa Cruz de la Sierra CH,C,Clay,Q2,6-0 7-6(6)
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,208913,men:sackmann:208913,Juan Bautista Torres,20250623,Lima CH,C,Clay,R32,7-6(5) 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,207803,men:sackmann:207803,Igor Gimenez,20250623,Lima CH,C,Clay,Q2,6-2 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,210545,men:sackmann:210545,Luis Carlos Alvarez,20250623,Lima CH,C,Clay,Q1,4-6 6-2 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,132041,men:sackmann:132041,Alfredo Perez,20250811,Barranquilla CH,C,Hard,R16,5-7 6-4 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,207546,men:sackmann:207546,Pol Martin Tiffon,20250811,Barranquilla CH,C,Hard,R32,4-6 6-4 6-1
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,210098,men:sackmann:210098,Victor Lilov,20250811,Barranquilla CH,C,Hard,Q2,6-4 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,101495,men:sackmann:101495,Miguel Tobon,20251013,Curitiba CH,C,Clay,Q2,6-3 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,105868,men:sackmann:105868,Wilson Leite,20251013,Curitiba CH,C,Clay,Q1,7-5 4-6 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,105911,men:sackmann:105911,Andrea Collarini,20251020,Costa do Sauipe CH,C,Clay,Q2,6-0 4-6 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2025.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,206307,men:sackmann:206307,Joao Lucas Reis Da Silva,20251117,Florianopolis CH,C,Clay,R32,6-1 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,106162,men:sackmann:106162,Franco Agamenone,20260112,Buenos Aires 1 CH,C,Clay,R32,6-2 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,105868,men:sackmann:105868,Wilson Leite,20260112,Buenos Aires 1 CH,C,Clay,Q2,7-6(2) 3-6 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,211658,men:sackmann:211658,Tomas Martinez,20260112,Buenos Aires 1 CH,C,Clay,Q1,7-6(4) 6-0
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,211661,men:sackmann:211661,Juan Estevez,20260119,Itajai CH,C,Clay,Q2,6-4 7-6(4)
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,212971,men:sackmann:212971,Tsz Fu Wong,20260119,Itajai CH,C,Clay,Q1,6-3 6-1
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,200748,men:sackmann:200748,Andres Andrade,20260406,Sarasota CH,C,Clay,R32,7-6(8) 4-6 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,208586,men:sackmann:208586,Joshua Sheehy,20260406,Sarasota CH,C,Clay,Q2,7-5 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,134490,men:sackmann:134490,Justin Roberts,20260406,Sarasota CH,C,Clay,Q1,6-2 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,210558,men:sackmann:210558,Hynek Barton,20260413,Tallahassee CH,C,Clay,R32,4-6 6-4 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,202297,men:sackmann:202297,Dan Martin,20260413,Tallahassee CH,C,Clay,Q2,6-3 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,127123,men:sackmann:127123,Mateus Alves,20260413,Tallahassee CH,C,Clay,Q1,4-6 6-4 6-2
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,208342,men:sackmann:208342,Tyler Zink,20260420,Savannah CH,C,Clay,Q2,6-3 4-6 6-4
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,209246,men:sackmann:209246,Alan Magadan,20260420,Savannah CH,C,Clay,Q1,7-5 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,210250,men:sackmann:210250,Erik Arutiunian,20260525,Little Rock CH,C,Hard,Q2,7-6(4) 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,105554,men:sackmann:105554,Daniel Evans,20260525,Little Rock CH,C,Hard,Q1,6-2 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,loss,208649,men:sackmann:208649,Andrew Fenty,20260601,Tyler CH,C,Hard,Q2,6-3 6-3
+raw_csv,data/raw/sackmann/atp/atp_matches_qual_chall_2026.csv,men,210044,men:sackmann:210044,Bruno Kuzuhara,win,109054,men:sackmann:109054,Daniel Masur,20260601,Tyler CH,C,Hard,Q1,6-2 6-2

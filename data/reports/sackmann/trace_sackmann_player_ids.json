@@ -1,0 +1,43 @@
+{
+  "by_player_id": {
+    "210029": 14,
+    "210044": 209
+  },
+  "by_player_key": {
+    "men:sackmann:210029": 14,
+    "men:sackmann:210044": 209
+  },
+  "by_source": {
+    "raw_csv": 223
+  },
+  "counts": {
+    "raw_csv_files_seen": 20,
+    "raw_hits": 223,
+    "raw_rows": 223,
+    "raw_rows_seen": 223313,
+    "rows_total": 223,
+    "source_jsonl_files_seen": 4,
+    "source_rows": 0,
+    "source_rows_seen": 223145
+  },
+  "generated_at": "2026-06-17T17:33:32+00:00",
+  "interpretation": [
+    "If the same real player appears under multiple player_id values already in raw_csv rows, the duplicate is present in raw Sackmann input.",
+    "If only source_jsonl shows the duplicate but raw_csv does not, the issue likely happened during import/normalization.",
+    "Use the trace CSV to inspect dates, opponents, tournaments, and files for each id."
+  ],
+  "outputs": {
+    "trace_csv": "data/reports/sackmann/trace_sackmann_player_ids.csv",
+    "trace_json": "data/reports/sackmann/trace_sackmann_player_ids.json"
+  },
+  "query": {
+    "ids": [
+      "210029",
+      "210044"
+    ],
+    "limit": 0,
+    "name": "Bruno Kuzuhara",
+    "name_norm": "bruno kuzuhara"
+  },
+  "status": "ok"
+}
