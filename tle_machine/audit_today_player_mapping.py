@@ -381,19 +381,22 @@ def load_candidates() -> dict[str, list[dict[str, str]]]:
     return by_api
 
 
-def best_candidate(cands: dict[str, list[dict[str, str]]], api_key: str, gender: str = "") -> dict[str, str]:
+def candidate_rows_for_api(cands: dict[str, list[dict[str, str]]], api_key: str, gender: str = "") -> list[dict[str, str]]:
     rows: list[dict[str, str]] = []
-    seen = set()
+    seen_targets: set[str] = set()
 
     for k in api_key_variants(api_key, gender):
         for r in cands.get(k) or []:
-            sig = tuple(sorted(r.items()))
-            if sig not in seen:
-                seen.add(sig)
-                rows.append(r)
-
-    if not rows:
-        return {}
+            target = (
+                r.get("sackmann_player_key")
+                or r.get("candidate_sackmann_key")
+                or r.get("candidate_key")
+                or ""
+            )
+            if not target or target in seen_targets:
+                continue
+            seen_targets.add(target)
+            rows.append(r)
 
     def score(r: dict[str, str]) -> float:
         try:
@@ -401,8 +404,78 @@ def best_candidate(cands: dict[str, list[dict[str, str]]], api_key: str, gender:
         except Exception:
             return 0.0
 
-    return sorted(rows, key=score, reverse=True)[0]
+    return sorted(rows, key=score, reverse=True)
 
+
+def best_candidate(cands: dict[str, list[dict[str, str]]], api_key: str, gender: str = "") -> dict[str, str]:
+    rows = candidate_rows_for_api(cands, api_key, gender)
+    return rows[0] if rows else {}
+
+
+def candidate_key(row: dict[str, str]) -> str:
+    return row.get("sackmann_player_key") or row.get("candidate_sackmann_key") or row.get("candidate_key") or ""
+
+
+def candidate_name(row: dict[str, str]) -> str:
+    return row.get("sackmann_name") or row.get("candidate_name") or row.get("candidate_sackmann_name") or ""
+
+
+def candidate_score(row: dict[str, str]) -> str:
+    return row.get("score") or row.get("candidate_score") or ""
+
+
+def candidate_method(row: dict[str, str]) -> str:
+    return row.get("method") or row.get("candidate_method") or row.get("match_method") or ""
+
+
+def candidate_matches(row: dict[str, str]) -> str:
+    return (
+        row.get("sackmann_matches")
+        or row.get("candidate_matches")
+        or row.get("matches")
+        or row.get("match_count")
+        or ""
+    )
+
+
+def score_float(value: Any) -> float:
+    try:
+        return float(value or 0)
+    except Exception:
+        return 0.0
+
+
+def candidate_margin(rows: list[dict[str, str]]) -> str:
+    if len(rows) < 2:
+        return ""
+    margin = score_float(candidate_score(rows[0])) - score_float(candidate_score(rows[1]))
+    return f"{margin:.6f}"
+
+
+def is_ambiguous_candidate_set(rows: list[dict[str, str]]) -> bool:
+    if len(rows) < 2:
+        return False
+
+    top = rows[0]
+    second = rows[1]
+    margin = score_float(candidate_score(top)) - score_float(candidate_score(second))
+    top_method = candidate_method(top).lower()
+    second_method = candidate_method(second).lower()
+
+    initial_methods = {"exact_initial_form", "initial_surname", "initial_surname+country"}
+    if top_method in initial_methods and second_method in initial_methods and margin < 0.025:
+        return True
+
+    return margin < 0.010
+
+
+def suggested_override(api_gender: str, api_key: str, cand: dict[str, str], *, ambiguous: bool = False) -> str:
+    if ambiguous:
+        return ""
+    target = candidate_key(cand)
+    if not target:
+        return ""
+    return json.dumps({display_api_key(api_key, api_gender): target}, ensure_ascii=False)
 
 def suggested_override(api_gender: str, api_key: str, cand: dict[str, str]) -> str:
     target = cand.get("sackmann_player_key") or cand.get("candidate_sackmann_key") or cand.get("candidate_key") or ""
@@ -683,15 +756,28 @@ def main(argv: list[str] | None = None) -> None:
     counters["mapped_from_mapping_json"] = sum(1 for p in players.values() if p.get("mapped") and p.get("mapping_source") == "mapping")
 
     review_rows: list[dict[str, Any]] = []
+    counters["review_candidates_available"] = 0
+    counters["review_no_candidates_suppressed"] = 0
+    counters["review_ambiguous_candidates"] = 0
+
     for key, p in sorted(players.items(), key=lambda kv: (kv[1]["mapped"], -kv[1]["today_match_count"], kv[1]["api_name"])):
         if p["mapped"]:
             continue
 
-        cand = best_candidate(candidates, key, str(p.get("gender") or ""))
-        score = cand.get("score", "")
-        margin = cand.get("margin", "") or cand.get("score_margin", "")
-        target = cand.get("sackmann_player_key") or cand.get("candidate_sackmann_key") or cand.get("candidate_key") or ""
-        target_name = cand.get("sackmann_name") or cand.get("candidate_name") or cand.get("candidate_sackmann_name") or ""
+        cand_rows = candidate_rows_for_api(candidates, key, str(p.get("gender") or ""))
+        if not cand_rows:
+            counters["review_no_candidates_suppressed"] += 1
+            continue
+
+        counters["review_candidates_available"] += 1
+        ambiguous = is_ambiguous_candidate_set(cand_rows)
+        if ambiguous:
+            counters["review_ambiguous_candidates"] += 1
+
+        cand1 = cand_rows[0] if len(cand_rows) > 0 else {}
+        cand2 = cand_rows[1] if len(cand_rows) > 1 else {}
+        cand3 = cand_rows[2] if len(cand_rows) > 2 else {}
+        margin = candidate_margin(cand_rows)
 
         review_rows.append(
             {
@@ -702,15 +788,47 @@ def main(argv: list[str] | None = None) -> None:
                 "gender": p["gender"],
                 "mapping_status": p["mapping_status"],
                 "today_match_count": p["today_match_count"],
+
+                "opponent_name": " | ".join(k for k, _ in p["opponents_today"].most_common(5)),
                 "opponents_today": " | ".join(k for k, _ in p["opponents_today"].most_common(5)),
+                "tournament": " | ".join(k for k, _ in p["event_names"].most_common(5)),
                 "event_names": " | ".join(k for k, _ in p["event_names"].most_common(5)),
+                "event_type": " | ".join(k for k, _ in p["event_type_types"].most_common(5)),
                 "event_type_types": " | ".join(k for k, _ in p["event_type_types"].most_common(5)),
-                "best_candidate_key": target,
-                "best_candidate_name": target_name,
-                "score": score,
+
+                "candidate_count": len(cand_rows),
+                "candidate_margin": margin,
+                "candidate_ambiguity": str(bool(ambiguous)).lower(),
+
+                "candidate_1_key": candidate_key(cand1),
+                "candidate_1_name": candidate_name(cand1),
+                "candidate_1_score": candidate_score(cand1),
+                "candidate_1_method": candidate_method(cand1),
+                "candidate_1_matches": candidate_matches(cand1),
+
+                "candidate_2_key": candidate_key(cand2),
+                "candidate_2_name": candidate_name(cand2),
+                "candidate_2_score": candidate_score(cand2),
+                "candidate_2_method": candidate_method(cand2),
+                "candidate_2_matches": candidate_matches(cand2),
+
+                "candidate_3_key": candidate_key(cand3),
+                "candidate_3_name": candidate_name(cand3),
+                "candidate_3_score": candidate_score(cand3),
+                "candidate_3_method": candidate_method(cand3),
+                "candidate_3_matches": candidate_matches(cand3),
+
+                "best_candidate_key": candidate_key(cand1),
+                "best_candidate_name": candidate_name(cand1),
+                "score": candidate_score(cand1),
                 "margin": margin,
-                "method": cand.get("method", ""),
-                "suggested_override_json": suggested_override(str(p["gender"]), key, cand),
+                "method": candidate_method(cand1),
+                "suggested_override_json": suggested_override(str(p["gender"]), key, cand1, ambiguous=ambiguous),
+
+                "accept_candidate_rank": "",
+                "manual_sackmann_key": "",
+                "reject": "",
+                "review_note": "",
             }
         )
 
@@ -722,15 +840,40 @@ def main(argv: list[str] | None = None) -> None:
         "gender",
         "mapping_status",
         "today_match_count",
+        "opponent_name",
         "opponents_today",
+        "tournament",
         "event_names",
+        "event_type",
         "event_type_types",
+        "candidate_count",
+        "candidate_margin",
+        "candidate_ambiguity",
+        "candidate_1_key",
+        "candidate_1_name",
+        "candidate_1_score",
+        "candidate_1_method",
+        "candidate_1_matches",
+        "candidate_2_key",
+        "candidate_2_name",
+        "candidate_2_score",
+        "candidate_2_method",
+        "candidate_2_matches",
+        "candidate_3_key",
+        "candidate_3_name",
+        "candidate_3_score",
+        "candidate_3_method",
+        "candidate_3_matches",
         "best_candidate_key",
         "best_candidate_name",
         "score",
         "margin",
         "method",
         "suggested_override_json",
+        "accept_candidate_rank",
+        "manual_sackmann_key",
+        "reject",
+        "review_note",
     ]
     write_csv(out_review, review_rows, fieldnames)
     write_csv(latest_review, review_rows, fieldnames)
