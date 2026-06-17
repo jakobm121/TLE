@@ -1,51 +1,38 @@
 api_player_key,raw_api_player_key,api_name,api_name_source,gender,mapping_status,today_match_count,opponents_today,event_names,event_type_types,best_candidate_key,best_candidate_name,score,margin,method,suggested_override_json
-men:api:104110,104110,-. I. Morega D.,fixture,men,unmapped,1,Adrian Boitan Gabi,M15 Constanta,Itf Men Singles,,,,,,
+men:api:104110,104110,-. I. Morega D.,api_cache_short_name,men,unmapped,1,Adrian Boitan Gabi,M15 Constanta,Itf Men Singles,,,,,,
 women:api:84070,84070,A. Adeikyte,api_cache_short_name,women,ambiguous,1,Nika Hurkacz,W35 Bolszewo (Poland),Itf Women Singles,women:sackmann:267773,Anastasija Adeikyte,0.977609,,exact_initial_form+country,"{""women:api:84070"": ""women:sackmann:267773""}"
-men:api:104161,104161,A. Brignacca,fixture,men,unmapped,1,Andrey Chepelev,M25 Samobor (Croatia),Itf Men Singles,,,,,,
-men:api:104109,104109,A. C. Badea L.,fixture,men,unmapped,1,Alexandru Tomescu Dan,M15 Constanta,Itf Men Singles,,,,,,
-men:api:104007,104007,A. Hunziker,fixture,men,unmapped,1,Dominic Stricker,M25 Klosters,Itf Men Singles,,,,,,
+men:api:104161,104161,A. Brignacca,api_cache_short_name,men,unmapped,1,Andrey Chepelev,M25 Samobor (Croatia),Itf Men Singles,,,,,,
+men:api:104109,104109,A. C. Badea L.,api_cache_short_name,men,unmapped,1,Alexandru Tomescu Dan,M15 Constanta,Itf Men Singles,,,,,,
+men:api:104007,104007,A. Hunziker,api_cache_short_name,men,unmapped,1,Dominic Stricker,M25 Klosters,Itf Men Singles,,,,,,
 women:api:15341,15341,Amy Stevens,api_cache_full_name,women,ambiguous,1,M. K. Tikhonko,W35 San Gregorio 4 (Italy),Itf Women Singles,women:sackmann:264278,Alice Stevens,0.977792,,exact_initial_form+country,"{""women:api:15341"": ""women:sackmann:264278""}"
 women:api:13987,13987,Anastasiia Sobolieva,api_cache_full_name,women,unmapped,1,Julia Grabher,Brescia (Italy) - Qualification,Challenger Women Singles,,,,,,
-men:api:1249,1249,B. Nakashima,fixture,men,ambiguous,1,B. Suarez,"M15 Irvine, CA",Itf Men Singles,men:sackmann:206909,Brandon Nakashima,0.97546,,exact_initial_form,"{""men:api:1249"": ""men:sackmann:206909""}"
-men:api:104133,104133,B. Stecker,fixture,men,unmapped,1,Peter Fajta,M15 Gyula,Itf Men Singles,,,,,,
-men:api:76298,76298,Bogdan Seleznev,api_cache_full_name,men,unmapped,1,C. C. Kucukhuseyin,M15 Kayseri 5,Itf Men Singles,,,,,,
+men:api:104133,104133,B. Stecker,api_cache_short_name,men,unmapped,1,Peter Fajta,M15 Gyula,Itf Men Singles,,,,,,
+men:api:76298,76298,Bogdan Seleznev,api_cache_full_name,men,unmapped,1,Christopher Kucukhuseyin Cem,M15 Kayseri 5,Itf Men Singles,,,,,,
 men:api:662,662,Bruno Kuzuhara,api_cache_full_name,men,ambiguous,1,Alex Rybakov,"M25 Tulsa, OK",Itf Men Singles,men:sackmann:210029,Bruno Kuzuhara,1.0,,exact_normalized+country,"{""men:api:662"": ""men:sackmann:210029""}"
-men:api:87371,87371,C. Ye,fixture,men,unmapped,1,Chan-Yeong Oh,M15 Maanshan 6,Itf Men Singles,,,,,,
-men:api:18341,18341,D. Suresh,fixture,men,ambiguous,1,Gavin Young,"M25 Tulsa, OK",Itf Men Singles,men:sackmann:202290,Dhakshineswar Suresh,0.974127,,exact_initial_form,"{""men:api:18341"": ""men:sackmann:202290""}"
-women:api:54081,54081,E. M. Ionescu,fixture,women,ambiguous,1,I. M. Buculei,W15 Bucharest 2,Itf Women Singles,women:sackmann:260490,Eva Maria Ionescu,0.935071,,initial_surname,"{""women:api:54081"": ""women:sackmann:260490""}"
-women:api:104160,104160,G. Bonaccorso,fixture,women,unmapped,1,Masha Lazarenko,W35 San Gregorio 4 (Italy),Itf Women Singles,,,,,,
-women:api:39108,39108,G. S. Lee,fixture,women,ambiguous,1,Thasaporn Naklo,W35 Taipei,Itf Women Singles,women:sackmann:265000,Ga In Lee,0.928099,,initial_surname,"{""women:api:39108"": ""women:sackmann:265000""}"
+women:api:104160,104160,G. Bonaccorso,api_cache_short_name,women,unmapped,1,Masha Lazarenko,W35 San Gregorio 4 (Italy),Itf Women Singles,,,,,,
 women:api:13991,13991,Garbiela Vasilescu Arina,api_cache_full_name,women,unmapped,1,A. I. Varsa,W15 Bucharest 2,Itf Women Singles,,,,,,
 women:api:2115,2115,Ginevra Parentini,api_cache_full_name,women,unmapped,1,T. E. Krstelj,W35 Klosters,Itf Women Singles,,,,,,
-women:api:9092,9092,H. Sato,fixture,women,ambiguous,1,J. Shin,W15 Sapporo,Itf Women Singles,women:sackmann:221141,Hikaru Sato,0.975198,,exact_initial_form,"{""women:api:9092"": ""women:sackmann:221141""}"
-men:api:104134,104134,I. D. Mokan,fixture,men,unmapped,1,Viacheslav Bielinskyi,M15 Gyula,Itf Men Singles,,,,,,
-men:api:104108,104108,I. M. Stoica,fixture,men,unmapped,1,R. Hartig,M15 Constanta,Itf Men Singles,,,,,,
+men:api:104134,104134,I. D. Mokan,api_cache_short_name,men,unmapped,1,Viacheslav Bielinskyi,M15 Gyula,Itf Men Singles,,,,,,
+men:api:104108,104108,I. M. Stoica,api_cache_short_name,men,unmapped,1,Ruben Hartig,M15 Constanta,Itf Men Singles,,,,,,
 men:api:85065,85065,Isik Kosaner Kaan,api_cache_full_name,men,unmapped,1,Pranav Senthil Kumar Rethin,M15 Kayseri 5,Itf Men Singles,,,,,,
-women:api:26894,26894,J. Han,fixture,women,ambiguous,1,Daria Khomutsianskaya,W35 Zhengzhou (China),Itf Women Singles,women:sackmann:220497,Jiangxue Han,0.974533,,exact_initial_form,"{""women:api:26894"": ""women:sackmann:220497""}"
-women:api:104008,104008,J. Kolodziejska,fixture,women,unmapped,1,Julie Pastikova,W35 Bolszewo (Poland),Itf Women Singles,,,,,,
-women:api:3130,3130,J. Shin,fixture,women,ambiguous,1,H. Sato,W15 Sapporo,Itf Women Singles,women:sackmann:222215,Jiho Shin,0.974143,,exact_initial_form,"{""women:api:3130"": ""women:sackmann:222215""}"
-women:api:104151,104151,J. Zhou,fixture,women,unmapped,1,JiaYi Wang,W35 Zhengzhou (China),Itf Women Singles,,,,,,
+women:api:104008,104008,J. Kolodziejska,api_cache_short_name,women,unmapped,1,Julie Pastikova,W35 Bolszewo (Poland),Itf Women Singles,,,,,,
+women:api:104151,104151,J. Zhou,api_cache_short_name,women,unmapped,1,JiaYi Wang,W35 Zhengzhou (China),Itf Women Singles,,,,,,
 men:api:83545,83545,Jakub Vrba,api_cache_full_name,men,ambiguous,1,Noa Vukadin,M25 Samobor (Croatia),Itf Men Singles,men:sackmann:149107,Jakub Vrba ,1.0,,exact_normalized+country,"{""men:api:83545"": ""men:sackmann:149107""}"
-men:api:15304,15304,K. Lee,fixture,men,ambiguous,1,Pawit Sornlaksup,M15 Maanshan 6,Itf Men Singles,men:sackmann:134120,Kuan Yi Lee,0.922144,,initial_surname,"{""men:api:15304"": ""men:sackmann:134120""}"
-women:api:81646,81646,K. N. Kucikova,api_cache_short_name,women,ambiguous,1,P. Ormaechea,W35 San Gregorio 4 (Italy),Itf Women Singles,women:sackmann:266562,Kiara Nina Kucikova,0.937617,,initial_surname+country,"{""women:api:81646"": ""women:sackmann:266562""}"
+women:api:81646,81646,K. N. Kucikova,api_cache_short_name,women,ambiguous,1,Paula Ormaechea,W35 San Gregorio 4 (Italy),Itf Women Singles,women:sackmann:266562,Kiara Nina Kucikova,0.937617,,initial_surname+country,"{""women:api:81646"": ""women:sackmann:266562""}"
 women:api:87042,87042,Kamper Malmkjaer Emma,api_cache_full_name,women,unmapped,1,Rebecca Munk Mortensen,W35 Ystad,Itf Women Singles,,,,,,
-women:api:15649,15649,L. S. Steur J.,fixture,women,unmapped,1,A. Sucha,W35 Bolszewo (Poland),Itf Women Singles,,,,,,
-women:api:90141,90141,L. Yuhan,fixture,women,unmapped,1,Shiho Tsujioka,W15 Sapporo,Itf Women Singles,,,,,,
 women:api:55518,55518,M. Biro,api_cache_short_name,women,ambiguous,1,Safina Popa Giulia,W15 Bucharest 2,Itf Women Singles,women:sackmann:267406,Melinda Biro,0.978079,,exact_initial_form+country,"{""women:api:55518"": ""women:sackmann:267406""}"
-men:api:104141,104141,M. Greschner,fixture,men,unmapped,1,Faleh Alhogbani Anmar,M15 Kayseri 5,Itf Men Singles,,,,,,
-women:api:101668,101668,M. Pares,fixture,women,unmapped,1,Alana Subasic,W15 Kayseri 5,Itf Women Singles,,,,,,
-men:api:104120,104120,M. Ristov,fixture,men,unmapped,1,Ali Habib,M15 Kursumlijska Banja 5,Itf Men Singles,,,,,,
-women:api:102994,102994,M. V. Pop,api_cache_short_name,women,unmapped,1,L. Tanasie,W15 Bucharest 2,Itf Women Singles,,,,,,
+men:api:104141,104141,M. Greschner,api_cache_short_name,men,unmapped,1,Faleh Alhogbani Anmar,M15 Kayseri 5,Itf Men Singles,,,,,,
+women:api:101668,101668,M. Pares,api_cache_short_name,women,unmapped,1,Alana Subasic,W15 Kayseri 5,Itf Women Singles,,,,,,
+men:api:104120,104120,M. Ristov,api_cache_short_name,men,unmapped,1,Ali Habib,M15 Kursumlijska Banja 5,Itf Men Singles,,,,,,
+women:api:102994,102994,M. V. Pop,api_cache_short_name,women,unmapped,1,Lavinia Tanasie,W15 Bucharest 2,Itf Women Singles,,,,,,
 women:api:58205,58205,N. Lee,api_cache_short_name,women,ambiguous,1,Mariia Masiianskaia,W15 Kursumlijska Banja 5,Itf Women Singles,women:sackmann:270052,Nancy Lee,0.976693,,exact_initial_form+country,"{""women:api:58205"": ""women:sackmann:270052""}"
-men:api:84295,84295,P. Photiadis,fixture,men,unmapped,1,P. Inchauspe,M15 Monastir 23,Itf Men Singles,,,,,,
+men:api:84295,84295,P. Photiadis,api_cache_short_name,men,unmapped,1,Inchauspe Paul,M15 Monastir 23,Itf Men Singles,,,,,,
 women:api:89210,89210,R. Yoshida,api_cache_short_name,women,ambiguous,1,S. Y. Choi,W15 Sapporo,Itf Women Singles,women:sackmann:267680,Riyo Yoshida,0.976693,,exact_initial_form+country,"{""women:api:89210"": ""women:sackmann:267680""}"
 women:api:24284,24284,Rosa Dourado Zimermman Jennifer,api_cache_full_name,women,unmapped,1,Florencia Urrutia Maria,W15 Luque,Itf Women Singles,,,,,,
-women:api:54661,54661,Shiyu Ye,api_cache_full_name,women,ambiguous,1,E. Laskevich,W35 Zhengzhou (China),Itf Women Singles,women:sackmann:264085,Shiyu Ye,0.995,,exact_normalized+country_mismatch,"{""women:api:54661"": ""women:sackmann:264085""}"
-women:api:104009,104009,T. E. Krstelj,fixture,women,unmapped,1,Ginevra Parentini,W35 Klosters,Itf Women Singles,,,,,,
+women:api:54661,54661,Shiyu Ye,api_cache_full_name,women,ambiguous,1,Evialina Laskevich,W35 Zhengzhou (China),Itf Women Singles,women:sackmann:264085,Shiyu Ye,0.995,,exact_normalized+country_mismatch,"{""women:api:54661"": ""women:sackmann:264085""}"
+women:api:104009,104009,T. E. Krstelj,api_cache_short_name,women,unmapped,1,Ginevra Parentini,W35 Klosters,Itf Women Singles,,,,,,
 women:api:40904,40904,T. Lemaitre,api_cache_short_name,women,unmapped,1,A. Ivanovskaya,W35+H Tauste,Itf Women Singles,,,,,,
 women:api:37163,37163,V. N. Sarganella,api_cache_short_name,women,unmapped,1,Victoria Gobbi Monllau Ana,W15 Kursumlijska Banja 5,Itf Women Singles,,,,,,
-women:api:104011,104011,Y. Douyeb,fixture,women,unmapped,1,L. Rothensteiner,W35 Mohammedia,Itf Women Singles,,,,,,
-women:api:4144,4144,Y. Li,fixture,women,ambiguous,1,Varvara Panshina,W35 Zhengzhou (China),Itf Women Singles,women:sackmann:264986,Yuyao Li,0.973219,,exact_initial_form,"{""women:api:4144"": ""women:sackmann:264986""}"
-women:api:8910,8910,Y. Zhang,fixture,women,ambiguous,1,Riko Kikawada,W15 Sapporo,Itf Women Singles,women:sackmann:213947,Ying Zhang,0.975043,,exact_initial_form,"{""women:api:8910"": ""women:sackmann:213947""}"
+women:api:104011,104011,Y. Douyeb,api_cache_short_name,women,unmapped,1,Liel Rothensteiner,W35 Mohammedia,Itf Women Singles,,,,,,
 women:api:84316,84316,Y. Zhytelna,api_cache_short_name,women,unmapped,1,Midori Castillo Meza,"W15 Irvine, CA",Itf Women Singles,,,,,,
-women:api:7926,7926,Yuyun Chen,api_cache_full_name,women,ambiguous,1,C. Allegre,"W15 Irvine, CA",Itf Women Singles,women:sackmann:260555,Yuyun Chen,0.995,,exact_normalized+country_mismatch,"{""women:api:7926"": ""women:sackmann:260555""}"
+women:api:7926,7926,Yuyun Chen,api_cache_full_name,women,ambiguous,1,Camille Allegre,"W15 Irvine, CA",Itf Women Singles,women:sackmann:260555,Yuyun Chen,0.995,,exact_normalized+country_mismatch,"{""women:api:7926"": ""women:sackmann:260555""}"

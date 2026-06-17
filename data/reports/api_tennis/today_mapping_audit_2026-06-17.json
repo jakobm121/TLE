@@ -1,36 +1,36 @@
 {
   "api_player_cache": {
-    "entries": 5051,
+    "entries": 5243,
     "exists": true,
     "path": "data/raw/api_tennis/players/api_players.json",
-    "with_full_name": 2467,
-    "with_short_name": 5051
+    "with_full_name": 2590,
+    "with_short_name": 5243
   },
-  "blocked_matches": 48,
+  "blocked_matches": 36,
   "counters": {
-    "api_player_cache_entries": 5051,
-    "api_player_cache_first_name_changed": 309,
-    "api_player_cache_full_name_used": 607,
-    "api_player_cache_name_changed": 609,
-    "api_player_cache_second_name_changed": 300,
-    "api_player_cache_short_name_used": 49,
-    "api_player_cache_with_full_name": 2467,
-    "api_player_cache_with_short_name": 5051,
-    "blocked_matches": 48,
-    "mapped_from_mapping_json": 764,
+    "api_player_cache_entries": 5243,
+    "api_player_cache_first_name_changed": 367,
+    "api_player_cache_full_name_used": 730,
+    "api_player_cache_name_changed": 732,
+    "api_player_cache_second_name_changed": 365,
+    "api_player_cache_short_name_used": 100,
+    "api_player_cache_with_full_name": 2590,
+    "api_player_cache_with_short_name": 5243,
+    "blocked_matches": 36,
+    "mapped_from_mapping_json": 777,
     "mapped_from_overrides": 13,
-    "mapped_players": 777,
-    "match_coverage_both_mapped": 367,
-    "match_coverage_none_mapped": 2,
-    "match_coverage_one_mapped": 46,
+    "mapped_players": 790,
+    "match_coverage_both_mapped": 379,
+    "match_coverage_none_mapped": 1,
+    "match_coverage_one_mapped": 35,
     "raw_skipped_non_singles": 182,
     "today_matches": 415,
     "today_players": 827,
-    "unmapped_players": 50
+    "unmapped_players": 37
   },
   "date": "2026-06-17",
-  "generated_at": "2026-06-17T07:35:25+00:00",
-  "mapped_players": 777,
+  "generated_at": "2026-06-17T16:42:45+00:00",
+  "mapped_players": 790,
   "mapping_path": "data/metadata/api_tennis/player_mapping.json",
   "notes": [
     "Default audit is singles-only; doubles/team fixtures are skipped for betting scanner mapping.",
@@ -51,5 +51,5 @@
   "status": "ok",
   "today_matches": 415,
   "today_players": 827,
-  "unmapped_players": 50
+  "unmapped_players": 37
 }
