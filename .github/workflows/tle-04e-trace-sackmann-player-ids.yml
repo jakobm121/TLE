@@ -1,0 +1,55 @@
+name: TLE 04e Trace Sackmann Player IDs
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Exact player name, e.g. Bruno Kuzuhara"
+        required: false
+        default: ""
+      ids:
+        description: "Comma-separated Sackmann ids/keys, e.g. 210029,210044"
+        required: false
+        default: ""
+      limit:
+        description: "Optional row limit, 0 = no limit"
+        required: false
+        default: "0"
+
+permissions:
+  contents: write
+
+jobs:
+  trace-sackmann-player-ids:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Trace Sackmann player IDs
+        run: |
+          python -m tle_machine.trace_sackmann_player_ids \
+            --name "${{ github.event.inputs.name }}" \
+            --ids "${{ github.event.inputs.ids }}" \
+            --limit "${{ github.event.inputs.limit }}"
+
+      - name: Commit trace reports
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/reports/sackmann/trace_sackmann_player_ids.csv || true
+          git add data/reports/sackmann/trace_sackmann_player_ids.json || true
+
+          if git diff --cached --quiet; then
+            echo "No trace report changes to commit."
+          else
+            git commit -m "Trace Sackmann player IDs"
+            git push
+          fi
