@@ -477,11 +477,6 @@ def suggested_override(api_gender: str, api_key: str, cand: dict[str, str], *, a
         return ""
     return json.dumps({display_api_key(api_key, api_gender): target}, ensure_ascii=False)
 
-def suggested_override(api_gender: str, api_key: str, cand: dict[str, str]) -> str:
-    target = cand.get("sackmann_player_key") or cand.get("candidate_sackmann_key") or cand.get("candidate_key") or ""
-    if not target:
-        return ""
-    return json.dumps({display_api_key(api_key, api_gender): target}, ensure_ascii=False)
 
 
 def upsert_player_record(
