@@ -1,10 +1,10 @@
 {
   "api_player_cache": {
-    "entries": 5051,
+    "entries": 5243,
     "exists": true,
     "path": "data/raw/api_tennis/players/api_players.json",
-    "with_full_name": 2467,
-    "with_short_name": 5051
+    "with_full_name": 2590,
+    "with_short_name": 5243
   },
   "event_type_counts": {
     "Atp Doubles": 124,
