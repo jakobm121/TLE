@@ -1,0 +1,66 @@
+side,api_key,api_player_id,gender,player_name,appearances,wins,losses,total_stake,total_profit,sample_matches
+opponent,men:api:32558,32558,men,J. J. Schwaerzler,4,2,2,5.25,1.0625,2026-05-12 | J. J. Schwaerzler - F. Agamenone | pick=F. Agamenone || 2026-05-26 | E. Dalla Valle - J. J. Schwaerzler | pick=E. Dalla Valle || 2026-05-28 | P. Martin Tiffon - J. J. Schwaerzler | pick=P. Martin Tiffon || 2026-06-01 | J. J. Schwaerzler - M. Dodig | pick=M. Dodig
+player,women:api:13987,13987,women,A. Sobolieva,3,1,2,3.75,-1.125,2026-05-13 | A. Sobolieva - A. Falei | pick=A. Sobolieva || 2026-05-14 | A. Sobolieva - C. Liu | pick=A. Sobolieva || 2026-05-20 | K. Rinaldo Persson - A. Sobolieva | pick=A. Sobolieva
+opponent,women:api:80930,80930,women,L. Podgorichani,3,1,2,4.0,-1.6875,2026-05-06 | J. Shin - L. Podgorichani | pick=J. Shin || 2026-05-06 | J. Shin - L. Podgorichani | pick=J. Shin || 2026-05-14 | M. Barry - L. Podgorichani | pick=M. Barry
+player,men:api:1904,1904,men,N. Fatic,3,2,1,3.25,0.52,2026-05-11 | N. Fatic - D. Kuzmanov | pick=N. Fatic || 2026-05-13 | N. Fatic - E. Moller | pick=N. Fatic || 2026-05-19 | N. Fatic - L. Mikrut | pick=N. Fatic
+player,men:api:37897,37897,men,R. Sakamoto,3,2,1,3.75,2.3375,2026-05-12 | R. Sakamoto - C. H. Tseng | pick=R. Sakamoto || 2026-05-13 | R. Sakamoto - A. Muller | pick=R. Sakamoto || 2026-05-19 | R. Sakamoto - P. Martinez | pick=R. Sakamoto
+opponent,women:api:1807,1807,women,R. Serban,3,2,1,3.5,2.125,2026-05-13 | M. Kobori - R. Serban | pick=M. Kobori || 2026-05-22 | E. Koike - R. Serban | pick=E. Koike || 2026-06-11 | D. Zoldakova - R. Serban | pick=D. Zoldakova
+player,men:api:377,377,men,B. Gojo,2,1,1,3.0,0.555,2026-05-20 | H. Rocha - B. Gojo | pick=B. Gojo || 2026-05-22 | B. Gojo - J. Rodionov | pick=B. Gojo
+player,women:api:497,497,women,L. Cabrera,2,1,1,2.5,0.625,2026-05-05 | A. Ito - L. Cabrera | pick=L. Cabrera || 2026-05-15 | M. Yamaguchi - L. Cabrera | pick=L. Cabrera
+opponent,women:api:172,172,women,M. Helgo,2,1,1,2.5,0.275,2026-05-14 | M. Helgo - E. Adeshina | pick=E. Adeshina || 2026-05-15 | C. Zanolini - M. Helgo | pick=C. Zanolini
+opponent,women:api:1812,1812,women,Xin. Wang,2,2,0,2.5,2.7,2026-05-17 | Xin. Wang - L. Boisson | pick=L. Boisson || 2026-05-27 | T. Korpatsch - Xin. Wang | pick=T. Korpatsch
+opponent,men:api:2925,2925,men,Y. Chung,2,0,2,1.75,-1.75,2026-05-15 | Y. Chung - S. Fukuda | pick=S. Fukuda || 2026-05-21 | Y. Chung - W. Shin | pick=W. Shin
+player,men:api:2481,2481,men,A. Ayeni,1,0,1,1.0,-1.0,2026-05-25 | A. Ayeni - I. Ivanov | pick=A. Ayeni
+opponent,men:api:15314,15314,men,A. Mehrotra,1,1,0,1.25,1.4125,2026-05-17 | A. Mehrotra - G. Lomakin | pick=G. Lomakin
+player,men:api:2478,2478,men,A. Pecci,1,0,1,1.0,-1.0,2026-05-14 | A. Pecci - T. Compagnucci | pick=A. Pecci
+player,women:api:218,218,women,A. Siskova,1,0,1,1.25,-1.25,2026-05-19 | K. Juvan - A. Siskova | pick=A. Siskova
+opponent,men:api:24769,24769,men,A. Weber,1,1,0,1.0,1.21,2026-05-21 | A. Weber - F. Tabacco | pick=F. Tabacco
+opponent,women:api:2581,2581,women,A. Zucchini,1,1,0,1.25,2.0375,2026-05-08 | C. Gennaro - A. Zucchini | pick=C. Gennaro
+player,women:api:24516,24516,women,B. Jeong,1,1,0,1.0,1.75,2026-05-15 | M. Rapolu - B. Jeong | pick=B. Jeong
+opponent,women:api:64290,64290,women,C. Diaz Adrover,1,1,0,1.25,1.2375,2026-05-19 | S. Iliev - C. Diaz Adrover | pick=S. Iliev
+opponent,women:api:40162,40162,women,C. Moccia,1,0,1,1.0,-1.0,2026-05-11 | C. Moccia - S. Pushkar | pick=S. Pushkar
+player,men:api:11809,11809,men,C. Vandermeersch,1,1,0,1.25,2.1875,2026-05-17 | C. Vandermeersch - J. Echeverria | pick=C. Vandermeersch
+opponent,men:api:55858,55858,men,D. Dedura,1,0,1,1.25,-1.25,2026-06-04 | D. Dedura - J. Reis Da Silva | pick=J. Reis Da Silva
+player,men:api:55858,55858,men,D. Dedura,1,1,0,1.25,2.025,2026-06-05 | M. Trungelliti - D. Dedura | pick=D. Dedura
+opponent,men:api:7098,7098,men,D. Singh,1,1,0,1.5,2.085,2026-05-19 | D. Singh - L. Vithoontien | pick=L. Vithoontien
+player,women:api:66797,66797,women,E. Agureeva,1,1,0,1.25,1.1,2026-05-19 | E. Agureeva - G. Parentini | pick=E. Agureeva
+player,women:api:50,50,women,E. Jamshidi,1,1,0,1.25,2.1875,2026-05-22 | M. Buchnik - E. Jamshidi | pick=E. Jamshidi
+opponent,men:api:39675,39675,men,E. Moller,1,0,1,1.25,-1.25,2026-05-13 | N. Fatic - E. Moller | pick=N. Fatic
+opponent,men:api:717,717,men,F. A. Gomez,1,1,0,1.5,2.07,2026-05-13 | L. Lokoli - F. A. Gomez | pick=L. Lokoli
+opponent,men:api:378,378,men,F. Mena,1,1,0,1.25,1.875,2026-05-07 | M. Tobon - F. Mena | pick=M. Tobon
+player,men:api:38549,38549,men,F. Virgili Berini,1,1,0,1.25,1.875,2026-05-20 | F. Virgili Berini - J. Plans | pick=F. Virgili Berini
+opponent,men:api:93927,93927,men,G. Ciocca,1,0,1,1.25,-1.25,2026-05-07 | S. Storch - G. Ciocca | pick=S. Storch
+player,men:api:2845,2845,men,G. Monfils,1,0,1,1.0,-1.0,2026-05-25 | H. Gaston - G. Monfils | pick=G. Monfils
+opponent,women:api:2115,2115,women,G. Parentini,1,1,0,1.25,1.1,2026-05-19 | E. Agureeva - G. Parentini | pick=E. Agureeva
+opponent,men:api:9218,9218,men,I. Kudriashov,1,1,0,1.25,1.425,2026-05-09 | J. Bradshaw - I. Kudriashov | pick=J. Bradshaw
+player,men:api:54463,54463,men,J. Connel,1,0,1,1.25,-1.25,2026-05-12 | C. Langmo - J. Connel | pick=J. Connel
+player,men:api:725,725,men,J. Flores,1,0,1,1.0,-1.0,2026-05-09 | J. Flores - A. Beckley | pick=J. Flores
+opponent,men:api:645,645,men,J. Hasson,1,1,0,1.0,1.0,2026-05-14 | R. Piatti - J. Hasson | pick=R. Piatti
+opponent,men:api:4047,4047,men,J. Plans,1,1,0,1.25,1.875,2026-05-20 | F. Virgili Berini - J. Plans | pick=F. Virgili Berini
+player,women:api:472,472,women,J. Ponchet,1,0,1,1.25,-1.25,2026-05-09 | J. Ponchet - A. Lazaro Garcia | pick=J. Ponchet
+player,men:api:675,675,men,K. Ibrahim,1,0,1,1.25,-1.25,2026-05-22 | K. Ibrahim - M. Molder | pick=K. Ibrahim
+opponent,women:api:711,711,women,K. Ogura,1,0,1,1.25,-1.25,2026-05-13 | Y. Taka - K. Ogura | pick=Y. Taka
+opponent,men:api:2849,2849,men,L. Musetti,1,0,1,0.75,-0.75,2026-05-10 | L. Musetti - F. Cerundolo | pick=F. Cerundolo
+opponent,women:api:9081,9081,women,L. Pulchartova,1,1,0,1.25,1.375,2026-05-13 | L. Pulchartova - T. Nikcevic | pick=T. Nikcevic
+opponent,women:api:38186,38186,women,M. Buchnik,1,1,0,1.25,2.1875,2026-05-22 | M. Buchnik - E. Jamshidi | pick=E. Jamshidi
+opponent,men:api:7999,7999,men,M. Van Der Meerschen,1,0,1,1.25,-1.25,2026-05-24 | L. Gagliardo - M. Van Der Meerschen | pick=L. Gagliardo
+opponent,women:api:49154,49154,women,M. Van Zyl,1,0,1,1.5,-1.5,2026-05-21 | M. Van Zyl - M. Giordano | pick=M. Giordano
+opponent,women:api:24515,24515,women,O. Choi,1,1,0,1.25,1.875,2026-05-21 | S. Nishimoto - O. Choi | pick=S. Nishimoto
+opponent,men:api:1261,1261,men,O. Jasika,1,1,0,1.25,2.2375,2026-05-19 | O. Jasika - S. Rawat | pick=S. Rawat
+player,women:api:2819,2819,women,P. Hercog,1,0,1,1.0,-1.0,2026-05-08 | P. Hercog - A. Mintegi Del Olmo | pick=P. Hercog
+opponent,men:api:75800,75800,men,P. Karthik,1,0,1,0.75,-0.75,2026-05-20 | I. Gretskiy - P. Karthik | pick=I. Gretskiy
+player,men:api:1283,1283,men,S. Hamza Reguig,1,1,0,1.0,0.92,2026-05-13 | V. Frydrych - S. Hamza Reguig | pick=S. Hamza Reguig
+opponent,women:api:1826,1826,women,S. Stephens,1,0,1,1.5,-1.5,2026-05-21 | L. Romero Gormaz - S. Stephens | pick=L. Romero Gormaz
+player,women:api:1826,1826,women,S. Stephens,1,0,1,1.25,-1.25,2026-05-24 | S. Bejlek - S. Stephens | pick=S. Stephens
+opponent,men:api:2168,2168,men,S. Wawrinka,1,0,1,1.25,-1.25,2026-05-18 | R. Brancaccio - S. Wawrinka | pick=R. Brancaccio
+player,men:api:2168,2168,men,S. Wawrinka,1,0,1,0.75,-0.75,2026-05-20 | S. Wawrinka - A. Michelsen | pick=S. Wawrinka
+player,men:api:1074,1074,men,T. Monteiro,1,0,1,1.25,-1.25,2026-05-13 | T. Monteiro - A. Andrade | pick=T. Monteiro
+opponent,men:api:13552,13552,men,T. Paris,1,1,0,1.0,0.79,2026-05-25 | L. Pokorny - T. Paris | pick=L. Pokorny
+player,women:api:57647,57647,women,U. Hrabavets,1,1,0,1.0,0.82,2026-05-13 | U. Hrabavets - V. Mincheva | pick=U. Hrabavets
+opponent,women:api:57647,57647,women,U. Hrabavets,1,0,1,1.0,-1.0,2026-05-15 | N. Fouad - U. Hrabavets | pick=N. Fouad
+player,men:api:20846,20846,men,V. Goncalves,1,0,1,1.0,-1.0,2026-05-13 | V. Goncalves - A. Ganesan | pick=V. Goncalves
+opponent,women:api:28499,28499,women,V. Steiner,1,0,1,1.25,-1.25,2026-05-09 | V. Steiner - S. Iliev | pick=S. Iliev
+player,men:api:10857,10857,men,W. Shin,1,0,1,0.75,-0.75,2026-05-21 | Y. Chung - W. Shin | pick=W. Shin
+player,women:api:1812,1812,women,Xin. Wang,1,0,1,1.5,-1.5,2026-05-08 | Xin. Wang - A. Eala | pick=Xin. Wang
+player,women:api:52574,52574,women,Y. Taka,1,0,1,1.25,-1.25,2026-05-13 | Y. Taka - K. Ogura | pick=Y. Taka
+opponent,men:api:884,884,men,Y. Uchiyama,1,1,0,1.25,1.25,2026-05-25 | A. Ilagan - Y. Uchiyama | pick=A. Ilagan

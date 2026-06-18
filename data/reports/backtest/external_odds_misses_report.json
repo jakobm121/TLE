@@ -1,0 +1,653 @@
+{
+  "category_by_level": {
+    "eligible|atp": 23,
+    "eligible|challenger": 90,
+    "eligible|itf": 58,
+    "eligible|qualifying": 27,
+    "eligible|wta": 26,
+    "min_level_not_met|atp": 4,
+    "min_level_not_met|challenger": 43,
+    "min_level_not_met|itf": 21,
+    "min_level_not_met|qualifying": 9,
+    "min_level_not_met|wta": 4,
+    "min_surface_not_met|challenger": 5,
+    "min_surface_not_met|itf": 4,
+    "min_surface_not_met|qualifying": 3,
+    "no_prediction_match|atp": 39,
+    "no_prediction_match|challenger": 86,
+    "no_prediction_match|itf": 87,
+    "no_prediction_match|qualifying": 47,
+    "no_prediction_match|wta": 21,
+    "unmapped_player|atp": 5,
+    "unmapped_player|challenger": 16,
+    "unmapped_player|itf": 43,
+    "unmapped_player|qualifying": 14,
+    "unmapped_player|wta": 6
+  },
+  "category_counts": {
+    "eligible": 224,
+    "min_level_not_met": 81,
+    "min_surface_not_met": 12,
+    "no_prediction_match": 280,
+    "unmapped_player": 84
+  },
+  "elo_no_bet_reason_counts": {
+    "eligible": 224,
+    "min_level_not_met": 81,
+    "min_surface_not_met": 12,
+    "no_prediction_match": 364
+  },
+  "generated_at": "2026-06-18T14:06:38+00:00",
+  "input_detail_csv": "data/backtest/external_odds_comparison.csv",
+  "mapping_status_counts": {
+    "both_unmapped:missing_api_key|missing_api_key": 7,
+    "both_unmapped:not_in_mapping|not_in_mapping": 5,
+    "both_unmapped:not_in_mapping|unmapped": 1,
+    "mapped": 597,
+    "opponent_unmapped:ambiguous": 2,
+    "opponent_unmapped:not_in_mapping": 30,
+    "opponent_unmapped:unmapped": 8,
+    "player_unmapped:ambiguous": 1,
+    "player_unmapped:not_in_mapping": 25,
+    "player_unmapped:unmapped": 5
+  },
+  "match_status_counts": {
+    "matched_by_date_gender_pair": 50,
+    "matched_by_date_gender_pair_ambiguous": 1,
+    "matched_by_match_id": 266,
+    "no_prediction_match": 364
+  },
+  "no_prediction_match_total": 280,
+  "notes": [
+    "Use unmapped_players_csv to decide manual API->Sackmann overrides.",
+    "Use no_prediction_match_csv to see whether misses are missing historical API results, date/fixture mismatches, or level/gender mapping issues.",
+    "This script only analyzes outputs from TLE 16; it does not recompute Elo."
+  ],
+  "outputs": {
+    "misses_csv": "data/backtest/external_odds_misses.csv",
+    "no_prediction_match_csv": "data/backtest/external_odds_no_prediction_match.csv",
+    "report_json": "data/reports/backtest/external_odds_misses_report.json",
+    "unmapped_players_csv": "data/backtest/external_odds_unmapped_players.csv"
+  },
+  "rows": 681,
+  "status": "ok",
+  "top_no_prediction_match_dates": [
+    [
+      "2026-05-08",
+      22
+    ],
+    [
+      "2026-05-21",
+      20
+    ],
+    [
+      "2026-05-16",
+      19
+    ],
+    [
+      "2026-05-09",
+      17
+    ],
+    [
+      "2026-05-13",
+      17
+    ],
+    [
+      "2026-05-14",
+      17
+    ],
+    [
+      "2026-05-22",
+      17
+    ],
+    [
+      "2026-05-05",
+      16
+    ],
+    [
+      "2026-05-19",
+      16
+    ],
+    [
+      "2026-05-20",
+      15
+    ],
+    [
+      "2026-05-24",
+      14
+    ],
+    [
+      "2026-05-12",
+      13
+    ],
+    [
+      "2026-05-15",
+      13
+    ],
+    [
+      "2026-05-18",
+      13
+    ],
+    [
+      "2026-05-10",
+      12
+    ],
+    [
+      "2026-05-06",
+      9
+    ],
+    [
+      "2026-05-11",
+      7
+    ],
+    [
+      "2026-05-07",
+      6
+    ],
+    [
+      "2026-05-17",
+      6
+    ],
+    [
+      "2026-05-23",
+      3
+    ]
+  ],
+  "top_no_prediction_match_levels": [
+    [
+      "itf",
+      87
+    ],
+    [
+      "challenger",
+      86
+    ],
+    [
+      "qualifying",
+      47
+    ],
+    [
+      "atp",
+      39
+    ],
+    [
+      "wta",
+      21
+    ]
+  ],
+  "top_no_prediction_match_tournaments": [
+    [
+      "French Open",
+      37
+    ],
+    [
+      "Rome",
+      33
+    ],
+    [
+      "Istanbul (Turkey) - Qualification",
+      12
+    ],
+    [
+      "Valencia",
+      12
+    ],
+    [
+      "Francavilla",
+      10
+    ],
+    [
+      "Geneva",
+      10
+    ],
+    [
+      "Zagreb",
+      7
+    ],
+    [
+      "Tunis",
+      7
+    ],
+    [
+      "Hamburg",
+      7
+    ],
+    [
+      "Wuxi",
+      6
+    ],
+    [
+      "Bordeaux",
+      6
+    ],
+    [
+      "M25 Reggio Emilia",
+      6
+    ],
+    [
+      "Paris",
+      5
+    ],
+    [
+      "Parma",
+      5
+    ],
+    [
+      "Strasbourg",
+      5
+    ],
+    [
+      "Bengaluru 3 (India) - Qualification",
+      4
+    ],
+    [
+      "W100 Takasaki",
+      4
+    ],
+    [
+      "Santos",
+      3
+    ],
+    [
+      "Jiujiang (China) - Qualification",
+      3
+    ],
+    [
+      "M25 Loule",
+      3
+    ]
+  ],
+  "top_unmapped_players": [
+    {
+      "api_key": "men:api:32558",
+      "api_player_id": "32558",
+      "appearances": 4,
+      "gender": "men",
+      "losses": 2,
+      "player_name": "J. J. Schwaerzler",
+      "sample_matches": "2026-05-12 | J. J. Schwaerzler - F. Agamenone | pick=F. Agamenone || 2026-05-26 | E. Dalla Valle - J. J. Schwaerzler | pick=E. Dalla Valle || 2026-05-28 | P. Martin Tiffon - J. J. Schwaerzler | pick=P. Martin Tiffon || 2026-06-01 | J. J. Schwaerzler - M. Dodig | pick=M. Dodig",
+      "side": "opponent",
+      "total_profit": 1.0625,
+      "total_stake": 5.25,
+      "wins": 2
+    },
+    {
+      "api_key": "women:api:13987",
+      "api_player_id": "13987",
+      "appearances": 3,
+      "gender": "women",
+      "losses": 2,
+      "player_name": "A. Sobolieva",
+      "sample_matches": "2026-05-13 | A. Sobolieva - A. Falei | pick=A. Sobolieva || 2026-05-14 | A. Sobolieva - C. Liu | pick=A. Sobolieva || 2026-05-20 | K. Rinaldo Persson - A. Sobolieva | pick=A. Sobolieva",
+      "side": "player",
+      "total_profit": -1.125,
+      "total_stake": 3.75,
+      "wins": 1
+    },
+    {
+      "api_key": "women:api:80930",
+      "api_player_id": "80930",
+      "appearances": 3,
+      "gender": "women",
+      "losses": 2,
+      "player_name": "L. Podgorichani",
+      "sample_matches": "2026-05-06 | J. Shin - L. Podgorichani | pick=J. Shin || 2026-05-06 | J. Shin - L. Podgorichani | pick=J. Shin || 2026-05-14 | M. Barry - L. Podgorichani | pick=M. Barry",
+      "side": "opponent",
+      "total_profit": -1.6875,
+      "total_stake": 4.0,
+      "wins": 1
+    },
+    {
+      "api_key": "men:api:1904",
+      "api_player_id": "1904",
+      "appearances": 3,
+      "gender": "men",
+      "losses": 1,
+      "player_name": "N. Fatic",
+      "sample_matches": "2026-05-11 | N. Fatic - D. Kuzmanov | pick=N. Fatic || 2026-05-13 | N. Fatic - E. Moller | pick=N. Fatic || 2026-05-19 | N. Fatic - L. Mikrut | pick=N. Fatic",
+      "side": "player",
+      "total_profit": 0.52,
+      "total_stake": 3.25,
+      "wins": 2
+    },
+    {
+      "api_key": "men:api:37897",
+      "api_player_id": "37897",
+      "appearances": 3,
+      "gender": "men",
+      "losses": 1,
+      "player_name": "R. Sakamoto",
+      "sample_matches": "2026-05-12 | R. Sakamoto - C. H. Tseng | pick=R. Sakamoto || 2026-05-13 | R. Sakamoto - A. Muller | pick=R. Sakamoto || 2026-05-19 | R. Sakamoto - P. Martinez | pick=R. Sakamoto",
+      "side": "player",
+      "total_profit": 2.3375,
+      "total_stake": 3.75,
+      "wins": 2
+    },
+    {
+      "api_key": "women:api:1807",
+      "api_player_id": "1807",
+      "appearances": 3,
+      "gender": "women",
+      "losses": 1,
+      "player_name": "R. Serban",
+      "sample_matches": "2026-05-13 | M. Kobori - R. Serban | pick=M. Kobori || 2026-05-22 | E. Koike - R. Serban | pick=E. Koike || 2026-06-11 | D. Zoldakova - R. Serban | pick=D. Zoldakova",
+      "side": "opponent",
+      "total_profit": 2.125,
+      "total_stake": 3.5,
+      "wins": 2
+    },
+    {
+      "api_key": "men:api:377",
+      "api_player_id": "377",
+      "appearances": 2,
+      "gender": "men",
+      "losses": 1,
+      "player_name": "B. Gojo",
+      "sample_matches": "2026-05-20 | H. Rocha - B. Gojo | pick=B. Gojo || 2026-05-22 | B. Gojo - J. Rodionov | pick=B. Gojo",
+      "side": "player",
+      "total_profit": 0.555,
+      "total_stake": 3.0,
+      "wins": 1
+    },
+    {
+      "api_key": "women:api:497",
+      "api_player_id": "497",
+      "appearances": 2,
+      "gender": "women",
+      "losses": 1,
+      "player_name": "L. Cabrera",
+      "sample_matches": "2026-05-05 | A. Ito - L. Cabrera | pick=L. Cabrera || 2026-05-15 | M. Yamaguchi - L. Cabrera | pick=L. Cabrera",
+      "side": "player",
+      "total_profit": 0.625,
+      "total_stake": 2.5,
+      "wins": 1
+    },
+    {
+      "api_key": "women:api:172",
+      "api_player_id": "172",
+      "appearances": 2,
+      "gender": "women",
+      "losses": 1,
+      "player_name": "M. Helgo",
+      "sample_matches": "2026-05-14 | M. Helgo - E. Adeshina | pick=E. Adeshina || 2026-05-15 | C. Zanolini - M. Helgo | pick=C. Zanolini",
+      "side": "opponent",
+      "total_profit": 0.275,
+      "total_stake": 2.5,
+      "wins": 1
+    },
+    {
+      "api_key": "women:api:1812",
+      "api_player_id": "1812",
+      "appearances": 2,
+      "gender": "women",
+      "losses": 0,
+      "player_name": "Xin. Wang",
+      "sample_matches": "2026-05-17 | Xin. Wang - L. Boisson | pick=L. Boisson || 2026-05-27 | T. Korpatsch - Xin. Wang | pick=T. Korpatsch",
+      "side": "opponent",
+      "total_profit": 2.7,
+      "total_stake": 2.5,
+      "wins": 2
+    },
+    {
+      "api_key": "men:api:2925",
+      "api_player_id": "2925",
+      "appearances": 2,
+      "gender": "men",
+      "losses": 2,
+      "player_name": "Y. Chung",
+      "sample_matches": "2026-05-15 | Y. Chung - S. Fukuda | pick=S. Fukuda || 2026-05-21 | Y. Chung - W. Shin | pick=W. Shin",
+      "side": "opponent",
+      "total_profit": -1.75,
+      "total_stake": 1.75,
+      "wins": 0
+    },
+    {
+      "api_key": "men:api:2481",
+      "api_player_id": "2481",
+      "appearances": 1,
+      "gender": "men",
+      "losses": 1,
+      "player_name": "A. Ayeni",
+      "sample_matches": "2026-05-25 | A. Ayeni - I. Ivanov | pick=A. Ayeni",
+      "side": "player",
+      "total_profit": -1.0,
+      "total_stake": 1.0,
+      "wins": 0
+    },
+    {
+      "api_key": "men:api:15314",
+      "api_player_id": "15314",
+      "appearances": 1,
+      "gender": "men",
+      "losses": 0,
+      "player_name": "A. Mehrotra",
+      "sample_matches": "2026-05-17 | A. Mehrotra - G. Lomakin | pick=G. Lomakin",
+      "side": "opponent",
+      "total_profit": 1.4125,
+      "total_stake": 1.25,
+      "wins": 1
+    },
+    {
+      "api_key": "men:api:2478",
+      "api_player_id": "2478",
+      "appearances": 1,
+      "gender": "men",
+      "losses": 1,
+      "player_name": "A. Pecci",
+      "sample_matches": "2026-05-14 | A. Pecci - T. Compagnucci | pick=A. Pecci",
+      "side": "player",
+      "total_profit": -1.0,
+      "total_stake": 1.0,
+      "wins": 0
+    },
+    {
+      "api_key": "women:api:218",
+      "api_player_id": "218",
+      "appearances": 1,
+      "gender": "women",
+      "losses": 1,
+      "player_name": "A. Siskova",
+      "sample_matches": "2026-05-19 | K. Juvan - A. Siskova | pick=A. Siskova",
+      "side": "player",
+      "total_profit": -1.25,
+      "total_stake": 1.25,
+      "wins": 0
+    },
+    {
+      "api_key": "men:api:24769",
+      "api_player_id": "24769",
+      "appearances": 1,
+      "gender": "men",
+      "losses": 0,
+      "player_name": "A. Weber",
+      "sample_matches": "2026-05-21 | A. Weber - F. Tabacco | pick=F. Tabacco",
+      "side": "opponent",
+      "total_profit": 1.21,
+      "total_stake": 1.0,
+      "wins": 1
+    },
+    {
+      "api_key": "women:api:2581",
+      "api_player_id": "2581",
+      "appearances": 1,
+      "gender": "women",
+      "losses": 0,
+      "player_name": "A. Zucchini",
+      "sample_matches": "2026-05-08 | C. Gennaro - A. Zucchini | pick=C. Gennaro",
+      "side": "opponent",
+      "total_profit": 2.0375,
+      "total_stake": 1.25,
+      "wins": 1
+    },
+    {
+      "api_key": "women:api:24516",
+      "api_player_id": "24516",
+      "appearances": 1,
+      "gender": "women",
+      "losses": 0,
+      "player_name": "B. Jeong",
+      "sample_matches": "2026-05-15 | M. Rapolu - B. Jeong | pick=B. Jeong",
+      "side": "player",
+      "total_profit": 1.75,
+      "total_stake": 1.0,
+      "wins": 1
+    },
+    {
+      "api_key": "women:api:64290",
+      "api_player_id": "64290",
+      "appearances": 1,
+      "gender": "women",
+      "losses": 0,
+      "player_name": "C. Diaz Adrover",
+      "sample_matches": "2026-05-19 | S. Iliev - C. Diaz Adrover | pick=S. Iliev",
+      "side": "opponent",
+      "total_profit": 1.2375,
+      "total_stake": 1.25,
+      "wins": 1
+    },
+    {
+      "api_key": "women:api:40162",
+      "api_player_id": "40162",
+      "appearances": 1,
+      "gender": "women",
+      "losses": 1,
+      "player_name": "C. Moccia",
+      "sample_matches": "2026-05-11 | C. Moccia - S. Pushkar | pick=S. Pushkar",
+      "side": "opponent",
+      "total_profit": -1.0,
+      "total_stake": 1.0,
+      "wins": 0
+    },
+    {
+      "api_key": "men:api:11809",
+      "api_player_id": "11809",
+      "appearances": 1,
+      "gender": "men",
+      "losses": 0,
+      "player_name": "C. Vandermeersch",
+      "sample_matches": "2026-05-17 | C. Vandermeersch - J. Echeverria | pick=C. Vandermeersch",
+      "side": "player",
+      "total_profit": 2.1875,
+      "total_stake": 1.25,
+      "wins": 1
+    },
+    {
+      "api_key": "men:api:55858",
+      "api_player_id": "55858",
+      "appearances": 1,
+      "gender": "men",
+      "losses": 1,
+      "player_name": "D. Dedura",
+      "sample_matches": "2026-06-04 | D. Dedura - J. Reis Da Silva | pick=J. Reis Da Silva",
+      "side": "opponent",
+      "total_profit": -1.25,
+      "total_stake": 1.25,
+      "wins": 0
+    },
+    {
+      "api_key": "men:api:55858",
+      "api_player_id": "55858",
+      "appearances": 1,
+      "gender": "men",
+      "losses": 0,
+      "player_name": "D. Dedura",
+      "sample_matches": "2026-06-05 | M. Trungelliti - D. Dedura | pick=D. Dedura",
+      "side": "player",
+      "total_profit": 2.025,
+      "total_stake": 1.25,
+      "wins": 1
+    },
+    {
+      "api_key": "men:api:7098",
+      "api_player_id": "7098",
+      "appearances": 1,
+      "gender": "men",
+      "losses": 0,
+      "player_name": "D. Singh",
+      "sample_matches": "2026-05-19 | D. Singh - L. Vithoontien | pick=L. Vithoontien",
+      "side": "opponent",
+      "total_profit": 2.085,
+      "total_stake": 1.5,
+      "wins": 1
+    },
+    {
+      "api_key": "women:api:66797",
+      "api_player_id": "66797",
+      "appearances": 1,
+      "gender": "women",
+      "losses": 0,
+      "player_name": "E. Agureeva",
+      "sample_matches": "2026-05-19 | E. Agureeva - G. Parentini | pick=E. Agureeva",
+      "side": "player",
+      "total_profit": 1.1,
+      "total_stake": 1.25,
+      "wins": 1
+    },
+    {
+      "api_key": "women:api:50",
+      "api_player_id": "50",
+      "appearances": 1,
+      "gender": "women",
+      "losses": 0,
+      "player_name": "E. Jamshidi",
+      "sample_matches": "2026-05-22 | M. Buchnik - E. Jamshidi | pick=E. Jamshidi",
+      "side": "player",
+      "total_profit": 2.1875,
+      "total_stake": 1.25,
+      "wins": 1
+    },
+    {
+      "api_key": "men:api:39675",
+      "api_player_id": "39675",
+      "appearances": 1,
+      "gender": "men",
+      "losses": 1,
+      "player_name": "E. Moller",
+      "sample_matches": "2026-05-13 | N. Fatic - E. Moller | pick=N. Fatic",
+      "side": "opponent",
+      "total_profit": -1.25,
+      "total_stake": 1.25,
+      "wins": 0
+    },
+    {
+      "api_key": "men:api:717",
+      "api_player_id": "717",
+      "appearances": 1,
+      "gender": "men",
+      "losses": 0,
+      "player_name": "F. A. Gomez",
+      "sample_matches": "2026-05-13 | L. Lokoli - F. A. Gomez | pick=L. Lokoli",
+      "side": "opponent",
+      "total_profit": 2.07,
+      "total_stake": 1.5,
+      "wins": 1
+    },
+    {
+      "api_key": "men:api:378",
+      "api_player_id": "378",
+      "appearances": 1,
+      "gender": "men",
+      "losses": 0,
+      "player_name": "F. Mena",
+      "sample_matches": "2026-05-07 | M. Tobon - F. Mena | pick=M. Tobon",
+      "side": "opponent",
+      "total_profit": 1.875,
+      "total_stake": 1.25,
+      "wins": 1
+    },
+    {
+      "api_key": "men:api:38549",
+      "api_player_id": "38549",
+      "appearances": 1,
+      "gender": "men",
+      "losses": 0,
+      "player_name": "F. Virgili Berini",
+      "sample_matches": "2026-05-20 | F. Virgili Berini - J. Plans | pick=F. Virgili Berini",
+      "side": "player",
+      "total_profit": 1.875,
+      "total_stake": 1.25,
+      "wins": 1
+    }
+  ],
+  "unmapped_players_total": 65
+}
