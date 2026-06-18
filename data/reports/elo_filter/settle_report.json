@@ -1,18 +1,20 @@
 {
   "active_after": 0,
   "active_before": 0,
-  "generated_at": "2026-06-18T21:29:57+00:00",
+  "generated_at": "2026-06-18T21:33:41+00:00",
   "notes": [
     "Settled picks are removed from predictions.json.",
     "results.json is the ledger and keeps both pending and settled tracked picks.",
-    "results.csv includes running W-L, running total profit, and running ROI after each row."
+    "results.md has total ROI/W-L above the table for easy review.",
+    "results.csv keeps running W-L, running total profit, and running ROI per row."
   ],
   "outputs": {
     "active_csv": "data/elo_filter/active_predictions.csv",
     "predictions_json": "data/elo_filter/predictions.json",
     "report_json": "data/reports/elo_filter/settle_report.json",
     "results_csv": "data/elo_filter/results.csv",
-    "results_json": "data/elo_filter/results.json"
+    "results_json": "data/elo_filter/results.json",
+    "results_md": "data/elo_filter/results.md"
   },
   "roi_summary": {
     "hit_rate": 1.0,
