@@ -19,16 +19,11 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-
-      - name: Audit ratings integrity
+      - name: Audit ratings
         run: |
           python -m tle_machine.audit_ratings
 
-      - name: Commit audit reports
+      - name: Commit rating audit outputs
         if: always()
         run: |
           git config user.name "github-actions"
@@ -36,10 +31,11 @@ jobs:
 
           git add data/reports/ratings/rating_integrity_audit.json || true
           git add data/reports/ratings/rating_integrity_issues.csv || true
+          git add data/reports/ratings/rating_integrity_warnings.csv || true
 
           if git diff --cached --quiet; then
-            echo "No audit report changes to commit."
+            echo "No rating audit changes to commit."
           else
-            git commit -m "Audit TLE ratings integrity"
+            git commit -m "Audit ratings integrity"
             git push
           fi
