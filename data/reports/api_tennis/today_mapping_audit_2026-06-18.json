@@ -6,7 +6,7 @@
     "with_full_name": 2591,
     "with_short_name": 5250
   },
-  "blocked_matches": 17,
+  "blocked_matches": 21,
   "counters": {
     "api_player_cache_entries": 5250,
     "api_player_cache_first_name_changed": 276,
@@ -16,24 +16,24 @@
     "api_player_cache_short_name_used": 37,
     "api_player_cache_with_full_name": 2591,
     "api_player_cache_with_short_name": 5250,
-    "blocked_matches": 17,
-    "mapped_from_mapping_json": 570,
+    "blocked_matches": 21,
+    "mapped_from_mapping_json": 566,
     "mapped_from_overrides": 0,
-    "mapped_players": 570,
-    "match_coverage_both_mapped": 278,
+    "mapped_players": 566,
+    "match_coverage_both_mapped": 274,
     "match_coverage_none_mapped": 1,
-    "match_coverage_one_mapped": 16,
+    "match_coverage_one_mapped": 20,
     "raw_skipped_non_singles": 185,
     "review_ambiguous_candidates": 4,
-    "review_candidates_available": 7,
-    "review_no_candidates_suppressed": 11,
+    "review_candidates_available": 12,
+    "review_no_candidates_suppressed": 10,
     "today_matches": 295,
     "today_players": 588,
-    "unmapped_players": 18
+    "unmapped_players": 22
   },
   "date": "2026-06-18",
-  "generated_at": "2026-06-18T10:33:07+00:00",
-  "mapped_players": 570,
+  "generated_at": "2026-06-18T10:45:18+00:00",
+  "mapped_players": 566,
   "mapping_path": "data/metadata/api_tennis/player_mapping.json",
   "notes": [
     "Default audit is singles-only; doubles/team fixtures are skipped for betting scanner mapping.",
@@ -56,5 +56,5 @@
   "status": "ok",
   "today_matches": 295,
   "today_players": 588,
-  "unmapped_players": 18
+  "unmapped_players": 22
 }
