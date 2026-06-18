@@ -688,18 +688,6 @@ def score_candidate_features(api_feat: dict[str, Any], sp: SackPlayer) -> tuple[
     if api_feat.get("token_key") and api_feat.get("token_key") == sp.token_key:
         return 0.995, "exact_token_set"
 
-    # Candidate-only: two or more initials + same surname,
-    # e.g. "V. N. Sarganella" -> "Virginia Nora Sarganella".
-    # Keep below AUTO_SCORE_MIN so it lands in review unless another stronger rule applies.
-    if multi_initial_surname_match(api_feat, sp):
-        return 0.920, "multi_initial_surname"
-
-    # Candidate-only: API expanded full name vs Sackmann initials,
-    # e.g. "John Wolf Jeffrey" -> "J.J. Wolf".
-    # Kept below AUTO_SCORE_MIN so it goes to review, not auto-map.
-    if expanded_initials_surname_match(api_feat, sp):
-        return 0.925, "expanded_initials_surname"
-
     if api_feat["compact"] and api_feat["compact"] == sp.compact:
         return 0.970, "exact_initial_form"
 
@@ -708,6 +696,19 @@ def score_candidate_features(api_feat: dict[str, Any], sp: SackPlayer) -> tuple[
         tj = token_jaccard_norm(an, sn)
         score = max(0.900, min(0.970, 0.84 + 0.10 * base + 0.06 * tj))
         return score, "initial_surname"
+
+    # Candidate-only: two or more initials + same surname,
+    # e.g. "V. N. Sarganella" -> "Virginia Nora Sarganella".
+    # Candidate-only rules must run after stronger exact/compact/initial-surname
+    # rules so they cannot downgrade a previously auto-mapped candidate.
+    if multi_initial_surname_match(api_feat, sp):
+        return 0.920, "multi_initial_surname"
+
+    # Candidate-only: API expanded full name vs Sackmann initials,
+    # e.g. "John Wolf Jeffrey" -> "J.J. Wolf".
+    # Kept below AUTO_SCORE_MIN so it goes to review, not auto-map.
+    if expanded_initials_surname_match(api_feat, sp):
+        return 0.925, "expanded_initials_surname"
 
     r = ratio_norm(an, sn)
     tj = token_jaccard_norm(an, sn)
