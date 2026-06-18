@@ -1,0 +1,28 @@
+{
+  "counts": {
+    "alias_template_entries": 152,
+    "audit_rows": 300,
+    "duplicate_name_groups": 148,
+    "duplicate_player_keys_in_groups": 300,
+    "players_loaded": 12052,
+    "risk_CHECK_rows": 40,
+    "risk_HIGH_rows": 0,
+    "risk_LOW_rows": 0,
+    "risk_MEDIUM_rows": 260
+  },
+  "generated_at": "2026-06-18T06:18:32+00:00",
+  "important": [
+    "Do not blindly apply player_aliases_template.json.",
+    "Review duplicate_players_audit.csv manually and copy only confirmed duplicate mappings into data/metadata/sackmann/player_aliases.json.",
+    "Recommended canonical key is the key with most match history, tie-broken by higher numeric id."
+  ],
+  "inputs": {
+    "sackmann_players_json": "data/metadata/sackmann/players.json"
+  },
+  "outputs": {
+    "duplicate_players_audit_csv": "data/reports/sackmann/duplicate_players_audit.csv",
+    "duplicate_players_audit_json": "data/reports/sackmann/duplicate_players_audit.json",
+    "player_aliases_template_json": "data/reports/sackmann/player_aliases_template.json"
+  },
+  "status": "ok"
+}
