@@ -36,6 +36,7 @@ REPORT_DIR = Path("data/reports/api_tennis")
 
 MAPPING_JSON = METADATA_DIR / "player_mapping.json"
 OVERRIDES_JSON = METADATA_DIR / "player_mapping_overrides.json"
+PLAYER_ALIASES_JSON = Path("data/metadata/sackmann/player_aliases.json")
 REPORT_JSON = REPORT_DIR / "player_mapping_report.json"
 REVIEW_CSV = REPORT_DIR / "player_mapping_review.csv"
 CANDIDATES_CSV = REPORT_DIR / "player_mapping_candidates.csv"
