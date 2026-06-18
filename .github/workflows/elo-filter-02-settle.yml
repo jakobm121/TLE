@@ -1,0 +1,48 @@
+name: Elo Filter 02 Settle
+
+on:
+  workflow_dispatch:
+    inputs:
+      results_source:
+        description: "Ai tennis_results.json URL"
+        required: false
+        default: "https://raw.githubusercontent.com/jakobm121/Ai/refs/heads/main/data/tennis_results.json"
+
+permissions:
+  contents: write
+
+jobs:
+  elo-filter-settle:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout TLE repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Settle Elo filtered predictions
+        run: |
+          python -m tle_machine.elo_filter_settle \
+            --results-source "${{ github.event.inputs.results_source }}"
+
+      - name: Commit Elo filter settle
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/elo_filter/predictions.json || true
+          git add data/elo_filter/results.json || true
+          git add data/elo_filter/active_predictions.csv || true
+          git add data/elo_filter/results.csv || true
+          git add data/reports/elo_filter/settle_report.json || true
+
+          if git diff --cached --quiet; then
+            echo "No Elo filter settle changes to commit."
+          else
+            git commit -m "Settle Elo filter predictions"
+            git push
+          fi
