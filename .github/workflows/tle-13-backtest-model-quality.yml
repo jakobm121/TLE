@@ -1,0 +1,44 @@
+name: TLE 13 Backtest Model Quality
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  backtest-model-quality:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Backtest model quality
+        run: |
+          python -m tle_machine.backtest_model_quality
+
+      - name: Commit backtest outputs
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/backtest/model_quality_summary.csv || true
+          git add data/backtest/model_quality_by_level.csv || true
+          git add data/backtest/model_quality_by_surface.csv || true
+          git add data/backtest/model_quality_by_level_surface.csv || true
+          git add data/backtest/model_quality_by_thresholds.csv || true
+          git add data/backtest/model_quality_by_probability_bucket.csv || true
+          git add data/reports/backtest/model_quality_report.json || true
+
+          if git diff --cached --quiet; then
+            echo "No backtest model quality changes to commit."
+          else
+            git commit -m "Backtest Elo model quality"
+            git push
+          fi
