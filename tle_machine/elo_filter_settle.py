@@ -20,6 +20,7 @@ PREDICTIONS_JSON = BASE_DIR / "predictions.json"
 RESULTS_JSON = BASE_DIR / "results.json"
 ACTIVE_CSV = BASE_DIR / "active_predictions.csv"
 RESULTS_CSV = BASE_DIR / "results.csv"
+RESULTS_MD = BASE_DIR / "results.md"
 REPORT_JSON = REPORT_DIR / "settle_report.json"
 
 ACTIVE_FIELDS = [
@@ -216,6 +217,89 @@ def write_csv(path: Path, rows: list[dict[str, Any]], fields: list[str]) -> None
             w.writerow({k: r.get(k) for k in fields})
 
 
+
+def fmt_pct(x: Any) -> str:
+    v = safe_float(x)
+    if v is None:
+        return "-"
+    return f"{v * 100:.2f}%"
+
+
+def fmt_num(x: Any) -> str:
+    v = safe_float(x)
+    if v is None:
+        return "-"
+    return f"{v:.2f}"
+
+
+def fmt_cell(x: Any) -> str:
+    s = safe_str(x)
+    if not s:
+        return "-"
+    return s.replace("|", "\\|")
+
+
+def write_results_markdown(path: Path, rows: list[dict[str, Any]], summary: dict[str, Any]) -> None:
+    """Human-readable ledger with total ROI and W-L above the table."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+
+    table_fields = [
+        "date", "time", "status", "running_w_l", "running_roi",
+        "pick", "opponent", "odds", "stake", "profit",
+        "total_profit", "level", "surface", "tle_prob", "tle_edge",
+        "confidence", "final_score",
+    ]
+
+    # Newest first is easier to review, but running values remain computed chronologically.
+    display_rows = sorted(rows, key=sort_key, reverse=True)
+
+    lines: list[str] = []
+    lines.append("# Elo Filter Results")
+    lines.append("")
+    lines.append(f"Generated: `{now_utc_iso()}`")
+    lines.append("")
+    lines.append("## Summary")
+    lines.append("")
+    lines.append(f"**W-L:** `{summary.get('w_l') or '0-0'}`  ")
+    lines.append(f"**Hit rate:** `{fmt_pct(summary.get('hit_rate'))}`  ")
+    lines.append(f"**Total stake:** `{fmt_num(summary.get('total_stake'))}`  ")
+    lines.append(f"**Total profit:** `{fmt_num(summary.get('total_profit'))}`  ")
+    lines.append(f"**Total ROI:** `{fmt_pct(summary.get('roi'))}`  ")
+    lines.append(f"**Pending:** `{summary.get('pending', 0)}`  ")
+    lines.append("")
+    lines.append("## Settled / tracked picks")
+    lines.append("")
+    lines.append("| Date | Time | Result | W-L | ROI | Pick | Opponent | Odds | Stake | Profit | Total Profit | Level | Surface | TLE Prob | TLE Edge | Conf | Score |")
+    lines.append("|---|---:|---|---:|---:|---|---|---:|---:|---:|---:|---|---|---:|---:|---|---|")
+
+    for r in display_rows:
+        lines.append(
+            "| "
+            + " | ".join([
+                fmt_cell(r.get("date")),
+                fmt_cell(r.get("time")),
+                fmt_cell(r.get("status") or r.get("result")),
+                fmt_cell(r.get("running_w_l")),
+                fmt_pct(r.get("running_roi")),
+                fmt_cell(r.get("pick")),
+                fmt_cell(r.get("opponent")),
+                fmt_num(r.get("odds")),
+                fmt_num(r.get("stake")),
+                fmt_num(r.get("profit")),
+                fmt_num(r.get("running_total_profit")),
+                fmt_cell(r.get("level")),
+                fmt_cell(r.get("surface")),
+                fmt_pct(r.get("tle_prob")),
+                fmt_pct(r.get("tle_edge")),
+                fmt_cell(r.get("confidence")),
+                fmt_cell(r.get("final_score")),
+            ])
+            + " |"
+        )
+
+    lines.append("")
+    path.write_text("\n".join(lines), encoding="utf-8")
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--results-source", default=DEFAULT_RESULTS_URL)
@@ -311,6 +395,7 @@ def main() -> None:
     write_json(RESULTS_JSON, results_out)
     write_csv(ACTIVE_CSV, still_active, ACTIVE_FIELDS)
     write_csv(RESULTS_CSV, all_results, RESULTS_FIELDS)
+    write_results_markdown(RESULTS_MD, all_results, results_out["summary"])
 
     report = {
         "status": "ok",
@@ -327,12 +412,14 @@ def main() -> None:
             "results_json": str(RESULTS_JSON),
             "active_csv": str(ACTIVE_CSV),
             "results_csv": str(RESULTS_CSV),
+            "results_md": str(RESULTS_MD),
             "report_json": str(REPORT_JSON),
         },
         "notes": [
             "Settled picks are removed from predictions.json.",
             "results.json is the ledger and keeps both pending and settled tracked picks.",
-            "results.csv includes running W-L, running total profit, and running ROI after each row.",
+            "results.md has total ROI/W-L above the table for easy review.",
+            "results.csv keeps running W-L, running total profit, and running ROI per row.",
         ],
     }
     write_json(REPORT_JSON, report)
