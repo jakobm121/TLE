@@ -6,7 +6,7 @@
     "with_full_name": 2591,
     "with_short_name": 5250
   },
-  "generated_at": "2026-06-18T11:03:26+00:00",
+  "generated_at": "2026-06-18T12:18:25+00:00",
   "mapping": {
     "men:api:100041": {
       "api_levels": {
@@ -12437,9 +12437,6 @@
       "status": "auto_mapped"
     },
     "men:api:2853": {
-      "api_levels": {
-        "itf": 1
-      },
       "api_matches": 1,
       "api_name": "John Wolf Jeffrey",
       "api_name_sources": {
@@ -12448,15 +12445,12 @@
       "api_name_variants": {
         "John Wolf Jeffrey": 1
       },
-      "api_surfaces": {
-        "hard": 1
-      },
-      "confidence": 0.929812,
+      "confidence": 1.0,
       "gender": "men",
-      "margin": 0.929812,
-      "method": "expanded_initials_surname",
-      "sackmann_player_key": null,
-      "status": "ambiguous"
+      "method": "manual_override",
+      "override_key": "men:api:2853",
+      "sackmann_player_key": "men:sackmann:200670",
+      "status": "manual_mapped"
     },
     "men:api:28596": {
       "api_levels": {
@@ -12687,10 +12681,6 @@
       "status": "auto_mapped"
     },
     "men:api:29714": {
-      "api_levels": {
-        "itf": 8,
-        "qualifying": 1
-      },
       "api_matches": 9,
       "api_name": "Stefano D'Agostino",
       "api_name_sources": {
@@ -12699,15 +12689,12 @@
       "api_name_variants": {
         "Stefano D'Agostino": 9
       },
-      "api_surfaces": {
-        "clay": 9
-      },
-      "confidence": 0.779111,
+      "confidence": 1.0,
       "gender": "men",
-      "margin": 0.779111,
-      "method": "fuzzy",
-      "sackmann_player_key": null,
-      "status": "unmapped"
+      "method": "manual_override",
+      "override_key": "men:api:29714",
+      "sackmann_player_key": "men:sackmann:208806",
+      "status": "manual_mapped"
     },
     "men:api:2972": {
       "api_levels": {
@@ -16570,9 +16557,6 @@
       "status": "auto_mapped"
     },
     "men:api:39003": {
-      "api_levels": {
-        "itf": 2
-      },
       "api_matches": 2,
       "api_name": "Vito Dell'Elba",
       "api_name_sources": {
@@ -16581,15 +16565,12 @@
       "api_name_variants": {
         "Vito Dell'Elba": 2
       },
-      "api_surfaces": {
-        "clay": 2
-      },
-      "confidence": 0.77186,
+      "confidence": 1.0,
       "gender": "men",
-      "margin": 0.77186,
-      "method": "fuzzy",
-      "sackmann_player_key": null,
-      "status": "unmapped"
+      "method": "manual_override",
+      "override_key": "men:api:39003",
+      "sackmann_player_key": "men:sackmann:202217",
+      "status": "manual_mapped"
     },
     "men:api:39011": {
       "api_levels": {
@@ -18166,9 +18147,6 @@
       "status": "auto_mapped"
     },
     "men:api:421": {
-      "api_levels": {
-        "challenger": 4
-      },
       "api_matches": 4,
       "api_name": "Christopher O'Connell",
       "api_name_sources": {
@@ -18177,15 +18155,12 @@
       "api_name_variants": {
         "Christopher O'Connell": 4
       },
-      "api_surfaces": {
-        "grass": 4
-      },
-      "confidence": 0.782762,
+      "confidence": 1.0,
       "gender": "men",
-      "margin": 0.782762,
-      "method": "fuzzy",
-      "sackmann_player_key": null,
-      "status": "unmapped"
+      "method": "manual_override",
+      "override_key": "men:api:421",
+      "sackmann_player_key": "men:sackmann:106331",
+      "status": "manual_mapped"
     },
     "men:api:424": {
       "api_levels": {
@@ -40304,9 +40279,6 @@
       "status": "unmapped"
     },
     "women:api:104082": {
-      "api_levels": {
-        "itf": 1
-      },
       "api_matches": 1,
       "api_name": "S. Webster",
       "api_name_sources": {
@@ -40315,15 +40287,12 @@
       "api_name_variants": {
         "S. Webster": 1
       },
-      "api_surfaces": {
-        "hard": 1
-      },
-      "confidence": 0.972639,
+      "confidence": 1.0,
       "gender": "women",
-      "margin": 0.00103,
-      "method": "exact_initial_form",
-      "sackmann_player_key": null,
-      "status": "ambiguous"
+      "method": "manual_override",
+      "override_key": "women:api:104082",
+      "sackmann_player_key": "women:sackmann:260046",
+      "status": "manual_mapped"
     },
     "women:api:104099": {
       "api_levels": {
@@ -57052,9 +57021,6 @@
       "status": "auto_mapped"
     },
     "women:api:52653": {
-      "api_levels": {
-        "itf": 6
-      },
       "api_matches": 6,
       "api_name": "Andy Nguyen",
       "api_name_sources": {
@@ -57063,15 +57029,12 @@
       "api_name_variants": {
         "Andy Nguyen": 6
       },
-      "api_surfaces": {
-        "hard": 6
-      },
-      "confidence": 0.974317,
+      "confidence": 1.0,
       "gender": "women",
-      "margin": 0.001678,
-      "method": "exact_initial_form",
-      "sackmann_player_key": null,
-      "status": "ambiguous"
+      "method": "manual_override",
+      "override_key": "women:api:52653",
+      "sackmann_player_key": "women:sackmann:260787",
+      "status": "manual_mapped"
     },
     "women:api:52683": {
       "api_levels": {
@@ -58856,10 +58819,6 @@
       "status": "auto_mapped"
     },
     "women:api:58205": {
-      "api_levels": {
-        "grand_slam": 1,
-        "itf": 1
-      },
       "api_matches": 2,
       "api_name": "N. Lee",
       "api_name_sources": {
@@ -58868,15 +58827,12 @@
       "api_name_variants": {
         "N. Lee": 2
       },
-      "api_surfaces": {
-        "clay": 2
-      },
-      "confidence": 0.971792,
+      "confidence": 1.0,
       "gender": "women",
-      "margin": 0.001099,
-      "method": "exact_initial_form",
-      "sackmann_player_key": null,
-      "status": "ambiguous"
+      "method": "manual_override",
+      "override_key": "women:api:58205",
+      "sackmann_player_key": "women:sackmann:270052",
+      "status": "manual_mapped"
     },
     "women:api:58224": {
       "api_levels": {
@@ -70437,11 +70393,11 @@
     "performance_note": "Fast version uses indexed candidate pools by gender/name/surname/initial; acceptance thresholds are unchanged.",
     "player_aliases": "data/metadata/sackmann/player_aliases.json",
     "principle": "Accept only high-confidence or unique initial-surname matches; ambiguous candidates are sent to review.",
-    "rebuild_auto_mapping": true
+    "rebuild_auto_mapping": false
   },
   "source": "api_tennis",
   "summary": {
-    "ambiguous": 23,
+    "ambiguous": 19,
     "api_gender_men": 1687,
     "api_gender_women": 1429,
     "api_player_cache_entries": 5250,
@@ -70451,12 +70407,13 @@
     "api_player_cache_with_short_name": 5250,
     "api_players": 3116,
     "auto_mapped": 2940,
+    "manual_mapped": 7,
     "player_aliases_loaded": 152,
-    "rebuild_auto_mapping": 1,
+    "rebuild_auto_mapping": 0,
     "sackmann_alias_candidate_created_from_alias": 147,
     "sackmann_alias_candidate_merged": 4,
     "sackmann_candidate_alias_resolved_player_keys": 151,
-    "unmapped": 153
+    "unmapped": 150
   },
   "target": "sackmann"
 }
