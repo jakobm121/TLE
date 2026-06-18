@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-18T21:26:07+00:00",
+  "generated_at": "2026-06-18T21:29:57+00:00",
   "model": "TLE Elo Filter v1",
   "picks": [],
   "summary": {
     "active_picks": 0,
-    "settled_removed_this_run": 4
+    "settled_removed_this_run": 0
   }
 }
