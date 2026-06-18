@@ -751,6 +751,7 @@ def main(argv: list[str] | None = None) -> None:
     counters["mapped_from_mapping_json"] = sum(1 for p in players.values() if p.get("mapped") and p.get("mapping_source") == "mapping")
 
     review_rows: list[dict[str, Any]] = []
+    no_candidate_rows: list[dict[str, Any]] = []
     counters["review_candidates_available"] = 0
     counters["review_no_candidates_suppressed"] = 0
     counters["review_ambiguous_candidates"] = 0
@@ -762,6 +763,24 @@ def main(argv: list[str] | None = None) -> None:
         cand_rows = candidate_rows_for_api(candidates, key, str(p.get("gender") or ""))
         if not cand_rows:
             counters["review_no_candidates_suppressed"] += 1
+            no_candidate_rows.append(
+                {
+                    "api_player_key": key,
+                    "raw_api_player_key": p.get("raw_api_player_key", ""),
+                    "api_name": p["api_name"],
+                    "api_name_source": p.get("api_name_source", ""),
+                    "gender": p["gender"],
+                    "mapping_status": p["mapping_status"],
+                    "today_match_count": p["today_match_count"],
+                    "opponent_name": " | ".join(k for k, _ in p["opponents_today"].most_common(5)),
+                    "opponents_today": " | ".join(k for k, _ in p["opponents_today"].most_common(5)),
+                    "tournament": " | ".join(k for k, _ in p["event_names"].most_common(5)),
+                    "event_names": " | ".join(k for k, _ in p["event_names"].most_common(5)),
+                    "event_type": " | ".join(k for k, _ in p["event_type_types"].most_common(5)),
+                    "event_type_types": " | ".join(k for k, _ in p["event_type_types"].most_common(5)),
+                    "reason": "no_sackmann_candidate",
+                }
+            )
             continue
 
         counters["review_candidates_available"] += 1
@@ -873,6 +892,27 @@ def main(argv: list[str] | None = None) -> None:
     write_csv(out_review, review_rows, fieldnames)
     write_csv(latest_review, review_rows, fieldnames)
 
+    out_no_candidates = REPORT_DIR / f"today_mapping_no_candidates_{date_s}.csv"
+    latest_no_candidates = REPORT_DIR / "today_mapping_no_candidates.csv"
+    no_candidate_fieldnames = [
+        "api_player_key",
+        "raw_api_player_key",
+        "api_name",
+        "api_name_source",
+        "gender",
+        "mapping_status",
+        "today_match_count",
+        "opponent_name",
+        "opponents_today",
+        "tournament",
+        "event_names",
+        "event_type",
+        "event_type_types",
+        "reason",
+    ]
+    write_csv(out_no_candidates, no_candidate_rows, no_candidate_fieldnames)
+    write_csv(latest_no_candidates, no_candidate_rows, no_candidate_fieldnames)
+
     report = {
         "generated_at": now_utc_iso(),
         "date": date_s,
@@ -894,6 +934,8 @@ def main(argv: list[str] | None = None) -> None:
             "latest_audit_json": str(latest_json),
             "review_csv": str(out_review),
             "latest_review_csv": str(latest_review),
+            "no_candidates_csv": str(out_no_candidates),
+            "latest_no_candidates_csv": str(latest_no_candidates),
         },
         "notes": [
             "Default audit is singles-only; doubles/team fixtures are skipped for betting scanner mapping.",
