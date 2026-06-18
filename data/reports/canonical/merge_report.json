@@ -1,43 +1,48 @@
 {
   "counters": {
-    "api_added": 4013,
-    "api_added_level_atp_wta": 224,
-    "api_added_level_challenger": 645,
-    "api_added_level_grand_slam": 275,
-    "api_added_level_itf": 2224,
-    "api_added_level_qualifying": 645,
-    "api_added_surface_clay": 2231,
-    "api_added_surface_grass": 449,
-    "api_added_surface_hard": 1332,
-    "api_added_surface_unknown": 1,
-    "api_duplicate_sackmann": 71,
-    "api_duplicate_strategy_date_gender_players": 71,
-    "api_input": 4366,
-    "api_mapping_both_mapped": 4084,
+    "api_added": 4770,
+    "api_added_level_atp_wta": 280,
+    "api_added_level_challenger": 717,
+    "api_added_level_grand_slam": 283,
+    "api_added_level_itf": 2779,
+    "api_added_level_qualifying": 711,
+    "api_added_surface_clay": 2606,
+    "api_added_surface_grass": 525,
+    "api_added_surface_hard": 1545,
+    "api_added_surface_unknown": 94,
+    "api_duplicate_sackmann": 72,
+    "api_duplicate_strategy_date_gender_players": 72,
+    "api_input": 5156,
+    "api_mapping_both_mapped": 4842,
     "api_mapping_none_mapped": 17,
-    "api_mapping_one_mapped": 265,
+    "api_mapping_one_mapped": 297,
+    "player_aliases_loaded": 152,
+    "sackmann_alias_resolved_matches": 1540,
+    "sackmann_alias_resolved_player_keys": 1549,
+    "sackmann_duplicate_after_alias_skipped": 830,
     "sackmann_input": 223145,
-    "sackmann_kept": 223144,
+    "sackmann_kept": 222314,
     "sackmann_skipped_winner_loser_same_player_key": 1
   },
   "genders": {
-    "men": 112696,
-    "women": 114461
+    "men": 113107,
+    "women": 113977
   },
-  "generated_at": "2026-06-16T22:48:05+00:00",
+  "generated_at": "2026-06-18T12:21:22+00:00",
   "inputs": {
     "api_manifest": "data/source/api_tennis/manifest.json",
+    "player_aliases": "data/metadata/sackmann/player_aliases.json",
     "player_mapping": "data/metadata/api_tennis/player_mapping.json",
     "sackmann_manifest": "data/source/sackmann/manifest.json"
   },
   "levels": {
-    "atp_wta": 19593,
-    "challenger": 41408,
-    "grand_slam": 6743,
-    "itf": 158768,
-    "qualifying": 645
+    "atp_wta": 19647,
+    "challenger": 40652,
+    "grand_slam": 6751,
+    "itf": 159323,
+    "qualifying": 711
   },
-  "matches": 227157,
+  "matches": 227084,
   "outputs": {
     "api_merge_added_csv": "data/reports/canonical/api_merge_added.csv",
     "api_merge_conflicts_csv": "data/reports/canonical/api_merge_conflicts.csv",
@@ -47,6 +52,10 @@
     "manifest": "data/canonical/manifest.json",
     "merge_report": "data/reports/canonical/merge_report.json"
   },
+  "player_aliases": {
+    "loaded": 152,
+    "path": "data/metadata/sackmann/player_aliases.json"
+  },
   "policy": {
     "api_source_policy": "add only API matches where both players are auto_mapped/manual_mapped and no Sackmann duplicate/conflict exists",
     "duplicate_detection": [
@@ -54,6 +63,7 @@
       "date+gender+mapped_unordered_players",
       "safe refinement for rare multi-candidate duplicates"
     ],
+    "player_alias_policy": "Sackmann player aliases are resolved before validation, dedupe, and API merge.",
     "primary_source": "sackmann"
   },
   "samples": {
@@ -69,6 +79,7 @@
         "loser_api_name": "Daniil Medvedev",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:106421",
+        "loser_sackmann_key_original": "men:sackmann:106421",
         "mapped_loser_key": "men:sackmann:106421",
         "mapped_winner_key": "men:sackmann:200443",
         "round": "ATP French Open - 1/64-finals",
@@ -77,7 +88,8 @@
         "winner_api_key": "men:api:10070",
         "winner_api_name": "Adam Walton",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:200443"
+        "winner_sackmann_key": "men:sackmann:200443",
+        "winner_sackmann_key_original": "men:sackmann:200443"
       },
       {
         "api_event_key": "12129877",
@@ -90,6 +102,7 @@
         "loser_api_name": "Kamil Majchrzak",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:111794",
+        "loser_sackmann_key_original": "men:sackmann:111794",
         "mapped_loser_key": "men:sackmann:111794",
         "mapped_winner_key": "men:sackmann:126214",
         "round": "ATP French Open - 1/64-finals",
@@ -98,7 +111,8 @@
         "winner_api_key": "men:api:2982",
         "winner_api_name": "Alejandro Tabilo",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:126214"
+        "winner_sackmann_key": "men:sackmann:126214",
+        "winner_sackmann_key_original": "men:sackmann:126214"
       },
       {
         "api_event_key": "12129879",
@@ -111,6 +125,7 @@
         "loser_api_name": "Clement Tabur",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:202127",
+        "loser_sackmann_key_original": "men:sackmann:202127",
         "mapped_loser_key": "men:sackmann:202127",
         "mapped_winner_key": "men:sackmann:206173",
         "round": "ATP French Open - 1/64-finals",
@@ -119,7 +134,8 @@
         "winner_api_key": "men:api:2072",
         "winner_api_name": "Jannik Sinner",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:206173"
+        "winner_sackmann_key": "men:sackmann:206173",
+        "winner_sackmann_key_original": "men:sackmann:206173"
       },
       {
         "api_event_key": "12129881",
@@ -132,6 +148,7 @@
         "loser_api_name": "Ethan Quinn",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:210319",
+        "loser_sackmann_key_original": "men:sackmann:210319",
         "mapped_loser_key": "men:sackmann:210319",
         "mapped_winner_key": "men:sackmann:207681",
         "round": "ATP French Open - 1/64-finals",
@@ -140,7 +157,8 @@
         "winner_api_key": "men:api:2084",
         "winner_api_name": "Francisco Comesana",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:207681"
+        "winner_sackmann_key": "men:sackmann:207681",
+        "winner_sackmann_key_original": "men:sackmann:207681"
       },
       {
         "api_event_key": "12129882",
@@ -151,8 +169,9 @@
         "level": "grand_slam",
         "loser_api_key": "men:api:1926",
         "loser_api_name": "Alexei Popyrin",
-        "loser_mapping_status": "manual_mapped",
+        "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:200615",
+        "loser_sackmann_key_original": "men:sackmann:200615",
         "mapped_loser_key": "men:sackmann:200615",
         "mapped_winner_key": "men:sackmann:208260",
         "round": "ATP French Open - 1/64-finals",
@@ -161,7 +180,8 @@
         "winner_api_key": "men:api:2986",
         "winner_api_name": "Zachary Svajda",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:208260"
+        "winner_sackmann_key": "men:sackmann:208260",
+        "winner_sackmann_key_original": "men:sackmann:208260"
       },
       {
         "api_event_key": "12129883",
@@ -174,6 +194,7 @@
         "loser_api_name": "Sebastian Ofner",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:124116",
+        "loser_sackmann_key_original": "men:sackmann:124116",
         "mapped_loser_key": "men:sackmann:124116",
         "mapped_winner_key": "men:sackmann:209260",
         "round": "ATP French Open - 1/64-finals",
@@ -182,7 +203,8 @@
         "winner_api_key": "men:api:8781",
         "winner_api_name": "Luciano Darderi",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:209260"
+        "winner_sackmann_key": "men:sackmann:209260",
+        "winner_sackmann_key_original": "men:sackmann:209260"
       },
       {
         "api_event_key": "12129884",
@@ -195,6 +217,7 @@
         "loser_api_name": "Cameron Norrie",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:111815",
+        "loser_sackmann_key_original": "men:sackmann:111815",
         "mapped_loser_key": "men:sackmann:111815",
         "mapped_winner_key": "men:sackmann:209226",
         "round": "ATP French Open - 1/64-finals",
@@ -203,7 +226,8 @@
         "winner_api_key": "men:api:9217",
         "winner_api_name": "Daniel Vallejo Adolfo",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:209226"
+        "winner_sackmann_key": "men:sackmann:209226",
+        "winner_sackmann_key_original": "men:sackmann:209226"
       },
       {
         "api_event_key": "12129887",
@@ -216,6 +240,7 @@
         "loser_api_name": "Alexandre Muller",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:124186",
+        "loser_sackmann_key_original": "men:sackmann:124186",
         "mapped_loser_key": "men:sackmann:124186",
         "mapped_winner_key": "men:sackmann:126774",
         "round": "ATP French Open - 1/64-finals",
@@ -224,7 +249,8 @@
         "winner_api_key": "men:api:1906",
         "winner_api_name": "Stefanos Tsitsipas",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:126774"
+        "winner_sackmann_key": "men:sackmann:126774",
+        "winner_sackmann_key_original": "men:sackmann:126774"
       },
       {
         "api_event_key": "12129893",
@@ -237,6 +263,7 @@
         "loser_api_name": "Corentin Moutet",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:144895",
+        "loser_sackmann_key_original": "men:sackmann:144895",
         "mapped_loser_key": "men:sackmann:144895",
         "mapped_winner_key": "men:sackmann:200240",
         "round": "ATP French Open - 1/64-finals",
@@ -245,7 +272,8 @@
         "winner_api_key": "men:api:1083",
         "winner_api_name": "Vit Kopriva",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:200240"
+        "winner_sackmann_key": "men:sackmann:200240",
+        "winner_sackmann_key_original": "men:sackmann:200240"
       },
       {
         "api_event_key": "12129900",
@@ -258,6 +286,7 @@
         "loser_api_name": "Tallon Griekspoor",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:134868",
+        "loser_sackmann_key_original": "men:sackmann:134868",
         "mapped_loser_key": "men:sackmann:134868",
         "mapped_winner_key": "men:sackmann:208286",
         "round": "ATP French Open - 1/64-finals",
@@ -266,7 +295,8 @@
         "winner_api_key": "men:api:1192",
         "winner_api_name": "Matteo Arnaldi",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:208286"
+        "winner_sackmann_key": "men:sackmann:208286",
+        "winner_sackmann_key_original": "men:sackmann:208286"
       },
       {
         "api_event_key": "12129902",
@@ -279,6 +309,7 @@
         "loser_api_name": "Cristian Garin",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:106426",
+        "loser_sackmann_key_original": "men:sackmann:106426",
         "mapped_loser_key": "men:sackmann:106426",
         "mapped_winner_key": "men:sackmann:210530",
         "round": "ATP French Open - 1/64-finals",
@@ -287,7 +318,8 @@
         "winner_api_key": "men:api:10520",
         "winner_api_name": "Learner Tien",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:210530"
+        "winner_sackmann_key": "men:sackmann:210530",
+        "winner_sackmann_key_original": "men:sackmann:210530"
       },
       {
         "api_event_key": "12129905",
@@ -300,6 +332,7 @@
         "loser_api_name": "Jacob Fearnley",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:207985",
+        "loser_sackmann_key_original": "men:sackmann:207985",
         "mapped_loser_key": "men:sackmann:207985",
         "mapped_winner_key": "men:sackmann:207678",
         "round": "ATP French Open - 1/64-finals",
@@ -308,7 +341,8 @@
         "winner_api_key": "men:api:388",
         "winner_api_name": "Manuel Cerundolo Juan",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:207678"
+        "winner_sackmann_key": "men:sackmann:207678",
+        "winner_sackmann_key_original": "men:sackmann:207678"
       },
       {
         "api_event_key": "12129911",
@@ -321,6 +355,7 @@
         "loser_api_name": "Marin Cilic",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:105227",
+        "loser_sackmann_key_original": "men:sackmann:105227",
         "mapped_loser_key": "men:sackmann:105227",
         "mapped_winner_key": "men:sackmann:213608",
         "round": "ATP French Open - 1/64-finals",
@@ -329,7 +364,8 @@
         "winner_api_key": "men:api:68751",
         "winner_api_name": "Moise Kouame",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:213608"
+        "winner_sackmann_key": "men:sackmann:213608",
+        "winner_sackmann_key_original": "men:sackmann:213608"
       },
       {
         "api_event_key": "12129915",
@@ -342,6 +378,7 @@
         "loser_api_name": "Alexander Bublik",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:122330",
+        "loser_sackmann_key_original": "men:sackmann:122330",
         "mapped_loser_key": "men:sackmann:122330",
         "mapped_winner_key": "men:sackmann:105526",
         "round": "ATP French Open - 1/64-finals",
@@ -350,7 +387,8 @@
         "winner_api_key": "men:api:2831",
         "winner_api_name": "Jan-Lennard Struff",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:105526"
+        "winner_sackmann_key": "men:sackmann:105526",
+        "winner_sackmann_key_original": "men:sackmann:105526"
       },
       {
         "api_event_key": "12129918",
@@ -363,6 +401,7 @@
         "loser_api_name": "Sebastian Baez",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:202104",
+        "loser_sackmann_key_original": "men:sackmann:202104",
         "mapped_loser_key": "men:sackmann:202104",
         "mapped_winner_key": "men:sackmann:208882",
         "round": "ATP French Open - 1/64-finals",
@@ -371,7 +410,8 @@
         "winner_api_key": "men:api:9596",
         "winner_api_name": "Andres Burruchaga Roman",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:208882"
+        "winner_sackmann_key": "men:sackmann:208882",
+        "winner_sackmann_key_original": "men:sackmann:208882"
       },
       {
         "api_event_key": "12129919",
@@ -384,6 +424,7 @@
         "loser_api_name": "Daniel Altmaier",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:127157",
+        "loser_sackmann_key_original": "men:sackmann:127157",
         "mapped_loser_key": "men:sackmann:127157",
         "mapped_winner_key": "men:sackmann:200000",
         "round": "ATP French Open - 1/64-finals",
@@ -392,7 +433,8 @@
         "winner_api_key": "men:api:2073",
         "winner_api_name": "Felix Auger-Aliassime",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:200000"
+        "winner_sackmann_key": "men:sackmann:200000",
+        "winner_sackmann_key_original": "men:sackmann:200000"
       },
       {
         "api_event_key": "12129921",
@@ -405,6 +447,7 @@
         "loser_api_name": "Simona Waltert",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "women:sackmann:215899",
+        "loser_sackmann_key_original": "women:sackmann:215899",
         "mapped_loser_key": "women:sackmann:215899",
         "mapped_winner_key": "women:sackmann:211701",
         "round": "WTA French Open - 1/64-finals",
@@ -413,7 +456,8 @@
         "winner_api_key": "women:api:3006",
         "winner_api_name": "Katerina Siniakova",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:211701"
+        "winner_sackmann_key": "women:sackmann:211701",
+        "winner_sackmann_key_original": "women:sackmann:211701"
       },
       {
         "api_event_key": "12129923",
@@ -426,6 +470,7 @@
         "loser_api_name": "Alice Tubello",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "women:sackmann:220554",
+        "loser_sackmann_key_original": "women:sackmann:220554",
         "mapped_loser_key": "women:sackmann:220554",
         "mapped_winner_key": "women:sackmann:202499",
         "round": "WTA French Open - 1/64-finals",
@@ -434,7 +479,8 @@
         "winner_api_key": "women:api:455",
         "winner_api_name": "Donna Vekic",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:202499"
+        "winner_sackmann_key": "women:sackmann:202499",
+        "winner_sackmann_key_original": "women:sackmann:202499"
       },
       {
         "api_event_key": "12129924",
@@ -447,6 +493,7 @@
         "loser_api_name": "Hanne Vandewinkel",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "women:sackmann:243420",
+        "loser_sackmann_key_original": "women:sackmann:243420",
         "mapped_loser_key": "women:sackmann:243420",
         "mapped_winner_key": "women:sackmann:201619",
         "round": "WTA French Open - 1/64-finals",
@@ -455,7 +502,8 @@
         "winner_api_key": "women:api:2692",
         "winner_api_name": "Madison Keys",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:201619"
+        "winner_sackmann_key": "women:sackmann:201619",
+        "winner_sackmann_key_original": "women:sackmann:201619"
       },
       {
         "api_event_key": "12129933",
@@ -468,6 +516,7 @@
         "loser_api_name": "Laura Siegemund",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "women:sackmann:201696",
+        "loser_sackmann_key_original": "women:sackmann:201696",
         "mapped_loser_key": "women:sackmann:201696",
         "mapped_winner_key": "women:sackmann:211768",
         "round": "WTA French Open - 1/64-finals",
@@ -476,7 +525,8 @@
         "winner_api_key": "women:api:2685",
         "winner_api_name": "Naomi Osaka",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:211768"
+        "winner_sackmann_key": "women:sackmann:211768",
+        "winner_sackmann_key_original": "women:sackmann:211768"
       },
       {
         "api_event_key": "12129936",
@@ -489,6 +539,7 @@
         "loser_api_name": "Jessica Bouzas Maneiro",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "women:sackmann:222601",
+        "loser_sackmann_key_original": "women:sackmann:222601",
         "mapped_loser_key": "women:sackmann:222601",
         "mapped_winner_key": "women:sackmann:214544",
         "round": "WTA French Open - 1/64-finals",
@@ -497,7 +548,8 @@
         "winner_api_key": "women:api:1989",
         "winner_api_name": "Aryna Sabalenka",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:214544"
+        "winner_sackmann_key": "women:sackmann:214544",
+        "winner_sackmann_key_original": "women:sackmann:214544"
       },
       {
         "api_event_key": "12129944",
@@ -510,6 +562,7 @@
         "loser_api_name": "Linda Noskova",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "women:sackmann:222328",
+        "loser_sackmann_key_original": "women:sackmann:222328",
         "mapped_loser_key": "women:sackmann:222328",
         "mapped_winner_key": "women:sackmann:206289",
         "round": "WTA French Open - 1/64-finals",
@@ -518,7 +571,8 @@
         "winner_api_key": "women:api:2076",
         "winner_api_name": "Maria Sakkari",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:206289"
+        "winner_sackmann_key": "women:sackmann:206289",
+        "winner_sackmann_key_original": "women:sackmann:206289"
       },
       {
         "api_event_key": "12129945",
@@ -531,6 +585,7 @@
         "loser_api_name": "Janice Tjen",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "women:sackmann:222145",
+        "loser_sackmann_key_original": "women:sackmann:222145",
         "mapped_loser_key": "women:sackmann:222145",
         "mapped_winner_key": "women:sackmann:215613",
         "round": "WTA French Open - 1/64-finals",
@@ -539,7 +594,8 @@
         "winner_api_key": "women:api:2823",
         "winner_api_name": "Emma Navarro",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:215613"
+        "winner_sackmann_key": "women:sackmann:215613",
+        "winner_sackmann_key_original": "women:sackmann:215613"
       },
       {
         "api_event_key": "12129946",
@@ -552,6 +608,7 @@
         "loser_api_name": "Nikola Bartunkova",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "women:sackmann:223360",
+        "loser_sackmann_key_original": "women:sackmann:223360",
         "mapped_loser_key": "women:sackmann:223360",
         "mapped_winner_key": "women:sackmann:239475",
         "round": "WTA French Open - 1/64-finals",
@@ -560,7 +617,8 @@
         "winner_api_key": "women:api:9527",
         "winner_api_name": "Victoria Mboko",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:239475"
+        "winner_sackmann_key": "women:sackmann:239475",
+        "winner_sackmann_key_original": "women:sackmann:239475"
       },
       {
         "api_event_key": "12129949",
@@ -573,6 +631,7 @@
         "loser_api_name": "Shuai Zhang",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "women:sackmann:201533",
+        "loser_sackmann_key_original": "women:sackmann:201533",
         "mapped_loser_key": "women:sackmann:201533",
         "mapped_winner_key": "women:sackmann:215983",
         "round": "WTA French Open - 1/64-finals",
@@ -581,7 +640,8 @@
         "winner_api_key": "women:api:2997",
         "winner_api_name": "Ann Li",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:215983"
+        "winner_sackmann_key": "women:sackmann:215983",
+        "winner_sackmann_key_original": "women:sackmann:215983"
       },
       {
         "api_event_key": "12129953",
@@ -594,6 +654,7 @@
         "loser_api_name": "Lois Boisson",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "women:sackmann:222391",
+        "loser_sackmann_key_original": "women:sackmann:222391",
         "mapped_loser_key": "women:sackmann:222391",
         "mapped_winner_key": "women:sackmann:214939",
         "round": "WTA French Open - 1/64-finals",
@@ -602,7 +663,8 @@
         "winner_api_key": "women:api:1820",
         "winner_api_name": "Anna Kalinskaya",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:214939"
+        "winner_sackmann_key": "women:sackmann:214939",
+        "winner_sackmann_key_original": "women:sackmann:214939"
       },
       {
         "api_event_key": "12129954",
@@ -615,6 +677,7 @@
         "loser_api_name": "Anhelina Kalinina",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "women:sackmann:211843",
+        "loser_sackmann_key_original": "women:sackmann:211843",
         "mapped_loser_key": "women:sackmann:211843",
         "mapped_winner_key": "women:sackmann:220348",
         "round": "WTA French Open - 1/64-finals",
@@ -623,7 +686,8 @@
         "winner_api_key": "women:api:1833",
         "winner_api_name": "Diane Parry",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:220348"
+        "winner_sackmann_key": "women:sackmann:220348",
+        "winner_sackmann_key_original": "women:sackmann:220348"
       },
       {
         "api_event_key": "12129955",
@@ -636,6 +700,7 @@
         "loser_api_name": "Alexandra Eala",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "women:sackmann:223253",
+        "loser_sackmann_key_original": "women:sackmann:223253",
         "mapped_loser_key": "women:sackmann:223253",
         "mapped_winner_key": "women:sackmann:260300",
         "round": "WTA French Open - 1/64-finals",
@@ -644,7 +709,8 @@
         "winner_api_key": "women:api:58226",
         "winner_api_name": "Iva Jovic",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:260300"
+        "winner_sackmann_key": "women:sackmann:260300",
+        "winner_sackmann_key_original": "women:sackmann:260300"
       },
       {
         "api_event_key": "12129960",
@@ -657,6 +723,7 @@
         "loser_api_name": "Taylor Townsend",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "women:sackmann:203501",
+        "loser_sackmann_key_original": "women:sackmann:203501",
         "mapped_loser_key": "women:sackmann:203501",
         "mapped_winner_key": "women:sackmann:221103",
         "round": "WTA French Open - 1/64-finals",
@@ -665,7 +732,8 @@
         "winner_api_key": "women:api:2176",
         "winner_api_name": "Coco Gauff",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:221103"
+        "winner_sackmann_key": "women:sackmann:221103",
+        "winner_sackmann_key_original": "women:sackmann:221103"
       },
       {
         "api_event_key": "12129965",
@@ -678,6 +746,7 @@
         "loser_api_name": "Jessica Pegula",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "women:sackmann:202468",
+        "loser_sackmann_key_original": "women:sackmann:202468",
         "mapped_loser_key": "women:sackmann:202468",
         "mapped_winner_key": "women:sackmann:214040",
         "round": "WTA French Open - 1/64-finals",
@@ -686,7 +755,8 @@
         "winner_api_key": "women:api:92",
         "winner_api_name": "Kimberly Birrell",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:214040"
+        "winner_sackmann_key": "women:sackmann:214040",
+        "winner_sackmann_key_original": "women:sackmann:214040"
       },
       {
         "api_event_key": "12130168",
@@ -699,6 +769,7 @@
         "loser_api_name": "Carlos Prado Angelo Juan",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:210178",
+        "loser_sackmann_key_original": "men:sackmann:210178",
         "mapped_loser_key": "men:sackmann:210178",
         "mapped_winner_key": "men:sackmann:212021",
         "round": "ATP French Open - 1/64-finals",
@@ -707,7 +778,8 @@
         "winner_api_key": "men:api:39864",
         "winner_api_name": "Martin Landaluce",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:212021"
+        "winner_sackmann_key": "men:sackmann:212021",
+        "winner_sackmann_key_original": "men:sackmann:212021"
       },
       {
         "api_event_key": "12130171",
@@ -720,6 +792,7 @@
         "loser_api_name": "Thomas Faurel",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:212225",
+        "loser_sackmann_key_original": "men:sackmann:212225",
         "mapped_loser_key": "men:sackmann:212225",
         "mapped_winner_key": "men:sackmann:200473",
         "round": "ATP French Open - 1/64-finals",
@@ -728,7 +801,8 @@
         "winner_api_key": "men:api:1852",
         "winner_api_name": "Valentin Vacherot",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:200473"
+        "winner_sackmann_key": "men:sackmann:200473",
+        "winner_sackmann_key_original": "men:sackmann:200473"
       },
       {
         "api_event_key": "12130172",
@@ -741,6 +815,7 @@
         "loser_api_name": "Denis Shapovalov",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:133430",
+        "loser_sackmann_key_original": "men:sackmann:133430",
         "mapped_loser_key": "men:sackmann:133430",
         "mapped_winner_key": "men:sackmann:210262",
         "round": "ATP French Open - 1/64-finals",
@@ -749,7 +824,8 @@
         "winner_api_key": "men:api:824",
         "winner_api_name": "Jaime Faria",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:210262"
+        "winner_sackmann_key": "men:sackmann:210262",
+        "winner_sackmann_key_original": "men:sackmann:210262"
       },
       {
         "api_event_key": "12130173",
@@ -760,8 +836,9 @@
         "level": "grand_slam",
         "loser_api_key": "men:api:590",
         "loser_api_name": "Zhizhen Zhang",
-        "loser_mapping_status": "manual_mapped",
+        "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:111190",
+        "loser_sackmann_key_original": "men:sackmann:111190",
         "mapped_loser_key": "men:sackmann:111190",
         "mapped_winner_key": "men:sackmann:207680",
         "round": "ATP French Open - 1/64-finals",
@@ -770,7 +847,8 @@
         "winner_api_key": "men:api:2002",
         "winner_api_name": "Facundo Diaz Acosta",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:207680"
+        "winner_sackmann_key": "men:sackmann:207680",
+        "winner_sackmann_key_original": "men:sackmann:207680"
       },
       {
         "api_event_key": "12130179",
@@ -783,6 +861,7 @@
         "loser_api_name": "Ashlyn Krueger",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "women:sackmann:221909",
+        "loser_sackmann_key_original": "women:sackmann:221909",
         "mapped_loser_key": "women:sackmann:221909",
         "mapped_winner_key": "women:sackmann:222045",
         "round": "WTA French Open - 1/64-finals",
@@ -791,7 +870,8 @@
         "winner_api_key": "women:api:168",
         "winner_api_name": "Antonia Ruzic",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:222045"
+        "winner_sackmann_key": "women:sackmann:222045",
+        "winner_sackmann_key_original": "women:sackmann:222045"
       },
       {
         "api_event_key": "12130181",
@@ -804,6 +884,7 @@
         "loser_api_name": "Elena Pridankina",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "women:sackmann:239389",
+        "loser_sackmann_key_original": "women:sackmann:239389",
         "mapped_loser_key": "women:sackmann:239389",
         "mapped_winner_key": "women:sackmann:220716",
         "round": "WTA French Open - 1/64-finals",
@@ -812,7 +893,8 @@
         "winner_api_key": "women:api:12876",
         "winner_api_name": "Oleksandra Oliynykova",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:220716"
+        "winner_sackmann_key": "women:sackmann:220716",
+        "winner_sackmann_key_original": "women:sackmann:220716"
       },
       {
         "api_event_key": "12130182",
@@ -825,6 +907,7 @@
         "loser_api_name": "Moyuka Uchijima",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "women:sackmann:220416",
+        "loser_sackmann_key_original": "women:sackmann:220416",
         "mapped_loser_key": "women:sackmann:220416",
         "mapped_winner_key": "women:sackmann:214906",
         "round": "WTA French Open - 1/64-finals",
@@ -833,7 +916,8 @@
         "winner_api_key": "women:api:509",
         "winner_api_name": "Claire Liu",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:214906"
+        "winner_sackmann_key": "women:sackmann:214906",
+        "winner_sackmann_key_original": "women:sackmann:214906"
       },
       {
         "api_event_key": "12130185",
@@ -846,6 +930,7 @@
         "loser_api_name": "Elisabetta Cocciaretto",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "women:sackmann:220714",
+        "loser_sackmann_key_original": "women:sackmann:220714",
         "mapped_loser_key": "women:sackmann:220714",
         "mapped_winner_key": "women:sackmann:252499",
         "round": "WTA French Open - 1/64-finals",
@@ -853,8 +938,9 @@
         "tourney_name": "French Open",
         "winner_api_key": "women:api:14547",
         "winner_api_name": "Alina Korneeva",
-        "winner_mapping_status": "manual_mapped",
-        "winner_sackmann_key": "women:sackmann:252499"
+        "winner_mapping_status": "auto_mapped",
+        "winner_sackmann_key": "women:sackmann:252499",
+        "winner_sackmann_key_original": "women:sackmann:252499"
       },
       {
         "api_event_key": "12130188",
@@ -867,6 +953,7 @@
         "loser_api_name": "Dalma Galfi",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "women:sackmann:213646",
+        "loser_sackmann_key_original": "women:sackmann:213646",
         "mapped_loser_key": "women:sackmann:213646",
         "mapped_winner_key": "women:sackmann:210886",
         "round": "WTA French Open - 1/64-finals",
@@ -875,7 +962,8 @@
         "winner_api_key": "women:api:510",
         "winner_api_name": "Mayar Sherif",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:210886"
+        "winner_sackmann_key": "women:sackmann:210886",
+        "winner_sackmann_key_original": "women:sackmann:210886"
       },
       {
         "api_event_key": "12130189",
@@ -888,6 +976,7 @@
         "loser_api_name": "Linda Fruhvirtova",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "women:sackmann:222258",
+        "loser_sackmann_key_original": "women:sackmann:222258",
         "mapped_loser_key": "women:sackmann:222258",
         "mapped_winner_key": "women:sackmann:221039",
         "round": "WTA French Open - 1/64-finals",
@@ -896,7 +985,8 @@
         "winner_api_key": "women:api:1823",
         "winner_api_name": "Elsa Jacquemot",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:221039"
+        "winner_sackmann_key": "women:sackmann:221039",
+        "winner_sackmann_key_original": "women:sackmann:221039"
       },
       {
         "api_event_key": "12130395",
@@ -909,6 +999,7 @@
         "loser_api_name": "Mert Alkaya",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:207368",
+        "loser_sackmann_key_original": "men:sackmann:207368",
         "mapped_loser_key": "men:sackmann:207368",
         "mapped_winner_key": "men:sackmann:126208",
         "round": "Centurion - 1/16-finals",
@@ -917,7 +1008,8 @@
         "winner_api_key": "men:api:2508",
         "winner_api_name": "Yusuke Takahashi",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:126208"
+        "winner_sackmann_key": "men:sackmann:126208",
+        "winner_sackmann_key_original": "men:sackmann:126208"
       },
       {
         "api_event_key": "12130396",
@@ -930,6 +1022,7 @@
         "loser_api_name": "Akira Santillan",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:117361",
+        "loser_sackmann_key_original": "men:sackmann:117361",
         "mapped_loser_key": "men:sackmann:117361",
         "mapped_winner_key": "men:sackmann:209280",
         "round": "Centurion - 1/16-finals",
@@ -938,7 +1031,8 @@
         "winner_api_key": "men:api:14373",
         "winner_api_name": "Devin Badenhorst",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:209280"
+        "winner_sackmann_key": "men:sackmann:209280",
+        "winner_sackmann_key_original": "men:sackmann:209280"
       },
       {
         "api_event_key": "12130398",
@@ -951,6 +1045,7 @@
         "loser_api_name": "Khololwam Montsi",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:207809",
+        "loser_sackmann_key_original": "men:sackmann:207809",
         "mapped_loser_key": "men:sackmann:207809",
         "mapped_winner_key": "men:sackmann:123921",
         "round": "Centurion - 1/16-finals",
@@ -959,7 +1054,8 @@
         "winner_api_key": "men:api:1206",
         "winner_api_name": "Calvin Hemery",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:123921"
+        "winner_sackmann_key": "men:sackmann:123921",
+        "winner_sackmann_key_original": "men:sackmann:123921"
       },
       {
         "api_event_key": "12130399",
@@ -972,6 +1068,7 @@
         "loser_api_name": "Henry van Schalkwyk Connor",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:210227",
+        "loser_sackmann_key_original": "men:sackmann:210227",
         "mapped_loser_key": "men:sackmann:210227",
         "mapped_winner_key": "men:sackmann:202475",
         "round": "Centurion - 1/16-finals",
@@ -980,7 +1077,8 @@
         "winner_api_key": "men:api:23664",
         "winner_api_name": "Philip Henning",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:202475"
+        "winner_sackmann_key": "men:sackmann:202475",
+        "winner_sackmann_key_original": "men:sackmann:202475"
       },
       {
         "api_event_key": "12130401",
@@ -993,6 +1091,7 @@
         "loser_api_name": "Filip Peliwo",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:106290",
+        "loser_sackmann_key_original": "men:sackmann:106290",
         "mapped_loser_key": "men:sackmann:106290",
         "mapped_winner_key": "men:sackmann:207907",
         "round": "Centurion - 1/16-finals",
@@ -1001,7 +1100,8 @@
         "winner_api_key": "men:api:33897",
         "winner_api_name": "Arda Azkara",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:207907"
+        "winner_sackmann_key": "men:sackmann:207907",
+        "winner_sackmann_key_original": "men:sackmann:207907"
       },
       {
         "api_event_key": "12130403",
@@ -1014,6 +1114,7 @@
         "loser_api_name": "Robin Bertrand",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:209850",
+        "loser_sackmann_key_original": "men:sackmann:209850",
         "mapped_loser_key": "men:sackmann:209850",
         "mapped_winner_key": "men:sackmann:207669",
         "round": "Centurion - 1/16-finals",
@@ -1022,7 +1123,8 @@
         "winner_api_key": "men:api:7489",
         "winner_api_name": "Robert Strombachs",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:207669"
+        "winner_sackmann_key": "men:sackmann:207669",
+        "winner_sackmann_key_original": "men:sackmann:207669"
       },
       {
         "api_event_key": "12130405",
@@ -1035,6 +1137,7 @@
         "loser_api_name": "Laslo Djere",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:111513",
+        "loser_sackmann_key_original": "men:sackmann:111513",
         "mapped_loser_key": "men:sackmann:111513",
         "mapped_winner_key": "men:sackmann:207608",
         "round": "Chisinau - 1/16-finals",
@@ -1043,7 +1146,8 @@
         "winner_api_key": "men:api:362",
         "winner_api_name": "Timofey Skatov",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:207608"
+        "winner_sackmann_key": "men:sackmann:207608",
+        "winner_sackmann_key_original": "men:sackmann:207608"
       },
       {
         "api_event_key": "12130408",
@@ -1056,6 +1160,7 @@
         "loser_api_name": "Cristian Jianu Filip",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:202262",
+        "loser_sackmann_key_original": "men:sackmann:202262",
         "mapped_loser_key": "men:sackmann:202262",
         "mapped_winner_key": "men:sackmann:106162",
         "round": "Chisinau - 1/16-finals",
@@ -1064,7 +1169,8 @@
         "winner_api_key": "men:api:373",
         "winner_api_name": "Franco Agamenone",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:106162"
+        "winner_sackmann_key": "men:sackmann:106162",
+        "winner_sackmann_key_original": "men:sackmann:106162"
       },
       {
         "api_event_key": "12130409",
@@ -1077,6 +1183,7 @@
         "loser_api_name": "Gauthier Onclin",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:206904",
+        "loser_sackmann_key_original": "men:sackmann:206904",
         "mapped_loser_key": "men:sackmann:206904",
         "mapped_winner_key": "men:sackmann:200303",
         "round": "Chisinau - 1/16-finals",
@@ -1085,7 +1192,8 @@
         "winner_api_key": "men:api:415",
         "winner_api_name": "Pavel Kotov",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:200303"
+        "winner_sackmann_key": "men:sackmann:200303",
+        "winner_sackmann_key_original": "men:sackmann:200303"
       },
       {
         "api_event_key": "12130410",
@@ -1098,6 +1206,7 @@
         "loser_api_name": "Francesco Maestrelli",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:208353",
+        "loser_sackmann_key_original": "men:sackmann:208353",
         "mapped_loser_key": "men:sackmann:208353",
         "mapped_winner_key": "men:sackmann:106293",
         "round": "Chisinau - 1/16-finals",
@@ -1106,7 +1215,8 @@
         "winner_api_key": "men:api:1205",
         "winner_api_name": "Kimmer Coppejans",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:106293"
+        "winner_sackmann_key": "men:sackmann:106293",
+        "winner_sackmann_key_original": "men:sackmann:106293"
       }
     ],
     "api_conflicts": [],
@@ -1122,6 +1232,7 @@
         "loser_api_name": "Mert Alkaya",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:207368",
+        "loser_sackmann_key_original": "men:sackmann:207368",
         "round": "Centurion 2 - 1/16-finals",
         "sackmann_loser_key": "men:sackmann:207368",
         "sackmann_match_id": "sackmann:men:2026-3089:362:207907:207368",
@@ -1131,7 +1242,8 @@
         "winner_api_key": "men:api:33897",
         "winner_api_name": "Arda Azkara",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:207907"
+        "winner_sackmann_key": "men:sackmann:207907",
+        "winner_sackmann_key_original": "men:sackmann:207907"
       },
       {
         "api_event_key": "12132329",
@@ -1144,6 +1256,7 @@
         "loser_api_name": "Luca Castelnuovo",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:132573",
+        "loser_sackmann_key_original": "men:sackmann:132573",
         "round": "Centurion 2 - 1/16-finals",
         "sackmann_loser_key": "men:sackmann:132573",
         "sackmann_match_id": "sackmann:men:2026-3089:360:208605:132573",
@@ -1153,7 +1266,8 @@
         "winner_api_key": "men:api:15921",
         "winner_api_name": "Mario Gonzalez Fernandez",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:208605"
+        "winner_sackmann_key": "men:sackmann:208605",
+        "winner_sackmann_key_original": "men:sackmann:208605"
       },
       {
         "api_event_key": "12132330",
@@ -1166,6 +1280,7 @@
         "loser_api_name": "Luc Koenig",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:209879",
+        "loser_sackmann_key_original": "men:sackmann:209879",
         "round": "Centurion 2 - 1/16-finals",
         "sackmann_loser_key": "men:sackmann:209879",
         "sackmann_match_id": "sackmann:men:2026-3089:369:208431:209879",
@@ -1175,7 +1290,8 @@
         "winner_api_key": "men:api:54138",
         "winner_api_name": "Semen Pankin",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:208431"
+        "winner_sackmann_key": "men:sackmann:208431",
+        "winner_sackmann_key_original": "men:sackmann:208431"
       },
       {
         "api_event_key": "12132331",
@@ -1188,6 +1304,7 @@
         "loser_api_name": "Yusuke Takahashi",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:126208",
+        "loser_sackmann_key_original": "men:sackmann:126208",
         "round": "Centurion 2 - 1/16-finals",
         "sackmann_loser_key": "men:sackmann:126208",
         "sackmann_match_id": "sackmann:men:2026-3089:370:208004:126208",
@@ -1197,7 +1314,8 @@
         "winner_api_key": "men:api:1189",
         "winner_api_name": "Harold Mayot",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:208004"
+        "winner_sackmann_key": "men:sackmann:208004",
+        "winner_sackmann_key_original": "men:sackmann:208004"
       },
       {
         "api_event_key": "12132339",
@@ -1210,6 +1328,7 @@
         "loser_api_name": "Cristian Jianu Filip",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:202262",
+        "loser_sackmann_key_original": "men:sackmann:202262",
         "round": "Prostejov - 1/16-finals",
         "sackmann_loser_key": "men:sackmann:202262",
         "sackmann_match_id": "sackmann:men:2026-0558:369:207729:202262",
@@ -1219,7 +1338,8 @@
         "winner_api_key": "men:api:9037",
         "winner_api_name": "Tristan Boyer",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:207729"
+        "winner_sackmann_key": "men:sackmann:207729",
+        "winner_sackmann_key_original": "men:sackmann:207729"
       },
       {
         "api_event_key": "12132341",
@@ -1232,6 +1352,7 @@
         "loser_api_name": "Zdenek Kolar",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:144645",
+        "loser_sackmann_key_original": "men:sackmann:144645",
         "round": "Prostejov - 1/16-finals",
         "sackmann_loser_key": "men:sackmann:144645",
         "sackmann_match_id": "sackmann:men:2026-0558:363:210510:144645",
@@ -1241,7 +1362,8 @@
         "winner_api_key": "men:api:10018",
         "winner_api_name": "Lautaro Midon",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:210510"
+        "winner_sackmann_key": "men:sackmann:210510",
+        "winner_sackmann_key_original": "men:sackmann:210510"
       },
       {
         "api_event_key": "12132346",
@@ -1254,6 +1376,7 @@
         "loser_api_name": "Raul Brancaccio",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:134840",
+        "loser_sackmann_key_original": "men:sackmann:134840",
         "round": "Prostejov - 1/16-finals",
         "sackmann_loser_key": "men:sackmann:134840",
         "sackmann_match_id": "sackmann:men:2026-0558:366:207686:134840",
@@ -1263,7 +1386,8 @@
         "winner_api_key": "men:api:566",
         "winner_api_name": "Alexander Shevchenko",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:207686"
+        "winner_sackmann_key": "men:sackmann:207686",
+        "winner_sackmann_key_original": "men:sackmann:207686"
       },
       {
         "api_event_key": "12132347",
@@ -1276,6 +1400,7 @@
         "loser_api_name": "Yosuke Watanuki",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:133297",
+        "loser_sackmann_key_original": "men:sackmann:133297",
         "round": "Prostejov - 1/16-finals",
         "sackmann_loser_key": "men:sackmann:133297",
         "sackmann_match_id": "sackmann:men:2026-0558:368:208046:133297",
@@ -1285,7 +1410,8 @@
         "winner_api_key": "men:api:2003",
         "winner_api_name": "Pedro Boscardin Dias",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:208046"
+        "winner_sackmann_key": "men:sackmann:208046",
+        "winner_sackmann_key_original": "men:sackmann:208046"
       },
       {
         "api_event_key": "12132388",
@@ -1298,6 +1424,7 @@
         "loser_api_name": "Gianluca Cadenasso",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:211533",
+        "loser_sackmann_key_original": "men:sackmann:211533",
         "round": "Perugia - 1/16-finals",
         "sackmann_loser_key": "men:sackmann:211533",
         "sackmann_match_id": "sackmann:men:2026-9001:359:210017:211533",
@@ -1307,7 +1434,8 @@
         "winner_api_key": "men:api:978",
         "winner_api_name": "Daniel Merida Aguilar",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:210017"
+        "winner_sackmann_key": "men:sackmann:210017",
+        "winner_sackmann_key_original": "men:sackmann:210017"
       },
       {
         "api_event_key": "12132389",
@@ -1320,6 +1448,7 @@
         "loser_api_name": "Ilia Simakin",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:209899",
+        "loser_sackmann_key_original": "men:sackmann:209899",
         "round": "Perugia - 1/16-finals",
         "sackmann_loser_key": "men:sackmann:209899",
         "sackmann_match_id": "sackmann:men:2026-9001:369:106065:209899",
@@ -1329,7 +1458,8 @@
         "winner_api_key": "men:api:1095",
         "winner_api_name": "Marco Cecchinato",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:106065"
+        "winner_sackmann_key": "men:sackmann:106065",
+        "winner_sackmann_key_original": "men:sackmann:106065"
       },
       {
         "api_event_key": "12132393",
@@ -1342,6 +1472,7 @@
         "loser_api_name": "Michele Ribecai",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:212020",
+        "loser_sackmann_key_original": "men:sackmann:212020",
         "round": "Perugia - 1/16-finals",
         "sackmann_loser_key": "men:sackmann:212020",
         "sackmann_match_id": "sackmann:men:2026-9001:362:208010:212020",
@@ -1351,7 +1482,8 @@
         "winner_api_key": "men:api:987",
         "winner_api_name": "Pablo Llamas Ruiz",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:208010"
+        "winner_sackmann_key": "men:sackmann:208010",
+        "winner_sackmann_key_original": "men:sackmann:208010"
       },
       {
         "api_event_key": "12132394",
@@ -1364,6 +1496,7 @@
         "loser_api_name": "Vilius Gaubas",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:209147",
+        "loser_sackmann_key_original": "men:sackmann:209147",
         "round": "Perugia - 1/16-finals",
         "sackmann_loser_key": "men:sackmann:209147",
         "sackmann_match_id": "sackmann:men:2026-9001:367:207608:209147",
@@ -1373,7 +1506,8 @@
         "winner_api_key": "men:api:362",
         "winner_api_name": "Timofey Skatov",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:207608"
+        "winner_sackmann_key": "men:sackmann:207608",
+        "winner_sackmann_key_original": "men:sackmann:207608"
       },
       {
         "api_event_key": "12132398",
@@ -1386,6 +1520,7 @@
         "loser_api_name": "Florian Broska",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:202239",
+        "loser_sackmann_key_original": "men:sackmann:202239",
         "round": "Heilbronn - Semi-finals",
         "sackmann_loser_key": "men:sackmann:202239",
         "sackmann_match_id": "sackmann:men:2026-0460:341:211322:202239",
@@ -1395,7 +1530,8 @@
         "winner_api_key": "men:api:57545",
         "winner_api_name": "Lasse Poertner",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:211322"
+        "winner_sackmann_key": "men:sackmann:211322",
+        "winner_sackmann_key_original": "men:sackmann:211322"
       },
       {
         "api_event_key": "12132401",
@@ -1408,6 +1544,7 @@
         "loser_api_name": "Tim Handel",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:134389",
+        "loser_sackmann_key_original": "men:sackmann:134389",
         "round": "Heilbronn - Semi-finals",
         "sackmann_loser_key": "men:sackmann:134389",
         "sackmann_match_id": "sackmann:men:2026-0460:348:123755:134389",
@@ -1417,7 +1554,8 @@
         "winner_api_key": "men:api:1735",
         "winner_api_name": "Elahi Galan Daniel",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:123755"
+        "winner_sackmann_key": "men:sackmann:123755",
+        "winner_sackmann_key_original": "men:sackmann:123755"
       },
       {
         "api_event_key": "12132402",
@@ -1430,6 +1568,7 @@
         "loser_api_name": "Jeremy Schifris",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:208816",
+        "loser_sackmann_key_original": "men:sackmann:208816",
         "round": "Heilbronn - Semi-finals",
         "sackmann_loser_key": "men:sackmann:208816",
         "sackmann_match_id": "sackmann:men:2026-0460:347:117360:208816",
@@ -1439,7 +1578,8 @@
         "winner_api_key": "men:api:2735",
         "winner_api_name": "Marc Polmans",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:117360"
+        "winner_sackmann_key": "men:sackmann:117360",
+        "winner_sackmann_key_original": "men:sackmann:117360"
       },
       {
         "api_event_key": "12132404",
@@ -1452,6 +1592,7 @@
         "loser_api_name": "David Fix",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:210153",
+        "loser_sackmann_key_original": "men:sackmann:210153",
         "round": "Heilbronn - Semi-finals",
         "sackmann_loser_key": "men:sackmann:210153",
         "sackmann_match_id": "sackmann:men:2026-0460:345:207704:210153",
@@ -1461,7 +1602,8 @@
         "winner_api_key": "men:api:988",
         "winner_api_name": "Alex Marti Pujolras",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:207704"
+        "winner_sackmann_key": "men:sackmann:207704",
+        "winner_sackmann_key_original": "men:sackmann:207704"
       },
       {
         "api_event_key": "12132405",
@@ -1474,6 +1616,7 @@
         "loser_api_name": "Sumit Nagal",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:111576",
+        "loser_sackmann_key_original": "men:sackmann:111576",
         "round": "Heilbronn - Semi-finals",
         "sackmann_loser_key": "men:sackmann:111576",
         "sackmann_match_id": "sackmann:men:2026-0460:346:126183:111576",
@@ -1483,7 +1626,8 @@
         "winner_api_key": "men:api:8896",
         "winner_api_name": "Mariano Kestelboim",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:126183"
+        "winner_sackmann_key": "men:sackmann:126183",
+        "winner_sackmann_key_original": "men:sackmann:126183"
       },
       {
         "api_event_key": "12132406",
@@ -1496,6 +1640,7 @@
         "loser_api_name": "Adrian Oetzbach",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:144907",
+        "loser_sackmann_key_original": "men:sackmann:144907",
         "round": "Heilbronn - Semi-finals",
         "sackmann_loser_key": "men:sackmann:144907",
         "sackmann_match_id": "sackmann:men:2026-0460:340:208502:144907",
@@ -1505,7 +1650,8 @@
         "winner_api_key": "men:api:379",
         "winner_api_name": "Dominic Stricker",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:208502"
+        "winner_sackmann_key": "men:sackmann:208502",
+        "winner_sackmann_key_original": "men:sackmann:208502"
       },
       {
         "api_event_key": "12132411",
@@ -1518,6 +1664,7 @@
         "loser_api_name": "Frederico Ferreira Silva",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:106393",
+        "loser_sackmann_key_original": "men:sackmann:106393",
         "round": "Heilbronn - 1/16-finals",
         "sackmann_loser_key": "men:sackmann:106393",
         "sackmann_match_id": "sackmann:men:2026-0460:359:124079:106393",
@@ -1527,7 +1674,8 @@
         "winner_api_key": "men:api:1775",
         "winner_api_name": "Pedro Martinez",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:124079"
+        "winner_sackmann_key": "men:sackmann:124079",
+        "winner_sackmann_key_original": "men:sackmann:124079"
       },
       {
         "api_event_key": "12132412",
@@ -1540,6 +1688,7 @@
         "loser_api_name": "Lorenzo Giustino",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:105841",
+        "loser_sackmann_key_original": "men:sackmann:105841",
         "round": "Heilbronn - 1/16-finals",
         "sackmann_loser_key": "men:sackmann:105841",
         "sackmann_match_id": "sackmann:men:2026-0460:356:209916:105841",
@@ -1549,7 +1698,8 @@
         "winner_api_key": "men:api:833",
         "winner_api_name": "Marko Topo",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:209916"
+        "winner_sackmann_key": "men:sackmann:209916",
+        "winner_sackmann_key_original": "men:sackmann:209916"
       },
       {
         "api_event_key": "12132413",
@@ -1562,6 +1712,7 @@
         "loser_api_name": "Max Houkes",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:208069",
+        "loser_sackmann_key_original": "men:sackmann:208069",
         "round": "Heilbronn - 1/16-finals",
         "sackmann_loser_key": "men:sackmann:208069",
         "sackmann_match_id": "sackmann:men:2026-0460:355:207182:208069",
@@ -1571,7 +1722,8 @@
         "winner_api_key": "men:api:567",
         "winner_api_name": "Emilio Nava",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:207182"
+        "winner_sackmann_key": "men:sackmann:207182",
+        "winner_sackmann_key_original": "men:sackmann:207182"
       },
       {
         "api_event_key": "12132414",
@@ -1584,6 +1736,7 @@
         "loser_api_name": "Pavel Kotov",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:200303",
+        "loser_sackmann_key_original": "men:sackmann:200303",
         "round": "Heilbronn - 1/16-finals",
         "sackmann_loser_key": "men:sackmann:200303",
         "sackmann_match_id": "sackmann:men:2026-0460:357:209911:200303",
@@ -1593,7 +1746,8 @@
         "winner_api_key": "men:api:1935",
         "winner_api_name": "Guy Den Ouden",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:209911"
+        "winner_sackmann_key": "men:sackmann:209911",
+        "winner_sackmann_key_original": "men:sackmann:209911"
       },
       {
         "api_event_key": "12132424",
@@ -1606,6 +1760,7 @@
         "loser_api_name": "Ryan Colby",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:210242",
+        "loser_sackmann_key_original": "men:sackmann:210242",
         "round": "Tyler - Semi-finals",
         "sackmann_loser_key": "men:sackmann:210242",
         "sackmann_match_id": "sackmann:men:2026-2873:345:132052:210242",
@@ -1615,7 +1770,8 @@
         "winner_api_key": "men:api:2021",
         "winner_api_name": "Christian Langmo",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:132052"
+        "winner_sackmann_key": "men:sackmann:132052",
+        "winner_sackmann_key_original": "men:sackmann:132052"
       },
       {
         "api_event_key": "12132425",
@@ -1628,6 +1784,7 @@
         "loser_api_name": "Adria Soriano Barrera",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:202075",
+        "loser_sackmann_key_original": "men:sackmann:202075",
         "round": "Tyler - Semi-finals",
         "sackmann_loser_key": "men:sackmann:202075",
         "sackmann_match_id": "sackmann:men:2026-2873:347:208039:202075",
@@ -1637,7 +1794,8 @@
         "winner_api_key": "men:api:3716",
         "winner_api_name": "Ronald Hohmann",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:208039"
+        "winner_sackmann_key": "men:sackmann:208039",
+        "winner_sackmann_key_original": "men:sackmann:208039"
       },
       {
         "api_event_key": "12132426",
@@ -1650,6 +1808,7 @@
         "loser_api_name": "Garrett Johns",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:208143",
+        "loser_sackmann_key_original": "men:sackmann:208143",
         "round": "Tyler - Semi-finals",
         "sackmann_loser_key": "men:sackmann:208143",
         "sackmann_match_id": "sackmann:men:2026-2873:338:210142:208143",
@@ -1659,7 +1818,8 @@
         "winner_api_key": "men:api:10838",
         "winner_api_name": "Olaf Pieczkowski",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:210142"
+        "winner_sackmann_key": "men:sackmann:210142",
+        "winner_sackmann_key_original": "men:sackmann:210142"
       },
       {
         "api_event_key": "12132430",
@@ -1672,6 +1832,7 @@
         "loser_api_name": "William Manning",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:213152",
+        "loser_sackmann_key_original": "men:sackmann:213152",
         "round": "Tyler - Semi-finals",
         "sackmann_loser_key": "men:sackmann:213152",
         "sackmann_match_id": "sackmann:men:2026-2873:346:212251:213152",
@@ -1681,7 +1842,8 @@
         "winner_api_key": "men:api:15277",
         "winner_api_name": "Daniel Milavsky",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:212251"
+        "winner_sackmann_key": "men:sackmann:212251",
+        "winner_sackmann_key_original": "men:sackmann:212251"
       },
       {
         "api_event_key": "12132431",
@@ -1694,6 +1856,7 @@
         "loser_api_name": "Dylan Hara Friend Jay",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:210221",
+        "loser_sackmann_key_original": "men:sackmann:210221",
         "round": "Tyler - Semi-finals",
         "sackmann_loser_key": "men:sackmann:210221",
         "sackmann_match_id": "sackmann:men:2026-2873:337:207202:210221",
@@ -1703,7 +1866,8 @@
         "winner_api_key": "men:api:8886",
         "winner_api_name": "Karl Poling",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:207202"
+        "winner_sackmann_key": "men:sackmann:207202",
+        "winner_sackmann_key_original": "men:sackmann:207202"
       },
       {
         "api_event_key": "12132432",
@@ -1716,6 +1880,7 @@
         "loser_api_name": "Dan Martin",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:202297",
+        "loser_sackmann_key_original": "men:sackmann:202297",
         "round": "Tyler - Semi-finals",
         "sackmann_loser_key": "men:sackmann:202297",
         "sackmann_match_id": "sackmann:men:2026-2873:348:211711:202297",
@@ -1725,7 +1890,8 @@
         "winner_api_key": "men:api:37912",
         "winner_api_name": "Braden Shick",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:211711"
+        "winner_sackmann_key": "men:sackmann:211711",
+        "winner_sackmann_key_original": "men:sackmann:211711"
       },
       {
         "api_event_key": "12132448",
@@ -1738,6 +1904,7 @@
         "loser_api_name": "Manuel Mazza",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:207601",
+        "loser_sackmann_key_original": "men:sackmann:207601",
         "round": "Perugia - Final",
         "sackmann_loser_key": "men:sackmann:207601",
         "sackmann_match_id": "sackmann:men:2026-9001:351:200374:207601",
@@ -1747,7 +1914,8 @@
         "winner_api_key": "men:api:565",
         "winner_api_name": "Nicolas Alvarez Varona",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:200374"
+        "winner_sackmann_key": "men:sackmann:200374",
+        "winner_sackmann_key_original": "men:sackmann:200374"
       },
       {
         "api_event_key": "12132452",
@@ -1760,6 +1928,7 @@
         "loser_api_name": "Martin Damm",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:102093",
+        "loser_sackmann_key_original": "men:sackmann:102093",
         "round": "Birmingham - Final",
         "sackmann_loser_key": "men:sackmann:102093",
         "sackmann_match_id": "sackmann:men:2026-4940:354:210317:102093",
@@ -1769,7 +1938,8 @@
         "winner_api_key": "men:api:1882",
         "winner_api_name": "James McCabe",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:210317"
+        "winner_sackmann_key": "men:sackmann:210317",
+        "winner_sackmann_key_original": "men:sackmann:210317"
       },
       {
         "api_event_key": "12132453",
@@ -1782,6 +1952,7 @@
         "loser_api_name": "Naoya Honda",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:211897",
+        "loser_sackmann_key_original": "men:sackmann:211897",
         "round": "Centurion 2 - Final",
         "sackmann_loser_key": "men:sackmann:211897",
         "sackmann_match_id": "sackmann:men:2026-3089:352:200574:211897",
@@ -1791,7 +1962,8 @@
         "winner_api_key": "men:api:9159",
         "winner_api_name": "Alexander Donski",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:200574"
+        "winner_sackmann_key": "men:sackmann:200574",
+        "winner_sackmann_key_original": "men:sackmann:200574"
       },
       {
         "api_event_key": "12132454",
@@ -1804,6 +1976,7 @@
         "loser_api_name": "Jelle Sels",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:125847",
+        "loser_sackmann_key_original": "men:sackmann:125847",
         "round": "Perugia - Final",
         "sackmann_loser_key": "men:sackmann:125847",
         "sackmann_match_id": "sackmann:men:2026-9001:352:212077:125847",
@@ -1813,7 +1986,8 @@
         "winner_api_key": "men:api:49616",
         "winner_api_name": "Lorenzo Carboni",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:212077"
+        "winner_sackmann_key": "men:sackmann:212077",
+        "winner_sackmann_key_original": "men:sackmann:212077"
       },
       {
         "api_event_key": "12132455",
@@ -1826,6 +2000,7 @@
         "loser_api_name": "Oleg Prihodko",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:144716",
+        "loser_sackmann_key_original": "men:sackmann:144716",
         "round": "Prostejov - Final",
         "sackmann_loser_key": "men:sackmann:144716",
         "sackmann_match_id": "sackmann:men:2026-0558:350:211618:144716",
@@ -1835,7 +2010,8 @@
         "winner_api_key": "men:api:38839",
         "winner_api_name": "Jan Kumstat",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:211618"
+        "winner_sackmann_key": "men:sackmann:211618",
+        "winner_sackmann_key_original": "men:sackmann:211618"
       },
       {
         "api_event_key": "12132515",
@@ -1848,6 +2024,7 @@
         "loser_api_name": "M. Tobon",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:101495",
+        "loser_sackmann_key_original": "men:sackmann:101495",
         "round": "Perugia - Final",
         "sackmann_loser_key": "men:sackmann:101495",
         "sackmann_match_id": "sackmann:men:2026-9001:349:133872:101495",
@@ -1857,7 +2034,8 @@
         "winner_api_key": "men:api:5675",
         "winner_api_name": "Enrico Dalla Valle",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:133872"
+        "winner_sackmann_key": "men:sackmann:133872",
+        "winner_sackmann_key_original": "men:sackmann:133872"
       },
       {
         "api_event_key": "12132516",
@@ -1870,6 +2048,7 @@
         "loser_api_name": "Lucio Ratti",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:211636",
+        "loser_sackmann_key_original": "men:sackmann:211636",
         "round": "Perugia - Final",
         "sackmann_loser_key": "men:sackmann:211636",
         "sackmann_match_id": "sackmann:men:2026-9001:353:209874:211636",
@@ -1879,7 +2058,8 @@
         "winner_api_key": "men:api:1242",
         "winner_api_name": "Maks Kasnikowski",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:209874"
+        "winner_sackmann_key": "men:sackmann:209874",
+        "winner_sackmann_key_original": "men:sackmann:209874"
       },
       {
         "api_event_key": "12132517",
@@ -1892,6 +2072,7 @@
         "loser_api_name": "David Jorda Sanchis",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:122554",
+        "loser_sackmann_key_original": "men:sackmann:122554",
         "round": "Perugia - Final",
         "sackmann_loser_key": "men:sackmann:122554",
         "sackmann_match_id": "sackmann:men:2026-9001:354:209506:122554",
@@ -1901,7 +2082,8 @@
         "winner_api_key": "men:api:1191",
         "winner_api_name": "Francesco Forti",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:209506"
+        "winner_sackmann_key": "men:sackmann:209506",
+        "winner_sackmann_key_original": "men:sackmann:209506"
       },
       {
         "api_event_key": "12132519",
@@ -1914,6 +2096,7 @@
         "loser_api_name": "Daniel Michalski",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:207415",
+        "loser_sackmann_key_original": "men:sackmann:207415",
         "round": "Prostejov - Final",
         "sackmann_loser_key": "men:sackmann:207415",
         "sackmann_match_id": "sackmann:men:2026-0558:354:126340:207415",
@@ -1923,7 +2106,8 @@
         "winner_api_key": "men:api:1201",
         "winner_api_name": "Viktor Durasovic",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:126340"
+        "winner_sackmann_key": "men:sackmann:126340",
+        "winner_sackmann_key_original": "men:sackmann:126340"
       },
       {
         "api_event_key": "12132520",
@@ -1936,6 +2120,7 @@
         "loser_api_name": "Marek Gengel",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:200309",
+        "loser_sackmann_key_original": "men:sackmann:200309",
         "round": "Prostejov - Final",
         "sackmann_loser_key": "men:sackmann:200309",
         "sackmann_match_id": "sackmann:men:2026-0558:351:209984:200309",
@@ -1945,7 +2130,8 @@
         "winner_api_key": "men:api:817",
         "winner_api_name": "Milos Karol",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:209984"
+        "winner_sackmann_key": "men:sackmann:209984",
+        "winner_sackmann_key_original": "men:sackmann:209984"
       },
       {
         "api_event_key": "12132521",
@@ -1958,6 +2144,7 @@
         "loser_api_name": "Lukas Pokorny",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:209931",
+        "loser_sackmann_key_original": "men:sackmann:209931",
         "round": "Prostejov - Final",
         "sackmann_loser_key": "men:sackmann:209931",
         "sackmann_match_id": "sackmann:men:2026-0558:353:106121:209931",
@@ -1967,7 +2154,8 @@
         "winner_api_key": "men:api:2406",
         "winner_api_name": "Taro Daniel",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:106121"
+        "winner_sackmann_key": "men:sackmann:106121",
+        "winner_sackmann_key_original": "men:sackmann:106121"
       },
       {
         "api_event_key": "12132522",
@@ -1980,6 +2168,7 @@
         "loser_api_name": "Raphael Perot",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:212222",
+        "loser_sackmann_key_original": "men:sackmann:212222",
         "round": "Heilbronn - Final",
         "sackmann_loser_key": "men:sackmann:212222",
         "sackmann_match_id": "sackmann:men:2026-0460:352:209406:212222",
@@ -1989,7 +2178,8 @@
         "winner_api_key": "men:api:9219",
         "winner_api_name": "Abedallah Shelbayh",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:209406"
+        "winner_sackmann_key": "men:sackmann:209406",
+        "winner_sackmann_key_original": "men:sackmann:209406"
       },
       {
         "api_event_key": "12132523",
@@ -2002,6 +2192,7 @@
         "loser_api_name": "Georgii Kravchenko",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:206662",
+        "loser_sackmann_key_original": "men:sackmann:206662",
         "round": "Heilbronn - Final",
         "sackmann_loser_key": "men:sackmann:206662",
         "sackmann_match_id": "sackmann:men:2026-0460:349:208328:206662",
@@ -2011,7 +2202,8 @@
         "winner_api_key": "men:api:9110",
         "winner_api_name": "Max Wiskandt",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:208328"
+        "winner_sackmann_key": "men:sackmann:208328",
+        "winner_sackmann_key_original": "men:sackmann:208328"
       },
       {
         "api_event_key": "12132524",
@@ -2024,6 +2216,7 @@
         "loser_api_name": "Hayato Matsuoka",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:211627",
+        "loser_sackmann_key_original": "men:sackmann:211627",
         "round": "Tyler - Final",
         "sackmann_loser_key": "men:sackmann:211627",
         "sackmann_match_id": "sackmann:men:2026-2873:352:201987:211627",
@@ -2033,7 +2226,8 @@
         "winner_api_key": "men:api:10276",
         "winner_api_name": "Masamichi Imamura",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:201987"
+        "winner_sackmann_key": "men:sackmann:201987",
+        "winner_sackmann_key_original": "men:sackmann:201987"
       },
       {
         "api_event_key": "12132530",
@@ -2046,6 +2240,7 @@
         "loser_api_name": "Talia Gibson",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "women:sackmann:221883",
+        "loser_sackmann_key_original": "women:sackmann:221883",
         "round": "Birmingham - 1/16-finals",
         "sackmann_loser_key": "women:sackmann:221883",
         "sackmann_match_id": "sackmann:women:2026-1126:274:220722:221883",
@@ -2055,7 +2250,8 @@
         "winner_api_key": "women:api:198",
         "winner_api_name": "Elvina Kalieva",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:220722"
+        "winner_sackmann_key": "women:sackmann:220722",
+        "winner_sackmann_key_original": "women:sackmann:220722"
       },
       {
         "api_event_key": "12132534",
@@ -2068,6 +2264,7 @@
         "loser_api_name": "Hamish Stewart",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:207171",
+        "loser_sackmann_key_original": "men:sackmann:207171",
         "round": "Birmingham - Final",
         "sackmann_loser_key": "men:sackmann:207171",
         "sackmann_match_id": "sackmann:men:2026-4940:351:111200:207171",
@@ -2077,7 +2274,8 @@
         "winner_api_key": "men:api:1082",
         "winner_api_name": "Elias Ymer",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:111200"
+        "winner_sackmann_key": "men:sackmann:111200",
+        "winner_sackmann_key_original": "men:sackmann:111200"
       },
       {
         "api_event_key": "12132535",
@@ -2090,6 +2288,7 @@
         "loser_api_name": "Ben Jones",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:202346",
+        "loser_sackmann_key_original": "men:sackmann:202346",
         "round": "Birmingham - Final",
         "sackmann_loser_key": "men:sackmann:202346",
         "sackmann_match_id": "sackmann:men:2026-4940:349:211542:202346",
@@ -2099,7 +2298,8 @@
         "winner_api_key": "men:api:39002",
         "winner_api_name": "Filippo Romano",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:211542"
+        "winner_sackmann_key": "men:sackmann:211542",
+        "winner_sackmann_key_original": "men:sackmann:211542"
       },
       {
         "api_event_key": "12132536",
@@ -2112,6 +2312,7 @@
         "loser_api_name": "Marc-Andrea Huesler",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:144817",
+        "loser_sackmann_key_original": "men:sackmann:144817",
         "round": "Birmingham - Final",
         "sackmann_loser_key": "men:sackmann:144817",
         "sackmann_match_id": "sackmann:men:2026-4940:350:111190:144817",
@@ -2120,8 +2321,9 @@
         "tourney_name": "Birmingham",
         "winner_api_key": "men:api:590",
         "winner_api_name": "Zhizhen Zhang",
-        "winner_mapping_status": "manual_mapped",
-        "winner_sackmann_key": "men:sackmann:111190"
+        "winner_mapping_status": "auto_mapped",
+        "winner_sackmann_key": "men:sackmann:111190",
+        "winner_sackmann_key_original": "men:sackmann:111190"
       },
       {
         "api_event_key": "12132537",
@@ -2134,6 +2336,7 @@
         "loser_api_name": "August Holmgren",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:200416",
+        "loser_sackmann_key_original": "men:sackmann:200416",
         "round": "Birmingham - Final",
         "sackmann_loser_key": "men:sackmann:200416",
         "sackmann_match_id": "sackmann:men:2026-4940:353:211767:200416",
@@ -2143,7 +2346,8 @@
         "winner_api_key": "men:api:40233",
         "winner_api_name": "James Watt",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:211767"
+        "winner_sackmann_key": "men:sackmann:211767",
+        "winner_sackmann_key_original": "men:sackmann:211767"
       },
       {
         "api_event_key": "12132538",
@@ -2156,6 +2360,7 @@
         "loser_api_name": "Charles Broom",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:200277",
+        "loser_sackmann_key_original": "men:sackmann:200277",
         "round": "Birmingham - Final",
         "sackmann_loser_key": "men:sackmann:200277",
         "sackmann_match_id": "sackmann:men:2026-4940:352:206889:200277",
@@ -2165,7 +2370,8 @@
         "winner_api_key": "men:api:7102",
         "winner_api_name": "Clement Chidekh",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:206889"
+        "winner_sackmann_key": "men:sackmann:206889",
+        "winner_sackmann_key_original": "men:sackmann:206889"
       },
       {
         "api_event_key": "12132539",
@@ -2178,6 +2384,7 @@
         "loser_api_name": "Kris van Wyk",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:144748",
+        "loser_sackmann_key_original": "men:sackmann:144748",
         "round": "Centurion 2 - Final",
         "sackmann_loser_key": "men:sackmann:144748",
         "sackmann_match_id": "sackmann:men:2026-3089:353:210513:144748",
@@ -2187,7 +2394,8 @@
         "winner_api_key": "men:api:14315",
         "winner_api_name": "Tuncay Duran",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:210513"
+        "winner_sackmann_key": "men:sackmann:210513",
+        "winner_sackmann_key_original": "men:sackmann:210513"
       },
       {
         "api_event_key": "12132540",
@@ -2200,6 +2408,7 @@
         "loser_api_name": "Thando Longwe-Smit",
         "loser_mapping_status": "auto_mapped",
         "loser_sackmann_key": "men:sackmann:207927",
+        "loser_sackmann_key_original": "men:sackmann:207927",
         "round": "Centurion 2 - Final",
         "sackmann_loser_key": "men:sackmann:207927",
         "sackmann_match_id": "sackmann:men:2026-3089:354:209278:207927",
@@ -2209,1032 +2418,447 @@
         "winner_api_key": "men:api:642",
         "winner_api_name": "Alec Beckley",
         "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:209278"
+        "winner_sackmann_key": "men:sackmann:209278",
+        "winner_sackmann_key_original": "men:sackmann:209278"
       }
     ],
     "api_skipped": [
       {
-        "date": "2024-06-24",
-        "match_id": "sackmann:women:2024-W-ITF-SRB-2024-013:917:221371:221371",
-        "reason": "winner_loser_same_player_key",
-        "source": "sackmann"
+        "date": "2023-01-30",
+        "loser_sackmann_key": "women:sackmann:222000",
+        "match_id": "sackmann:women:2023-1065:859:214060:222000",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:214060"
       },
       {
-        "api_event_key": "12130402",
-        "api_match_id": "api_tennis:12130402",
-        "date": "2026-05-26",
-        "gender": "men",
-        "level": "qualifying",
-        "loser_api_key": "men:api:1200",
-        "loser_api_name": "Mukund Sasikumar",
-        "loser_mapping_status": "unmapped",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "Centurion - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "hard",
-        "tourney_name": "Centurion (South Africa) - Qualification",
-        "winner_api_key": "men:api:3318",
-        "winner_api_name": "Edward Winter",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:210399"
+        "date": "2023-01-30",
+        "loser_sackmann_key": "women:sackmann:246477",
+        "match_id": "sackmann:women:2023-1065:860:214020:246477",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:214020"
       },
       {
-        "api_event_key": "12130712",
-        "api_match_id": "api_tennis:12130712",
-        "date": "2026-05-26",
-        "gender": "men",
-        "level": "challenger",
-        "loser_api_key": "men:api:5675",
-        "loser_api_name": "Enrico Dalla Valle",
-        "loser_mapping_status": "auto_mapped",
-        "loser_sackmann_key": "men:sackmann:133872",
-        "reason": "one_mapped",
-        "round": "Vicenza - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "Vicenza",
-        "winner_api_key": "men:api:32558",
-        "winner_api_name": "Josef Schwaerzler Joel",
-        "winner_mapping_status": "unmapped",
-        "winner_sackmann_key": ""
+        "date": "2023-01-30",
+        "loser_sackmann_key": "women:sackmann:220053",
+        "match_id": "sackmann:women:2023-1065:861:211225:220053",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:211225"
       },
       {
-        "api_event_key": "12130753",
-        "api_match_id": "api_tennis:12130753",
-        "date": "2026-05-26",
-        "gender": "women",
-        "level": "itf",
-        "loser_api_key": "women:api:75365",
-        "loser_api_name": "D. Kharlanova",
-        "loser_mapping_status": "auto_mapped",
-        "loser_sackmann_key": "women:sackmann:267888",
-        "reason": "one_mapped",
-        "round": "W15 Tsaghkadzor 2 - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "W15 Tsaghkadzor 2",
-        "winner_api_key": "women:api:38938",
-        "winner_api_name": "Maria Mikhaylova",
-        "winner_mapping_status": "unmapped",
-        "winner_sackmann_key": ""
+        "date": "2023-01-30",
+        "loser_sackmann_key": "women:sackmann:214800",
+        "match_id": "sackmann:women:2023-1065:862:211820:214800",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:211820"
       },
       {
-        "api_event_key": "12130769",
-        "api_match_id": "api_tennis:12130769",
-        "date": "2026-05-26",
-        "gender": "men",
-        "level": "itf",
-        "loser_api_key": "men:api:22255",
-        "loser_api_name": "Dimitris Azoidis",
-        "loser_mapping_status": "unmapped",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "M15 Kayseri 2 - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "hard",
-        "tourney_name": "M15 Kayseri 2",
-        "winner_api_key": "men:api:72766",
-        "winner_api_name": "Rafael De Alba",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:208908"
+        "date": "2023-01-30",
+        "loser_sackmann_key": "women:sackmann:211846",
+        "match_id": "sackmann:women:2023-1065:863:223335:211846",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:223335"
       },
       {
-        "api_event_key": "12130800",
-        "api_match_id": "api_tennis:12130800",
-        "date": "2026-05-26",
-        "gender": "men",
-        "level": "itf",
-        "loser_api_key": "men:api:81046",
-        "loser_api_name": "Karlo Kajin",
-        "loser_mapping_status": "auto_mapped",
-        "loser_sackmann_key": "men:sackmann:208007",
-        "reason": "one_mapped",
-        "round": "M25 Bol 2 - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "M25 Bol 2",
-        "winner_api_key": "men:api:14638",
-        "winner_api_name": "Nikita Mashtakov",
-        "winner_mapping_status": "unmapped",
-        "winner_sackmann_key": ""
+        "date": "2023-01-30",
+        "loser_sackmann_key": "women:sackmann:211881",
+        "match_id": "sackmann:women:2023-1065:864:215459:211881",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:215459"
       },
       {
-        "api_event_key": "12130830",
-        "api_match_id": "api_tennis:12130830",
-        "date": "2026-05-26",
-        "gender": "men",
-        "level": "itf",
-        "loser_api_key": "men:api:90464",
-        "loser_api_name": "D. Agarwal",
-        "loser_mapping_status": "auto_mapped",
-        "loser_sackmann_key": "men:sackmann:214168",
-        "reason": "one_mapped",
-        "round": "M15 Monastir 20 - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "hard",
-        "tourney_name": "M15 Monastir 20",
-        "winner_api_key": "men:api:8655",
-        "winner_api_name": "Nazim Makhlouf",
-        "winner_mapping_status": "unmapped",
-        "winner_sackmann_key": ""
+        "date": "2023-01-30",
+        "loser_sackmann_key": "women:sackmann:204415",
+        "match_id": "sackmann:women:2023-1065:865:206430:204415",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:206430"
       },
       {
-        "api_event_key": "12130847",
-        "api_match_id": "api_tennis:12130847",
-        "date": "2026-05-26",
-        "gender": "women",
-        "level": "itf",
-        "loser_api_key": "women:api:102790",
-        "loser_api_name": "S. S. Challarapu R. V.",
-        "loser_mapping_status": "unmapped",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "W15 Monastir 15 - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "hard",
-        "tourney_name": "W15 Monastir 15",
-        "winner_api_key": "women:api:57058",
-        "winner_api_name": "Aurora Urso",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:220071"
+        "date": "2023-01-30",
+        "loser_sackmann_key": "women:sackmann:214060",
+        "match_id": "sackmann:women:2023-1065:866:206277:214060",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:206277"
       },
       {
-        "api_event_key": "12130981",
-        "api_match_id": "api_tennis:12130981",
-        "date": "2026-05-26",
-        "gender": "men",
-        "level": "itf",
-        "loser_api_key": "men:api:61033",
-        "loser_api_name": "Timeo Trufelli",
-        "loser_mapping_status": "ambiguous",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "M25 Carnac - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "M25 Carnac",
-        "winner_api_key": "men:api:9687",
-        "winner_api_name": "Antonio Nunez Daniel",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:208411"
+        "date": "2023-01-30",
+        "loser_sackmann_key": "women:sackmann:214020",
+        "match_id": "sackmann:women:2023-1065:867:211225:214020",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:211225"
       },
       {
-        "api_event_key": "12130701",
-        "api_match_id": "api_tennis:12130701",
-        "date": "2026-05-27",
-        "gender": "men",
-        "level": "grand_slam",
-        "loser_api_key": "men:api:949",
-        "loser_api_name": "Mariano Navone",
-        "loser_mapping_status": "auto_mapped",
-        "loser_sackmann_key": "men:sackmann:208363",
-        "reason": "one_mapped",
-        "round": "ATP French Open - 1/32-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "French Open",
-        "winner_api_key": "men:api:902",
-        "winner_api_name": "Jakub Mensik",
-        "winner_mapping_status": "ambiguous",
-        "winner_sackmann_key": ""
+        "date": "2023-01-30",
+        "loser_sackmann_key": "women:sackmann:223335",
+        "match_id": "sackmann:women:2023-1065:868:211820:223335",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:211820"
       },
       {
-        "api_event_key": "12130807",
-        "api_match_id": "api_tennis:12130807",
-        "date": "2026-05-27",
-        "gender": "men",
-        "level": "itf",
-        "loser_api_key": "men:api:2516",
-        "loser_api_name": "Jakub Nicod",
-        "loser_mapping_status": "ambiguous",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "M25 Bol 2 - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "M25 Bol 2",
-        "winner_api_key": "men:api:392",
-        "winner_api_name": "Duje Ajdukovic",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:207213"
+        "date": "2023-01-30",
+        "loser_sackmann_key": "women:sackmann:215459",
+        "match_id": "sackmann:women:2023-1065:869:206430:215459",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:206430"
       },
       {
-        "api_event_key": "12131051",
-        "api_match_id": "api_tennis:12131051",
-        "date": "2026-05-27",
-        "gender": "men",
-        "level": "itf",
-        "loser_api_key": "men:api:784",
-        "loser_api_name": "Kazuma Kawachi",
-        "loser_mapping_status": "auto_mapped",
-        "loser_sackmann_key": "men:sackmann:124074",
-        "reason": "one_mapped",
-        "round": "M15 Gimcheon 2 - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "hard",
-        "tourney_name": "M15 Gimcheon 2",
-        "winner_api_key": "men:api:10295",
-        "winner_api_name": "Sanhui Shin",
-        "winner_mapping_status": "unmapped",
-        "winner_sackmann_key": ""
+        "date": "2023-05-01",
+        "loser_sackmann_key": "women:sackmann:211285",
+        "match_id": "sackmann:women:2023-2034:858:205918:211285",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:205918"
       },
       {
-        "api_event_key": "12131110",
-        "api_match_id": "api_tennis:12131110",
-        "date": "2026-05-27",
-        "gender": "men",
-        "level": "challenger",
-        "loser_api_key": "men:api:20697",
-        "loser_api_name": "Samuele Pieri",
-        "loser_mapping_status": "auto_mapped",
-        "loser_sackmann_key": "men:sackmann:210129",
-        "reason": "one_mapped",
-        "round": "Vicenza - 1/8-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "Vicenza",
-        "winner_api_key": "men:api:55858",
-        "winner_api_name": "Diego Dedura",
-        "winner_mapping_status": "unmapped",
-        "winner_sackmann_key": ""
+        "date": "2023-05-01",
+        "loser_sackmann_key": "women:sackmann:201399",
+        "match_id": "sackmann:women:2023-2034:860:213772:201399",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:213772"
       },
       {
-        "api_event_key": "12131141",
-        "api_match_id": "api_tennis:12131141",
-        "date": "2026-05-27",
-        "gender": "men",
-        "level": "itf",
-        "loser_api_key": "men:api:38072",
-        "loser_api_name": "Matthias Ujvary",
-        "loser_mapping_status": "auto_mapped",
-        "loser_sackmann_key": "men:sackmann:210745",
-        "reason": "one_mapped",
-        "round": "M15 Brcko - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "M15 Brcko",
-        "winner_api_key": "men:api:40212",
-        "winner_api_name": "Daniel Salazar",
-        "winner_mapping_status": "unmapped",
-        "winner_sackmann_key": ""
+        "date": "2023-05-01",
+        "loser_sackmann_key": "women:sackmann:202457",
+        "match_id": "sackmann:women:2023-2034:862:211779:202457",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:211779"
       },
       {
-        "api_event_key": "12131144",
-        "api_match_id": "api_tennis:12131144",
-        "date": "2026-05-27",
-        "gender": "men",
-        "level": "itf",
-        "loser_api_key": "men:api:95473",
-        "loser_api_name": "K. T. Rosenkranz",
-        "loser_mapping_status": "unmapped",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "M15 Brcko - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "M15 Brcko",
-        "winner_api_key": "men:api:13823",
-        "winner_api_name": "Attila Boros",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:210236"
+        "date": "2023-05-01",
+        "loser_sackmann_key": "women:sackmann:205918",
+        "match_id": "sackmann:women:2023-2034:866:215802:205918",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:215802"
       },
       {
-        "api_event_key": "12131161",
-        "api_match_id": "api_tennis:12131161",
-        "date": "2026-05-27",
-        "gender": "women",
-        "level": "itf",
-        "loser_api_key": "women:api:17",
-        "loser_api_name": "Francesca Dell'Edera",
-        "loser_mapping_status": "auto_mapped",
-        "loser_sackmann_key": "women:sackmann:214974",
-        "reason": "one_mapped",
-        "round": "W15 Monastir 15 - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "hard",
-        "tourney_name": "W15 Monastir 15",
-        "winner_api_key": "women:api:102570",
-        "winner_api_name": "G. Mais",
-        "winner_mapping_status": "unmapped",
-        "winner_sackmann_key": ""
+        "date": "2023-05-01",
+        "loser_sackmann_key": "women:sackmann:213772",
+        "match_id": "sackmann:women:2023-2034:867:215806:213772",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:215806"
       },
       {
-        "api_event_key": "12131176",
-        "api_match_id": "api_tennis:12131176",
-        "date": "2026-05-27",
-        "gender": "women",
-        "level": "itf",
-        "loser_api_key": "women:api:2115",
-        "loser_api_name": "Ginevra Parentini",
-        "loser_mapping_status": "unmapped",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "W15 Tsaghkadzor 2 - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "W15 Tsaghkadzor 2",
-        "winner_api_key": "women:api:87011",
-        "winner_api_name": "Alisa Danilova",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:206161"
+        "date": "2023-05-01",
+        "loser_sackmann_key": "women:sackmann:211779",
+        "match_id": "sackmann:women:2023-2034:868:213576:211779",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:213576"
       },
       {
-        "api_event_key": "12131185",
-        "api_match_id": "api_tennis:12131185",
-        "date": "2026-05-27",
-        "gender": "men",
-        "level": "itf",
-        "loser_api_key": "men:api:13973",
-        "loser_api_name": "V. Osminkin",
-        "loser_mapping_status": "auto_mapped",
-        "loser_sackmann_key": "men:sackmann:209858",
-        "reason": "one_mapped",
-        "round": "M15 Kayseri 2 - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "hard",
-        "tourney_name": "M15 Kayseri 2",
-        "winner_api_key": "men:api:58219",
-        "winner_api_name": "Efe Tufekci Cagan",
-        "winner_mapping_status": "unmapped",
-        "winner_sackmann_key": ""
+        "date": "2023-05-01",
+        "loser_sackmann_key": "women:sackmann:212043",
+        "match_id": "sackmann:women:2023-2034:869:220733:212043",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:220733"
       },
       {
-        "api_event_key": "12131201",
-        "api_match_id": "api_tennis:12131201",
-        "date": "2026-05-27",
-        "gender": "women",
-        "level": "itf",
-        "loser_api_key": "women:api:99",
-        "loser_api_name": "Ashmitha Easwaramurthi",
-        "loser_mapping_status": "auto_mapped",
-        "loser_sackmann_key": "women:sackmann:205492",
-        "reason": "one_mapped",
-        "round": "W15 Kayseri 2 - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "hard",
-        "tourney_name": "W15 Kayseri 2",
-        "winner_api_key": "women:api:20381",
-        "winner_api_name": "Kateryna Diatlova",
-        "winner_mapping_status": "unmapped",
-        "winner_sackmann_key": ""
+        "date": "2023-05-15",
+        "loser_sackmann_key": "women:sackmann:214562",
+        "match_id": "sackmann:women:2023-2090:858:211328:214562",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:211328"
       },
       {
-        "api_event_key": "12131207",
-        "api_match_id": "api_tennis:12131207",
-        "date": "2026-05-27",
-        "gender": "women",
-        "level": "itf",
-        "loser_api_key": "women:api:4112",
-        "loser_api_name": "Y. Kim",
-        "loser_mapping_status": "ambiguous",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "W15 Kayseri 2 - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "hard",
-        "tourney_name": "W15 Kayseri 2",
-        "winner_api_key": "women:api:13544",
-        "winner_api_name": "Duru Soke",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:224488"
+        "date": "2023-05-15",
+        "loser_sackmann_key": "women:sackmann:216367",
+        "match_id": "sackmann:women:2023-2090:859:221469:216367",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:221469"
       },
       {
-        "api_event_key": "12131215",
-        "api_match_id": "api_tennis:12131215",
-        "date": "2026-05-27",
-        "gender": "men",
-        "level": "itf",
-        "loser_api_key": "men:api:102953",
-        "loser_api_name": "G. L. Zajc",
-        "loser_mapping_status": "unmapped",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "M15 Kranjska Gora - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "M15 Kranjska Gora (Slovenia)",
-        "winner_api_key": "men:api:70351",
-        "winner_api_name": "Nicolo Toffanin",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:211532"
+        "date": "2023-05-15",
+        "loser_sackmann_key": "women:sackmann:202464",
+        "match_id": "sackmann:women:2023-2090:860:214826:202464",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:214826"
       },
       {
-        "api_event_key": "12131222",
-        "api_match_id": "api_tennis:12131222",
-        "date": "2026-05-27",
-        "gender": "men",
-        "level": "itf",
-        "loser_api_key": "men:api:102954",
-        "loser_api_name": "N. M. Becirovic",
-        "loser_mapping_status": "unmapped",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "M15 Kranjska Gora - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "M15 Kranjska Gora (Slovenia)",
-        "winner_api_key": "men:api:54471",
-        "winner_api_name": "Milos Mikovic",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:212278"
+        "date": "2023-05-15",
+        "loser_sackmann_key": "women:sackmann:223415",
+        "match_id": "sackmann:women:2023-2090:863:232447:223415",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:232447"
       },
       {
-        "api_event_key": "12131246",
-        "api_match_id": "api_tennis:12131246",
-        "date": "2026-05-27",
-        "gender": "men",
-        "level": "itf",
-        "loser_api_key": "men:api:82785",
-        "loser_api_name": "Nicolas Robert",
-        "loser_mapping_status": "unmapped",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "M15 Monastir 20 - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "hard",
-        "tourney_name": "M15 Monastir 20",
-        "winner_api_key": "men:api:76980",
-        "winner_api_name": "Yoshka Sborowsky",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:213716"
+        "date": "2023-05-15",
+        "loser_sackmann_key": "women:sackmann:213772",
+        "match_id": "sackmann:women:2023-2090:864:201534:213772",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:201534"
       },
       {
-        "api_event_key": "12131249",
-        "api_match_id": "api_tennis:12131249",
-        "date": "2026-05-27",
-        "gender": "men",
-        "level": "itf",
-        "loser_api_key": "men:api:102960",
-        "loser_api_name": "L. Soares",
-        "loser_mapping_status": "unmapped",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "M15 Monastir 20 - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "hard",
-        "tourney_name": "M15 Monastir 20",
-        "winner_api_key": "men:api:55148",
-        "winner_api_name": "Markus Molder",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:212533"
+        "date": "2023-05-15",
+        "loser_sackmann_key": "women:sackmann:211881",
+        "match_id": "sackmann:women:2023-2090:865:203435:211881",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:203435"
       },
       {
-        "api_event_key": "12131252",
-        "api_match_id": "api_tennis:12131252",
-        "date": "2026-05-27",
-        "gender": "men",
-        "level": "itf",
-        "loser_api_key": "men:api:83228",
-        "loser_api_name": "A. Aiukhanov",
-        "loser_mapping_status": "ambiguous",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "M15 Tsaghkadzor - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "M15 Tsaghkadzor",
-        "winner_api_key": "men:api:682",
-        "winner_api_name": "Lorenzo Bocchi",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:200595"
+        "date": "2023-05-15",
+        "loser_sackmann_key": "women:sackmann:221469",
+        "match_id": "sackmann:women:2023-2090:866:211328:221469",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:211328"
       },
       {
-        "api_event_key": "12131278",
-        "api_match_id": "api_tennis:12131278",
-        "date": "2026-05-27",
-        "gender": "men",
-        "level": "itf",
-        "loser_api_key": "men:api:55610",
-        "loser_api_name": "Thomas George Benjamin",
-        "loser_mapping_status": "auto_mapped",
-        "loser_sackmann_key": "men:sackmann:212259",
-        "reason": "one_mapped",
-        "round": "M25 Kursumlijska Banja - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "M25 Kursumlijska Banja",
-        "winner_api_key": "men:api:74446",
-        "winner_api_name": "Dmytro Shirokyi",
-        "winner_mapping_status": "unmapped",
-        "winner_sackmann_key": ""
+        "date": "2023-05-15",
+        "loser_sackmann_key": "women:sackmann:214826",
+        "match_id": "sackmann:women:2023-2090:867:206102:214826",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:206102"
       },
       {
-        "api_event_key": "12131296",
-        "api_match_id": "api_tennis:12131296",
-        "date": "2026-05-27",
-        "gender": "women",
-        "level": "itf",
-        "loser_api_key": "women:api:73111",
-        "loser_api_name": "Camila Rodero",
-        "loser_mapping_status": "ambiguous",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "W15 Oliva - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "W15 Oliva (Spain)",
-        "winner_api_key": "women:api:32562",
-        "winner_api_name": "Shannon Lam",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:260845"
+        "date": "2023-05-15",
+        "loser_sackmann_key": "women:sackmann:203562",
+        "match_id": "sackmann:women:2023-2090:868:232447:203562",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:232447"
       },
       {
-        "api_event_key": "12131310",
-        "api_match_id": "api_tennis:12131310",
-        "date": "2026-05-27",
-        "gender": "women",
-        "level": "itf",
-        "loser_api_key": "women:api:55518",
-        "loser_api_name": "M. Biro",
-        "loser_mapping_status": "ambiguous",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "W15 Szentendre - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "W15 Szentendre (Hungary)",
-        "winner_api_key": "women:api:69063",
-        "winner_api_name": "Safina Popa Giulia",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:267428"
+        "date": "2023-05-15",
+        "loser_sackmann_key": "women:sackmann:201534",
+        "match_id": "sackmann:women:2023-2090:869:203435:201534",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:203435"
       },
       {
-        "api_event_key": "12131318",
-        "api_match_id": "api_tennis:12131318",
-        "date": "2026-05-27",
-        "gender": "women",
-        "level": "itf",
-        "loser_api_key": "women:api:2578",
-        "loser_api_name": "Tara Wuerth",
-        "loser_mapping_status": "unmapped",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "W35 Bol 2 - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "W35 Bol 2",
-        "winner_api_key": "women:api:37979",
-        "winner_api_name": "Elena Korokozidi",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:222481"
+        "date": "2023-06-12",
+        "loser_sackmann_key": "women:sackmann:206403",
+        "match_id": "sackmann:women:2023-2061:858:201621:206403",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:201621"
       },
       {
-        "api_event_key": "12131380",
-        "api_match_id": "api_tennis:12131380",
-        "date": "2026-05-27",
-        "gender": "women",
-        "level": "itf",
-        "loser_api_key": "women:api:96725",
-        "loser_api_name": "Kaya Moe",
-        "loser_mapping_status": "auto_mapped",
-        "loser_sackmann_key": "women:sackmann:270454",
-        "reason": "one_mapped",
-        "round": "W35 Wichita, KS - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "hard",
-        "tourney_name": "W35 Wichita, KS",
-        "winner_api_key": "women:api:14205",
-        "winner_api_name": "Qyinlomo Quadre Barakat",
-        "winner_mapping_status": "unmapped",
-        "winner_sackmann_key": ""
+        "date": "2023-06-12",
+        "loser_sackmann_key": "women:sackmann:201402",
+        "match_id": "sackmann:women:2023-2061:859:221985:201402",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:221985"
       },
       {
-        "api_event_key": "12131406",
-        "api_match_id": "api_tennis:12131406",
-        "date": "2026-05-27",
-        "gender": "women",
-        "level": "itf",
-        "loser_api_key": "women:api:81652",
-        "loser_api_name": "Elvira Juravliova",
-        "loser_mapping_status": "auto_mapped",
-        "loser_sackmann_key": "women:sackmann:214891",
-        "reason": "one_mapped",
-        "round": "W15 Lakewood, CA - 1/16-finals",
-        "source": "api_tennis",
-        "surface": "hard",
-        "tourney_name": "W15 Lakewood, CA",
-        "winner_api_key": "women:api:1358",
-        "winner_api_name": "Anne-Christine Lutkemeyer",
-        "winner_mapping_status": "unmapped",
-        "winner_sackmann_key": ""
+        "date": "2023-06-12",
+        "loser_sackmann_key": "women:sackmann:215398",
+        "match_id": "sackmann:women:2023-2061:860:214521:215398",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:214521"
       },
       {
-        "api_event_key": "12131353",
-        "api_match_id": "api_tennis:12131353",
-        "date": "2026-05-28",
-        "gender": "men",
-        "level": "challenger",
-        "loser_api_key": "men:api:32558",
-        "loser_api_name": "Josef Schwaerzler Joel",
-        "loser_mapping_status": "unmapped",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "Vicenza - 1/8-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "Vicenza",
-        "winner_api_key": "men:api:1338",
-        "winner_api_name": "Pol Martin Tiffon",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:207546"
+        "date": "2023-06-12",
+        "loser_sackmann_key": "women:sackmann:220532",
+        "match_id": "sackmann:women:2023-2061:861:220733:220532",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:220733"
       },
       {
-        "api_event_key": "12131427",
-        "api_match_id": "api_tennis:12131427",
-        "date": "2026-05-28",
-        "gender": "men",
-        "level": "itf",
-        "loser_api_key": "men:api:2453",
-        "loser_api_name": "Naoki Tajima",
-        "loser_mapping_status": "auto_mapped",
-        "loser_sackmann_key": "men:sackmann:207248",
-        "reason": "one_mapped",
-        "round": "M15 Gimcheon 2 - 1/8-finals",
-        "source": "api_tennis",
-        "surface": "hard",
-        "tourney_name": "M15 Gimcheon 2",
-        "winner_api_key": "men:api:10295",
-        "winner_api_name": "Sanhui Shin",
-        "winner_mapping_status": "unmapped",
-        "winner_sackmann_key": ""
+        "date": "2023-06-12",
+        "loser_sackmann_key": "women:sackmann:215571",
+        "match_id": "sackmann:women:2023-2061:863:215983:215571",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:215983"
       },
       {
-        "api_event_key": "12131445",
-        "api_match_id": "api_tennis:12131445",
-        "date": "2026-05-28",
-        "gender": "men",
-        "level": "itf",
-        "loser_api_key": "men:api:74446",
-        "loser_api_name": "Dmytro Shirokyi",
-        "loser_mapping_status": "unmapped",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "M25 Kursumlijska Banja - 1/8-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "M25 Kursumlijska Banja",
-        "winner_api_key": "men:api:13386",
-        "winner_api_name": "Svyatoslav Gulin",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:210425"
+        "date": "2023-06-12",
+        "loser_sackmann_key": "women:sackmann:221515",
+        "match_id": "sackmann:women:2023-2061:864:221178:221515",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:221178"
       },
       {
-        "api_event_key": "12131566",
-        "api_match_id": "api_tennis:12131566",
-        "date": "2026-05-28",
-        "gender": "women",
-        "level": "itf",
-        "loser_api_key": "women:api:20381",
-        "loser_api_name": "Kateryna Diatlova",
-        "loser_mapping_status": "unmapped",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "W15 Kayseri 2 - 1/8-finals",
-        "source": "api_tennis",
-        "surface": "hard",
-        "tourney_name": "W15 Kayseri 2",
-        "winner_api_key": "women:api:39124",
-        "winner_api_name": "Asylzhan Arystanbekova",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:237465"
+        "date": "2023-06-12",
+        "loser_sackmann_key": "women:sackmann:203521",
+        "match_id": "sackmann:women:2023-2061:865:221039:203521",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:221039"
       },
       {
-        "api_event_key": "12131615",
-        "api_match_id": "api_tennis:12131615",
-        "date": "2026-05-28",
-        "gender": "men",
-        "level": "itf",
-        "loser_api_key": "men:api:40212",
-        "loser_api_name": "Daniel Salazar",
-        "loser_mapping_status": "unmapped",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "M15 Brcko - 1/8-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "M15 Brcko",
-        "winner_api_key": "men:api:700",
-        "winner_api_name": "Amaury Raynel",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:209985"
+        "date": "2023-06-12",
+        "loser_sackmann_key": "women:sackmann:201621",
+        "match_id": "sackmann:women:2023-2061:866:221985:201621",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:221985"
       },
       {
-        "api_event_key": "12131644",
-        "api_match_id": "api_tennis:12131644",
-        "date": "2026-05-28",
-        "gender": "men",
-        "level": "itf",
-        "loser_api_key": "men:api:8655",
-        "loser_api_name": "Nazim Makhlouf",
-        "loser_mapping_status": "unmapped",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "M15 Monastir 20 - 1/8-finals",
-        "source": "api_tennis",
-        "surface": "hard",
-        "tourney_name": "M15 Monastir 20",
-        "winner_api_key": "men:api:804",
-        "winner_api_name": "Toufik Sahtali",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:200086"
+        "date": "2023-06-12",
+        "loser_sackmann_key": "women:sackmann:220733",
+        "match_id": "sackmann:women:2023-2061:867:214521:220733",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:214521"
       },
       {
-        "api_event_key": "12131660",
-        "api_match_id": "api_tennis:12131660",
-        "date": "2026-05-28",
-        "gender": "men",
-        "level": "itf",
-        "loser_api_key": "men:api:14638",
-        "loser_api_name": "Nikita Mashtakov",
-        "loser_mapping_status": "unmapped",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "M25 Bol 2 - 1/8-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "M25 Bol 2",
-        "winner_api_key": "men:api:4061",
-        "winner_api_name": "Andrey Chepelev",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:200184"
+        "date": "2023-06-12",
+        "loser_sackmann_key": "women:sackmann:206037",
+        "match_id": "sackmann:women:2023-2061:868:215983:206037",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:215983"
       },
       {
-        "api_event_key": "12131673",
-        "api_match_id": "api_tennis:12131673",
-        "date": "2026-05-28",
-        "gender": "women",
-        "level": "itf",
-        "loser_api_key": "women:api:38938",
-        "loser_api_name": "Maria Mikhaylova",
-        "loser_mapping_status": "unmapped",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "W15 Tsaghkadzor 2 - 1/8-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "W15 Tsaghkadzor 2",
-        "winner_api_key": "women:api:52840",
-        "winner_api_name": "Anna Sedysheva",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:264073"
+        "date": "2023-06-12",
+        "loser_sackmann_key": "women:sackmann:221178",
+        "match_id": "sackmann:women:2023-2061:869:221039:221178",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:221039"
       },
       {
-        "api_event_key": "12131711",
-        "api_match_id": "api_tennis:12131711",
-        "date": "2026-05-28",
-        "gender": "men",
-        "level": "grand_slam",
-        "loser_api_key": "men:api:102985",
-        "loser_api_name": "X. Massotte",
-        "loser_mapping_status": "unmapped",
-        "loser_sackmann_key": "",
-        "reason": "none_mapped",
-        "round": "Boys French Open - Semi-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "French Open",
-        "winner_api_key": "men:api:85065",
-        "winner_api_name": "Isik Kosaner Kaan",
-        "winner_mapping_status": "unmapped",
-        "winner_sackmann_key": ""
+        "date": "2023-07-10",
+        "loser_sackmann_key": "women:sackmann:225858",
+        "match_id": "sackmann:women:2023-2071:289:221073:225858",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:221073"
       },
       {
-        "api_event_key": "12131712",
-        "api_match_id": "api_tennis:12131712",
-        "date": "2026-05-28",
-        "gender": "men",
-        "level": "grand_slam",
-        "loser_api_key": "men:api:8579",
-        "loser_api_name": "M. Cho",
-        "loser_mapping_status": "unmapped",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "Boys French Open - Semi-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "French Open",
-        "winner_api_key": "men:api:88816",
-        "winner_api_name": "Jan Sadzik",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:214087"
+        "date": "2023-07-10",
+        "loser_sackmann_key": "women:sackmann:201435",
+        "match_id": "sackmann:women:2023-2071:291:236955:201435",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:236955"
       },
       {
-        "api_event_key": "12131713",
-        "api_match_id": "api_tennis:12131713",
-        "date": "2026-05-28",
-        "gender": "men",
-        "level": "grand_slam",
-        "loser_api_key": "men:api:102986",
-        "loser_api_name": "M. Vukovic",
-        "loser_mapping_status": "unmapped",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "Boys French Open - Semi-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "French Open",
-        "winner_api_key": "men:api:102705",
-        "winner_api_name": "Ntungamili Raguin",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:214547"
+        "date": "2023-07-10",
+        "loser_sackmann_key": "women:sackmann:216139",
+        "match_id": "sackmann:women:2023-2071:293:203435:216139",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:203435"
       },
       {
-        "api_event_key": "12131717",
-        "api_match_id": "api_tennis:12131717",
-        "date": "2026-05-28",
-        "gender": "men",
-        "level": "grand_slam",
-        "loser_api_key": "men:api:102987",
-        "loser_api_name": "T. Kawaguchi",
-        "loser_mapping_status": "unmapped",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "Boys French Open - Semi-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "French Open",
-        "winner_api_key": "men:api:92494",
-        "winner_api_name": "F. Roussel",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:214222"
+        "date": "2023-07-10",
+        "loser_sackmann_key": "women:sackmann:223323",
+        "match_id": "sackmann:women:2023-2071:295:214020:223323",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:214020"
       },
       {
-        "api_event_key": "12131718",
-        "api_match_id": "api_tennis:12131718",
-        "date": "2026-05-28",
-        "gender": "men",
-        "level": "grand_slam",
-        "loser_api_key": "men:api:53732",
-        "loser_api_name": "A. Blus",
-        "loser_mapping_status": "unmapped",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "Boys French Open - Semi-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "French Open",
-        "winner_api_key": "men:api:76358",
-        "winner_api_name": "L. Yunez",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "men:sackmann:214303"
+        "date": "2023-07-10",
+        "loser_sackmann_key": "women:sackmann:215798",
+        "match_id": "sackmann:women:2023-2071:297:221073:215798",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:221073"
       },
       {
-        "api_event_key": "12131720",
-        "api_match_id": "api_tennis:12131720",
-        "date": "2026-05-28",
-        "gender": "men",
-        "level": "grand_slam",
-        "loser_api_key": "men:api:102989",
-        "loser_api_name": "E. Giurescu",
-        "loser_mapping_status": "unmapped",
-        "loser_sackmann_key": "",
-        "reason": "none_mapped",
-        "round": "Boys French Open - Semi-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "French Open",
-        "winner_api_key": "men:api:101032",
-        "winner_api_name": "S. Azam",
-        "winner_mapping_status": "unmapped",
-        "winner_sackmann_key": ""
+        "date": "2023-07-10",
+        "loser_sackmann_key": "women:sackmann:236955",
+        "match_id": "sackmann:women:2023-2071:298:220722:236955",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:220722"
       },
       {
-        "api_event_key": "12131721",
-        "api_match_id": "api_tennis:12131721",
-        "date": "2026-05-28",
-        "gender": "men",
-        "level": "grand_slam",
-        "loser_api_key": "men:api:102990",
-        "loser_api_name": "A. Dubreuil",
-        "loser_mapping_status": "unmapped",
-        "loser_sackmann_key": "",
-        "reason": "none_mapped",
-        "round": "Boys French Open - Semi-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "French Open",
-        "winner_api_key": "men:api:102991",
-        "winner_api_name": "C. Thies",
-        "winner_mapping_status": "unmapped",
-        "winner_sackmann_key": ""
+        "date": "2023-07-10",
+        "loser_sackmann_key": "women:sackmann:214604",
+        "match_id": "sackmann:women:2023-2071:299:203435:214604",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:203435"
       },
       {
-        "api_event_key": "12131725",
-        "api_match_id": "api_tennis:12131725",
-        "date": "2026-05-28",
-        "gender": "men",
-        "level": "grand_slam",
-        "loser_api_key": "men:api:80824",
-        "loser_api_name": "Eudald Gonzalez",
-        "loser_mapping_status": "auto_mapped",
-        "loser_sackmann_key": "men:sackmann:214337",
-        "reason": "one_mapped",
-        "round": "Boys French Open - Semi-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "French Open",
-        "winner_api_key": "men:api:95164",
-        "winner_api_name": "O. Majdandzic",
-        "winner_mapping_status": "unmapped",
-        "winner_sackmann_key": ""
+        "date": "2023-07-10",
+        "loser_sackmann_key": "women:sackmann:214020",
+        "match_id": "sackmann:women:2023-2071:300:206124:214020",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:206124"
       },
       {
-        "api_event_key": "12131726",
-        "api_match_id": "api_tennis:12131726",
-        "date": "2026-05-28",
-        "gender": "men",
-        "level": "grand_slam",
-        "loser_api_key": "men:api:78441",
-        "loser_api_name": "Kunanan Pantaratorn",
-        "loser_mapping_status": "auto_mapped",
-        "loser_sackmann_key": "men:sackmann:213979",
-        "reason": "one_mapped",
-        "round": "Boys French Open - Semi-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "French Open",
-        "winner_api_key": "men:api:102992",
-        "winner_api_name": "N. Raghuram",
-        "winner_mapping_status": "unmapped",
-        "winner_sackmann_key": ""
+        "date": "2023-07-17",
+        "loser_sackmann_key": "women:sackmann:210645",
+        "match_id": "sackmann:women:2023-2063:858:214599:210645",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:214599"
       },
       {
-        "api_event_key": "12131732",
-        "api_match_id": "api_tennis:12131732",
-        "date": "2026-05-28",
-        "gender": "women",
-        "level": "grand_slam",
-        "loser_api_key": "women:api:58205",
-        "loser_api_name": "N. Lee",
-        "loser_mapping_status": "ambiguous",
-        "loser_sackmann_key": "",
-        "reason": "one_mapped",
-        "round": "Girls French Open - Semi-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "French Open",
-        "winner_api_key": "women:api:90816",
-        "winner_api_name": "Ilary Pistola",
-        "winner_mapping_status": "auto_mapped",
-        "winner_sackmann_key": "women:sackmann:270265"
+        "date": "2023-07-17",
+        "loser_sackmann_key": "women:sackmann:203429",
+        "match_id": "sackmann:women:2023-2063:860:214600:203429",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:214600"
       },
       {
-        "api_event_key": "12131733",
-        "api_match_id": "api_tennis:12131733",
-        "date": "2026-05-28",
-        "gender": "women",
-        "level": "grand_slam",
-        "loser_api_key": "women:api:74806",
-        "loser_api_name": "Zhang-Qian Wei",
-        "loser_mapping_status": "auto_mapped",
-        "loser_sackmann_key": "women:sackmann:268781",
-        "reason": "one_mapped",
-        "round": "Girls French Open - Semi-finals",
-        "source": "api_tennis",
-        "surface": "clay",
-        "tourney_name": "French Open",
-        "winner_api_key": "women:api:102993",
-        "winner_api_name": "E. Dotsenko",
-        "winner_mapping_status": "unmapped",
-        "winner_sackmann_key": ""
+        "date": "2023-07-17",
+        "loser_sackmann_key": "women:sackmann:260254",
+        "match_id": "sackmann:women:2023-2063:861:221073:260254",
+        "reason": "duplicate_after_alias",
+        "source": "sackmann",
+        "winner_sackmann_key": "women:sackmann:221073"
       }
     ]
   },
   "source": "canonical_combined",
   "sources": {
-    "api_tennis": 4013,
-    "sackmann": 223144
+    "api_tennis": 4770,
+    "sackmann": 222314
   },
   "surfaces": {
     "carpet": 2314,
-    "clay": 98435,
-    "grass": 5398,
-    "hard": 121009,
-    "unknown": 1
+    "clay": 98357,
+    "grass": 5421,
+    "hard": 120898,
+    "unknown": 94
   },
   "year_files": [
     {
-      "created_at": "2026-06-16T22:48:01+00:00",
-      "matches": 68354,
+      "created_at": "2026-06-18T12:21:18+00:00",
+      "matches": 68250,
       "path": "data/canonical/tle_matches_2023.jsonl.gz",
       "year": 2023
     },
     {
-      "created_at": "2026-06-16T22:48:03+00:00",
-      "matches": 74191,
+      "created_at": "2026-06-18T12:21:20+00:00",
+      "matches": 73997,
       "path": "data/canonical/tle_matches_2024.jsonl.gz",
       "year": 2024
     },
     {
-      "created_at": "2026-06-16T22:48:04+00:00",
-      "matches": 56263,
+      "created_at": "2026-06-18T12:21:21+00:00",
+      "matches": 55948,
       "path": "data/canonical/tle_matches_2025.jsonl.gz",
       "year": 2025
     },
     {
-      "created_at": "2026-06-16T22:48:05+00:00",
-      "matches": 28349,
+      "created_at": "2026-06-18T12:21:22+00:00",
+      "matches": 28889,
       "path": "data/canonical/tle_matches_2026.jsonl.gz",
       "year": 2026
     }

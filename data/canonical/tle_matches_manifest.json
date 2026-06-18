@@ -1,43 +1,52 @@
 {
   "counters": {
-    "api_added": 4013,
-    "api_added_level_atp_wta": 224,
-    "api_added_level_challenger": 645,
-    "api_added_level_grand_slam": 275,
-    "api_added_level_itf": 2224,
-    "api_added_level_qualifying": 645,
-    "api_added_surface_clay": 2231,
-    "api_added_surface_grass": 449,
-    "api_added_surface_hard": 1332,
-    "api_added_surface_unknown": 1,
-    "api_duplicate_sackmann": 71,
-    "api_duplicate_strategy_date_gender_players": 71,
-    "api_input": 4366,
-    "api_mapping_both_mapped": 4084,
+    "api_added": 4770,
+    "api_added_level_atp_wta": 280,
+    "api_added_level_challenger": 717,
+    "api_added_level_grand_slam": 283,
+    "api_added_level_itf": 2779,
+    "api_added_level_qualifying": 711,
+    "api_added_surface_clay": 2606,
+    "api_added_surface_grass": 525,
+    "api_added_surface_hard": 1545,
+    "api_added_surface_unknown": 94,
+    "api_duplicate_sackmann": 72,
+    "api_duplicate_strategy_date_gender_players": 72,
+    "api_input": 5156,
+    "api_mapping_both_mapped": 4842,
     "api_mapping_none_mapped": 17,
-    "api_mapping_one_mapped": 265,
+    "api_mapping_one_mapped": 297,
+    "player_aliases_loaded": 152,
+    "sackmann_alias_resolved_matches": 1540,
+    "sackmann_alias_resolved_player_keys": 1549,
+    "sackmann_duplicate_after_alias_skipped": 830,
     "sackmann_input": 223145,
-    "sackmann_kept": 223144,
+    "sackmann_kept": 222314,
     "sackmann_skipped_winner_loser_same_player_key": 1
   },
   "genders": {
-    "men": 112696,
-    "women": 114461
+    "men": 113107,
+    "women": 113977
   },
-  "generated_at": "2026-06-16T22:48:05+00:00",
+  "generated_at": "2026-06-18T12:21:22+00:00",
   "inputs": {
     "api_manifest": "data/source/api_tennis/manifest.json",
+    "player_aliases": "data/metadata/sackmann/player_aliases.json",
     "player_mapping": "data/metadata/api_tennis/player_mapping.json",
     "sackmann_manifest": "data/source/sackmann/manifest.json"
   },
   "levels": {
-    "atp_wta": 19593,
-    "challenger": 41408,
-    "grand_slam": 6743,
-    "itf": 158768,
-    "qualifying": 645
+    "atp_wta": 19647,
+    "challenger": 40652,
+    "grand_slam": 6751,
+    "itf": 159323,
+    "qualifying": 711
   },
-  "matches": 227157,
+  "matches": 227084,
+  "player_aliases": {
+    "loaded": 152,
+    "path": "data/metadata/sackmann/player_aliases.json"
+  },
   "policy": {
     "api_source_policy": "add only API matches where both players are auto_mapped/manual_mapped and no Sackmann duplicate/conflict exists",
     "duplicate_detection": [
@@ -45,42 +54,43 @@
       "date+gender+mapped_unordered_players",
       "safe refinement for rare multi-candidate duplicates"
     ],
+    "player_alias_policy": "Sackmann player aliases are resolved before validation, dedupe, and API merge.",
     "primary_source": "sackmann"
   },
   "source": "canonical_combined",
   "sources": {
-    "api_tennis": 4013,
-    "sackmann": 223144
+    "api_tennis": 4770,
+    "sackmann": 222314
   },
   "surfaces": {
     "carpet": 2314,
-    "clay": 98435,
-    "grass": 5398,
-    "hard": 121009,
-    "unknown": 1
+    "clay": 98357,
+    "grass": 5421,
+    "hard": 120898,
+    "unknown": 94
   },
   "year_files": [
     {
-      "created_at": "2026-06-16T22:48:01+00:00",
-      "matches": 68354,
+      "created_at": "2026-06-18T12:21:18+00:00",
+      "matches": 68250,
       "path": "data/canonical/tle_matches_2023.jsonl.gz",
       "year": 2023
     },
     {
-      "created_at": "2026-06-16T22:48:03+00:00",
-      "matches": 74191,
+      "created_at": "2026-06-18T12:21:20+00:00",
+      "matches": 73997,
       "path": "data/canonical/tle_matches_2024.jsonl.gz",
       "year": 2024
     },
     {
-      "created_at": "2026-06-16T22:48:04+00:00",
-      "matches": 56263,
+      "created_at": "2026-06-18T12:21:21+00:00",
+      "matches": 55948,
       "path": "data/canonical/tle_matches_2025.jsonl.gz",
       "year": 2025
     },
     {
-      "created_at": "2026-06-16T22:48:05+00:00",
-      "matches": 28349,
+      "created_at": "2026-06-18T12:21:22+00:00",
+      "matches": 28889,
       "path": "data/canonical/tle_matches_2026.jsonl.gz",
       "year": 2026
     }
