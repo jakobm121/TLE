@@ -33,6 +33,39 @@ def load_player_aliases() -> dict[str, str]:
     return aliases
 
 
+def first_nonempty(row: dict[str, Any], keys: list[str]) -> str:
+    for key in keys:
+        value = str(row.get(key) or "").strip()
+        if value:
+            return value
+    return ""
+
+
+def get_winner_key(row: dict[str, Any]) -> str:
+    return first_nonempty(row, ["winner_player_key", "winner_key", "winner_canonical_key"])
+
+
+def get_loser_key(row: dict[str, Any]) -> str:
+    return first_nonempty(row, ["loser_player_key", "loser_key", "loser_canonical_key"])
+
+
+def set_winner_key(row: dict[str, Any], value: str) -> None:
+    # Keep the pipeline's standard field, but also update fallback fields if they exist.
+    row["winner_player_key"] = value
+    if "winner_key" in row:
+        row["winner_key"] = value
+    if "winner_canonical_key" in row:
+        row["winner_canonical_key"] = value
+
+
+def set_loser_key(row: dict[str, Any], value: str) -> None:
+    row["loser_player_key"] = value
+    if "loser_key" in row:
+        row["loser_key"] = value
+    if "loser_canonical_key" in row:
+        row["loser_canonical_key"] = value
+
+
 def resolve_alias(player_key: str, aliases: dict[str, str], counters: Counter) -> str:
     original = str(player_key or "").strip()
     if not original:
@@ -57,23 +90,32 @@ def resolve_alias(player_key: str, aliases: dict[str, str], counters: Counter) -
 def apply_aliases_to_row(row: dict[str, Any], aliases: dict[str, str], counters: Counter) -> dict[str, Any]:
     out = dict(row)
 
-    winner_old = str(out.get("winner_player_key") or "").strip()
-    loser_old = str(out.get("loser_player_key") or "").strip()
+    winner_old = get_winner_key(out)
+    loser_old = get_loser_key(out)
+
+    if not winner_old:
+        counters["missing_winner_player_key"] += 1
+    if not loser_old:
+        counters["missing_loser_player_key"] += 1
 
     winner_new = resolve_alias(winner_old, aliases, counters)
     loser_new = resolve_alias(loser_old, aliases, counters)
 
     changed = False
 
-    if winner_new != winner_old:
+    if winner_old and winner_new != winner_old:
         out["winner_player_key_original"] = winner_old
-        out["winner_player_key"] = winner_new
+        set_winner_key(out, winner_new)
         changed = True
+    elif winner_old:
+        set_winner_key(out, winner_old)
 
-    if loser_new != loser_old:
+    if loser_old and loser_new != loser_old:
         out["loser_player_key_original"] = loser_old
-        out["loser_player_key"] = loser_new
+        set_loser_key(out, loser_new)
         changed = True
+    elif loser_old:
+        set_loser_key(out, loser_old)
 
     if changed:
         counters["alias_resolved_matches"] += 1
@@ -82,16 +124,26 @@ def apply_aliases_to_row(row: dict[str, Any], aliases: dict[str, str], counters:
 
 
 def match_dedupe_key(row: dict[str, Any]) -> tuple[Any, ...]:
+    winner_key = get_winner_key(row)
+    loser_key = get_loser_key(row)
+
     return (
-        row.get("date"),
+        row.get("date") or row.get("match_date"),
         row.get("gender"),
         row.get("level"),
         row.get("surface"),
         row.get("tournament") or row.get("event_name") or row.get("tourney_name"),
         row.get("round"),
-        row.get("winner_player_key"),
-        row.get("loser_player_key"),
+        winner_key,
+        loser_key,
         row.get("score"),
+    )
+
+
+def row_sort_key(row: dict[str, Any]) -> tuple[Any, ...]:
+    return (
+        row.get("date") or row.get("match_date") or "",
+        row.get("match_id") or row.get("source_match_id") or "",
     )
 
 
@@ -116,8 +168,17 @@ def main() -> None:
 
             row2 = apply_aliases_to_row(row, aliases, counters)
 
-            if row2.get("winner_player_key") == row2.get("loser_player_key"):
+            winner_key = get_winner_key(row2)
+            loser_key = get_loser_key(row2)
+
+            # Only skip winner==loser when both keys are present. The previous patch
+            # incorrectly skipped rows where both were missing/empty.
+            if winner_key and loser_key and winner_key == loser_key:
                 counters["winner_loser_same_after_alias_skipped"] += 1
+                continue
+
+            if not winner_key or not loser_key:
+                counters["missing_player_key_rows_skipped"] += 1
                 continue
 
             dedupe_key = match_dedupe_key(row2)
@@ -127,7 +188,8 @@ def main() -> None:
 
             seen_match_keys.add(dedupe_key)
 
-            by_year[int(row2["year"])].append(row2)
+            year = int(row2.get("year") or str(row2.get("date") or row2.get("match_date") or "")[:4])
+            by_year[year].append(row2)
 
             counters["canonical_matches"] += 1
             counters[f"source_{row2.get('source', 'unknown')}"] += 1
@@ -137,7 +199,7 @@ def main() -> None:
 
     year_files = []
     for year, rows in sorted(by_year.items()):
-        rows.sort(key=lambda r: (r["date"], r["match_id"]))
+        rows.sort(key=row_sort_key)
 
         path = CANONICAL_DIR / f"tle_matches_{year}.jsonl.gz"
         count = write_jsonl_gz(path, rows)
