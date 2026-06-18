@@ -8,7 +8,7 @@
   },
   "api_players": 3116,
   "counters": {
-    "ambiguous": 19,
+    "ambiguous": 69,
     "api_gender_men": 1687,
     "api_gender_women": 1429,
     "api_player_cache_entries": 5250,
@@ -17,15 +17,15 @@
     "api_player_cache_with_full_name": 2591,
     "api_player_cache_with_short_name": 5250,
     "api_players": 3116,
-    "auto_mapped": 2941,
+    "auto_mapped": 2892,
     "player_aliases_loaded": 152,
-    "rebuild_auto_mapping": 0,
+    "rebuild_auto_mapping": 1,
     "sackmann_alias_candidate_created_from_alias": 147,
     "sackmann_alias_candidate_merged": 4,
     "sackmann_candidate_alias_resolved_player_keys": 151,
-    "unmapped": 156
+    "unmapped": 155
   },
-  "generated_at": "2026-06-18T10:32:24+00:00",
+  "generated_at": "2026-06-18T10:43:51+00:00",
   "issues_total": 0,
   "outputs": {
     "candidates_csv": "data/reports/api_tennis/player_mapping_candidates.csv",
@@ -35,7 +35,7 @@
     "player_aliases_json": "data/metadata/sackmann/player_aliases.json",
     "review_csv": "data/reports/api_tennis/player_mapping_review.csv"
   },
-  "review_needed": 175,
+  "review_needed": 224,
   "sackmann_players": 11894,
   "status": "ok"
 }

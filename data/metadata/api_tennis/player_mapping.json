@@ -6,7 +6,7 @@
     "with_full_name": 2591,
     "with_short_name": 5250
   },
-  "generated_at": "2026-06-18T10:31:54+00:00",
+  "generated_at": "2026-06-18T10:43:22+00:00",
   "mapping": {
     "men:api:100041": {
       "api_levels": {
@@ -552,12 +552,12 @@
       "api_surfaces": {
         "hard": 1
       },
-      "confidence": 0.926014,
+      "confidence": 0.921792,
       "gender": "men",
-      "margin": 0.926014,
-      "method": "initial_surname",
-      "sackmann_player_key": "men:sackmann:108717",
-      "status": "auto_mapped"
+      "margin": 0.921792,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "men:api:10215": {
       "api_levels": {
@@ -1062,12 +1062,12 @@
       "api_surfaces": {
         "hard": 1
       },
-      "confidence": 0.919765,
+      "confidence": 0.921099,
       "gender": "men",
-      "margin": 0.919765,
-      "method": "initial_surname",
-      "sackmann_player_key": "men:sackmann:214604",
-      "status": "auto_mapped"
+      "margin": 0.921099,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "men:api:102926": {
       "api_levels": {
@@ -1307,12 +1307,12 @@
       "api_surfaces": {
         "clay": 1
       },
-      "confidence": 0.93167,
+      "confidence": 0.921099,
       "gender": "men",
-      "margin": 0.93167,
-      "method": "initial_surname",
-      "sackmann_player_key": "men:sackmann:214599",
-      "status": "auto_mapped"
+      "margin": 0.921099,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "men:api:102963": {
       "api_levels": {
@@ -1923,12 +1923,12 @@
       "api_surfaces": {
         "clay": 1
       },
-      "confidence": 0.924527,
+      "confidence": 0.921099,
       "gender": "men",
-      "margin": 0.924527,
-      "method": "initial_surname",
-      "sackmann_player_key": "men:sackmann:214594",
-      "status": "auto_mapped"
+      "margin": 0.921099,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "men:api:10334": {
       "api_levels": {
@@ -2673,12 +2673,12 @@
       "api_surfaces": {
         "unknown": 1
       },
-      "confidence": 0.950044,
+      "confidence": 0.920693,
       "gender": "men",
-      "margin": 0.950044,
-      "method": "initial_surname",
-      "sackmann_player_key": "men:sackmann:214581",
-      "status": "auto_mapped"
+      "margin": 0.920693,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "men:api:104108": {
       "api_levels": {
@@ -10942,12 +10942,12 @@
       "api_surfaces": {
         "hard": 2
       },
-      "confidence": 0.917895,
+      "confidence": 0.921609,
       "gender": "men",
-      "margin": 0.917895,
-      "method": "initial_surname",
-      "sackmann_player_key": "men:sackmann:210616",
-      "status": "auto_mapped"
+      "margin": 0.921609,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "men:api:23091": {
       "api_levels": {
@@ -11734,12 +11734,12 @@
         "hard": 1,
         "unknown": 1
       },
-      "confidence": 0.917386,
+      "confidence": 0.921386,
       "gender": "men",
-      "margin": 0.917386,
-      "method": "initial_surname",
-      "sackmann_player_key": "men:sackmann:210490",
-      "status": "auto_mapped"
+      "margin": 0.921386,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "men:api:25650": {
       "api_levels": {
@@ -12451,12 +12451,12 @@
       "api_surfaces": {
         "hard": 1
       },
-      "confidence": 0.0,
+      "confidence": 0.929812,
       "gender": "men",
-      "margin": null,
-      "method": "no_candidate",
+      "margin": 0.929812,
+      "method": "expanded_initials_surname",
       "sackmann_player_key": null,
-      "status": "unmapped"
+      "status": "ambiguous"
     },
     "men:api:28596": {
       "api_levels": {
@@ -17901,12 +17901,12 @@
       "api_surfaces": {
         "hard": 6
       },
-      "confidence": 0.931722,
+      "confidence": 0.922303,
       "gender": "men",
-      "margin": 0.931722,
-      "method": "initial_surname",
-      "sackmann_player_key": "men:sackmann:212061",
-      "status": "auto_mapped"
+      "margin": 0.922303,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "men:api:4077": {
       "api_levels": {
@@ -21936,12 +21936,12 @@
       "api_surfaces": {
         "clay": 2
       },
-      "confidence": 0.925533,
+      "confidence": 0.922565,
       "gender": "men",
-      "margin": 0.925533,
-      "method": "initial_surname",
-      "sackmann_player_key": "men:sackmann:212625",
-      "status": "auto_mapped"
+      "margin": 0.922565,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "men:api:56893": {
       "api_levels": {
@@ -24286,12 +24286,12 @@
       "api_surfaces": {
         "clay": 1
       },
-      "confidence": 0.928386,
+      "confidence": 0.921386,
       "gender": "men",
-      "margin": 0.928386,
-      "method": "initial_surname",
-      "sackmann_player_key": "men:sackmann:212709",
-      "status": "auto_mapped"
+      "margin": 0.921386,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "men:api:63396": {
       "api_levels": {
@@ -24468,9 +24468,9 @@
       "api_surfaces": {
         "clay": 2
       },
-      "confidence": 0.926519,
+      "confidence": 0.924079,
       "gender": "men",
-      "margin": 0.00244,
+      "margin": 0.002288,
       "method": "initial_surname",
       "sackmann_player_key": null,
       "status": "ambiguous"
@@ -29491,12 +29491,12 @@
       "api_surfaces": {
         "clay": 1
       },
-      "confidence": 0.944862,
+      "confidence": 0.921792,
       "gender": "men",
-      "margin": 0.944862,
-      "method": "initial_surname",
-      "sackmann_player_key": "men:sackmann:213546",
-      "status": "auto_mapped"
+      "margin": 0.000182,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "men:api:74738": {
       "api_levels": {
@@ -30006,12 +30006,12 @@
       "api_surfaces": {
         "hard": 1
       },
-      "confidence": 0.928961,
+      "confidence": 0.921099,
       "gender": "men",
-      "margin": 0.928961,
-      "method": "initial_surname",
-      "sackmann_player_key": "men:sackmann:213597",
-      "status": "auto_mapped"
+      "margin": 0.921099,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "men:api:76018": {
       "api_levels": {
@@ -32095,12 +32095,12 @@
       "api_surfaces": {
         "clay": 1
       },
-      "confidence": 0.941386,
+      "confidence": 0.921386,
       "gender": "men",
-      "margin": 0.941386,
-      "method": "initial_surname",
-      "sackmann_player_key": "men:sackmann:213854",
-      "status": "auto_mapped"
+      "margin": 0.921386,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "men:api:827": {
       "api_levels": {
@@ -34040,12 +34040,12 @@
       "api_surfaces": {
         "clay": 1
       },
-      "confidence": 0.925826,
+      "confidence": 0.921099,
       "gender": "men",
-      "margin": 0.925826,
-      "method": "initial_surname",
-      "sackmann_player_key": "men:sackmann:214027",
-      "status": "auto_mapped"
+      "margin": 0.921099,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "men:api:87263": {
       "api_levels": {
@@ -35523,12 +35523,12 @@
       "api_surfaces": {
         "clay": 1
       },
-      "confidence": 0.929248,
+      "confidence": 0.921386,
       "gender": "men",
-      "margin": 0.929248,
-      "method": "initial_surname",
-      "sackmann_player_key": "men:sackmann:214212",
-      "status": "auto_mapped"
+      "margin": 0.921386,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "men:api:91507": {
       "api_levels": {
@@ -35861,12 +35861,12 @@
       "api_surfaces": {
         "clay": 2
       },
-      "confidence": 0.949937,
+      "confidence": 0.922079,
       "gender": "men",
-      "margin": 0.949937,
-      "method": "initial_surname",
-      "sackmann_player_key": "men:sackmann:214147",
-      "status": "auto_mapped"
+      "margin": 0.922079,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "men:api:9217": {
       "api_levels": {
@@ -36227,12 +36227,12 @@
       "api_surfaces": {
         "clay": 1
       },
-      "confidence": 0.928386,
+      "confidence": 0.921386,
       "gender": "men",
-      "margin": 0.928386,
-      "method": "initial_surname",
-      "sackmann_player_key": "men:sackmann:214228",
-      "status": "auto_mapped"
+      "margin": 0.921386,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "men:api:92601": {
       "api_levels": {
@@ -38167,12 +38167,12 @@
       "api_surfaces": {
         "clay": 1
       },
-      "confidence": 0.944943,
+      "confidence": 0.921609,
       "gender": "men",
-      "margin": 0.944943,
-      "method": "initial_surname",
-      "sackmann_player_key": "men:sackmann:214443",
-      "status": "auto_mapped"
+      "margin": 0.921609,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:100": {
       "api_levels": {
@@ -38412,12 +38412,12 @@
       "api_surfaces": {
         "hard": 1
       },
-      "confidence": 0.917609,
+      "confidence": 0.921609,
       "gender": "women",
-      "margin": 0.917609,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:270502",
-      "status": "auto_mapped"
+      "margin": 0.921609,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:101399": {
       "api_levels": {
@@ -39613,12 +39613,12 @@
       "api_surfaces": {
         "hard": 1
       },
-      "confidence": 0.941462,
+      "confidence": 0.920693,
       "gender": "women",
-      "margin": 0.941462,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:270564",
-      "status": "auto_mapped"
+      "margin": 0.920693,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:103337": {
       "api_levels": {
@@ -39657,12 +39657,12 @@
       "api_surfaces": {
         "clay": 1
       },
-      "confidence": 0.922765,
+      "confidence": 0.921099,
       "gender": "women",
-      "margin": 0.922765,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:270570",
-      "status": "auto_mapped"
+      "margin": 0.921099,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:103364": {
       "api_levels": {
@@ -39679,12 +39679,12 @@
       "api_surfaces": {
         "clay": 1
       },
-      "confidence": 0.942339,
+      "confidence": 0.921386,
       "gender": "women",
-      "margin": 0.942339,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:267779",
-      "status": "auto_mapped"
+      "margin": 0.921386,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:103371": {
       "api_levels": {
@@ -39701,12 +39701,12 @@
       "api_surfaces": {
         "clay": 2
       },
-      "confidence": 0.932285,
+      "confidence": 0.921609,
       "gender": "women",
-      "margin": 0.932285,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:270569",
-      "status": "auto_mapped"
+      "margin": 0.921609,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:103494": {
       "api_levels": {
@@ -39877,12 +39877,12 @@
       "api_surfaces": {
         "clay": 1
       },
-      "confidence": 0.924467,
+      "confidence": 0.922197,
       "gender": "women",
-      "margin": 0.924467,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:254753",
-      "status": "auto_mapped"
+      "margin": 0.922197,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:103768": {
       "api_levels": {
@@ -40384,12 +40384,12 @@
       "api_surfaces": {
         "clay": 1
       },
-      "confidence": 0.927173,
+      "confidence": 0.921099,
       "gender": "women",
-      "margin": 0.927173,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:269985",
-      "status": "auto_mapped"
+      "margin": 0.921099,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:104151": {
       "api_levels": {
@@ -40472,12 +40472,12 @@
       "api_surfaces": {
         "clay": 1
       },
-      "confidence": 0.939794,
+      "confidence": 0.922079,
       "gender": "women",
-      "margin": 0.939794,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:260104",
-      "status": "auto_mapped"
+      "margin": 0.922079,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:1049": {
       "api_levels": {
@@ -42325,12 +42325,12 @@
       "api_surfaces": {
         "hard": 3
       },
-      "confidence": 0.919561,
+      "confidence": 0.923045,
       "gender": "women",
-      "margin": 0.919561,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:259593",
-      "status": "auto_mapped"
+      "margin": 0.923045,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:13031": {
       "api_levels": {
@@ -51515,10 +51515,10 @@
       "api_surfaces": {
         "hard": 1
       },
-      "confidence": 0.939924,
+      "confidence": 0.923714,
       "gender": "women",
-      "margin": 0.012306,
-      "method": "initial_surname",
+      "margin": 4.3e-05,
+      "method": "multi_initial_surname",
       "sackmann_player_key": null,
       "status": "ambiguous"
     },
@@ -51970,12 +51970,12 @@
       "api_surfaces": {
         "clay": 2
       },
-      "confidence": 0.918769,
+      "confidence": 0.923912,
       "gender": "women",
-      "margin": 0.918769,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:255661",
-      "status": "auto_mapped"
+      "margin": 0.923912,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:35090": {
       "api_levels": {
@@ -54288,12 +54288,12 @@
       "api_surfaces": {
         "clay": 1
       },
-      "confidence": 0.930807,
+      "confidence": 0.923807,
       "gender": "women",
-      "margin": 0.930807,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:261969",
-      "status": "auto_mapped"
+      "margin": 0.923807,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:40517": {
       "api_levels": {
@@ -59776,12 +59776,12 @@
       "api_surfaces": {
         "clay": 1
       },
-      "confidence": 0.931724,
+      "confidence": 0.921946,
       "gender": "women",
-      "margin": 0.931724,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:266477",
-      "status": "auto_mapped"
+      "margin": 0.921946,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:62139": {
       "api_levels": {
@@ -60934,12 +60934,12 @@
       "api_surfaces": {
         "hard": 1
       },
-      "confidence": 0.929738,
+      "confidence": 0.923664,
       "gender": "women",
-      "margin": 0.929738,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:263650",
-      "status": "auto_mapped"
+      "margin": 0.923664,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:66913": {
       "api_levels": {
@@ -62520,12 +62520,12 @@
       "api_surfaces": {
         "clay": 2
       },
-      "confidence": 0.907926,
+      "confidence": 0.922079,
       "gender": "women",
-      "margin": 0.907926,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:267399",
-      "status": "auto_mapped"
+      "margin": 0.922079,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:71086": {
       "api_levels": {
@@ -62949,12 +62949,12 @@
       "api_surfaces": {
         "clay": 1
       },
-      "confidence": 0.921802,
+      "confidence": 0.923135,
       "gender": "women",
-      "margin": 0.921802,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:266731",
-      "status": "auto_mapped"
+      "margin": 0.923135,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:72749": {
       "api_levels": {
@@ -63554,12 +63554,12 @@
       "api_surfaces": {
         "clay": 2
       },
-      "confidence": 0.934222,
+      "confidence": 0.923434,
       "gender": "women",
-      "margin": 0.934222,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:263914",
-      "status": "auto_mapped"
+      "margin": 0.923434,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:74404": {
       "api_levels": {
@@ -63777,12 +63777,12 @@
       "api_surfaces": {
         "hard": 2
       },
-      "confidence": 0.935434,
+      "confidence": 0.923434,
       "gender": "women",
-      "margin": 0.935434,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:264114",
-      "status": "auto_mapped"
+      "margin": 0.923434,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:74878": {
       "api_levels": {
@@ -64294,12 +64294,12 @@
         "clay": 1,
         "hard": 2
       },
-      "confidence": 0.946798,
+      "confidence": 0.923871,
       "gender": "women",
-      "margin": 0.946798,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:263775",
-      "status": "auto_mapped"
+      "margin": 0.923871,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:76954": {
       "api_levels": {
@@ -64361,12 +64361,12 @@
       "api_surfaces": {
         "clay": 1
       },
-      "confidence": 0.942051,
+      "confidence": 0.921099,
       "gender": "women",
-      "margin": 0.942051,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:269888",
-      "status": "auto_mapped"
+      "margin": 0.921099,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:76966": {
       "api_levels": {
@@ -65208,12 +65208,12 @@
         "clay": 1,
         "unknown": 1
       },
-      "confidence": 0.931722,
+      "confidence": 0.922303,
       "gender": "women",
-      "margin": 0.931722,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:266562",
-      "status": "auto_mapped"
+      "margin": 0.922303,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:81652": {
       "api_levels": {
@@ -65589,12 +65589,12 @@
         "clay": 2,
         "hard": 3
       },
-      "confidence": 0.944485,
+      "confidence": 0.922485,
       "gender": "women",
-      "margin": 0.944485,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:267705",
-      "status": "auto_mapped"
+      "margin": 0.922485,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:82868": {
       "api_levels": {
@@ -65877,12 +65877,12 @@
       "api_surfaces": {
         "clay": 1
       },
-      "confidence": 0.908271,
+      "confidence": 0.921099,
       "gender": "women",
-      "margin": 0.908271,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:270121",
-      "status": "auto_mapped"
+      "margin": 0.921099,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:83819": {
       "api_levels": {
@@ -66121,12 +66121,12 @@
       "api_surfaces": {
         "clay": 1
       },
-      "confidence": 0.91933,
+      "confidence": 0.923045,
       "gender": "women",
-      "margin": 0.91933,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:267759",
-      "status": "auto_mapped"
+      "margin": 0.923045,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:84310": {
       "api_levels": {
@@ -66790,12 +66790,12 @@
       "api_surfaces": {
         "unknown": 1
       },
-      "confidence": 0.922651,
+      "confidence": 0.922079,
       "gender": "women",
-      "margin": 0.922651,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:270166",
-      "status": "auto_mapped"
+      "margin": 0.922079,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:85837": {
       "api_levels": {
@@ -67593,12 +67593,12 @@
       "api_surfaces": {
         "clay": 4
       },
-      "confidence": 0.929398,
+      "confidence": 0.922398,
       "gender": "women",
-      "margin": 0.929398,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:267940",
-      "status": "auto_mapped"
+      "margin": 0.922398,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:88189": {
       "api_levels": {
@@ -67615,12 +67615,12 @@
       "api_surfaces": {
         "clay": 1
       },
-      "confidence": 0.925038,
+      "confidence": 0.921609,
       "gender": "women",
-      "margin": 0.925038,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:270188",
-      "status": "auto_mapped"
+      "margin": 0.921609,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:88208": {
       "api_levels": {
@@ -68485,12 +68485,12 @@
       "api_surfaces": {
         "hard": 1
       },
-      "confidence": 0.931226,
+      "confidence": 0.922303,
       "gender": "women",
-      "margin": 0.931226,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:270270",
-      "status": "auto_mapped"
+      "margin": 0.922303,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:9069": {
       "api_levels": {
@@ -68574,12 +68574,12 @@
       "api_surfaces": {
         "clay": 1
       },
-      "confidence": 0.936099,
+      "confidence": 0.921099,
       "gender": "women",
-      "margin": 0.936099,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:270267",
-      "status": "auto_mapped"
+      "margin": 0.921099,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:9092": {
       "api_levels": {
@@ -69431,12 +69431,12 @@
       "api_surfaces": {
         "clay": 1
       },
-      "confidence": 0.915004,
+      "confidence": 0.922398,
       "gender": "women",
-      "margin": 0.915004,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:265618",
-      "status": "auto_mapped"
+      "margin": 0.922398,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:9264": {
       "api_levels": {
@@ -69522,12 +69522,12 @@
       "api_surfaces": {
         "clay": 2
       },
-      "confidence": 0.918079,
+      "confidence": 0.922079,
       "gender": "women",
-      "margin": 0.918079,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:267756",
-      "status": "auto_mapped"
+      "margin": 0.922079,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:92799": {
       "api_levels": {
@@ -70059,12 +70059,12 @@
       "api_surfaces": {
         "clay": 2
       },
-      "confidence": 0.925404,
+      "confidence": 0.921609,
       "gender": "women",
-      "margin": 0.925404,
-      "method": "initial_surname",
-      "sackmann_player_key": "women:sackmann:270401",
-      "status": "auto_mapped"
+      "margin": 0.921609,
+      "method": "multi_initial_surname",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:94519": {
       "api_levels": {
@@ -70437,11 +70437,11 @@
     "performance_note": "Fast version uses indexed candidate pools by gender/name/surname/initial; acceptance thresholds are unchanged.",
     "player_aliases": "data/metadata/sackmann/player_aliases.json",
     "principle": "Accept only high-confidence or unique initial-surname matches; ambiguous candidates are sent to review.",
-    "rebuild_auto_mapping": false
+    "rebuild_auto_mapping": true
   },
   "source": "api_tennis",
   "summary": {
-    "ambiguous": 19,
+    "ambiguous": 69,
     "api_gender_men": 1687,
     "api_gender_women": 1429,
     "api_player_cache_entries": 5250,
@@ -70450,13 +70450,13 @@
     "api_player_cache_with_full_name": 2591,
     "api_player_cache_with_short_name": 5250,
     "api_players": 3116,
-    "auto_mapped": 2941,
+    "auto_mapped": 2892,
     "player_aliases_loaded": 152,
-    "rebuild_auto_mapping": 0,
+    "rebuild_auto_mapping": 1,
     "sackmann_alias_candidate_created_from_alias": 147,
     "sackmann_alias_candidate_merged": 4,
     "sackmann_candidate_alias_resolved_player_keys": 151,
-    "unmapped": 156
+    "unmapped": 155
   },
   "target": "sackmann"
 }
