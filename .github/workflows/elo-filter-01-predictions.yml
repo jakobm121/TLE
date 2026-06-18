@@ -1,0 +1,52 @@
+name: Elo Filter 01 Predictions
+
+on:
+  workflow_dispatch:
+    inputs:
+      picks_source:
+        description: "Ai tennis_predictions.json URL"
+        required: false
+        default: "https://raw.githubusercontent.com/jakobm121/Ai/refs/heads/main/data/tennis_predictions.json"
+      odds_source:
+        description: "Ai tennis_odds_today.json URL"
+        required: false
+        default: "https://raw.githubusercontent.com/jakobm121/Ai/refs/heads/main/data/tennis_odds_today.json"
+
+permissions:
+  contents: write
+
+jobs:
+  elo-filter-predictions:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout TLE repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build Elo filtered predictions
+        run: |
+          python -m tle_machine.elo_filter_predictions \
+            --picks-source "${{ github.event.inputs.picks_source }}" \
+            --odds-source "${{ github.event.inputs.odds_source }}"
+
+      - name: Commit Elo filter predictions
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/elo_filter/predictions.json || true
+          git add data/elo_filter/results.json || true
+          git add data/elo_filter/active_predictions.csv || true
+          git add data/reports/elo_filter/predictions_report.json || true
+
+          if git diff --cached --quiet; then
+            echo "No Elo filter prediction changes to commit."
+          else
+            git commit -m "Update Elo filter predictions"
+            git push
+          fi
