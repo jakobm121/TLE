@@ -1,11 +1,13 @@
 {
   "canonical_matches": 0,
   "counters": {
+    "missing_loser_player_key": 223145,
+    "missing_player_key_rows_skipped": 223145,
+    "missing_winner_player_key": 223145,
     "player_aliases_loaded": 152,
-    "source_rows_seen": 223145,
-    "winner_loser_same_after_alias_skipped": 223145
+    "source_rows_seen": 223145
   },
-  "generated_at": "2026-06-18T09:37:21+00:00",
+  "generated_at": "2026-06-18T09:40:00+00:00",
   "player_aliases": {
     "loaded": 152,
     "path": "data/metadata/sackmann/player_aliases.json"
