@@ -196,6 +196,18 @@ def token_key_from_tokens(ts: list[str]) -> str:
     return " ".join(sorted(t for t in ts if t))
 
 
+def initials_from_token_list(ts: list[str]) -> str:
+    return "".join(t[0] for t in ts if t)
+
+
+def one_char_initial_tokens(ts: list[str]) -> list[str]:
+    return [t for t in ts if len(t) == 1 and t.isalpha()]
+
+
+def non_initial_tokens(ts: list[str]) -> list[str]:
+    return [t for t in ts if len(t) > 1]
+
+
 def tokens(s: str) -> list[str]:
     return tokens_from_norm(normalize_name(s))
 
@@ -271,6 +283,76 @@ def initial_surname_match_pre(api_initial: str, api_surname: str, sack_initial: 
     return bool(api_initial and api_surname and api_surname == sack_surname and api_initial == sack_initial)
 
 
+def multi_initial_surname_match(api_feat: dict[str, Any], sp: "SackPlayer") -> bool:
+    """Candidate-only helper for API short forms such as V. N. Sarganella.
+
+    Requirements:
+    - same surname
+    - API has at least two one-letter initials
+    - those initials appear in Sackmann player's token initials in the same order
+    - at least one non-initial API token overlaps Sackmann tokens; usually the surname
+    """
+    if not api_feat.get("surname") or api_feat.get("surname") != sp.surname:
+        return False
+    api_initials = api_feat.get("initial_tokens") or []
+    if len(api_initials) < 2:
+        return False
+    sp_initials = sp.all_initials or ""
+    pos = -1
+    for ini in api_initials:
+        pos = sp_initials.find(ini, pos + 1)
+        if pos < 0:
+            return False
+    api_non_initial = set(api_feat.get("non_initial_tokens") or [])
+    if not api_non_initial:
+        return False
+    return bool(api_non_initial & set(sp.toks))
+
+
+def expanded_initials_surname_match(api_feat: dict[str, Any], sp: "SackPlayer") -> bool:
+    """Candidate-only helper for API expanded names vs Sackmann initials.
+
+    Example:
+      API       "John Wolf Jeffrey"
+      Sackmann  "J.J. Wolf" / "J J Wolf"
+
+    Requirements:
+    - Sackmann candidate has one-letter initial tokens and a surname
+    - Sackmann surname appears somewhere in the API tokens, even if API order is wrong
+    - the one-letter Sackmann initials can be matched by API non-surname name tokens
+    """
+    api_tokens = api_feat.get("tokens") or []
+    if not api_tokens or not sp.surname:
+        return False
+
+    sp_initial_tokens = one_char_initial_tokens(sp.toks)
+    if len(sp_initial_tokens) < 2:
+        return False
+
+    surname_parts = set(tokens_from_norm(sp.surname))
+    if not surname_parts or not surname_parts.issubset(set(api_tokens)):
+        return False
+
+    api_name_tokens = [t for t in api_tokens if t not in surname_parts and len(t) > 1]
+    if not api_name_tokens:
+        return False
+
+    available_initials = [t[0] for t in api_name_tokens]
+    used = [False] * len(available_initials)
+
+    for ini in sp_initial_tokens:
+        found = False
+        for i, api_ini in enumerate(available_initials):
+            if not used[i] and api_ini == ini:
+                used[i] = True
+                found = True
+                break
+        if not found:
+            return False
+
+    return True
+
+
 @dataclass(slots=True)
 class SackPlayer:
     key: str
@@ -286,6 +368,7 @@ class SackPlayer:
     initial: str = ""
     compact: str = ""
     token_key: str = ""
+    all_initials: str = ""
 
 
 @dataclass(slots=True)
@@ -313,6 +396,7 @@ def decorate_sack_player(sp: SackPlayer) -> SackPlayer:
     sp.initial = sp.toks[0][0] if sp.toks else ""
     sp.compact = compact_initial_from_tokens(sp.toks)
     sp.token_key = token_key_from_tokens(sp.toks)
+    sp.all_initials = initials_from_token_list(sp.toks)
     return sp
 
 
@@ -582,6 +666,9 @@ def api_name_features(name: str) -> dict[str, Any]:
         "initial": ts[0][0] if ts else "",
         "compact": compact_initial_from_tokens(ts),
         "token_key": token_key_from_tokens(ts),
+        "all_initials": initials_from_token_list(ts),
+        "initial_tokens": one_char_initial_tokens(ts),
+        "non_initial_tokens": non_initial_tokens(ts),
     }
 
 
@@ -600,6 +687,18 @@ def score_candidate_features(api_feat: dict[str, Any], sp: SackPlayer) -> tuple[
     # This is strong enough to auto-map when there is no close duplicate.
     if api_feat.get("token_key") and api_feat.get("token_key") == sp.token_key:
         return 0.995, "exact_token_set"
+
+    # Candidate-only: two or more initials + same surname,
+    # e.g. "V. N. Sarganella" -> "Virginia Nora Sarganella".
+    # Keep below AUTO_SCORE_MIN so it lands in review unless another stronger rule applies.
+    if multi_initial_surname_match(api_feat, sp):
+        return 0.920, "multi_initial_surname"
+
+    # Candidate-only: API expanded full name vs Sackmann initials,
+    # e.g. "John Wolf Jeffrey" -> "J.J. Wolf".
+    # Kept below AUTO_SCORE_MIN so it goes to review, not auto-map.
+    if expanded_initials_surname_match(api_feat, sp):
+        return 0.925, "expanded_initials_surname"
 
     if api_feat["compact"] and api_feat["compact"] == sp.compact:
         return 0.970, "exact_initial_form"
