@@ -1,0 +1,71 @@
+{
+  "best": {
+    "accuracy": {
+      "accuracy": 0.641019,
+      "avg_pick_prob": 0.60912,
+      "avg_prob_winner": 0.549098,
+      "brier": 0.220446,
+      "log_loss": 0.630432,
+      "matches": 226990,
+      "model": "sample_aware"
+    },
+    "brier": {
+      "accuracy": 0.641019,
+      "avg_pick_prob": 0.60912,
+      "avg_prob_winner": 0.549098,
+      "brier": 0.220446,
+      "log_loss": 0.630432,
+      "matches": 226990,
+      "model": "sample_aware"
+    },
+    "log_loss": {
+      "accuracy": 0.641019,
+      "avg_pick_prob": 0.60912,
+      "avg_prob_winner": 0.549098,
+      "brier": 0.220446,
+      "log_loss": 0.630432,
+      "matches": 226990,
+      "model": "sample_aware"
+    }
+  },
+  "counters": {
+    "model_rows_blend_60_40": 226990,
+    "model_rows_blend_70_30": 226990,
+    "model_rows_blend_80_20": 226990,
+    "model_rows_level_only": 227084,
+    "model_rows_sample_aware": 226990,
+    "model_rows_surface_only": 226990,
+    "rows": 227084,
+    "skipped_blend_60_40_not_eligible": 94,
+    "skipped_blend_70_30_not_eligible": 94,
+    "skipped_blend_80_20_not_eligible": 94,
+    "skipped_sample_aware_not_eligible": 94,
+    "skipped_surface_only_not_eligible": 94
+  },
+  "generated_at": "2026-06-18T13:26:47+00:00",
+  "models": [
+    "level_only",
+    "surface_only",
+    "blend_80_20",
+    "blend_70_30",
+    "blend_60_40",
+    "sample_aware"
+  ],
+  "notes": [
+    "Rows are evaluated from winner perspective. Accuracy is whether the model gave the winner probability >= 0.5.",
+    "No odds/ROI here: this is model-quality backtest only.",
+    "Surface models skip unknown-surface matches.",
+    "Threshold table uses minimum pre-match level/surface match count across the two players."
+  ],
+  "outputs": {
+    "by_level_csv": "data/backtest/model_quality_by_level.csv",
+    "by_level_surface_csv": "data/backtest/model_quality_by_level_surface.csv",
+    "by_probability_bucket_csv": "data/backtest/model_quality_by_probability_bucket.csv",
+    "by_surface_csv": "data/backtest/model_quality_by_surface.csv",
+    "by_thresholds_csv": "data/backtest/model_quality_by_thresholds.csv",
+    "report_json": "data/reports/backtest/model_quality_report.json",
+    "summary_csv": "data/backtest/model_quality_summary.csv"
+  },
+  "predictions": "data/backtest/historical_predictions.csv.gz",
+  "status": "ok"
+}
