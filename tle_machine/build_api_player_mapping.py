@@ -279,6 +279,57 @@ def token_jaccard_norm(an: str, sn: str) -> float:
     return len(aa & bb) / len(aa | bb)
 
 
+def near_unordered_token_match(api_tokens: list[str], sack_tokens: list[str]) -> bool:
+    """Candidate-only: same number of name tokens, order-insensitive,
+    allowing one small typo/transliteration.
+
+    Example:
+      "garbiela vasilescu arina" -> "arina gabriela vasilescu"
+
+    This is intentionally conservative:
+    - requires 3+ tokens
+    - same token count
+    - at least two exact shared tokens
+    - all remaining tokens must be very similar
+    """
+    api_tokens = [t for t in api_tokens if t]
+    sack_tokens = [t for t in sack_tokens if t]
+    if len(api_tokens) < 3 or len(api_tokens) != len(sack_tokens):
+        return False
+
+    api_remaining = list(api_tokens)
+    sack_remaining = list(sack_tokens)
+    exact_shared = 0
+
+    # Remove exact token matches first, regardless of order.
+    for t in list(api_remaining):
+        if t in sack_remaining:
+            api_remaining.remove(t)
+            sack_remaining.remove(t)
+            exact_shared += 1
+
+    if exact_shared < 2:
+        return False
+
+    if len(api_remaining) != len(sack_remaining):
+        return False
+
+    # Remaining unmatched tokens must be typo-close.
+    for at in api_remaining:
+        best_i = -1
+        best_ratio = 0.0
+        for i, st in enumerate(sack_remaining):
+            r = ratio_norm(at, st)
+            if r > best_ratio:
+                best_ratio = r
+                best_i = i
+        if best_i < 0 or best_ratio < 0.84:
+            return False
+        sack_remaining.pop(best_i)
+
+    return True
+
+
 def initial_surname_match_pre(api_initial: str, api_surname: str, sack_initial: str, sack_surname: str) -> bool:
     return bool(api_initial and api_surname and api_surname == sack_surname and api_initial == sack_initial)
 
@@ -709,6 +760,12 @@ def score_candidate_features(api_feat: dict[str, Any], sp: SackPlayer) -> tuple[
     # Kept below AUTO_SCORE_MIN so it goes to review, not auto-map.
     if expanded_initials_surname_match(api_feat, sp):
         return 0.925, "expanded_initials_surname"
+
+    # Candidate-only: unordered full names with one likely typo,
+    # e.g. "Garbiela Vasilescu Arina" -> "Arina Gabriela Vasilescu".
+    # Kept below AUTO_SCORE_MIN even after match bonus, so it goes to review.
+    if near_unordered_token_match(api_feat.get("tokens") or [], sp.toks):
+        return 0.915, "near_token_set_typo"
 
     r = ratio_norm(an, sn)
     tj = token_jaccard_norm(an, sn)
