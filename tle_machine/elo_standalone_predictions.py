@@ -22,7 +22,14 @@ from zoneinfo import ZoneInfo
 # CONFIG
 # =========================
 
-API_KEY = os.getenv("TENNIS_API_KEY") or os.getenv("API_KEY")
+API_KEY = (
+    os.getenv("TENNIS_API_KEY")
+    or os.getenv("API_KEY")
+    or os.getenv("API_TENNIS_KEY")
+    or os.getenv("APITENNIS_KEY")
+    or os.getenv("API_TENNIS_API_KEY")
+    or os.getenv("TENNIS_VALUE_API_KEY")
+)
 BASE_URL = "https://api.api-tennis.com/tennis/"
 TZ_NAME = "Europe/Ljubljana"
 
@@ -336,7 +343,10 @@ def build_pick_id(event_key: Any, side: str, player_key: Any, avg_odds: Any) -> 
 
 def api_call(params: dict[str, Any], retries: int = 3) -> dict[str, Any]:
     if not API_KEY:
-        raise RuntimeError("Missing TENNIS_API_KEY or API_KEY repository secret.")
+        raise RuntimeError(
+            "Missing API key. Add one of these repository secrets and expose it in the workflow env: "
+            "TENNIS_API_KEY, API_KEY, API_TENNIS_KEY, APITENNIS_KEY, API_TENNIS_API_KEY, TENNIS_VALUE_API_KEY."
+        )
 
     p = {k: v for k, v in params.items() if v is not None}
     p["APIkey"] = API_KEY
@@ -723,18 +733,55 @@ def support_labels(*, selected_side: str, first_form: dict[str, Any], second_for
 # SCANNER
 # =========================
 
+def is_doubles_or_team_match(match: dict[str, Any]) -> bool:
+    text = " ".join([
+        safe_str(match.get("event_type_type")),
+        safe_str(match.get("event_type_key")),
+        safe_str(match.get("tournament_name")),
+        safe_str(match.get("event_first_player")),
+        safe_str(match.get("event_second_player")),
+    ]).lower()
+
+    if "doubles" in text or "double" in text:
+        return True
+    if "teams" in text or "team" in text:
+        return True
+
+    first_name = safe_str(match.get("event_first_player"))
+    second_name = safe_str(match.get("event_second_player"))
+
+    # API-Tennis doubles often look like "Player A/Player B" or "Player A & Player B".
+    if "/" in first_name or "/" in second_name:
+        return True
+    if " / " in first_name or " / " in second_name:
+        return True
+    if " & " in first_name or " & " in second_name:
+        return True
+
+    return False
+
+
 def is_fixture_eligible(match: dict[str, Any]) -> tuple[bool, str]:
     status = safe_str(match.get("event_status")).lower()
+
     if status in {"finished", "cancelled", "postponed", "retired", "walkover"}:
         return False, f"status_{status}"
+
     if safe_str(match.get("event_live")) == "1":
         return False, "live"
+
+    if is_doubles_or_team_match(match):
+        return False, "doubles_or_team"
+
     if not match.get("event_key"):
         return False, "missing_event_key"
+
     if not match.get("first_player_key") or not match.get("second_player_key"):
         return False, "missing_player_key"
+
     if not match.get("event_first_player") or not match.get("event_second_player"):
         return False, "missing_player_name"
+
     return True, ""
 
 
