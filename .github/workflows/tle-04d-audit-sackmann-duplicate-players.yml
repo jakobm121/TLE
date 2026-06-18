@@ -1,0 +1,40 @@
+name: TLE 04d Audit Sackmann Duplicate Players
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit-sackmann-duplicate-players:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Audit Sackmann duplicate players
+        run: |
+          python -m tle_machine.audit_sackmann_duplicate_players
+
+      - name: Commit reports
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/reports/sackmann/duplicate_players_audit.csv || true
+          git add data/reports/sackmann/duplicate_players_audit.json || true
+          git add data/reports/sackmann/player_aliases_template.json || true
+
+          if git diff --cached --quiet; then
+            echo "No duplicate audit changes to commit."
+          else
+            git commit -m "Audit Sackmann duplicate players"
+            git push
+          fi
