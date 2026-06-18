@@ -1,0 +1,57 @@
+name: TLE 16 Backtest External Odds Comparison
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_url:
+        description: "External Ai tennis_results.json URL"
+        required: false
+        default: "https://raw.githubusercontent.com/jakobm121/Ai/refs/heads/main/data/tennis_results.json"
+      min_level_matches:
+        description: "Minimum pre-match level matches for both players"
+        required: false
+        default: "10"
+      min_surface_matches:
+        description: "Minimum pre-match surface matches for both players"
+        required: false
+        default: "5"
+
+permissions:
+  contents: write
+
+jobs:
+  backtest-external-odds-comparison:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout TLE repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Backtest external odds comparison
+        run: |
+          python -m tle_machine.backtest_external_odds_comparison \
+            --source "${{ github.event.inputs.source_url }}" \
+            --min-level-matches "${{ github.event.inputs.min_level_matches }}" \
+            --min-surface-matches "${{ github.event.inputs.min_surface_matches }}"
+
+      - name: Commit external odds comparison
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/backtest/external_odds_comparison.csv || true
+          git add data/backtest/external_odds_comparison_scenarios.csv || true
+          git add data/backtest/external_odds_comparison_by_level.csv || true
+          git add data/reports/backtest/external_odds_comparison_report.json || true
+
+          if git diff --cached --quiet; then
+            echo "No external odds comparison changes to commit."
+          else
+            git commit -m "Backtest external odds comparison"
+            git push
+          fi
