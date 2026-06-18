@@ -192,6 +192,10 @@ def tokens_from_norm(norm: str) -> list[str]:
     return [t for t in (norm or "").split() if t]
 
 
+def token_key_from_tokens(ts: list[str]) -> str:
+    return " ".join(sorted(t for t in ts if t))
+
+
 def tokens(s: str) -> list[str]:
     return tokens_from_norm(normalize_name(s))
 
@@ -281,6 +285,7 @@ class SackPlayer:
     surname: str = ""
     initial: str = ""
     compact: str = ""
+    token_key: str = ""
 
 
 @dataclass(slots=True)
@@ -307,6 +312,7 @@ def decorate_sack_player(sp: SackPlayer) -> SackPlayer:
     sp.surname = surname_key_from_tokens(sp.toks)
     sp.initial = sp.toks[0][0] if sp.toks else ""
     sp.compact = compact_initial_from_tokens(sp.toks)
+    sp.token_key = token_key_from_tokens(sp.toks)
     return sp
 
 
@@ -543,10 +549,11 @@ class SackIndex:
     by_last: dict[tuple[str, str], list[SackPlayer]]
     by_surname: dict[tuple[str, str], list[SackPlayer]]
     by_initial: dict[tuple[str, str], list[SackPlayer]]
+    by_token_key: dict[tuple[str, str], list[SackPlayer]]
 
 
 def build_sack_index(sack_players: dict[str, SackPlayer]) -> SackIndex:
-    idx = SackIndex(defaultdict(list), defaultdict(list), defaultdict(list), defaultdict(list), defaultdict(list), defaultdict(list))
+    idx = SackIndex(defaultdict(list), defaultdict(list), defaultdict(list), defaultdict(list), defaultdict(list), defaultdict(list), defaultdict(list))
     for sp in sack_players.values():
         idx.by_gender[sp.gender].append(sp)
         if sp.norm:
@@ -559,6 +566,8 @@ def build_sack_index(sack_players: dict[str, SackPlayer]) -> SackIndex:
             idx.by_surname[(sp.gender, sp.surname)].append(sp)
         if sp.initial:
             idx.by_initial[(sp.gender, sp.initial)].append(sp)
+        if sp.token_key:
+            idx.by_token_key[(sp.gender, sp.token_key)].append(sp)
     return idx
 
 
@@ -572,6 +581,7 @@ def api_name_features(name: str) -> dict[str, Any]:
         "surname": surname_key_from_tokens(ts),
         "initial": ts[0][0] if ts else "",
         "compact": compact_initial_from_tokens(ts),
+        "token_key": token_key_from_tokens(ts),
     }
 
 
@@ -584,6 +594,12 @@ def score_candidate_features(api_feat: dict[str, Any], sp: SackPlayer) -> tuple[
 
     if an == sn:
         return 1.0, "exact_normalized"
+
+    # Exact same name tokens regardless of order:
+    # e.g. "John Wolf Jeffrey" == "Jeffrey John Wolf".
+    # This is strong enough to auto-map when there is no close duplicate.
+    if api_feat.get("token_key") and api_feat.get("token_key") == sp.token_key:
+        return 0.995, "exact_token_set"
 
     if api_feat["compact"] and api_feat["compact"] == sp.compact:
         return 0.970, "exact_initial_form"
@@ -615,6 +631,8 @@ def candidate_pool_fast(api_player: ApiPlayer, idx: SackIndex) -> list[SackPlaye
     # Strong, cheap candidate sets first.
     if feat["norm"]:
         add_many(idx.by_norm.get((gender, feat["norm"]), []))
+    if feat.get("token_key"):
+        add_many(idx.by_token_key.get((gender, feat["token_key"]), []))
     if feat["compact"]:
         add_many(idx.by_compact.get((gender, feat["compact"]), []))
     if feat["surname"]:
@@ -782,7 +800,7 @@ def build_mapping(api_player_cache_path: Path = API_PLAYER_CACHE_JSON, rebuild_a
             accept = False
             if best_sc >= AUTO_SCORE_MIN and margin >= AUTO_MARGIN_MIN:
                 accept = True
-            elif best_method in {"exact_normalized", "exact_initial_form"} and best_sc >= 0.965 and margin >= 0.020:
+            elif best_method in {"exact_normalized", "exact_token_set", "exact_initial_form"} and best_sc >= 0.965 and margin >= 0.020:
                 accept = True
             elif best_method == "initial_surname" and best_sc >= INITIAL_SURNAME_SCORE_MIN and margin >= AUTO_MARGIN_MIN:
                 same_initial_surname = [c for c in top if c[1] == "initial_surname" and c[0] >= best_sc - AMBIGUOUS_MARGIN]
