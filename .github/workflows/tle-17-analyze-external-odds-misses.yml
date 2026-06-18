@@ -1,0 +1,41 @@
+name: TLE 17 Analyze External Odds Misses
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  analyze-external-odds-misses:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout TLE repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Analyze external odds misses
+        run: |
+          python -m tle_machine.analyze_external_odds_misses
+
+      - name: Commit miss analysis
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/backtest/external_odds_misses.csv || true
+          git add data/backtest/external_odds_unmapped_players.csv || true
+          git add data/backtest/external_odds_no_prediction_match.csv || true
+          git add data/reports/backtest/external_odds_misses_report.json || true
+
+          if git diff --cached --quiet; then
+            echo "No external odds miss analysis changes to commit."
+          else
+            git commit -m "Analyze external odds comparison misses"
+            git push
+          fi
