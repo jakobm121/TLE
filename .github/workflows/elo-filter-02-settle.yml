@@ -38,6 +38,7 @@ jobs:
           git add data/elo_filter/results.json || true
           git add data/elo_filter/active_predictions.csv || true
           git add data/elo_filter/results.csv || true
+          git add data/elo_filter/results.md || true
           git add data/reports/elo_filter/settle_report.json || true
 
           if git diff --cached --quiet; then
