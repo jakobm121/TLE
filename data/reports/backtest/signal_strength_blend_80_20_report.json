@@ -1,0 +1,79 @@
+{
+  "best": {
+    "accuracy": {
+      "accuracy": 0.895308,
+      "avg_pick_prob": 0.842166,
+      "avg_winner_prob": 0.772421,
+      "brier": 0.095773,
+      "log_loss": 0.342706,
+      "matches": 6820,
+      "min_level_matches": 10,
+      "min_surface_matches": 5,
+      "model": "blend_80_20",
+      "pick_prob_threshold": 0.8
+    },
+    "log_loss": {
+      "accuracy": 0.895308,
+      "avg_pick_prob": 0.842166,
+      "avg_winner_prob": 0.772421,
+      "brier": 0.095773,
+      "log_loss": 0.342706,
+      "matches": 6820,
+      "min_level_matches": 10,
+      "min_surface_matches": 5,
+      "model": "blend_80_20",
+      "pick_prob_threshold": 0.8
+    }
+  },
+  "counters": {
+    "eligible": 137671,
+    "rows": 227084,
+    "skipped_min_level_not_met": 79250,
+    "skipped_min_surface_not_met": 10069,
+    "skipped_unknown_surface": 94
+  },
+  "eligible_by_level": {
+    "atp_wta": 12480,
+    "challenger": 25318,
+    "grand_slam": 3931,
+    "itf": 95942
+  },
+  "eligible_by_surface": {
+    "carpet": 329,
+    "clay": 60184,
+    "grass": 1892,
+    "hard": 75266
+  },
+  "generated_at": "2026-06-18T13:50:30+00:00",
+  "min_level_matches": 10,
+  "min_surface_matches": 5,
+  "model": "blend_80_20",
+  "model_col": "prob_blend_80_20_winner",
+  "notes": [
+    "Signal threshold uses selected-side probability: max(p_winner, 1-p_winner).",
+    "Rows are still evaluated from winner perspective, so accuracy means selected side was the winner.",
+    "No odds/ROI here. This checks whether stronger model probability corresponds to higher hit rate."
+  ],
+  "outputs": {
+    "by_level_csv": "data/backtest/signal_strength_blend_80_20_by_level.csv",
+    "by_surface_csv": "data/backtest/signal_strength_blend_80_20_by_surface.csv",
+    "report_json": "data/reports/backtest/signal_strength_blend_80_20_report.json",
+    "summary_csv": "data/backtest/signal_strength_blend_80_20.csv"
+  },
+  "predictions": "data/backtest/historical_predictions.csv.gz",
+  "status": "ok",
+  "thresholds": [
+    0.5,
+    0.52,
+    0.55,
+    0.57,
+    0.6,
+    0.62,
+    0.65,
+    0.67,
+    0.7,
+    0.72,
+    0.75,
+    0.8
+  ]
+}
