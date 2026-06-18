@@ -34,8 +34,7 @@ jobs:
 
       - name: Build standalone Elo predictions
         env:
-          TENNIS_API_KEY: ${{ secrets.TENNIS_API_KEY }}
-          API_KEY: ${{ secrets.API_KEY }}
+          API_TENNIS_KEY: ${{ secrets.API_TENNIS_KEY }}
         run: |
           EXTRA_ARGS=""
           if [ -n "${{ github.event.inputs.date }}" ]; then
