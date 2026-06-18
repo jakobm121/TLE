@@ -1,0 +1,126 @@
+name: TLE 04f Merge Sackmann Player Aliases Template
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  merge-sackmann-player-aliases-template:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Merge player aliases template
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          existing_path = Path("data/metadata/sackmann/player_aliases.json")
+          template_path = Path("data/reports/sackmann/player_aliases_template.json")
+          report_path = Path("data/reports/sackmann/player_aliases_merge_report.json")
+
+          if not template_path.exists():
+              raise SystemExit("Missing data/reports/sackmann/player_aliases_template.json")
+
+          existing = json.loads(existing_path.read_text(encoding="utf-8")) if existing_path.exists() else {}
+          template = json.loads(template_path.read_text(encoding="utf-8"))
+
+          if not isinstance(existing, dict):
+              raise SystemExit("Existing player_aliases.json must be a JSON object")
+          if not isinstance(template, dict):
+              raise SystemExit("Template player_aliases_template.json must be a JSON object")
+
+          merged = dict(existing)
+          conflicts = []
+          added = []
+          unchanged = []
+
+          def valid_key(k):
+              return str(k).startswith(("men:sackmann:", "women:sackmann:"))
+
+          for k, v in template.items():
+              if not valid_key(k) or not valid_key(v):
+                  conflicts.append({"alias": k, "target": v, "reason": "invalid_key_format"})
+                  continue
+
+              if str(k).split(":")[0] != str(v).split(":")[0]:
+                  conflicts.append({"alias": k, "target": v, "reason": "gender_mismatch"})
+                  continue
+
+              if k == v:
+                  conflicts.append({"alias": k, "target": v, "reason": "self_alias"})
+                  continue
+
+              if k in merged:
+                  if merged[k] != v:
+                      conflicts.append({
+                          "alias": k,
+                          "existing_target": merged[k],
+                          "template_target": v,
+                          "reason": "target_conflict",
+                      })
+                  else:
+                      unchanged.append(k)
+              else:
+                  merged[k] = v
+                  added.append(k)
+
+          chains = []
+          for k, v in merged.items():
+              if v in merged:
+                  chains.append({
+                      "alias": k,
+                      "target": v,
+                      "target_points_to": merged[v],
+                  })
+
+          if chains:
+              conflicts.extend({
+                  "alias": x["alias"],
+                  "existing_target": x["target"],
+                  "template_target": x["target_points_to"],
+                  "reason": "alias_chain_detected",
+              } for x in chains)
+
+          report = {
+              "existing_aliases_before": len(existing),
+              "template_aliases": len(template),
+              "added": len(added),
+              "unchanged": len(unchanged),
+              "merged_aliases_after": len(merged),
+              "conflicts": conflicts,
+              "added_aliases": added,
+          }
+
+          report_path.parent.mkdir(parents=True, exist_ok=True)
+          report_path.write_text(json.dumps(report, indent=2, ensure_ascii=False, sort_keys=True), encoding="utf-8")
+
+          if conflicts:
+              print(json.dumps(report, indent=2, ensure_ascii=False, sort_keys=True))
+              raise SystemExit(f"Alias merge conflicts: {len(conflicts)}")
+
+          existing_path.parent.mkdir(parents=True, exist_ok=True)
+          existing_path.write_text(json.dumps(merged, indent=2, ensure_ascii=False, sort_keys=True), encoding="utf-8")
+
+          print(json.dumps(report, indent=2, ensure_ascii=False, sort_keys=True))
+          PY
+
+      - name: Commit merged aliases
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/metadata/sackmann/player_aliases.json || true
+          git add data/reports/sackmann/player_aliases_merge_report.json || true
+
+          if git diff --cached --quiet; then
+            echo "No player alias changes to commit."
+          else
+            git commit -m "Merge Sackmann player aliases template"
+            git push
+          fi
