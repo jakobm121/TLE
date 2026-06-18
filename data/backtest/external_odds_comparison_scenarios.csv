@@ -1,0 +1,25 @@
+scenario,description,picks,wins,losses,push_or_other,hit_rate,total_stake,total_profit,roi,avg_odds,avg_old_model_prob,avg_elo_prob,avg_old_edge,avg_elo_edge
+old_all_settled,All settled picks from the old Ai model.,681,306,375,0,0.449339,842.25,9.47,0.011244,2.273421,0.61896,0.486598,0.17151,0.041147
+matched_all_old_picks,Old picks that matched a TLE historical prediction row.,317,146,171,0,0.460568,400.25,22.5275,0.056284,2.280631,0.623234,0.486598,0.177782,0.041147
+elo_eligible_all_old_picks,Matched old picks passing Elo NO_BET filters.,224,104,120,0,0.464286,281.25,20.5025,0.072898,2.284955,0.621527,0.477234,0.176906,0.032614
+old_and_elo_agree,Old pick only when Elo also selects the same player.,93,54,39,0,0.580645,117.0,33.92,0.289915,2.149677,0.631306,0.560711,0.160467,0.089874
+old_and_elo_disagree,Old pick when Elo selects the opponent; useful as an avoid bucket.,131,50,81,0,0.381679,164.25,-13.4175,-0.081689,2.380992,0.614585,0.417972,0.188577,-0.008036
+elo_edge_ge_-0.02,Old pick only if Elo probability minus implied probability is >= -2.00%.,165,88,77,0,0.533333,210.0,49.4725,0.235583,2.332909,0.618513,0.504934,0.184184,0.070605
+elo_edge_ge_+0.00,Old pick only if Elo probability minus implied probability is >= +0.00%.,147,79,68,0,0.537415,187.75,46.27,0.246445,2.338231,0.61901,0.513951,0.185583,0.080526
+elo_edge_ge_+0.02,Old pick only if Elo probability minus implied probability is >= +2.00%.,123,68,55,0,0.552846,157.75,44.905,0.284659,2.350163,0.618454,0.525357,0.187607,0.094511
+elo_edge_ge_+0.04,Old pick only if Elo probability minus implied probability is >= +4.00%.,107,61,46,0,0.570093,138.5,44.1375,0.318682,2.357196,0.618621,0.533918,0.189183,0.104482
+elo_edge_ge_+0.06,Old pick only if Elo probability minus implied probability is >= +6.00%.,89,50,39,0,0.561798,114.75,35.6,0.31024,2.365955,0.619146,0.543641,0.191289,0.115785
+elo_edge_ge_+0.08,Old pick only if Elo probability minus implied probability is >= +8.00%.,61,39,22,0,0.639344,78.0,39.6575,0.508429,2.357377,0.618762,0.566111,0.1894,0.13675
+elo_edge_ge_+0.10,Old pick only if Elo probability minus implied probability is >= +10.00%.,42,26,16,0,0.619048,54.25,24.4875,0.451382,2.339286,0.618364,0.590158,0.186326,0.158122
+elo_prob_ge_0.50,Old pick only if Elo probability for the old pick is >= 50%.,93,54,39,0,0.580645,117.0,33.92,0.289915,2.149677,0.631306,0.560711,0.160467,0.089874
+elo_prob_ge_0.52,Old pick only if Elo probability for the old pick is >= 52%.,69,40,29,0,0.57971,85.5,24.245,0.283567,2.15913,0.630696,0.579158,0.16123,0.109697
+elo_prob_ge_0.55,Old pick only if Elo probability for the old pick is >= 55%.,45,29,16,0,0.644444,55.75,22.1,0.396413,2.176667,0.625204,0.60202,0.160142,0.136964
+elo_prob_ge_0.57,Old pick only if Elo probability for the old pick is >= 57%.,31,20,11,0,0.645161,40.0,16.61,0.41525,2.215161,0.626377,0.620023,0.169952,0.1636
+elo_prob_ge_0.60,Old pick only if Elo probability for the old pick is >= 60%.,17,10,7,0,0.588235,21.75,4.9925,0.22954,2.178235,0.640112,0.647639,0.174676,0.182209
+elo_prob_ge_0.62,Old pick only if Elo probability for the old pick is >= 62%.,11,8,3,0,0.727273,13.5,7.3425,0.543889,2.125455,0.637945,0.669612,0.158891,0.190566
+elo_prob_ge_0.65,Old pick only if Elo probability for the old pick is >= 65%.,8,5,3,0,0.625,9.75,3.1425,0.322308,2.1275,0.637175,0.681905,0.1571,0.201843
+elo_prob_ge_0.67,Old pick only if Elo probability for the old pick is >= 67%.,4,3,1,0,0.75,4.75,4.2,0.884211,2.23,0.645,0.701664,0.180875,0.237539
+elo_prob_ge_0.70,Old pick only if Elo probability for the old pick is >= 70%.,1,1,0,0,1.0,1.25,1.125,0.9,1.9,0.66,0.752893,0.1337,0.226593
+elo_prob_ge_0.72,Old pick only if Elo probability for the old pick is >= 72%.,1,1,0,0,1.0,1.25,1.125,0.9,1.9,0.66,0.752893,0.1337,0.226593
+elo_prob_ge_0.75,Old pick only if Elo probability for the old pick is >= 75%.,1,1,0,0,1.0,1.25,1.125,0.9,1.9,0.66,0.752893,0.1337,0.226593
+elo_prob_ge_0.80,Old pick only if Elo probability for the old pick is >= 80%.,0,0,0,0,,0.0,0.0,,,,,,

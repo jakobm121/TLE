@@ -1,0 +1,20 @@
+level,scenario,description,picks,wins,losses,push_or_other,hit_rate,total_stake,total_profit,roi,avg_odds,avg_old_model_prob,avg_elo_prob,avg_old_edge,avg_elo_edge
+atp,old_all_settled,old_all_settled within level=atp,44,17,27,0,0.386364,55.75,-3.8775,-0.069552,2.339545,0.616648,,0.180836,
+atp_wta,elo_edge_ge_+0.04,elo_edge_ge_+0.04 within level=atp_wta,18,7,11,0,0.388889,25.25,-1.4325,-0.056733,2.370556,0.613628,0.531047,0.187639,0.105063
+atp_wta,elo_eligible_all_old_picks,elo_eligible_all_old_picks within level=atp_wta,32,14,18,0,0.4375,43.75,0.64,0.014629,2.265937,0.622481,0.496162,0.174572,0.048256
+atp_wta,old_all_settled,old_all_settled within level=atp_wta,44,21,23,0,0.477273,58.75,4.61,0.078468,2.271364,0.624532,0.504261,0.177284,0.057016
+atp_wta,old_and_elo_agree,old_and_elo_agree within level=atp_wta,18,9,9,0,0.5,25.25,3.88,0.153663,2.198889,0.634883,0.547061,0.17385,0.086034
+challenger,elo_edge_ge_+0.04,elo_edge_ge_+0.04 within level=challenger,55,34,21,0,0.618182,71.0,30.525,0.42993,2.372909,0.613249,0.527242,0.186335,0.100324
+challenger,elo_eligible_all_old_picks,elo_eligible_all_old_picks within level=challenger,106,53,53,0,0.5,132.25,20.37,0.154026,2.319717,0.615349,0.474357,0.176868,0.035875
+challenger,old_all_settled,old_all_settled within level=challenger,222,112,110,0,0.504505,279.0,40.435,0.144928,2.293514,0.618365,0.47592,0.174195,0.036785
+challenger,old_and_elo_agree,old_and_elo_agree within level=challenger,42,27,15,0,0.642857,52.5,21.4925,0.409381,2.152619,0.625943,0.563383,0.155864,0.093302
+grand_slam,elo_edge_ge_+0.04,elo_edge_ge_+0.04 within level=grand_slam,5,4,1,0,0.8,6.75,6.5775,0.974444,2.51,0.64412,0.506792,0.24212,0.104812
+grand_slam,elo_eligible_all_old_picks,elo_eligible_all_old_picks within level=grand_slam,26,13,13,0,0.5,33.5,5.3,0.158209,2.308077,0.632254,0.441502,0.192023,0.001267
+grand_slam,old_all_settled,old_all_settled within level=grand_slam,27,14,13,0,0.518519,35.0,6.95,0.198571,2.30037,0.633281,0.444706,0.191719,0.00314
+grand_slam,old_and_elo_agree,old_and_elo_agree within level=grand_slam,5,4,1,0,0.8,6.75,4.955,0.734074,2.162,0.66,0.53907,0.1891,0.06817
+itf,elo_edge_ge_+0.04,elo_edge_ge_+0.04 within level=itf,29,16,13,0,0.551724,35.5,8.4675,0.238521,2.292759,0.627514,0.55304,0.186417,0.111951
+itf,elo_eligible_all_old_picks,elo_eligible_all_old_picks within level=itf,60,24,36,0,0.4,71.75,-5.8075,-0.080941,2.223667,0.627285,0.487707,0.171668,0.032095
+itf,old_all_settled,old_all_settled within level=itf,199,81,118,0,0.407035,230.75,-21.16,-0.091701,2.248442,0.617022,0.495314,0.164792,0.039073
+itf,old_and_elo_agree,old_and_elo_agree within level=itf,28,14,14,0,0.5,32.5,3.5925,0.110538,2.111429,0.631929,0.569344,0.153654,0.091076
+qualifying,old_all_settled,old_all_settled within level=qualifying,118,47,71,0,0.398305,149.0,-17.535,-0.117685,2.265169,0.620263,0.504737,0.172357,0.058595
+wta,old_all_settled,old_all_settled within level=wta,27,14,13,0,0.518519,34.0,0.0475,0.001397,2.197037,0.612804,,0.150426,
