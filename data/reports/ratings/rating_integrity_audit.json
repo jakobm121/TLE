@@ -1,24 +1,26 @@
 {
   "counters": {
-    "players_checked": 12045,
-    "players_men": 5259,
-    "players_with_level": 12045,
-    "players_with_level_surface": 12045,
-    "players_with_surface": 12045,
-    "players_women": 6786
+    "players_checked": 11894,
+    "players_men": 5214,
+    "players_with_level": 11894,
+    "players_with_level_surface": 11894,
+    "players_with_surface": 11894,
+    "players_women": 6680
   },
-  "generated_at": "2026-06-15T23:03:21+00:00",
-  "issue_counts": {},
-  "issues_total": 0,
+  "generated_at": "2026-06-18T12:55:39+00:00",
+  "issue_counts": {
+    "match_count_sum_mismatch": 354
+  },
+  "issues_total": 354,
   "outputs": {
     "audit_json": "data/reports/ratings/rating_integrity_audit.json",
     "issues_csv": "data/reports/ratings/rating_integrity_issues.csv"
   },
-  "players_checked": 12045,
+  "players_checked": 11894,
   "rating_range_policy": {
     "max_reasonable_rating": 2800.0,
     "min_reasonable_rating": 700.0
   },
   "ratings_path": "data/ratings/tle_player_ratings.json",
-  "status": "ok"
+  "status": "failed"
 }
