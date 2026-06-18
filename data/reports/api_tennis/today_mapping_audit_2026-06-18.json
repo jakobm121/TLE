@@ -32,7 +32,7 @@
     "unmapped_players": 66
   },
   "date": "2026-06-18",
-  "generated_at": "2026-06-18T10:11:13+00:00",
+  "generated_at": "2026-06-18T10:18:21+00:00",
   "mapped_players": 522,
   "mapping_path": "data/metadata/api_tennis/player_mapping.json",
   "notes": [
@@ -44,7 +44,9 @@
   "outputs": {
     "audit_json": "data/reports/api_tennis/today_mapping_audit_2026-06-18.json",
     "latest_audit_json": "data/reports/api_tennis/today_mapping_audit.json",
+    "latest_no_candidates_csv": "data/reports/api_tennis/today_mapping_no_candidates.csv",
     "latest_review_csv": "data/reports/api_tennis/today_mapping_review.csv",
+    "no_candidates_csv": "data/reports/api_tennis/today_mapping_no_candidates_2026-06-18.csv",
     "review_csv": "data/reports/api_tennis/today_mapping_review_2026-06-18.csv"
   },
   "overrides_path": "data/metadata/api_tennis/player_mapping_overrides.json",
