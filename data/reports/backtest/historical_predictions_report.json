@@ -1,0 +1,38 @@
+{
+  "counters": {
+    "gender_men": 113107,
+    "gender_women": 113977,
+    "level_atp_wta": 19647,
+    "level_challenger": 40652,
+    "level_grand_slam": 6751,
+    "level_itf": 159323,
+    "level_qualifying": 711,
+    "matches": 227084,
+    "surface_carpet": 2314,
+    "surface_clay": 98357,
+    "surface_grass": 5421,
+    "surface_hard": 120898,
+    "surface_unknown": 94,
+    "unknown_surface": 94
+  },
+  "generated_at": "2026-06-18T13:21:37+00:00",
+  "models": [
+    "level_only",
+    "surface_only",
+    "blend_80_20",
+    "blend_70_30",
+    "blend_60_40",
+    "sample_aware"
+  ],
+  "notes": [
+    "Predictions are pre-match: each row is written before Elo states are updated with that match.",
+    "Overall Elo is updated internally for consistency but is not output as a tested model.",
+    "No level_surface/challenger_clay model is tested here.",
+    "Grand Slam level component blends grand_slam and atp_wta level ratings.",
+    "Surface component is pure surface Elo across levels."
+  ],
+  "output_csv_gz": "data/backtest/historical_predictions.csv.gz",
+  "rating_initial": 1500.0,
+  "rating_k": 32.0,
+  "status": "ok"
+}
