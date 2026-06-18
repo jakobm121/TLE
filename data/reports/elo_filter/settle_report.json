@@ -1,0 +1,35 @@
+{
+  "active_after": 0,
+  "active_before": 4,
+  "generated_at": "2026-06-18T21:26:07+00:00",
+  "notes": [
+    "Settled picks are removed from predictions.json.",
+    "results.json is the ledger and keeps both pending and settled tracked picks.",
+    "results.csv is the compact table for review and ROI."
+  ],
+  "outputs": {
+    "active_csv": "data/elo_filter/active_predictions.csv",
+    "predictions_json": "data/elo_filter/predictions.json",
+    "report_json": "data/reports/elo_filter/settle_report.json",
+    "results_csv": "data/elo_filter/results.csv",
+    "results_json": "data/elo_filter/results.json"
+  },
+  "roi_summary": {
+    "hit_rate": 1.0,
+    "losses": 0,
+    "pending": 0,
+    "roi": 1.12619,
+    "settled": 4,
+    "total_profit": 5.9125,
+    "total_stake": 5.25,
+    "total_tracked": 4,
+    "wins": 4
+  },
+  "settle_counts": {
+    "settled_win": 4
+  },
+  "settled_this_run": 4,
+  "source": "https://raw.githubusercontent.com/jakobm121/Ai/refs/heads/main/data/tennis_results.json",
+  "source_settled_rows": 2916,
+  "status": "ok"
+}
