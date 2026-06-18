@@ -6,7 +6,7 @@
     "with_full_name": 2591,
     "with_short_name": 5250
   },
-  "generated_at": "2026-06-18T10:49:58+00:00",
+  "generated_at": "2026-06-18T11:03:26+00:00",
   "mapping": {
     "men:api:100041": {
       "api_levels": {
@@ -22757,12 +22757,12 @@
       "api_surfaces": {
         "hard": 3
       },
-      "confidence": 0.0,
+      "confidence": 0.917639,
       "gender": "men",
-      "margin": null,
-      "method": "no_candidate",
+      "margin": 0.917639,
+      "method": "near_token_set_typo",
       "sackmann_player_key": null,
-      "status": "unmapped"
+      "status": "ambiguous"
     },
     "men:api:58390": {
       "api_levels": {
@@ -44301,12 +44301,12 @@
       "api_surfaces": {
         "hard": 2
       },
-      "confidence": 0.0,
+      "confidence": 0.918091,
       "gender": "women",
-      "margin": null,
-      "method": "no_candidate",
+      "margin": 0.918091,
+      "method": "near_token_set_typo",
       "sackmann_player_key": null,
-      "status": "unmapped"
+      "status": "ambiguous"
     },
     "women:api:1423": {
       "api_levels": {
@@ -46285,7 +46285,7 @@
       },
       "confidence": 0.999,
       "gender": "women",
-      "margin": 0.177766,
+      "margin": 0.083307,
       "method": "exact_normalized",
       "sackmann_player_key": "women:sackmann:221794",
       "status": "auto_mapped"
@@ -70441,7 +70441,7 @@
   },
   "source": "api_tennis",
   "summary": {
-    "ambiguous": 21,
+    "ambiguous": 23,
     "api_gender_men": 1687,
     "api_gender_women": 1429,
     "api_player_cache_entries": 5250,
@@ -70456,7 +70456,7 @@
     "sackmann_alias_candidate_created_from_alias": 147,
     "sackmann_alias_candidate_merged": 4,
     "sackmann_candidate_alias_resolved_player_keys": 151,
-    "unmapped": 155
+    "unmapped": 153
   },
   "target": "sackmann"
 }

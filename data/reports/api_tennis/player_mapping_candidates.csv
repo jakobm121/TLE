@@ -990,6 +990,7 @@ men:api:58193,Adam Majchrzak,men,5,1,men:sackmann:211358,Adam Majchrzak,19,0.999
 men:api:582,Daniel Michalski,men,4,1,men:sackmann:207415,Daniel Michalski,234,0.999,exact_normalized
 men:api:58211,Segundo Goity Zapico,men,1,1,men:sackmann:211635,Segundo Goity Zapico,14,0.999,exact_normalized
 men:api:58212,Thanaphat Boosarawongse,men,2,1,men:sackmann:213051,Thanaphat Boosarawongse,15,0.999,exact_normalized
+men:api:58219,Efe Tufekci Cagan,men,3,1,men:sackmann:214170,Cagan Efe Tufecki,13,0.917639,near_token_set_typo
 men:api:58390,Adam Jilly,men,3,1,men:sackmann:149115,Adam Jilly,26,0.999,exact_normalized
 men:api:584,Carlos Sanchez Jover,men,6,1,men:sackmann:202199,Carlos Sanchez Jover,264,0.999,exact_normalized
 men:api:585,Frederico Ferreira Silva,men,3,1,men:sackmann:106393,Frederico Ferreira Silva,222,0.999,exact_normalized
@@ -1942,6 +1943,7 @@ women:api:1418,Alba Rey Garcia,women,4,2,women:sackmann:210622,Andrea Lazaro Gar
 women:api:1418,Alba Rey Garcia,women,4,3,women:sackmann:220163,Ares Teixido Garcia,10,0.913221,initial_surname
 women:api:1418,Alba Rey Garcia,women,4,4,women:sackmann:269803,Africa Guzman Garcia,5,0.910935,initial_surname
 women:api:142,Guiomar Maristany Zuleta De Reales,women,4,1,women:sackmann:215571,Guiomar Maristany Zuleta De Reales,209,0.999,exact_normalized
+women:api:14205,Qyinlomo Quadre Barakat,women,2,1,women:sackmann:220736,Barakat Oyinlomo Quadre,21,0.918091,near_token_set_typo
 women:api:1423,Misaki Matsuda,women,2,1,women:sackmann:216324,Misaki Matsuda,146,0.999,exact_normalized
 women:api:1424,Sinja Kraus,women,3,1,women:sackmann:221257,Sinja Kraus,246,0.999,exact_normalized
 women:api:14241,Astrid Lew Yan Foon,women,2,1,women:sackmann:235159,Astrid Lew Yan Foon,162,0.999,exact_normalized
@@ -2038,7 +2040,7 @@ women:api:1793,Salma Djoubri,women,1,1,women:sackmann:220305,Salma Djoubri,4,0.9
 women:api:1794,Anastasia Zakharova,women,1,1,women:sackmann:220435,Anastasia Zakharova,241,0.999,exact_normalized
 women:api:1802,Emiliana Arango,women,1,1,women:sackmann:215306,Emiliana Arango,207,0.999,exact_normalized
 women:api:18043,Farhat Aleen Qamar,women,2,1,women:sackmann:221794,Farhat Aleen Qamar,6,0.999,exact_normalized
-women:api:18043,Farhat Aleen Qamar,women,2,2,women:sackmann:270574,Farhat Aleen Quamar,1,0.821234,fuzzy
+women:api:18043,Farhat Aleen Qamar,women,2,2,women:sackmann:270574,Farhat Aleen Quamar,1,0.915693,near_token_set_typo
 women:api:1805,Renata Zarazua,women,4,1,women:sackmann:213887,Renata Zarazua,274,0.999,exact_normalized
 women:api:1806,Mariam Bolkvadze,women,2,1,women:sackmann:213734,Mariam Bolkvadze,151,0.999,exact_normalized
 women:api:18071,Maria Garcia Cid,women,7,1,women:sackmann:225850,Maria Garcia Cid,76,0.999,exact_normalized
