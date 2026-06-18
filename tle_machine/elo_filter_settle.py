@@ -37,6 +37,8 @@ ACTIVE_FIELDS = [
 RESULTS_FIELDS = [
     *ACTIVE_FIELDS,
     "result", "profit", "roi", "settled_at", "final_score", "event_winner",
+    "running_wins", "running_losses", "running_w_l", "running_total_stake",
+    "running_total_profit", "running_roi",
 ]
 
 
@@ -106,7 +108,7 @@ def key_variants(item: dict[str, Any]) -> list[str]:
         v = safe_str(item.get(k))
         if v:
             keys.append(f"{k}:{v}")
-    # Fallback combination
+
     combo = "|".join([
         safe_str(item.get("date")),
         safe_str(item.get("player_key")),
@@ -115,6 +117,7 @@ def key_variants(item: dict[str, Any]) -> list[str]:
     ])
     if combo.strip("|"):
         keys.append(f"combo:{combo}")
+
     return keys
 
 
@@ -145,6 +148,63 @@ def compute_profit(row: dict[str, Any], src: dict[str, Any]) -> tuple[str, float
 
     roi = profit / stake if profit is not None and stake not in {None, 0} else None
     return result, profit, roi
+
+
+def sort_key(row: dict[str, Any]) -> tuple[str, str, str, str]:
+    return (
+        safe_str(row.get("date")),
+        safe_str(row.get("time")),
+        safe_str(row.get("tournament")),
+        safe_str(row.get("match")),
+    )
+
+
+def add_running_totals(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Add cumulative W-L, stake, profit, and ROI to settled rows in chronological order.
+
+    Pending rows remain in the ledger but do not change running totals.
+    """
+    running_wins = 0
+    running_losses = 0
+    running_stake = 0.0
+    running_profit = 0.0
+
+    out = []
+    for row in sorted(rows, key=sort_key):
+        r = dict(row)
+        status = safe_str(r.get("status") or r.get("result")).lower()
+
+        if status in {"win", "loss", "void", "push"}:
+            if status == "win":
+                running_wins += 1
+            elif status == "loss":
+                running_losses += 1
+
+            stake = safe_float(r.get("stake")) or 0.0
+            profit = safe_float(r.get("profit")) or 0.0
+
+            # Void/push can have stake in the row but should not distort ROI if profit is 0.
+            # We keep the original stake accounting, same as the rest of this project.
+            running_stake += stake
+            running_profit += profit
+
+            r["running_wins"] = running_wins
+            r["running_losses"] = running_losses
+            r["running_w_l"] = f"{running_wins}-{running_losses}"
+            r["running_total_stake"] = round(running_stake, 6)
+            r["running_total_profit"] = round(running_profit, 6)
+            r["running_roi"] = round(running_profit / running_stake, 6) if running_stake else None
+        else:
+            r["running_wins"] = running_wins
+            r["running_losses"] = running_losses
+            r["running_w_l"] = f"{running_wins}-{running_losses}"
+            r["running_total_stake"] = round(running_stake, 6)
+            r["running_total_profit"] = round(running_profit, 6)
+            r["running_roi"] = round(running_profit / running_stake, 6) if running_stake else None
+
+        out.append(r)
+
+    return out
 
 
 def write_csv(path: Path, rows: list[dict[str, Any]], fields: list[str]) -> None:
@@ -204,15 +264,14 @@ def main() -> None:
         settled_now.append(updated)
         counters[f"settled_{result}"] += 1
 
-    # Make sure any active rows are tracked in results as pending.
     for row in still_active:
         pid = safe_str(row.get("pick_id"))
         if pid and pid not in historical_by_id:
             historical_by_id[pid] = row
 
-    all_results = list(historical_by_id.values())
-    all_results.sort(key=lambda r: (safe_str(r.get("date")), safe_str(r.get("time")), safe_str(r.get("tournament")), safe_str(r.get("match"))))
-    still_active.sort(key=lambda r: (safe_str(r.get("date")), safe_str(r.get("time")), safe_str(r.get("tournament")), safe_str(r.get("match"))))
+    all_results_raw = list(historical_by_id.values())
+    all_results = add_running_totals(all_results_raw)
+    still_active = sorted(still_active, key=sort_key)
 
     settled_all = [r for r in all_results if safe_str(r.get("status")).lower() in {"win", "loss", "void", "push"}]
     wins = sum(1 for r in settled_all if safe_str(r.get("status")).lower() == "win")
@@ -239,6 +298,7 @@ def main() -> None:
             "settled": len(settled_all),
             "wins": wins,
             "losses": losses,
+            "w_l": f"{wins}-{losses}",
             "hit_rate": round(wins / settled_count, 6) if settled_count else None,
             "total_stake": round(stake, 6),
             "total_profit": round(profit, 6),
@@ -272,7 +332,7 @@ def main() -> None:
         "notes": [
             "Settled picks are removed from predictions.json.",
             "results.json is the ledger and keeps both pending and settled tracked picks.",
-            "results.csv is the compact table for review and ROI.",
+            "results.csv includes running W-L, running total profit, and running ROI after each row.",
         ],
     }
     write_json(REPORT_JSON, report)
