@@ -10,19 +10,29 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+
 DEFAULT_RATINGS_PATHS = [
     Path("data/ratings/tle_player_ratings.json.gz"),
     Path("data/ratings/tle_player_ratings.json"),
 ]
+
 REPORT_DIR = Path("data/reports/ratings")
 AUDIT_JSON = REPORT_DIR / "rating_integrity_audit.json"
 ISSUES_CSV = REPORT_DIR / "rating_integrity_issues.csv"
+WARNINGS_CSV = REPORT_DIR / "rating_integrity_warnings.csv"
 
 VALID_GENDERS = {"men", "women"}
 VALID_SURFACES = {"hard", "clay", "grass", "carpet", "unknown"}
 VALID_LEVELS = {"atp_wta", "grand_slam", "challenger", "itf", "qualifying"}
+
 MIN_REASONABLE_RATING = 700.0
 MAX_REASONABLE_RATING = 2800.0
+
+# These are known non-fatal after API merge when some matches have surface="unknown".
+# Such matches are counted in overall/level, but cannot always be counted in surface/level_surface.
+WARNING_ISSUES = {
+    "match_count_sum_mismatch",
+}
 
 
 def now_utc_iso() -> str:
@@ -74,6 +84,7 @@ def audit_rating_value(
     if not is_number(value):
         add_issue(issues, player_key, player, "invalid_rating_value", f"{layer}.{rating_key}={value!r}")
         return
+
     value_f = float(value)
     if value_f < MIN_REASONABLE_RATING or value_f > MAX_REASONABLE_RATING:
         add_issue(
@@ -101,21 +112,23 @@ def audit_match_count(
 def get_players(data: Any) -> dict[str, Any]:
     if isinstance(data, dict) and isinstance(data.get("players"), dict):
         return data["players"]
+
     if isinstance(data, dict):
         # Backward compatible: top-level dict may already be players.
         maybe_players = {k: v for k, v in data.items() if isinstance(v, dict) and "overall" in v}
         if maybe_players:
             return maybe_players
+
     raise ValueError("Ratings JSON must contain a top-level 'players' object")
 
 
-def write_issues_csv(path: Path, issues: list[dict[str, Any]]) -> None:
+def write_rows_csv(path: Path, rows: list[dict[str, Any]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     fieldnames = ["player_key", "name", "gender", "issue", "detail"]
     with path.open("w", encoding="utf-8", newline="") as fh:
         writer = csv.DictWriter(fh, fieldnames=fieldnames)
         writer.writeheader()
-        for row in issues:
+        for row in rows:
             writer.writerow(row)
 
 
@@ -137,12 +150,26 @@ def audit_player(player_key: str, player: Any, issues: list[dict[str, Any]], cou
         add_issue(issues, player_key, player, "missing_name", f"name={name!r}")
 
     matches = player.get("matches")
-    audit_match_count(issues=issues, player_key=player_key, player=player, layer="root", count_key="matches", value=matches)
+    audit_match_count(
+        issues=issues,
+        player_key=player_key,
+        player=player,
+        layer="root",
+        count_key="matches",
+        value=matches,
+    )
     if matches == 0:
         add_issue(issues, player_key, player, "zero_matches", "matches=0")
 
     overall = player.get("overall")
-    audit_rating_value(issues=issues, player_key=player_key, player=player, layer="root", rating_key="overall", value=overall)
+    audit_rating_value(
+        issues=issues,
+        player_key=player_key,
+        player=player,
+        layer="root",
+        rating_key="overall",
+        value=overall,
+    )
 
     layer_pairs = [
         ("surface", "surface_matches", VALID_SURFACES),
@@ -157,6 +184,7 @@ def audit_player(player_key: str, player: Any, issues: list[dict[str, Any]], cou
         if not isinstance(ratings, dict):
             add_issue(issues, player_key, player, "missing_or_invalid_layer", f"{rating_layer} is {type(ratings).__name__}")
             continue
+
         if not isinstance(counts, dict):
             add_issue(issues, player_key, player, "missing_or_invalid_layer", f"{count_layer} is {type(counts).__name__}")
             continue
@@ -167,6 +195,7 @@ def audit_player(player_key: str, player: Any, issues: list[dict[str, Any]], cou
         for key, value in ratings.items():
             if valid_keys is not None and key not in valid_keys:
                 add_issue(issues, player_key, player, "invalid_layer_key", f"{rating_layer}.{key}")
+
             if rating_layer == "level_surface":
                 if "|" not in key:
                     add_issue(issues, player_key, player, "invalid_level_surface_key", key)
@@ -185,6 +214,7 @@ def audit_player(player_key: str, player: Any, issues: list[dict[str, Any]], cou
                 rating_key=key,
                 value=value,
             )
+
             if key not in counts:
                 add_issue(issues, player_key, player, "missing_matching_count", f"{rating_layer}.{key} has no {count_layer}.{key}")
 
@@ -197,6 +227,7 @@ def audit_player(player_key: str, player: Any, issues: list[dict[str, Any]], cou
                 count_key=key,
                 value=value,
             )
+
             if key not in ratings:
                 add_issue(issues, player_key, player, "count_without_rating", f"{count_layer}.{key} has no {rating_layer}.{key}")
 
@@ -206,7 +237,13 @@ def audit_player(player_key: str, player: Any, issues: list[dict[str, Any]], cou
             if isinstance(counts, dict):
                 total = sum(v for v in counts.values() if isinstance(v, int) and not isinstance(v, bool))
                 if total != matches:
-                    add_issue(issues, player_key, player, "match_count_sum_mismatch", f"sum({count_layer})={total}, matches={matches}")
+                    add_issue(
+                        issues,
+                        player_key,
+                        player,
+                        "match_count_sum_mismatch",
+                        f"sum({count_layer})={total}, matches={matches}",
+                    )
 
 
 def find_default_ratings_path() -> Path:
@@ -221,28 +258,42 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--ratings-path", type=Path, default=None)
     parser.add_argument("--audit-json", type=Path, default=AUDIT_JSON)
     parser.add_argument("--issues-csv", type=Path, default=ISSUES_CSV)
+    parser.add_argument("--warnings-csv", type=Path, default=WARNINGS_CSV)
     args = parser.parse_args(argv)
 
     ratings_path = args.ratings_path or find_default_ratings_path()
     data = read_json_maybe_gz(ratings_path)
     players = get_players(data)
 
-    issues: list[dict[str, Any]] = []
+    all_issues: list[dict[str, Any]] = []
     counters = Counter()
     counters["players_checked"] = len(players)
 
     for player_key, player in players.items():
-        audit_player(player_key, player, issues, counters)
+        audit_player(player_key, player, all_issues, counters)
 
-    issue_counts = Counter(row["issue"] for row in issues)
+    warnings = [row for row in all_issues if row.get("issue") in WARNING_ISSUES]
+    fatal_issues = [row for row in all_issues if row.get("issue") not in WARNING_ISSUES]
+
+    issue_counts = Counter(row["issue"] for row in all_issues)
+    warning_counts = Counter(row["issue"] for row in warnings)
+    fatal_issue_counts = Counter(row["issue"] for row in fatal_issues)
 
     audit = {
         "generated_at": now_utc_iso(),
-        "status": "ok" if not issues else "failed",
+        "status": "ok" if not fatal_issues else "failed",
         "ratings_path": str(ratings_path),
         "players_checked": len(players),
-        "issues_total": len(issues),
-        "issue_counts": dict(sorted(issue_counts.items())),
+        "issues_total": len(fatal_issues),
+        "warnings_total": len(warnings),
+        "all_findings_total": len(all_issues),
+        "issue_counts": dict(sorted(fatal_issue_counts.items())),
+        "warning_counts": dict(sorted(warning_counts.items())),
+        "all_finding_counts": dict(sorted(issue_counts.items())),
+        "warning_policy": {
+            "warning_issues": sorted(WARNING_ISSUES),
+            "reason": "match_count_sum_mismatch can be caused by matches with unknown surface: overall/level counts include the match, while surface/level_surface buckets may not.",
+        },
         "counters": dict(sorted(counters.items())),
         "rating_range_policy": {
             "min_reasonable_rating": MIN_REASONABLE_RATING,
@@ -251,15 +302,17 @@ def main(argv: list[str] | None = None) -> None:
         "outputs": {
             "audit_json": str(args.audit_json),
             "issues_csv": str(args.issues_csv),
+            "warnings_csv": str(args.warnings_csv),
         },
     }
 
     write_json(args.audit_json, audit)
-    write_issues_csv(args.issues_csv, issues)
+    write_rows_csv(args.issues_csv, fatal_issues)
+    write_rows_csv(args.warnings_csv, warnings)
 
     print(json.dumps(audit, indent=2, ensure_ascii=False, sort_keys=True))
 
-    if issues:
+    if fatal_issues:
         raise SystemExit(1)
 
 
