@@ -1,0 +1,39 @@
+name: TLE 12 Build Historical Predictions
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-historical-predictions:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build historical predictions
+        run: |
+          python -m tle_machine.build_historical_predictions
+
+      - name: Commit historical predictions
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/backtest/historical_predictions.csv.gz || true
+          git add data/reports/backtest/historical_predictions_report.json || true
+
+          if git diff --cached --quiet; then
+            echo "No historical prediction changes to commit."
+          else
+            git commit -m "Build historical Elo predictions"
+            git push
+          fi
