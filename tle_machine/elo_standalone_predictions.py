@@ -874,7 +874,7 @@ def evaluate_side(
         "raw_competition_name": safe_str(match.get("competition_name")),
         "raw_tournament_name": safe_str(match.get("tournament_name")),
         "raw_tournament_round": safe_str(match.get("tournament_round")),
-        "context_text": ctx.get("context_text", ""),
+        "context_text": tournament_context(match).get("context_text", ""),
 
         "tournament": match.get("tournament_name") or "",
         "round": match.get("tournament_round") or "",
