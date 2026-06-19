@@ -1,19 +1,14 @@
 {
-  "active_after": 20,
+  "active_after": 0,
   "active_before": 20,
-  "generated_at": "2026-06-19T23:27:59+00:00",
+  "generated_at": "2026-06-19T23:37:50+00:00",
   "notes": [
+    "Standalone settle uses API-Tennis get_fixtures and matches by event_key.",
     "Settled picks are removed from predictions.json.",
-    "results.json is the ledger and keeps both pending and settled tracked picks.",
-    "results.md has total ROI/W-L above the table for easy review.",
-    "results.csv keeps running W-L, running total profit, and running ROI per row.",
-    "context_signal_report.json and context_signal_summary.csv track whether API form/H2H/fatigue signals helped.",
-    "This settles standalone TLE Elo scanner picks from data/elo_standalone."
+    "results.json is the ledger and keeps pending and settled tracked picks."
   ],
   "outputs": {
     "active_csv": "data/elo_standalone/active_predictions.csv",
-    "context_signal_csv": "data/reports/elo_standalone/context_signal_summary.csv",
-    "context_signal_json": "data/reports/elo_standalone/context_signal_report.json",
     "predictions_json": "data/elo_standalone/predictions.json",
     "report_json": "data/reports/elo_standalone/settle_report.json",
     "results_csv": "data/elo_standalone/results.csv",
@@ -21,22 +16,24 @@
     "results_md": "data/elo_standalone/results.md"
   },
   "roi_summary": {
-    "hit_rate": null,
-    "losses": 0,
-    "pending": 20,
-    "roi": null,
-    "settled": 0,
-    "total_profit": 0,
-    "total_stake": 0,
+    "hit_rate": 0.6,
+    "losses": 8,
+    "pending": 0,
+    "roi": 0.077736,
+    "settled": 20,
+    "total_profit": 1.7685,
+    "total_stake": 22.75,
     "total_tracked": 20,
-    "w_l": "0-0",
-    "wins": 0
+    "w_l": "12-8",
+    "wins": 12
   },
   "settle_counts": {
-    "still_pending": 20
+    "dates_fetched": 8,
+    "fixtures_fetched": 2724,
+    "settled_loss": 8,
+    "settled_win": 12
   },
-  "settled_this_run": 0,
-  "source": "https://raw.githubusercontent.com/jakobm121/Ai/refs/heads/main/data/tennis_results.json",
-  "source_settled_rows": 2916,
+  "settled_this_run": 20,
+  "source": "API-Tennis get_fixtures",
   "status": "ok"
 }
