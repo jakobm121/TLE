@@ -1,26 +1,21 @@
 {
   "active_predictions_total": 27,
-  "by_level_scan": {
-    "itf": 27
-  },
+  "by_level_scan": {},
   "counters": {
+    "fixture_error": 115,
     "fixture_skip_doubles_or_team": 93,
-    "fixture_skip_live": 2,
+    "fixture_skip_live": 3,
     "fixture_skip_status_finished": 26,
     "fixture_skip_status_retired": 2,
-    "fixtures_scanned": 146,
-    "fixtures_with_output": 27
+    "fixtures_scanned": 30
   },
   "date_start": "2026-06-19",
   "days_ahead": 1,
-  "decision_counts_scan": {
-    "BET": 9,
-    "STRONG_BET": 18
-  },
+  "decision_counts_scan": {},
   "fixtures_total": 269,
-  "generated_at": "2026-06-19T06:50:26+00:00",
-  "new_added_to_predictions": 27,
-  "new_candidates": 27,
+  "generated_at": "2026-06-19T07:10:52+00:00",
+  "new_added_to_predictions": 0,
+  "new_candidates": 0,
   "notes": [
     "This is standalone: it scans all eligible API fixtures and odds, not only tennis value picks.",
     "Odds are average clean odds after removing bookmaker outliers.",
@@ -39,12 +34,11 @@
     "active_csv": "data/elo_standalone/active_predictions.csv",
     "predictions_json": "data/elo_standalone/predictions.json",
     "report_json": "data/reports/elo_standalone/predictions_report.json",
-    "results_json": "data/elo_standalone/results.json"
+    "results_json": "data/elo_standalone/results.json",
+    "scan_diagnostics_csv": "data/reports/elo_standalone/scan_diagnostics.csv"
   },
-  "reason_counts_scan": {
-    "pass_edge": 9,
-    "pass_strong_edge": 18
-  },
-  "scan_rows": 27,
+  "raw_context_samples": [],
+  "reason_counts_scan": {},
+  "scan_rows": 0,
   "status": "ok"
 }
