@@ -3,10 +3,10 @@ name: Elo Standalone 02 Settle
 on:
   workflow_dispatch:
     inputs:
-      results_source:
-        description: "Ai tennis_results.json URL"
+      date:
+        description: "Optional YYYY-MM-DD, empty = active pick dates + recent lookback"
         required: false
-        default: "https://raw.githubusercontent.com/jakobm121/Ai/refs/heads/main/data/tennis_results.json"
+        default: ""
 
 permissions:
   contents: write
@@ -25,9 +25,16 @@ jobs:
           python-version: "3.11"
 
       - name: Settle standalone Elo predictions
+        env:
+          API_TENNIS_KEY: ${{ secrets.API_TENNIS_KEY }}
         run: |
+          EXTRA_ARGS=""
+          if [ -n "${{ github.event.inputs.date }}" ]; then
+            EXTRA_ARGS="$EXTRA_ARGS --date ${{ github.event.inputs.date }}"
+          fi
+
           python -m tle_machine.elo_standalone_settle \
-            --results-source "${{ github.event.inputs.results_source }}"
+            $EXTRA_ARGS
 
       - name: Commit standalone Elo settle
         run: |
@@ -40,8 +47,6 @@ jobs:
           git add data/elo_standalone/results.csv || true
           git add data/elo_standalone/results.md || true
           git add data/reports/elo_standalone/settle_report.json || true
-          git add data/reports/elo_standalone/context_signal_report.json || true
-          git add data/reports/elo_standalone/context_signal_summary.csv || true
 
           if git diff --cached --quiet; then
             echo "No standalone Elo settle changes to commit."
