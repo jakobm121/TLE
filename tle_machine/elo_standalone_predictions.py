@@ -60,6 +60,35 @@ REPORT_JSON = REPORT_DIR / "predictions_report.json"
 RATING_INITIAL = 1500.0
 VALID_SURFACES = {"hard", "clay", "grass", "carpet"}
 
+# API-Tennis often does not return surface in get_fixtures/get_odds.
+# These overrides restore surface for known ATP/WTA/Challenger events so the
+# final surface-blend Elo models can run instead of dropping everything as unknown_surface.
+# Keys are matched against the normalized context_text built from raw API fields.
+TOURNAMENT_SURFACE_OVERRIDES = {
+    # ATP/WTA grass week
+    "atp london": "grass",
+    "london atp": "grass",
+    "queen": "grass",
+    "queens": "grass",
+    "atp halle": "grass",
+    "halle atp": "grass",
+    "wta berlin": "grass",
+    "berlin wta": "grass",
+    "wta nottingham": "grass",
+    "nottingham wta": "grass",
+
+    # Challenger / WTA 125 / current known events
+    "challenger men singles nottingham": "grass",
+    "challenger men singles parma": "clay",
+    "challenger men singles poznan": "clay",
+    "challenger men singles royan": "clay",
+    "challenger women singles brescia": "clay",
+    "challenger women singles figueira da foz": "hard",
+    "challenger men singles dublin": "hard",
+    "challenger men singles asuncion": "clay",
+}
+
+
 # Average odds rules: use average of non-outlier bookmaker odds, not the single best price.
 MIN_BOOKMAKERS_EACH_SIDE = 3
 MAX_ODDS_DEVIATION_FROM_MEDIAN = 0.12  # remove odds more than 12% away from side median
@@ -269,6 +298,36 @@ def normalize_gender(g: Any) -> str:
 def normalize_surface(s: Any) -> str:
     x = safe_str(s).lower().replace("court", "").strip()
     return x if x in VALID_SURFACES else "unknown"
+
+
+def infer_surface(match: dict[str, Any], context: dict[str, Any] | None = None) -> tuple[str, str]:
+    # 1) Direct API fields first.
+    direct_fields = [
+        match.get("event_surface"),
+        match.get("surface"),
+        match.get("court_surface"),
+        match.get("tournament_surface"),
+        match.get("event_court_type"),
+    ]
+    for value in direct_fields:
+        surf = normalize_surface(value)
+        if surf != "unknown":
+            return surf, "fixture"
+
+    # 2) Sometimes surface is hidden in raw text.
+    if context is None:
+        context = tournament_context(match)
+    text = safe_str(context.get("context_text")).lower()
+    for surf in ("hard", "clay", "grass", "carpet"):
+        if re.search(rf"\b{surf}\b", text):
+            return surf, "context_text"
+
+    # 3) Known tournament overrides.
+    for needle, surf in TOURNAMENT_SURFACE_OVERRIDES.items():
+        if needle in text:
+            return surf, "tournament_override"
+
+    return "unknown", "missing"
 
 
 def normalize_level(level: Any, event_type: Any = None, qualification: Any = None) -> str:
@@ -1017,8 +1076,7 @@ def scan_match(match: dict[str, Any], *, players: dict[str, dict[str, Any]], api
     if context["gender"] not in {"men", "women"}:
         return []
 
-    surface = normalize_surface(match.get("event_surface") or match.get("surface"))
-    surface_source = "fixture" if surface != "unknown" else "missing"
+    surface, surface_source = infer_surface(match, context)
 
     event_key = match.get("event_key")
     first_key = safe_int(match.get("first_player_key"))
