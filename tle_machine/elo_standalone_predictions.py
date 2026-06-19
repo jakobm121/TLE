@@ -129,6 +129,9 @@ LEVEL_RULES = {
 CSV_FIELDS = [
     "pick_id", "status", "decision", "confidence", "reason",
     "date", "time", "gender", "level", "surface", "surface_source",
+    "raw_event_type_type", "raw_event_type_key", "raw_event_type", "raw_event_name",
+    "raw_event_country_name", "raw_league_name", "raw_competition_name",
+    "raw_tournament_name", "raw_tournament_round", "context_text",
     "tournament", "round", "match", "pick", "opponent", "side", "market_side",
     "odds", "avg_odds", "median_odds", "best_odds", "best_bookmaker",
     "implied_prob", "tle_model", "tle_prob", "tle_edge",
@@ -860,6 +863,19 @@ def evaluate_side(
         "level": level,
         "surface": surface,
         "surface_source": surface_source,
+
+        # Raw API classification/debug fields. These tell us how API-Tennis stores ATP/WTA/Challenger/ITF.
+        "raw_event_type_type": safe_str(match.get("event_type_type")),
+        "raw_event_type_key": safe_str(match.get("event_type_key")),
+        "raw_event_type": safe_str(match.get("event_type")),
+        "raw_event_name": safe_str(match.get("event_name")),
+        "raw_event_country_name": safe_str(match.get("event_country_name")),
+        "raw_league_name": safe_str(match.get("league_name")),
+        "raw_competition_name": safe_str(match.get("competition_name")),
+        "raw_tournament_name": safe_str(match.get("tournament_name")),
+        "raw_tournament_round": safe_str(match.get("tournament_round")),
+        "context_text": ctx.get("context_text", ""),
+
         "tournament": match.get("tournament_name") or "",
         "round": match.get("tournament_round") or "",
         "match": f"{match.get('event_first_player')} - {match.get('event_second_player')}",
@@ -1167,6 +1183,29 @@ def main() -> None:
     write_csv(ACTIVE_CSV, active)
     write_csv(SCAN_CSV, rows)
 
+    raw_context_samples = []
+    for r in rows[:300]:
+        raw_context_samples.append({
+            "date": r.get("date"),
+            "time": r.get("time"),
+            "decision": r.get("decision"),
+            "reason": r.get("reason"),
+            "gender": r.get("gender"),
+            "level": r.get("level"),
+            "surface": r.get("surface"),
+            "surface_source": r.get("surface_source"),
+            "raw_event_type_type": r.get("raw_event_type_type"),
+            "raw_event_type_key": r.get("raw_event_type_key"),
+            "raw_event_type": r.get("raw_event_type"),
+            "raw_event_name": r.get("raw_event_name"),
+            "raw_tournament_name": r.get("raw_tournament_name"),
+            "raw_tournament_round": r.get("raw_tournament_round"),
+            "raw_league_name": r.get("raw_league_name"),
+            "raw_competition_name": r.get("raw_competition_name"),
+            "context_text": r.get("context_text"),
+            "match": r.get("match"),
+        })
+
     report = {
         "status": "ok",
         "generated_at": now_utc_iso(),
@@ -1177,6 +1216,7 @@ def main() -> None:
         "new_candidates": len(new_active),
         "new_added_to_predictions": added,
         "active_predictions_total": len(active),
+        "raw_context_samples": raw_context_samples,
         "decision_counts_scan": dict(sorted(Counter(r["decision"] for r in rows).items())),
         "reason_counts_scan": dict(sorted(Counter(r["reason"] for r in rows).items())),
         "by_level_scan": dict(sorted(Counter(r["level"] for r in rows).items())),
@@ -1193,6 +1233,7 @@ def main() -> None:
             "predictions_json": str(PREDICTIONS_JSON),
             "results_json": str(RESULTS_JSON),
             "active_csv": str(ACTIVE_CSV),
+            "scan_diagnostics_csv": str(SCAN_CSV),
             "report_json": str(REPORT_JSON),
         },
         "notes": [
