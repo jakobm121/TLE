@@ -4,14 +4,25 @@ import argparse
 import csv
 import json
 import math
+import os
+import time
+import urllib.parse
 import urllib.request
 from collections import Counter
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Any
 
 
-DEFAULT_RESULTS_URL = "https://raw.githubusercontent.com/jakobm121/Ai/refs/heads/main/data/tennis_results.json"
+BASE_URL = "https://api.api-tennis.com/tennis/"
+API_KEY = (
+    os.getenv("TENNIS_API_KEY")
+    or os.getenv("API_KEY")
+    or os.getenv("API_TENNIS_KEY")
+    or os.getenv("APITENNIS_KEY")
+    or os.getenv("API_TENNIS_API_KEY")
+    or os.getenv("TENNIS_VALUE_API_KEY")
+)
 
 BASE_DIR = Path("data/elo_standalone")
 REPORT_DIR = Path("data/reports/elo_standalone")
@@ -22,33 +33,24 @@ ACTIVE_CSV = BASE_DIR / "active_predictions.csv"
 RESULTS_CSV = BASE_DIR / "results.csv"
 RESULTS_MD = BASE_DIR / "results.md"
 REPORT_JSON = REPORT_DIR / "settle_report.json"
-CONTEXT_SIGNAL_JSON = REPORT_DIR / "context_signal_report.json"
-CONTEXT_SIGNAL_CSV = REPORT_DIR / "context_signal_summary.csv"
 
-ACTIVE_FIELDS = [
+DEFAULT_ACTIVE_FIELDS = [
     "pick_id", "status", "decision", "confidence", "reason",
-    "date", "time", "gender", "level", "surface", "tournament", "round",
-    "match", "pick", "opponent", "side",
-    "odds", "implied_prob", "old_model_prob", "old_edge",
+    "date", "time", "gender", "level", "surface", "surface_source",
+    "tournament", "round", "match", "pick", "opponent", "side",
+    "odds", "avg_odds", "implied_prob",
     "tle_model", "tle_prob", "tle_edge",
     "tle_min_level_matches", "tle_min_surface_matches",
-    "stake", "stake_label", "best_bookmaker", "market_median_odds", "bookmakers_used",
-    "player_key", "opponent_key", "player_canonical_key", "opponent_canonical_key",
+    "stake", "stake_label", "best_bookmaker",
+    "player_key", "opponent_key", "player_api_key", "opponent_api_key",
+    "player_canonical_key", "opponent_canonical_key",
     "created_at", "tle_created_at",
 ]
 
-RESULTS_FIELDS = [
-    *ACTIVE_FIELDS,
-    "result", "profit", "roi", "settled_at", "final_score", "event_winner",
-    "running_wins", "running_losses", "running_w_l", "running_total_stake",
-    "running_total_profit", "running_roi",
-]
-
-
-CONTEXT_SIGNAL_FIELDS = [
-    "signal", "bucket", "picks", "wins", "losses", "hit_rate",
-    "stake", "profit", "roi", "avg_tle_prob", "avg_tle_edge",
-    "avg_last10_win_rate_diff", "avg_h2h_diff",
+RESULT_EXTRA_FIELDS = [
+    "result", "profit", "roi", "settled_at", "final_score", "event_status",
+    "event_winner", "event_winner_key", "running_wins", "running_losses",
+    "running_w_l", "running_total_stake", "running_total_profit", "running_roi",
 ]
 
 
@@ -70,21 +72,21 @@ def safe_float(x: Any) -> float | None:
     return v if math.isfinite(v) else None
 
 
-def read_json_url_or_path(source: str | Path) -> Any:
-    s = str(source)
-    if s.startswith("http://") or s.startswith("https://"):
-        req = urllib.request.Request(
-            s,
-            headers={
-                "User-Agent": "TLE-elo-standalone-settle/3.3",
-                "Accept": "application/json,text/plain,*/*",
-            },
-        )
-        with urllib.request.urlopen(req, timeout=60) as resp:
-            return json.loads(resp.read().decode("utf-8"))
-    path = Path(s)
-    if not path.exists():
+def safe_int(x: Any) -> int | None:
+    try:
+        s = str(x).strip()
+        if not s:
+            return None
+        if "." in s:
+            s = s.split(".", 1)[0]
+        return int(s)
+    except Exception:
         return None
+
+
+def read_json(path: Path, default: Any) -> Any:
+    if not path.exists():
+        return default
     with path.open("r", encoding="utf-8") as fh:
         return json.load(fh)
 
@@ -102,118 +104,31 @@ def payload_items(payload: Any) -> list[dict[str, Any]]:
     return []
 
 
-def extract_source_results(payload: Any) -> list[dict[str, Any]]:
-    if isinstance(payload, dict):
-        for key in ("results", "picks", "settled", "predictions"):
-            if isinstance(payload.get(key), list):
-                return [x for x in payload[key] if isinstance(x, dict)]
-    if isinstance(payload, list):
-        return [x for x in payload if isinstance(x, dict)]
-    return []
+def existing_csv_fields(path: Path, fallback: list[str]) -> list[str]:
+    if path.exists():
+        try:
+            with path.open("r", encoding="utf-8", newline="") as fh:
+                reader = csv.reader(fh)
+                header = next(reader, None)
+                if header:
+                    return [h for h in header if h]
+        except Exception:
+            pass
+    return list(fallback)
 
 
-def key_variants(item: dict[str, Any]) -> list[str]:
-    keys = []
-    for k in ("pick_id", "event_key", "fixture_id"):
-        v = safe_str(item.get(k))
-        if v:
-            keys.append(f"{k}:{v}")
-
-    combo = "|".join([
-        safe_str(item.get("date")),
-        safe_str(item.get("player_key")),
-        safe_str(item.get("opponent_key")),
-        safe_str(item.get("side")),
-    ])
-    if combo.strip("|"):
-        keys.append(f"combo:{combo}")
-
-    return keys
-
-
-def build_source_index(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
-    out = {}
-    for item in items:
-        result = safe_str(item.get("result")).lower()
-        if result not in {"win", "loss", "void", "push"}:
-            continue
-        for k in key_variants(item):
-            out[k] = item
-    return out
-
-
-def compute_profit(row: dict[str, Any], src: dict[str, Any]) -> tuple[str, float | None, float | None]:
-    result = safe_str(src.get("result") or row.get("result")).lower()
-    stake = safe_float(row.get("stake"))
-    odds = safe_float(row.get("odds"))
-    profit = safe_float(src.get("profit"))
-
-    if profit is None and stake is not None and odds is not None:
-        if result == "win":
-            profit = stake * (odds - 1.0)
-        elif result == "loss":
-            profit = -stake
-        elif result in {"void", "push"}:
-            profit = 0.0
-
-    roi = profit / stake if profit is not None and stake not in {None, 0} else None
-    return result, profit, roi
-
-
-def sort_key(row: dict[str, Any]) -> tuple[str, str, str, str]:
-    return (
-        safe_str(row.get("date")),
-        safe_str(row.get("time")),
-        safe_str(row.get("tournament")),
-        safe_str(row.get("match")),
-    )
-
-
-def add_running_totals(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    """Add cumulative W-L, stake, profit, and ROI to settled rows in chronological order.
-
-    Pending rows remain in the ledger but do not change running totals.
-    """
-    running_wins = 0
-    running_losses = 0
-    running_stake = 0.0
-    running_profit = 0.0
-
+def merge_fields(preferred: list[str], rows: list[dict[str, Any]], extras: list[str] | None = None) -> list[str]:
     out = []
-    for row in sorted(rows, key=sort_key):
-        r = dict(row)
-        status = safe_str(r.get("status") or r.get("result")).lower()
-
-        if status in {"win", "loss", "void", "push"}:
-            if status == "win":
-                running_wins += 1
-            elif status == "loss":
-                running_losses += 1
-
-            stake = safe_float(r.get("stake")) or 0.0
-            profit = safe_float(r.get("profit")) or 0.0
-
-            # Void/push can have stake in the row but should not distort ROI if profit is 0.
-            # We keep the original stake accounting, same as the rest of this project.
-            running_stake += stake
-            running_profit += profit
-
-            r["running_wins"] = running_wins
-            r["running_losses"] = running_losses
-            r["running_w_l"] = f"{running_wins}-{running_losses}"
-            r["running_total_stake"] = round(running_stake, 6)
-            r["running_total_profit"] = round(running_profit, 6)
-            r["running_roi"] = round(running_profit / running_stake, 6) if running_stake else None
-        else:
-            r["running_wins"] = running_wins
-            r["running_losses"] = running_losses
-            r["running_w_l"] = f"{running_wins}-{running_losses}"
-            r["running_total_stake"] = round(running_stake, 6)
-            r["running_total_profit"] = round(running_profit, 6)
-            r["running_roi"] = round(running_profit / running_stake, 6) if running_stake else None
-
-        out.append(r)
-
+    seen = set()
+    for f in preferred + (extras or []):
+        if f and f not in seen:
+            out.append(f)
+            seen.add(f)
+    for r in rows:
+        for k in r.keys():
+            if k not in seen:
+                out.append(k)
+                seen.add(k)
     return out
 
 
@@ -226,191 +141,285 @@ def write_csv(path: Path, rows: list[dict[str, Any]], fields: list[str]) -> None
             w.writerow({k: r.get(k) for k in fields})
 
 
-def avg_float(rows: list[dict[str, Any]], field: str) -> float | None:
-    vals = [safe_float(r.get(field)) for r in rows]
-    vals = [v for v in vals if v is not None]
-    if not vals:
-        return None
-    return round(sum(vals) / len(vals), 6)
+def api_call(params: dict[str, Any], retries: int = 3) -> dict[str, Any]:
+    if not API_KEY:
+        raise RuntimeError(
+            "Missing API key. Expose API_TENNIS_KEY or TENNIS_API_KEY in the settle workflow env."
+        )
+
+    p = {k: v for k, v in params.items() if v is not None}
+    p["APIkey"] = API_KEY
+    url = BASE_URL + "?" + urllib.parse.urlencode(p)
+
+    for attempt in range(retries):
+        req = urllib.request.Request(
+            url,
+            headers={
+                "User-Agent": "TLE-elo-standalone-settle/4.0",
+                "Accept": "application/json,text/plain,*/*",
+            },
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                raw = resp.read().decode("utf-8")
+            return json.loads(raw)
+        except Exception:
+            if attempt == retries - 1:
+                raise
+            time.sleep(2 * (attempt + 1))
+
+    return {}
 
 
-def h2h_diff(row: dict[str, Any]) -> int | None:
-    try:
-        p = int(str(row.get("h2h_player_wins")).strip())
-        o = int(str(row.get("h2h_opponent_wins")).strip())
-    except Exception:
-        return None
-    return p - o
+def fetch_fixtures_for_date(date_s: str) -> list[dict[str, Any]]:
+    data = api_call({
+        "method": "get_fixtures",
+        "date_start": date_s,
+        "date_stop": date_s,
+    })
+    if data.get("success") != 1:
+        return []
+    result = data.get("result") or []
+    return result if isinstance(result, list) else []
 
 
-def context_bucket_rows(rows: list[dict[str, Any]], signal: str, bucket: str) -> list[dict[str, Any]]:
+def build_fixture_index(dates: list[str]) -> tuple[dict[str, dict[str, Any]], Counter]:
+    index: dict[str, dict[str, Any]] = {}
+    counters = Counter()
+    for date_s in sorted(set(d for d in dates if d)):
+        fixtures = fetch_fixtures_for_date(date_s)
+        counters["dates_fetched"] += 1
+        counters["fixtures_fetched"] += len(fixtures)
+        for fx in fixtures:
+            event_key = safe_str(fx.get("event_key"))
+            if event_key:
+                index[event_key] = fx
+        time.sleep(0.25)
+    return index, counters
+
+
+def normalize_status(fixture: dict[str, Any]) -> str:
+    raw = " ".join([
+        safe_str(fixture.get("event_status")),
+        safe_str(fixture.get("event_status_info")),
+        safe_str(fixture.get("event_status_type")),
+        safe_str(fixture.get("status")),
+    ]).lower()
+    raw = raw.strip()
+    if not raw:
+        return "unknown"
+
+    if any(x in raw for x in ["finished", "ended", "complete", "completed", "final"]):
+        return "finished"
+    if any(x in raw for x in ["cancel", "canceled", "cancelled", "postpon", "suspend", "interrupt", "abandon"]):
+        return "void"
+    if any(x in raw for x in ["retired", "walkover", "w/o", "wo"]):
+        return "void"
+    if any(x in raw for x in ["not started", "not_started", "scheduled", "upcoming", "pending"]):
+        return "pending"
+    if any(x in raw for x in ["live", "inplay", "in play", "set", "break"]):
+        return "pending"
+    return raw
+
+
+def fixture_score(fixture: dict[str, Any]) -> str:
+    for key in ("event_final_result", "event_result", "final_score", "score", "result"):
+        v = safe_str(fixture.get(key))
+        if v:
+            return v
+
+    scores = fixture.get("scores")
+    if isinstance(scores, list):
+        parts = []
+        for s in scores:
+            if not isinstance(s, dict):
+                continue
+            a = s.get("score_first") or s.get("home_score") or s.get("first_score")
+            b = s.get("score_second") or s.get("away_score") or s.get("second_score")
+            if a is not None and b is not None:
+                parts.append(f"{a}-{b}")
+        if parts:
+            return " ".join(parts)
+
+    return ""
+
+
+def winner_side_from_fixture(fixture: dict[str, Any]) -> tuple[str | None, int | None, str]:
+    winner = safe_str(fixture.get("event_winner"))
+    first_key = safe_int(fixture.get("first_player_key"))
+    second_key = safe_int(fixture.get("second_player_key"))
+
+    w_lower = winner.lower()
+    if w_lower in {"first player", "first", "home", "player 1", "1"}:
+        return "home", first_key, winner
+    if w_lower in {"second player", "second", "away", "player 2", "2"}:
+        return "away", second_key, winner
+
+    winner_key = safe_int(fixture.get("event_winner_key") or fixture.get("winner_key") or fixture.get("winner_player_key"))
+    if winner_key is not None:
+        if first_key is not None and winner_key == first_key:
+            return "home", winner_key, winner
+        if second_key is not None and winner_key == second_key:
+            return "away", winner_key, winner
+
+    winner_name = safe_str(fixture.get("event_winner_name") or fixture.get("winner_name") or fixture.get("winner"))
+    if winner_name:
+        first_name = safe_str(fixture.get("event_first_player")).lower()
+        second_name = safe_str(fixture.get("event_second_player")).lower()
+        wn = winner_name.lower()
+        if first_name and wn == first_name:
+            return "home", first_key, winner_name
+        if second_name and wn == second_name:
+            return "away", second_key, winner_name
+
+    return None, None, winner or winner_name
+
+
+def compute_profit(row: dict[str, Any], result: str) -> tuple[float | None, float | None]:
+    stake = safe_float(row.get("stake"))
+    odds = safe_float(row.get("odds") or row.get("avg_odds"))
+    if stake is None:
+        stake = 1.0
+
+    profit = None
+    if result == "win" and odds is not None:
+        profit = stake * (odds - 1.0)
+    elif result == "loss":
+        profit = -stake
+    elif result in {"void", "push"}:
+        profit = 0.0
+
+    roi = profit / stake if profit is not None and stake else None
+    return profit, roi
+
+
+def settle_row(row: dict[str, Any], fixture: dict[str, Any] | None) -> tuple[dict[str, Any], bool, str]:
+    if fixture is None:
+        return row, False, "fixture_not_found"
+
+    status = normalize_status(fixture)
+    if status == "pending" or status == "unknown":
+        return row, False, status
+
+    updated = dict(row)
+    updated["event_status"] = safe_str(fixture.get("event_status") or fixture.get("status"))
+    updated["final_score"] = fixture_score(fixture)
+
+    if status == "void":
+        profit, roi = compute_profit(updated, "void")
+        updated.update({
+            "status": "void",
+            "result": "void",
+            "profit": profit,
+            "roi": roi,
+            "settled_at": now_utc_iso(),
+            "event_winner": safe_str(fixture.get("event_winner")),
+            "event_winner_key": fixture.get("event_winner_key") or fixture.get("winner_key"),
+        })
+        return updated, True, "settled_void"
+
+    winner_side, winner_key, winner_label = winner_side_from_fixture(fixture)
+    if status == "finished" and not winner_side:
+        return row, False, "finished_without_winner"
+
+    picked_side = safe_str(row.get("side")).lower()
+    if picked_side in {"home", "first", "first player", "1"}:
+        picked_side = "home"
+    elif picked_side in {"away", "second", "second player", "2"}:
+        picked_side = "away"
+
+    result = "win" if picked_side and picked_side == winner_side else "loss"
+    profit, roi = compute_profit(updated, result)
+    updated.update({
+        "status": result,
+        "result": result,
+        "profit": None if profit is None else round(profit, 6),
+        "roi": None if roi is None else round(roi, 6),
+        "settled_at": now_utc_iso(),
+        "event_winner": winner_label,
+        "event_winner_key": winner_key,
+    })
+    return updated, True, f"settled_{result}"
+
+
+def sort_key(row: dict[str, Any]) -> tuple[str, str, str, str]:
+    return (
+        safe_str(row.get("date")),
+        safe_str(row.get("time")),
+        safe_str(row.get("tournament")),
+        safe_str(row.get("match")),
+    )
+
+
+def add_running_totals(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    running_wins = 0
+    running_losses = 0
+    running_stake = 0.0
+    running_profit = 0.0
     out = []
-    for r in rows:
-        if signal == "form_support":
-            v = safe_str(r.get("form_support")).lower()
-            if bucket == "supports_pick" and v in {"supports_pick", "pick", "yes", "true"}:
-                out.append(r)
-            elif bucket == "against_pick" and v in {"against_pick", "opponent", "no", "false"}:
-                out.append(r)
-            elif bucket == "neutral_unknown" and v not in {"supports_pick", "pick", "yes", "true", "against_pick", "opponent", "no", "false"}:
-                out.append(r)
 
-        elif signal == "h2h_support":
-            v = safe_str(r.get("h2h_support")).lower()
-            if bucket == "supports_pick" and v in {"supports_pick", "pick", "yes", "true"}:
-                out.append(r)
-            elif bucket == "against_pick" and v in {"against_pick", "opponent", "no", "false"}:
-                out.append(r)
-            elif bucket == "neutral_unknown" and v not in {"supports_pick", "pick", "yes", "true", "against_pick", "opponent", "no", "false"}:
-                out.append(r)
+    for row in sorted(rows, key=sort_key):
+        r = dict(row)
+        status = safe_str(r.get("status") or r.get("result")).lower()
 
-        elif signal == "fatigue_flag":
-            v = safe_str(r.get("fatigue_flag")).lower()
-            has_flag = bool(v and v not in {"none", "false", "0", "no", "-", "null"})
-            if bucket == "has_flag" and has_flag:
-                out.append(r)
-            elif bucket == "no_flag" and not has_flag:
-                out.append(r)
+        if status in {"win", "loss", "void", "push"}:
+            if status == "win":
+                running_wins += 1
+            elif status == "loss":
+                running_losses += 1
 
-        elif signal == "last10_win_rate_diff":
-            d = safe_float(r.get("last10_win_rate_diff"))
-            if d is None:
-                if bucket == "unknown":
-                    out.append(r)
-            elif bucket == "pick_plus_15pct" and d >= 0.15:
-                out.append(r)
-            elif bucket == "pick_plus_5_15pct" and 0.05 <= d < 0.15:
-                out.append(r)
-            elif bucket == "neutral" and -0.05 < d < 0.05:
-                out.append(r)
-            elif bucket == "opponent_plus_5pct" and d <= -0.05:
-                out.append(r)
+            stake = safe_float(r.get("stake")) or 0.0
+            profit = safe_float(r.get("profit")) or 0.0
+            running_stake += stake
+            running_profit += profit
 
-        elif signal == "h2h_diff":
-            d = h2h_diff(r)
-            if d is None:
-                if bucket == "unknown_no_h2h":
-                    out.append(r)
-            elif bucket == "pick_leads" and d > 0:
-                out.append(r)
-            elif bucket == "even" and d == 0:
-                out.append(r)
-            elif bucket == "opponent_leads" and d < 0:
-                out.append(r)
+            r["running_wins"] = running_wins
+            r["running_losses"] = running_losses
+            r["running_w_l"] = f"{running_wins}-{running_losses}"
+            r["running_total_stake"] = round(running_stake, 6)
+            r["running_total_profit"] = round(running_profit, 6)
+            r["running_roi"] = round(running_profit / running_stake, 6) if running_stake else None
+
+        out.append(r)
 
     return out
-
-
-def summarize_context_bucket(signal: str, bucket: str, rows: list[dict[str, Any]]) -> dict[str, Any]:
-    settled = [r for r in rows if safe_str(r.get("status")).lower() in {"win", "loss"}]
-    wins = sum(1 for r in settled if safe_str(r.get("status")).lower() == "win")
-    losses = sum(1 for r in settled if safe_str(r.get("status")).lower() == "loss")
-    stake = sum(safe_float(r.get("stake")) or 0.0 for r in settled)
-    profit = sum(safe_float(r.get("profit")) or 0.0 for r in settled)
-    hdiffs = [h2h_diff(r) for r in settled]
-    hdiffs = [d for d in hdiffs if d is not None]
-
-    return {
-        "signal": signal,
-        "bucket": bucket,
-        "picks": len(settled),
-        "wins": wins,
-        "losses": losses,
-        "hit_rate": round(wins / (wins + losses), 6) if (wins + losses) else None,
-        "stake": round(stake, 6),
-        "profit": round(profit, 6),
-        "roi": round(profit / stake, 6) if stake else None,
-        "avg_tle_prob": avg_float(settled, "tle_prob"),
-        "avg_tle_edge": avg_float(settled, "tle_edge"),
-        "avg_last10_win_rate_diff": avg_float(settled, "last10_win_rate_diff"),
-        "avg_h2h_diff": round(sum(hdiffs) / len(hdiffs), 6) if hdiffs else None,
-    }
-
-
-def build_context_signal_summary(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    settled = [r for r in rows if safe_str(r.get("status")).lower() in {"win", "loss"}]
-    specs = [
-        ("all", "all"),
-        ("form_support", "supports_pick"),
-        ("form_support", "against_pick"),
-        ("form_support", "neutral_unknown"),
-        ("h2h_support", "supports_pick"),
-        ("h2h_support", "against_pick"),
-        ("h2h_support", "neutral_unknown"),
-        ("fatigue_flag", "has_flag"),
-        ("fatigue_flag", "no_flag"),
-        ("last10_win_rate_diff", "pick_plus_15pct"),
-        ("last10_win_rate_diff", "pick_plus_5_15pct"),
-        ("last10_win_rate_diff", "neutral"),
-        ("last10_win_rate_diff", "opponent_plus_5pct"),
-        ("last10_win_rate_diff", "unknown"),
-        ("h2h_diff", "pick_leads"),
-        ("h2h_diff", "even"),
-        ("h2h_diff", "opponent_leads"),
-        ("h2h_diff", "unknown_no_h2h"),
-    ]
-
-    out = []
-    for signal, bucket in specs:
-        bucket_rows = settled if signal == "all" else context_bucket_rows(settled, signal, bucket)
-        out.append(summarize_context_bucket(signal, bucket, bucket_rows))
-    return out
-
 
 
 def fmt_pct(x: Any) -> str:
     v = safe_float(x)
-    if v is None:
-        return "-"
-    return f"{v * 100:.2f}%"
+    return "-" if v is None else f"{v * 100:.2f}%"
 
 
 def fmt_num(x: Any) -> str:
     v = safe_float(x)
-    if v is None:
-        return "-"
-    return f"{v:.2f}"
+    return "-" if v is None else f"{v:.2f}"
 
 
 def fmt_cell(x: Any) -> str:
     s = safe_str(x)
-    if not s:
-        return "-"
-    return s.replace("|", "\\|")
+    return "-" if not s else s.replace("|", "\\|")
 
 
 def write_results_markdown(path: Path, rows: list[dict[str, Any]], summary: dict[str, Any]) -> None:
-    """Human-readable ledger with total ROI and W-L above the table."""
     path.parent.mkdir(parents=True, exist_ok=True)
+    settled = [r for r in rows if safe_str(r.get("status")).lower() in {"win", "loss", "void", "push"}]
+    display_rows = sorted(settled, key=sort_key, reverse=True)[:500]
 
-    table_fields = [
-        "date", "time", "status", "running_w_l", "running_roi",
-        "pick", "opponent", "odds", "stake", "profit",
-        "total_profit", "level", "surface", "tle_prob", "tle_edge",
-        "confidence", "final_score",
+    lines = [
+        "# Standalone Elo Results",
+        "",
+        f"- Settled: {summary.get('settled')}",
+        f"- W-L: {summary.get('w_l')}",
+        f"- Hit rate: {fmt_pct(summary.get('hit_rate'))}",
+        f"- Total stake: {fmt_num(summary.get('total_stake'))}",
+        f"- Total profit: {fmt_num(summary.get('total_profit'))}",
+        f"- ROI: {fmt_pct(summary.get('roi'))}",
+        "",
+        "## Settled picks",
+        "",
+        "| Date | Time | Result | W-L | ROI | Pick | Opponent | Odds | Stake | Profit | Total Profit | Level | Surface | TLE Prob | TLE Edge | Conf | Score |",
+        "|---|---:|---|---:|---:|---|---|---:|---:|---:|---:|---|---|---:|---:|---|---|",
     ]
-
-    # Newest first is easier to review, but running values remain computed chronologically.
-    display_rows = sorted(rows, key=sort_key, reverse=True)
-
-    lines: list[str] = []
-    lines.append("# Elo Standalone Results")
-    lines.append("")
-    lines.append(f"Generated: `{now_utc_iso()}`")
-    lines.append("")
-    lines.append("## Summary")
-    lines.append("")
-    lines.append(f"**W-L:** `{summary.get('w_l') or '0-0'}`  ")
-    lines.append(f"**Hit rate:** `{fmt_pct(summary.get('hit_rate'))}`  ")
-    lines.append(f"**Total stake:** `{fmt_num(summary.get('total_stake'))}`  ")
-    lines.append(f"**Total profit:** `{fmt_num(summary.get('total_profit'))}`  ")
-    lines.append(f"**Total ROI:** `{fmt_pct(summary.get('roi'))}`  ")
-    lines.append(f"**Pending:** `{summary.get('pending', 0)}`  ")
-    lines.append("")
-    lines.append("## Settled / tracked picks")
-    lines.append("")
-    lines.append("| Date | Time | Result | W-L | ROI | Pick | Opponent | Odds | Stake | Profit | Total Profit | Level | Surface | TLE Prob | TLE Edge | Conf | Score |")
-    lines.append("|---|---:|---|---:|---:|---|---|---:|---:|---:|---:|---|---|---:|---:|---|---|")
 
     for r in display_rows:
         lines.append(
@@ -423,7 +432,7 @@ def write_results_markdown(path: Path, rows: list[dict[str, Any]], summary: dict
                 fmt_pct(r.get("running_roi")),
                 fmt_cell(r.get("pick")),
                 fmt_cell(r.get("opponent")),
-                fmt_num(r.get("odds")),
+                fmt_num(r.get("odds") or r.get("avg_odds")),
                 fmt_num(r.get("stake")),
                 fmt_num(r.get("profit")),
                 fmt_num(r.get("running_total_profit")),
@@ -437,65 +446,55 @@ def write_results_markdown(path: Path, rows: list[dict[str, Any]], summary: dict
             + " |"
         )
 
-    lines.append("")
-    path.write_text("\n".join(lines), encoding="utf-8")
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--results-source", default=DEFAULT_RESULTS_URL)
+    parser.add_argument("--date", default=None, help="Optional YYYY-MM-DD. If set, only fetch this date.")
+    parser.add_argument("--lookback-days", type=int, default=7, help="Also fetch recent dates for delayed settlement.")
     args = parser.parse_args()
 
-    predictions_payload = read_json_url_or_path(PREDICTIONS_JSON) or {"picks": []}
-    results_payload = read_json_url_or_path(RESULTS_JSON) or {"picks": []}
+    predictions_payload = read_json(PREDICTIONS_JSON, {"picks": []})
+    results_payload = read_json(RESULTS_JSON, {"picks": []})
 
     active = payload_items(predictions_payload)
     historical = payload_items(results_payload)
 
-    source_payload = read_json_url_or_path(args.results_source)
-    source_items = extract_source_results(source_payload)
-    source_index = build_source_index(source_items)
+    active_dates = {safe_str(r.get("date")) for r in active if safe_str(r.get("date"))}
+    if args.date:
+        active_dates = {args.date}
+
+    # Small safety net: if some old active picks have wrong/missing date, fetch recent dates too.
+    today = datetime.now(timezone.utc).date()
+    for i in range(max(0, args.lookback_days) + 1):
+        active_dates.add((today - timedelta(days=i)).isoformat())
+
+    fixture_index, fetch_counts = build_fixture_index(sorted(active_dates))
 
     historical_by_id = {safe_str(r.get("pick_id")): r for r in historical if safe_str(r.get("pick_id"))}
     still_active = []
     settled_now = []
-    counters = Counter()
+    counters = Counter(fetch_counts)
 
     for row in active:
         pid = safe_str(row.get("pick_id"))
-        match = None
-        for k in key_variants(row):
-            if k in source_index:
-                match = source_index[k]
-                break
+        event_key = safe_str(row.get("event_key") or row.get("fixture_id"))
+        fixture = fixture_index.get(event_key) if event_key else None
 
-        if not match:
+        updated, did_settle, reason = settle_row(row, fixture)
+        counters[reason] += 1
+
+        if did_settle:
+            if pid:
+                historical_by_id[pid] = updated
+            settled_now.append(updated)
+        else:
             still_active.append(row)
-            counters["still_pending"] += 1
-            continue
+            if pid and pid not in historical_by_id:
+                historical_by_id[pid] = row
 
-        result, profit, roi = compute_profit(row, match)
-        updated = {
-            **row,
-            "status": result,
-            "result": result,
-            "profit": None if profit is None else round(profit, 6),
-            "roi": None if roi is None else round(roi, 6),
-            "settled_at": match.get("settled_at") or now_utc_iso(),
-            "final_score": match.get("final_score"),
-            "event_winner": match.get("event_winner"),
-        }
-        historical_by_id[pid] = updated
-        settled_now.append(updated)
-        counters[f"settled_{result}"] += 1
-
-    for row in still_active:
-        pid = safe_str(row.get("pick_id"))
-        if pid and pid not in historical_by_id:
-            historical_by_id[pid] = row
-
-    all_results_raw = list(historical_by_id.values())
-    all_results = add_running_totals(all_results_raw)
-    context_signal_summary = build_context_signal_summary(all_results)
+    all_results = add_running_totals(list(historical_by_id.values()))
     still_active = sorted(still_active, key=sort_key)
 
     settled_all = [r for r in all_results if safe_str(r.get("status")).lower() in {"win", "loss", "void", "push"}]
@@ -507,7 +506,7 @@ def main() -> None:
 
     predictions_out = {
         "generated_at": now_utc_iso(),
-        "model": "TLE Standalone Elo Scanner v3.3",
+        "model": "TLE Standalone Elo Scanner v4.0",
         "summary": {
             "active_picks": len(still_active),
             "settled_removed_this_run": len(settled_now),
@@ -516,7 +515,7 @@ def main() -> None:
     }
     results_out = {
         "generated_at": now_utc_iso(),
-        "model": "TLE Standalone Elo Scanner v3.3",
+        "model": "TLE Standalone Elo Scanner v4.0",
         "summary": {
             "total_tracked": len(all_results),
             "pending": len(still_active),
@@ -532,30 +531,23 @@ def main() -> None:
         "picks": all_results,
     }
 
+    active_fields = existing_csv_fields(ACTIVE_CSV, DEFAULT_ACTIVE_FIELDS)
+    active_fields = merge_fields(active_fields, still_active)
+    results_fields = merge_fields(active_fields, all_results, RESULT_EXTRA_FIELDS)
+
     write_json(PREDICTIONS_JSON, predictions_out)
     write_json(RESULTS_JSON, results_out)
-    write_csv(ACTIVE_CSV, still_active, ACTIVE_FIELDS)
-    write_csv(RESULTS_CSV, all_results, RESULTS_FIELDS)
+    write_csv(ACTIVE_CSV, still_active, active_fields)
+    write_csv(RESULTS_CSV, all_results, results_fields)
     write_results_markdown(RESULTS_MD, all_results, results_out["summary"])
-    write_csv(CONTEXT_SIGNAL_CSV, context_signal_summary, CONTEXT_SIGNAL_FIELDS)
-    write_json(CONTEXT_SIGNAL_JSON, {
-        "generated_at": now_utc_iso(),
-        "summary": context_signal_summary,
-        "notes": [
-            "This is diagnostic only. Form/H2H/fatigue do not affect TLE probability.",
-            "Use this after enough settled picks to decide whether form/H2H filters improve ROI.",
-            "Buckets are computed only from settled win/loss rows.",
-        ],
-    })
 
     report = {
         "status": "ok",
         "generated_at": now_utc_iso(),
-        "source": args.results_source,
+        "source": "API-Tennis get_fixtures",
         "active_before": len(active),
         "settled_this_run": len(settled_now),
         "active_after": len(still_active),
-        "source_settled_rows": len(source_index),
         "settle_counts": dict(sorted(counters.items())),
         "roi_summary": results_out["summary"],
         "outputs": {
@@ -565,21 +557,17 @@ def main() -> None:
             "results_csv": str(RESULTS_CSV),
             "results_md": str(RESULTS_MD),
             "report_json": str(REPORT_JSON),
-            "context_signal_json": str(CONTEXT_SIGNAL_JSON),
-            "context_signal_csv": str(CONTEXT_SIGNAL_CSV),
         },
         "notes": [
+            "Standalone settle uses API-Tennis get_fixtures and matches by event_key.",
             "Settled picks are removed from predictions.json.",
-            "results.json is the ledger and keeps both pending and settled tracked picks.",
-            "results.md has total ROI/W-L above the table for easy review.",
-            "results.csv keeps running W-L, running total profit, and running ROI per row.",
-            "context_signal_report.json and context_signal_summary.csv track whether API form/H2H/fatigue signals helped.",
-            "This settles standalone TLE Elo scanner picks from data/elo_standalone.",
+            "results.json is the ledger and keeps pending and settled tracked picks.",
         ],
     }
     write_json(REPORT_JSON, report)
+
     print(
-        f"status=ok active_before={len(active)} settled_this_run={len(settled_now)} "
+        f"status=ok source=api active_before={len(active)} settled_this_run={len(settled_now)} "
         f"active_after={len(still_active)} wl={wins}-{losses} "
         f"profit={round(profit, 6)} roi={round(profit / stake, 6) if stake else None}"
     )
