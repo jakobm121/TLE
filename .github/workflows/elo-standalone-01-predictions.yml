@@ -46,6 +46,7 @@ jobs:
 
           python -m tle_machine.elo_standalone_predictions \
             --days-ahead "${{ github.event.inputs.days_ahead }}" \
+            --min-start-minutes 30 \
             $EXTRA_ARGS
 
       - name: Commit standalone Elo predictions
@@ -57,8 +58,9 @@ jobs:
           git add data/elo_standalone/results.json || true
           git add data/elo_standalone/active_predictions.csv || true
           git add data/reports/elo_standalone/predictions_report.json || true
-          git add data/reports/elo_standalone/scan_diagnostics.csv || true
-          
+          git add data/reports/elo_standalone/unresolved_surface_report.json || true
+          git add data/metadata/tournament_surface_map.json || true
+
           if git diff --cached --quiet; then
             echo "No standalone Elo prediction changes to commit."
           else
