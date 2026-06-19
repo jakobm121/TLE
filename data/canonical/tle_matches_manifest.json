@@ -1,21 +1,21 @@
 {
   "counters": {
-    "api_added": 4770,
-    "api_added_level_atp_wta": 280,
+    "api_added": 4994,
+    "api_added_level_atp_wta": 295,
     "api_added_level_challenger": 717,
     "api_added_level_grand_slam": 283,
-    "api_added_level_itf": 2779,
-    "api_added_level_qualifying": 711,
-    "api_added_surface_clay": 2606,
-    "api_added_surface_grass": 525,
-    "api_added_surface_hard": 1545,
-    "api_added_surface_unknown": 94,
+    "api_added_level_itf": 2934,
+    "api_added_level_qualifying": 765,
+    "api_added_surface_clay": 2710,
+    "api_added_surface_grass": 544,
+    "api_added_surface_hard": 1606,
+    "api_added_surface_unknown": 134,
     "api_duplicate_sackmann": 72,
     "api_duplicate_strategy_date_gender_players": 72,
-    "api_input": 5156,
-    "api_mapping_both_mapped": 4842,
+    "api_input": 5388,
+    "api_mapping_both_mapped": 5066,
     "api_mapping_none_mapped": 17,
-    "api_mapping_one_mapped": 297,
+    "api_mapping_one_mapped": 305,
     "player_aliases_loaded": 152,
     "sackmann_alias_resolved_matches": 1540,
     "sackmann_alias_resolved_player_keys": 1549,
@@ -25,10 +25,10 @@
     "sackmann_skipped_winner_loser_same_player_key": 1
   },
   "genders": {
-    "men": 113107,
-    "women": 113977
+    "men": 113231,
+    "women": 114077
   },
-  "generated_at": "2026-06-18T12:21:22+00:00",
+  "generated_at": "2026-06-19T06:36:48+00:00",
   "inputs": {
     "api_manifest": "data/source/api_tennis/manifest.json",
     "player_aliases": "data/metadata/sackmann/player_aliases.json",
@@ -36,13 +36,13 @@
     "sackmann_manifest": "data/source/sackmann/manifest.json"
   },
   "levels": {
-    "atp_wta": 19647,
+    "atp_wta": 19662,
     "challenger": 40652,
     "grand_slam": 6751,
-    "itf": 159323,
-    "qualifying": 711
+    "itf": 159478,
+    "qualifying": 765
   },
-  "matches": 227084,
+  "matches": 227308,
   "player_aliases": {
     "loaded": 152,
     "path": "data/metadata/sackmann/player_aliases.json"
@@ -59,38 +59,38 @@
   },
   "source": "canonical_combined",
   "sources": {
-    "api_tennis": 4770,
+    "api_tennis": 4994,
     "sackmann": 222314
   },
   "surfaces": {
     "carpet": 2314,
-    "clay": 98357,
-    "grass": 5421,
-    "hard": 120898,
-    "unknown": 94
+    "clay": 98461,
+    "grass": 5440,
+    "hard": 120959,
+    "unknown": 134
   },
   "year_files": [
     {
-      "created_at": "2026-06-18T12:21:18+00:00",
+      "created_at": "2026-06-19T06:36:44+00:00",
       "matches": 68250,
       "path": "data/canonical/tle_matches_2023.jsonl.gz",
       "year": 2023
     },
     {
-      "created_at": "2026-06-18T12:21:20+00:00",
+      "created_at": "2026-06-19T06:36:46+00:00",
       "matches": 73997,
       "path": "data/canonical/tle_matches_2024.jsonl.gz",
       "year": 2024
     },
     {
-      "created_at": "2026-06-18T12:21:21+00:00",
+      "created_at": "2026-06-19T06:36:47+00:00",
       "matches": 55948,
       "path": "data/canonical/tle_matches_2025.jsonl.gz",
       "year": 2025
     },
     {
-      "created_at": "2026-06-18T12:21:22+00:00",
-      "matches": 28889,
+      "created_at": "2026-06-19T06:36:48+00:00",
+      "matches": 29113,
       "path": "data/canonical/tle_matches_2026.jsonl.gz",
       "year": 2026
     }
