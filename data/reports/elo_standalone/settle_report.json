@@ -1,0 +1,42 @@
+{
+  "active_after": 20,
+  "active_before": 20,
+  "generated_at": "2026-06-19T23:27:59+00:00",
+  "notes": [
+    "Settled picks are removed from predictions.json.",
+    "results.json is the ledger and keeps both pending and settled tracked picks.",
+    "results.md has total ROI/W-L above the table for easy review.",
+    "results.csv keeps running W-L, running total profit, and running ROI per row.",
+    "context_signal_report.json and context_signal_summary.csv track whether API form/H2H/fatigue signals helped.",
+    "This settles standalone TLE Elo scanner picks from data/elo_standalone."
+  ],
+  "outputs": {
+    "active_csv": "data/elo_standalone/active_predictions.csv",
+    "context_signal_csv": "data/reports/elo_standalone/context_signal_summary.csv",
+    "context_signal_json": "data/reports/elo_standalone/context_signal_report.json",
+    "predictions_json": "data/elo_standalone/predictions.json",
+    "report_json": "data/reports/elo_standalone/settle_report.json",
+    "results_csv": "data/elo_standalone/results.csv",
+    "results_json": "data/elo_standalone/results.json",
+    "results_md": "data/elo_standalone/results.md"
+  },
+  "roi_summary": {
+    "hit_rate": null,
+    "losses": 0,
+    "pending": 20,
+    "roi": null,
+    "settled": 0,
+    "total_profit": 0,
+    "total_stake": 0,
+    "total_tracked": 20,
+    "w_l": "0-0",
+    "wins": 0
+  },
+  "settle_counts": {
+    "still_pending": 20
+  },
+  "settled_this_run": 0,
+  "source": "https://raw.githubusercontent.com/jakobm121/Ai/refs/heads/main/data/tennis_results.json",
+  "source_settled_rows": 2916,
+  "status": "ok"
+}
