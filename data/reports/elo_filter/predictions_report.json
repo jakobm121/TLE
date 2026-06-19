@@ -1,19 +1,20 @@
 {
-  "active_predictions_total": 4,
+  "active_predictions_total": 6,
   "by_level_today": {
-    "atp_wta": 1,
-    "challenger": 8,
-    "itf": 6
+    "atp_wta": 3,
+    "challenger": 4,
+    "itf": 8
   },
   "decision_counts_today": {
-    "NO_BET": 11,
-    "STRONG_BET": 4
+    "BET": 1,
+    "NO_BET": 9,
+    "STRONG_BET": 5
   },
   "evaluated": 15,
-  "generated_at": "2026-06-18T21:20:41+00:00",
+  "generated_at": "2026-06-19T06:38:59+00:00",
   "input_picks": 15,
-  "new_active_candidates": 4,
-  "new_added_to_predictions": 4,
+  "new_active_candidates": 6,
+  "new_added_to_predictions": 6,
   "notes": [
     "This workflow only filters picks produced by the tennis value model.",
     "Only BET and STRONG_BET are stored as active predictions.",
@@ -27,9 +28,11 @@
     "results_json": "data/elo_filter/results.json"
   },
   "reason_counts_today": {
-    "elo_disagrees_or_prob_too_low": 2,
-    "pass_strong_edge": 4,
-    "unknown_surface": 9
+    "elo_disagrees_or_prob_too_low": 5,
+    "min_level_not_met": 1,
+    "pass_edge": 1,
+    "pass_strong_edge": 5,
+    "unknown_surface": 3
   },
   "status": "ok"
 }
