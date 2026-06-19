@@ -36,8 +36,11 @@ TZ_NAME = "Europe/Ljubljana"
 
 API_SLEEP_SECONDS = 0.35
 REQUEST_TIMEOUT = 45
+DEFAULT_MIN_START_MINUTES = 30
+DEBUG_REPORT_DEFAULT = False
 
 API_MAPPING_JSON = Path("data/metadata/api_tennis/player_mapping.json")
+SURFACE_MAP_JSON = Path("data/metadata/tournament_surface_map.json")
 
 RATING_CANDIDATES = [
     Path("data/ratings/tle_player_ratings.json.gz"),
@@ -56,15 +59,14 @@ RESULTS_JSON = BASE_DIR / "results.json"
 ACTIVE_CSV = BASE_DIR / "active_predictions.csv"
 SCAN_CSV = REPORT_DIR / "scan_diagnostics.csv"
 REPORT_JSON = REPORT_DIR / "predictions_report.json"
+UNRESOLVED_SURFACE_JSON = REPORT_DIR / "unresolved_surface_report.json"
 
 RATING_INITIAL = 1500.0
 VALID_SURFACES = {"hard", "clay", "grass", "carpet"}
 
-# API-Tennis often does not return surface in get_fixtures/get_odds.
-# These overrides restore surface for known ATP/WTA/Challenger events so the
-# final surface-blend Elo models can run instead of dropping everything as unknown_surface.
-# Keys are matched against the normalized context_text built from raw API fields.
-TOURNAMENT_SURFACE_OVERRIDES = {
+# Bootstrap map used only if data/metadata/tournament_surface_map.json does not exist yet.
+# Normal production maintenance should happen in that JSON file, not in code.
+DEFAULT_TOURNAMENT_SURFACE_MAP = {
     # ATP/WTA grass week
     "atp london": "grass",
     "london atp": "grass",
@@ -86,6 +88,13 @@ TOURNAMENT_SURFACE_OVERRIDES = {
     "challenger women singles figueira da foz": "hard",
     "challenger men singles dublin": "hard",
     "challenger men singles asuncion": "clay",
+
+    # Grand Slams
+    "australian open": "hard",
+    "roland garros": "clay",
+    "french open": "clay",
+    "wimbledon": "grass",
+    "us open": "hard",
 }
 
 
@@ -136,7 +145,7 @@ LEVEL_RULES = {
         "level_weight": 1.00,
         "surface_weight": 0.00,
         "needs_surface": False,
-        "min_level_matches": 10,
+        "min_level_matches": 15,
         "min_surface_matches": 0,
         "min_prob": 0.50,
         "edge_bet": 0.04,
@@ -147,11 +156,11 @@ LEVEL_RULES = {
         "level_weight": 1.00,
         "surface_weight": 0.00,
         "needs_surface": False,
-        "min_level_matches": 20,
+        "min_level_matches": 15,
         "min_surface_matches": 0,
-        "min_prob": 0.55,
-        "edge_bet": 0.06,
-        "edge_strong": 0.10,
+        "min_prob": 0.53,
+        "edge_bet": 0.04,
+        "edge_strong": 0.08,
     },
 }
 
@@ -300,6 +309,40 @@ def normalize_surface(s: Any) -> str:
     return x if x in VALID_SURFACES else "unknown"
 
 
+def normalize_surface_map_key(s: Any) -> str:
+    x = safe_str(s).lower()
+    x = x.replace("-", " ").replace("_", " ")
+    x = re.sub(r"\s+", " ", x).strip()
+    return x
+
+
+def read_tournament_surface_map(path: Path = SURFACE_MAP_JSON) -> dict[str, str]:
+    if not path.exists():
+        path.parent.mkdir(parents=True, exist_ok=True)
+        clean_default = {
+            normalize_surface_map_key(k): normalize_surface(v)
+            for k, v in DEFAULT_TOURNAMENT_SURFACE_MAP.items()
+            if normalize_surface(v) in VALID_SURFACES
+        }
+        path.write_text(json.dumps(clean_default, indent=2, ensure_ascii=False, sort_keys=True) + "\n", encoding="utf-8")
+        return clean_default
+
+    raw = read_json_path(path, {})
+    if not isinstance(raw, dict):
+        return {}
+
+    out: dict[str, str] = {}
+    for k, v in raw.items():
+        key = normalize_surface_map_key(k)
+        surf = normalize_surface(v)
+        if key and surf in VALID_SURFACES:
+            out[key] = surf
+    return out
+
+
+TOURNAMENT_SURFACE_MAP: dict[str, str] = {}
+
+
 def infer_surface(match: dict[str, Any], context: dict[str, Any] | None = None) -> tuple[str, str]:
     # 1) Direct API fields first.
     direct_fields = [
@@ -322,10 +365,11 @@ def infer_surface(match: dict[str, Any], context: dict[str, Any] | None = None) 
         if re.search(rf"\b{surf}\b", text):
             return surf, "context_text"
 
-    # 3) Known tournament overrides.
-    for needle, surf in TOURNAMENT_SURFACE_OVERRIDES.items():
-        if needle in text:
-            return surf, "tournament_override"
+    # 3) Known tournament map from data/metadata/tournament_surface_map.json.
+    map_text = normalize_surface_map_key(text)
+    for needle, surf in TOURNAMENT_SURFACE_MAP.items():
+        if needle and needle in map_text:
+            return surf, "tournament_surface_map"
 
     return "unknown", "missing"
 
@@ -883,6 +927,31 @@ def match_datetime(match: dict[str, Any]) -> tuple[str, str]:
     return date_s, time_s
 
 
+def fixture_start_datetime(match: dict[str, Any]) -> datetime | None:
+    date_s, time_s = match_datetime(match)
+    if not date_s:
+        return None
+    try:
+        return datetime.strptime(f"{date_s} {time_s}", "%Y-%m-%d %H:%M").replace(tzinfo=ZoneInfo(TZ_NAME))
+    except ValueError:
+        try:
+            return datetime.strptime(date_s, "%Y-%m-%d").replace(tzinfo=ZoneInfo(TZ_NAME))
+        except ValueError:
+            return None
+
+
+def starts_after_min_lead(match: dict[str, Any], min_start_minutes: int) -> bool:
+    if min_start_minutes <= 0:
+        return True
+
+    start_dt = fixture_start_datetime(match)
+    if start_dt is None:
+        return True
+
+    now_local = datetime.now(ZoneInfo(TZ_NAME))
+    return start_dt >= now_local + timedelta(minutes=min_start_minutes)
+
+
 def evaluate_side(
     *,
     match: dict[str, Any],
@@ -1162,6 +1231,42 @@ def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
             w.writerow({k: r.get(k) for k in CSV_FIELDS})
 
 
+
+# =========================
+# UNRESOLVED SURFACE REPORT
+# =========================
+
+def build_unresolved_surface_report(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    seen: dict[str, dict[str, Any]] = {}
+    for r in rows:
+        if r.get("reason") != "unknown_surface":
+            continue
+        if r.get("level") not in {"atp_wta", "grand_slam", "challenger"}:
+            continue
+
+        key = normalize_surface_map_key(
+            r.get("context_text")
+            or f"{r.get('raw_event_type_type', '')} {r.get('raw_tournament_name', '')} {r.get('raw_tournament_round', '')}"
+        )
+        if not key:
+            continue
+
+        item = seen.setdefault(key, {
+            "level": r.get("level"),
+            "gender": r.get("gender"),
+            "raw_event_type_type": r.get("raw_event_type_type"),
+            "raw_tournament_name": r.get("raw_tournament_name"),
+            "raw_tournament_round": r.get("raw_tournament_round"),
+            "context_text": r.get("context_text"),
+            "suggested_map_key": key,
+            "matches": [],
+        })
+        match_name = r.get("match")
+        if match_name and match_name not in item["matches"]:
+            item["matches"].append(match_name)
+
+    return sorted(seen.values(), key=lambda x: (safe_str(x.get("level")), safe_str(x.get("raw_tournament_name"))))
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--date", default=None, help="Scan date YYYY-MM-DD; default today Europe/Ljubljana")
@@ -1169,12 +1274,19 @@ def main() -> None:
     parser.add_argument("--ratings-path", type=Path, default=None)
     parser.add_argument("--api-mapping", type=Path, default=API_MAPPING_JSON)
     parser.add_argument("--include-no-bet", action="store_true", help="Store/report NO_BET rows too")
+    parser.add_argument("--min-start-minutes", type=int, default=DEFAULT_MIN_START_MINUTES,
+                        help="Only create predictions for matches starting at least this many minutes from now.")
+    parser.add_argument("--debug-report", action="store_true",
+                        help="Write scan_diagnostics.csv and include raw_context_samples in the report.")
     args = parser.parse_args()
 
     ratings_path = find_ratings_path(args.ratings_path)
     ratings = read_json_maybe_gz(ratings_path)
     players = get_players_from_ratings(ratings)
     api_mapping = read_api_mapping(args.api_mapping)
+
+    global TOURNAMENT_SURFACE_MAP
+    TOURNAMENT_SURFACE_MAP = read_tournament_surface_map(SURFACE_MAP_JSON)
 
     start_date = datetime.strptime(args.date, "%Y-%m-%d").date() if args.date else local_today()
 
@@ -1190,6 +1302,11 @@ def main() -> None:
         if not ok:
             counters[f"fixture_skip_{reason}"] += 1
             continue
+
+        if not starts_after_min_lead(m, args.min_start_minutes):
+            counters["fixture_skip_starts_too_soon"] += 1
+            continue
+
         try:
             built = scan_match(m, players=players, api_mapping=api_mapping, include_no_bet=True)
             rows.extend(built)
@@ -1231,7 +1348,7 @@ def main() -> None:
 
     write_json(PREDICTIONS_JSON, {
         "generated_at": now_utc_iso(),
-        "model": "TLE Standalone Elo Scanner v1",
+        "model": "TLE Standalone Elo Scanner v3.3",
         "summary": {
             "active_picks": len(active),
             "new_added": added,
@@ -1242,7 +1359,7 @@ def main() -> None:
     })
     write_json(RESULTS_JSON, {
         "generated_at": now_utc_iso(),
-        "model": "TLE Standalone Elo Scanner v1",
+        "model": "TLE Standalone Elo Scanner v3.3",
         "summary": {
             "total_tracked": len(results_all),
             "pending": sum(1 for r in results_all if safe_str(r.get("status")).lower() == "pending"),
@@ -1250,30 +1367,39 @@ def main() -> None:
         "picks": results_all,
     })
     write_csv(ACTIVE_CSV, active)
-    write_csv(SCAN_CSV, rows)
 
     raw_context_samples = []
-    for r in rows[:300]:
-        raw_context_samples.append({
-            "date": r.get("date"),
-            "time": r.get("time"),
-            "decision": r.get("decision"),
-            "reason": r.get("reason"),
-            "gender": r.get("gender"),
-            "level": r.get("level"),
-            "surface": r.get("surface"),
-            "surface_source": r.get("surface_source"),
-            "raw_event_type_type": r.get("raw_event_type_type"),
-            "raw_event_type_key": r.get("raw_event_type_key"),
-            "raw_event_type": r.get("raw_event_type"),
-            "raw_event_name": r.get("raw_event_name"),
-            "raw_tournament_name": r.get("raw_tournament_name"),
-            "raw_tournament_round": r.get("raw_tournament_round"),
-            "raw_league_name": r.get("raw_league_name"),
-            "raw_competition_name": r.get("raw_competition_name"),
-            "context_text": r.get("context_text"),
-            "match": r.get("match"),
-        })
+    if args.debug_report:
+        write_csv(SCAN_CSV, rows)
+        for r in rows[:300]:
+            raw_context_samples.append({
+                "date": r.get("date"),
+                "time": r.get("time"),
+                "decision": r.get("decision"),
+                "reason": r.get("reason"),
+                "gender": r.get("gender"),
+                "level": r.get("level"),
+                "surface": r.get("surface"),
+                "surface_source": r.get("surface_source"),
+                "raw_event_type_type": r.get("raw_event_type_type"),
+                "raw_event_type_key": r.get("raw_event_type_key"),
+                "raw_event_type": r.get("raw_event_type"),
+                "raw_event_name": r.get("raw_event_name"),
+                "raw_tournament_name": r.get("raw_tournament_name"),
+                "raw_tournament_round": r.get("raw_tournament_round"),
+                "raw_league_name": r.get("raw_league_name"),
+                "raw_competition_name": r.get("raw_competition_name"),
+                "context_text": r.get("context_text"),
+                "match": r.get("match"),
+            })
+
+    unresolved_surface = build_unresolved_surface_report(rows)
+    write_json(UNRESOLVED_SURFACE_JSON, {
+        "generated_at": now_utc_iso(),
+        "count": len(unresolved_surface),
+        "items": unresolved_surface,
+        "note": "Add suggested_map_key: hard/clay/grass/carpet to data/metadata/tournament_surface_map.json if these are real ATP/WTA/Challenger/Grand Slam events.",
+    })
 
     report = {
         "status": "ok",
@@ -1285,10 +1411,13 @@ def main() -> None:
         "new_candidates": len(new_active),
         "new_added_to_predictions": added,
         "active_predictions_total": len(active),
-        "raw_context_samples": raw_context_samples,
+        "min_start_minutes": args.min_start_minutes,
+        "surface_map_entries": len(TOURNAMENT_SURFACE_MAP),
+        "unresolved_surface_count": len(unresolved_surface),
         "decision_counts_scan": dict(sorted(Counter(r["decision"] for r in rows).items())),
         "reason_counts_scan": dict(sorted(Counter(r["reason"] for r in rows).items())),
         "by_level_scan": dict(sorted(Counter(r["level"] for r in rows).items())),
+        "by_surface_source_scan": dict(sorted(Counter(r.get("surface_source", "") for r in rows).items())),
         "counters": dict(sorted(counters.items())),
         "odds_rules": {
             "min_bookmakers_each_side": MIN_BOOKMAKERS_EACH_SIDE,
@@ -1302,8 +1431,10 @@ def main() -> None:
             "predictions_json": str(PREDICTIONS_JSON),
             "results_json": str(RESULTS_JSON),
             "active_csv": str(ACTIVE_CSV),
-            "scan_diagnostics_csv": str(SCAN_CSV),
             "report_json": str(REPORT_JSON),
+            "surface_map_json": str(SURFACE_MAP_JSON),
+            "unresolved_surface_json": str(UNRESOLVED_SURFACE_JSON),
+            **({"scan_diagnostics_csv": str(SCAN_CSV)} if args.debug_report else {}),
         },
         "notes": [
             "This is standalone: it scans all eligible API fixtures and odds, not only tennis value picks.",
@@ -1312,8 +1443,18 @@ def main() -> None:
             "Only BET and STRONG_BET rows are stored as active predictions.",
         ],
     }
+    if args.debug_report:
+        report["raw_context_samples"] = raw_context_samples
+
     write_json(REPORT_JSON, report)
-    print(json.dumps(report, indent=2, ensure_ascii=False, sort_keys=True))
+    print(
+        f"status=ok fixtures={len(fixtures)} scan_rows={len(rows)} "
+        f"new_candidates={len(new_active)} new_added={added} active={len(active)} "
+        f"min_start_minutes={args.min_start_minutes} unresolved_surface={len(unresolved_surface)}"
+    )
+    print(f"by_level={dict(sorted(Counter(r['level'] for r in rows).items()))}")
+    print(f"decisions={dict(sorted(Counter(r['decision'] for r in rows).items()))}")
+    print(f"reasons={dict(sorted(Counter(r['reason'] for r in rows).items()))}")
 
 
 if __name__ == "__main__":
