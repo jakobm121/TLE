@@ -305,8 +305,94 @@ def normalize_gender(g: Any) -> str:
 
 
 def normalize_surface(s: Any) -> str:
-    x = safe_str(s).lower().replace("court", "").strip()
-    return x if x in VALID_SURFACES else "unknown"
+    x = safe_str(s).lower()
+    if not x:
+        return "unknown"
+
+    x = x.replace("_", " ").replace("-", " ")
+    x = re.sub(r"\s+", " ", x).strip()
+
+    # Direct exact values.
+    if x in VALID_SURFACES:
+        return x
+
+    # Common API / bookmaker / tournament aliases.
+    aliases = {
+        "hardcourt": "hard",
+        "hard court": "hard",
+        "outdoor hard": "hard",
+        "indoor hard": "hard",
+        "synthetic hard": "hard",
+        "cement": "hard",
+        "acrylic": "hard",
+        "decoturf": "hard",
+        "plexicushion": "hard",
+        "greenset": "hard",
+        "claycourt": "clay",
+        "clay court": "clay",
+        "outdoor clay": "clay",
+        "indoor clay": "clay",
+        "red clay": "clay",
+        "green clay": "clay",
+        "har tru": "clay",
+        "grasscourt": "grass",
+        "grass court": "grass",
+        "lawn": "grass",
+        "carpet court": "carpet",
+        "indoor carpet": "carpet",
+    }
+    if x in aliases:
+        return aliases[x]
+
+    # Conservative phrase matching. Word boundaries avoid false positives.
+    if re.search(r"\b(hardcourt|hard court|outdoor hard|indoor hard|synthetic hard|cement|acrylic|decoturf|plexicushion|greenset)\b", x):
+        return "hard"
+    if re.search(r"\b(claycourt|clay court|red clay|green clay|har tru|outdoor clay|indoor clay)\b", x):
+        return "clay"
+    if re.search(r"\b(grasscourt|grass court|lawn)\b", x):
+        return "grass"
+    if re.search(r"\b(carpet court|indoor carpet)\b", x):
+        return "carpet"
+
+    return "unknown"
+
+
+SURFACE_KEY_HINTS = (
+    "surface", "court", "ground", "terrain", "floor", "belag", "podlaga",
+)
+
+
+def iter_nested_api_values(obj: Any, prefix: str = ""):
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            key = safe_str(k)
+            next_prefix = f"{prefix}.{key}" if prefix else key
+            yield next_prefix, v
+            yield from iter_nested_api_values(v, next_prefix)
+    elif isinstance(obj, list):
+        for i, v in enumerate(obj):
+            next_prefix = f"{prefix}[{i}]"
+            yield from iter_nested_api_values(v, next_prefix)
+
+
+def infer_surface_from_api_payload(match: dict[str, Any]) -> tuple[str, str]:
+    # First use any nested value whose key looks surface/court-related.
+    for key, value in iter_nested_api_values(match):
+        lk = key.lower()
+        if any(hint in lk for hint in SURFACE_KEY_HINTS):
+            surf = normalize_surface(value)
+            if surf != "unknown":
+                return surf, f"api_field:{key}"
+
+    # Then use conservative phrase matching anywhere in raw API strings.
+    # This catches values like "Outdoor Hard" even under unexpected keys.
+    for key, value in iter_nested_api_values(match):
+        if isinstance(value, (str, int, float)):
+            surf = normalize_surface(value)
+            if surf != "unknown":
+                return surf, f"api_text:{key}"
+
+    return "unknown", "missing"
 
 
 def normalize_surface_map_key(s: Any) -> str:
@@ -340,27 +426,46 @@ def read_tournament_surface_map(path: Path = SURFACE_MAP_JSON) -> dict[str, str]
     return out
 
 
+def write_tournament_surface_map(path: Path = SURFACE_MAP_JSON) -> None:
+    clean = {
+        normalize_surface_map_key(k): normalize_surface(v)
+        for k, v in TOURNAMENT_SURFACE_MAP.items()
+        if normalize_surface_map_key(k) and normalize_surface(v) in VALID_SURFACES
+    }
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(clean, indent=2, ensure_ascii=False, sort_keys=True) + "\n", encoding="utf-8")
+
+
 TOURNAMENT_SURFACE_MAP: dict[str, str] = {}
 
 
 def infer_surface(match: dict[str, Any], context: dict[str, Any] | None = None) -> tuple[str, str]:
-    # 1) Direct API fields first.
+    # 1) Direct and nested API payload first.
     direct_fields = [
-        match.get("event_surface"),
-        match.get("surface"),
-        match.get("court_surface"),
-        match.get("tournament_surface"),
-        match.get("event_court_type"),
+        ("event_surface", match.get("event_surface")),
+        ("surface", match.get("surface")),
+        ("court_surface", match.get("court_surface")),
+        ("tournament_surface", match.get("tournament_surface")),
+        ("event_court_type", match.get("event_court_type")),
     ]
-    for value in direct_fields:
+    for key, value in direct_fields:
         surf = normalize_surface(value)
         if surf != "unknown":
-            return surf, "fixture"
+            return surf, f"api_field:{key}"
 
-    # 2) Sometimes surface is hidden in raw text.
+    surf, source = infer_surface_from_api_payload(match)
+    if surf != "unknown":
+        return surf, source
+
+    # 2) Sometimes surface is hidden in raw text/context.
     if context is None:
         context = tournament_context(match)
     text = safe_str(context.get("context_text")).lower()
+
+    context_surf = normalize_surface(text)
+    if context_surf != "unknown":
+        return context_surf, "context_text"
+
     for surf in ("hard", "clay", "grass", "carpet"):
         if re.search(rf"\b{surf}\b", text):
             return surf, "context_text"
@@ -372,6 +477,22 @@ def infer_surface(match: dict[str, Any], context: dict[str, Any] | None = None) 
             return surf, "tournament_surface_map"
 
     return "unknown", "missing"
+
+
+def learn_surface_from_match(match: dict[str, Any], context: dict[str, Any], surface: str, source: str) -> None:
+    # If API/context found a surface, auto-cache this tournament key in the JSON map
+    # so future runs do not depend on the same API field being present.
+    if surface not in VALID_SURFACES:
+        return
+    if source not in {"context_text"} and not source.startswith("api_"):
+        return
+
+    text = normalize_surface_map_key(context.get("context_text"))
+    if not text or len(text) < 5:
+        return
+
+    if text not in TOURNAMENT_SURFACE_MAP:
+        TOURNAMENT_SURFACE_MAP[text] = surface
 
 
 def normalize_level(level: Any, event_type: Any = None, qualification: Any = None) -> str:
@@ -1146,6 +1267,7 @@ def scan_match(match: dict[str, Any], *, players: dict[str, dict[str, Any]], api
         return []
 
     surface, surface_source = infer_surface(match, context)
+    learn_surface_from_match(match, context, surface, surface_source)
 
     event_key = match.get("event_key")
     first_key = safe_int(match.get("first_player_key"))
@@ -1348,7 +1470,7 @@ def main() -> None:
 
     write_json(PREDICTIONS_JSON, {
         "generated_at": now_utc_iso(),
-        "model": "TLE Standalone Elo Scanner v3.3",
+        "model": "TLE Standalone Elo Scanner v3.4",
         "summary": {
             "active_picks": len(active),
             "new_added": added,
@@ -1359,7 +1481,7 @@ def main() -> None:
     })
     write_json(RESULTS_JSON, {
         "generated_at": now_utc_iso(),
-        "model": "TLE Standalone Elo Scanner v3.3",
+        "model": "TLE Standalone Elo Scanner v3.4",
         "summary": {
             "total_tracked": len(results_all),
             "pending": sum(1 for r in results_all if safe_str(r.get("status")).lower() == "pending"),
@@ -1394,6 +1516,7 @@ def main() -> None:
             })
 
     unresolved_surface = build_unresolved_surface_report(rows)
+    write_tournament_surface_map(SURFACE_MAP_JSON)
     write_json(UNRESOLVED_SURFACE_JSON, {
         "generated_at": now_utc_iso(),
         "count": len(unresolved_surface),
