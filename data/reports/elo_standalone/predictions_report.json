@@ -1,5 +1,5 @@
 {
-  "active_predictions_total": 25,
+  "active_predictions_total": 30,
   "by_level_scan": {
     "atp_wta": 32,
     "challenger": 16,
@@ -8,24 +8,24 @@
   },
   "counters": {
     "fixture_skip_doubles_or_team": 93,
-    "fixture_skip_live": 7,
-    "fixture_skip_status_finished": 26,
+    "fixture_skip_live": 6,
+    "fixture_skip_status_finished": 28,
     "fixture_skip_status_retired": 2,
     "fixtures_scanned": 141,
     "fixtures_with_diagnostics": 113,
-    "fixtures_with_output": 25
+    "fixtures_with_output": 29
   },
   "date_start": "2026-06-19",
   "days_ahead": 1,
   "decision_counts_scan": {
-    "BET": 9,
-    "NO_BET": 201,
-    "STRONG_BET": 16
+    "BET": 12,
+    "NO_BET": 197,
+    "STRONG_BET": 17
   },
-  "fixtures_total": 269,
-  "generated_at": "2026-06-19T07:30:48+00:00",
-  "new_added_to_predictions": 25,
-  "new_candidates": 25,
+  "fixtures_total": 270,
+  "generated_at": "2026-06-19T07:41:42+00:00",
+  "new_added_to_predictions": 5,
+  "new_candidates": 29,
   "notes": [
     "This is standalone: it scans all eligible API fixtures and odds, not only tennis value picks.",
     "Odds are average clean odds after removing bookmaker outliers.",
@@ -63,9 +63,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "London",
       "raw_tournament_round": "ATP London - 1/8-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_prob_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "14:00"
     },
     {
@@ -83,9 +83,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "London",
       "raw_tournament_round": "ATP London - 1/8-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_edge_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "14:00"
     },
     {
@@ -103,9 +103,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Halle",
       "raw_tournament_round": "ATP Halle - Quarter-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_prob_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "16:00"
     },
     {
@@ -123,9 +123,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Halle",
       "raw_tournament_round": "ATP Halle - Quarter-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_edge_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "16:00"
     },
     {
@@ -143,9 +143,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "London",
       "raw_tournament_round": "ATP London - Quarter-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_prob_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "14:30"
     },
     {
@@ -163,9 +163,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "London",
       "raw_tournament_round": "ATP London - Quarter-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_edge_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "14:30"
     },
     {
@@ -183,9 +183,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "London",
       "raw_tournament_round": "ATP London - Quarter-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_edge_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "12:30"
     },
     {
@@ -203,9 +203,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "London",
       "raw_tournament_round": "ATP London - Quarter-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_prob_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "12:30"
     },
     {
@@ -223,9 +223,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Nottingham",
       "raw_tournament_round": "WTA Nottingham - Quarter-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_prob_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "15:00"
     },
     {
@@ -243,9 +243,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Nottingham",
       "raw_tournament_round": "WTA Nottingham - Quarter-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_edge_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "15:00"
     },
     {
@@ -264,8 +264,8 @@
       "raw_tournament_name": "Berlin",
       "raw_tournament_round": "WTA Berlin - Quarter-finals",
       "reason": "odds_outside_range",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "15:30"
     },
     {
@@ -284,8 +284,8 @@
       "raw_tournament_name": "Berlin",
       "raw_tournament_round": "WTA Berlin - Quarter-finals",
       "reason": "odds_outside_range",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "15:30"
     },
     {
@@ -304,8 +304,8 @@
       "raw_tournament_name": "Figueira Da Foz (Portugal) - Qualification",
       "raw_tournament_round": "Figueira Da Foz - Quarter-finals",
       "reason": "min_level_not_met",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "hard",
+      "surface_source": "tournament_override",
       "time": "13:30"
     },
     {
@@ -324,8 +324,8 @@
       "raw_tournament_name": "Figueira Da Foz (Portugal) - Qualification",
       "raw_tournament_round": "Figueira Da Foz - Quarter-finals",
       "reason": "min_level_not_met",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "hard",
+      "surface_source": "tournament_override",
       "time": "13:30"
     },
     {
@@ -344,8 +344,8 @@
       "raw_tournament_name": "Halle",
       "raw_tournament_round": "ATP Halle - Quarter-finals",
       "reason": "odds_outside_range",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "14:30"
     },
     {
@@ -364,8 +364,8 @@
       "raw_tournament_name": "Halle",
       "raw_tournament_round": "ATP Halle - Quarter-finals",
       "reason": "odds_outside_range",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "14:30"
     },
     {
@@ -463,9 +463,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Berlin",
       "raw_tournament_round": "WTA Berlin - Quarter-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_edge_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "12:30"
     },
     {
@@ -483,9 +483,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Berlin",
       "raw_tournament_round": "WTA Berlin - Quarter-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_prob_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "12:30"
     },
     {
@@ -584,8 +584,8 @@
       "raw_tournament_name": "Brescia (Italy) - Qualification",
       "raw_tournament_round": "Brescia - Quarter-finals",
       "reason": "unmapped_player",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "clay",
+      "surface_source": "tournament_override",
       "time": "10:30"
     },
     {
@@ -604,8 +604,8 @@
       "raw_tournament_name": "Brescia (Italy) - Qualification",
       "raw_tournament_round": "Brescia - Quarter-finals",
       "reason": "unmapped_player",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "clay",
+      "surface_source": "tournament_override",
       "time": "10:30"
     },
     {
@@ -624,8 +624,8 @@
       "raw_tournament_name": "Brescia (Italy) - Qualification",
       "raw_tournament_round": "Brescia - Quarter-finals",
       "reason": "odds_outside_range",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "clay",
+      "surface_source": "tournament_override",
       "time": "16:00"
     },
     {
@@ -644,8 +644,8 @@
       "raw_tournament_name": "Brescia (Italy) - Qualification",
       "raw_tournament_round": "Brescia - Quarter-finals",
       "reason": "min_level_not_met",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "clay",
+      "surface_source": "tournament_override",
       "time": "16:00"
     },
     {
@@ -1183,9 +1183,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Halle",
       "raw_tournament_round": "ATP Halle - Quarter-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_prob_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "11:30"
     },
     {
@@ -1203,9 +1203,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Halle",
       "raw_tournament_round": "ATP Halle - Quarter-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_edge_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "11:30"
     },
     {
@@ -1223,9 +1223,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "London",
       "raw_tournament_round": "ATP London - Quarter-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_edge_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "16:00"
     },
     {
@@ -1243,9 +1243,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "London",
       "raw_tournament_round": "ATP London - Quarter-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_prob_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "16:00"
     },
     {
@@ -1263,9 +1263,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Nottingham",
       "raw_tournament_round": "WTA Nottingham - Quarter-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_edge_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "16:30"
     },
     {
@@ -1283,15 +1283,15 @@
       "raw_league_name": "",
       "raw_tournament_name": "Nottingham",
       "raw_tournament_round": "WTA Nottingham - Quarter-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_prob_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "16:30"
     },
     {
       "context_text": "wta singles nottingham wta nottingham   quarter finals 2215",
       "date": "2026-06-19",
-      "decision": "NO_BET",
+      "decision": "BET",
       "gender": "women",
       "level": "atp_wta",
       "match": "Ka. Pliskova - T. Gibson",
@@ -1303,9 +1303,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Nottingham",
       "raw_tournament_round": "WTA Nottingham - Quarter-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "pass_edge",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "13:30"
     },
     {
@@ -1323,9 +1323,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Nottingham",
       "raw_tournament_round": "WTA Nottingham - Quarter-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_prob_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "13:30"
     },
     {
@@ -1343,9 +1343,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Nottingham",
       "raw_tournament_round": "WTA Nottingham - Quarter-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_edge_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "12:00"
     },
     {
@@ -1363,9 +1363,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Nottingham",
       "raw_tournament_round": "WTA Nottingham - Quarter-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_prob_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "12:00"
     },
     {
@@ -1383,15 +1383,15 @@
       "raw_league_name": "",
       "raw_tournament_name": "Poznan",
       "raw_tournament_round": "Poznan - Semi-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_prob_too_low",
+      "surface": "clay",
+      "surface_source": "tournament_override",
       "time": "13:30"
     },
     {
       "context_text": "challenger men singles poznan poznan   semi finals 2453",
       "date": "2026-06-19",
-      "decision": "NO_BET",
+      "decision": "BET",
       "gender": "men",
       "level": "challenger",
       "match": "D. Svrcina - G. Heide",
@@ -1403,9 +1403,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Poznan",
       "raw_tournament_round": "Poznan - Semi-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "pass_edge",
+      "surface": "clay",
+      "surface_source": "tournament_override",
       "time": "13:30"
     },
     {
@@ -1423,9 +1423,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Poznan",
       "raw_tournament_round": "Poznan - Semi-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_prob_too_low",
+      "surface": "clay",
+      "surface_source": "tournament_override",
       "time": "12:00"
     },
     {
@@ -1444,8 +1444,28 @@
       "raw_tournament_name": "Poznan",
       "raw_tournament_round": "Poznan - Semi-finals",
       "reason": "odds_outside_range",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "clay",
+      "surface_source": "tournament_override",
+      "time": "12:00"
+    },
+    {
+      "context_text": "challenger men singles nottingham nottingham   semi finals 2580",
+      "date": "2026-06-19",
+      "decision": "STRONG_BET",
+      "gender": "men",
+      "level": "challenger",
+      "match": "R. Bertola - C. O'Connell",
+      "raw_competition_name": "",
+      "raw_event_name": "",
+      "raw_event_type": "",
+      "raw_event_type_key": "",
+      "raw_event_type_type": "Challenger Men Singles",
+      "raw_league_name": "",
+      "raw_tournament_name": "Nottingham",
+      "raw_tournament_round": "Nottingham - Semi-finals",
+      "reason": "pass_strong_edge",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "12:00"
     },
     {
@@ -1463,29 +1483,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Nottingham",
       "raw_tournament_round": "Nottingham - Semi-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
-      "time": "12:00"
-    },
-    {
-      "context_text": "challenger men singles nottingham nottingham   semi finals 2580",
-      "date": "2026-06-19",
-      "decision": "NO_BET",
-      "gender": "men",
-      "level": "challenger",
-      "match": "R. Bertola - C. O'Connell",
-      "raw_competition_name": "",
-      "raw_event_name": "",
-      "raw_event_type": "",
-      "raw_event_type_key": "",
-      "raw_event_type_type": "Challenger Men Singles",
-      "raw_league_name": "",
-      "raw_tournament_name": "Nottingham",
-      "raw_tournament_round": "Nottingham - Semi-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_prob_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "12:00"
     },
     {
@@ -1503,9 +1503,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Parma",
       "raw_tournament_round": "Parma - Semi-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_prob_too_low",
+      "surface": "clay",
+      "surface_source": "tournament_override",
       "time": "17:00"
     },
     {
@@ -1523,15 +1523,15 @@
       "raw_league_name": "",
       "raw_tournament_name": "Parma",
       "raw_tournament_round": "Parma - Semi-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_edge_too_low",
+      "surface": "clay",
+      "surface_source": "tournament_override",
       "time": "17:00"
     },
     {
       "context_text": "wta singles berlin wta berlin   quarter finals 3183",
       "date": "2026-06-19",
-      "decision": "NO_BET",
+      "decision": "BET",
       "gender": "women",
       "level": "atp_wta",
       "match": "J. Pegula - M. Keys",
@@ -1543,9 +1543,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Berlin",
       "raw_tournament_round": "WTA Berlin - Quarter-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "pass_edge",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "11:00"
     },
     {
@@ -1563,9 +1563,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Berlin",
       "raw_tournament_round": "WTA Berlin - Quarter-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_prob_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "11:00"
     },
     {
@@ -1903,9 +1903,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Royan",
       "raw_tournament_round": "Royan - Semi-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "min_level_not_met",
+      "surface": "clay",
+      "surface_source": "tournament_override",
       "time": "12:00"
     },
     {
@@ -1923,9 +1923,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Royan",
       "raw_tournament_round": "Royan - Semi-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "min_level_not_met",
+      "surface": "clay",
+      "surface_source": "tournament_override",
       "time": "12:00"
     },
     {
@@ -1943,9 +1943,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Royan",
       "raw_tournament_round": "Royan - Semi-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_edge_too_low",
+      "surface": "clay",
+      "surface_source": "tournament_override",
       "time": "14:00"
     },
     {
@@ -1963,9 +1963,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Royan",
       "raw_tournament_round": "Royan - Semi-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_prob_too_low",
+      "surface": "clay",
+      "surface_source": "tournament_override",
       "time": "14:00"
     },
     {
@@ -2144,8 +2144,8 @@
       "raw_tournament_name": "Brescia (Italy) - Qualification",
       "raw_tournament_round": "Brescia - Quarter-finals",
       "reason": "min_level_not_met",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "clay",
+      "surface_source": "tournament_override",
       "time": "17:30"
     },
     {
@@ -2164,8 +2164,8 @@
       "raw_tournament_name": "Brescia (Italy) - Qualification",
       "raw_tournament_round": "Brescia - Quarter-finals",
       "reason": "min_level_not_met",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "clay",
+      "surface_source": "tournament_override",
       "time": "17:30"
     },
     {
@@ -2184,8 +2184,8 @@
       "raw_tournament_name": "Figueira Da Foz (Portugal) - Qualification",
       "raw_tournament_round": "Figueira Da Foz - Quarter-finals",
       "reason": "min_level_not_met",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "hard",
+      "surface_source": "tournament_override",
       "time": "15:00"
     },
     {
@@ -2204,8 +2204,8 @@
       "raw_tournament_name": "Figueira Da Foz (Portugal) - Qualification",
       "raw_tournament_round": "Figueira Da Foz - Quarter-finals",
       "reason": "min_level_not_met",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "hard",
+      "surface_source": "tournament_override",
       "time": "15:00"
     },
     {
@@ -2224,8 +2224,8 @@
       "raw_tournament_name": "Figueira Da Foz (Portugal) - Qualification",
       "raw_tournament_round": "Figueira Da Foz - Quarter-finals",
       "reason": "min_level_not_met",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "hard",
+      "surface_source": "tournament_override",
       "time": "12:00"
     },
     {
@@ -2244,8 +2244,8 @@
       "raw_tournament_name": "Figueira Da Foz (Portugal) - Qualification",
       "raw_tournament_round": "Figueira Da Foz - Quarter-finals",
       "reason": "min_level_not_met",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "hard",
+      "surface_source": "tournament_override",
       "time": "12:00"
     },
     {
@@ -2264,8 +2264,8 @@
       "raw_tournament_name": "Dublin (Ireland) - Qualification",
       "raw_tournament_round": "Dublin - Semi-finals",
       "reason": "min_level_not_met",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "hard",
+      "surface_source": "tournament_override",
       "time": "13:30"
     },
     {
@@ -2284,8 +2284,8 @@
       "raw_tournament_name": "Dublin (Ireland) - Qualification",
       "raw_tournament_round": "Dublin - Semi-finals",
       "reason": "min_level_not_met",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "hard",
+      "surface_source": "tournament_override",
       "time": "13:30"
     },
     {
@@ -2304,8 +2304,8 @@
       "raw_tournament_name": "Dublin (Ireland) - Qualification",
       "raw_tournament_round": "Dublin - Semi-finals",
       "reason": "min_level_not_met",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "hard",
+      "surface_source": "tournament_override",
       "time": "12:00"
     },
     {
@@ -2324,8 +2324,8 @@
       "raw_tournament_name": "Dublin (Ireland) - Qualification",
       "raw_tournament_round": "Dublin - Semi-finals",
       "reason": "min_level_not_met",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "hard",
+      "surface_source": "tournament_override",
       "time": "12:00"
     },
     {
@@ -2704,8 +2704,8 @@
       "raw_tournament_name": "Halle",
       "raw_tournament_round": "ATP Halle - Quarter-finals",
       "reason": "odds_outside_range",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "13:00"
     },
     {
@@ -2724,8 +2724,8 @@
       "raw_tournament_name": "Halle",
       "raw_tournament_round": "ATP Halle - Quarter-finals",
       "reason": "odds_outside_range",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "13:00"
     },
     {
@@ -2743,9 +2743,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Berlin",
       "raw_tournament_round": "WTA Berlin - Quarter-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_edge_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "17:30"
     },
     {
@@ -2763,9 +2763,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Berlin",
       "raw_tournament_round": "WTA Berlin - Quarter-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_prob_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "17:30"
     },
     {
@@ -2783,9 +2783,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Nottingham",
       "raw_tournament_round": "Nottingham - Semi-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_prob_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "13:30"
     },
     {
@@ -2803,9 +2803,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Nottingham",
       "raw_tournament_round": "Nottingham - Semi-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_edge_too_low",
+      "surface": "grass",
+      "surface_source": "tournament_override",
       "time": "13:30"
     },
     {
@@ -2824,8 +2824,8 @@
       "raw_tournament_name": "Brescia (Italy) - Qualification",
       "raw_tournament_round": "Brescia - Quarter-finals",
       "reason": "odds_outside_range",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "clay",
+      "surface_source": "tournament_override",
       "time": "12:30"
     },
     {
@@ -2844,8 +2844,8 @@
       "raw_tournament_name": "Brescia (Italy) - Qualification",
       "raw_tournament_round": "Brescia - Quarter-finals",
       "reason": "min_level_not_met",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "clay",
+      "surface_source": "tournament_override",
       "time": "12:30"
     },
     {
@@ -3983,9 +3983,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Parma",
       "raw_tournament_round": "Parma - Semi-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_prob_too_low",
+      "surface": "clay",
+      "surface_source": "tournament_override",
       "time": "18:30"
     },
     {
@@ -4003,9 +4003,9 @@
       "raw_league_name": "",
       "raw_tournament_name": "Parma",
       "raw_tournament_round": "Parma - Semi-finals",
-      "reason": "unknown_surface",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "reason": "elo_edge_too_low",
+      "surface": "clay",
+      "surface_source": "tournament_override",
       "time": "18:30"
     },
     {
@@ -4224,8 +4224,8 @@
       "raw_tournament_name": "Asuncion 2 (Paraguay) - Qualification",
       "raw_tournament_round": "Asuncion 2 - Semi-finals",
       "reason": "min_level_not_met",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "clay",
+      "surface_source": "tournament_override",
       "time": "22:30"
     },
     {
@@ -4244,8 +4244,8 @@
       "raw_tournament_name": "Asuncion 2 (Paraguay) - Qualification",
       "raw_tournament_round": "Asuncion 2 - Semi-finals",
       "reason": "min_level_not_met",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "clay",
+      "surface_source": "tournament_override",
       "time": "22:30"
     },
     {
@@ -4304,8 +4304,8 @@
       "raw_tournament_name": "Asuncion 2 (Paraguay) - Qualification",
       "raw_tournament_round": "Asuncion 2 - Semi-finals",
       "reason": "min_level_not_met",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "clay",
+      "surface_source": "tournament_override",
       "time": "21:00"
     },
     {
@@ -4324,8 +4324,8 @@
       "raw_tournament_name": "Asuncion 2 (Paraguay) - Qualification",
       "raw_tournament_round": "Asuncion 2 - Semi-finals",
       "reason": "min_level_not_met",
-      "surface": "unknown",
-      "surface_source": "missing",
+      "surface": "clay",
+      "surface_source": "tournament_override",
       "time": "21:00"
     },
     {
@@ -4570,13 +4570,12 @@
     }
   ],
   "reason_counts_scan": {
-    "elo_edge_too_low": 27,
-    "elo_prob_too_low": 64,
-    "min_level_not_met": 23,
+    "elo_edge_too_low": 42,
+    "elo_prob_too_low": 84,
+    "min_level_not_met": 25,
     "odds_outside_range": 40,
-    "pass_edge": 9,
-    "pass_strong_edge": 16,
-    "unknown_surface": 41,
+    "pass_edge": 12,
+    "pass_strong_edge": 17,
     "unmapped_player": 6
   },
   "scan_rows": 226,
