@@ -197,8 +197,19 @@ def write_json(path: Path, data: Any) -> None:
 def read_json_path(path: Path, default: Any = None) -> Any:
     if not path.exists():
         return default
-    with path.open("r", encoding="utf-8") as fh:
-        return json.load(fh)
+
+    try:
+        text = path.read_text(encoding="utf-8").strip()
+    except Exception:
+        return default
+
+    if not text:
+        return default
+
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        return default
 
 
 def read_json_maybe_gz(path: Path) -> Any:
