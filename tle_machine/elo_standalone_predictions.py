@@ -7,6 +7,7 @@ import hashlib
 import json
 import math
 import os
+import re
 import statistics
 import time
 import urllib.parse
@@ -53,6 +54,7 @@ REPORT_DIR = Path("data/reports/elo_standalone")
 PREDICTIONS_JSON = BASE_DIR / "predictions.json"
 RESULTS_JSON = BASE_DIR / "results.json"
 ACTIVE_CSV = BASE_DIR / "active_predictions.csv"
+SCAN_CSV = REPORT_DIR / "scan_diagnostics.csv"
 REPORT_JSON = REPORT_DIR / "predictions_report.json"
 
 RATING_INITIAL = 1500.0
@@ -282,27 +284,44 @@ def normalize_level(level: Any, event_type: Any = None, qualification: Any = Non
 
 
 def tournament_context(match: dict[str, Any]) -> dict[str, Any]:
-    event_type = safe_str(match.get("event_type_type"))
-    tournament_name = safe_str(match.get("tournament_name"))
-    round_name = safe_str(match.get("tournament_round"))
+    # API-Tennis fields are not perfectly consistent between tours, so use a broad text blob.
+    text_parts = [
+        match.get("event_type_type"),
+        match.get("event_type_key"),
+        match.get("event_type"),
+        match.get("event_name"),
+        match.get("event_country_name"),
+        match.get("event_country_key"),
+        match.get("tournament_name"),
+        match.get("tournament_round"),
+        match.get("tournament_key"),
+        match.get("league_name"),
+        match.get("league"),
+        match.get("competition_name"),
+    ]
+    text = " ".join(safe_str(x) for x in text_parts if safe_str(x)).lower()
+    compact = text.replace("-", " ").replace("_", " ")
+
     qualification = safe_str(match.get("event_qualification")).lower() == "true"
+    if "qualif" in compact or "qualification" in compact:
+        qualification = True
 
-    text = f"{event_type} {tournament_name} {round_name}".lower()
-
-    if "women" in text or "wta" in text:
+    # Gender detection.
+    if re.search(r"\b(women|woman|female|wta)\b", compact) or re.search(r"\bw(15|35|50|75|100)\b", compact):
         gender = "women"
-    elif "men" in text or "atp" in text:
+    elif re.search(r"\b(men|man|male|atp)\b", compact) or re.search(r"\bm(15|25)\b", compact):
         gender = "men"
     else:
         gender = "unknown"
 
-    if "grand slam" in text:
+    # Level detection. Order matters: Challenger can contain ATP, so detect it before ATP/WTA.
+    if "grand slam" in compact or "australian open" in compact or "roland garros" in compact or "wimbledon" in compact or "us open" in compact:
         level = "grand_slam"
-    elif "challenger" in text:
+    elif "challenger" in compact or re.search(r"\bch(?:allenger)?\b", compact):
         level = "challenger"
-    elif "itf" in text:
+    elif "itf" in compact or re.search(r"\bm(15|25)\b", compact) or re.search(r"\bw(15|35|50|75|100)\b", compact):
         level = "itf"
-    elif "atp" in text or "wta" in text:
+    elif "atp" in compact or "wta" in compact:
         level = "atp_wta"
     else:
         level = "unknown"
@@ -310,7 +329,7 @@ def tournament_context(match: dict[str, Any]) -> dict[str, Any]:
     if qualification:
         level = "qualifying"
 
-    return {"gender": gender, "level": level, "qualification": qualification}
+    return {"gender": gender, "level": level, "qualification": qualification, "context_text": compact}
 
 
 def api_key(gender: str, player_id: Any) -> str | None:
@@ -1087,11 +1106,13 @@ def main() -> None:
             counters[f"fixture_skip_{reason}"] += 1
             continue
         try:
-            built = scan_match(m, players=players, api_mapping=api_mapping, include_no_bet=args.include_no_bet)
+            built = scan_match(m, players=players, api_mapping=api_mapping, include_no_bet=True)
             rows.extend(built)
             counters["fixtures_scanned"] += 1
             if built:
-                counters["fixtures_with_output"] += 1
+                counters["fixtures_with_diagnostics"] += 1
+                if any(r.get("decision") in {"BET", "STRONG_BET"} for r in built):
+                    counters["fixtures_with_output"] += 1
         except Exception as exc:
             counters["fixture_error"] += 1
             print(f"ERROR event_key={m.get('event_key')} {m.get('event_first_player')} - {m.get('event_second_player')}: {exc}")
@@ -1144,6 +1165,7 @@ def main() -> None:
         "picks": results_all,
     })
     write_csv(ACTIVE_CSV, active)
+    write_csv(SCAN_CSV, rows)
 
     report = {
         "status": "ok",
