@@ -22,6 +22,8 @@ ACTIVE_CSV = BASE_DIR / "active_predictions.csv"
 RESULTS_CSV = BASE_DIR / "results.csv"
 RESULTS_MD = BASE_DIR / "results.md"
 REPORT_JSON = REPORT_DIR / "settle_report.json"
+CONTEXT_SIGNAL_JSON = REPORT_DIR / "context_signal_report.json"
+CONTEXT_SIGNAL_CSV = REPORT_DIR / "context_signal_summary.csv"
 
 ACTIVE_FIELDS = [
     "pick_id", "status", "decision", "confidence", "reason",
@@ -40,6 +42,13 @@ RESULTS_FIELDS = [
     "result", "profit", "roi", "settled_at", "final_score", "event_winner",
     "running_wins", "running_losses", "running_w_l", "running_total_stake",
     "running_total_profit", "running_roi",
+]
+
+
+CONTEXT_SIGNAL_FIELDS = [
+    "signal", "bucket", "picks", "wins", "losses", "hit_rate",
+    "stake", "profit", "roi", "avg_tle_prob", "avg_tle_edge",
+    "avg_last10_win_rate_diff", "avg_h2h_diff",
 ]
 
 
@@ -67,7 +76,7 @@ def read_json_url_or_path(source: str | Path) -> Any:
         req = urllib.request.Request(
             s,
             headers={
-                "User-Agent": "TLE-elo-standalone-settle/1.0",
+                "User-Agent": "TLE-elo-standalone-settle/3.3",
                 "Accept": "application/json,text/plain,*/*",
             },
         )
@@ -217,6 +226,137 @@ def write_csv(path: Path, rows: list[dict[str, Any]], fields: list[str]) -> None
             w.writerow({k: r.get(k) for k in fields})
 
 
+def avg_float(rows: list[dict[str, Any]], field: str) -> float | None:
+    vals = [safe_float(r.get(field)) for r in rows]
+    vals = [v for v in vals if v is not None]
+    if not vals:
+        return None
+    return round(sum(vals) / len(vals), 6)
+
+
+def h2h_diff(row: dict[str, Any]) -> int | None:
+    try:
+        p = int(str(row.get("h2h_player_wins")).strip())
+        o = int(str(row.get("h2h_opponent_wins")).strip())
+    except Exception:
+        return None
+    return p - o
+
+
+def context_bucket_rows(rows: list[dict[str, Any]], signal: str, bucket: str) -> list[dict[str, Any]]:
+    out = []
+    for r in rows:
+        if signal == "form_support":
+            v = safe_str(r.get("form_support")).lower()
+            if bucket == "supports_pick" and v in {"supports_pick", "pick", "yes", "true"}:
+                out.append(r)
+            elif bucket == "against_pick" and v in {"against_pick", "opponent", "no", "false"}:
+                out.append(r)
+            elif bucket == "neutral_unknown" and v not in {"supports_pick", "pick", "yes", "true", "against_pick", "opponent", "no", "false"}:
+                out.append(r)
+
+        elif signal == "h2h_support":
+            v = safe_str(r.get("h2h_support")).lower()
+            if bucket == "supports_pick" and v in {"supports_pick", "pick", "yes", "true"}:
+                out.append(r)
+            elif bucket == "against_pick" and v in {"against_pick", "opponent", "no", "false"}:
+                out.append(r)
+            elif bucket == "neutral_unknown" and v not in {"supports_pick", "pick", "yes", "true", "against_pick", "opponent", "no", "false"}:
+                out.append(r)
+
+        elif signal == "fatigue_flag":
+            v = safe_str(r.get("fatigue_flag")).lower()
+            has_flag = bool(v and v not in {"none", "false", "0", "no", "-", "null"})
+            if bucket == "has_flag" and has_flag:
+                out.append(r)
+            elif bucket == "no_flag" and not has_flag:
+                out.append(r)
+
+        elif signal == "last10_win_rate_diff":
+            d = safe_float(r.get("last10_win_rate_diff"))
+            if d is None:
+                if bucket == "unknown":
+                    out.append(r)
+            elif bucket == "pick_plus_15pct" and d >= 0.15:
+                out.append(r)
+            elif bucket == "pick_plus_5_15pct" and 0.05 <= d < 0.15:
+                out.append(r)
+            elif bucket == "neutral" and -0.05 < d < 0.05:
+                out.append(r)
+            elif bucket == "opponent_plus_5pct" and d <= -0.05:
+                out.append(r)
+
+        elif signal == "h2h_diff":
+            d = h2h_diff(r)
+            if d is None:
+                if bucket == "unknown_no_h2h":
+                    out.append(r)
+            elif bucket == "pick_leads" and d > 0:
+                out.append(r)
+            elif bucket == "even" and d == 0:
+                out.append(r)
+            elif bucket == "opponent_leads" and d < 0:
+                out.append(r)
+
+    return out
+
+
+def summarize_context_bucket(signal: str, bucket: str, rows: list[dict[str, Any]]) -> dict[str, Any]:
+    settled = [r for r in rows if safe_str(r.get("status")).lower() in {"win", "loss"}]
+    wins = sum(1 for r in settled if safe_str(r.get("status")).lower() == "win")
+    losses = sum(1 for r in settled if safe_str(r.get("status")).lower() == "loss")
+    stake = sum(safe_float(r.get("stake")) or 0.0 for r in settled)
+    profit = sum(safe_float(r.get("profit")) or 0.0 for r in settled)
+    hdiffs = [h2h_diff(r) for r in settled]
+    hdiffs = [d for d in hdiffs if d is not None]
+
+    return {
+        "signal": signal,
+        "bucket": bucket,
+        "picks": len(settled),
+        "wins": wins,
+        "losses": losses,
+        "hit_rate": round(wins / (wins + losses), 6) if (wins + losses) else None,
+        "stake": round(stake, 6),
+        "profit": round(profit, 6),
+        "roi": round(profit / stake, 6) if stake else None,
+        "avg_tle_prob": avg_float(settled, "tle_prob"),
+        "avg_tle_edge": avg_float(settled, "tle_edge"),
+        "avg_last10_win_rate_diff": avg_float(settled, "last10_win_rate_diff"),
+        "avg_h2h_diff": round(sum(hdiffs) / len(hdiffs), 6) if hdiffs else None,
+    }
+
+
+def build_context_signal_summary(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    settled = [r for r in rows if safe_str(r.get("status")).lower() in {"win", "loss"}]
+    specs = [
+        ("all", "all"),
+        ("form_support", "supports_pick"),
+        ("form_support", "against_pick"),
+        ("form_support", "neutral_unknown"),
+        ("h2h_support", "supports_pick"),
+        ("h2h_support", "against_pick"),
+        ("h2h_support", "neutral_unknown"),
+        ("fatigue_flag", "has_flag"),
+        ("fatigue_flag", "no_flag"),
+        ("last10_win_rate_diff", "pick_plus_15pct"),
+        ("last10_win_rate_diff", "pick_plus_5_15pct"),
+        ("last10_win_rate_diff", "neutral"),
+        ("last10_win_rate_diff", "opponent_plus_5pct"),
+        ("last10_win_rate_diff", "unknown"),
+        ("h2h_diff", "pick_leads"),
+        ("h2h_diff", "even"),
+        ("h2h_diff", "opponent_leads"),
+        ("h2h_diff", "unknown_no_h2h"),
+    ]
+
+    out = []
+    for signal, bucket in specs:
+        bucket_rows = settled if signal == "all" else context_bucket_rows(settled, signal, bucket)
+        out.append(summarize_context_bucket(signal, bucket, bucket_rows))
+    return out
+
+
 
 def fmt_pct(x: Any) -> str:
     v = safe_float(x)
@@ -355,6 +495,7 @@ def main() -> None:
 
     all_results_raw = list(historical_by_id.values())
     all_results = add_running_totals(all_results_raw)
+    context_signal_summary = build_context_signal_summary(all_results)
     still_active = sorted(still_active, key=sort_key)
 
     settled_all = [r for r in all_results if safe_str(r.get("status")).lower() in {"win", "loss", "void", "push"}]
@@ -366,7 +507,7 @@ def main() -> None:
 
     predictions_out = {
         "generated_at": now_utc_iso(),
-        "model": "TLE Standalone Elo Scanner v1",
+        "model": "TLE Standalone Elo Scanner v3.3",
         "summary": {
             "active_picks": len(still_active),
             "settled_removed_this_run": len(settled_now),
@@ -375,7 +516,7 @@ def main() -> None:
     }
     results_out = {
         "generated_at": now_utc_iso(),
-        "model": "TLE Standalone Elo Scanner v1",
+        "model": "TLE Standalone Elo Scanner v3.3",
         "summary": {
             "total_tracked": len(all_results),
             "pending": len(still_active),
@@ -396,6 +537,16 @@ def main() -> None:
     write_csv(ACTIVE_CSV, still_active, ACTIVE_FIELDS)
     write_csv(RESULTS_CSV, all_results, RESULTS_FIELDS)
     write_results_markdown(RESULTS_MD, all_results, results_out["summary"])
+    write_csv(CONTEXT_SIGNAL_CSV, context_signal_summary, CONTEXT_SIGNAL_FIELDS)
+    write_json(CONTEXT_SIGNAL_JSON, {
+        "generated_at": now_utc_iso(),
+        "summary": context_signal_summary,
+        "notes": [
+            "This is diagnostic only. Form/H2H/fatigue do not affect TLE probability.",
+            "Use this after enough settled picks to decide whether form/H2H filters improve ROI.",
+            "Buckets are computed only from settled win/loss rows.",
+        ],
+    })
 
     report = {
         "status": "ok",
@@ -414,17 +565,24 @@ def main() -> None:
             "results_csv": str(RESULTS_CSV),
             "results_md": str(RESULTS_MD),
             "report_json": str(REPORT_JSON),
+            "context_signal_json": str(CONTEXT_SIGNAL_JSON),
+            "context_signal_csv": str(CONTEXT_SIGNAL_CSV),
         },
         "notes": [
             "Settled picks are removed from predictions.json.",
             "results.json is the ledger and keeps both pending and settled tracked picks.",
             "results.md has total ROI/W-L above the table for easy review.",
             "results.csv keeps running W-L, running total profit, and running ROI per row.",
+            "context_signal_report.json and context_signal_summary.csv track whether API form/H2H/fatigue signals helped.",
             "This settles standalone TLE Elo scanner picks from data/elo_standalone.",
         ],
     }
     write_json(REPORT_JSON, report)
-    print(json.dumps(report, indent=2, ensure_ascii=False, sort_keys=True))
+    print(
+        f"status=ok active_before={len(active)} settled_this_run={len(settled_now)} "
+        f"active_after={len(still_active)} wl={wins}-{losses} "
+        f"profit={round(profit, 6)} roi={round(profit / stake, 6) if stake else None}"
+    )
 
 
 if __name__ == "__main__":
