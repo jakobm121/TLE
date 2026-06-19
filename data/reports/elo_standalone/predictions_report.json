@@ -1,0 +1,70 @@
+{
+  "active_predictions_total": 20,
+  "by_level_scan": {
+    "atp_wta": 32,
+    "challenger": 16,
+    "itf": 100,
+    "qualifying": 20
+  },
+  "by_surface_source_scan": {
+    "missing": 100,
+    "tournament_surface_map": 68
+  },
+  "counters": {
+    "fixture_skip_doubles_or_team": 92,
+    "fixture_skip_live": 17,
+    "fixture_skip_starts_too_soon": 29,
+    "fixture_skip_status_finished": 30,
+    "fixture_skip_status_retired": 2,
+    "fixtures_scanned": 100,
+    "fixtures_with_diagnostics": 84,
+    "fixtures_with_output": 20
+  },
+  "date_start": "2026-06-19",
+  "days_ahead": 1,
+  "decision_counts_scan": {
+    "BET": 9,
+    "NO_BET": 148,
+    "STRONG_BET": 11
+  },
+  "fixtures_total": 270,
+  "generated_at": "2026-06-19T08:20:36+00:00",
+  "min_start_minutes": 30,
+  "new_added_to_predictions": 20,
+  "new_candidates": 20,
+  "notes": [
+    "This is standalone: it scans all eligible API fixtures and odds, not only tennis value picks.",
+    "Odds are average clean odds after removing bookmaker outliers.",
+    "Form and H2H are stored as tracking fields only; they do not affect TLE probability in v1.",
+    "Only BET and STRONG_BET rows are stored as active predictions."
+  ],
+  "odds_rules": {
+    "max_odds_deviation_from_median": 0.12,
+    "min_bookmakers_each_side": 3,
+    "min_clean_bookmakers": 3,
+    "odds_max": 4.5,
+    "odds_min": 1.3,
+    "pricing": "average odds after outlier removal"
+  },
+  "outputs": {
+    "active_csv": "data/elo_standalone/active_predictions.csv",
+    "predictions_json": "data/elo_standalone/predictions.json",
+    "report_json": "data/reports/elo_standalone/predictions_report.json",
+    "results_json": "data/elo_standalone/results.json",
+    "surface_map_json": "data/metadata/tournament_surface_map.json",
+    "unresolved_surface_json": "data/reports/elo_standalone/unresolved_surface_report.json"
+  },
+  "reason_counts_scan": {
+    "elo_edge_too_low": 32,
+    "elo_prob_too_low": 58,
+    "min_level_not_met": 29,
+    "odds_outside_range": 27,
+    "pass_edge": 9,
+    "pass_strong_edge": 11,
+    "unmapped_player": 2
+  },
+  "scan_rows": 168,
+  "status": "ok",
+  "surface_map_entries": 23,
+  "unresolved_surface_count": 0
+}
