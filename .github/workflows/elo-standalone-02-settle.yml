@@ -40,6 +40,8 @@ jobs:
           git add data/elo_standalone/results.csv || true
           git add data/elo_standalone/results.md || true
           git add data/reports/elo_standalone/settle_report.json || true
+          git add data/reports/elo_standalone/context_signal_report.json || true
+          git add data/reports/elo_standalone/context_signal_summary.csv || true
 
           if git diff --cached --quiet; then
             echo "No standalone Elo settle changes to commit."
