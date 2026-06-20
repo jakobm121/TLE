@@ -1,16 +1,31 @@
 # Standalone Elo Results
 
-- Settled: 20
-- W-L: 12-8
-- Hit rate: 60.00%
-- Total stake: 22.75
-- Total profit: 1.77
-- ROI: 7.77%
+- Settled: 35
+- W-L: 18-17
+- Hit rate: 51.43%
+- Total stake: 40.75
+- Total profit: -1.13
+- ROI: -2.76%
 
 ## Settled picks
 
 | Date | Time | Result | W-L | ROI | Pick | Opponent | Odds | Stake | Profit | Total Profit | Level | Surface | TLE Prob | TLE Edge | Conf | Score |
 |---|---:|---|---:|---:|---|---|---:|---:|---:|---:|---|---|---:|---:|---|---|
+| 2026-06-20 | 14:30 | loss | 18-17 | -2.76% | M. Maquet | A. Stoyanov | 2.11 | 1.25 | -1.25 | -1.13 | itf | unknown | 65.19% | 17.86% | strong | 0 - 2 |
+| 2026-06-20 | 14:00 | win | 18-16 | 0.31% | G. Heide | F. Diaz Acosta | 2.23 | 1.00 | 1.23 | 0.12 | challenger | clay | 51.40% | 6.46% | normal | 0 - 2 |
+| 2026-06-20 | 14:00 | win | 17-16 | -2.86% | F. Cerundolo | B. Nakashima | 2.35 | 1.25 | 1.69 | -1.10 | atp_wta | grass | 53.18% | 10.72% | strong | 1 - 2 |
+| 2026-06-20 | 12:30 | loss | 16-16 | -7.50% | P. Martinez Gomez | T. Torres | 2.35 | 1.25 | -1.25 | -2.80 | itf | unknown | 50.72% | 8.13% | strong | 0 - 2 |
+| 2026-06-20 | 12:00 | win | 16-15 | -4.29% | D. Egorova | L. Vujovic | 2.50 | 1.25 | 1.88 | -1.55 | itf | unknown | 54.46% | 14.46% | strong | 1 - 2 |
+| 2026-06-20 | 12:00 | loss | 15-15 | -9.84% | Ka. Pliskova | M. Bouzkova | 1.91 | 1.00 | -1.00 | -3.42 | atp_wta | grass | 58.30% | 5.99% | normal | 0 - 2 |
+| 2026-06-20 | 12:00 | loss | 15-14 | -7.17% | M. Zielinski | M. Vankan | 1.92 | 1.25 | -1.25 | -2.42 | itf | unknown | 60.70% | 8.66% | strong | 2 - 0 |
+| 2026-06-20 | 11:30 | loss | 15-13 | -3.60% | L. Petruzelova | M. Sieg | 3.25 | 1.25 | -1.25 | -1.17 | itf | unknown | 51.39% | 20.60% | strong | 2 - 1 |
+| 2026-06-20 | 11:30 | win | 15-12 | 0.26% | L. Nilsson | T. Frodin | 1.62 | 1.00 | 0.62 | 0.08 | itf | unknown | 68.74% | 6.84% | normal | 2 - 0 |
+| 2026-06-20 | 11:30 | win | 14-12 | -1.77% | B. Passola | E. Seibold | 1.97 | 1.25 | 1.21 | -0.54 | itf | unknown | 62.14% | 11.33% | strong | 1 - 2 |
+| 2026-06-20 | 11:00 | loss | 13-12 | -6.02% | L. Encheva | S. Janicijevic | 2.24 | 1.25 | -1.25 | -1.75 | itf | unknown | 67.09% | 22.41% | strong | 2 - 1 |
+| 2026-06-20 | 11:00 | loss | 13-11 | -1.79% | F. Andaloro | T. Boogaard | 2.58 | 1.25 | -1.25 | -0.50 | itf | unknown | 67.58% | 28.76% | strong | 2 - 0 |
+| 2026-06-20 | 11:00 | win | 13-10 | 2.85% | M. Efstathiou | M. Kaouk | 2.19 | 1.25 | 1.49 | 0.75 | itf | unknown | 64.06% | 18.36% | strong | 1 - 2 |
+| 2026-06-20 | 10:00 | loss | 12-10 | -2.90% | V. Bosio | J. Pastikova | 2.03 | 1.25 | -1.25 | -0.73 | itf | unknown | 66.89% | 17.58% | strong | 2 - 0 |
+| 2026-06-20 | 10:00 | loss | 12-9 | 2.16% | K. Wehnelt | D. Dietrich | 2.99 | 1.25 | -1.25 | 0.52 | itf | unknown | 55.26% | 21.84% | strong | 2 - 1 |
 | 2026-06-19 | 20:30 | loss | 12-8 | 7.77% | E. Milovanovic | A. Kubareva | 1.68 | 1.00 | -1.00 | 1.77 | itf | unknown | 65.32% | 5.84% | normal | 2 - 1 |
 | 2026-06-19 | 19:30 | loss | 12-7 | 12.73% | D. Popko | A. Martin | 2.34 | 1.25 | -1.25 | 2.77 | itf | unknown | 68.07% | 25.34% | strong | 2 - 1 |
 | 2026-06-19 | 18:00 | win | 12-6 | 19.60% | P. De Lange | N. Barsukov | 2.56 | 1.25 | 1.95 | 4.02 | itf | unknown | 54.99% | 15.91% | strong | 2 - 1 |
