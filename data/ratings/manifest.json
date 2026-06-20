@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-06-19T06:38:04+00:00",
+  "generated_at": "2026-06-20T06:36:59+00:00",
   "players_men": 5214,
   "players_total": 11894,
   "players_women": 6680,
-  "processed_level_atp_wta": 19662,
-  "processed_level_challenger": 40652,
+  "processed_level_atp_wta": 19663,
+  "processed_level_challenger": 40660,
   "processed_level_grand_slam": 6751,
-  "processed_level_itf": 159478,
-  "processed_level_qualifying": 765,
-  "processed_matches": 227308,
-  "processed_men": 113231,
-  "processed_women": 114077,
-  "unknown_surface": 134
+  "processed_level_itf": 159514,
+  "processed_level_qualifying": 897,
+  "processed_matches": 227485,
+  "processed_men": 113309,
+  "processed_women": 114176,
+  "unknown_surface": 185
 }
