@@ -6,7 +6,7 @@
     "with_full_name": 2603,
     "with_short_name": 5267
   },
-  "generated_at": "2026-06-21T13:31:51+00:00",
+  "generated_at": "2026-06-21T22:24:00+00:00",
   "mapping": {
     "men:api:100041": {
       "api_levels": {
@@ -104,18 +104,19 @@
     },
     "men:api:10020": {
       "api_levels": {
+        "challenger": 1,
         "qualifying": 2
       },
-      "api_matches": 2,
+      "api_matches": 3,
       "api_name": "Valentin Basel",
       "api_name_sources": {
-        "api_cache_full_name": 2
+        "api_cache_full_name": 3
       },
       "api_name_variants": {
-        "Valentin Basel": 2
+        "Valentin Basel": 3
       },
       "api_surfaces": {
-        "clay": 2
+        "clay": 3
       },
       "confidence": 0.999,
       "gender": "men",
@@ -268,13 +269,13 @@
       "status": "auto_mapped"
     },
     "men:api:100794": {
-      "api_matches": 6,
+      "api_matches": 7,
       "api_name": "Nikita Belozertsev",
       "api_name_sources": {
-        "api_cache_full_name": 6
+        "api_cache_full_name": 7
       },
       "api_name_variants": {
-        "Nikita Belozertsev": 6
+        "Nikita Belozertsev": 7
       },
       "confidence": 1.0,
       "gender": "men",
@@ -1155,19 +1156,19 @@
     },
     "men:api:102950": {
       "api_levels": {
-        "itf": 5,
+        "itf": 4,
         "qualifying": 1
       },
-      "api_matches": 6,
+      "api_matches": 5,
       "api_name": "P. Perez Ramos",
       "api_name_sources": {
-        "api_cache_short_name": 6
+        "api_cache_short_name": 5
       },
       "api_name_variants": {
-        "P. Perez Ramos": 6
+        "P. Perez Ramos": 5
       },
       "api_surfaces": {
-        "hard": 6
+        "hard": 5
       },
       "confidence": 0.972773,
       "gender": "men",
@@ -2017,19 +2018,19 @@
     },
     "men:api:103442": {
       "api_levels": {
-        "itf": 2,
+        "itf": 3,
         "qualifying": 1
       },
-      "api_matches": 3,
+      "api_matches": 4,
       "api_name": "Pablo Perez Ramos",
       "api_name_sources": {
-        "api_cache_full_name": 3
+        "api_cache_full_name": 4
       },
       "api_name_variants": {
-        "Pablo Perez Ramos": 3
+        "Pablo Perez Ramos": 4
       },
       "api_surfaces": {
-        "hard": 3
+        "hard": 4
       },
       "confidence": 0.999,
       "gender": "men",
@@ -3417,18 +3418,19 @@
       "api_levels": {
         "challenger": 4,
         "itf": 2,
-        "qualifying": 3
+        "qualifying": 4
       },
-      "api_matches": 9,
+      "api_matches": 10,
       "api_name": "Gerard Campana Lee",
       "api_name_sources": {
-        "api_cache_full_name": 9
+        "api_cache_full_name": 10
       },
       "api_name_variants": {
-        "Gerard Campana Lee": 9
+        "Gerard Campana Lee": 10
       },
       "api_surfaces": {
-        "clay": 9
+        "clay": 9,
+        "unknown": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -3997,21 +3999,21 @@
     },
     "men:api:1104": {
       "api_levels": {
-        "atp_wta": 3,
+        "atp_wta": 4,
         "grand_slam": 2,
         "qualifying": 1
       },
-      "api_matches": 6,
+      "api_matches": 7,
       "api_name": "Francisco Cerundolo",
       "api_name_sources": {
-        "api_cache_full_name": 6
+        "api_cache_full_name": 7
       },
       "api_name_variants": {
-        "Francisco Cerundolo": 6
+        "Francisco Cerundolo": 7
       },
       "api_surfaces": {
         "clay": 2,
-        "grass": 4
+        "grass": 5
       },
       "confidence": 0.999,
       "gender": "men",
@@ -4529,20 +4531,20 @@
     },
     "men:api:1192": {
       "api_levels": {
-        "atp_wta": 1,
+        "atp_wta": 2,
         "grand_slam": 6
       },
-      "api_matches": 7,
+      "api_matches": 8,
       "api_name": "Matteo Arnaldi",
       "api_name_sources": {
-        "api_cache_full_name": 7
+        "api_cache_full_name": 8
       },
       "api_name_variants": {
-        "Matteo Arnaldi": 7
+        "Matteo Arnaldi": 8
       },
       "api_surfaces": {
         "clay": 6,
-        "grass": 1
+        "grass": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -5009,19 +5011,19 @@
     },
     "men:api:1249": {
       "api_levels": {
-        "itf": 3,
+        "itf": 4,
         "qualifying": 1
       },
-      "api_matches": 4,
+      "api_matches": 5,
       "api_name": "Bryce Nakashima",
       "api_name_sources": {
-        "api_cache_full_name": 4
+        "api_cache_full_name": 5
       },
       "api_name_variants": {
-        "Bryce Nakashima": 4
+        "Bryce Nakashima": 5
       },
       "api_surfaces": {
-        "unknown": 4
+        "unknown": 5
       },
       "confidence": 0.999,
       "gender": "men",
@@ -5167,19 +5169,19 @@
     },
     "men:api:1265": {
       "api_levels": {
-        "itf": 6,
+        "itf": 7,
         "qualifying": 2
       },
-      "api_matches": 8,
+      "api_matches": 9,
       "api_name": "Marlon Vankan",
       "api_name_sources": {
-        "api_cache_full_name": 8
+        "api_cache_full_name": 9
       },
       "api_name_variants": {
-        "Marlon Vankan": 8
+        "Marlon Vankan": 9
       },
       "api_surfaces": {
-        "clay": 8
+        "clay": 9
       },
       "confidence": 0.999,
       "gender": "men",
@@ -6967,18 +6969,19 @@
     },
     "men:api:14273": {
       "api_levels": {
+        "challenger": 1,
         "itf": 2
       },
-      "api_matches": 2,
+      "api_matches": 3,
       "api_name": "Nicolas Zanellato",
       "api_name_sources": {
-        "api_cache_full_name": 2
+        "api_cache_full_name": 3
       },
       "api_name_variants": {
-        "Nicolas Zanellato": 2
+        "Nicolas Zanellato": 3
       },
       "api_surfaces": {
-        "clay": 2
+        "clay": 3
       },
       "confidence": 0.999,
       "gender": "men",
@@ -7400,20 +7403,20 @@
     },
     "men:api:15184": {
       "api_levels": {
-        "atp_wta": 2,
+        "atp_wta": 3,
         "challenger": 2,
         "qualifying": 1
       },
-      "api_matches": 5,
+      "api_matches": 6,
       "api_name": "Toby Samuel",
       "api_name_sources": {
-        "api_cache_full_name": 5
+        "api_cache_full_name": 6
       },
       "api_name_variants": {
-        "Toby Samuel": 5
+        "Toby Samuel": 6
       },
       "api_surfaces": {
-        "grass": 5
+        "grass": 6
       },
       "confidence": 0.999,
       "gender": "men",
@@ -7830,19 +7833,20 @@
     },
     "men:api:15664": {
       "api_levels": {
+        "challenger": 1,
         "itf": 6,
         "qualifying": 2
       },
-      "api_matches": 8,
+      "api_matches": 9,
       "api_name": "Peter Makk",
       "api_name_sources": {
-        "api_cache_full_name": 8
+        "api_cache_full_name": 9
       },
       "api_name_variants": {
-        "Peter Makk": 8
+        "Peter Makk": 9
       },
       "api_surfaces": {
-        "clay": 8
+        "clay": 9
       },
       "confidence": 0.999,
       "gender": "men",
@@ -8408,18 +8412,18 @@
     },
     "men:api:1764": {
       "api_levels": {
-        "atp_wta": 4
+        "atp_wta": 5
       },
-      "api_matches": 4,
+      "api_matches": 5,
       "api_name": "Yannick Hanfmann",
       "api_name_sources": {
-        "api_cache_full_name": 4
+        "api_cache_full_name": 5
       },
       "api_name_variants": {
-        "Yannick Hanfmann": 4
+        "Yannick Hanfmann": 5
       },
       "api_surfaces": {
-        "clay": 2,
+        "clay": 3,
         "grass": 2
       },
       "confidence": 0.999,
@@ -8431,19 +8435,19 @@
     },
     "men:api:1766": {
       "api_levels": {
-        "atp_wta": 6
+        "atp_wta": 7
       },
-      "api_matches": 6,
+      "api_matches": 7,
       "api_name": "Marcos Giron",
       "api_name_sources": {
-        "api_cache_full_name": 6
+        "api_cache_full_name": 7
       },
       "api_name_variants": {
-        "Marcos Giron": 6
+        "Marcos Giron": 7
       },
       "api_surfaces": {
         "clay": 2,
-        "grass": 4
+        "grass": 5
       },
       "confidence": 0.999,
       "gender": "men",
@@ -8544,18 +8548,20 @@
     },
     "men:api:18088": {
       "api_levels": {
-        "challenger": 3
+        "challenger": 3,
+        "qualifying": 1
       },
-      "api_matches": 3,
+      "api_matches": 4,
       "api_name": "Kumar Sinha Nitin",
       "api_name_sources": {
-        "api_cache_full_name": 3
+        "api_cache_full_name": 4
       },
       "api_name_variants": {
-        "Kumar Sinha Nitin": 3
+        "Kumar Sinha Nitin": 4
       },
       "api_surfaces": {
-        "clay": 3
+        "clay": 3,
+        "unknown": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -8728,18 +8734,20 @@
     },
     "men:api:1857": {
       "api_levels": {
-        "challenger": 2
+        "challenger": 2,
+        "qualifying": 1
       },
-      "api_matches": 2,
+      "api_matches": 3,
       "api_name": "John Fancutt Thomas",
       "api_name_sources": {
-        "api_cache_full_name": 2
+        "api_cache_full_name": 3
       },
       "api_name_variants": {
-        "John Fancutt Thomas": 2
+        "John Fancutt Thomas": 3
       },
       "api_surfaces": {
-        "clay": 2
+        "clay": 2,
+        "unknown": 1
       },
       "confidence": 0.0,
       "gender": "men",
@@ -9070,21 +9078,21 @@
     },
     "men:api:1894": {
       "api_levels": {
-        "atp_wta": 3,
+        "atp_wta": 4,
         "grand_slam": 2,
         "qualifying": 1
       },
-      "api_matches": 6,
+      "api_matches": 7,
       "api_name": "Tommy Paul",
       "api_name_sources": {
-        "api_cache_full_name": 6
+        "api_cache_full_name": 7
       },
       "api_name_variants": {
-        "Tommy Paul": 6
+        "Tommy Paul": 7
       },
       "api_surfaces": {
         "clay": 2,
-        "grass": 4
+        "grass": 5
       },
       "confidence": 0.999,
       "gender": "men",
@@ -10604,13 +10612,13 @@
       "status": "auto_mapped"
     },
     "men:api:2188": {
-      "api_matches": 6,
+      "api_matches": 7,
       "api_name": "Arklon Huertas Del Pino Cordova",
       "api_name_sources": {
-        "api_cache_full_name": 6
+        "api_cache_full_name": 7
       },
       "api_name_variants": {
-        "Arklon Huertas Del Pino Cordova": 6
+        "Arklon Huertas Del Pino Cordova": 7
       },
       "confidence": 1.0,
       "gender": "men",
@@ -10736,18 +10744,19 @@
     "men:api:2222": {
       "api_levels": {
         "itf": 5,
-        "qualifying": 2
+        "qualifying": 3
       },
-      "api_matches": 7,
+      "api_matches": 8,
       "api_name": "Romain Faucon",
       "api_name_sources": {
-        "api_cache_full_name": 7
+        "api_cache_full_name": 8
       },
       "api_name_variants": {
-        "Romain Faucon": 7
+        "Romain Faucon": 8
       },
       "api_surfaces": {
-        "hard": 7
+        "hard": 7,
+        "unknown": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -10827,19 +10836,20 @@
     },
     "men:api:2235": {
       "api_levels": {
+        "challenger": 1,
         "itf": 6,
         "qualifying": 1
       },
-      "api_matches": 7,
+      "api_matches": 8,
       "api_name": "Luca Potenza",
       "api_name_sources": {
-        "api_cache_full_name": 7
+        "api_cache_full_name": 8
       },
       "api_name_variants": {
-        "Luca Potenza": 7
+        "Luca Potenza": 8
       },
       "api_surfaces": {
-        "clay": 7
+        "clay": 8
       },
       "confidence": 0.999,
       "gender": "men",
@@ -12037,19 +12047,19 @@
     },
     "men:api:2735": {
       "api_levels": {
-        "atp_wta": 2,
+        "atp_wta": 3,
         "challenger": 3
       },
-      "api_matches": 5,
+      "api_matches": 6,
       "api_name": "Marc Polmans",
       "api_name_sources": {
-        "api_cache_full_name": 5
+        "api_cache_full_name": 6
       },
       "api_name_variants": {
-        "Marc Polmans": 5
+        "Marc Polmans": 6
       },
       "api_surfaces": {
-        "clay": 4,
+        "clay": 5,
         "grass": 1
       },
       "confidence": 0.999,
@@ -12152,20 +12162,20 @@
     },
     "men:api:2832": {
       "api_levels": {
-        "atp_wta": 6,
+        "atp_wta": 7,
         "qualifying": 2
       },
-      "api_matches": 8,
+      "api_matches": 9,
       "api_name": "Taylor Fritz",
       "api_name_sources": {
-        "api_cache_full_name": 8
+        "api_cache_full_name": 9
       },
       "api_name_variants": {
-        "Taylor Fritz": 8
+        "Taylor Fritz": 9
       },
       "api_surfaces": {
         "clay": 4,
-        "grass": 4
+        "grass": 5
       },
       "confidence": 0.999,
       "gender": "men",
@@ -12340,19 +12350,19 @@
     },
     "men:api:2843": {
       "api_levels": {
-        "atp_wta": 3,
+        "atp_wta": 4,
         "grand_slam": 1
       },
-      "api_matches": 4,
+      "api_matches": 5,
       "api_name": "Lorenzo Sonego",
       "api_name_sources": {
-        "api_cache_full_name": 4
+        "api_cache_full_name": 5
       },
       "api_name_variants": {
-        "Lorenzo Sonego": 4
+        "Lorenzo Sonego": 5
       },
       "api_surfaces": {
-        "clay": 1,
+        "clay": 2,
         "grass": 3
       },
       "confidence": 0.999,
@@ -12386,21 +12396,21 @@
     },
     "men:api:2846": {
       "api_levels": {
-        "atp_wta": 5,
+        "atp_wta": 6,
         "grand_slam": 3,
         "qualifying": 2
       },
-      "api_matches": 10,
+      "api_matches": 11,
       "api_name": "Frances Tiafoe",
       "api_name_sources": {
-        "api_cache_full_name": 10
+        "api_cache_full_name": 11
       },
       "api_name_variants": {
-        "Frances Tiafoe": 10
+        "Frances Tiafoe": 11
       },
       "api_surfaces": {
         "clay": 6,
-        "grass": 4
+        "grass": 5
       },
       "confidence": 0.999,
       "gender": "men",
@@ -12459,20 +12469,20 @@
     },
     "men:api:2851": {
       "api_levels": {
-        "itf": 9,
+        "itf": 10,
         "qualifying": 3
       },
-      "api_matches": 12,
+      "api_matches": 13,
       "api_name": "Spencer Johnson",
       "api_name_sources": {
-        "api_cache_full_name": 12
+        "api_cache_full_name": 13
       },
       "api_name_variants": {
-        "Spencer Johnson": 12
+        "Spencer Johnson": 13
       },
       "api_surfaces": {
         "hard": 8,
-        "unknown": 4
+        "unknown": 5
       },
       "confidence": 0.999,
       "gender": "men",
@@ -12504,13 +12514,13 @@
       "status": "auto_mapped"
     },
     "men:api:2853": {
-      "api_matches": 4,
+      "api_matches": 5,
       "api_name": "John Wolf Jeffrey",
       "api_name_sources": {
-        "api_cache_full_name": 4
+        "api_cache_full_name": 5
       },
       "api_name_variants": {
-        "John Wolf Jeffrey": 4
+        "John Wolf Jeffrey": 5
       },
       "confidence": 1.0,
       "gender": "men",
@@ -14668,18 +14678,19 @@
     },
     "men:api:37939": {
       "api_levels": {
+        "challenger": 1,
         "itf": 3
       },
-      "api_matches": 3,
+      "api_matches": 4,
       "api_name": "Rafael Tosetto",
       "api_name_sources": {
-        "api_cache_full_name": 3
+        "api_cache_full_name": 4
       },
       "api_name_variants": {
-        "Rafael Tosetto": 3
+        "Rafael Tosetto": 4
       },
       "api_surfaces": {
-        "clay": 3
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "men",
@@ -15011,19 +15022,20 @@
     },
     "men:api:38014": {
       "api_levels": {
+        "challenger": 1,
         "itf": 6,
         "qualifying": 2
       },
-      "api_matches": 8,
+      "api_matches": 9,
       "api_name": "Adrian Andreescu Stefan",
       "api_name_sources": {
-        "api_cache_full_name": 8
+        "api_cache_full_name": 9
       },
       "api_name_variants": {
-        "Adrian Andreescu Stefan": 8
+        "Adrian Andreescu Stefan": 9
       },
       "api_surfaces": {
-        "clay": 8
+        "clay": 9
       },
       "confidence": 0.999,
       "gender": "men",
@@ -16442,19 +16454,20 @@
     },
     "men:api:38849": {
       "api_levels": {
+        "challenger": 1,
         "itf": 7,
         "qualifying": 2
       },
-      "api_matches": 9,
+      "api_matches": 10,
       "api_name": "Nicolas Oliveira",
       "api_name_sources": {
-        "api_cache_full_name": 9
+        "api_cache_full_name": 10
       },
       "api_name_variants": {
-        "Nicolas Oliveira": 9
+        "Nicolas Oliveira": 10
       },
       "api_surfaces": {
-        "clay": 9
+        "clay": 10
       },
       "confidence": 0.999,
       "gender": "men",
@@ -16891,18 +16904,19 @@
     },
     "men:api:39170": {
       "api_levels": {
+        "challenger": 1,
         "itf": 3
       },
-      "api_matches": 3,
+      "api_matches": 4,
       "api_name": "Gabriel Schenekenberg",
       "api_name_sources": {
-        "api_cache_full_name": 3
+        "api_cache_full_name": 4
       },
       "api_name_variants": {
-        "Gabriel Schenekenberg": 3
+        "Gabriel Schenekenberg": 4
       },
       "api_surfaces": {
-        "clay": 3
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "men",
@@ -17004,22 +17018,22 @@
     },
     "men:api:395": {
       "api_levels": {
-        "atp_wta": 1,
+        "atp_wta": 2,
         "challenger": 4,
         "grand_slam": 1,
         "qualifying": 1
       },
-      "api_matches": 7,
+      "api_matches": 8,
       "api_name": "Marco Trungelliti",
       "api_name_sources": {
-        "api_cache_full_name": 7
+        "api_cache_full_name": 8
       },
       "api_name_variants": {
-        "Marco Trungelliti": 7
+        "Marco Trungelliti": 8
       },
       "api_surfaces": {
         "clay": 6,
-        "grass": 1
+        "grass": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -17646,19 +17660,20 @@
     },
     "men:api:40143": {
       "api_levels": {
+        "challenger": 1,
         "itf": 2,
         "qualifying": 4
       },
-      "api_matches": 6,
+      "api_matches": 7,
       "api_name": "Gustavo Ribeiro de Almeida",
       "api_name_sources": {
-        "api_cache_full_name": 6
+        "api_cache_full_name": 7
       },
       "api_name_variants": {
-        "Gustavo Ribeiro de Almeida": 6
+        "Gustavo Ribeiro de Almeida": 7
       },
       "api_surfaces": {
-        "clay": 6
+        "clay": 7
       },
       "confidence": 0.999,
       "gender": "men",
@@ -18695,6 +18710,28 @@
       "margin": 0.999,
       "method": "exact_token_set",
       "sackmann_player_key": "men:sackmann:117353",
+      "status": "auto_mapped"
+    },
+    "men:api:4694": {
+      "api_levels": {
+        "challenger": 1
+      },
+      "api_matches": 1,
+      "api_name": "Nicolas Barrientos",
+      "api_name_sources": {
+        "api_cache_full_name": 1
+      },
+      "api_name_variants": {
+        "Nicolas Barrientos": 1
+      },
+      "api_surfaces": {
+        "clay": 1
+      },
+      "confidence": 0.999,
+      "gender": "men",
+      "margin": 0.999,
+      "method": "exact_normalized",
+      "sackmann_player_key": "men:sackmann:104905",
       "status": "auto_mapped"
     },
     "men:api:4712": {
@@ -19855,18 +19892,19 @@
     },
     "men:api:52679": {
       "api_levels": {
+        "challenger": 1,
         "qualifying": 3
       },
-      "api_matches": 3,
+      "api_matches": 4,
       "api_name": "Ignacio Parisca",
       "api_name_sources": {
-        "api_cache_full_name": 3
+        "api_cache_full_name": 4
       },
       "api_name_variants": {
-        "Ignacio Parisca": 3
+        "Ignacio Parisca": 4
       },
       "api_surfaces": {
-        "clay": 3
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "men",
@@ -19899,19 +19937,19 @@
     },
     "men:api:52682": {
       "api_levels": {
-        "challenger": 6,
+        "challenger": 7,
         "qualifying": 1
       },
-      "api_matches": 7,
+      "api_matches": 8,
       "api_name": "Felix Balshaw",
       "api_name_sources": {
-        "api_cache_full_name": 7
+        "api_cache_full_name": 8
       },
       "api_name_variants": {
-        "Felix Balshaw": 7
+        "Felix Balshaw": 8
       },
       "api_surfaces": {
-        "clay": 7
+        "clay": 8
       },
       "confidence": 0.999,
       "gender": "men",
@@ -20739,20 +20777,20 @@
     },
     "men:api:5469": {
       "api_levels": {
-        "challenger": 3,
+        "challenger": 4,
         "itf": 1,
         "qualifying": 1
       },
-      "api_matches": 5,
+      "api_matches": 6,
       "api_name": "Wilson Leite",
       "api_name_sources": {
-        "api_cache_full_name": 5
+        "api_cache_full_name": 6
       },
       "api_name_variants": {
-        "Wilson Leite": 5
+        "Wilson Leite": 6
       },
       "api_surfaces": {
-        "clay": 5
+        "clay": 6
       },
       "confidence": 0.999,
       "gender": "men",
@@ -21789,18 +21827,19 @@
     },
     "men:api:564": {
       "api_levels": {
+        "challenger": 1,
         "itf": 4
       },
-      "api_matches": 4,
+      "api_matches": 5,
       "api_name": "David Ionel Nicholas",
       "api_name_sources": {
-        "api_cache_full_name": 4
+        "api_cache_full_name": 5
       },
       "api_name_variants": {
-        "David Ionel Nicholas": 4
+        "David Ionel Nicholas": 5
       },
       "api_surfaces": {
-        "clay": 4
+        "clay": 5
       },
       "confidence": 0.999,
       "gender": "men",
@@ -22015,19 +22054,19 @@
     },
     "men:api:56781": {
       "api_levels": {
-        "itf": 4,
+        "itf": 5,
         "qualifying": 1
       },
-      "api_matches": 5,
+      "api_matches": 6,
       "api_name": "Gavin Young",
       "api_name_sources": {
-        "api_cache_full_name": 5
+        "api_cache_full_name": 6
       },
       "api_name_variants": {
-        "Gavin Young": 5
+        "Gavin Young": 6
       },
       "api_surfaces": {
-        "hard": 5
+        "hard": 6
       },
       "confidence": 0.999,
       "gender": "men",
@@ -22153,18 +22192,18 @@
     },
     "men:api:569": {
       "api_levels": {
-        "challenger": 1
+        "challenger": 2
       },
-      "api_matches": 1,
+      "api_matches": 2,
       "api_name": "Denis Yevseyev",
       "api_name_sources": {
-        "api_cache_full_name": 1
+        "api_cache_full_name": 2
       },
       "api_name_variants": {
-        "Denis Yevseyev": 1
+        "Denis Yevseyev": 2
       },
       "api_surfaces": {
-        "clay": 1
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -22352,24 +22391,47 @@
     },
     "men:api:57479": {
       "api_levels": {
+        "challenger": 1,
         "itf": 1
       },
-      "api_matches": 1,
+      "api_matches": 2,
       "api_name": "Enzo Camargo Lima",
       "api_name_sources": {
-        "api_cache_full_name": 1
+        "api_cache_full_name": 2
       },
       "api_name_variants": {
-        "Enzo Camargo Lima": 1
+        "Enzo Camargo Lima": 2
       },
       "api_surfaces": {
-        "clay": 1
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "men",
       "margin": 0.045919,
       "method": "exact_normalized",
       "sackmann_player_key": "men:sackmann:212295",
+      "status": "auto_mapped"
+    },
+    "men:api:57484": {
+      "api_levels": {
+        "challenger": 1
+      },
+      "api_matches": 1,
+      "api_name": "Lucas Andrade da Silva",
+      "api_name_sources": {
+        "api_cache_full_name": 1
+      },
+      "api_name_variants": {
+        "Lucas Andrade da Silva": 1
+      },
+      "api_surfaces": {
+        "clay": 1
+      },
+      "confidence": 0.999,
+      "gender": "men",
+      "margin": 0.084974,
+      "method": "exact_normalized",
+      "sackmann_player_key": "men:sackmann:212455",
       "status": "auto_mapped"
     },
     "men:api:57536": {
@@ -22883,18 +22945,18 @@
     },
     "men:api:58211": {
       "api_levels": {
-        "challenger": 1
+        "challenger": 2
       },
-      "api_matches": 1,
+      "api_matches": 2,
       "api_name": "Segundo Goity Zapico",
       "api_name_sources": {
-        "api_cache_full_name": 1
+        "api_cache_full_name": 2
       },
       "api_name_variants": {
-        "Segundo Goity Zapico": 1
+        "Segundo Goity Zapico": 2
       },
       "api_surfaces": {
-        "clay": 1
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -23127,19 +23189,19 @@
     },
     "men:api:58881": {
       "api_levels": {
-        "challenger": 3,
+        "challenger": 4,
         "qualifying": 1
       },
-      "api_matches": 4,
+      "api_matches": 5,
       "api_name": "Tomas Martinez",
       "api_name_sources": {
-        "api_cache_full_name": 4
+        "api_cache_full_name": 5
       },
       "api_name_variants": {
-        "Tomas Martinez": 4
+        "Tomas Martinez": 5
       },
       "api_surfaces": {
-        "clay": 4
+        "clay": 5
       },
       "confidence": 0.999,
       "gender": "men",
@@ -23378,18 +23440,20 @@
     "men:api:59291": {
       "api_levels": {
         "challenger": 1,
-        "itf": 2
+        "itf": 2,
+        "qualifying": 1
       },
-      "api_matches": 3,
+      "api_matches": 4,
       "api_name": "William Rejchtman Vinciguerra",
       "api_name_sources": {
-        "api_cache_full_name": 3
+        "api_cache_full_name": 4
       },
       "api_name_variants": {
-        "William Rejchtman Vinciguerra": 3
+        "William Rejchtman Vinciguerra": 4
       },
       "api_surfaces": {
-        "clay": 3
+        "clay": 3,
+        "unknown": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -23468,19 +23532,20 @@
     },
     "men:api:59410": {
       "api_levels": {
+        "challenger": 1,
         "itf": 4,
         "qualifying": 1
       },
-      "api_matches": 5,
+      "api_matches": 6,
       "api_name": "Salvador Price",
       "api_name_sources": {
-        "api_cache_full_name": 5
+        "api_cache_full_name": 6
       },
       "api_name_variants": {
-        "Salvador Price": 5
+        "Salvador Price": 6
       },
       "api_surfaces": {
-        "clay": 5
+        "clay": 6
       },
       "confidence": 0.999,
       "gender": "men",
@@ -23602,21 +23667,21 @@
     },
     "men:api:5979": {
       "api_levels": {
-        "atp_wta": 1,
+        "atp_wta": 2,
         "challenger": 6,
         "qualifying": 1
       },
-      "api_matches": 8,
+      "api_matches": 9,
       "api_name": "Jan Choinski",
       "api_name_sources": {
-        "api_cache_full_name": 8
+        "api_cache_full_name": 9
       },
       "api_name_variants": {
-        "Jan Choinski": 8
+        "Jan Choinski": 9
       },
       "api_surfaces": {
         "clay": 7,
-        "grass": 1
+        "grass": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -24281,20 +24346,20 @@
     },
     "men:api:627": {
       "api_levels": {
-        "atp_wta": 1,
+        "atp_wta": 2,
         "challenger": 2,
         "qualifying": 7
       },
-      "api_matches": 10,
+      "api_matches": 11,
       "api_name": "Giles Hussey",
       "api_name_sources": {
-        "api_cache_full_name": 10
+        "api_cache_full_name": 11
       },
       "api_name_variants": {
-        "Giles Hussey": 10
+        "Giles Hussey": 11
       },
       "api_surfaces": {
-        "grass": 3,
+        "grass": 4,
         "hard": 7
       },
       "confidence": 0.999,
@@ -24668,18 +24733,19 @@
     "men:api:63409": {
       "api_levels": {
         "itf": 6,
-        "qualifying": 1
+        "qualifying": 2
       },
-      "api_matches": 7,
+      "api_matches": 8,
       "api_name": "Anas Mazdrashki",
       "api_name_sources": {
-        "api_cache_full_name": 7
+        "api_cache_full_name": 8
       },
       "api_name_variants": {
-        "Anas Mazdrashki": 7
+        "Anas Mazdrashki": 8
       },
       "api_surfaces": {
-        "clay": 7
+        "clay": 7,
+        "unknown": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -24828,18 +24894,19 @@
     },
     "men:api:63731": {
       "api_levels": {
+        "challenger": 1,
         "itf": 1
       },
-      "api_matches": 1,
+      "api_matches": 2,
       "api_name": "Victor Braga",
       "api_name_sources": {
-        "api_cache_full_name": 1
+        "api_cache_full_name": 2
       },
       "api_name_variants": {
-        "Victor Braga": 1
+        "Victor Braga": 2
       },
       "api_surfaces": {
-        "clay": 1
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -24850,18 +24917,19 @@
     },
     "men:api:63732": {
       "api_levels": {
+        "challenger": 1,
         "itf": 3
       },
-      "api_matches": 3,
+      "api_matches": 4,
       "api_name": "Breno Braga",
       "api_name_sources": {
-        "api_cache_full_name": 3
+        "api_cache_full_name": 4
       },
       "api_name_variants": {
-        "Breno Braga": 3
+        "Breno Braga": 4
       },
       "api_surfaces": {
-        "clay": 3
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "men",
@@ -25161,18 +25229,19 @@
     },
     "men:api:65080": {
       "api_levels": {
+        "challenger": 1,
         "itf": 3
       },
-      "api_matches": 3,
+      "api_matches": 4,
       "api_name": "Hugo Remondy Pagotto Victor",
       "api_name_sources": {
-        "api_cache_full_name": 3
+        "api_cache_full_name": 4
       },
       "api_name_variants": {
-        "Hugo Remondy Pagotto Victor": 3
+        "Hugo Remondy Pagotto Victor": 4
       },
       "api_surfaces": {
-        "clay": 3
+        "clay": 4
       },
       "confidence": 0.998932,
       "gender": "men",
@@ -25864,24 +25933,47 @@
     },
     "men:api:67455": {
       "api_levels": {
+        "challenger": 1,
         "qualifying": 1
       },
-      "api_matches": 1,
+      "api_matches": 2,
       "api_name": "Alejandro Hayen",
       "api_name_sources": {
-        "api_cache_full_name": 1
+        "api_cache_full_name": 2
       },
       "api_name_variants": {
-        "Alejandro Hayen": 1
+        "Alejandro Hayen": 2
       },
       "api_surfaces": {
-        "clay": 1
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "men",
       "margin": 0.999,
       "method": "exact_normalized",
       "sackmann_player_key": "men:sackmann:212847",
+      "status": "auto_mapped"
+    },
+    "men:api:67510": {
+      "api_levels": {
+        "challenger": 1
+      },
+      "api_matches": 1,
+      "api_name": "P. Rodrigues Longobardi",
+      "api_name_sources": {
+        "api_cache_short_name": 1
+      },
+      "api_name_variants": {
+        "P. Rodrigues Longobardi": 1
+      },
+      "api_surfaces": {
+        "clay": 1
+      },
+      "confidence": 0.970693,
+      "gender": "men",
+      "margin": 0.970693,
+      "method": "exact_initial_form",
+      "sackmann_player_key": "men:sackmann:214566",
       "status": "auto_mapped"
     },
     "men:api:67513": {
@@ -26767,18 +26859,19 @@
     },
     "men:api:68749": {
       "api_levels": {
-        "itf": 1
+        "itf": 2
       },
-      "api_matches": 1,
+      "api_matches": 2,
       "api_name": "Antoine Faut Pierre",
       "api_name_sources": {
-        "api_cache_full_name": 1
+        "api_cache_full_name": 2
       },
       "api_name_variants": {
-        "Antoine Faut Pierre": 1
+        "Antoine Faut Pierre": 2
       },
       "api_surfaces": {
-        "clay": 1
+        "clay": 1,
+        "unknown": 1
       },
       "confidence": 0.998178,
       "gender": "men",
@@ -28193,19 +28286,19 @@
     },
     "men:api:71108": {
       "api_levels": {
-        "itf": 3,
+        "itf": 4,
         "qualifying": 1
       },
-      "api_matches": 4,
+      "api_matches": 5,
       "api_name": "Pieter De Lange",
       "api_name_sources": {
-        "api_cache_full_name": 4
+        "api_cache_full_name": 5
       },
       "api_name_variants": {
-        "Pieter De Lange": 4
+        "Pieter De Lange": 5
       },
       "api_surfaces": {
-        "clay": 4
+        "clay": 5
       },
       "confidence": 0.999,
       "gender": "men",
@@ -28892,19 +28985,20 @@
     },
     "men:api:73138": {
       "api_levels": {
+        "challenger": 1,
         "itf": 5,
         "qualifying": 2
       },
-      "api_matches": 7,
+      "api_matches": 8,
       "api_name": "Robert Guna",
       "api_name_sources": {
-        "api_cache_full_name": 7
+        "api_cache_full_name": 8
       },
       "api_name_variants": {
-        "Robert Guna": 7
+        "Robert Guna": 8
       },
       "api_surfaces": {
-        "clay": 7
+        "clay": 8
       },
       "confidence": 0.999,
       "gender": "men",
@@ -31332,18 +31426,19 @@
     "men:api:792": {
       "api_levels": {
         "itf": 5,
-        "qualifying": 1
+        "qualifying": 2
       },
-      "api_matches": 6,
+      "api_matches": 7,
       "api_name": "Tsung-Hao Huang",
       "api_name_sources": {
-        "api_cache_full_name": 6
+        "api_cache_full_name": 7
       },
       "api_name_variants": {
-        "Tsung-Hao Huang": 6
+        "Tsung-Hao Huang": 7
       },
       "api_surfaces": {
-        "hard": 6
+        "hard": 6,
+        "unknown": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -31445,18 +31540,20 @@
     },
     "men:api:79642": {
       "api_levels": {
-        "challenger": 2
+        "challenger": 2,
+        "qualifying": 1
       },
-      "api_matches": 2,
+      "api_matches": 3,
       "api_name": "Fares Zakaria",
       "api_name_sources": {
-        "api_cache_full_name": 2
+        "api_cache_full_name": 3
       },
       "api_name_variants": {
-        "Fares Zakaria": 2
+        "Fares Zakaria": 3
       },
       "api_surfaces": {
-        "clay": 2
+        "clay": 2,
+        "unknown": 1
       },
       "confidence": 0.0,
       "gender": "men",
@@ -31964,20 +32061,20 @@
     },
     "men:api:8144": {
       "api_levels": {
-        "challenger": 3,
+        "challenger": 4,
         "itf": 3,
         "qualifying": 1
       },
-      "api_matches": 7,
+      "api_matches": 8,
       "api_name": "Franco Ribero",
       "api_name_sources": {
-        "api_cache_full_name": 7
+        "api_cache_full_name": 8
       },
       "api_name_variants": {
-        "Franco Ribero": 7
+        "Franco Ribero": 8
       },
       "api_surfaces": {
-        "clay": 7
+        "clay": 8
       },
       "confidence": 0.999,
       "gender": "men",
@@ -32422,9 +32519,9 @@
       "api_surfaces": {
         "clay": 4
       },
-      "confidence": 0.997565,
+      "confidence": 0.997639,
       "gender": "men",
-      "margin": 0.997565,
+      "margin": 0.997639,
       "method": "exact_token_set",
       "sackmann_player_key": "men:sackmann:213855",
       "status": "auto_mapped"
@@ -33791,18 +33888,20 @@
     },
     "men:api:85958": {
       "api_levels": {
-        "grand_slam": 2
+        "grand_slam": 2,
+        "qualifying": 1
       },
-      "api_matches": 2,
+      "api_matches": 3,
       "api_name": "Dimitar Kisimov",
       "api_name_sources": {
-        "api_cache_full_name": 2
+        "api_cache_full_name": 3
       },
       "api_name_variants": {
-        "Dimitar Kisimov": 2
+        "Dimitar Kisimov": 3
       },
       "api_surfaces": {
-        "clay": 2
+        "clay": 2,
+        "unknown": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -34311,18 +34410,19 @@
     },
     "men:api:87263": {
       "api_levels": {
+        "challenger": 1,
         "itf": 1
       },
-      "api_matches": 1,
+      "api_matches": 2,
       "api_name": "Matei Varbanciu",
       "api_name_sources": {
-        "api_cache_full_name": 1
+        "api_cache_full_name": 2
       },
       "api_name_variants": {
-        "Matei Varbanciu": 1
+        "Matei Varbanciu": 2
       },
       "api_surfaces": {
-        "clay": 1
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -35119,19 +35219,19 @@
     },
     "men:api:89559": {
       "api_levels": {
-        "itf": 2
+        "itf": 3
       },
-      "api_matches": 2,
+      "api_matches": 3,
       "api_name": "Elijah Sanogo",
       "api_name_sources": {
-        "api_cache_full_name": 2
+        "api_cache_full_name": 3
       },
       "api_name_variants": {
-        "Elijah Sanogo": 2
+        "Elijah Sanogo": 3
       },
       "api_surfaces": {
         "clay": 1,
-        "unknown": 1
+        "unknown": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -36139,18 +36239,19 @@
     },
     "men:api:9217": {
       "api_levels": {
+        "atp_wta": 1,
         "grand_slam": 2
       },
-      "api_matches": 2,
+      "api_matches": 3,
       "api_name": "Daniel Vallejo Adolfo",
       "api_name_sources": {
-        "api_cache_full_name": 2
+        "api_cache_full_name": 3
       },
       "api_name_variants": {
-        "Daniel Vallejo Adolfo": 2
+        "Daniel Vallejo Adolfo": 3
       },
       "api_surfaces": {
-        "clay": 2
+        "clay": 3
       },
       "confidence": 0.999,
       "gender": "men",
@@ -36161,19 +36262,19 @@
     },
     "men:api:9219": {
       "api_levels": {
-        "atp_wta": 1,
+        "atp_wta": 2,
         "challenger": 7
       },
-      "api_matches": 8,
+      "api_matches": 9,
       "api_name": "Abedallah Shelbayh",
       "api_name_sources": {
-        "api_cache_full_name": 8
+        "api_cache_full_name": 9
       },
       "api_name_variants": {
-        "Abedallah Shelbayh": 8
+        "Abedallah Shelbayh": 9
       },
       "api_surfaces": {
-        "clay": 8
+        "clay": 9
       },
       "confidence": 0.999,
       "gender": "men",
@@ -36323,19 +36424,20 @@
     },
     "men:api:9229": {
       "api_levels": {
+        "challenger": 1,
         "itf": 3,
         "qualifying": 3
       },
-      "api_matches": 6,
+      "api_matches": 7,
       "api_name": "Couto Loureiro Joao Victor",
       "api_name_sources": {
-        "api_cache_full_name": 6
+        "api_cache_full_name": 7
       },
       "api_name_variants": {
-        "Couto Loureiro Joao Victor": 6
+        "Couto Loureiro Joao Victor": 7
       },
       "api_surfaces": {
-        "clay": 6
+        "clay": 7
       },
       "confidence": 0.999,
       "gender": "men",
@@ -37090,6 +37192,28 @@
       "sackmann_player_key": "men:sackmann:214324",
       "status": "auto_mapped"
     },
+    "men:api:93923": {
+      "api_levels": {
+        "challenger": 1
+      },
+      "api_matches": 1,
+      "api_name": "Henrique Ortenblad Nogueira",
+      "api_name_sources": {
+        "api_cache_full_name": 1
+      },
+      "api_name_variants": {
+        "Henrique Ortenblad Nogueira": 1
+      },
+      "api_surfaces": {
+        "clay": 1
+      },
+      "confidence": 0.999,
+      "gender": "men",
+      "margin": 0.999,
+      "method": "exact_normalized",
+      "sackmann_player_key": "men:sackmann:214332",
+      "status": "auto_mapped"
+    },
     "men:api:93943": {
       "api_levels": {
         "itf": 1
@@ -37342,18 +37466,19 @@
     },
     "men:api:949": {
       "api_levels": {
+        "atp_wta": 1,
         "grand_slam": 1
       },
-      "api_matches": 1,
+      "api_matches": 2,
       "api_name": "Mariano Navone",
       "api_name_sources": {
-        "api_cache_full_name": 1
+        "api_cache_full_name": 2
       },
       "api_name_variants": {
-        "Mariano Navone": 1
+        "Mariano Navone": 2
       },
       "api_surfaces": {
-        "clay": 1
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -37700,19 +37825,19 @@
     },
     "men:api:9602": {
       "api_levels": {
-        "challenger": 4,
+        "challenger": 5,
         "qualifying": 2
       },
-      "api_matches": 6,
+      "api_matches": 7,
       "api_name": "Thiago Cigarran",
       "api_name_sources": {
-        "api_cache_full_name": 6
+        "api_cache_full_name": 7
       },
       "api_name_variants": {
-        "Thiago Cigarran": 6
+        "Thiago Cigarran": 7
       },
       "api_surfaces": {
-        "clay": 6
+        "clay": 7
       },
       "confidence": 0.999,
       "gender": "men",
@@ -37723,18 +37848,19 @@
     },
     "men:api:9604": {
       "api_levels": {
+        "challenger": 1,
         "itf": 1
       },
-      "api_matches": 1,
+      "api_matches": 2,
       "api_name": "Bautista Otegui Juan",
       "api_name_sources": {
-        "api_cache_full_name": 1
+        "api_cache_full_name": 2
       },
       "api_name_variants": {
-        "Bautista Otegui Juan": 1
+        "Bautista Otegui Juan": 2
       },
       "api_surfaces": {
-        "clay": 1
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -37789,6 +37915,28 @@
       "margin": 0.999,
       "method": "exact_normalized",
       "sackmann_player_key": "men:sackmann:200647",
+      "status": "auto_mapped"
+    },
+    "men:api:96147": {
+      "api_levels": {
+        "challenger": 1
+      },
+      "api_matches": 1,
+      "api_name": "Andre Souza Pinto de Camargo e Silva",
+      "api_name_sources": {
+        "api_cache_full_name": 1
+      },
+      "api_name_variants": {
+        "Andre Souza Pinto de Camargo e Silva": 1
+      },
+      "api_surfaces": {
+        "clay": 1
+      },
+      "confidence": 0.904419,
+      "gender": "men",
+      "margin": 0.904419,
+      "method": "initial_surname",
+      "sackmann_player_key": "men:sackmann:207676",
       "status": "auto_mapped"
     },
     "men:api:9640": {
@@ -41579,21 +41727,21 @@
     },
     "women:api:1131": {
       "api_levels": {
-        "atp_wta": 3,
+        "atp_wta": 4,
         "grand_slam": 1,
         "qualifying": 1
       },
-      "api_matches": 5,
+      "api_matches": 6,
       "api_name": "Daria Snigur",
       "api_name_sources": {
-        "api_cache_full_name": 5
+        "api_cache_full_name": 6
       },
       "api_name_variants": {
-        "Daria Snigur": 5
+        "Daria Snigur": 6
       },
       "api_surfaces": {
         "clay": 1,
-        "grass": 4
+        "grass": 5
       },
       "confidence": 0.999,
       "gender": "women",
@@ -41792,20 +41940,20 @@
     },
     "women:api:1143": {
       "api_levels": {
-        "atp_wta": 3,
+        "atp_wta": 4,
         "challenger": 2
       },
-      "api_matches": 5,
+      "api_matches": 6,
       "api_name": "Petra Marcinko",
       "api_name_sources": {
-        "api_cache_full_name": 5
+        "api_cache_full_name": 6
       },
       "api_name_variants": {
-        "Petra Marcinko": 5
+        "Petra Marcinko": 6
       },
       "api_surfaces": {
         "clay": 4,
-        "grass": 1
+        "grass": 2
       },
       "confidence": 0.999,
       "gender": "women",
@@ -42046,19 +42194,19 @@
     },
     "women:api:1151": {
       "api_levels": {
-        "atp_wta": 3,
+        "atp_wta": 4,
         "qualifying": 1
       },
-      "api_matches": 4,
+      "api_matches": 5,
       "api_name": "Gabriela Ruse Elena",
       "api_name_sources": {
-        "api_cache_full_name": 4
+        "api_cache_full_name": 5
       },
       "api_name_variants": {
-        "Gabriela Ruse Elena": 4
+        "Gabriela Ruse Elena": 5
       },
       "api_surfaces": {
-        "grass": 4
+        "grass": 5
       },
       "confidence": 0.999,
       "gender": "women",
@@ -46593,18 +46741,18 @@
     },
     "women:api:1794": {
       "api_levels": {
-        "atp_wta": 2
+        "atp_wta": 3
       },
-      "api_matches": 2,
+      "api_matches": 3,
       "api_name": "Anastasia Zakharova",
       "api_name_sources": {
-        "api_cache_full_name": 2
+        "api_cache_full_name": 3
       },
       "api_name_variants": {
-        "Anastasia Zakharova": 2
+        "Anastasia Zakharova": 3
       },
       "api_surfaces": {
-        "grass": 2
+        "grass": 3
       },
       "confidence": 0.999,
       "gender": "women",
@@ -46615,18 +46763,18 @@
     },
     "women:api:1802": {
       "api_levels": {
-        "atp_wta": 2
+        "atp_wta": 3
       },
-      "api_matches": 2,
+      "api_matches": 3,
       "api_name": "Emiliana Arango",
       "api_name_sources": {
-        "api_cache_full_name": 2
+        "api_cache_full_name": 3
       },
       "api_name_variants": {
-        "Emiliana Arango": 2
+        "Emiliana Arango": 3
       },
       "api_surfaces": {
-        "grass": 2
+        "grass": 3
       },
       "confidence": 0.999,
       "gender": "women",
@@ -48519,20 +48667,20 @@
     },
     "women:api:2171": {
       "api_levels": {
-        "atp_wta": 2,
+        "atp_wta": 3,
         "grand_slam": 1,
         "qualifying": 1
       },
-      "api_matches": 4,
+      "api_matches": 5,
       "api_name": "Jessica Pegula",
       "api_name_sources": {
-        "api_cache_full_name": 4
+        "api_cache_full_name": 5
       },
       "api_name_variants": {
-        "Jessica Pegula": 4
+        "Jessica Pegula": 5
       },
       "api_surfaces": {
-        "clay": 4
+        "clay": 5
       },
       "confidence": 0.999,
       "gender": "women",
@@ -49530,19 +49678,19 @@
     },
     "women:api:23356": {
       "api_levels": {
-        "itf": 7,
+        "itf": 8,
         "qualifying": 2
       },
-      "api_matches": 9,
+      "api_matches": 10,
       "api_name": "Antonia Vergara Rivera",
       "api_name_sources": {
-        "api_cache_full_name": 9
+        "api_cache_full_name": 10
       },
       "api_name_variants": {
-        "Antonia Vergara Rivera": 9
+        "Antonia Vergara Rivera": 10
       },
       "api_surfaces": {
-        "clay": 9
+        "clay": 10
       },
       "confidence": 0.999,
       "gender": "women",
@@ -49825,18 +49973,18 @@
     },
     "women:api:2394": {
       "api_levels": {
-        "atp_wta": 2
+        "atp_wta": 3
       },
-      "api_matches": 2,
+      "api_matches": 3,
       "api_name": "Leylah Fernandez",
       "api_name_sources": {
-        "api_cache_full_name": 2
+        "api_cache_full_name": 3
       },
       "api_name_variants": {
-        "Leylah Fernandez": 2
+        "Leylah Fernandez": 3
       },
       "api_surfaces": {
-        "grass": 2
+        "grass": 3
       },
       "confidence": 0.999,
       "gender": "women",
@@ -51013,21 +51161,21 @@
     },
     "women:api:2820": {
       "api_levels": {
-        "atp_wta": 5,
+        "atp_wta": 6,
         "grand_slam": 2,
         "qualifying": 1
       },
-      "api_matches": 8,
+      "api_matches": 9,
       "api_name": "Marie Bouzkova",
       "api_name_sources": {
-        "api_cache_full_name": 8
+        "api_cache_full_name": 9
       },
       "api_name_variants": {
-        "Marie Bouzkova": 8
+        "Marie Bouzkova": 9
       },
       "api_surfaces": {
         "clay": 2,
-        "grass": 6
+        "grass": 7
       },
       "confidence": 0.999,
       "gender": "women",
@@ -51060,21 +51208,21 @@
     },
     "women:api:2823": {
       "api_levels": {
-        "atp_wta": 4,
+        "atp_wta": 5,
         "grand_slam": 2,
         "qualifying": 1
       },
-      "api_matches": 7,
+      "api_matches": 8,
       "api_name": "Emma Navarro",
       "api_name_sources": {
-        "api_cache_full_name": 7
+        "api_cache_full_name": 8
       },
       "api_name_variants": {
-        "Emma Navarro": 7
+        "Emma Navarro": 8
       },
       "api_surfaces": {
         "clay": 2,
-        "grass": 5
+        "grass": 6
       },
       "confidence": 0.999,
       "gender": "women",
@@ -51202,19 +51350,19 @@
     },
     "women:api:28610": {
       "api_levels": {
-        "itf": 7,
+        "itf": 8,
         "qualifying": 2
       },
-      "api_matches": 9,
+      "api_matches": 10,
       "api_name": "Marie Vogt",
       "api_name_sources": {
-        "api_cache_full_name": 9
+        "api_cache_full_name": 10
       },
       "api_name_variants": {
-        "Marie Vogt": 9
+        "Marie Vogt": 10
       },
       "api_surfaces": {
-        "clay": 9
+        "clay": 10
       },
       "confidence": 0.999,
       "gender": "women",
@@ -51412,21 +51560,21 @@
     },
     "women:api:2993": {
       "api_levels": {
-        "atp_wta": 3,
+        "atp_wta": 4,
         "grand_slam": 1,
         "qualifying": 1
       },
-      "api_matches": 5,
+      "api_matches": 6,
       "api_name": "Katie Boulter",
       "api_name_sources": {
-        "api_cache_full_name": 5
+        "api_cache_full_name": 6
       },
       "api_name_variants": {
-        "Katie Boulter": 5
+        "Katie Boulter": 6
       },
       "api_surfaces": {
         "clay": 1,
-        "grass": 4
+        "grass": 5
       },
       "confidence": 0.999,
       "gender": "women",
@@ -51850,20 +51998,20 @@
     },
     "women:api:3214": {
       "api_levels": {
-        "atp_wta": 1,
+        "atp_wta": 2,
         "grand_slam": 1
       },
-      "api_matches": 2,
+      "api_matches": 3,
       "api_name": "Taylor Townsend",
       "api_name_sources": {
-        "api_cache_full_name": 2
+        "api_cache_full_name": 3
       },
       "api_name_variants": {
-        "Taylor Townsend": 2
+        "Taylor Townsend": 3
       },
       "api_surfaces": {
         "clay": 1,
-        "grass": 1
+        "grass": 2
       },
       "confidence": 0.999,
       "gender": "women",
@@ -52648,19 +52796,19 @@
     },
     "women:api:37850": {
       "api_levels": {
-        "atp_wta": 2,
+        "atp_wta": 3,
         "challenger": 3
       },
-      "api_matches": 5,
+      "api_matches": 6,
       "api_name": "Alicia Dudeney",
       "api_name_sources": {
-        "api_cache_full_name": 5
+        "api_cache_full_name": 6
       },
       "api_name_variants": {
-        "Alicia Dudeney": 5
+        "Alicia Dudeney": 6
       },
       "api_surfaces": {
-        "grass": 5
+        "grass": 6
       },
       "confidence": 0.999,
       "gender": "women",
@@ -55109,20 +55257,20 @@
     },
     "women:api:447": {
       "api_levels": {
-        "atp_wta": 3,
+        "atp_wta": 4,
         "grand_slam": 1,
         "qualifying": 1
       },
-      "api_matches": 5,
+      "api_matches": 6,
       "api_name": "Linda Noskova",
       "api_name_sources": {
-        "api_cache_full_name": 5
+        "api_cache_full_name": 6
       },
       "api_name_variants": {
-        "Linda Noskova": 5
+        "Linda Noskova": 6
       },
       "api_surfaces": {
-        "clay": 5
+        "clay": 6
       },
       "confidence": 0.999,
       "gender": "women",
@@ -55434,18 +55582,18 @@
     "women:api:463": {
       "api_levels": {
         "grand_slam": 3,
-        "qualifying": 5
+        "qualifying": 6
       },
-      "api_matches": 8,
+      "api_matches": 9,
       "api_name": "Xiyu Wang",
       "api_name_sources": {
-        "api_cache_full_name": 8
+        "api_cache_full_name": 9
       },
       "api_name_variants": {
-        "Xiyu Wang": 8
+        "Xiyu Wang": 9
       },
       "api_surfaces": {
-        "clay": 8
+        "clay": 9
       },
       "confidence": 0.999,
       "gender": "women",
@@ -55686,18 +55834,18 @@
     },
     "women:api:478": {
       "api_levels": {
-        "atp_wta": 2
+        "atp_wta": 3
       },
-      "api_matches": 2,
+      "api_matches": 3,
       "api_name": "Oksana Selekhmeteva",
       "api_name_sources": {
-        "api_cache_full_name": 2
+        "api_cache_full_name": 3
       },
       "api_name_variants": {
-        "Oksana Selekhmeteva": 2
+        "Oksana Selekhmeteva": 3
       },
       "api_surfaces": {
-        "grass": 2
+        "grass": 3
       },
       "confidence": 0.999,
       "gender": "women",
@@ -56694,18 +56842,18 @@
       "api_levels": {
         "challenger": 2,
         "grand_slam": 2,
-        "qualifying": 6
+        "qualifying": 7
       },
-      "api_matches": 10,
+      "api_matches": 11,
       "api_name": "Mayar Sherif",
       "api_name_sources": {
-        "api_cache_full_name": 10
+        "api_cache_full_name": 11
       },
       "api_name_variants": {
-        "Mayar Sherif": 10
+        "Mayar Sherif": 11
       },
       "api_surfaces": {
-        "clay": 10
+        "clay": 11
       },
       "confidence": 0.999,
       "gender": "women",
@@ -58011,19 +58159,19 @@
     },
     "women:api:53436": {
       "api_levels": {
-        "itf": 4,
+        "itf": 5,
         "qualifying": 1
       },
-      "api_matches": 5,
+      "api_matches": 6,
       "api_name": "Maria Gonzalez Daniele Justina",
       "api_name_sources": {
-        "api_cache_full_name": 5
+        "api_cache_full_name": 6
       },
       "api_name_variants": {
-        "Maria Gonzalez Daniele Justina": 5
+        "Maria Gonzalez Daniele Justina": 6
       },
       "api_surfaces": {
-        "clay": 5
+        "clay": 6
       },
       "confidence": 0.999,
       "gender": "women",
@@ -58048,9 +58196,9 @@
       "api_surfaces": {
         "clay": 12
       },
-      "confidence": 0.973951,
+      "confidence": 0.97397,
       "gender": "women",
-      "margin": 0.973951,
+      "margin": 0.97397,
       "method": "exact_initial_form",
       "sackmann_player_key": "women:sackmann:240166",
       "status": "auto_mapped"
@@ -62301,19 +62449,19 @@
     },
     "women:api:68739": {
       "api_levels": {
-        "itf": 6,
+        "itf": 7,
         "qualifying": 2
       },
-      "api_matches": 8,
+      "api_matches": 9,
       "api_name": "Monika Ekstrand",
       "api_name_sources": {
-        "api_cache_full_name": 8
+        "api_cache_full_name": 9
       },
       "api_name_variants": {
-        "Monika Ekstrand": 8
+        "Monika Ekstrand": 9
       },
       "api_surfaces": {
-        "hard": 8
+        "hard": 9
       },
       "confidence": 0.999,
       "gender": "women",
@@ -62541,9 +62689,9 @@
       "api_surfaces": {
         "clay": 5
       },
-      "confidence": 0.964043,
+      "confidence": 0.96406,
       "gender": "women",
-      "margin": 0.964043,
+      "margin": 0.96406,
       "method": "initial_surname",
       "sackmann_player_key": "women:sackmann:260323",
       "status": "auto_mapped"
@@ -62818,19 +62966,19 @@
     },
     "women:api:70319": {
       "api_levels": {
-        "itf": 3,
+        "itf": 4,
         "qualifying": 1
       },
-      "api_matches": 4,
+      "api_matches": 5,
       "api_name": "Antonia Stoyanov",
       "api_name_sources": {
-        "api_cache_full_name": 4
+        "api_cache_full_name": 5
       },
       "api_name_variants": {
-        "Antonia Stoyanov": 4
+        "Antonia Stoyanov": 5
       },
       "api_surfaces": {
-        "clay": 4
+        "clay": 5
       },
       "confidence": 0.999,
       "gender": "women",
@@ -69295,19 +69443,19 @@
     },
     "women:api:91151": {
       "api_levels": {
-        "atp_wta": 1,
+        "atp_wta": 2,
         "itf": 1
       },
-      "api_matches": 2,
+      "api_matches": 3,
       "api_name": "Sofia Johnson",
       "api_name_sources": {
-        "api_cache_full_name": 2
+        "api_cache_full_name": 3
       },
       "api_name_variants": {
-        "Sofia Johnson": 2
+        "Sofia Johnson": 3
       },
       "api_surfaces": {
-        "grass": 1,
+        "grass": 2,
         "hard": 1
       },
       "confidence": 0.999,
@@ -69865,19 +70013,19 @@
     },
     "women:api:9255": {
       "api_levels": {
-        "itf": 7,
+        "itf": 8,
         "qualifying": 2
       },
-      "api_matches": 9,
+      "api_matches": 10,
       "api_name": "Alina Shcherbinina",
       "api_name_sources": {
-        "api_cache_full_name": 9
+        "api_cache_full_name": 10
       },
       "api_name_variants": {
-        "Alina Shcherbinina": 9
+        "Alina Shcherbinina": 10
       },
       "api_surfaces": {
-        "hard": 9
+        "hard": 10
       },
       "confidence": 0.999,
       "gender": "women",
@@ -70513,28 +70661,6 @@
       "sackmann_player_key": "women:sackmann:239383",
       "status": "auto_mapped"
     },
-    "women:api:9396": {
-      "api_levels": {
-        "atp_wta": 1
-      },
-      "api_matches": 1,
-      "api_name": "A. Dudeney",
-      "api_name_sources": {
-        "api_source": 1
-      },
-      "api_name_variants": {
-        "A. Dudeney": 1
-      },
-      "api_surfaces": {
-        "grass": 1
-      },
-      "confidence": 0.974511,
-      "gender": "women",
-      "margin": 0.974511,
-      "method": "exact_initial_form",
-      "sackmann_player_key": "women:sackmann:260206",
-      "status": "auto_mapped"
-    },
     "women:api:93984": {
       "api_levels": {
         "itf": 3
@@ -71068,15 +71194,15 @@
   "source": "api_tennis",
   "summary": {
     "ambiguous": 19,
-    "api_gender_men": 1694,
-    "api_gender_women": 1440,
+    "api_gender_men": 1699,
+    "api_gender_women": 1439,
     "api_player_cache_entries": 5267,
-    "api_player_cache_full_name_used": 10563,
+    "api_player_cache_full_name_used": 10654,
     "api_player_cache_short_name_used": 887,
     "api_player_cache_with_full_name": 2603,
     "api_player_cache_with_short_name": 5267,
-    "api_players": 3134,
-    "auto_mapped": 2955,
+    "api_players": 3138,
+    "auto_mapped": 2959,
     "manual_mapped": 9,
     "player_aliases_loaded": 152,
     "rebuild_auto_mapping": 0,
