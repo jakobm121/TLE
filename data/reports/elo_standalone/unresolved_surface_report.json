@@ -1,6 +1,6 @@
 {
   "count": 8,
-  "generated_at": "2026-06-21T09:17:24+00:00",
+  "generated_at": "2026-06-21T09:48:00+00:00",
   "items": [
     {
       "context_text": "wta singles bad homburg wta bad homburg   1/16 finals 4228",
@@ -35,7 +35,6 @@
       "matches": [
         "P. Stearns - K. Birrell",
         "Z. Sonmez - E. Jacquemot",
-        "A. Tomljanovic - V. Erjavec",
         "S. Johnson - E. Arango",
         "P. Marcinko - D. Snigur",
         "O. Selekhmeteva - A. Zakharova"
@@ -52,7 +51,6 @@
       "matches": [
         "G. Hussey - M. Trungelliti",
         "M. Arnaldi - T. Samuel",
-        "H. Stewart - A. Vukic",
         "M. Giron - J. Choinski"
       ],
       "raw_event_type_type": "Atp Singles",
@@ -79,8 +77,6 @@
       "gender": "men",
       "level": "atp_wta",
       "matches": [
-        "A. Walton - A. Ghibaudo",
-        "A. Molcan - M. Cassone",
         "Z. Svajda - D. Dzumhur",
         "A. Shelbayh - M. Polmans"
       ],
