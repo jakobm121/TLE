@@ -12,9 +12,10 @@
   "counters": {
     "fixture_skip_doubles_or_team": 7,
     "fixture_skip_live": 11,
-    "fixture_skip_starts_too_soon": 16,
+    "fixture_skip_starts_too_soon": 15,
     "fixture_skip_status_cancelled": 3,
     "fixture_skip_status_finished": 5,
+    "fixture_skip_status_retired": 1,
     "fixtures_scanned": 64,
     "fixtures_with_diagnostics": 41,
     "fixtures_with_output": 1
@@ -26,9 +27,9 @@
     "STRONG_BET": 1
   },
   "fixtures_total": 106,
-  "generated_at": "2026-06-21T08:41:39+00:00",
+  "generated_at": "2026-06-21T08:57:37+00:00",
   "min_start_minutes": 30,
-  "new_added_to_predictions": 1,
+  "new_added_to_predictions": 0,
   "new_candidates": 1,
   "notes": [
     "This is standalone: it scans all eligible API fixtures and odds, not only tennis value picks.",
