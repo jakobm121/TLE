@@ -1,6 +1,6 @@
 {
-  "count": 2,
-  "generated_at": "2026-06-21T08:57:37+00:00",
+  "count": 8,
+  "generated_at": "2026-06-21T09:17:24+00:00",
   "items": [
     {
       "context_text": "wta singles bad homburg wta bad homburg   1/16 finals 4228",
@@ -16,6 +16,51 @@
       "suggested_map_key": "wta singles bad homburg wta bad homburg 1/16 finals 4228"
     },
     {
+      "context_text": "wta singles bad homburg wta bad homburg   final 4228",
+      "gender": "women",
+      "level": "atp_wta",
+      "matches": [
+        "R. Zarazua - S. Kraus",
+        "G. Ruse - T. Townsend"
+      ],
+      "raw_event_type_type": "Wta Singles",
+      "raw_tournament_name": "Bad Homburg",
+      "raw_tournament_round": "WTA Bad Homburg - Final",
+      "suggested_map_key": "wta singles bad homburg wta bad homburg final 4228"
+    },
+    {
+      "context_text": "wta singles eastbourne wta eastbourne   final 1358",
+      "gender": "women",
+      "level": "atp_wta",
+      "matches": [
+        "P. Stearns - K. Birrell",
+        "Z. Sonmez - E. Jacquemot",
+        "A. Tomljanovic - V. Erjavec",
+        "S. Johnson - E. Arango",
+        "P. Marcinko - D. Snigur",
+        "O. Selekhmeteva - A. Zakharova"
+      ],
+      "raw_event_type_type": "Wta Singles",
+      "raw_tournament_name": "Eastbourne",
+      "raw_tournament_round": "WTA Eastbourne - Final",
+      "suggested_map_key": "wta singles eastbourne wta eastbourne final 1358"
+    },
+    {
+      "context_text": "atp singles eastbourne atp eastbourne   final 2052",
+      "gender": "men",
+      "level": "atp_wta",
+      "matches": [
+        "G. Hussey - M. Trungelliti",
+        "M. Arnaldi - T. Samuel",
+        "H. Stewart - A. Vukic",
+        "M. Giron - J. Choinski"
+      ],
+      "raw_event_type_type": "Atp Singles",
+      "raw_tournament_name": "Eastbourne",
+      "raw_tournament_round": "ATP Eastbourne - Final",
+      "suggested_map_key": "atp singles eastbourne atp eastbourne final 2052"
+    },
+    {
       "context_text": "atp singles mallorca atp mallorca   1/16 finals 3681",
       "gender": "men",
       "level": "atp_wta",
@@ -28,6 +73,48 @@
       "raw_tournament_name": "Mallorca",
       "raw_tournament_round": "ATP Mallorca - 1/16-finals",
       "suggested_map_key": "atp singles mallorca atp mallorca 1/16 finals 3681"
+    },
+    {
+      "context_text": "atp singles mallorca atp mallorca   final 3681",
+      "gender": "men",
+      "level": "atp_wta",
+      "matches": [
+        "A. Walton - A. Ghibaudo",
+        "A. Molcan - M. Cassone",
+        "Z. Svajda - D. Dzumhur",
+        "A. Shelbayh - M. Polmans"
+      ],
+      "raw_event_type_type": "Atp Singles",
+      "raw_tournament_name": "Mallorca",
+      "raw_tournament_round": "ATP Mallorca - Final",
+      "suggested_map_key": "atp singles mallorca atp mallorca final 3681"
+    },
+    {
+      "context_text": "challenger men singles piracicaba piracicaba   semi finals 8499",
+      "gender": "men",
+      "level": "challenger",
+      "matches": [
+        "A. Hayen - T. Martinez",
+        "V. Basel - S. Price",
+        "S. Goity Zapico - N. Oliveira"
+      ],
+      "raw_event_type_type": "Challenger Men Singles",
+      "raw_tournament_name": "Piracicaba",
+      "raw_tournament_round": "Piracicaba - Semi-finals",
+      "suggested_map_key": "challenger men singles piracicaba piracicaba semi finals 8499"
+    },
+    {
+      "context_text": "challenger men singles targu mures targu mures   semi finals 12993",
+      "gender": "men",
+      "level": "challenger",
+      "matches": [
+        "R. Guna - P. Makk",
+        "N. D. Ionel - D. Yevseyev"
+      ],
+      "raw_event_type_type": "Challenger Men Singles",
+      "raw_tournament_name": "Targu Mures",
+      "raw_tournament_round": "Targu Mures - Semi-finals",
+      "suggested_map_key": "challenger men singles targu mures targu mures semi finals 12993"
     }
   ],
   "note": "Add suggested_map_key: hard/clay/grass/carpet to data/metadata/tournament_surface_map.json if these are real ATP/WTA/Challenger/Grand Slam events."

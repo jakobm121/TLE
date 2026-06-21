@@ -1,36 +1,40 @@
 {
-  "active_predictions_total": 1,
+  "active_predictions_total": 2,
   "by_level_scan": {
-    "atp_wta": 20,
-    "itf": 2,
-    "qualifying": 60
+    "atp_wta": 52,
+    "challenger": 26,
+    "itf": 2
+  },
+  "by_qualification_scan": {
+    "False": 22,
+    "True": 58
   },
   "by_surface_source_scan": {
-    "missing": 70,
+    "missing": 68,
     "tournament_surface_map": 12
   },
   "counters": {
     "fixture_skip_doubles_or_team": 7,
-    "fixture_skip_live": 11,
+    "fixture_skip_live": 16,
     "fixture_skip_starts_too_soon": 15,
     "fixture_skip_status_cancelled": 3,
     "fixture_skip_status_finished": 5,
     "fixture_skip_status_retired": 1,
-    "fixtures_scanned": 64,
-    "fixtures_with_diagnostics": 41,
-    "fixtures_with_output": 1
+    "fixtures_scanned": 60,
+    "fixtures_with_diagnostics": 40,
+    "fixtures_with_output": 2
   },
   "date_start": "2026-06-21",
   "days_ahead": 1,
   "decision_counts_scan": {
-    "NO_BET": 81,
-    "STRONG_BET": 1
+    "NO_BET": 78,
+    "STRONG_BET": 2
   },
-  "fixtures_total": 106,
-  "generated_at": "2026-06-21T08:57:37+00:00",
+  "fixtures_total": 107,
+  "generated_at": "2026-06-21T09:17:24+00:00",
   "min_start_minutes": 30,
-  "new_added_to_predictions": 0,
-  "new_candidates": 1,
+  "new_added_to_predictions": 1,
+  "new_candidates": 2,
   "notes": [
     "This is standalone: it scans all eligible API fixtures and odds, not only tennis value picks.",
     "Odds are average clean odds after removing bookmaker outliers.",
@@ -54,16 +58,15 @@
     "unresolved_surface_json": "data/reports/elo_standalone/unresolved_surface_report.json"
   },
   "reason_counts_scan": {
-    "elo_edge_too_low": 4,
-    "elo_prob_too_low": 5,
-    "min_level_not_met": 41,
+    "elo_edge_too_low": 5,
+    "elo_prob_too_low": 7,
     "odds_outside_range": 14,
-    "pass_strong_edge": 1,
-    "unknown_surface": 9,
-    "unmapped_player": 8
+    "pass_strong_edge": 2,
+    "unknown_surface": 46,
+    "unmapped_player": 6
   },
-  "scan_rows": 82,
+  "scan_rows": 80,
   "status": "ok",
   "surface_map_entries": 23,
-  "unresolved_surface_count": 2
+  "unresolved_surface_count": 8
 }
