@@ -19,23 +19,30 @@ jobs:
           from io import StringIO
 
           FILES = {
-              "atp_matches_2026": "https://raw.githubusercontent.com/JeffSackmann/tennis_atp/master/atp_matches_2026.csv",
-              "atp_matches_qual_chall_2026": "https://raw.githubusercontent.com/JeffSackmann/tennis_atp/master/atp_matches_qual_chall_2026.csv",
-              "atp_matches_futures_2026": "https://raw.githubusercontent.com/JeffSackmann/tennis_atp/master/atp_matches_futures_2026.csv",
-              "wta_matches_2026": "https://raw.githubusercontent.com/JeffSackmann/tennis_wta/master/wta_matches_2026.csv",
-              "wta_matches_qual_itf_2026": "https://raw.githubusercontent.com/JeffSackmann/tennis_wta/master/wta_matches_qual_itf_2026.csv",
+              "atp_matches_2026": "https://raw.githubusercontent.com/JeffSackmann/tennis_atp/refs/heads/master/atp_matches_2026.csv",
+              "atp_matches_qual_chall_2026": "https://raw.githubusercontent.com/JeffSackmann/tennis_atp/refs/heads/master/atp_matches_qual_chall_2026.csv",
+              "atp_matches_futures_2026": "https://raw.githubusercontent.com/JeffSackmann/tennis_atp/refs/heads/master/atp_matches_futures_2026.csv",
+              "wta_matches_2026": "https://raw.githubusercontent.com/JeffSackmann/tennis_wta/refs/heads/master/wta_matches_2026.csv",
+              "wta_matches_qual_itf_2026": "https://raw.githubusercontent.com/JeffSackmann/tennis_wta/refs/heads/master/wta_matches_qual_itf_2026.csv",
           }
 
           overall = None
 
           for name, url in FILES.items():
               try:
-                  raw = urllib.request.urlopen(url, timeout=30).read().decode("utf-8", errors="replace")
+                  req = urllib.request.Request(
+                      url,
+                      headers={
+                          "User-Agent": "Mozilla/5.0",
+                          "Accept": "text/csv,text/plain,*/*",
+                      },
+                  )
+                  raw = urllib.request.urlopen(req, timeout=30).read().decode("utf-8", errors="replace")
                   reader = csv.DictReader(StringIO(raw))
 
                   max_d = None
                   rows = 0
-                  last_rows = []
+                  max_examples = []
 
                   for row in reader:
                       d = str(row.get("tourney_date") or "").strip()
@@ -44,19 +51,31 @@ jobs:
                       else:
                           d_norm = d
 
-                      if d_norm:
-                          rows += 1
-                          if max_d is None or d_norm > max_d:
-                              max_d = d_norm
-                          if overall is None or d_norm > overall:
-                              overall = d_norm
+                      if not d_norm:
+                          continue
 
-                      last_rows.append(row)
-                      last_rows = last_rows[-3:]
+                      rows += 1
+
+                      if max_d is None or d_norm > max_d:
+                          max_d = d_norm
+                          max_examples = [row]
+                      elif d_norm == max_d:
+                          max_examples.append(row)
+                          max_examples = max_examples[-5:]
+
+                      if overall is None or d_norm > overall:
+                          overall = d_norm
 
                   print(f"{name}: max_date={max_d} rows={rows}")
-                  for r in last_rows:
-                      print("  last:", r.get("tourney_date"), r.get("tourney_name"), r.get("winner_name"), "-", r.get("loser_name"))
+                  for r in max_examples[-5:]:
+                      print(
+                          "  max-row:",
+                          r.get("tourney_date"),
+                          r.get("tourney_name"),
+                          r.get("winner_name"),
+                          "-",
+                          r.get("loser_name"),
+                      )
                   print()
 
               except Exception as e:
