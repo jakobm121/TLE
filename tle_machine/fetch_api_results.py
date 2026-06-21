@@ -16,8 +16,42 @@ API_BASE_URL = "https://api.api-tennis.com/tennis/"
 RAW_RESULTS_DIR = Path("data/raw/api_tennis/results")
 REPORT_DIR = Path("data/reports/api_tennis")
 FETCH_REPORT_PATH = REPORT_DIR / "fetch_api_results_report.json"
+
 DEFAULT_DAYS_BACK = 21
 DEFAULT_SLEEP_SECONDS = 0.35
+
+FINAL_STATUS_WORDS = {
+    "finished",
+    "finish",
+    "ended",
+    "complete",
+    "completed",
+    "closed",
+    "cancelled",
+    "canceled",
+    "retired",
+    "walkover",
+    "w/o",
+    "wo",
+    "abandoned",
+    "void",
+}
+
+NON_FINAL_STATUS_WORDS = {
+    "not started",
+    "scheduled",
+    "pending",
+    "postponed",
+    "suspended",
+    "interrupted",
+    "live",
+    "in progress",
+    "set",
+    "rain",
+    "delayed",
+    "unknown",
+    "",
+}
 
 
 def now_utc_iso() -> str:
@@ -61,18 +95,32 @@ def read_json(path: Path) -> Any | None:
         return None
 
 
-def result_count(payload: Any) -> int:
+def response_result(payload: Any) -> Any:
     if isinstance(payload, dict) and isinstance(payload.get("response"), dict):
         response = payload["response"]
     else:
         response = payload
-
     if isinstance(response, dict):
-        result = response.get("result")
-        if isinstance(result, list):
-            return len(result)
-        if isinstance(result, dict):
-            return len(result)
+        return response.get("result")
+    return None
+
+
+def result_items(payload: Any) -> list[dict[str, Any]]:
+    result = response_result(payload)
+    if isinstance(result, list):
+        return [x for x in result if isinstance(x, dict)]
+    if isinstance(result, dict):
+        # API-Tennis sometimes returns an object keyed by fixture id.
+        return [x for x in result.values() if isinstance(x, dict)]
+    return []
+
+
+def result_count(payload: Any) -> int:
+    result = response_result(payload)
+    if isinstance(result, list):
+        return len(result)
+    if isinstance(result, dict):
+        return len(result)
     return 0
 
 
@@ -82,9 +130,69 @@ def api_success(response: Any) -> bool:
     success = response.get("success")
     if success in (1, "1", True, "true", "True"):
         return True
-    # Some APIs return an empty but valid list as success=1. If success is absent,
-    # do not guess; keep it as failed so old raw files are protected.
+    # Some APIs return an empty but valid list as success=1.
+    # If success is absent, do not guess; keep it as failed so old raw files are protected.
     return False
+
+
+def normalized_status(match: dict[str, Any]) -> str:
+    fields = [
+        "event_status",
+        "status",
+        "match_status",
+        "fixture_status",
+        "event_status_info",
+        "status_info",
+    ]
+    text = " ".join(str(match.get(k) or "") for k in fields).strip().lower()
+    text = text.replace("_", " ").replace("-", " ")
+    return " ".join(text.split())
+
+
+def has_winner_or_final_score(match: dict[str, Any]) -> bool:
+    winner_fields = [
+        "event_winner",
+        "event_winner_key",
+        "winner",
+        "winner_key",
+        "match_winner",
+        "match_winner_key",
+    ]
+    if any(str(match.get(k) or "").strip() for k in winner_fields):
+        return True
+
+    score = str(match.get("event_final_result") or match.get("final_score") or "").strip()
+    if not score:
+        return False
+    # Avoid treating an empty placeholder as final.
+    return any(ch.isdigit() for ch in score)
+
+
+def match_is_finalized(match: dict[str, Any]) -> bool:
+    status = normalized_status(match)
+
+    if any(word in status for word in NON_FINAL_STATUS_WORDS if word):
+        return False
+
+    if any(word in status for word in FINAL_STATUS_WORDS):
+        return True
+
+    # API-Tennis commonly uses "Finished" plus winner fields, but keep this fallback
+    # for older raw payloads that may have weak status naming.
+    if has_winner_or_final_score(match):
+        return True
+
+    return False
+
+
+def payload_is_finalized(payload: Any) -> bool:
+    matches = result_items(payload)
+
+    # Empty successful historical day is stable enough to skip after the recent window.
+    if not matches:
+        return api_success(payload.get("response") if isinstance(payload, dict) and "response" in payload else payload)
+
+    return all(match_is_finalized(match) for match in matches)
 
 
 def safe_public_url(date_start: str, date_stop: str) -> str:
@@ -110,7 +218,6 @@ def fetch_fixtures(api_key: str, day: date, timeout: int) -> dict[str, Any]:
         }
     )
     url = f"{API_BASE_URL}?{query}"
-
     request = urllib.request.Request(
         url,
         headers={
@@ -150,6 +257,30 @@ def build_raw_payload(day: date, response: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def should_skip_existing_day(
+    *,
+    day: date,
+    today: date,
+    old_payload: Any,
+    out_path: Path,
+    skip_finalized_existing: bool,
+    always_refresh_recent_days: int,
+) -> tuple[bool, str]:
+    if not skip_finalized_existing:
+        return False, "skip_disabled"
+    if not out_path.exists() or old_payload is None:
+        return False, "missing_existing_file"
+
+    recent_cutoff = today - timedelta(days=max(always_refresh_recent_days - 1, 0))
+    if day >= recent_cutoff:
+        return False, "inside_recent_refresh_window"
+
+    if payload_is_finalized(old_payload):
+        return True, "existing_day_finalized"
+
+    return False, "existing_day_not_finalized"
+
+
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description="Fetch raw API-Tennis fixture results into data/raw/api_tennis/results.")
     parser.add_argument("--start-date", type=parse_date, default=None)
@@ -158,6 +289,17 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--sleep-seconds", type=float, default=DEFAULT_SLEEP_SECONDS)
     parser.add_argument("--timeout", type=int, default=30)
     parser.add_argument("--fail-on-any-error", action="store_true")
+    parser.add_argument(
+        "--skip-finalized-existing",
+        action="store_true",
+        help="Skip API call for existing older daily files where all fixtures are final/cancelled/retired/walkover/abandoned.",
+    )
+    parser.add_argument(
+        "--always-refresh-recent-days",
+        type=int,
+        default=2,
+        help="When --skip-finalized-existing is enabled, still always refetch today plus this many recent days.",
+    )
     args = parser.parse_args(argv)
 
     api_key = os.environ.get("API_TENNIS_KEY", "").strip()
@@ -165,6 +307,7 @@ def main(argv: list[str] | None = None) -> None:
         raise RuntimeError("Missing API_TENNIS_KEY environment variable / GitHub Actions secret.")
 
     today = datetime.now(timezone.utc).date()
+
     if args.start_date and args.end_date:
         start_date = args.start_date
         end_date = args.end_date
@@ -188,12 +331,37 @@ def main(argv: list[str] | None = None) -> None:
     day_reports: list[dict[str, Any]] = []
     errors: list[str] = []
 
-    for index, day in enumerate(date_range(start_date, end_date), start=1):
+    days = list(date_range(start_date, end_date))
+    for index, day in enumerate(days, start=1):
         counters["requested_days"] += 1
+
         day_s = day.isoformat()
         out_path = RAW_RESULTS_DIR / f"{day_s}.json"
         old_payload = read_json(out_path)
         old_count = result_count(old_payload)
+
+        skip, skip_reason = should_skip_existing_day(
+            day=day,
+            today=today,
+            old_payload=old_payload,
+            out_path=out_path,
+            skip_finalized_existing=args.skip_finalized_existing,
+            always_refresh_recent_days=args.always_refresh_recent_days,
+        )
+        if skip:
+            counters["skipped_finalized_existing_days"] += 1
+            counters["kept_existing_files"] += 1
+            day_reports.append(
+                {
+                    "date": day_s,
+                    "status": "skipped_finalized_existing",
+                    "reason": skip_reason,
+                    "old_count": old_count,
+                    "downloaded_count": 0,
+                    "path": str(out_path),
+                }
+            )
+            continue
 
         try:
             response = fetch_fixtures(api_key, day, args.timeout)
@@ -209,6 +377,7 @@ def main(argv: list[str] | None = None) -> None:
                     {
                         "date": day_s,
                         "status": "rejected_api_not_success",
+                        "reason": skip_reason,
                         "old_count": old_count,
                         "downloaded_count": downloaded_count,
                         "path": str(out_path),
@@ -225,6 +394,7 @@ def main(argv: list[str] | None = None) -> None:
                     {
                         "date": day_s,
                         "status": "written",
+                        "reason": skip_reason,
                         "old_count": old_count,
                         "downloaded_count": downloaded_count,
                         "path": str(out_path),
@@ -239,6 +409,7 @@ def main(argv: list[str] | None = None) -> None:
                 {
                     "date": day_s,
                     "status": "failed_exception_kept_existing" if out_path.exists() else "failed_exception_no_existing",
+                    "reason": skip_reason,
                     "old_count": old_count,
                     "downloaded_count": 0,
                     "path": str(out_path),
@@ -246,7 +417,7 @@ def main(argv: list[str] | None = None) -> None:
                 }
             )
 
-        if index < counters["requested_days"] or args.sleep_seconds:
+        if index < len(days) and args.sleep_seconds:
             time.sleep(max(args.sleep_seconds, 0.0))
 
     report = {
@@ -256,17 +427,21 @@ def main(argv: list[str] | None = None) -> None:
         "date_start": start_date.isoformat(),
         "date_stop": end_date.isoformat(),
         "raw_results_dir": str(RAW_RESULTS_DIR),
+        "options": {
+            "skip_finalized_existing": bool(args.skip_finalized_existing),
+            "always_refresh_recent_days": args.always_refresh_recent_days,
+        },
         "counters": dict(counters),
         "errors": errors,
         "days": day_reports,
     }
     write_json(FETCH_REPORT_PATH, report)
-
     print(json.dumps(report, indent=2, ensure_ascii=False, sort_keys=True))
 
     if args.fail_on_any_error and errors:
         sys.exit(1)
-    if counters["successful_days"] == 0:
+
+    if counters["successful_days"] == 0 and counters["skipped_finalized_existing_days"] == 0:
         raise RuntimeError("No API days were fetched successfully. Existing raw files were kept where present.")
 
 
