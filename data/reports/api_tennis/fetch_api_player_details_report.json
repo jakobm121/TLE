@@ -1,27 +1,27 @@
 {
   "cache_path": "data/raw/api_tennis/players/api_players.json",
-  "cache_total_after": 5255,
-  "cache_with_full_name_after": 2594,
+  "cache_total_after": 5266,
+  "cache_with_full_name_after": 2602,
   "collect_stats": {
     "files_seen": 1,
-    "raw_fixtures_seen": 191,
-    "singles_fixtures_used": 142,
-    "skipped_doubles_fixtures": 49
+    "raw_fixtures_seen": 105,
+    "singles_fixtures_used": 98,
+    "skipped_doubles_fixtures": 7
   },
   "counters": {
-    "cache_existing_before": 5252,
-    "candidate_player_ids": 281,
-    "fetched": 47,
-    "fetched_missing_full_name": 44,
-    "fetched_with_full_name": 3,
-    "to_fetch": 47
+    "cache_existing_before": 5255,
+    "candidate_player_ids": 194,
+    "fetched": 11,
+    "fetched_missing_full_name": 3,
+    "fetched_with_full_name": 8,
+    "to_fetch": 11
   },
   "date_filter": {
-    "end_date": "2026-06-20",
-    "start_date": "2026-06-20"
+    "end_date": "2026-06-21",
+    "start_date": "2026-06-21"
   },
   "errors": [],
-  "generated_at": "2026-06-20T06:31:07+00:00",
+  "generated_at": "2026-06-21T08:18:33+00:00",
   "method": "get_players",
   "outputs": {
     "cache": "data/raw/api_tennis/players/api_players.json",
@@ -29,209 +29,119 @@
     "report": "data/reports/api_tennis/fetch_api_player_details_report.json"
   },
   "raw_files": {
-    "2026-06-20.json": 191
+    "2026-06-21.json": 105
   },
   "raw_results_dir": "data/raw/api_tennis/results",
   "sample_fetched": [
     {
-      "player_bday": "26.08.1990",
+      "player_bday": "26.01.2000",
+      "player_country": "India",
+      "player_full_name": "Adil Kalyanpur",
+      "player_key": "775",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/775_a-kalyanpur.jpg",
+      "player_name": "A. Kalyanpur",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-21T08:18:27+00:00"
+    },
+    {
+      "player_bday": "18.01.1999",
+      "player_country": "New Zealand",
+      "player_full_name": "Ajeet Rai",
+      "player_key": "3224",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/3224_a-rai.jpg",
+      "player_name": "A. Rai",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-21T08:18:28+00:00"
+    },
+    {
+      "player_bday": "24.04.1987",
+      "player_country": "Colombia",
+      "player_full_name": "Nicolas Barrientos",
+      "player_key": "4694",
+      "player_logo": "",
+      "player_name": "N. Barrientos",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-21T08:18:28+00:00"
+    },
+    {
+      "player_bday": "14.11.2006",
       "player_country": "Romania",
-      "player_full_name": "Irina-Camelia Begu",
-      "player_key": "2828",
-      "player_logo": "https://api.api-tennis.com/logo-tennis/2828_i-begu.jpg",
-      "player_name": "I. Begu",
+      "player_full_name": "Daniel Uta",
+      "player_key": "55174",
+      "player_logo": "",
+      "player_name": "D. Uta",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-20T06:30:42+00:00"
+      "updated_at": "2026-06-21T08:18:29+00:00"
+    },
+    {
+      "player_bday": "25.01.2005",
+      "player_country": "Brazil",
+      "player_full_name": "Lucas Andrade da Silva",
+      "player_key": "57484",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/57484_l-andrade-da-silva.jpg",
+      "player_name": "L. Andrade da Silva",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-21T08:18:29+00:00"
+    },
+    {
+      "player_bday": "17.06.2008",
+      "player_country": "Brazil",
+      "player_full_name": "",
+      "player_key": "67510",
+      "player_logo": "",
+      "player_name": "P. Rodrigues Longobardi",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-21T08:18:30+00:00"
+    },
+    {
+      "player_bday": "21.01.2002",
+      "player_country": "Bulgaria",
+      "player_full_name": "Maximilian Borisov",
+      "player_key": "77365",
+      "player_logo": "",
+      "player_name": "M. Borisov",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-21T08:18:30+00:00"
+    },
+    {
+      "player_bday": "25.03.2003",
+      "player_country": "Brazil",
+      "player_full_name": "Henrique Ortenblad Nogueira",
+      "player_key": "93923",
+      "player_logo": "",
+      "player_name": "N. H. Ortenblad",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-21T08:18:31+00:00"
     },
     {
       "player_bday": "01.01.1970",
-      "player_country": "Europe",
-      "player_full_name": "",
-      "player_key": "7654",
-      "player_logo": "https://api.api-tennis.com/logo-tennis/7654_estonia-w.jpg",
-      "player_name": "Estonia W",
+      "player_country": "Brazil",
+      "player_full_name": "Andre Souza Pinto de Camargo e Silva",
+      "player_key": "96147",
+      "player_logo": "",
+      "player_name": "A. de Camargo Silva",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-20T06:30:43+00:00"
+      "updated_at": "2026-06-21T08:18:31+00:00"
     },
     {
       "player_bday": "",
       "player_country": "",
       "player_full_name": "",
-      "player_key": "11402",
+      "player_key": "104198",
       "player_logo": "",
-      "player_name": "Botswana",
+      "player_name": "A. Ganchev",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-20T06:30:43+00:00"
+      "updated_at": "2026-06-21T08:18:32+00:00"
     },
     {
       "player_bday": "",
       "player_country": "",
       "player_full_name": "",
-      "player_key": "11405",
+      "player_key": "104199",
       "player_logo": "",
-      "player_name": "Angola",
+      "player_name": "A. Tolev",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-20T06:30:44+00:00"
-    },
-    {
-      "player_bday": "",
-      "player_country": "",
-      "player_full_name": "",
-      "player_key": "11410",
-      "player_logo": "https://api.api-tennis.com/logo-tennis/11410_albania.jpg",
-      "player_name": "Albania",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-20T06:30:44+00:00"
-    },
-    {
-      "player_bday": "",
-      "player_country": "",
-      "player_full_name": "",
-      "player_key": "11411",
-      "player_logo": "https://api.api-tennis.com/logo-tennis/11411_andorra.jpg",
-      "player_name": "Andorra",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-20T06:30:45+00:00"
-    },
-    {
-      "player_bday": "",
-      "player_country": "",
-      "player_full_name": "",
-      "player_key": "11415",
-      "player_logo": "https://api.api-tennis.com/logo-tennis/11415_san-marino.jpg",
-      "player_name": "San Marino",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-20T06:30:45+00:00"
-    },
-    {
-      "player_bday": "",
-      "player_country": "",
-      "player_full_name": "",
-      "player_key": "11416",
-      "player_logo": "https://api.api-tennis.com/logo-tennis/11416_armenia.jpg",
-      "player_name": "Armenia",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-20T06:30:46+00:00"
-    },
-    {
-      "player_bday": "",
-      "player_country": "",
-      "player_full_name": "",
-      "player_key": "11433",
-      "player_logo": "https://api.api-tennis.com/logo-tennis/11433_malta.jpg",
-      "player_name": "Malta",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-20T06:30:46+00:00"
-    },
-    {
-      "player_bday": "",
-      "player_country": "",
-      "player_full_name": "",
-      "player_key": "11435",
-      "player_logo": "",
-      "player_name": "Iceland",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-20T06:30:47+00:00"
-    },
-    {
-      "player_bday": "01.01.1970",
-      "player_country": "Africa",
-      "player_full_name": "",
-      "player_key": "11448",
-      "player_logo": "",
-      "player_name": "Mozambique",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-20T06:30:47+00:00"
-    },
-    {
-      "player_bday": "",
-      "player_country": "",
-      "player_full_name": "",
-      "player_key": "11449",
-      "player_logo": "",
-      "player_name": "Ghana",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-20T06:30:48+00:00"
-    },
-    {
-      "player_bday": "01.01.1970",
-      "player_country": "Africa",
-      "player_full_name": "",
-      "player_key": "11450",
-      "player_logo": "",
-      "player_name": "Kenya",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-20T06:30:49+00:00"
-    },
-    {
-      "player_bday": "01.01.1970",
-      "player_country": "Africa",
-      "player_full_name": "",
-      "player_key": "11454",
-      "player_logo": "",
-      "player_name": "Algeria",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-20T06:30:49+00:00"
-    },
-    {
-      "player_bday": "01.01.1970",
-      "player_country": "Asia",
-      "player_full_name": "",
-      "player_key": "13785",
-      "player_logo": "",
-      "player_name": "Chinese Taipei W",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-20T06:30:50+00:00"
-    },
-    {
-      "player_bday": "01.01.1970",
-      "player_country": "Asia",
-      "player_full_name": "",
-      "player_key": "13788",
-      "player_logo": "",
-      "player_name": "Uzbekistan W",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-20T06:30:50+00:00"
-    },
-    {
-      "player_bday": "01.01.1970",
-      "player_country": "Asia",
-      "player_full_name": "",
-      "player_key": "13791",
-      "player_logo": "",
-      "player_name": "Kyrgyzstan W",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-20T06:30:51+00:00"
-    },
-    {
-      "player_bday": "",
-      "player_country": "",
-      "player_full_name": "",
-      "player_key": "13792",
-      "player_logo": "",
-      "player_name": "Hong Kong W",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-20T06:30:51+00:00"
-    },
-    {
-      "player_bday": "01.01.1970",
-      "player_country": "Africa",
-      "player_full_name": "",
-      "player_key": "14732",
-      "player_logo": "",
-      "player_name": "Zimbabwe",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-20T06:30:52+00:00"
-    },
-    {
-      "player_bday": "",
-      "player_country": "",
-      "player_full_name": "",
-      "player_key": "19630",
-      "player_logo": "",
-      "player_name": "Ireland W",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-20T06:30:52+00:00"
+      "updated_at": "2026-06-21T08:18:33+00:00"
     }
   ],
   "source": "api_tennis"
