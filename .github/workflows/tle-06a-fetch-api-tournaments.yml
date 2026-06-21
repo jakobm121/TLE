@@ -1,0 +1,46 @@
+name: TLE 06a Fetch API Tournaments
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-api-tournaments:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout TLE repo
+        uses: actions/checkout@v4
+
+      - name: Pull latest main
+        run: |
+          git pull --ff-only
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch API tournaments metadata
+        env:
+          API_TENNIS_KEY: ${{ secrets.API_TENNIS_KEY }}
+          PYTHONPATH: ${{ github.workspace }}
+        run: |
+          python -m tle_machine.fetch_api_tournaments
+
+      - name: Commit API tournaments metadata
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/raw/api_tennis/metadata/get_tournaments.json || true
+          git add data/reports/api_tennis/fetch_api_tournaments_report.json || true
+
+          if git diff --cached --quiet; then
+            echo "No API tournaments metadata changes to commit."
+          else
+            git commit -m "Fetch API tennis tournaments metadata"
+            git push
+          fi
