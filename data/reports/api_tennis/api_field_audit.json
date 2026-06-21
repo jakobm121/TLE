@@ -1,10 +1,10 @@
 {
   "api_player_cache": {
-    "entries": 5266,
+    "entries": 5267,
     "exists": true,
     "path": "data/raw/api_tennis/players/api_players.json",
-    "with_full_name": 2602,
-    "with_short_name": 5266
+    "with_full_name": 2603,
+    "with_short_name": 5267
   },
   "event_type_counts": {
     "Atp Doubles": 138,
@@ -12,7 +12,7 @@
     "Boys Doubles": 31,
     "Boys Singles": 87,
     "Challenger Men Doubles": 343,
-    "Challenger Men Singles": 1034,
+    "Challenger Men Singles": 1036,
     "Challenger Women Doubles": 76,
     "Challenger Women Singles": 296,
     "Girls Doubles": 31,
@@ -159,44 +159,46 @@
       "skipped": 79
     },
     "2026-06-21.json": {
-      "imported": 5,
-      "raw_fixtures": 105,
-      "skipped": 100
+      "imported": 51,
+      "raw_fixtures": 107,
+      "skipped": 56
     }
   },
   "gender_counts": {
-    "men": 3152,
-    "women": 2535
+    "men": 3180,
+    "women": 2553
   },
   "level_counts": {
-    "atp_wta": 346,
-    "challenger": 828,
+    "atp_wta": 358,
+    "challenger": 835,
     "grand_slam": 340,
-    "itf": 3228,
-    "qualifying": 945
+    "itf": 3247,
+    "qualifying": 953
   },
   "raw_surface_counts": {
-    "<blank>": 271,
-    "api_tournament_metadata:Clay": 3043,
+    "<blank>": 284,
+    "api_tournament_metadata:Clay": 3063,
     "api_tournament_metadata:Clay (Indoor)": 31,
-    "api_tournament_metadata:Grass": 612,
-    "api_tournament_metadata:Hard": 1761,
+    "api_tournament_metadata:Grass": 620,
+    "api_tournament_metadata:Hard": 1766,
     "api_tournament_metadata:hard": 31
   },
   "status_counts": {
-    "<blank>": 95,
+    "<blank>": 43,
     "Cancelled": 144,
-    "Finished": 7937,
+    "Finished": 7979,
     "Interrupted": 1,
-    "Retired": 206,
-    "Set 1": 11,
+    "Retired": 211,
+    "Set 1": 10,
+    "Set 2": 5,
+    "Set 3": 3,
     "Walk Over": 145
   },
   "surface_counts": {
-    "clay": 3074,
-    "grass": 612,
-    "hard": 1792,
-    "unknown": 209
+    "clay": 3094,
+    "grass": 620,
+    "hard": 1797,
+    "unknown": 222
   },
   "tournament_surface_map": {
     "exists": true,
