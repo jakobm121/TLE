@@ -1,39 +1,32 @@
 {
   "active_predictions_total": 2,
   "by_level_scan": {
-    "atp_wta": 8,
-    "challenger": 16
+    "atp_wta": 32,
+    "challenger": 38
   },
   "by_qualification_scan": {
-    "False": 6,
-    "True": 18
+    "False": 54,
+    "True": 16
   },
   "by_surface_source_scan": {
-    "missing": 20,
-    "tournament_surface_map": 4
+    "missing": 70
   },
   "counters": {
-    "fixture_skip_doubles_or_team": 4,
-    "fixture_skip_live": 17,
-    "fixture_skip_starts_too_soon": 10,
-    "fixture_skip_status_cancelled": 3,
-    "fixture_skip_status_finished": 48,
-    "fixture_skip_status_retired": 5,
-    "fixtures_scanned": 20,
-    "fixtures_with_diagnostics": 12,
-    "fixtures_with_output": 1
+    "fixture_skip_doubles_or_team": 19,
+    "fixture_skip_status_cancelled": 1,
+    "fixtures_scanned": 133,
+    "fixtures_with_diagnostics": 35
   },
-  "date_start": "2026-06-21",
+  "date_start": "2026-06-22",
   "days_ahead": 1,
   "decision_counts_scan": {
-    "NO_BET": 23,
-    "STRONG_BET": 1
+    "NO_BET": 70
   },
-  "fixtures_total": 107,
-  "generated_at": "2026-06-21T13:38:43+00:00",
+  "fixtures_total": 153,
+  "generated_at": "2026-06-21T22:33:56+00:00",
   "min_start_minutes": 30,
   "new_added_to_predictions": 0,
-  "new_candidates": 1,
+  "new_candidates": 0,
   "notes": [
     "This is standalone: it scans all eligible API fixtures and odds, not only tennis value picks.",
     "Odds are average clean odds after removing bookmaker outliers.",
@@ -57,15 +50,12 @@
     "unresolved_surface_json": "data/reports/elo_standalone/unresolved_surface_report.json"
   },
   "reason_counts_scan": {
-    "elo_edge_too_low": 1,
-    "elo_prob_too_low": 2,
-    "odds_outside_range": 7,
-    "pass_strong_edge": 1,
-    "unknown_surface": 9,
-    "unmapped_player": 4
+    "odds_outside_range": 16,
+    "unknown_surface": 46,
+    "unmapped_player": 8
   },
-  "scan_rows": 24,
+  "scan_rows": 70,
   "status": "ok",
   "surface_map_entries": 23,
-  "unresolved_surface_count": 4
+  "unresolved_surface_count": 8
 }

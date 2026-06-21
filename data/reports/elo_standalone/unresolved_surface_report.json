@@ -1,25 +1,58 @@
 {
-  "count": 4,
-  "generated_at": "2026-06-21T13:38:43+00:00",
+  "count": 8,
+  "generated_at": "2026-06-21T22:33:56+00:00",
   "items": [
     {
-      "context_text": "wta singles eastbourne wta eastbourne   final 1358",
+      "context_text": "wta singles bad homburg wta bad homburg   1/16 finals 4228",
       "gender": "women",
       "level": "atp_wta",
       "matches": [
-        "P. Marcinko - D. Snigur"
+        "A. Eala - E. Mertens",
+        "N. Osaka - M. Frech",
+        "C. Tauson - D. Shnaider"
+      ],
+      "raw_event_type_type": "Wta Singles",
+      "raw_tournament_name": "Bad Homburg",
+      "raw_tournament_round": "WTA Bad Homburg - 1/16-finals",
+      "suggested_map_key": "wta singles bad homburg wta bad homburg 1/16 finals 4228"
+    },
+    {
+      "context_text": "atp singles eastbourne atp eastbourne   1/16 finals 2052",
+      "gender": "men",
+      "level": "atp_wta",
+      "matches": [
+        "Z. Bergs - J. Munar",
+        "G. Diallo - T. Atmane",
+        "J. Pinnington Jones - C. Ugo Carabelli"
+      ],
+      "raw_event_type_type": "Atp Singles",
+      "raw_tournament_name": "Eastbourne",
+      "raw_tournament_round": "ATP Eastbourne - 1/16-finals",
+      "suggested_map_key": "atp singles eastbourne atp eastbourne 1/16 finals 2052"
+    },
+    {
+      "context_text": "wta singles eastbourne wta eastbourne   1/16 finals 1358",
+      "gender": "women",
+      "level": "atp_wta",
+      "matches": [
+        "J. Ostapenko - F. Jones",
+        "H. Klugman - T. Valentova",
+        "M. Kessler - D. Kasatkina"
       ],
       "raw_event_type_type": "Wta Singles",
       "raw_tournament_name": "Eastbourne",
-      "raw_tournament_round": "WTA Eastbourne - Final",
-      "suggested_map_key": "wta singles eastbourne wta eastbourne final 1358"
+      "raw_tournament_round": "WTA Eastbourne - 1/16-finals",
+      "suggested_map_key": "wta singles eastbourne wta eastbourne 1/16 finals 1358"
     },
     {
       "context_text": "atp singles mallorca atp mallorca   1/16 finals 3681",
       "gender": "men",
       "level": "atp_wta",
       "matches": [
-        "Y. Hanfmann - D. Vallejo"
+        "J-L. Struff - M. Landaluce",
+        "E. Quinn - V. Royer",
+        "C. Moutet - M. Fucsovics",
+        "M. Kecmanovic - H. Medjedovic"
       ],
       "raw_event_type_type": "Atp Singles",
       "raw_tournament_name": "Mallorca",
@@ -27,30 +60,61 @@
       "suggested_map_key": "atp singles mallorca atp mallorca 1/16 finals 3681"
     },
     {
-      "context_text": "challenger men singles piracicaba piracicaba   semi finals 8499",
+      "context_text": "challenger men singles piracicaba piracicaba   1/16 finals 8499",
       "gender": "men",
       "level": "challenger",
       "matches": [
-        "A. Hayen - T. Martinez",
-        "V. Basel - S. Price",
-        "S. Goity Zapico - N. Oliveira"
+        "H. Casanova - E. Ribeiro",
+        "J. B. Torres - A. Hernandez"
       ],
       "raw_event_type_type": "Challenger Men Singles",
       "raw_tournament_name": "Piracicaba",
-      "raw_tournament_round": "Piracicaba - Semi-finals",
-      "suggested_map_key": "challenger men singles piracicaba piracicaba semi finals 8499"
+      "raw_tournament_round": "Piracicaba - 1/16-finals",
+      "suggested_map_key": "challenger men singles piracicaba piracicaba 1/16 finals 8499"
     },
     {
-      "context_text": "challenger men singles targu mures targu mures   semi finals 12993",
+      "context_text": "challenger men singles plovdiv (bulgaria)   qualification plovdiv   1/16 finals 14005",
       "gender": "men",
       "level": "challenger",
       "matches": [
-        "N. D. Ionel - D. Yevseyev"
+        "T. Compagnucci - M. Mrva",
+        "M. Martineau - I. Radulov",
+        "Y. Milev - O. Milic"
+      ],
+      "raw_event_type_type": "Challenger Men Singles",
+      "raw_tournament_name": "Plovdiv (Bulgaria) - Qualification",
+      "raw_tournament_round": "Plovdiv - 1/16-finals",
+      "suggested_map_key": "challenger men singles plovdiv (bulgaria) qualification plovdiv 1/16 finals 14005"
+    },
+    {
+      "context_text": "challenger men singles plovdiv (bulgaria)   qualification plovdiv   final 14005",
+      "gender": "men",
+      "level": "challenger",
+      "matches": [
+        "I. Lopez Morillo - D. N. Cazacu",
+        "N. Tajima - D. Dinev"
+      ],
+      "raw_event_type_type": "Challenger Men Singles",
+      "raw_tournament_name": "Plovdiv (Bulgaria) - Qualification",
+      "raw_tournament_round": "Plovdiv - Final",
+      "suggested_map_key": "challenger men singles plovdiv (bulgaria) qualification plovdiv final 14005"
+    },
+    {
+      "context_text": "challenger men singles targu mures targu mures   1/16 finals 12993",
+      "gender": "men",
+      "level": "challenger",
+      "matches": [
+        "L. Castelnuovo - F. Agamenone",
+        "C. Cretu - A. Santillan",
+        "M. Damas - B. Hassan",
+        "S. Gueymard Wayenburg - G. Ghetu",
+        "I. Simakin - M. Topo",
+        "M. Tobon - M. Krumich"
       ],
       "raw_event_type_type": "Challenger Men Singles",
       "raw_tournament_name": "Targu Mures",
-      "raw_tournament_round": "Targu Mures - Semi-finals",
-      "suggested_map_key": "challenger men singles targu mures targu mures semi finals 12993"
+      "raw_tournament_round": "Targu Mures - 1/16-finals",
+      "suggested_map_key": "challenger men singles targu mures targu mures 1/16 finals 12993"
     }
   ],
   "note": "Add suggested_map_key: hard/clay/grass/carpet to data/metadata/tournament_surface_map.json if these are real ATP/WTA/Challenger/Grand Slam events."
