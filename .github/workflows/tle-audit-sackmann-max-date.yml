@@ -1,0 +1,96 @@
+name: TLE Audit Sackmann Max Date
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit-sackmann-max-date:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout TLE repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Audit Sackmann source max date
+        run: |
+          python - <<'PY'
+          import csv
+          import gzip
+          from pathlib import Path
+          from collections import defaultdict
+
+          candidates = []
+          for p in Path("data/source").rglob("*sackmann*"):
+              if p.suffix in {".gz", ".csv"} or str(p).endswith(".csv.gz"):
+                  candidates.append(p)
+
+          for p in Path("data").rglob("*.csv.gz"):
+              if "sackmann" in str(p).lower() and p not in candidates:
+                  candidates.append(p)
+
+          overall_max = None
+          by_file = []
+          by_year = defaultdict(int)
+
+          for p in sorted(candidates):
+              try:
+                  opener = gzip.open if str(p).endswith(".gz") else open
+                  with opener(p, "rt", encoding="utf-8", errors="replace", newline="") as f:
+                      r = csv.DictReader(f)
+                      if not r.fieldnames:
+                          continue
+
+                      date_col = None
+                      for col in ["tourney_date", "date"]:
+                          if col in r.fieldnames:
+                              date_col = col
+                              break
+                      if not date_col:
+                          continue
+
+                      file_max = None
+                      rows = 0
+
+                      for row in r:
+                          d = str(row.get(date_col) or "").strip()
+                          if not d:
+                              continue
+
+                          if len(d) == 8 and d.isdigit():
+                              norm = f"{d[:4]}-{d[4:6]}-{d[6:8]}"
+                          else:
+                              norm = d
+
+                          rows += 1
+                          by_year[norm[:4]] += 1
+
+                          if file_max is None or norm > file_max:
+                              file_max = norm
+                          if overall_max is None or norm > overall_max:
+                              overall_max = norm
+
+                      if file_max:
+                          by_file.append((file_max, rows, str(p)))
+
+              except Exception as e:
+                  print("SKIP", p, e)
+
+          print("SACKMANN_SOURCE_MAX_DATE:", overall_max)
+          print()
+          print("TOP FILES BY MAX DATE:")
+          for mx, rows, path in sorted(by_file, reverse=True)[:20]:
+              print(f"{mx}  rows={rows:<7}  {path}")
+
+          print()
+          print("ROWS BY YEAR:")
+          for y in sorted(by_year):
+              print(y, by_year[y])
+          PY
