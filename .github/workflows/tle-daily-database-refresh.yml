@@ -1,0 +1,153 @@
+name: TLE Daily Database Refresh
+
+on:
+  workflow_dispatch:
+    inputs:
+      result_days:
+        description: "How many days back to check API results"
+        required: false
+        default: "14"
+      player_detail_days:
+        description: "How many recent days to scan for API player details"
+        required: false
+        default: "2"
+  schedule:
+    # 04:30 UTC = 06:30 Europe/Ljubljana poleti, 05:30 pozimi
+    - cron: "30 4 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tle-daily-database-refresh
+  cancel-in-progress: false
+
+jobs:
+  daily-database-refresh:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout TLE repo
+        uses: actions/checkout@v4
+
+      - name: Pull latest main
+        run: |
+          git pull --ff-only
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Resolve windows
+        id: window
+        run: |
+          RESULT_DAYS="${{ github.event.inputs.result_days }}"
+          if [ -z "$RESULT_DAYS" ]; then
+            RESULT_DAYS="14"
+          fi
+
+          PLAYER_DETAIL_DAYS="${{ github.event.inputs.player_detail_days }}"
+          if [ -z "$PLAYER_DETAIL_DAYS" ]; then
+            PLAYER_DETAIL_DAYS="2"
+          fi
+          if [ "$PLAYER_DETAIL_DAYS" -lt 1 ]; then
+            PLAYER_DETAIL_DAYS="1"
+          fi
+
+          TODAY=$(date -u +%F)
+          OFFSET=$((PLAYER_DETAIL_DAYS - 1))
+          PLAYER_START_DATE=$(date -u -d "$TODAY - ${OFFSET} days" +%F)
+
+          echo "result_days=$RESULT_DAYS" >> "$GITHUB_OUTPUT"
+          echo "player_detail_days=$PLAYER_DETAIL_DAYS" >> "$GITHUB_OUTPUT"
+          echo "player_start_date=$PLAYER_START_DATE" >> "$GITHUB_OUTPUT"
+          echo "player_end_date=$TODAY" >> "$GITHUB_OUTPUT"
+
+      - name: 06 Fetch API results
+        env:
+          API_TENNIS_KEY: ${{ secrets.API_TENNIS_KEY }}
+          PYTHONPATH: ${{ github.workspace }}
+        run: |
+          python -m tle_machine.fetch_api_results \
+            --days "${{ steps.window.outputs.result_days }}" \
+            --skip-finalized-existing \
+            --always-refresh-recent-days 2
+
+      - name: 06b Fetch API player details
+        env:
+          API_TENNIS_KEY: ${{ secrets.API_TENNIS_KEY }}
+          PYTHONPATH: ${{ github.workspace }}
+        run: |
+          python -m tle_machine.fetch_api_player_details \
+            --start-date "${{ steps.window.outputs.player_start_date }}" \
+            --end-date "${{ steps.window.outputs.player_end_date }}" \
+            --timeout 10 \
+            --sleep-seconds 0.05
+
+      - name: 07 Import API results
+        env:
+          PYTHONPATH: ${{ github.workspace }}
+        run: |
+          python -m tle_machine.import_api_results
+
+      - name: 09 Build API player mapping
+        env:
+          PYTHONPATH: ${{ github.workspace }}
+        run: |
+          python -m tle_machine.build_api_player_mapping \
+            --api-player-cache data/raw/api_tennis/players/api_players.json
+
+      - name: 10b Audit today player mapping
+        env:
+          PYTHONPATH: ${{ github.workspace }}
+        run: |
+          python -m tle_machine.audit_today_player_mapping
+
+      - name: 11 Merge canonical with API
+        env:
+          PYTHONPATH: ${{ github.workspace }}
+        run: |
+          python -m tle_machine.merge_canonical_with_api
+
+      - name: 04 Build TLE ratings
+        env:
+          PYTHONPATH: ${{ github.workspace }}
+        run: |
+          python -m tle_machine.build_ratings
+
+      - name: Commit daily database refresh
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data/raw/api_tennis/results/*.json || true
+          git add data/raw/api_tennis/players/api_players.json || true
+
+          git add data/source/api_tennis/*.jsonl.gz || true
+          git add data/source/api_tennis/manifest.json || true
+
+          git add data/metadata/api_tennis/player_mapping.json || true
+          git add data/metadata/api_tennis/player_mapping_overrides.json || true
+
+          git add data/canonical/manifest.json || true
+          git add data/canonical/tle_matches_manifest.json || true
+          git add data/canonical/tle_matches_*.jsonl.gz || true
+
+          git add data/ratings || true
+
+          git add data/reports/api_tennis || true
+          git add data/reports/canonical || true
+          git add data/reports/ratings || true
+
+          if git diff --cached --quiet; then
+            echo "No daily database refresh changes to commit."
+          else
+            git commit -m "Daily TLE database refresh"
+            git push
+          fi
