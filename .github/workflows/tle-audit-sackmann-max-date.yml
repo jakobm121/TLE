@@ -1,4 +1,4 @@
-name: TLE Audit Sackmann Max Date
+name: TLE Audit Max Match Dates
 
 on:
   workflow_dispatch:
@@ -7,90 +7,125 @@ permissions:
   contents: read
 
 jobs:
-  audit-sackmann-max-date:
+  audit-max-match-dates:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout TLE repo
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Audit Sackmann source max date
+      - name: Audit max dates in all data files
         run: |
           python - <<'PY'
           import csv
           import gzip
+          import json
           from pathlib import Path
           from collections import defaultdict
 
-          candidates = []
-          for p in Path("data/source").rglob("*sackmann*"):
-              if p.suffix in {".gz", ".csv"} or str(p).endswith(".csv.gz"):
-                  candidates.append(p)
+          DATE_KEYS = [
+              "tourney_date", "date", "match_date", "event_date",
+              "start_date", "fixture_date"
+          ]
 
-          for p in Path("data").rglob("*.csv.gz"):
-              if "sackmann" in str(p).lower() and p not in candidates:
-                  candidates.append(p)
+          def norm_date(d):
+              d = str(d or "").strip()
+              if not d:
+                  return ""
+              if len(d) == 8 and d.isdigit():
+                  return f"{d[:4]}-{d[4:6]}-{d[6:8]}"
+              if len(d) >= 10 and d[4:5] == "-" and d[7:8] == "-":
+                  return d[:10]
+              return ""
 
-          overall_max = None
+          def get_date_from_row(row):
+              if not isinstance(row, dict):
+                  return ""
+              for k in DATE_KEYS:
+                  d = norm_date(row.get(k))
+                  if d:
+                      return d
+              return ""
+
           by_file = []
-          by_year = defaultdict(int)
+          by_source = defaultdict(lambda: {"max_date": "", "rows": 0, "files": set()})
+          overall = ""
 
-          for p in sorted(candidates):
+          files = []
+          for pattern in ["*.csv", "*.csv.gz", "*.jsonl.gz"]:
+              files.extend(Path("data").rglob(pattern))
+
+          for p in sorted(files):
+              max_d = ""
+              rows = 0
+              detected_source = "unknown"
+
               try:
-                  opener = gzip.open if str(p).endswith(".gz") else open
-                  with opener(p, "rt", encoding="utf-8", errors="replace", newline="") as f:
-                      r = csv.DictReader(f)
-                      if not r.fieldnames:
-                          continue
-
-                      date_col = None
-                      for col in ["tourney_date", "date"]:
-                          if col in r.fieldnames:
-                              date_col = col
-                              break
-                      if not date_col:
-                          continue
-
-                      file_max = None
-                      rows = 0
-
-                      for row in r:
-                          d = str(row.get(date_col) or "").strip()
-                          if not d:
+                  if str(p).endswith(".csv") or str(p).endswith(".csv.gz"):
+                      opener = gzip.open if str(p).endswith(".gz") else open
+                      with opener(p, "rt", encoding="utf-8", errors="replace", newline="") as f:
+                          r = csv.DictReader(f)
+                          if not r.fieldnames:
                               continue
+                          for row in r:
+                              d = get_date_from_row(row)
+                              if not d:
+                                  continue
+                              rows += 1
+                              if d > max_d:
+                                  max_d = d
 
-                          if len(d) == 8 and d.isdigit():
-                              norm = f"{d[:4]}-{d[4:6]}-{d[6:8]}"
-                          else:
-                              norm = d
+                              src_text = " ".join(str(row.get(k) or "") for k in ["source", "data_source", "provider", "source_system"]).lower()
+                              if "sackmann" in src_text:
+                                  detected_source = "sackmann"
+                              elif "api" in src_text:
+                                  detected_source = "api"
 
-                          rows += 1
-                          by_year[norm[:4]] += 1
+                  elif str(p).endswith(".jsonl.gz"):
+                      with gzip.open(p, "rt", encoding="utf-8", errors="replace") as f:
+                          for line in f:
+                              if not line.strip():
+                                  continue
+                              try:
+                                  row = json.loads(line)
+                              except Exception:
+                                  continue
 
-                          if file_max is None or norm > file_max:
-                              file_max = norm
-                          if overall_max is None or norm > overall_max:
-                              overall_max = norm
+                              d = get_date_from_row(row)
+                              if not d:
+                                  continue
+                              rows += 1
+                              if d > max_d:
+                                  max_d = d
 
-                      if file_max:
-                          by_file.append((file_max, rows, str(p)))
+                              src_text = " ".join(str(row.get(k) or "") for k in ["source", "data_source", "provider", "source_system"]).lower()
+                              path_text = str(p).lower()
+                              if "sackmann" in src_text or "sackmann" in path_text:
+                                  detected_source = "sackmann"
+                              elif "api" in src_text or "api" in path_text:
+                                  detected_source = "api"
+
+                  if max_d:
+                      by_file.append((max_d, rows, detected_source, str(p)))
+                      if max_d > overall:
+                          overall = max_d
+                      b = by_source[detected_source]
+                      b["rows"] += rows
+                      b["files"].add(str(p))
+                      if max_d > b["max_date"]:
+                          b["max_date"] = max_d
 
               except Exception as e:
                   print("SKIP", p, e)
 
-          print("SACKMANN_SOURCE_MAX_DATE:", overall_max)
+          print("OVERALL_MAX_DATE:", overall)
           print()
-          print("TOP FILES BY MAX DATE:")
-          for mx, rows, path in sorted(by_file, reverse=True)[:20]:
-              print(f"{mx}  rows={rows:<7}  {path}")
+          print("MAX BY DETECTED SOURCE:")
+          for src, info in sorted(by_source.items(), key=lambda x: x[1]["max_date"], reverse=True):
+              print(src, info["max_date"], "rows=", info["rows"], "files=", len(info["files"]))
 
           print()
-          print("ROWS BY YEAR:")
-          for y in sorted(by_year):
-              print(y, by_year[y])
+          print("TOP FILES BY MAX DATE:")
+          for mx, rows, src, path in sorted(by_file, reverse=True)[:80]:
+              print(f"{mx}  rows={rows:<8} source={src:<9} {path}")
           PY
