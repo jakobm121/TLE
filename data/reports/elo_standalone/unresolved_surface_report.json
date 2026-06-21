@@ -1,43 +1,33 @@
 {
   "count": 2,
-  "generated_at": "2026-06-20T06:40:39+00:00",
+  "generated_at": "2026-06-21T08:41:39+00:00",
   "items": [
     {
-      "context_text": "atp singles eastbourne 2052",
-      "gender": "men",
+      "context_text": "wta singles bad homburg wta bad homburg   1/16 finals 4228",
+      "gender": "women",
       "level": "atp_wta",
       "matches": [
-        "M. Arnaldi - A. Gray",
-        "T. Samuel - Q. Halys",
-        "E. Nava - H. Stewart",
-        "H. Wendelken - A. Vukic",
-        "J. Duckworth - G. Hussey",
-        "F. Gill - M. Trungelliti",
-        "J. Choinski - Y. Wu",
-        "M. Giron - C. Broom"
+        "K. Boulter - L. Fernandez",
+        "N. Osaka - M. Frech"
       ],
-      "raw_event_type_type": "Atp Singles",
-      "raw_tournament_name": "Eastbourne",
-      "raw_tournament_round": "",
-      "suggested_map_key": "atp singles eastbourne 2052"
+      "raw_event_type_type": "Wta Singles",
+      "raw_tournament_name": "Bad Homburg",
+      "raw_tournament_round": "WTA Bad Homburg - 1/16-finals",
+      "suggested_map_key": "wta singles bad homburg wta bad homburg 1/16 finals 4228"
     },
     {
-      "context_text": "atp singles mallorca 3681",
+      "context_text": "atp singles mallorca atp mallorca   1/16 finals 3681",
       "gender": "men",
       "level": "atp_wta",
       "matches": [
-        "A. Ghibaudo - P. Bar Biryukov",
-        "A. Molcan - Z. Sesko",
-        "F. Romano - M. Cassone",
-        "M. Kukushkin - D. Dzumhur",
-        "A. Shevchenko - A. Shelbayh",
-        "A. Walton - F. Bondioli",
-        "Z. Svajda - M. Huesler"
+        "M. Navone - L. Sonego",
+        "Y. Hanfmann - D. Vallejo",
+        "N. Borges - A. Mannarino"
       ],
       "raw_event_type_type": "Atp Singles",
       "raw_tournament_name": "Mallorca",
-      "raw_tournament_round": "",
-      "suggested_map_key": "atp singles mallorca 3681"
+      "raw_tournament_round": "ATP Mallorca - 1/16-finals",
+      "suggested_map_key": "atp singles mallorca atp mallorca 1/16 finals 3681"
     }
   ],
   "note": "Add suggested_map_key: hard/clay/grass/carpet to data/metadata/tournament_surface_map.json if these are real ATP/WTA/Challenger/Grand Slam events."
