@@ -31,14 +31,13 @@
     "skipped_not_finished": 93,
     "skipped_unknown_level": 66,
     "skipped_unknown_surface_not_allowed": 62,
-    "surface_clay": 3119,
+    "surface_clay": 3286,
     "surface_grass": 631,
-    "surface_hard": 1799,
-    "surface_unknown": 229,
-    "tournament_surface_map_entries": 9986,
-    "tournament_surface_map_rows": 10047
+    "surface_hard": 1861,
+    "tournament_surface_map_entries": 10003,
+    "tournament_surface_map_rows": 10064
   },
-  "generated_at": "2026-06-21T22:22:40+00:00",
+  "generated_at": "2026-06-21T23:22:26+00:00",
   "matches": 5778,
   "outputs": {
     "duplicates_csv": "data/reports/api_tennis/duplicate_api_matches.csv",
@@ -51,7 +50,7 @@
   "source": "api_tennis",
   "tournaments_metadata": {
     "exists": true,
-    "mapped_tournaments": 9986,
+    "mapped_tournaments": 10003,
     "missing_key": 0,
     "path": "data/raw/api_tennis/metadata/get_tournaments.json",
     "raw_surface_field_counts": {
@@ -61,26 +60,26 @@
       "- Qualification": 1,
       "- Relegation": 1,
       "<blank>": 44,
-      "Clay": 4309,
+      "Clay": 4321,
       "Clay (Indoor)": 43,
       "Grass": 147,
       "Grass (Indoor)": 2,
-      "Hard": 4831,
+      "Hard": 4836,
       "Hard (Indoor)": 635,
       "clay": 6,
       "hard": 13
     },
-    "rows": 10047,
+    "rows": 10064,
     "surface_counts": {
-      "clay": 4358,
+      "clay": 4370,
       "grass": 149,
-      "hard": 5479,
+      "hard": 5484,
       "unknown": 61
     }
   },
   "year_files": [
     {
-      "created_at": "2026-06-21T22:22:40+00:00",
+      "created_at": "2026-06-21T23:22:26+00:00",
       "matches": 5778,
       "path": "data/source/api_tennis/tle_api_matches_2026.jsonl.gz",
       "year": 2026

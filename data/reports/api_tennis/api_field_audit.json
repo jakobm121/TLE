@@ -176,11 +176,11 @@
     "qualifying": 959
   },
   "raw_surface_counts": {
-    "<blank>": 291,
-    "api_tournament_metadata:Clay": 3088,
+    "<blank>": 62,
+    "api_tournament_metadata:Clay": 3255,
     "api_tournament_metadata:Clay (Indoor)": 31,
     "api_tournament_metadata:Grass": 631,
-    "api_tournament_metadata:Hard": 1768,
+    "api_tournament_metadata:Hard": 1830,
     "api_tournament_metadata:hard": 31
   },
   "status_counts": {
@@ -192,14 +192,13 @@
     "Walk Over": 145
   },
   "surface_counts": {
-    "clay": 3119,
+    "clay": 3286,
     "grass": 631,
-    "hard": 1799,
-    "unknown": 229
+    "hard": 1861
   },
   "tournament_surface_map": {
     "exists": true,
-    "mapped_tournaments": 9986,
+    "mapped_tournaments": 10003,
     "missing_key": 0,
     "path": "data/raw/api_tennis/metadata/get_tournaments.json",
     "raw_surface_field_counts": {
@@ -209,20 +208,20 @@
       "- Qualification": 1,
       "- Relegation": 1,
       "<blank>": 44,
-      "Clay": 4309,
+      "Clay": 4321,
       "Clay (Indoor)": 43,
       "Grass": 147,
       "Grass (Indoor)": 2,
-      "Hard": 4831,
+      "Hard": 4836,
       "Hard (Indoor)": 635,
       "clay": 6,
       "hard": 13
     },
-    "rows": 10047,
+    "rows": 10064,
     "surface_counts": {
-      "clay": 4358,
+      "clay": 4370,
       "grass": 149,
-      "hard": 5479,
+      "hard": 5484,
       "unknown": 61
     }
   }
