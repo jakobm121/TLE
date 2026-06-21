@@ -1,16 +1,18 @@
 # Standalone Elo Results
 
-- Settled: 35
-- W-L: 18-17
-- Hit rate: 51.43%
-- Total stake: 40.75
-- Total profit: -1.13
-- ROI: -2.76%
+- Settled: 37
+- W-L: 20-17
+- Hit rate: 54.05%
+- Total stake: 43.25
+- Total profit: 3.19
+- ROI: 7.37%
 
 ## Settled picks
 
 | Date | Time | Result | W-L | ROI | Pick | Opponent | Odds | Stake | Profit | Total Profit | Level | Surface | TLE Prob | TLE Edge | Conf | Score |
 |---|---:|---|---:|---:|---|---|---:|---:|---:|---:|---|---|---:|---:|---|---|
+| 2026-06-21 | 17:30 | win | 20-17 | 7.37% | M. Sherif | Xiy. Wang | 2.63 | 1.25 | 2.04 | 3.19 | challenger | clay | 55.03% | 17.05% | strong | 0 - 2 |
+| 2026-06-21 | 12:00 | win | 19-17 | 2.73% | D. Egorova | N. Vargova | 2.82 | 1.25 | 2.27 | 1.15 | itf | unknown | 51.01% | 15.52% | strong | 2 - 1 |
 | 2026-06-20 | 14:30 | loss | 18-17 | -2.76% | M. Maquet | A. Stoyanov | 2.11 | 1.25 | -1.25 | -1.13 | itf | unknown | 65.19% | 17.86% | strong | 0 - 2 |
 | 2026-06-20 | 14:00 | win | 18-16 | 0.31% | G. Heide | F. Diaz Acosta | 2.23 | 1.00 | 1.23 | 0.12 | challenger | clay | 51.40% | 6.46% | normal | 0 - 2 |
 | 2026-06-20 | 14:00 | win | 17-16 | -2.86% | F. Cerundolo | B. Nakashima | 2.35 | 1.25 | 1.69 | -1.10 | atp_wta | grass | 53.18% | 10.72% | strong | 1 - 2 |
