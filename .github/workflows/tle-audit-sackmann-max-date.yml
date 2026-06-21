@@ -7,14 +7,21 @@ permissions:
   contents: read
 
 jobs:
-  audit-online-sackmann:
+  audit:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Clone online Sackmann repos
+      - name: Download Sackmann repos as ZIP
         run: |
-          git clone --depth 1 https://github.com/JeffSackmann/tennis_atp.git /tmp/tennis_atp
-          git clone --depth 1 https://github.com/JeffSackmann/tennis_wta.git /tmp/tennis_wta
+          curl -L -o /tmp/tennis_atp.zip https://github.com/JeffSackmann/tennis_atp/archive/refs/heads/master.zip
+          curl -L -o /tmp/tennis_wta.zip https://github.com/JeffSackmann/tennis_wta/archive/refs/heads/master.zip
+
+          unzip -q /tmp/tennis_atp.zip -d /tmp
+          unzip -q /tmp/tennis_wta.zip -d /tmp
+
+          ls -la /tmp
+          ls -la /tmp/tennis_atp-master | head
+          ls -la /tmp/tennis_wta-master | head
 
       - name: Audit online Sackmann max dates
         run: |
@@ -23,19 +30,17 @@ jobs:
           from pathlib import Path
 
           FILES = {
-              "atp_matches_2026": Path("/tmp/tennis_atp/atp_matches_2026.csv"),
-              "atp_matches_qual_chall_2026": Path("/tmp/tennis_atp/atp_matches_qual_chall_2026.csv"),
-              "atp_matches_futures_2026": Path("/tmp/tennis_atp/atp_matches_futures_2026.csv"),
-              "wta_matches_2026": Path("/tmp/tennis_wta/wta_matches_2026.csv"),
-              "wta_matches_qual_itf_2026": Path("/tmp/tennis_wta/wta_matches_qual_itf_2026.csv"),
+              "atp_matches_2026": Path("/tmp/tennis_atp-master/atp_matches_2026.csv"),
+              "atp_matches_qual_chall_2026": Path("/tmp/tennis_atp-master/atp_matches_qual_chall_2026.csv"),
+              "atp_matches_futures_2026": Path("/tmp/tennis_atp-master/atp_matches_futures_2026.csv"),
+              "wta_matches_2026": Path("/tmp/tennis_wta-master/wta_matches_2026.csv"),
+              "wta_matches_qual_itf_2026": Path("/tmp/tennis_wta-master/wta_matches_qual_itf_2026.csv"),
           }
 
           def norm_date(d):
               d = str(d or "").strip()
               if len(d) == 8 and d.isdigit():
                   return f"{d[:4]}-{d[4:6]}-{d[6:8]}"
-              if len(d) >= 10 and d[4:5] == "-" and d[7:8] == "-":
-                  return d[:10]
               return ""
 
           overall = None
@@ -47,7 +52,7 @@ jobs:
 
               max_d = None
               rows = 0
-              max_rows = []
+              examples = []
 
               with path.open("r", encoding="utf-8", errors="replace", newline="") as f:
                   reader = csv.DictReader(f)
@@ -57,27 +62,19 @@ jobs:
                           continue
 
                       rows += 1
-
                       if max_d is None or d > max_d:
                           max_d = d
-                          max_rows = [row]
+                          examples = [row]
                       elif d == max_d:
-                          max_rows.append(row)
-                          max_rows = max_rows[-5:]
+                          examples.append(row)
+                          examples = examples[-5:]
 
                       if overall is None or d > overall:
                           overall = d
 
               print(f"{name}: max_date={max_d} rows={rows}")
-              for r in max_rows[-5:]:
-                  print(
-                      "  max-row:",
-                      r.get("tourney_date"),
-                      r.get("tourney_name"),
-                      r.get("winner_name"),
-                      "-",
-                      r.get("loser_name"),
-                  )
+              for r in examples[-5:]:
+                  print("  max-row:", r.get("tourney_date"), r.get("tourney_name"), r.get("winner_name"), "-", r.get("loser_name"))
               print()
 
           print("ONLINE_SACKMANN_OVERALL_MAX_DATE:", overall)
