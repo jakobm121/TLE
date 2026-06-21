@@ -18,14 +18,14 @@
     "Girls Doubles": 31,
     "Girls Singles": 87,
     "Itf Men Doubles": 891,
-    "Itf Men Singles": 1860,
+    "Itf Men Singles": 1861,
     "Itf Women Doubles": 861,
     "Itf Women Singles": 1903,
     "Mixed Doubles": 33,
     "Teams Men": 66,
     "Teams Women": 71,
-    "Wta Doubles": 132,
-    "Wta Singles": 316
+    "Wta Doubles": 130,
+    "Wta Singles": 314
   },
   "files": {
     "2026-05-26.json": {
@@ -139,8 +139,8 @@
       "skipped": 184
     },
     "2026-06-17.json": {
-      "imported": 426,
-      "raw_fixtures": 610,
+      "imported": 427,
+      "raw_fixtures": 611,
       "skipped": 184
     },
     "2026-06-18.json": {
@@ -159,46 +159,43 @@
       "skipped": 79
     },
     "2026-06-21.json": {
-      "imported": 51,
-      "raw_fixtures": 107,
-      "skipped": 56
+      "imported": 95,
+      "raw_fixtures": 103,
+      "skipped": 8
     }
   },
   "gender_counts": {
-    "men": 3180,
-    "women": 2553
+    "men": 3214,
+    "women": 2564
   },
   "level_counts": {
-    "atp_wta": 358,
-    "challenger": 835,
+    "atp_wta": 373,
+    "challenger": 852,
     "grand_slam": 340,
-    "itf": 3247,
-    "qualifying": 953
+    "itf": 3254,
+    "qualifying": 959
   },
   "raw_surface_counts": {
-    "<blank>": 284,
-    "api_tournament_metadata:Clay": 3063,
+    "<blank>": 291,
+    "api_tournament_metadata:Clay": 3088,
     "api_tournament_metadata:Clay (Indoor)": 31,
-    "api_tournament_metadata:Grass": 620,
-    "api_tournament_metadata:Hard": 1766,
+    "api_tournament_metadata:Grass": 631,
+    "api_tournament_metadata:Hard": 1768,
     "api_tournament_metadata:hard": 31
   },
   "status_counts": {
-    "<blank>": 43,
+    "<blank>": 8,
     "Cancelled": 144,
-    "Finished": 7979,
-    "Interrupted": 1,
-    "Retired": 211,
-    "Set 1": 10,
-    "Set 2": 5,
-    "Set 3": 3,
+    "Finished": 8027,
+    "Retired": 212,
+    "Set 1": 2,
     "Walk Over": 145
   },
   "surface_counts": {
-    "clay": 3094,
-    "grass": 620,
-    "hard": 1797,
-    "unknown": 222
+    "clay": 3119,
+    "grass": 631,
+    "hard": 1799,
+    "unknown": 229
   },
   "tournament_surface_map": {
     "exists": true,
