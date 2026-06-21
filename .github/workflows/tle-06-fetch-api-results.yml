@@ -4,17 +4,17 @@ on:
   workflow_dispatch:
     inputs:
       days:
-        description: "How many days back including today"
+        description: "Days back including today"
         required: false
         default: "21"
-      start_date:
-        description: "Optional start date YYYY-MM-DD"
+      skip_finalized_existing:
+        description: "Skip older existing days where all fixtures are finalized"
         required: false
-        default: ""
-      end_date:
-        description: "Optional end date YYYY-MM-DD"
+        default: "true"
+      always_refresh_recent_days:
+        description: "Always refresh today + recent days"
         required: false
-        default: ""
+        default: "2"
 
 permissions:
   contents: write
@@ -24,34 +24,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout TLE repo
         uses: actions/checkout@v4
+
+      - name: Pull latest main
+        run: |
+          git pull --ff-only
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-
       - name: Fetch API results
         env:
           API_TENNIS_KEY: ${{ secrets.API_TENNIS_KEY }}
+          PYTHONPATH: ${{ github.workspace }}
         run: |
-          ARGS="--days ${{ github.event.inputs.days }}"
-          if [ -n "${{ github.event.inputs.start_date }}" ]; then
-            ARGS="$ARGS --start-date ${{ github.event.inputs.start_date }}"
+          EXTRA_ARGS=""
+          if [ "${{ github.event.inputs.skip_finalized_existing }}" = "true" ]; then
+            EXTRA_ARGS="$EXTRA_ARGS --skip-finalized-existing"
           fi
-          if [ -n "${{ github.event.inputs.end_date }}" ]; then
-            ARGS="$ARGS --end-date ${{ github.event.inputs.end_date }}"
-          fi
-          python -m tle_machine.fetch_api_results $ARGS
 
-      - name: Commit API raw results
-        if: always()
+          python -m tle_machine.fetch_api_results \
+            --days "${{ github.event.inputs.days }}" \
+            --always-refresh-recent-days "${{ github.event.inputs.always_refresh_recent_days }}" \
+            $EXTRA_ARGS
+
+      - name: Commit API result raw files
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
@@ -60,7 +60,7 @@ jobs:
           git add data/reports/api_tennis/fetch_api_results_report.json || true
 
           if git diff --cached --quiet; then
-            echo "No API fetch changes to commit."
+            echo "No API result changes to commit."
           else
             git commit -m "Fetch API tennis results"
             git push
