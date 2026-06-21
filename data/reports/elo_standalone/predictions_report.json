@@ -1,36 +1,36 @@
 {
   "active_predictions_total": 2,
   "by_level_scan": {
-    "atp_wta": 42,
-    "challenger": 24
+    "atp_wta": 8,
+    "challenger": 16
   },
   "by_qualification_scan": {
-    "False": 18,
-    "True": 48
+    "False": 6,
+    "True": 18
   },
   "by_surface_source_scan": {
-    "missing": 58,
-    "tournament_surface_map": 8
+    "missing": 20,
+    "tournament_surface_map": 4
   },
   "counters": {
-    "fixture_skip_doubles_or_team": 7,
-    "fixture_skip_live": 14,
-    "fixture_skip_starts_too_soon": 17,
+    "fixture_skip_doubles_or_team": 4,
+    "fixture_skip_live": 17,
+    "fixture_skip_starts_too_soon": 10,
     "fixture_skip_status_cancelled": 3,
-    "fixture_skip_status_finished": 11,
-    "fixture_skip_status_retired": 3,
-    "fixtures_scanned": 52,
-    "fixtures_with_diagnostics": 33,
+    "fixture_skip_status_finished": 48,
+    "fixture_skip_status_retired": 5,
+    "fixtures_scanned": 20,
+    "fixtures_with_diagnostics": 12,
     "fixtures_with_output": 1
   },
   "date_start": "2026-06-21",
   "days_ahead": 1,
   "decision_counts_scan": {
-    "NO_BET": 65,
+    "NO_BET": 23,
     "STRONG_BET": 1
   },
   "fixtures_total": 107,
-  "generated_at": "2026-06-21T09:48:00+00:00",
+  "generated_at": "2026-06-21T13:38:43+00:00",
   "min_start_minutes": 30,
   "new_added_to_predictions": 0,
   "new_candidates": 1,
@@ -57,15 +57,15 @@
     "unresolved_surface_json": "data/reports/elo_standalone/unresolved_surface_report.json"
   },
   "reason_counts_scan": {
-    "elo_edge_too_low": 3,
-    "elo_prob_too_low": 4,
-    "odds_outside_range": 13,
+    "elo_edge_too_low": 1,
+    "elo_prob_too_low": 2,
+    "odds_outside_range": 7,
     "pass_strong_edge": 1,
-    "unknown_surface": 39,
-    "unmapped_player": 6
+    "unknown_surface": 9,
+    "unmapped_player": 4
   },
-  "scan_rows": 66,
+  "scan_rows": 24,
   "status": "ok",
   "surface_map_entries": 23,
-  "unresolved_surface_count": 8
+  "unresolved_surface_count": 4
 }

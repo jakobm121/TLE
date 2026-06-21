@@ -1,43 +1,13 @@
 {
-  "count": 8,
-  "generated_at": "2026-06-21T09:48:00+00:00",
+  "count": 4,
+  "generated_at": "2026-06-21T13:38:43+00:00",
   "items": [
-    {
-      "context_text": "wta singles bad homburg wta bad homburg   1/16 finals 4228",
-      "gender": "women",
-      "level": "atp_wta",
-      "matches": [
-        "K. Boulter - L. Fernandez",
-        "N. Osaka - M. Frech"
-      ],
-      "raw_event_type_type": "Wta Singles",
-      "raw_tournament_name": "Bad Homburg",
-      "raw_tournament_round": "WTA Bad Homburg - 1/16-finals",
-      "suggested_map_key": "wta singles bad homburg wta bad homburg 1/16 finals 4228"
-    },
-    {
-      "context_text": "wta singles bad homburg wta bad homburg   final 4228",
-      "gender": "women",
-      "level": "atp_wta",
-      "matches": [
-        "R. Zarazua - S. Kraus",
-        "G. Ruse - T. Townsend"
-      ],
-      "raw_event_type_type": "Wta Singles",
-      "raw_tournament_name": "Bad Homburg",
-      "raw_tournament_round": "WTA Bad Homburg - Final",
-      "suggested_map_key": "wta singles bad homburg wta bad homburg final 4228"
-    },
     {
       "context_text": "wta singles eastbourne wta eastbourne   final 1358",
       "gender": "women",
       "level": "atp_wta",
       "matches": [
-        "P. Stearns - K. Birrell",
-        "Z. Sonmez - E. Jacquemot",
-        "S. Johnson - E. Arango",
-        "P. Marcinko - D. Snigur",
-        "O. Selekhmeteva - A. Zakharova"
+        "P. Marcinko - D. Snigur"
       ],
       "raw_event_type_type": "Wta Singles",
       "raw_tournament_name": "Eastbourne",
@@ -45,45 +15,16 @@
       "suggested_map_key": "wta singles eastbourne wta eastbourne final 1358"
     },
     {
-      "context_text": "atp singles eastbourne atp eastbourne   final 2052",
-      "gender": "men",
-      "level": "atp_wta",
-      "matches": [
-        "G. Hussey - M. Trungelliti",
-        "M. Arnaldi - T. Samuel",
-        "M. Giron - J. Choinski"
-      ],
-      "raw_event_type_type": "Atp Singles",
-      "raw_tournament_name": "Eastbourne",
-      "raw_tournament_round": "ATP Eastbourne - Final",
-      "suggested_map_key": "atp singles eastbourne atp eastbourne final 2052"
-    },
-    {
       "context_text": "atp singles mallorca atp mallorca   1/16 finals 3681",
       "gender": "men",
       "level": "atp_wta",
       "matches": [
-        "M. Navone - L. Sonego",
-        "Y. Hanfmann - D. Vallejo",
-        "N. Borges - A. Mannarino"
+        "Y. Hanfmann - D. Vallejo"
       ],
       "raw_event_type_type": "Atp Singles",
       "raw_tournament_name": "Mallorca",
       "raw_tournament_round": "ATP Mallorca - 1/16-finals",
       "suggested_map_key": "atp singles mallorca atp mallorca 1/16 finals 3681"
-    },
-    {
-      "context_text": "atp singles mallorca atp mallorca   final 3681",
-      "gender": "men",
-      "level": "atp_wta",
-      "matches": [
-        "Z. Svajda - D. Dzumhur",
-        "A. Shelbayh - M. Polmans"
-      ],
-      "raw_event_type_type": "Atp Singles",
-      "raw_tournament_name": "Mallorca",
-      "raw_tournament_round": "ATP Mallorca - Final",
-      "suggested_map_key": "atp singles mallorca atp mallorca final 3681"
     },
     {
       "context_text": "challenger men singles piracicaba piracicaba   semi finals 8499",
@@ -104,7 +45,6 @@
       "gender": "men",
       "level": "challenger",
       "matches": [
-        "R. Guna - P. Makk",
         "N. D. Ionel - D. Yevseyev"
       ],
       "raw_event_type_type": "Challenger Men Singles",
