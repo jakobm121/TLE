@@ -4,24 +4,23 @@
   "cache_with_full_name_after": 2603,
   "collect_stats": {
     "files_seen": 1,
-    "raw_fixtures_seen": 107,
-    "singles_fixtures_used": 100,
-    "skipped_doubles_fixtures": 7
+    "raw_fixtures_seen": 103,
+    "singles_fixtures_used": 98,
+    "skipped_doubles_fixtures": 5
   },
   "counters": {
-    "cache_existing_before": 5266,
-    "candidate_player_ids": 196,
-    "fetched": 4,
+    "cache_existing_before": 5267,
+    "candidate_player_ids": 192,
+    "fetched": 3,
     "fetched_missing_full_name": 3,
-    "fetched_with_full_name": 1,
-    "to_fetch": 4
+    "to_fetch": 3
   },
   "date_filter": {
     "end_date": "2026-06-21",
     "start_date": "2026-06-21"
   },
   "errors": [],
-  "generated_at": "2026-06-21T13:28:32+00:00",
+  "generated_at": "2026-06-21T22:21:42+00:00",
   "method": "get_players",
   "outputs": {
     "cache": "data/raw/api_tennis/players/api_players.json",
@@ -29,20 +28,10 @@
     "report": "data/reports/api_tennis/fetch_api_player_details_report.json"
   },
   "raw_files": {
-    "2026-06-21.json": 107
+    "2026-06-21.json": 103
   },
   "raw_results_dir": "data/raw/api_tennis/results",
   "sample_fetched": [
-    {
-      "player_bday": "02.06.1995",
-      "player_country": "Japan",
-      "player_full_name": "Kaito Uesugi",
-      "player_key": "37934",
-      "player_logo": "https://api.api-tennis.com/logo-tennis/37934_k-uesugi.jpg",
-      "player_name": "K. Uesugi",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-21T13:28:30+00:00"
-    },
     {
       "player_bday": "17.06.2008",
       "player_country": "Brazil",
@@ -51,7 +40,7 @@
       "player_logo": "",
       "player_name": "P. Rodrigues Longobardi",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-21T13:28:31+00:00"
+      "updated_at": "2026-06-21T22:21:41+00:00"
     },
     {
       "player_bday": "",
@@ -61,7 +50,7 @@
       "player_logo": "",
       "player_name": "A. Ganchev",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-21T13:28:31+00:00"
+      "updated_at": "2026-06-21T22:21:41+00:00"
     },
     {
       "player_bday": "",
@@ -71,7 +60,7 @@
       "player_logo": "",
       "player_name": "A. Tolev",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-21T13:28:32+00:00"
+      "updated_at": "2026-06-21T22:21:42+00:00"
     }
   ],
   "source": "api_tennis"
