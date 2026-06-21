@@ -10,7 +10,6 @@ men:api:10040,Ondrej Horak,men,1,1,men:sackmann:208821,Ondrej Horak,21,0.999,exa
 men:api:100469,Jerry Roddick,men,3,1,men:sackmann:212542,Jerry Roddick,19,0.999,exact_normalized
 men:api:10070,Adam Walton,men,9,1,men:sackmann:200443,Adam Walton,298,0.999,exact_normalized
 men:api:10071,Johannus Monday,men,4,1,men:sackmann:208902,Johannus Monday,147,0.999,exact_normalized
-men:api:100794,Nikita Belozertsev,men,6,1,men:sackmann:212756,Nikita Bilozertsev,45,0.773829,fuzzy
 men:api:10101,Nino Ehrenschneider,men,3,1,men:sackmann:209510,Nino Ehrenschneider,121,0.999,exact_normalized
 men:api:10124,Kasidit Samrej,men,3,1,men:sackmann:208937,Kasidit Samrej,214,0.999,exact_normalized
 men:api:10126,Thanapet Chanta,men,4,1,men:sackmann:207788,Thanapet Chanta,131,0.999,exact_normalized
@@ -431,7 +430,6 @@ men:api:2169,Jenson Brooksby,men,3,1,men:sackmann:202385,Jenson Brooksby,77,0.99
 men:api:21704,Carlos Prado Angelo Juan,men,1,1,men:sackmann:210178,Juan Carlos Prado Angelo,212,0.999,exact_token_set
 men:api:21806,George Lazarov,men,6,1,men:sackmann:210198,George Lazarov,44,0.999,exact_normalized
 men:api:21852,Edoardo Zanada,men,2,1,men:sackmann:210205,Edoardo Zanada,30,0.999,exact_normalized
-men:api:2188,Arklon Huertas Del Pino Cordova,men,6,1,men:sackmann:207736,Arklon Huertas Del Pino,107,0.792015,fuzzy
 men:api:2189,Andrea Collarini,men,2,1,men:sackmann:105911,Andrea Collarini,224,0.999,exact_normalized
 men:api:2214,Tyler Zink,men,4,1,men:sackmann:208342,Tyler Zink,160,0.999,exact_normalized
 men:api:22147,Rafael Kis Balazs,men,1,1,men:sackmann:208558,Rafael Kis Balazs,22,0.999,exact_normalized

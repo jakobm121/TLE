@@ -6,7 +6,7 @@
     "with_full_name": 2602,
     "with_short_name": 5266
   },
-  "generated_at": "2026-06-21T08:21:03+00:00",
+  "generated_at": "2026-06-21T08:34:14+00:00",
   "mapping": {
     "men:api:100041": {
       "api_levels": {
@@ -268,11 +268,6 @@
       "status": "auto_mapped"
     },
     "men:api:100794": {
-      "api_levels": {
-        "grand_slam": 2,
-        "itf": 3,
-        "qualifying": 1
-      },
       "api_matches": 6,
       "api_name": "Nikita Belozertsev",
       "api_name_sources": {
@@ -281,15 +276,12 @@
       "api_name_variants": {
         "Nikita Belozertsev": 6
       },
-      "api_surfaces": {
-        "clay": 6
-      },
-      "confidence": 0.773829,
+      "confidence": 1.0,
       "gender": "men",
-      "margin": 0.773829,
-      "method": "fuzzy",
-      "sackmann_player_key": null,
-      "status": "unmapped"
+      "method": "manual_override",
+      "override_key": "men:api:100794",
+      "sackmann_player_key": "men:sackmann:212756",
+      "status": "manual_mapped"
     },
     "men:api:10101": {
       "api_levels": {
@@ -10560,10 +10552,6 @@
       "status": "auto_mapped"
     },
     "men:api:2188": {
-      "api_levels": {
-        "challenger": 4,
-        "qualifying": 2
-      },
       "api_matches": 6,
       "api_name": "Arklon Huertas Del Pino Cordova",
       "api_name_sources": {
@@ -10572,15 +10560,12 @@
       "api_name_variants": {
         "Arklon Huertas Del Pino Cordova": 6
       },
-      "api_surfaces": {
-        "clay": 6
-      },
-      "confidence": 0.792015,
+      "confidence": 1.0,
       "gender": "men",
-      "margin": 0.792015,
-      "method": "fuzzy",
-      "sackmann_player_key": null,
-      "status": "unmapped"
+      "method": "manual_override",
+      "override_key": "men:api:2188",
+      "sackmann_player_key": "men:sackmann:207736",
+      "status": "manual_mapped"
     },
     "men:api:2189": {
       "api_levels": {
@@ -70910,10 +70895,10 @@
     "api_player_cache_with_short_name": 5266,
     "api_players": 3127,
     "auto_mapped": 2950,
-    "manual_mapped": 7,
+    "manual_mapped": 9,
     "player_aliases_loaded": 152,
     "rebuild_auto_mapping": 0,
-    "unmapped": 151
+    "unmapped": 149
   },
   "target": "sackmann"
 }
