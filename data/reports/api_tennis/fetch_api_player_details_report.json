@@ -1,27 +1,27 @@
 {
   "cache_path": "data/raw/api_tennis/players/api_players.json",
-  "cache_total_after": 5266,
-  "cache_with_full_name_after": 2602,
+  "cache_total_after": 5267,
+  "cache_with_full_name_after": 2603,
   "collect_stats": {
     "files_seen": 1,
-    "raw_fixtures_seen": 105,
-    "singles_fixtures_used": 98,
+    "raw_fixtures_seen": 107,
+    "singles_fixtures_used": 100,
     "skipped_doubles_fixtures": 7
   },
   "counters": {
-    "cache_existing_before": 5255,
-    "candidate_player_ids": 194,
-    "fetched": 11,
+    "cache_existing_before": 5266,
+    "candidate_player_ids": 196,
+    "fetched": 4,
     "fetched_missing_full_name": 3,
-    "fetched_with_full_name": 8,
-    "to_fetch": 11
+    "fetched_with_full_name": 1,
+    "to_fetch": 4
   },
   "date_filter": {
     "end_date": "2026-06-21",
     "start_date": "2026-06-21"
   },
   "errors": [],
-  "generated_at": "2026-06-21T08:18:33+00:00",
+  "generated_at": "2026-06-21T13:28:32+00:00",
   "method": "get_players",
   "outputs": {
     "cache": "data/raw/api_tennis/players/api_players.json",
@@ -29,59 +29,19 @@
     "report": "data/reports/api_tennis/fetch_api_player_details_report.json"
   },
   "raw_files": {
-    "2026-06-21.json": 105
+    "2026-06-21.json": 107
   },
   "raw_results_dir": "data/raw/api_tennis/results",
   "sample_fetched": [
     {
-      "player_bday": "26.01.2000",
-      "player_country": "India",
-      "player_full_name": "Adil Kalyanpur",
-      "player_key": "775",
-      "player_logo": "https://api.api-tennis.com/logo-tennis/775_a-kalyanpur.jpg",
-      "player_name": "A. Kalyanpur",
+      "player_bday": "02.06.1995",
+      "player_country": "Japan",
+      "player_full_name": "Kaito Uesugi",
+      "player_key": "37934",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/37934_k-uesugi.jpg",
+      "player_name": "K. Uesugi",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-21T08:18:27+00:00"
-    },
-    {
-      "player_bday": "18.01.1999",
-      "player_country": "New Zealand",
-      "player_full_name": "Ajeet Rai",
-      "player_key": "3224",
-      "player_logo": "https://api.api-tennis.com/logo-tennis/3224_a-rai.jpg",
-      "player_name": "A. Rai",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-21T08:18:28+00:00"
-    },
-    {
-      "player_bday": "24.04.1987",
-      "player_country": "Colombia",
-      "player_full_name": "Nicolas Barrientos",
-      "player_key": "4694",
-      "player_logo": "",
-      "player_name": "N. Barrientos",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-21T08:18:28+00:00"
-    },
-    {
-      "player_bday": "14.11.2006",
-      "player_country": "Romania",
-      "player_full_name": "Daniel Uta",
-      "player_key": "55174",
-      "player_logo": "",
-      "player_name": "D. Uta",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-21T08:18:29+00:00"
-    },
-    {
-      "player_bday": "25.01.2005",
-      "player_country": "Brazil",
-      "player_full_name": "Lucas Andrade da Silva",
-      "player_key": "57484",
-      "player_logo": "https://api.api-tennis.com/logo-tennis/57484_l-andrade-da-silva.jpg",
-      "player_name": "L. Andrade da Silva",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-21T08:18:29+00:00"
+      "updated_at": "2026-06-21T13:28:30+00:00"
     },
     {
       "player_bday": "17.06.2008",
@@ -91,37 +51,7 @@
       "player_logo": "",
       "player_name": "P. Rodrigues Longobardi",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-21T08:18:30+00:00"
-    },
-    {
-      "player_bday": "21.01.2002",
-      "player_country": "Bulgaria",
-      "player_full_name": "Maximilian Borisov",
-      "player_key": "77365",
-      "player_logo": "",
-      "player_name": "M. Borisov",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-21T08:18:30+00:00"
-    },
-    {
-      "player_bday": "25.03.2003",
-      "player_country": "Brazil",
-      "player_full_name": "Henrique Ortenblad Nogueira",
-      "player_key": "93923",
-      "player_logo": "",
-      "player_name": "N. H. Ortenblad",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-21T08:18:31+00:00"
-    },
-    {
-      "player_bday": "01.01.1970",
-      "player_country": "Brazil",
-      "player_full_name": "Andre Souza Pinto de Camargo e Silva",
-      "player_key": "96147",
-      "player_logo": "",
-      "player_name": "A. de Camargo Silva",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-21T08:18:31+00:00"
+      "updated_at": "2026-06-21T13:28:31+00:00"
     },
     {
       "player_bday": "",
@@ -131,7 +61,7 @@
       "player_logo": "",
       "player_name": "A. Ganchev",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-21T08:18:32+00:00"
+      "updated_at": "2026-06-21T13:28:31+00:00"
     },
     {
       "player_bday": "",
@@ -141,7 +71,7 @@
       "player_logo": "",
       "player_name": "A. Tolev",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-21T08:18:33+00:00"
+      "updated_at": "2026-06-21T13:28:32+00:00"
     }
   ],
   "source": "api_tennis"

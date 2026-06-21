@@ -15657,7 +15657,7 @@
     "player_logo": "",
     "player_name": "A. Ganchev",
     "source": "api_tennis:get_players",
-    "updated_at": "2026-06-21T08:18:32+00:00"
+    "updated_at": "2026-06-21T13:28:31+00:00"
   },
   "104199": {
     "player_bday": "",
@@ -15667,7 +15667,7 @@
     "player_logo": "",
     "player_name": "A. Tolev",
     "source": "api_tennis:get_players",
-    "updated_at": "2026-06-21T08:18:33+00:00"
+    "updated_at": "2026-06-21T13:28:32+00:00"
   },
   "10473": {
     "player_bday": "01.01.1970",
@@ -27959,6 +27959,16 @@
     "source": "api_tennis:get_players",
     "updated_at": "2026-06-16T11:05:23+00:00"
   },
+  "37934": {
+    "player_bday": "02.06.1995",
+    "player_country": "Japan",
+    "player_full_name": "Kaito Uesugi",
+    "player_key": "37934",
+    "player_logo": "https://api.api-tennis.com/logo-tennis/37934_k-uesugi.jpg",
+    "player_name": "K. Uesugi",
+    "source": "api_tennis:get_players",
+    "updated_at": "2026-06-21T13:28:30+00:00"
+  },
   "37935": {
     "player_bday": "19.06.2004",
     "player_country": "Italy",
@@ -38277,7 +38287,7 @@
     "player_logo": "",
     "player_name": "P. Rodrigues Longobardi",
     "source": "api_tennis:get_players",
-    "updated_at": "2026-06-21T08:18:30+00:00"
+    "updated_at": "2026-06-21T13:28:31+00:00"
   },
   "67513": {
     "player_bday": "22.02.2007",
