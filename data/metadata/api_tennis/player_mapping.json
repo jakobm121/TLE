@@ -6,7 +6,7 @@
     "with_full_name": 2615,
     "with_short_name": 5280
   },
-  "generated_at": "2026-06-22T06:01:37+00:00",
+  "generated_at": "2026-06-22T07:29:56+00:00",
   "mapping": {
     "men:api:100041": {
       "api_levels": {
@@ -12685,28 +12685,6 @@
       "sackmann_player_key": "men:sackmann:208103",
       "status": "auto_mapped"
     },
-    "men:api:29611": {
-      "api_levels": {
-        "itf": 1
-      },
-      "api_matches": 1,
-      "api_name": "J. Bilardo",
-      "api_name_sources": {
-        "api_cache_short_name": 1
-      },
-      "api_name_variants": {
-        "J. Bilardo": 1
-      },
-      "api_surfaces": {
-        "clay": 1
-      },
-      "confidence": 0.974407,
-      "gender": "men",
-      "margin": 0.974407,
-      "method": "exact_initial_form",
-      "sackmann_player_key": "men:sackmann:211323",
-      "status": "auto_mapped"
-    },
     "men:api:29633": {
       "api_levels": {
         "grand_slam": 1,
@@ -17731,19 +17709,19 @@
     },
     "men:api:40192": {
       "api_levels": {
-        "itf": 3,
+        "itf": 4,
         "qualifying": 1
       },
-      "api_matches": 4,
+      "api_matches": 5,
       "api_name": "Jacopo Bilardo",
       "api_name_sources": {
-        "api_cache_full_name": 4
+        "api_cache_full_name": 5
       },
       "api_name_variants": {
-        "Jacopo Bilardo": 4
+        "Jacopo Bilardo": 5
       },
       "api_surfaces": {
-        "clay": 4
+        "clay": 5
       },
       "confidence": 0.999,
       "gender": "men",
@@ -50715,28 +50693,6 @@
       "sackmann_player_key": "women:sackmann:220497",
       "status": "auto_mapped"
     },
-    "women:api:26895": {
-      "api_levels": {
-        "itf": 1
-      },
-      "api_matches": 1,
-      "api_name": "D. Kuczer",
-      "api_name_sources": {
-        "api_cache_short_name": 1
-      },
-      "api_name_variants": {
-        "D. Kuczer": 1
-      },
-      "api_surfaces": {
-        "clay": 1
-      },
-      "confidence": 0.974663,
-      "gender": "women",
-      "margin": 0.974663,
-      "method": "exact_initial_form",
-      "sackmann_player_key": "women:sackmann:214784",
-      "status": "auto_mapped"
-    },
     "women:api:2692": {
       "api_levels": {
         "atp_wta": 2,
@@ -51841,28 +51797,6 @@
       "margin": 0.999,
       "method": "exact_normalized",
       "sackmann_player_key": "women:sackmann:261066",
-      "status": "auto_mapped"
-    },
-    "women:api:31159": {
-      "api_levels": {
-        "itf": 1
-      },
-      "api_matches": 1,
-      "api_name": "H. Shi",
-      "api_name_sources": {
-        "api_cache_short_name": 1
-      },
-      "api_name_variants": {
-        "H. Shi": 1
-      },
-      "api_surfaces": {
-        "hard": 1
-      },
-      "confidence": 0.975298,
-      "gender": "women",
-      "margin": 0.975298,
-      "method": "exact_initial_form",
-      "sackmann_player_key": "women:sackmann:222559",
       "status": "auto_mapped"
     },
     "women:api:3130": {
@@ -53137,19 +53071,19 @@
     },
     "women:api:38097": {
       "api_levels": {
-        "itf": 6,
+        "itf": 7,
         "qualifying": 2
       },
-      "api_matches": 8,
+      "api_matches": 9,
       "api_name": "Han Shi",
       "api_name_sources": {
-        "api_cache_full_name": 8
+        "api_cache_full_name": 9
       },
       "api_name_variants": {
-        "Han Shi": 8
+        "Han Shi": 9
       },
       "api_surfaces": {
-        "hard": 8
+        "hard": 9
       },
       "confidence": 0.999,
       "gender": "women",
@@ -53223,6 +53157,28 @@
       "margin": 0.999,
       "method": "exact_normalized",
       "sackmann_player_key": "women:sackmann:260377",
+      "status": "auto_mapped"
+    },
+    "women:api:38181": {
+      "api_levels": {
+        "itf": 1
+      },
+      "api_matches": 1,
+      "api_name": "D. Kuczer",
+      "api_name_sources": {
+        "api_source": 1
+      },
+      "api_name_variants": {
+        "D. Kuczer": 1
+      },
+      "api_surfaces": {
+        "clay": 1
+      },
+      "confidence": 0.974663,
+      "gender": "women",
+      "margin": 0.974663,
+      "method": "exact_initial_form",
+      "sackmann_player_key": "women:sackmann:214784",
       "status": "auto_mapped"
     },
     "women:api:38184": {
@@ -71094,15 +71050,15 @@
   "source": "api_tennis",
   "summary": {
     "ambiguous": 19,
-    "api_gender_men": 1700,
-    "api_gender_women": 1441,
+    "api_gender_men": 1699,
+    "api_gender_women": 1440,
     "api_player_cache_entries": 5280,
-    "api_player_cache_full_name_used": 10657,
-    "api_player_cache_short_name_used": 884,
+    "api_player_cache_full_name_used": 10659,
+    "api_player_cache_short_name_used": 881,
     "api_player_cache_with_full_name": 2615,
     "api_player_cache_with_short_name": 5280,
-    "api_players": 3141,
-    "auto_mapped": 2962,
+    "api_players": 3139,
+    "auto_mapped": 2960,
     "manual_mapped": 9,
     "player_aliases_loaded": 152,
     "rebuild_auto_mapping": 0,
