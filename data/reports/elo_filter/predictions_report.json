@@ -6,15 +6,14 @@
     "itf": 8
   },
   "decision_counts_today": {
-    "BET": 1,
-    "NO_BET": 9,
+    "NO_BET": 10,
     "STRONG_BET": 5
   },
   "evaluated": 15,
-  "generated_at": "2026-06-19T06:38:59+00:00",
+  "generated_at": "2026-06-22T06:05:43+00:00",
   "input_picks": 15,
-  "new_active_candidates": 6,
-  "new_added_to_predictions": 6,
+  "new_active_candidates": 5,
+  "new_added_to_predictions": 0,
   "notes": [
     "This workflow only filters picks produced by the tennis value model.",
     "Only BET and STRONG_BET are stored as active predictions.",
@@ -28,11 +27,10 @@
     "results_json": "data/elo_filter/results.json"
   },
   "reason_counts_today": {
-    "elo_disagrees_or_prob_too_low": 5,
+    "elo_disagrees_or_prob_too_low": 2,
     "min_level_not_met": 1,
-    "pass_edge": 1,
     "pass_strong_edge": 5,
-    "unknown_surface": 3
+    "unknown_surface": 7
   },
   "status": "ok"
 }

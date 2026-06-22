@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T06:38:59+00:00",
+  "generated_at": "2026-06-22T06:05:43+00:00",
   "model": "TLE Elo Filter v1",
   "picks": [
     {
@@ -361,7 +361,7 @@
   "summary": {
     "active_picks": 6,
     "evaluated_today": 15,
-    "new_added": 6,
-    "today_bet_candidates": 6
+    "new_added": 0,
+    "today_bet_candidates": 5
   }
 }
