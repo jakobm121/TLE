@@ -16,7 +16,8 @@
   },
   "counters": {
     "fixture_skip_doubles_or_team": 19,
-    "fixture_skip_starts_too_soon": 6,
+    "fixture_skip_live": 5,
+    "fixture_skip_starts_too_soon": 1,
     "fixture_skip_status_cancelled": 1,
     "fixtures_scanned": 127,
     "fixtures_with_diagnostics": 116,
@@ -29,7 +30,7 @@
     "STRONG_BET": 3
   },
   "fixtures_total": 153,
-  "generated_at": "2026-06-22T07:36:11+00:00",
+  "generated_at": "2026-06-22T08:11:57+00:00",
   "min_start_minutes": 30,
   "new_added_to_predictions": 0,
   "new_candidates": 3,
