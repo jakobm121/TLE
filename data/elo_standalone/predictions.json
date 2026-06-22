@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-22T08:11:57+00:00",
-  "model": "TLE Standalone Elo Scanner v3.5",
+  "generated_at": "2026-06-22T09:43:34+00:00",
+  "model": "TLE Standalone Elo Scanner v3.4",
   "picks": [
     {
       "avg_odds": 3.6389,
@@ -231,7 +231,7 @@
   "summary": {
     "active_picks": 3,
     "new_added": 0,
-    "new_candidates": 3,
-    "scan_rows": 232
+    "new_candidates": 0,
+    "scan_rows": 180
   }
 }
