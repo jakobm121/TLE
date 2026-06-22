@@ -96,7 +96,9 @@ MIN_CLEAN_BOOKMAKERS = 3
 ODDS_MIN = 1.30
 ODDS_MAX = 4.50
 
-# Final v1 TLE model selector. Only qualifying min_level_matches changed 15 -> 10.
+# Final v1 TLE model selector.
+# Only qualification scoring changed: qualification uses 70% base-level Elo + 30% overall Elo.
+# All non-qualification rules remain unchanged.
 LEVEL_RULES = {
     "atp_wta": {
         "model": "blend_70_30",
@@ -143,11 +145,14 @@ LEVEL_RULES = {
         "edge_strong": 0.08,
     },
     "qualifying": {
-        "model": "level_only_qualifying_strict",
-        "level_weight": 1.00,
+        "model": "qualification_base70_overall30",
+        "level_weight": 0.70,
+        "overall_weight": 0.30,
         "surface_weight": 0.00,
         "needs_surface": False,
+        # Qualification sample check: base level >= 10 and overall >= 20 for both players.
         "min_level_matches": 10,
+        "min_overall_matches": 20,
         "min_surface_matches": 0,
         "min_prob": 0.53,
         "edge_bet": 0.04,
@@ -157,13 +162,13 @@ LEVEL_RULES = {
 
 CSV_FIELDS = [
     "pick_id", "status", "decision", "confidence", "reason",
-    "date", "time", "gender", "level", "surface", "surface_source",
+    "date", "time", "gender", "level", "base_level", "qualification", "surface", "surface_source",
     "raw_event_type_type", "raw_event_type_key", "raw_event_type", "raw_event_name",
     "raw_event_country_name", "raw_league_name", "raw_competition_name",
     "raw_tournament_name", "raw_tournament_round", "context_text",
     "tournament", "round", "match", "pick", "opponent", "side", "market_side",
     "odds", "avg_odds", "median_odds", "best_odds", "best_bookmaker", "implied_prob",
-    "tle_model", "tle_prob", "tle_edge", "tle_min_level_matches", "tle_min_surface_matches",
+    "tle_model", "tle_prob", "tle_edge", "tle_min_level_matches", "tle_min_overall_matches", "tle_min_surface_matches",
     "bookmakers_raw", "bookmakers_clean", "outlier_bookmakers_removed",
     "stake", "stake_label",
     "player_key", "opponent_key", "player_api_key", "opponent_api_key",
@@ -178,6 +183,8 @@ CSV_FIELDS = [
 
 TOURNAMENT_SURFACE_MAP: dict[str, str] = {}
 API_TOURNAMENT_SURFACE_BY_KEY: dict[str, str] = {}
+API_TOURNAMENT_META_BY_KEY: dict[str, dict[str, str]] = {}
+API_TOURNAMENT_QUALIFICATION_KEYS: set[str] = set()
 
 # =========================
 # HELPERS
@@ -394,57 +401,33 @@ def write_tournament_surface_map(path: Path = SURFACE_MAP_JSON) -> None:
 
 
 def _extract_tournament_rows(payload: Any) -> list[dict[str, Any]]:
-    """Extract rows from either raw API response or 06a wrapped payload.
-
-    06a writes:
-      {
-        "schema_version": 1,
-        "source": "api_tennis",
-        "method": "get_tournaments",
-        "response": {"success": 1, "result": [...]}
-      }
-
-    Debug/manual scripts may write the raw API response directly:
-      {"success": 1, "result": [...]}
-
-    Keep both formats supported.
-    """
-    if isinstance(payload, list):
-        return [x for x in payload if isinstance(x, dict)]
-
-    if not isinstance(payload, dict):
-        return []
-
-    # 06a wrapped file: data/raw/api_tennis/metadata/get_tournaments.json
-    response = payload.get("response")
-    if isinstance(response, dict):
-        result = response.get("result")
+    if isinstance(payload, dict):
+        result = payload.get("result", payload.get("tournaments"))
         if isinstance(result, list):
             return [x for x in result if isinstance(x, dict)]
-        if isinstance(result, dict):
-            return [x for x in result.values() if isinstance(x, dict)]
-
-    # Raw API response or future simplified cache format.
-    result = payload.get("result", payload.get("tournaments"))
-    if isinstance(result, list):
-        return [x for x in result if isinstance(x, dict)]
-    if isinstance(result, dict):
-        return [x for x in result.values() if isinstance(x, dict)]
-
+    if isinstance(payload, list):
+        return [x for x in payload if isinstance(x, dict)]
     return []
 
 
-def read_api_tournament_surface_map(path: Path = API_TOURNAMENTS_METADATA_JSON) -> dict[str, str]:
+def is_qualification_text(text: Any) -> bool:
+    t = safe_str(text).lower().replace("-", " ").replace("_", " ")
+    return bool(re.search(r"\bqualif", t) or re.search(r"\bq\b", t))
+
+
+def read_api_tournament_metadata_map(path: Path = API_TOURNAMENTS_METADATA_JSON) -> dict[str, dict[str, str]]:
     """Read 06a output: data/raw/api_tennis/metadata/get_tournaments.json.
 
     API-Tennis uses typo field `tournament_sourface`; keep fallbacks for future variants.
-    Output is tournament_key -> normalized surface.
+    Output is tournament_key -> metadata including normalized surface and tournament text.
     """
     payload = read_json_path(path, None)
     rows = _extract_tournament_rows(payload)
-    out: dict[str, str] = {}
+    out: dict[str, dict[str, str]] = {}
     for t in rows:
         key = safe_str(t.get("tournament_key"))
+        if not key:
+            continue
         raw_surface = (
             t.get("tournament_sourface")
             or t.get("tournament_surface")
@@ -453,9 +436,28 @@ def read_api_tournament_surface_map(path: Path = API_TOURNAMENTS_METADATA_JSON) 
             or t.get("court_type")
         )
         surf = normalize_surface(raw_surface)
-        if key and surf in VALID_SURFACES:
-            out[key] = surf
+        name = safe_str(t.get("tournament_name"))
+        event_type = safe_str(t.get("event_type_type"))
+        event_type_key = safe_str(t.get("event_type_key"))
+        out[key] = {
+            "surface": surf if surf in VALID_SURFACES else "unknown",
+            "raw_surface": safe_str(raw_surface),
+            "tournament_name": name,
+            "event_type_type": event_type,
+            "event_type_key": event_type_key,
+            "qualification": "true" if is_qualification_text(f"{name} {event_type}") else "false",
+        }
     return out
+
+
+def read_api_tournament_surface_map(path: Path = API_TOURNAMENTS_METADATA_JSON) -> dict[str, str]:
+    meta = read_api_tournament_metadata_map(path)
+    return {k: v["surface"] for k, v in meta.items() if v.get("surface") in VALID_SURFACES}
+
+
+def read_api_tournament_qualification_keys(path: Path = API_TOURNAMENTS_METADATA_JSON) -> set[str]:
+    meta = read_api_tournament_metadata_map(path)
+    return {k for k, v in meta.items() if v.get("qualification") == "true"}
 
 
 def infer_surface(match: dict[str, Any], context: dict[str, Any] | None = None) -> tuple[str, str]:
@@ -536,17 +538,21 @@ def normalize_level(level: Any, event_type: Any = None, qualification: Any = Non
 
 
 def tournament_context(match: dict[str, Any]) -> dict[str, Any]:
+    tournament_key = safe_str(match.get("tournament_key"))
+    api_meta = API_TOURNAMENT_META_BY_KEY.get(tournament_key, {}) if tournament_key else {}
+
     text_parts = [
         match.get("event_type_type"), match.get("event_type_key"), match.get("event_type"),
         match.get("event_name"), match.get("event_country_name"), match.get("event_country_key"),
         match.get("tournament_name"), match.get("tournament_round"), match.get("tournament_key"),
         match.get("league_name"), match.get("league"), match.get("competition_name"),
+        api_meta.get("tournament_name"), api_meta.get("event_type_type"), api_meta.get("event_type_key"),
     ]
     text = " ".join(safe_str(x) for x in text_parts if safe_str(x)).lower()
     compact = text.replace("-", " ").replace("_", " ")
 
     qualification = safe_str(match.get("event_qualification")).lower() == "true"
-    if "qualif" in compact or "qualification" in compact:
+    if is_qualification_text(compact) or (tournament_key and tournament_key in API_TOURNAMENT_QUALIFICATION_KEYS):
         qualification = True
 
     if re.search(r"\b(women|woman|female|wta)\b", compact) or re.search(r"\bw(15|35|50|75|100)\b", compact):
@@ -557,21 +563,26 @@ def tournament_context(match: dict[str, Any]) -> dict[str, Any]:
         gender = "unknown"
 
     if "grand slam" in compact or "australian open" in compact or "roland garros" in compact or "wimbledon" in compact or "us open" in compact:
-        level = "grand_slam"
+        base_level = "grand_slam"
     elif "challenger" in compact or re.search(r"\bch(?:allenger)?\b", compact):
-        level = "challenger"
+        base_level = "challenger"
     elif "itf" in compact or re.search(r"\bm(15|25)\b", compact) or re.search(r"\bw(15|35|50|75|100)\b", compact):
-        level = "itf"
+        base_level = "itf"
     elif "atp" in compact or "wta" in compact:
-        level = "atp_wta"
+        base_level = "atp_wta"
     else:
-        level = "unknown"
+        base_level = "unknown"
 
-    # Keep old, backtest-aligned behavior: qualification is its own model/rating bucket.
-    if qualification:
-        level = "qualifying"
+    level = "qualifying" if qualification else base_level
 
-    return {"gender": gender, "level": level, "qualification": qualification, "context_text": compact}
+    return {
+        "gender": gender,
+        "level": level,
+        "base_level": base_level,
+        "qualification": qualification,
+        "context_text": compact,
+        "tournament_key": tournament_key,
+    }
 
 
 def api_key(gender: str, player_id: Any) -> str | None:
@@ -754,6 +765,74 @@ def level_component(player: dict[str, Any] | None, level: str) -> tuple[float, i
     return rating_value(player, "level", level), count_value(player, "level_matches", level)
 
 
+def overall_component(player: dict[str, Any] | None) -> tuple[float, int]:
+    if not isinstance(player, dict):
+        return RATING_INITIAL, 0
+    d = player.get("overall")
+    if not isinstance(d, dict):
+        return RATING_INITIAL, 0
+    r = (
+        safe_float(d.get("rating"))
+        or safe_float(d.get("elo"))
+        or safe_float(d.get("r"))
+        or RATING_INITIAL
+    )
+    n = (
+        safe_int(d.get("matches"))
+        or safe_int(d.get("count"))
+        or safe_int(d.get("n"))
+        or 0
+    )
+    return float(r), int(n)
+
+
+def qualification_base_level(level: str) -> str:
+    if level in {"atp_wta", "grand_slam", "challenger", "itf"}:
+        return level
+    return "overall"
+
+
+def qualification_rating_for_side(
+    player: dict[str, Any] | None,
+    opponent: dict[str, Any] | None,
+    *,
+    base_level: str,
+    rule: dict[str, Any],
+) -> dict[str, Any]:
+    base_level = qualification_base_level(base_level)
+
+    p_or, p_on = overall_component(player)
+    o_or, o_on = overall_component(opponent)
+
+    if base_level == "overall":
+        p_br, p_bn = p_or, p_on
+        o_br, o_bn = o_or, o_on
+        p_r, o_r = p_or, o_or
+        model_suffix = "overall_only"
+    else:
+        p_br, p_bn = level_component(player, base_level)
+        o_br, o_bn = level_component(opponent, base_level)
+        lw = float(rule.get("level_weight", 0.70))
+        ow = float(rule.get("overall_weight", 0.30))
+        p_r = blend_rating(p_br, p_or, lw, ow)
+        o_r = blend_rating(o_br, o_or, lw, ow)
+        model_suffix = f"{base_level}_70_overall_30"
+
+    return {
+        "prob": expected(p_r, o_r),
+        "min_level_matches": min(p_bn, o_bn),
+        "min_overall_matches": min(p_on, o_on),
+        "min_surface_matches": 0,
+        "player_level_rating": p_br,
+        "opponent_level_rating": o_br,
+        "player_overall_rating": p_or,
+        "opponent_overall_rating": o_or,
+        "player_surface_rating": RATING_INITIAL,
+        "opponent_surface_rating": RATING_INITIAL,
+        "model_suffix": model_suffix,
+    }
+
+
 def expected(ra: float, rb: float) -> float:
     return 1.0 / (1.0 + 10 ** ((rb - ra) / 400.0))
 
@@ -767,9 +846,13 @@ def model_prob_for_side(
     opponent: dict[str, Any] | None,
     *,
     level: str,
+    base_level: str,
     surface: str,
     rule: dict[str, Any],
 ) -> dict[str, Any]:
+    if level == "qualifying":
+        return qualification_rating_for_side(player, opponent, base_level=base_level, rule=rule)
+
     p_lr, p_ln = level_component(player, level)
     o_lr, o_ln = level_component(opponent, level)
     p_sr = rating_value(player, "surface", surface) if surface in VALID_SURFACES else RATING_INITIAL
@@ -782,6 +865,7 @@ def model_prob_for_side(
     return {
         "prob": expected(p_r, o_r),
         "min_level_matches": min(p_ln, o_ln),
+        "min_overall_matches": 0,
         "min_surface_matches": min(p_sn, o_sn),
         "player_level_rating": p_lr,
         "opponent_level_rating": o_lr,
@@ -1035,6 +1119,7 @@ def evaluate_side(
 ) -> dict[str, Any]:
     gender = context["gender"]
     level = context["level"]
+    base_level = context.get("base_level") or level
     p_api = api_key(gender, selected_key)
     o_api = api_key(gender, opponent_key)
     p_ckey, p_status = canonical_for_api(api_mapping, p_api)
@@ -1060,6 +1145,8 @@ def evaluate_side(
         "time": match_datetime(match)[1],
         "gender": gender,
         "level": level,
+        "base_level": base_level,
+        "qualification": bool(context.get("qualification")),
         "surface": surface,
         "surface_source": surface_source,
         "raw_event_type_type": safe_str(match.get("event_type_type")),
@@ -1071,7 +1158,7 @@ def evaluate_side(
         "raw_competition_name": safe_str(match.get("competition_name")),
         "raw_tournament_name": safe_str(match.get("tournament_name")),
         "raw_tournament_round": safe_str(match.get("tournament_round")),
-        "context_text": tournament_context(match).get("context_text", ""),
+        "context_text": context.get("context_text", ""),
         "tournament": match.get("tournament_name") or "",
         "round": match.get("tournament_round") or "",
         "match": f"{match.get('event_first_player')} - {match.get('event_second_player')}",
@@ -1133,6 +1220,7 @@ def evaluate_side(
             "tle_prob": extra.get("tle_prob"),
             "tle_edge": extra.get("tle_edge"),
             "tle_min_level_matches": extra.get("tle_min_level_matches"),
+            "tle_min_overall_matches": extra.get("tle_min_overall_matches"),
             "tle_min_surface_matches": extra.get("tle_min_surface_matches"),
             "stake": extra.get("stake"),
             "stake_label": extra.get("stake_label"),
@@ -1156,16 +1244,21 @@ def evaluate_side(
     if not isinstance(player, dict) or not isinstance(opponent, dict):
         return finish("NO_BET", "missing_rating_player", extra={"tle_model": model})
 
-    mp = model_prob_for_side(player, opponent, level=level, surface=surface, rule=rule)
+    mp = model_prob_for_side(player, opponent, level=level, base_level=base_level, surface=surface, rule=rule)
     prob = float(mp["prob"])
     edge = prob - implied
     min_level = int(mp["min_level_matches"])
+    min_overall = int(mp.get("min_overall_matches") or 0)
     min_surface = int(mp["min_surface_matches"])
+    model_name = model
+    if level == "qualifying" and mp.get("model_suffix"):
+        model_name = f"{model}:{mp.get('model_suffix')}"
     extra = {
-        "tle_model": model,
+        "tle_model": model_name,
         "tle_prob": round(prob, 8),
         "tle_edge": round(edge, 8),
         "tle_min_level_matches": min_level,
+        "tle_min_overall_matches": min_overall if level == "qualifying" else "",
         "tle_min_surface_matches": min_surface if rule["needs_surface"] else "",
         "stake": 1.0,
         "stake_label": "Standard",
@@ -1173,6 +1266,8 @@ def evaluate_side(
 
     if min_level < int(rule["min_level_matches"]):
         return finish("NO_BET", "min_level_not_met", extra=extra)
+    if level == "qualifying" and min_overall < int(rule.get("min_overall_matches", 0)):
+        return finish("NO_BET", "min_overall_not_met", extra=extra)
     if rule["needs_surface"] and min_surface < int(rule["min_surface_matches"]):
         return finish("NO_BET", "min_surface_not_met", extra=extra)
     if prob < float(rule["min_prob"]):
@@ -1302,9 +1397,15 @@ def main() -> None:
     players = get_players_from_ratings(ratings)
     api_mapping = read_api_mapping(args.api_mapping)
 
-    global TOURNAMENT_SURFACE_MAP, API_TOURNAMENT_SURFACE_BY_KEY
+    global TOURNAMENT_SURFACE_MAP, API_TOURNAMENT_SURFACE_BY_KEY, API_TOURNAMENT_META_BY_KEY, API_TOURNAMENT_QUALIFICATION_KEYS
     TOURNAMENT_SURFACE_MAP = read_tournament_surface_map(SURFACE_MAP_JSON)
-    API_TOURNAMENT_SURFACE_BY_KEY = read_api_tournament_surface_map(API_TOURNAMENTS_METADATA_JSON)
+    API_TOURNAMENT_META_BY_KEY = read_api_tournament_metadata_map(API_TOURNAMENTS_METADATA_JSON)
+    API_TOURNAMENT_SURFACE_BY_KEY = {
+        k: v["surface"] for k, v in API_TOURNAMENT_META_BY_KEY.items() if v.get("surface") in VALID_SURFACES
+    }
+    API_TOURNAMENT_QUALIFICATION_KEYS = {
+        k for k, v in API_TOURNAMENT_META_BY_KEY.items() if v.get("qualification") == "true"
+    }
 
     start_date = datetime.strptime(args.date, "%Y-%m-%d").date() if args.date else local_today()
     fixtures: list[dict[str, Any]] = []
@@ -1408,6 +1509,8 @@ def main() -> None:
         "min_start_minutes": args.min_start_minutes,
         "surface_map_entries": len(TOURNAMENT_SURFACE_MAP),
         "api_tournament_surface_entries": len(API_TOURNAMENT_SURFACE_BY_KEY),
+        "api_tournament_name_entries": len(API_TOURNAMENT_META_BY_KEY),
+        "api_tournament_qualification_keys": len(API_TOURNAMENT_QUALIFICATION_KEYS),
         "api_tournaments_metadata_json": str(API_TOURNAMENTS_METADATA_JSON),
         "unresolved_surface_count": len(unresolved_surface),
         "decision_counts_scan": dict(sorted(Counter(r["decision"] for r in rows).items())),
