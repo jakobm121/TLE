@@ -1,19 +1,41 @@
 {
   "counters": {
-    "manual_review": 32,
-    "no_candidate": 17,
-    "review_players": 157,
-    "safe_override": 106,
-    "weak_candidate": 2
+    "manual_review": 2,
+    "no_candidate": 2,
+    "review_likely": 2,
+    "review_players": 18,
+    "safe_override": 11,
+    "very_weak_candidate": 1
   },
-  "generated_at": "2026-06-16T08:49:36+00:00",
+  "generated_at": "2026-06-22T17:00:33+00:00",
   "outputs": {
     "csv": "data/reports/api_tennis/today_mapping_sackmann_candidate_search.csv",
-    "json": "data/reports/api_tennis/today_mapping_sackmann_candidate_search.json"
+    "json": "data/reports/api_tennis/today_mapping_sackmann_candidate_search.json",
+    "suggested_overrides_json": "data/reports/api_tennis/today_mapping_suggested_overrides.json"
   },
-  "players_in_review": 157,
+  "players_in_review": 18,
+  "rows_written": 26,
+  "sackmann_index": {
+    "by_gender": {
+      "men": 5265,
+      "women": 6787
+    },
+    "sackmann_players": 12052,
+    "source_counters": {
+      "canonical_jsonl_files": 4,
+      "canonical_jsonl_matches_scanned": 222314,
+      "manifest_files": 4,
+      "manifest_matches_scanned": 223145,
+      "raw_csv_files": 20,
+      "raw_csv_rows_scanned": 223313,
+      "source_sackmann_jsonl_files": 4,
+      "source_sackmann_jsonl_matches_scanned": 223145
+    }
+  },
   "sackmann_manifest": "data/source/sackmann/manifest.json",
-  "sackmann_players": 12045,
+  "safety_note": "This script only suggests candidates/overrides. It does not modify player_mapping.json or player_mapping_overrides.json.",
   "status": "ok",
+  "suggested_overrides": 13,
+  "today_no_candidates": "data/reports/api_tennis/today_mapping_no_candidates.csv",
   "today_review": "data/reports/api_tennis/today_mapping_review.csv"
 }
