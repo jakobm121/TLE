@@ -145,7 +145,7 @@ LEVEL_RULES = {
         "level_weight": 1.00,
         "surface_weight": 0.00,
         "needs_surface": False,
-        "min_level_matches": 10,
+        "min_level_matches": 15,
         "min_surface_matches": 0,
         "min_prob": 0.50,
         "edge_bet": 0.04,
@@ -166,7 +166,7 @@ LEVEL_RULES = {
 
 CSV_FIELDS = [
     "pick_id", "status", "decision", "confidence", "reason",
-    "date", "time", "gender", "level", "qualification", "surface", "surface_source",
+    "date", "time", "gender", "level", "surface", "surface_source",
     "raw_event_type_type", "raw_event_type_key", "raw_event_type", "raw_event_name",
     "raw_event_country_name", "raw_league_name", "raw_competition_name",
     "raw_tournament_name", "raw_tournament_round", "context_text",
@@ -500,6 +500,8 @@ def normalize_level(level: Any, event_type: Any = None, qualification: Any = Non
     ev = safe_str(event_type).lower()
     q = safe_str(qualification).lower() in {"1", "true", "yes", "y"}
 
+    if q or "qualification" in ev or "qualifying" in ev:
+        return "qualifying"
     if s in {"main_tour", "tour", "atp", "wta", "atp_wta"}:
         return "atp_wta"
     if s in {"grand_slam", "slam"}:
@@ -516,8 +518,6 @@ def normalize_level(level: Any, event_type: Any = None, qualification: Any = Non
         return "itf"
     if "atp" in text or "wta" in text:
         return "atp_wta"
-    if q or "qualification" in ev or "qualifying" in ev:
-        return "qualifying"
     return s or "unknown"
 
 
@@ -564,10 +564,7 @@ def tournament_context(match: dict[str, Any]) -> dict[str, Any]:
     else:
         level = "unknown"
 
-    # Qualification is now a tracking flag, not its own model bucket.
-    # Challenger qualification uses challenger model, ITF qualification uses ITF model, etc.
-    # Only fall back to the old qualifying bucket if the base tour level is unknown.
-    if qualification and level == "unknown":
+    if qualification:
         level = "qualifying"
 
     return {"gender": gender, "level": level, "qualification": qualification, "context_text": compact}
@@ -1124,7 +1121,6 @@ def evaluate_side(
         "time": match_datetime(match)[1],
         "gender": gender,
         "level": level,
-        "qualification": bool(context.get("qualification")),
         "surface": surface,
         "surface_source": surface_source,
 
@@ -1474,7 +1470,7 @@ def main() -> None:
 
     write_json(PREDICTIONS_JSON, {
         "generated_at": now_utc_iso(),
-        "model": "TLE Standalone Elo Scanner v3.5",
+        "model": "TLE Standalone Elo Scanner v3.4",
         "summary": {
             "active_picks": len(active),
             "new_added": added,
@@ -1485,7 +1481,7 @@ def main() -> None:
     })
     write_json(RESULTS_JSON, {
         "generated_at": now_utc_iso(),
-        "model": "TLE Standalone Elo Scanner v3.5",
+        "model": "TLE Standalone Elo Scanner v3.4",
         "summary": {
             "total_tracked": len(results_all),
             "pending": sum(1 for r in results_all if safe_str(r.get("status")).lower() == "pending"),
@@ -1544,7 +1540,6 @@ def main() -> None:
         "decision_counts_scan": dict(sorted(Counter(r["decision"] for r in rows).items())),
         "reason_counts_scan": dict(sorted(Counter(r["reason"] for r in rows).items())),
         "by_level_scan": dict(sorted(Counter(r["level"] for r in rows).items())),
-        "by_qualification_scan": dict(sorted(Counter(str(bool(r.get("qualification"))) for r in rows).items())),
         "by_surface_source_scan": dict(sorted(Counter(r.get("surface_source", "") for r in rows).items())),
         "counters": dict(sorted(counters.items())),
         "odds_rules": {
