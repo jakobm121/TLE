@@ -394,12 +394,43 @@ def write_tournament_surface_map(path: Path = SURFACE_MAP_JSON) -> None:
 
 
 def _extract_tournament_rows(payload: Any) -> list[dict[str, Any]]:
-    if isinstance(payload, dict):
-        result = payload.get("result", payload.get("tournaments"))
-        if isinstance(result, list):
-            return [x for x in result if isinstance(x, dict)]
+    """Extract rows from either raw API response or 06a wrapped payload.
+
+    06a writes:
+      {
+        "schema_version": 1,
+        "source": "api_tennis",
+        "method": "get_tournaments",
+        "response": {"success": 1, "result": [...]}
+      }
+
+    Debug/manual scripts may write the raw API response directly:
+      {"success": 1, "result": [...]}
+
+    Keep both formats supported.
+    """
     if isinstance(payload, list):
         return [x for x in payload if isinstance(x, dict)]
+
+    if not isinstance(payload, dict):
+        return []
+
+    # 06a wrapped file: data/raw/api_tennis/metadata/get_tournaments.json
+    response = payload.get("response")
+    if isinstance(response, dict):
+        result = response.get("result")
+        if isinstance(result, list):
+            return [x for x in result if isinstance(x, dict)]
+        if isinstance(result, dict):
+            return [x for x in result.values() if isinstance(x, dict)]
+
+    # Raw API response or future simplified cache format.
+    result = payload.get("result", payload.get("tournaments"))
+    if isinstance(result, list):
+        return [x for x in result if isinstance(x, dict)]
+    if isinstance(result, dict):
+        return [x for x in result.values() if isinstance(x, dict)]
+
     return []
 
 
