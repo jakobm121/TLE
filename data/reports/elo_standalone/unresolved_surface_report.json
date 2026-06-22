@@ -1,6 +1,6 @@
 {
-  "count": 10,
-  "generated_at": "2026-06-22T06:12:28+00:00",
+  "count": 9,
+  "generated_at": "2026-06-22T07:36:11+00:00",
   "items": [
     {
       "context_text": "wta singles bad homburg wta bad homburg   1/16 finals 4228",
@@ -110,19 +110,6 @@
       "raw_tournament_name": "Plovdiv (Bulgaria) - Qualification",
       "raw_tournament_round": "Plovdiv - 1/16-finals",
       "suggested_map_key": "challenger men singles plovdiv (bulgaria) qualification plovdiv 1/16 finals 14005"
-    },
-    {
-      "context_text": "challenger men singles plovdiv (bulgaria)   qualification plovdiv   final 14005",
-      "gender": "men",
-      "level": "challenger",
-      "matches": [
-        "I. Lopez Morillo - D. N. Cazacu",
-        "N. Tajima - D. Dinev"
-      ],
-      "raw_event_type_type": "Challenger Men Singles",
-      "raw_tournament_name": "Plovdiv (Bulgaria) - Qualification",
-      "raw_tournament_round": "Plovdiv - Final",
-      "suggested_map_key": "challenger men singles plovdiv (bulgaria) qualification plovdiv final 14005"
     },
     {
       "context_text": "challenger men singles targu mures targu mures   1/16 finals 12993",

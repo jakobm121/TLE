@@ -2,35 +2,36 @@
   "active_predictions_total": 3,
   "by_level_scan": {
     "atp_wta": 52,
-    "challenger": 54,
+    "challenger": 46,
     "grand_slam": 126,
     "itf": 8
   },
   "by_qualification_scan": {
     "False": 82,
-    "True": 158
+    "True": 150
   },
   "by_surface_source_scan": {
-    "missing": 114,
+    "missing": 106,
     "tournament_surface_map": 126
   },
   "counters": {
     "fixture_skip_doubles_or_team": 19,
+    "fixture_skip_starts_too_soon": 6,
     "fixture_skip_status_cancelled": 1,
-    "fixtures_scanned": 133,
-    "fixtures_with_diagnostics": 120,
+    "fixtures_scanned": 127,
+    "fixtures_with_diagnostics": 116,
     "fixtures_with_output": 3
   },
   "date_start": "2026-06-22",
   "days_ahead": 1,
   "decision_counts_scan": {
-    "NO_BET": 237,
+    "NO_BET": 229,
     "STRONG_BET": 3
   },
   "fixtures_total": 153,
-  "generated_at": "2026-06-22T06:12:28+00:00",
+  "generated_at": "2026-06-22T07:36:11+00:00",
   "min_start_minutes": 30,
-  "new_added_to_predictions": 3,
+  "new_added_to_predictions": 0,
   "new_candidates": 3,
   "notes": [
     "This is standalone: it scans all eligible API fixtures and odds, not only tennis value picks.",
@@ -59,13 +60,13 @@
     "elo_prob_too_low": 9,
     "min_level_not_met": 31,
     "min_surface_not_met": 29,
-    "odds_outside_range": 56,
+    "odds_outside_range": 54,
     "pass_strong_edge": 3,
-    "unknown_surface": 78,
-    "unmapped_player": 28
+    "unknown_surface": 74,
+    "unmapped_player": 26
   },
-  "scan_rows": 240,
+  "scan_rows": 232,
   "status": "ok",
   "surface_map_entries": 23,
-  "unresolved_surface_count": 10
+  "unresolved_surface_count": 9
 }
