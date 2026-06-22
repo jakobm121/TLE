@@ -1,0 +1,130 @@
+name: Debug API Tennis Payload
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Scan date YYYY-MM-DD"
+        required: true
+        default: "2026-06-22"
+      event_key:
+        description: "Optional event_key / match_key for deeper fixture lookup"
+        required: false
+        default: ""
+      tournament_key:
+        description: "Optional tournament_key"
+        required: false
+        default: ""
+      player_key:
+        description: "Optional player_key"
+        required: false
+        default: ""
+      include_tournaments:
+        description: "Also call get_tournaments"
+        required: true
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
+      include_standings:
+        description: "Try get_standings if available"
+        required: true
+        default: "false"
+        type: choice
+        options:
+          - "true"
+          - "false"
+
+permissions:
+  contents: write
+
+jobs:
+  debug-api-tennis-payload:
+    runs-on: ubuntu-latest
+
+    env:
+      TENNIS_API_KEY: ${{ secrets.TENNIS_API_KEY }}
+      API_KEY: ${{ secrets.API_KEY }}
+      API_TENNIS_KEY: ${{ secrets.API_TENNIS_KEY }}
+      APITENNIS_KEY: ${{ secrets.APITENNIS_KEY }}
+      API_TENNIS_API_KEY: ${{ secrets.API_TENNIS_API_KEY }}
+      TENNIS_VALUE_API_KEY: ${{ secrets.TENNIS_VALUE_API_KEY }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build args
+        id: args
+        shell: bash
+        run: |
+          EXTRA_ARGS="--date '${{ github.event.inputs.date }}'"
+
+          if [ -n "${{ github.event.inputs.event_key }}" ]; then
+            EXTRA_ARGS="$EXTRA_ARGS --event-key '${{ github.event.inputs.event_key }}'"
+          fi
+
+          if [ -n "${{ github.event.inputs.tournament_key }}" ]; then
+            EXTRA_ARGS="$EXTRA_ARGS --tournament-key '${{ github.event.inputs.tournament_key }}'"
+          fi
+
+          if [ -n "${{ github.event.inputs.player_key }}" ]; then
+            EXTRA_ARGS="$EXTRA_ARGS --player-key '${{ github.event.inputs.player_key }}'"
+          fi
+
+          if [ "${{ github.event.inputs.include_tournaments }}" = "true" ]; then
+            EXTRA_ARGS="$EXTRA_ARGS --include-tournaments"
+          fi
+
+          if [ "${{ github.event.inputs.include_standings }}" = "true" ]; then
+            EXTRA_ARGS="$EXTRA_ARGS --include-standings"
+          fi
+
+          echo "extra_args=$EXTRA_ARGS" >> "$GITHUB_OUTPUT"
+          echo "EXTRA_ARGS=$EXTRA_ARGS"
+
+      - name: Run API payload debugger
+        shell: bash
+        run: |
+          python tle_machine/debug_api_tennis_payload.py ${{ steps.args.outputs.extra_args }}
+
+      - name: Show debug summary
+        shell: bash
+        run: |
+          echo "Generated files:"
+          find data/reports/api_tennis_debug -maxdepth 1 -type f -print | sort
+
+          echo ""
+          echo "Index:"
+          cat data/reports/api_tennis_debug/index.json
+
+          echo ""
+          echo "Fixture summary:"
+          cat data/reports/api_tennis_debug/summary_fixtures_date.json
+
+          if [ -f data/reports/api_tennis_debug/summary_tournaments.json ]; then
+            echo ""
+            echo "Tournament summary:"
+            cat data/reports/api_tennis_debug/summary_tournaments.json
+          fi
+
+      - name: Commit debug outputs
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add data/reports/api_tennis_debug/
+
+          if git diff --cached --quiet; then
+            echo "No debug output changes to commit."
+          else
+            git commit -m "Debug API-Tennis payload"
+            git push
+          fi
