@@ -3,24 +3,24 @@
   "cache_total_after": 5280,
   "cache_with_full_name_after": 2615,
   "collect_stats": {
-    "files_seen": 1,
-    "raw_fixtures_seen": 153,
-    "singles_fixtures_used": 134,
-    "skipped_doubles_fixtures": 19
+    "files_seen": 2,
+    "raw_fixtures_seen": 259,
+    "singles_fixtures_used": 234,
+    "skipped_doubles_fixtures": 25
   },
   "counters": {
     "cache_existing_before": 5280,
-    "candidate_player_ids": 267,
-    "fetched": 6,
-    "fetched_missing_full_name": 6,
-    "to_fetch": 6
+    "candidate_player_ids": 412,
+    "fetched": 8,
+    "fetched_missing_full_name": 8,
+    "to_fetch": 8
   },
   "date_filter": {
     "end_date": "2026-06-22",
-    "start_date": "2026-06-22"
+    "start_date": "2026-06-21"
   },
   "errors": [],
-  "generated_at": "2026-06-22T07:23:35+00:00",
+  "generated_at": "2026-06-22T10:21:59+00:00",
   "method": "get_players",
   "outputs": {
     "cache": "data/raw/api_tennis/players/api_players.json",
@@ -28,7 +28,8 @@
     "report": "data/reports/api_tennis/fetch_api_player_details_report.json"
   },
   "raw_files": {
-    "2026-06-22.json": 153
+    "2026-06-21.json": 103,
+    "2026-06-22.json": 156
   },
   "raw_results_dir": "data/raw/api_tennis/results",
   "sample_fetched": [
@@ -40,7 +41,7 @@
       "player_logo": "https://api.api-tennis.com/logo-tennis/2576_a-kucmova.jpg",
       "player_name": "A. Kucmova",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-22T07:23:31+00:00"
+      "updated_at": "2026-06-22T10:21:55+00:00"
     },
     {
       "player_bday": "",
@@ -50,7 +51,7 @@
       "player_logo": "",
       "player_name": "M. Mrva",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-22T07:23:32+00:00"
+      "updated_at": "2026-06-22T10:21:55+00:00"
     },
     {
       "player_bday": "19.06.2006",
@@ -60,7 +61,17 @@
       "player_logo": "https://api.api-tennis.com/logo-tennis/34386_m-tobon.jpg",
       "player_name": "M. Tobon",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-22T07:23:32+00:00"
+      "updated_at": "2026-06-22T10:21:56+00:00"
+    },
+    {
+      "player_bday": "17.06.2008",
+      "player_country": "Brazil",
+      "player_full_name": "",
+      "player_key": "67510",
+      "player_logo": "",
+      "player_name": "P. Rodrigues Longobardi",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-22T10:21:56+00:00"
     },
     {
       "player_bday": "13.03.2009",
@@ -70,7 +81,7 @@
       "player_logo": "https://api.api-tennis.com/logo-tennis/70760_m-ceban.jpg",
       "player_name": "M. Ceban",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-22T07:23:33+00:00"
+      "updated_at": "2026-06-22T10:21:57+00:00"
     },
     {
       "player_bday": "01.01.1970",
@@ -80,7 +91,7 @@
       "player_logo": "",
       "player_name": "A. Gentili",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-22T07:23:34+00:00"
+      "updated_at": "2026-06-22T10:21:58+00:00"
     },
     {
       "player_bday": "",
@@ -90,7 +101,17 @@
       "player_logo": "",
       "player_name": "A. Tolev",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-22T07:23:35+00:00"
+      "updated_at": "2026-06-22T10:21:58+00:00"
+    },
+    {
+      "player_bday": "",
+      "player_country": "",
+      "player_full_name": "",
+      "player_key": "104247",
+      "player_logo": "",
+      "player_name": "A. Ganchev",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-22T10:21:59+00:00"
     }
   ],
   "source": "api_tennis"

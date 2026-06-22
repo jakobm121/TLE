@@ -2759,20 +2759,20 @@ source_file,raw_index,api_event_key,date,gender,event_status,event_type_type,tou
 2026-06-21.json,70,12138964,2026-06-21,,Cancelled,Challenger Men Singles,Targu Mures,,,,,,38014,S. A. Andreescu,580,M. Janvier,,,,-,not_finished
 2026-06-21.json,71,12138965,2026-06-21,,Cancelled,Challenger Men Singles,Targu Mures,,,,,,972,C. Cretu,4694,N. Barrientos,,,,-,not_finished
 2026-06-21.json,85,12139015,2026-06-21,,Finished,Atp Doubles,Halle,,ATP Halle - Final,,,,91199,Arribage/ Olivetti,103788,Altmaier/ Fonseca,,,,2 - 0,doubles_or_team_match
-2026-06-22.json,0,12138702,2026-06-22,,Interrupted,Wta Doubles,Berlin,,WTA Berlin - Semi-finals,,,,103806,Alexandrova/ Noskova,100133,Eikeri/ Gleason,,,,1 - 0,doubles_or_team_match
+2026-06-22.json,0,12138702,2026-06-22,,Finished,Wta Doubles,Berlin,,WTA Berlin - Semi-finals,,,,103806,Alexandrova/ Noskova,100133,Eikeri/ Gleason,,,,2 - 0,doubles_or_team_match
 2026-06-22.json,1,12138808,2026-06-22,,,Wta Singles,Bad Homburg,,WTA Bad Homburg - 1/16-finals,,,,3490,A. Eala,521,E. Mertens,,,,-,not_finished
-2026-06-22.json,2,12138809,2026-06-22,,,Wta Singles,Bad Homburg,,WTA Bad Homburg - 1/16-finals,,,,58226,I. Jovic,1812,Xin. Wang,,,,-,not_finished
+2026-06-22.json,2,12138809,2026-06-22,,Cancelled,Wta Singles,Bad Homburg,,WTA Bad Homburg - 1/16-finals,,,,58226,I. Jovic,1812,Xin. Wang,,,,-,not_finished
 2026-06-22.json,3,12138812,2026-06-22,women,Interrupted,Wta Singles,Bad Homburg,,WTA Bad Homburg - 1/16-finals,,,,2685,N. Osaka,2089,M. Frech,,,,0 - 0,missing_or_unresolved_winner
-2026-06-22.json,4,12138814,2026-06-22,,,Wta Singles,Bad Homburg,,WTA Bad Homburg - 1/16-finals,,,,3007,C. Tauson,7403,D. Shnaider,,,,-,not_finished
+2026-06-22.json,4,12138814,2026-06-22,women,Set 2,Wta Singles,Bad Homburg,,WTA Bad Homburg - 1/16-finals,,,,3007,C. Tauson,7403,D. Shnaider,,,,1 - 0,missing_or_unresolved_winner
 2026-06-22.json,5,12138855,2026-06-22,,,Atp Singles,Mallorca,,ATP Mallorca - 1/16-finals,,,,2831,J-L. Struff,39864,M. Landaluce,,,,-,not_finished
-2026-06-22.json,6,12138856,2026-06-22,,,Atp Singles,Mallorca,,ATP Mallorca - 1/16-finals,,,,9225,E. Quinn,954,V. Royer,,,,-,not_finished
+2026-06-22.json,6,12138856,2026-06-22,men,Set 1,Atp Singles,Mallorca,,ATP Mallorca - 1/16-finals,,,,9225,E. Quinn,954,V. Royer,,,,0 - 0,missing_or_unresolved_winner
 2026-06-22.json,7,12138858,2026-06-22,,,Atp Singles,Mallorca,,ATP Mallorca - 1/16-finals,,,,2674,C. Moutet,2833,M. Fucsovics,,,,-,not_finished
 2026-06-22.json,8,12138859,2026-06-22,,,Atp Singles,Mallorca,,ATP Mallorca - 1/16-finals,,,,2848,M. Kecmanovic,2677,H. Medjedovic,,,,-,not_finished
 2026-06-22.json,9,12138874,2026-06-22,,,Atp Singles,Eastbourne,,ATP Eastbourne - 1/16-finals,,,,1064,Z. Bergs,2083,J. Munar,,,,-,not_finished
 2026-06-22.json,10,12138876,2026-06-22,,,Atp Singles,Eastbourne,,ATP Eastbourne - 1/16-finals,,,,825,R. Collignon,388,J. M. Cerundolo,,,,-,not_finished
-2026-06-22.json,11,12138877,2026-06-22,,,Atp Singles,Eastbourne,,ATP Eastbourne - 1/16-finals,,,,9909,G. Diallo,13091,T. Atmane,,,,-,not_finished
+2026-06-22.json,11,12138877,2026-06-22,men,Set 1,Atp Singles,Eastbourne,,ATP Eastbourne - 1/16-finals,,,,9909,G. Diallo,13091,T. Atmane,,,,0 - 0,missing_or_unresolved_winner
 2026-06-22.json,12,12138879,2026-06-22,,,Atp Singles,Eastbourne,,ATP Eastbourne - 1/16-finals,,,,2838,B. Nakashima,7011,J. Draper,,,,-,not_finished
-2026-06-22.json,13,12138880,2026-06-22,,,Atp Singles,Eastbourne,,ATP Eastbourne - 1/16-finals,,,,1858,J. Pinnington Jones,401,C. Ugo Carabelli,,,,-,not_finished
+2026-06-22.json,13,12138880,2026-06-22,,Cancelled,Atp Singles,Eastbourne,,ATP Eastbourne - 1/16-finals,,,,1858,J. Pinnington Jones,401,C. Ugo Carabelli,,,,-,not_finished
 2026-06-22.json,14,12138883,2026-06-22,,,Atp Doubles,Eastbourne,,ATP Eastbourne - 1/8-finals,,,,78563,Ho/ Oberleitner,89221,Andreozzi/ Guinard,,,,-,doubles_or_team_match
 2026-06-22.json,15,12138885,2026-06-22,,,Atp Doubles,Eastbourne,,ATP Eastbourne - 1/8-finals,,,,27070,Nys/ Roger-Vasselin,103827,Jebens/ Vocel,,,,-,doubles_or_team_match
 2026-06-22.json,16,12138888,2026-06-22,,,Atp Doubles,Eastbourne,,ATP Eastbourne - 1/8-finals,,,,61063,Stevenson/ Willis,9914,Luz/ Matos,,,,-,doubles_or_team_match
@@ -2780,7 +2780,7 @@ source_file,raw_index,api_event_key,date,gender,event_status,event_type_type,tou
 2026-06-22.json,18,12138893,2026-06-22,,,Wta Doubles,Bad Homburg,,WTA Bad Homburg - 1/8-finals,,,,100504,Brockmann/ Seidel,29317,Tang/ Zhang,,,,-,doubles_or_team_match
 2026-06-22.json,19,12138896,2026-06-22,,Interrupted,Wta Doubles,Bad Homburg,,WTA Bad Homburg - 1/8-finals,,,,99798,Jiang/ Xu,69174,Mihalikova/ Nicholls,,,,0 - 1,doubles_or_team_match
 2026-06-22.json,20,12138908,2026-06-22,,,Wta Singles,Eastbourne,,WTA Eastbourne - 1/16-finals,,,,2802,J. Ostapenko,2991,F. Jones,,,,-,not_finished
-2026-06-22.json,21,12138909,2026-06-22,,,Wta Singles,Eastbourne,,WTA Eastbourne - 1/16-finals,,,,55586,H. Klugman,8976,T. Valentova,,,,-,not_finished
+2026-06-22.json,21,12138909,2026-06-22,women,Set 1,Wta Singles,Eastbourne,,WTA Eastbourne - 1/16-finals,,,,55586,H. Klugman,8976,T. Valentova,,,,0 - 0,missing_or_unresolved_winner
 2026-06-22.json,22,12138910,2026-06-22,,,Wta Singles,Eastbourne,,WTA Eastbourne - 1/16-finals,,,,22072,M. Kessler,1990,D. Kasatkina,,,,-,not_finished
 2026-06-22.json,23,12138911,2026-06-22,,Cancelled,Wta Singles,Eastbourne,,WTA Eastbourne - 1/16-finals,,,,52689,M. Joint,525,V. Golubic,,,,-,not_finished
 2026-06-22.json,24,12138976,2026-06-22,,,Challenger Men Singles,Plovdiv (Bulgaria) - Qualification,,Plovdiv - 1/16-finals,,,,851,T. Compagnucci,31143,M. Mrva,,,,-,not_finished
@@ -2793,7 +2793,7 @@ source_file,raw_index,api_event_key,date,gender,event_status,event_type_type,tou
 2026-06-22.json,31,12138991,2026-06-22,,,Challenger Men Singles,Targu Mures,,Targu Mures - 1/16-finals,,,,1742,S. Gueymard Wayenburg,69520,G. Ghetu,,,,-,not_finished
 2026-06-22.json,32,12138994,2026-06-22,,,Challenger Men Singles,Targu Mures,,Targu Mures - 1/16-finals,,,,1238,I. Simakin,833,M. Topo,,,,-,not_finished
 2026-06-22.json,33,12138995,2026-06-22,,,Challenger Men Singles,Targu Mures,,Targu Mures - 1/16-finals,,,,34386,M. Tobon,906,M. Krumich,,,,-,not_finished
-2026-06-22.json,34,12139007,2026-06-22,,,Wta Doubles,Eastbourne,,WTA Eastbourne - 1/8-finals,,,,104206,Kato/ Rakhimova,104207,Appleton/ Dudeney,,,,-,doubles_or_team_match
+2026-06-22.json,34,12139007,2026-06-22,,Set 1,Wta Doubles,Eastbourne,,WTA Eastbourne - 1/8-finals,,,,104206,Kato/ Rakhimova,104207,Appleton/ Dudeney,,,,0 - 0,doubles_or_team_match
 2026-06-22.json,35,12139008,2026-06-22,,,Wta Doubles,Eastbourne,,WTA Eastbourne - 1/8-finals,,,,103833,Jurak Schreiber/ Ruzic,9487,Errani/ Paolini,,,,-,doubles_or_team_match
 2026-06-22.json,36,12139010,2026-06-22,,,Wta Doubles,Eastbourne,,WTA Eastbourne - 1/8-finals,,,,2887,Dabrowski/ Stefani,102262,Detiuc/ Khromacheva,,,,-,doubles_or_team_match
 2026-06-22.json,37,12139029,2026-06-22,,,Challenger Men Singles,Piracicaba,,Piracicaba - 1/16-finals,,,,560,H. Casanova,6712,E. Ribeiro,,,,-,not_finished
@@ -2801,23 +2801,18 @@ source_file,raw_index,api_event_key,date,gender,event_status,event_type_type,tou
 2026-06-22.json,39,12139034,2026-06-22,,,Challenger Men Singles,Piracicaba,,Piracicaba - 1/16-finals,,,,9035,M. Soto,685,I. Monzon,,,,-,not_finished
 2026-06-22.json,40,12139035,2026-06-22,,,Challenger Men Singles,Piracicaba,,Piracicaba - 1/16-finals,,,,2085,J. B. Torres,1307,A. Hernandez,,,,-,not_finished
 2026-06-22.json,41,12139036,2026-06-22,,,Challenger Men Singles,Piracicaba,,Piracicaba - 1/16-finals,,,,5181,G. Villanueva,39931,N. Villalon,,,,-,not_finished
-2026-06-22.json,42,12139042,2026-06-22,,,Challenger Men Singles,Plovdiv (Bulgaria) - Qualification,,Plovdiv - Final,,,,37927,T. Berkieta,104246,A. Tolev,,,,-,not_finished
-2026-06-22.json,43,12139043,2026-06-22,,,Challenger Men Singles,Plovdiv (Bulgaria) - Qualification,,Plovdiv - Final,,,,991,I. Lopez Morillo,38011,D. N. Cazacu,,,,-,not_finished
-2026-06-22.json,44,12139044,2026-06-22,,,Challenger Men Singles,Plovdiv (Bulgaria) - Qualification,,Plovdiv - Final,,,,2453,N. Tajima,10850,D. Dinev,,,,-,not_finished
-2026-06-22.json,45,12139045,2026-06-22,,,Challenger Men Singles,Targu Mures,,Targu Mures - Final,,,,15768,R. M. Papoe,13694,J. Sperle,,,,-,not_finished
-2026-06-22.json,46,12139046,2026-06-22,,,Challenger Men Singles,Targu Mures,,Targu Mures - Final,,,,588,O. Roca Batalla,2015,S. Gima,,,,-,not_finished
+2026-06-22.json,44,12139044,2026-06-22,men,Set 3,Challenger Men Singles,Plovdiv (Bulgaria) - Qualification,,Plovdiv - Final,,,,2453,N. Tajima,10850,D. Dinev,,,,1 - 1,missing_or_unresolved_winner
 2026-06-22.json,47,12139064,2026-06-22,,,Wta Singles,Bad Homburg,,WTA Bad Homburg - 1/16-finals,,,,5341,V. Williams,2828,I. Begu,,,,-,not_finished
 2026-06-22.json,48,12139065,2026-06-22,,,Wta Singles,Bad Homburg,,WTA Bad Homburg - 1/16-finals,,,,140,S. Sierra,1813,Q. Zheng,,,,-,not_finished
 2026-06-22.json,49,12139067,2026-06-22,,,Wta Singles,Bad Homburg,,WTA Bad Homburg - 1/16-finals,,,,1424,S. Kraus,1820,A. Kalinskaya,,,,-,not_finished
 2026-06-22.json,50,12139069,2026-06-22,,,Challenger Men Singles,Piracicaba,,Piracicaba - Final,,,,5469,W. Leite,37939,R. Tosetto,,,,-,not_finished
 2026-06-22.json,51,12139070,2026-06-22,,,Challenger Men Singles,Piracicaba,,Piracicaba - Final,,,,9602,T. Cigarran,57484,L. Andrade da Silva,,,,-,not_finished
-2026-06-22.json,52,12139071,2026-06-22,,,Challenger Men Singles,Targu Mures,,Targu Mures - Final,,,,63402,R. D. Turcanu,14088,A. F. Rubio Fierros,,,,-,not_finished
-2026-06-22.json,53,12139072,2026-06-22,,,Challenger Men Singles,Targu Mures,,Targu Mures - Final,,,,2235,L. Potenza,37934,K. Uesugi,,,,-,not_finished
-2026-06-22.json,54,12139073,2026-06-22,,,Challenger Men Singles,Targu Mures,,Targu Mures - Final,,,,4694,N. Barrientos,569,D. Yevseyev,,,,-,not_finished
+2026-06-22.json,53,12139072,2026-06-22,men,Set 1,Challenger Men Singles,Targu Mures,,Targu Mures - Final,,,,2235,L. Potenza,37934,K. Uesugi,,,,0 - 0,missing_or_unresolved_winner
+2026-06-22.json,54,12139073,2026-06-22,men,Set 1,Challenger Men Singles,Targu Mures,,Targu Mures - Final,,,,4694,N. Barrientos,569,D. Yevseyev,,,,0 - 0,missing_or_unresolved_winner
 2026-06-22.json,55,12139074,2026-06-22,,,Challenger Men Singles,Targu Mures,,Targu Mures - Final,,,,52682,F. Balshaw,15664,P. Makk,,,,-,not_finished
 2026-06-22.json,56,12139075,2026-06-22,,,Challenger Men Singles,Plovdiv (Bulgaria) - Qualification,,Plovdiv - Final,,,,18088,N. K. Sinha,15916,L. Angelini,,,,-,not_finished
 2026-06-22.json,57,12139076,2026-06-22,,,Challenger Men Singles,Plovdiv (Bulgaria) - Qualification,,Plovdiv - Final,,,,2222,R. Faucon,100794,N. Belozertsev,,,,-,not_finished
-2026-06-22.json,58,12139077,2026-06-22,,,Challenger Men Singles,Plovdiv (Bulgaria) - Qualification,,Plovdiv - Final,,,,1857,T. J. Fancutt,85958,D. Kisimov,,,,-,not_finished
+2026-06-22.json,58,12139077,2026-06-22,men,Set 2,Challenger Men Singles,Plovdiv (Bulgaria) - Qualification,,Plovdiv - Final,,,,1857,T. J. Fancutt,85958,D. Kisimov,,,,1 - 0,missing_or_unresolved_winner
 2026-06-22.json,59,12139078,2026-06-22,,,Itf Women Singles,W50 Palma del Rio,,W50 Palma del Rio - 1/16-finals,,,,466,Y. Hatouka,1375,V. Turini,,,,-,not_finished
 2026-06-22.json,60,12139079,2026-06-22,,,Itf Women Singles,W50 Palma del Rio,,W50 Palma del Rio - 1/16-finals,,,,2990,A. Hesse,38035,C. Lopez Martinez,,,,-,not_finished
 2026-06-22.json,61,12139080,2026-06-22,,,Itf Women Singles,W50 Palma del Rio,,W50 Palma del Rio - 1/16-finals,,,,54884,L. Solar Donoso,9252,C. Fontenel,,,,-,not_finished
@@ -2826,22 +2821,22 @@ source_file,raw_index,api_event_key,date,gender,event_status,event_type_type,tou
 2026-06-22.json,64,12139090,2026-06-22,,,Atp Singles,Eastbourne,,ATP Eastbourne - 1/16-finals,,,,5979,J. Choinski,1926,A. Popyrin,,,,-,not_finished
 2026-06-22.json,65,12139091,2026-06-22,,,Atp Singles,Mallorca,,ATP Mallorca - 1/16-finals,,,,10148,F. Marozsan,436,A. Molcan,,,,-,not_finished
 2026-06-22.json,66,12139092,2026-06-22,,,Atp Singles,Mallorca,,ATP Mallorca - 1/16-finals,,,,10070,A. Walton,2984,N. Kyrgios,,,,-,not_finished
-2026-06-22.json,67,12139093,2026-06-22,,,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,6505,A. Andrade,54466,C. Smith,,,,-,not_finished
-2026-06-22.json,68,12139094,2026-06-22,,,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,796,Y. Bu,2980,H. Dellien,,,,-,not_finished
-2026-06-22.json,69,12139095,2026-06-22,,,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,38798,G. Cadenasso,38264,F. Cina,,,,-,not_finished
-2026-06-22.json,70,12139096,2026-06-22,,,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,7102,C. Chidekh,798,A. Dougaz,,,,-,not_finished
-2026-06-22.json,71,12139097,2026-06-22,,,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,2386,L. Djere,1243,M. Houkes,,,,-,not_finished
-2026-06-22.json,72,12139098,2026-06-22,,,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,824,J. Faria,1073,H. Grenier,,,,-,not_finished
-2026-06-22.json,73,12139099,2026-06-22,,,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,1102,H. Gaston,10018,L. Midon,,,,-,not_finished
-2026-06-22.json,74,12139100,2026-06-22,,,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,780,D. Glinka,1205,K. Coppejans,,,,-,not_finished
-2026-06-22.json,75,12139101,2026-06-22,,,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,717,F. A. Gomez,1762,C. Tabur,,,,-,not_finished
-2026-06-22.json,76,12139102,2026-06-22,,,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,731,M. Lajal,2103,L. Pavlovic,,,,-,not_finished
-2026-06-22.json,77,12139103,2026-06-22,,,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,6886,A. Matusevich,37897,R. Sakamoto,,,,-,not_finished
-2026-06-22.json,78,12139104,2026-06-22,,,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,3915,S. Napolitano,1186,B. Harris,,,,-,not_finished
-2026-06-22.json,79,12139105,2026-06-22,,,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,367,Z. Piros,57825,I. Ivanov,,,,-,not_finished
-2026-06-22.json,80,12139106,2026-06-22,,,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,1057,R. Safiullin,1882,J. McCabe,,,,-,not_finished
-2026-06-22.json,81,12139107,2026-06-22,,,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,907,H. Squire,9515,M. Zheng,,,,-,not_finished
-2026-06-22.json,82,12139108,2026-06-22,,,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,2227,C. Wong,377,B. Gojo,,,,-,not_finished
+2026-06-22.json,67,12139093,2026-06-22,men,Set 1,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,6505,A. Andrade,54466,C. Smith,,,,0 - 0,missing_or_unresolved_winner
+2026-06-22.json,68,12139094,2026-06-22,men,Set 1,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,796,Y. Bu,2980,H. Dellien,,,,0 - 0,missing_or_unresolved_winner
+2026-06-22.json,69,12139095,2026-06-22,men,Set 1,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,38798,G. Cadenasso,38264,F. Cina,,,,0 - 0,missing_or_unresolved_winner
+2026-06-22.json,70,12139096,2026-06-22,men,Set 1,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,7102,C. Chidekh,798,A. Dougaz,,,,0 - 0,missing_or_unresolved_winner
+2026-06-22.json,71,12139097,2026-06-22,men,Set 1,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,2386,L. Djere,1243,M. Houkes,,,,0 - 0,missing_or_unresolved_winner
+2026-06-22.json,72,12139098,2026-06-22,men,Set 1,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,824,J. Faria,1073,H. Grenier,,,,0 - 0,missing_or_unresolved_winner
+2026-06-22.json,73,12139099,2026-06-22,men,Set 1,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,1102,H. Gaston,10018,L. Midon,,,,0 - 0,missing_or_unresolved_winner
+2026-06-22.json,74,12139100,2026-06-22,men,Set 1,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,780,D. Glinka,1205,K. Coppejans,,,,0 - 0,missing_or_unresolved_winner
+2026-06-22.json,75,12139101,2026-06-22,men,Set 1,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,717,F. A. Gomez,1762,C. Tabur,,,,0 - 0,missing_or_unresolved_winner
+2026-06-22.json,76,12139102,2026-06-22,men,Set 1,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,731,M. Lajal,2103,L. Pavlovic,,,,0 - 0,missing_or_unresolved_winner
+2026-06-22.json,77,12139103,2026-06-22,men,Set 1,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,6886,A. Matusevich,37897,R. Sakamoto,,,,0 - 0,missing_or_unresolved_winner
+2026-06-22.json,78,12139104,2026-06-22,men,Set 1,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,3915,S. Napolitano,1186,B. Harris,,,,0 - 0,missing_or_unresolved_winner
+2026-06-22.json,79,12139105,2026-06-22,men,Set 1,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,367,Z. Piros,57825,I. Ivanov,,,,0 - 0,missing_or_unresolved_winner
+2026-06-22.json,80,12139106,2026-06-22,men,Set 1,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,1057,R. Safiullin,1882,J. McCabe,,,,0 - 0,missing_or_unresolved_winner
+2026-06-22.json,81,12139107,2026-06-22,men,Set 1,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,907,H. Squire,9515,M. Zheng,,,,0 - 0,missing_or_unresolved_winner
+2026-06-22.json,82,12139108,2026-06-22,men,Set 1,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,2227,C. Wong,377,B. Gojo,,,,0 - 0,missing_or_unresolved_winner
 2026-06-22.json,83,12139109,2026-06-22,,,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,424,N. Basilashvili,1082,E. Ymer,,,,-,not_finished
 2026-06-22.json,84,12139110,2026-06-22,,,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,2003,P. Boscardin Dias,1335,K. Jacquet,,,,-,not_finished
 2026-06-22.json,85,12139111,2026-06-22,,,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,1873,R. Brancaccio,9210,A. Gea,,,,-,not_finished
@@ -2890,7 +2885,7 @@ source_file,raw_index,api_event_key,date,gender,event_status,event_type_type,tou
 2026-06-22.json,128,12139154,2026-06-22,,,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,389,C. H. Tseng,2410,G. Heide,,,,-,not_finished
 2026-06-22.json,129,12139155,2026-06-22,,,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,568,K. Uchida,3145,B. Tomic,,,,-,not_finished
 2026-06-22.json,130,12139156,2026-06-22,,,Atp Singles,Wimbledon,,ATP Wimbledon - Quarter-finals,,,,590,Z. Zhang,38784,H. Searle,,,,-,not_finished
-2026-06-22.json,131,12139157,2026-06-22,,,Wta Singles,Eastbourne,,WTA Eastbourne - 1/16-finals,,,,1131,D. Snigur,2393,A. Kalinina,,,,-,not_finished
+2026-06-22.json,131,12139157,2026-06-22,women,Set 1,Wta Singles,Eastbourne,,WTA Eastbourne - 1/16-finals,,,,1131,D. Snigur,2393,A. Kalinina,,,,0 - 0,missing_or_unresolved_winner
 2026-06-22.json,132,12139158,2026-06-22,,,Wta Singles,Eastbourne,,WTA Eastbourne - 1/16-finals,,,,52689,M. Joint,1802,E. Arango,,,,-,not_finished
 2026-06-22.json,133,12139159,2026-06-22,,,Wta Singles,Eastbourne,,WTA Eastbourne - 1/16-finals,,,,168,A. Ruzic,1143,P. Marcinko,,,,-,not_finished
 2026-06-22.json,134,12139160,2026-06-22,,,Wta Singles,Eastbourne,,WTA Eastbourne - 1/16-finals,,,,1146,A. Tomljanovic,477,E. Cocciaretto,,,,-,not_finished
@@ -2912,3 +2907,6 @@ source_file,raw_index,api_event_key,date,gender,event_status,event_type_type,tou
 2026-06-22.json,150,12139208,2026-06-22,,,Itf Women Singles,W35 Tarvisio,,W35 Tarvisio - 1/16-finals,,,,38782,L. Perez Alarcon,1363,R. Zelnickova,,,,-,not_finished
 2026-06-22.json,151,12139209,2026-06-22,,,Itf Women Singles,W35 Tarvisio,,W35 Tarvisio - 1/16-finals,,,,89599,A. Gentili,4085,A. Laboutkova,,,,-,not_finished
 2026-06-22.json,152,12139210,2026-06-22,,,Itf Women Singles,W35 Tarvisio,,W35 Tarvisio - 1/16-finals,,,,2576,A. Kucmova,86093,C. Dibenedetto,,,,-,not_finished
+2026-06-22.json,153,12139217,2026-06-22,women,Set 2,Wta Singles,Bad Homburg,,,,,,1805,R. Zarazua,1812,Xin. Wang,,,,0 - 1,missing_or_unresolved_winner
+2026-06-22.json,154,12139218,2026-06-22,,Set 1,Wta Doubles,Berlin,,,,,,103805,Errani/ Melichar-Martinez,103806,Alexandrova/ Noskova,,,,0 - 0,doubles_or_team_match
+2026-06-22.json,155,12139219,2026-06-22,men,Set 1,Atp Singles,Eastbourne,,,,,,1858,J. Pinnington Jones,395,M. Trungelliti,,,,0 - 0,missing_or_unresolved_winner

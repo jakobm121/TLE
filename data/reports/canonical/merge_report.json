@@ -1,20 +1,20 @@
 {
   "counters": {
-    "api_added": 5385,
+    "api_added": 5389,
     "api_added_level_atp_wta": 367,
-    "api_added_level_challenger": 757,
+    "api_added_level_challenger": 760,
     "api_added_level_grand_slam": 284,
     "api_added_level_itf": 3058,
-    "api_added_level_qualifying": 919,
-    "api_added_surface_clay": 3031,
+    "api_added_level_qualifying": 920,
+    "api_added_surface_clay": 3035,
     "api_added_surface_grass": 616,
     "api_added_surface_hard": 1738,
     "api_duplicate_sackmann": 72,
     "api_duplicate_strategy_date_gender_players": 72,
-    "api_input": 5778,
-    "api_mapping_both_mapped": 5457,
+    "api_input": 5783,
+    "api_mapping_both_mapped": 5461,
     "api_mapping_none_mapped": 17,
-    "api_mapping_one_mapped": 304,
+    "api_mapping_one_mapped": 305,
     "player_aliases_loaded": 152,
     "sackmann_alias_resolved_matches": 1540,
     "sackmann_alias_resolved_player_keys": 1549,
@@ -24,10 +24,10 @@
     "sackmann_skipped_winner_loser_same_player_key": 1
   },
   "genders": {
-    "men": 113434,
+    "men": 113438,
     "women": 114265
   },
-  "generated_at": "2026-06-22T08:06:36+00:00",
+  "generated_at": "2026-06-22T10:22:56+00:00",
   "inputs": {
     "api_manifest": "data/source/api_tennis/manifest.json",
     "player_aliases": "data/metadata/sackmann/player_aliases.json",
@@ -36,12 +36,12 @@
   },
   "levels": {
     "atp_wta": 19734,
-    "challenger": 40692,
+    "challenger": 40695,
     "grand_slam": 6752,
     "itf": 159602,
-    "qualifying": 919
+    "qualifying": 920
   },
-  "matches": 227699,
+  "matches": 227703,
   "outputs": {
     "api_merge_added_csv": "data/reports/canonical/api_merge_added.csv",
     "api_merge_conflicts_csv": "data/reports/canonical/api_merge_conflicts.csv",
@@ -2826,37 +2826,37 @@
   },
   "source": "canonical_combined",
   "sources": {
-    "api_tennis": 5385,
+    "api_tennis": 5389,
     "sackmann": 222314
   },
   "surfaces": {
     "carpet": 2314,
-    "clay": 98782,
+    "clay": 98786,
     "grass": 5512,
     "hard": 121091
   },
   "year_files": [
     {
-      "created_at": "2026-06-22T08:06:32+00:00",
+      "created_at": "2026-06-22T10:22:52+00:00",
       "matches": 68250,
       "path": "data/canonical/tle_matches_2023.jsonl.gz",
       "year": 2023
     },
     {
-      "created_at": "2026-06-22T08:06:34+00:00",
+      "created_at": "2026-06-22T10:22:54+00:00",
       "matches": 73997,
       "path": "data/canonical/tle_matches_2024.jsonl.gz",
       "year": 2024
     },
     {
-      "created_at": "2026-06-22T08:06:35+00:00",
+      "created_at": "2026-06-22T10:22:55+00:00",
       "matches": 55948,
       "path": "data/canonical/tle_matches_2025.jsonl.gz",
       "year": 2025
     },
     {
-      "created_at": "2026-06-22T08:06:36+00:00",
-      "matches": 29504,
+      "created_at": "2026-06-22T10:22:56+00:00",
+      "matches": 29508,
       "path": "data/canonical/tle_matches_2026.jsonl.gz",
       "year": 2026
     }

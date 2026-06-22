@@ -8,7 +8,7 @@
   },
   "event_type_counts": {
     "Atp Doubles": 142,
-    "Atp Singles": 359,
+    "Atp Singles": 360,
     "Boys Doubles": 31,
     "Boys Singles": 87,
     "Challenger Men Doubles": 344,
@@ -24,8 +24,8 @@
     "Mixed Doubles": 33,
     "Teams Men": 66,
     "Teams Women": 71,
-    "Wta Doubles": 136,
-    "Wta Singles": 329
+    "Wta Doubles": 137,
+    "Wta Singles": 330
   },
   "files": {
     "2026-05-26.json": {
@@ -164,41 +164,43 @@
       "skipped": 8
     },
     "2026-06-22.json": {
-      "imported": 0,
-      "raw_fixtures": 153,
-      "skipped": 153
+      "imported": 5,
+      "raw_fixtures": 156,
+      "skipped": 151
     }
   },
   "gender_counts": {
-    "men": 3214,
+    "men": 3219,
     "women": 2564
   },
   "level_counts": {
     "atp_wta": 373,
-    "challenger": 852,
+    "challenger": 855,
     "grand_slam": 340,
     "itf": 3254,
-    "qualifying": 959
+    "qualifying": 961
   },
   "raw_surface_counts": {
     "<blank>": 62,
-    "api_tournament_metadata:Clay": 3255,
+    "api_tournament_metadata:Clay": 3260,
     "api_tournament_metadata:Clay (Indoor)": 31,
     "api_tournament_metadata:Grass": 631,
     "api_tournament_metadata:Hard": 1830,
     "api_tournament_metadata:hard": 31
   },
   "status_counts": {
-    "<blank>": 157,
-    "Cancelled": 145,
-    "Finished": 8027,
-    "Interrupted": 3,
+    "<blank>": 124,
+    "Cancelled": 147,
+    "Finished": 8033,
+    "Interrupted": 2,
     "Retired": 212,
-    "Set 1": 2,
+    "Set 1": 27,
+    "Set 2": 3,
+    "Set 3": 1,
     "Walk Over": 145
   },
   "surface_counts": {
-    "clay": 3286,
+    "clay": 3291,
     "grass": 631,
     "hard": 1861
   },

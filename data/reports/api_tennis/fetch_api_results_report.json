@@ -1,71 +1,15 @@
 {
   "counters": {
-    "downloaded_fixtures": 3265,
-    "kept_existing_files": 12,
-    "requested_days": 21,
-    "skipped_finalized_existing_days": 12,
-    "successful_days": 9,
-    "written_files": 9
+    "downloaded_fixtures": 2812,
+    "kept_existing_files": 6,
+    "requested_days": 14,
+    "skipped_finalized_existing_days": 6,
+    "successful_days": 8,
+    "written_files": 8
   },
-  "date_start": "2026-06-02",
+  "date_start": "2026-06-09",
   "date_stop": "2026-06-22",
   "days": [
-    {
-      "date": "2026-06-02",
-      "downloaded_count": 0,
-      "old_count": 386,
-      "path": "data/raw/api_tennis/results/2026-06-02.json",
-      "reason": "existing_day_finalized",
-      "status": "skipped_finalized_existing"
-    },
-    {
-      "date": "2026-06-03",
-      "downloaded_count": 456,
-      "old_count": 456,
-      "path": "data/raw/api_tennis/results/2026-06-03.json",
-      "reason": "existing_day_not_finalized",
-      "status": "written"
-    },
-    {
-      "date": "2026-06-04",
-      "downloaded_count": 0,
-      "old_count": 477,
-      "path": "data/raw/api_tennis/results/2026-06-04.json",
-      "reason": "existing_day_finalized",
-      "status": "skipped_finalized_existing"
-    },
-    {
-      "date": "2026-06-05",
-      "downloaded_count": 0,
-      "old_count": 257,
-      "path": "data/raw/api_tennis/results/2026-06-05.json",
-      "reason": "existing_day_finalized",
-      "status": "skipped_finalized_existing"
-    },
-    {
-      "date": "2026-06-06",
-      "downloaded_count": 0,
-      "old_count": 154,
-      "path": "data/raw/api_tennis/results/2026-06-06.json",
-      "reason": "existing_day_finalized",
-      "status": "skipped_finalized_existing"
-    },
-    {
-      "date": "2026-06-07",
-      "downloaded_count": 0,
-      "old_count": 149,
-      "path": "data/raw/api_tennis/results/2026-06-07.json",
-      "reason": "existing_day_finalized",
-      "status": "skipped_finalized_existing"
-    },
-    {
-      "date": "2026-06-08",
-      "downloaded_count": 0,
-      "old_count": 101,
-      "path": "data/raw/api_tennis/results/2026-06-08.json",
-      "reason": "existing_day_finalized",
-      "status": "skipped_finalized_existing"
-    },
     {
       "date": "2026-06-09",
       "downloaded_count": 0,
@@ -172,7 +116,7 @@
     },
     {
       "date": "2026-06-22",
-      "downloaded_count": 153,
+      "downloaded_count": 156,
       "old_count": 153,
       "path": "data/raw/api_tennis/results/2026-06-22.json",
       "reason": "inside_recent_refresh_window",
@@ -180,7 +124,7 @@
     }
   ],
   "errors": [],
-  "generated_at": "2026-06-22T07:22:02+00:00",
+  "generated_at": "2026-06-22T10:21:54+00:00",
   "method": "get_fixtures",
   "options": {
     "always_refresh_recent_days": 2,
