@@ -1,31 +1,33 @@
 {
   "active_predictions_total": 3,
+  "api_tournament_surface_entries": 0,
+  "api_tournaments_metadata_json": "data/raw/api_tennis/metadata/get_tournaments.json",
   "by_level_scan": {
-    "atp_wta": 38,
+    "atp_wta": 36,
     "challenger": 22,
     "itf": 8,
     "qualifying": 112
   },
   "by_surface_source_scan": {
-    "missing": 86,
+    "missing": 84,
     "tournament_surface_map": 94
   },
   "counters": {
-    "fixture_skip_doubles_or_team": 18,
-    "fixture_skip_live": 6,
-    "fixture_skip_starts_too_soon": 26,
-    "fixture_skip_status_cancelled": 2,
-    "fixture_skip_status_finished": 3,
-    "fixtures_scanned": 99,
-    "fixtures_with_diagnostics": 90
+    "fixture_skip_doubles_or_team": 17,
+    "fixture_skip_live": 29,
+    "fixture_skip_starts_too_soon": 4,
+    "fixture_skip_status_cancelled": 3,
+    "fixture_skip_status_finished": 5,
+    "fixtures_scanned": 97,
+    "fixtures_with_diagnostics": 89
   },
   "date_start": "2026-06-22",
   "days_ahead": 1,
   "decision_counts_scan": {
-    "NO_BET": 180
+    "NO_BET": 178
   },
-  "fixtures_total": 154,
-  "generated_at": "2026-06-22T09:43:34+00:00",
+  "fixtures_total": 155,
+  "generated_at": "2026-06-22T10:18:41+00:00",
   "min_start_minutes": 30,
   "new_added_to_predictions": 0,
   "new_candidates": 0,
@@ -33,7 +35,8 @@
     "This is standalone: it scans all eligible API fixtures and odds, not only tennis value picks.",
     "Odds are average clean odds after removing bookmaker outliers.",
     "Form and H2H are stored as tracking fields only; they do not affect TLE probability in v1.",
-    "Only BET and STRONG_BET rows are stored as active predictions."
+    "Only BET and STRONG_BET rows are stored as active predictions.",
+    "Surface now uses 06a API tournaments metadata by tournament_key before local fallback map."
   ],
   "odds_rules": {
     "max_odds_deviation_from_median": 0.12,
@@ -56,10 +59,10 @@
     "elo_prob_too_low": 1,
     "min_level_not_met": 71,
     "odds_outside_range": 44,
-    "unknown_surface": 45,
+    "unknown_surface": 43,
     "unmapped_player": 18
   },
-  "scan_rows": 180,
+  "scan_rows": 178,
   "status": "ok",
   "surface_map_entries": 23,
   "unresolved_surface_count": 6

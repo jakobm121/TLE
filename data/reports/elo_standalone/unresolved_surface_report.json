@@ -1,6 +1,6 @@
 {
   "count": 6,
-  "generated_at": "2026-06-22T09:43:34+00:00",
+  "generated_at": "2026-06-22T10:18:41+00:00",
   "items": [
     {
       "context_text": "wta singles bad homburg wta bad homburg   1/16 finals 4228",
@@ -52,7 +52,6 @@
       "level": "atp_wta",
       "matches": [
         "J-L. Struff - M. Landaluce",
-        "C. Moutet - M. Fucsovics",
         "M. Kecmanovic - H. Medjedovic",
         "F. Marozsan - A. Molcan",
         "A. Walton - N. Kyrgios"
@@ -94,5 +93,5 @@
       "suggested_map_key": "challenger men singles targu mures targu mures 1/16 finals 12993"
     }
   ],
-  "note": "Add suggested_map_key: hard/clay/grass/carpet to data/metadata/tournament_surface_map.json if these are real ATP/WTA/Challenger/Grand Slam events."
+  "note": "Add suggested_map_key: hard/clay/grass/carpet to data/metadata/tournament_surface_map.json if API tournaments metadata does not cover these events."
 }
