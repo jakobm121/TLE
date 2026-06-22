@@ -1,6 +1,6 @@
 {
-  "count": 8,
-  "generated_at": "2026-06-21T22:33:56+00:00",
+  "count": 10,
+  "generated_at": "2026-06-22T06:12:28+00:00",
   "items": [
     {
       "context_text": "wta singles bad homburg wta bad homburg   1/16 finals 4228",
@@ -9,7 +9,9 @@
       "matches": [
         "A. Eala - E. Mertens",
         "N. Osaka - M. Frech",
-        "C. Tauson - D. Shnaider"
+        "C. Tauson - D. Shnaider",
+        "S. Sierra - Q. Zheng",
+        "S. Kraus - A. Kalinskaya"
       ],
       "raw_event_type_type": "Wta Singles",
       "raw_tournament_name": "Bad Homburg",
@@ -23,7 +25,8 @@
       "matches": [
         "Z. Bergs - J. Munar",
         "G. Diallo - T. Atmane",
-        "J. Pinnington Jones - C. Ugo Carabelli"
+        "J. Pinnington Jones - C. Ugo Carabelli",
+        "J. Choinski - A. Popyrin"
       ],
       "raw_event_type_type": "Atp Singles",
       "raw_tournament_name": "Eastbourne",
@@ -37,7 +40,11 @@
       "matches": [
         "J. Ostapenko - F. Jones",
         "H. Klugman - T. Valentova",
-        "M. Kessler - D. Kasatkina"
+        "M. Kessler - D. Kasatkina",
+        "D. Snigur - A. Kalinina",
+        "M. Joint - E. Arango",
+        "A. Ruzic - P. Marcinko",
+        "A. Tomljanovic - E. Cocciaretto"
       ],
       "raw_event_type_type": "Wta Singles",
       "raw_tournament_name": "Eastbourne",
@@ -52,7 +59,9 @@
         "J-L. Struff - M. Landaluce",
         "E. Quinn - V. Royer",
         "C. Moutet - M. Fucsovics",
-        "M. Kecmanovic - H. Medjedovic"
+        "M. Kecmanovic - H. Medjedovic",
+        "F. Marozsan - A. Molcan",
+        "A. Walton - N. Kyrgios"
       ],
       "raw_event_type_type": "Atp Singles",
       "raw_tournament_name": "Mallorca",
@@ -65,12 +74,28 @@
       "level": "challenger",
       "matches": [
         "H. Casanova - E. Ribeiro",
+        "M. Pucinelli de Almeida - L. E. Ambrogi",
         "J. B. Torres - A. Hernandez"
       ],
       "raw_event_type_type": "Challenger Men Singles",
       "raw_tournament_name": "Piracicaba",
       "raw_tournament_round": "Piracicaba - 1/16-finals",
       "suggested_map_key": "challenger men singles piracicaba piracicaba 1/16 finals 8499"
+    },
+    {
+      "context_text": "challenger men singles piracicaba piracicaba   final 8499",
+      "gender": "men",
+      "level": "challenger",
+      "matches": [
+        "W. Leite - R. Tosetto",
+        "T. Cigarran - L. Andrade da Silva",
+        "N. Zanellato - T. Martinez",
+        "A. Huertas Del Pino Cordova - N. Oliveira"
+      ],
+      "raw_event_type_type": "Challenger Men Singles",
+      "raw_tournament_name": "Piracicaba",
+      "raw_tournament_round": "Piracicaba - Final",
+      "suggested_map_key": "challenger men singles piracicaba piracicaba final 8499"
     },
     {
       "context_text": "challenger men singles plovdiv (bulgaria)   qualification plovdiv   1/16 finals 14005",
@@ -115,6 +140,20 @@
       "raw_tournament_name": "Targu Mures",
       "raw_tournament_round": "Targu Mures - 1/16-finals",
       "suggested_map_key": "challenger men singles targu mures targu mures 1/16 finals 12993"
+    },
+    {
+      "context_text": "challenger men singles targu mures targu mures   final 12993",
+      "gender": "men",
+      "level": "challenger",
+      "matches": [
+        "L. Potenza - K. Uesugi",
+        "N. Barrientos - D. Yevseyev",
+        "F. Balshaw - P. Makk"
+      ],
+      "raw_event_type_type": "Challenger Men Singles",
+      "raw_tournament_name": "Targu Mures",
+      "raw_tournament_round": "Targu Mures - Final",
+      "suggested_map_key": "challenger men singles targu mures targu mures final 12993"
     }
   ],
   "note": "Add suggested_map_key: hard/clay/grass/carpet to data/metadata/tournament_surface_map.json if these are real ATP/WTA/Challenger/Grand Slam events."
