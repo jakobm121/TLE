@@ -27,7 +27,7 @@
     "men": 113434,
     "women": 114265
   },
-  "generated_at": "2026-06-22T06:02:28+00:00",
+  "generated_at": "2026-06-22T08:06:36+00:00",
   "inputs": {
     "api_manifest": "data/source/api_tennis/manifest.json",
     "player_aliases": "data/metadata/sackmann/player_aliases.json",
@@ -69,25 +69,25 @@
   },
   "year_files": [
     {
-      "created_at": "2026-06-22T06:02:23+00:00",
+      "created_at": "2026-06-22T08:06:32+00:00",
       "matches": 68250,
       "path": "data/canonical/tle_matches_2023.jsonl.gz",
       "year": 2023
     },
     {
-      "created_at": "2026-06-22T06:02:25+00:00",
+      "created_at": "2026-06-22T08:06:34+00:00",
       "matches": 73997,
       "path": "data/canonical/tle_matches_2024.jsonl.gz",
       "year": 2024
     },
     {
-      "created_at": "2026-06-22T06:02:27+00:00",
+      "created_at": "2026-06-22T08:06:35+00:00",
       "matches": 55948,
       "path": "data/canonical/tle_matches_2025.jsonl.gz",
       "year": 2025
     },
     {
-      "created_at": "2026-06-22T06:02:28+00:00",
+      "created_at": "2026-06-22T08:06:36+00:00",
       "matches": 29504,
       "path": "data/canonical/tle_matches_2026.jsonl.gz",
       "year": 2026
