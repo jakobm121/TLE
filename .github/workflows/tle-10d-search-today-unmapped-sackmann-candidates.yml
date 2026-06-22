@@ -1,40 +1,72 @@
-name: TLE 10d Search Today Unmapped Sackmann Candidates
+name: TLE 10d - Search Today Unmapped Sackmann Candidates
 
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows:
+      - "TLE 10b - Audit Today Player Mapping"
+    types:
+      - completed
 
 permissions:
   contents: write
 
 jobs:
-  search-today-unmapped-candidates:
+  search-today-unmapped-sackmann-candidates:
     runs-on: ubuntu-latest
+
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'success'
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Search Sackmann candidates for today unmapped players
+      - name: Run deep Sackmann candidate search
         run: |
           python -m tle_machine.search_today_unmapped_sackmann_candidates
 
-      - name: Commit candidate search report
-        if: always()
+      - name: Show outputs
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
+          echo "Generated reports:"
+          ls -lah data/reports/api_tennis || true
+
+          echo ""
+          echo "Candidate search CSV preview:"
+          if [ -f data/reports/api_tennis/today_mapping_sackmann_candidate_search.csv ]; then
+            head -50 data/reports/api_tennis/today_mapping_sackmann_candidate_search.csv
+          else
+            echo "Missing today_mapping_sackmann_candidate_search.csv"
+          fi
+
+          echo ""
+          echo "Suggested overrides JSON:"
+          if [ -f data/reports/api_tennis/today_mapping_suggested_overrides.json ]; then
+            cat data/reports/api_tennis/today_mapping_suggested_overrides.json
+          else
+            echo "Missing today_mapping_suggested_overrides.json"
+          fi
+
+      - name: Commit reports
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
           git add data/reports/api_tennis/today_mapping_sackmann_candidate_search.csv || true
           git add data/reports/api_tennis/today_mapping_sackmann_candidate_search.json || true
+          git add data/reports/api_tennis/today_mapping_suggested_overrides.json || true
 
           if git diff --cached --quiet; then
-            echo "No candidate search changes to commit."
+            echo "No 10d candidate search report changes to commit."
           else
-            git commit -m "Search Sackmann candidates for today unmapped API players"
+            git commit -m "Search today unmapped Sackmann candidates"
             git push
           fi
