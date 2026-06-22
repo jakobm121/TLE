@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-22T10:27:51+00:00",
+  "generated_at": "2026-06-22T10:41:53+00:00",
   "model": "TLE Standalone Elo Scanner v3.4",
   "picks": [
     {
@@ -822,8 +822,8 @@
   ],
   "summary": {
     "active_picks": 11,
-    "new_added": 8,
+    "new_added": 0,
     "new_candidates": 8,
-    "scan_rows": 178
+    "scan_rows": 174
   }
 }

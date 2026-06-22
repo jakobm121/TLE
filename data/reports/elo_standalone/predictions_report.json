@@ -3,35 +3,35 @@
   "api_tournament_surface_entries": 10003,
   "api_tournaments_metadata_json": "data/raw/api_tennis/metadata/get_tournaments.json",
   "by_level_scan": {
-    "atp_wta": 36,
+    "atp_wta": 32,
     "challenger": 22,
     "itf": 8,
     "qualifying": 112
   },
   "by_surface_source_scan": {
-    "api_tournaments_metadata:tournament_sourface": 178
+    "api_tournaments_metadata:tournament_sourface": 174
   },
   "counters": {
     "fixture_skip_doubles_or_team": 17,
-    "fixture_skip_live": 28,
-    "fixture_skip_starts_too_soon": 4,
-    "fixture_skip_status_cancelled": 3,
+    "fixture_skip_live": 30,
+    "fixture_skip_starts_too_soon": 3,
+    "fixture_skip_status_cancelled": 5,
     "fixture_skip_status_finished": 7,
-    "fixtures_scanned": 97,
-    "fixtures_with_diagnostics": 89,
+    "fixtures_scanned": 95,
+    "fixtures_with_diagnostics": 87,
     "fixtures_with_output": 8
   },
   "date_start": "2026-06-22",
   "days_ahead": 1,
   "decision_counts_scan": {
     "BET": 5,
-    "NO_BET": 170,
+    "NO_BET": 166,
     "STRONG_BET": 3
   },
-  "fixtures_total": 156,
-  "generated_at": "2026-06-22T10:27:51+00:00",
+  "fixtures_total": 157,
+  "generated_at": "2026-06-22T10:41:53+00:00",
   "min_start_minutes": 30,
-  "new_added_to_predictions": 8,
+  "new_added_to_predictions": 0,
   "new_candidates": 8,
   "notes": [
     "This is standalone: it scans all eligible API fixtures and odds, not only tennis value picks.",
@@ -57,16 +57,16 @@
     "unresolved_surface_json": "data/reports/elo_standalone/unresolved_surface_report.json"
   },
   "reason_counts_scan": {
-    "elo_edge_too_low": 9,
-    "elo_prob_too_low": 21,
+    "elo_edge_too_low": 8,
+    "elo_prob_too_low": 19,
     "min_level_not_met": 76,
     "min_surface_not_met": 2,
-    "odds_outside_range": 44,
+    "odds_outside_range": 43,
     "pass_edge": 5,
     "pass_strong_edge": 3,
     "unmapped_player": 18
   },
-  "scan_rows": 178,
+  "scan_rows": 174,
   "status": "ok",
   "surface_map_entries": 35,
   "unresolved_surface_count": 0
