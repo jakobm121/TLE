@@ -6,10 +6,9 @@
     "api_added_level_grand_slam": 284,
     "api_added_level_itf": 3058,
     "api_added_level_qualifying": 919,
-    "api_added_surface_clay": 2878,
+    "api_added_surface_clay": 3031,
     "api_added_surface_grass": 616,
-    "api_added_surface_hard": 1677,
-    "api_added_surface_unknown": 214,
+    "api_added_surface_hard": 1738,
     "api_duplicate_sackmann": 72,
     "api_duplicate_strategy_date_gender_players": 72,
     "api_input": 5778,
@@ -28,7 +27,7 @@
     "men": 113434,
     "women": 114265
   },
-  "generated_at": "2026-06-21T22:27:51+00:00",
+  "generated_at": "2026-06-22T06:02:28+00:00",
   "inputs": {
     "api_manifest": "data/source/api_tennis/manifest.json",
     "player_aliases": "data/metadata/sackmann/player_aliases.json",
@@ -64,32 +63,31 @@
   },
   "surfaces": {
     "carpet": 2314,
-    "clay": 98629,
+    "clay": 98782,
     "grass": 5512,
-    "hard": 121030,
-    "unknown": 214
+    "hard": 121091
   },
   "year_files": [
     {
-      "created_at": "2026-06-21T22:27:47+00:00",
+      "created_at": "2026-06-22T06:02:23+00:00",
       "matches": 68250,
       "path": "data/canonical/tle_matches_2023.jsonl.gz",
       "year": 2023
     },
     {
-      "created_at": "2026-06-21T22:27:49+00:00",
+      "created_at": "2026-06-22T06:02:25+00:00",
       "matches": 73997,
       "path": "data/canonical/tle_matches_2024.jsonl.gz",
       "year": 2024
     },
     {
-      "created_at": "2026-06-21T22:27:50+00:00",
+      "created_at": "2026-06-22T06:02:27+00:00",
       "matches": 55948,
       "path": "data/canonical/tle_matches_2025.jsonl.gz",
       "year": 2025
     },
     {
-      "created_at": "2026-06-21T22:27:51+00:00",
+      "created_at": "2026-06-22T06:02:28+00:00",
       "matches": 29504,
       "path": "data/canonical/tle_matches_2026.jsonl.gz",
       "year": 2026

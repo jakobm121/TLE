@@ -1,12 +1,12 @@
 {
   "api_player_cache": {
-    "entries": 5267,
+    "entries": 5280,
     "exists": true,
     "path": "data/raw/api_tennis/players/api_players.json",
-    "with_full_name": 2603,
-    "with_short_name": 5267
+    "with_full_name": 2615,
+    "with_short_name": 5280
   },
-  "generated_at": "2026-06-21T22:24:00+00:00",
+  "generated_at": "2026-06-22T06:01:37+00:00",
   "mapping": {
     "men:api:100041": {
       "api_levels": {
@@ -93,7 +93,7 @@
       "api_surfaces": {
         "clay": 1,
         "grass": 1,
-        "unknown": 1
+        "hard": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -1345,8 +1345,7 @@
         "Alexander Guajardo": 3
       },
       "api_surfaces": {
-        "hard": 2,
-        "unknown": 1
+        "hard": 3
       },
       "confidence": 0.999,
       "gender": "men",
@@ -2646,7 +2645,7 @@
         "R. Cruz": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "hard": 1
       },
       "confidence": 0.0,
       "gender": "men",
@@ -2669,7 +2668,7 @@
         "O. A. Martinez De Freitas": 3
       },
       "api_surfaces": {
-        "unknown": 3
+        "hard": 3
       },
       "confidence": 0.950737,
       "gender": "men",
@@ -2845,7 +2844,7 @@
         "A. Brignacca": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.0,
       "gender": "men",
@@ -2854,29 +2853,7 @@
       "sackmann_player_key": null,
       "status": "unmapped"
     },
-    "men:api:104198": {
-      "api_levels": {
-        "qualifying": 1
-      },
-      "api_matches": 1,
-      "api_name": "A. Ganchev",
-      "api_name_sources": {
-        "api_cache_short_name": 1
-      },
-      "api_name_variants": {
-        "A. Ganchev": 1
-      },
-      "api_surfaces": {
-        "unknown": 1
-      },
-      "confidence": 0.0,
-      "gender": "men",
-      "margin": null,
-      "method": "no_candidate",
-      "sackmann_player_key": null,
-      "status": "unmapped"
-    },
-    "men:api:104199": {
+    "men:api:104246": {
       "api_levels": {
         "qualifying": 1
       },
@@ -2889,7 +2866,29 @@
         "A. Tolev": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
+      },
+      "confidence": 0.0,
+      "gender": "men",
+      "margin": null,
+      "method": "no_candidate",
+      "sackmann_player_key": null,
+      "status": "unmapped"
+    },
+    "men:api:104247": {
+      "api_levels": {
+        "qualifying": 1
+      },
+      "api_matches": 1,
+      "api_name": "A. Ganchev",
+      "api_name_sources": {
+        "api_cache_short_name": 1
+      },
+      "api_name_variants": {
+        "A. Ganchev": 1
+      },
+      "api_surfaces": {
+        "clay": 1
       },
       "confidence": 0.0,
       "gender": "men",
@@ -3148,8 +3147,7 @@
         "Jozef Kovalik": 4
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 3
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "men",
@@ -3429,8 +3427,7 @@
         "Gerard Campana Lee": 10
       },
       "api_surfaces": {
-        "clay": 9,
-        "unknown": 1
+        "clay": 10
       },
       "confidence": 0.999,
       "gender": "men",
@@ -3453,8 +3450,7 @@
         "Bor Artnak": 6
       },
       "api_surfaces": {
-        "clay": 5,
-        "unknown": 1
+        "clay": 6
       },
       "confidence": 0.999,
       "gender": "men",
@@ -3521,8 +3517,8 @@
         "Dinko Dinev": 10
       },
       "api_surfaces": {
-        "hard": 9,
-        "unknown": 1
+        "clay": 1,
+        "hard": 9
       },
       "confidence": 0.999,
       "gender": "men",
@@ -3545,8 +3541,7 @@
         "Giammarco Gandolfi": 5
       },
       "api_surfaces": {
-        "clay": 2,
-        "unknown": 3
+        "clay": 5
       },
       "confidence": 0.999,
       "gender": "men",
@@ -3705,8 +3700,7 @@
         "Kenta Miyoshi": 10
       },
       "api_surfaces": {
-        "hard": 6,
-        "unknown": 4
+        "hard": 10
       },
       "confidence": 0.999,
       "gender": "men",
@@ -4177,8 +4171,8 @@
         "Melios Efstathiou": 6
       },
       "api_surfaces": {
-        "hard": 1,
-        "unknown": 5
+        "clay": 5,
+        "hard": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -4357,8 +4351,7 @@
         "Prajwal Dev S D": 3
       },
       "api_surfaces": {
-        "clay": 2,
-        "unknown": 1
+        "clay": 3
       },
       "confidence": 0.999,
       "gender": "men",
@@ -4999,8 +4992,7 @@
         "Matt Kuhar": 4
       },
       "api_surfaces": {
-        "hard": 3,
-        "unknown": 1
+        "hard": 4
       },
       "confidence": 0.999,
       "gender": "men",
@@ -5023,7 +5015,7 @@
         "Bryce Nakashima": 5
       },
       "api_surfaces": {
-        "unknown": 5
+        "hard": 5
       },
       "confidence": 0.999,
       "gender": "men",
@@ -5204,8 +5196,7 @@
         "Alberto Barroso Campos": 9
       },
       "api_surfaces": {
-        "hard": 7,
-        "unknown": 2
+        "hard": 9
       },
       "confidence": 0.999,
       "gender": "men",
@@ -5319,8 +5310,7 @@
         "Neo Niedner": 6
       },
       "api_surfaces": {
-        "hard": 3,
-        "unknown": 3
+        "hard": 6
       },
       "confidence": 0.999,
       "gender": "men",
@@ -5640,8 +5630,7 @@
         "Tiago Silva": 3
       },
       "api_surfaces": {
-        "hard": 2,
-        "unknown": 1
+        "hard": 3
       },
       "confidence": 0.999,
       "gender": "men",
@@ -5663,7 +5652,7 @@
         "Francisco Rocha": 2
       },
       "api_surfaces": {
-        "unknown": 2
+        "hard": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -6203,7 +6192,7 @@
         "Tiago Cacao": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "hard": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -6226,8 +6215,7 @@
         "John Echeverria": 6
       },
       "api_surfaces": {
-        "hard": 3,
-        "unknown": 3
+        "hard": 6
       },
       "confidence": 0.999,
       "gender": "men",
@@ -7139,8 +7127,7 @@
         "Tiago Torres": 6
       },
       "api_surfaces": {
-        "hard": 1,
-        "unknown": 5
+        "hard": 6
       },
       "confidence": 0.999,
       "gender": "men",
@@ -7279,8 +7266,7 @@
         "Nikita Mashtakov": 10
       },
       "api_surfaces": {
-        "clay": 5,
-        "unknown": 5
+        "clay": 10
       },
       "confidence": 0.0,
       "gender": "men",
@@ -7391,8 +7377,7 @@
         "Piotr Galus": 5
       },
       "api_surfaces": {
-        "clay": 3,
-        "unknown": 2
+        "clay": 5
       },
       "confidence": 0.999,
       "gender": "men",
@@ -7754,8 +7739,7 @@
         "Rodrigo Fernandes": 5
       },
       "api_surfaces": {
-        "hard": 4,
-        "unknown": 1
+        "hard": 5
       },
       "confidence": 0.999,
       "gender": "men",
@@ -7916,8 +7900,7 @@
         "Lorenzo Angelini": 7
       },
       "api_surfaces": {
-        "clay": 6,
-        "unknown": 1
+        "clay": 7
       },
       "confidence": 0.999,
       "gender": "men",
@@ -7940,8 +7923,7 @@
         "Mario Gonzalez Fernandez": 6
       },
       "api_surfaces": {
-        "hard": 4,
-        "unknown": 2
+        "hard": 6
       },
       "confidence": 0.999,
       "gender": "men",
@@ -8560,8 +8542,7 @@
         "Kumar Sinha Nitin": 4
       },
       "api_surfaces": {
-        "clay": 3,
-        "unknown": 1
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "men",
@@ -8746,8 +8727,7 @@
         "John Fancutt Thomas": 3
       },
       "api_surfaces": {
-        "clay": 2,
-        "unknown": 1
+        "clay": 3
       },
       "confidence": 0.0,
       "gender": "men",
@@ -8861,9 +8841,8 @@
         "Petros Tsitsipas": 4
       },
       "api_surfaces": {
-        "clay": 1,
-        "hard": 2,
-        "unknown": 1
+        "clay": 2,
+        "hard": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -8975,7 +8954,7 @@
         "Javier Barranco Cosano": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -9321,8 +9300,8 @@
         "Seydina Andre": 3
       },
       "api_surfaces": {
-        "hard": 1,
-        "unknown": 2
+        "clay": 2,
+        "hard": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -9778,7 +9757,7 @@
         "Antoine Tailleu Pierre": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.998526,
       "gender": "men",
@@ -10009,7 +9988,7 @@
       },
       "api_surfaces": {
         "clay": 1,
-        "unknown": 3
+        "hard": 3
       },
       "confidence": 0.999,
       "gender": "men",
@@ -10325,7 +10304,7 @@
         "Lambert Ruland": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "hard": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -10755,8 +10734,8 @@
         "Romain Faucon": 8
       },
       "api_surfaces": {
-        "hard": 7,
-        "unknown": 1
+        "clay": 1,
+        "hard": 7
       },
       "confidence": 0.999,
       "gender": "men",
@@ -10916,8 +10895,7 @@
         "Evan Bynoe": 2
       },
       "api_surfaces": {
-        "hard": 1,
-        "unknown": 1
+        "hard": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -10941,8 +10919,7 @@
         "Sebastian Sorger": 8
       },
       "api_surfaces": {
-        "clay": 5,
-        "unknown": 3
+        "clay": 8
       },
       "confidence": 0.999,
       "gender": "men",
@@ -11377,7 +11354,7 @@
       },
       "confidence": 0.999,
       "gender": "men",
-      "margin": 0.231481,
+      "margin": 0.231472,
       "method": "exact_normalized",
       "sackmann_player_key": "men:sackmann:138485",
       "status": "auto_mapped"
@@ -11442,9 +11419,8 @@
         "Naoki Tajima": 5
       },
       "api_surfaces": {
-        "clay": 2,
-        "hard": 2,
-        "unknown": 1
+        "clay": 3,
+        "hard": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -11760,8 +11736,7 @@
         "Jan Kupcic": 8
       },
       "api_surfaces": {
-        "clay": 7,
-        "unknown": 1
+        "clay": 8
       },
       "confidence": 0.999,
       "gender": "men",
@@ -11805,8 +11780,7 @@
         "M. U. Kask": 2
       },
       "api_surfaces": {
-        "hard": 1,
-        "unknown": 1
+        "hard": 2
       },
       "confidence": 0.917609,
       "gender": "men",
@@ -12271,7 +12245,7 @@
       },
       "confidence": 0.999,
       "gender": "men",
-      "margin": 0.025566,
+      "margin": 0.025534,
       "method": "exact_normalized",
       "sackmann_player_key": "men:sackmann:206909",
       "status": "auto_mapped"
@@ -12481,8 +12455,7 @@
         "Spencer Johnson": 13
       },
       "api_surfaces": {
-        "hard": 8,
-        "unknown": 5
+        "hard": 13
       },
       "confidence": 0.999,
       "gender": "men",
@@ -12504,7 +12477,7 @@
         "Arthur Bonnaud": 2
       },
       "api_surfaces": {
-        "unknown": 2
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -12589,7 +12562,7 @@
         "Zach Stephens": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "hard": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -12710,6 +12683,28 @@
       "margin": 0.999,
       "method": "exact_normalized",
       "sackmann_player_key": "men:sackmann:208103",
+      "status": "auto_mapped"
+    },
+    "men:api:29611": {
+      "api_levels": {
+        "itf": 1
+      },
+      "api_matches": 1,
+      "api_name": "J. Bilardo",
+      "api_name_sources": {
+        "api_cache_short_name": 1
+      },
+      "api_name_variants": {
+        "J. Bilardo": 1
+      },
+      "api_surfaces": {
+        "clay": 1
+      },
+      "confidence": 0.974407,
+      "gender": "men",
+      "margin": 0.974407,
+      "method": "exact_initial_form",
+      "sackmann_player_key": "men:sackmann:211323",
       "status": "auto_mapped"
     },
     "men:api:29633": {
@@ -13042,8 +13037,7 @@
         "Vit Kalina": 6
       },
       "api_surfaces": {
-        "hard": 4,
-        "unknown": 2
+        "hard": 6
       },
       "confidence": 0.999,
       "gender": "men",
@@ -13340,7 +13334,7 @@
         "Ajeet Rai": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -13959,8 +13953,7 @@
         "Strong Kirchheimer": 5
       },
       "api_surfaces": {
-        "hard": 1,
-        "unknown": 4
+        "hard": 5
       },
       "confidence": 0.999,
       "gender": "men",
@@ -13984,8 +13977,7 @@
         "Dimitar Kuzmanov": 7
       },
       "api_surfaces": {
-        "clay": 3,
-        "unknown": 4
+        "clay": 7
       },
       "confidence": 0.999,
       "gender": "men",
@@ -14302,8 +14294,7 @@
         "Kaylan Bigun": 12
       },
       "api_surfaces": {
-        "hard": 11,
-        "unknown": 1
+        "hard": 12
       },
       "confidence": 0.999,
       "gender": "men",
@@ -14371,8 +14362,7 @@
         "Drazen Petrovic": 4
       },
       "api_surfaces": {
-        "clay": 3,
-        "unknown": 1
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "men",
@@ -14508,8 +14498,7 @@
         "Tomasz Berkieta": 4
       },
       "api_surfaces": {
-        "clay": 3,
-        "unknown": 1
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "men",
@@ -15010,8 +14999,7 @@
         "Nicolae Cazacu Dragos": 6
       },
       "api_surfaces": {
-        "clay": 5,
-        "unknown": 1
+        "clay": 6
       },
       "confidence": 0.999,
       "gender": "men",
@@ -15148,7 +15136,7 @@
         "Simon Reveniau": 2
       },
       "api_surfaces": {
-        "unknown": 2
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -15346,8 +15334,7 @@
         "Matthias Ujvary": 2
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 1
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -15370,8 +15357,8 @@
         "Edison Ambarzumjan": 4
       },
       "api_surfaces": {
-        "hard": 3,
-        "unknown": 1
+        "clay": 1,
+        "hard": 3
       },
       "confidence": 0.999,
       "gender": "men",
@@ -15485,8 +15472,8 @@
         "Viktor Markov": 6
       },
       "api_surfaces": {
-        "hard": 4,
-        "unknown": 2
+        "clay": 2,
+        "hard": 4
       },
       "confidence": 0.999,
       "gender": "men",
@@ -15575,7 +15562,7 @@
         "Vasco Leote Prata": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "hard": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -15712,8 +15699,7 @@
         "Patrick Schoen": 7
       },
       "api_surfaces": {
-        "hard": 5,
-        "unknown": 2
+        "hard": 7
       },
       "confidence": 0.999,
       "gender": "men",
@@ -16125,8 +16111,7 @@
         "Dimitris Sakellaridis": 9
       },
       "api_surfaces": {
-        "clay": 7,
-        "unknown": 2
+        "clay": 9
       },
       "confidence": 0.999,
       "gender": "men",
@@ -16172,8 +16157,7 @@
         "Loann Massard": 3
       },
       "api_surfaces": {
-        "clay": 2,
-        "unknown": 1
+        "clay": 3
       },
       "confidence": 0.999,
       "gender": "men",
@@ -16195,7 +16179,7 @@
         "Andrea M'Chich": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -16732,8 +16716,7 @@
         "Giacomo Crisostomo": 6
       },
       "api_surfaces": {
-        "clay": 4,
-        "unknown": 2
+        "clay": 6
       },
       "confidence": 0.999,
       "gender": "men",
@@ -16961,7 +16944,7 @@
         "Rudy Quan": 3
       },
       "api_surfaces": {
-        "unknown": 3
+        "hard": 3
       },
       "confidence": 0.999,
       "gender": "men",
@@ -17215,8 +17198,7 @@
         "Filiberto Fumagalli": 6
       },
       "api_surfaces": {
-        "clay": 3,
-        "unknown": 3
+        "clay": 6
       },
       "confidence": 0.999,
       "gender": "men",
@@ -17264,8 +17246,7 @@
         "Noa Vukadin": 6
       },
       "api_surfaces": {
-        "clay": 5,
-        "unknown": 1
+        "clay": 6
       },
       "confidence": 0.999,
       "gender": "men",
@@ -17604,8 +17585,7 @@
         "Robin Catry": 4
       },
       "api_surfaces": {
-        "hard": 3,
-        "unknown": 1
+        "hard": 4
       },
       "confidence": 0.999,
       "gender": "men",
@@ -17751,19 +17731,19 @@
     },
     "men:api:40192": {
       "api_levels": {
-        "itf": 4,
+        "itf": 3,
         "qualifying": 1
       },
-      "api_matches": 5,
+      "api_matches": 4,
       "api_name": "Jacopo Bilardo",
       "api_name_sources": {
-        "api_cache_full_name": 5
+        "api_cache_full_name": 4
       },
       "api_name_variants": {
-        "Jacopo Bilardo": 5
+        "Jacopo Bilardo": 4
       },
       "api_surfaces": {
-        "clay": 5
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "men",
@@ -17785,8 +17765,7 @@
         "Sven Corbinais": 4
       },
       "api_surfaces": {
-        "clay": 2,
-        "unknown": 2
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "men",
@@ -18012,8 +17991,7 @@
         "Andrey Chepelev": 12
       },
       "api_surfaces": {
-        "clay": 8,
-        "unknown": 4
+        "clay": 12
       },
       "confidence": 0.999,
       "gender": "men",
@@ -18517,7 +18495,7 @@
         "Ilya Ivashka": 2
       },
       "api_surfaces": {
-        "unknown": 2
+        "hard": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -19019,8 +18997,7 @@
         "Pablo Martinez Gomez": 9
       },
       "api_surfaces": {
-        "hard": 5,
-        "unknown": 4
+        "hard": 9
       },
       "confidence": 0.999,
       "gender": "men",
@@ -19133,8 +19110,7 @@
         "Antonio Voljavec": 4
       },
       "api_surfaces": {
-        "clay": 2,
-        "unknown": 2
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "men",
@@ -19269,8 +19245,7 @@
         "Maxwell Exsted": 6
       },
       "api_surfaces": {
-        "hard": 5,
-        "unknown": 1
+        "hard": 6
       },
       "confidence": 0.999,
       "gender": "men",
@@ -19405,8 +19380,7 @@
         "N. Oliynykov": 2
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 1
+        "clay": 2
       },
       "confidence": 0.972485,
       "gender": "men",
@@ -19676,8 +19650,7 @@
         "W. Kleege": 3
       },
       "api_surfaces": {
-        "hard": 2,
-        "unknown": 1
+        "hard": 3
       },
       "confidence": 0.972639,
       "gender": "men",
@@ -19768,8 +19741,7 @@
         "Nicolas Jadoun": 6
       },
       "api_surfaces": {
-        "clay": 3,
-        "unknown": 3
+        "clay": 6
       },
       "confidence": 0.999,
       "gender": "men",
@@ -19880,8 +19852,8 @@
         "Clement Lemire": 5
       },
       "api_surfaces": {
-        "hard": 2,
-        "unknown": 3
+        "clay": 3,
+        "hard": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -19996,7 +19968,7 @@
       },
       "api_surfaces": {
         "grass": 2,
-        "unknown": 5
+        "hard": 5
       },
       "confidence": 0.999,
       "gender": "men",
@@ -20247,7 +20219,7 @@
         "N. Zamora": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "hard": 1
       },
       "confidence": 0.97406,
       "gender": "men",
@@ -20338,8 +20310,7 @@
         "Noah Zamora": 9
       },
       "api_surfaces": {
-        "hard": 7,
-        "unknown": 2
+        "hard": 9
       },
       "confidence": 0.999,
       "gender": "men",
@@ -20499,8 +20470,7 @@
         "Adhithya Ganesan": 8
       },
       "api_surfaces": {
-        "hard": 6,
-        "unknown": 2
+        "hard": 8
       },
       "confidence": 0.999,
       "gender": "men",
@@ -20634,7 +20604,7 @@
         "Stian Klaassen": 2
       },
       "api_surfaces": {
-        "unknown": 2
+        "hard": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -20766,7 +20736,7 @@
         "Louis Van Herck": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -20858,8 +20828,7 @@
         "Aljaz Jeran": 6
       },
       "api_surfaces": {
-        "clay": 5,
-        "unknown": 1
+        "clay": 6
       },
       "confidence": 0.999,
       "gender": "men",
@@ -21083,8 +21052,7 @@
         "Dominique Rolland": 3
       },
       "api_surfaces": {
-        "hard": 2,
-        "unknown": 1
+        "hard": 3
       },
       "confidence": 0.999,
       "gender": "men",
@@ -21106,8 +21074,7 @@
         "Kazuma Lee Karl": 5
       },
       "api_surfaces": {
-        "hard": 3,
-        "unknown": 2
+        "hard": 5
       },
       "confidence": 0.998296,
       "gender": "men",
@@ -21309,7 +21276,7 @@
         "Rodrigo Alujas": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -21353,8 +21320,7 @@
         "Albert Pedrico Kravtsov": 2
       },
       "api_surfaces": {
-        "hard": 1,
-        "unknown": 1
+        "hard": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -21376,8 +21342,7 @@
         "Emon van Loben Sels": 3
       },
       "api_surfaces": {
-        "hard": 2,
-        "unknown": 1
+        "hard": 3
       },
       "confidence": 0.999,
       "gender": "men",
@@ -21424,8 +21389,7 @@
         "Sasha Rozin": 5
       },
       "api_surfaces": {
-        "hard": 4,
-        "unknown": 1
+        "hard": 5
       },
       "confidence": 0.999,
       "gender": "men",
@@ -21447,8 +21411,7 @@
         "Thomas George Benjamin": 5
       },
       "api_surfaces": {
-        "clay": 3,
-        "unknown": 2
+        "clay": 5
       },
       "confidence": 0.999,
       "gender": "men",
@@ -21657,8 +21620,7 @@
         "Joao Domingues": 8
       },
       "api_surfaces": {
-        "hard": 5,
-        "unknown": 3
+        "hard": 8
       },
       "confidence": 0.999,
       "gender": "men",
@@ -22865,8 +22827,7 @@
         "Goncalo Marques": 3
       },
       "api_surfaces": {
-        "hard": 2,
-        "unknown": 1
+        "hard": 3
       },
       "confidence": 0.999,
       "gender": "men",
@@ -23133,7 +23094,7 @@
         "Maxence Bertimon": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -23383,7 +23344,7 @@
         "Antoine Walch": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -23452,8 +23413,7 @@
         "William Rejchtman Vinciguerra": 4
       },
       "api_surfaces": {
-        "clay": 3,
-        "unknown": 1
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "men",
@@ -24152,8 +24112,7 @@
         "Nicolas Ifi": 3
       },
       "api_surfaces": {
-        "clay": 2,
-        "unknown": 1
+        "clay": 3
       },
       "confidence": 0.999,
       "gender": "men",
@@ -24288,8 +24247,7 @@
         "Kevin Edengren": 2
       },
       "api_surfaces": {
-        "hard": 1,
-        "unknown": 1
+        "hard": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -24382,7 +24340,7 @@
         "Charles Bertimon": 3
       },
       "api_surfaces": {
-        "unknown": 3
+        "clay": 3
       },
       "confidence": 0.999,
       "gender": "men",
@@ -24561,8 +24519,7 @@
         "Mika Petkovic": 10
       },
       "api_surfaces": {
-        "clay": 6,
-        "unknown": 4
+        "clay": 10
       },
       "confidence": 0.999,
       "gender": "men",
@@ -24744,8 +24701,7 @@
         "Anas Mazdrashki": 8
       },
       "api_surfaces": {
-        "clay": 7,
-        "unknown": 1
+        "clay": 8
       },
       "confidence": 0.999,
       "gender": "men",
@@ -25150,7 +25106,7 @@
         "Leo Lagarrigue": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -25243,9 +25199,9 @@
       "api_surfaces": {
         "clay": 4
       },
-      "confidence": 0.998932,
+      "confidence": 0.998951,
       "gender": "men",
-      "margin": 0.998932,
+      "margin": 0.998951,
       "method": "exact_token_set",
       "sackmann_player_key": "men:sackmann:212762",
       "status": "auto_mapped"
@@ -25513,8 +25469,7 @@
         "Rigele Te": 2
       },
       "api_surfaces": {
-        "hard": 1,
-        "unknown": 1
+        "hard": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -25969,9 +25924,9 @@
       "api_surfaces": {
         "clay": 1
       },
-      "confidence": 0.970693,
+      "confidence": 0.971099,
       "gender": "men",
-      "margin": 0.970693,
+      "margin": 0.971099,
       "method": "exact_initial_form",
       "sackmann_player_key": "men:sackmann:214566",
       "status": "auto_mapped"
@@ -26687,8 +26642,7 @@
         "Ivan Biletic": 5
       },
       "api_surfaces": {
-        "clay": 4,
-        "unknown": 1
+        "clay": 5
       },
       "confidence": 0.999,
       "gender": "men",
@@ -26779,8 +26733,7 @@
         "Mickael Kaouk": 8
       },
       "api_surfaces": {
-        "clay": 4,
-        "unknown": 4
+        "clay": 8
       },
       "confidence": 0.999,
       "gender": "men",
@@ -26870,12 +26823,11 @@
         "Antoine Faut Pierre": 2
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 1
+        "clay": 2
       },
-      "confidence": 0.998178,
+      "confidence": 0.998219,
       "gender": "men",
-      "margin": 0.998178,
+      "margin": 0.998219,
       "method": "exact_token_set",
       "sackmann_player_key": "men:sackmann:213721",
       "status": "auto_mapped"
@@ -27094,8 +27046,7 @@
         "Dinis Silva Joao": 3
       },
       "api_surfaces": {
-        "hard": 1,
-        "unknown": 2
+        "hard": 3
       },
       "confidence": 0.998091,
       "gender": "men",
@@ -27118,8 +27069,7 @@
         "Vid Mohar": 4
       },
       "api_surfaces": {
-        "clay": 3,
-        "unknown": 1
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "men",
@@ -27211,8 +27161,7 @@
         "Matisse Bobichon": 4
       },
       "api_surfaces": {
-        "hard": 2,
-        "unknown": 2
+        "hard": 4
       },
       "confidence": 0.999,
       "gender": "men",
@@ -27569,7 +27518,7 @@
         "M. Vavassori": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.971609,
       "gender": "men",
@@ -27727,8 +27676,7 @@
         "Tristan Stringer": 4
       },
       "api_surfaces": {
-        "hard": 3,
-        "unknown": 1
+        "hard": 4
       },
       "confidence": 0.999,
       "gender": "men",
@@ -27772,8 +27720,7 @@
         "Arthur Bellegy": 4
       },
       "api_surfaces": {
-        "clay": 2,
-        "unknown": 2
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "men",
@@ -27818,7 +27765,7 @@
         "Aadarsh Tripathi": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "hard": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -28613,8 +28560,7 @@
         "Hugo Car": 6
       },
       "api_surfaces": {
-        "clay": 4,
-        "unknown": 2
+        "clay": 6
       },
       "confidence": 0.999,
       "gender": "men",
@@ -28884,8 +28830,7 @@
         "Matic Dimic": 2
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 1
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -29289,7 +29234,7 @@
         "Ronit Karki": 3
       },
       "api_surfaces": {
-        "unknown": 3
+        "hard": 3
       },
       "confidence": 0.999,
       "gender": "men",
@@ -29769,8 +29714,8 @@
         "Louis Larue": 3
       },
       "api_surfaces": {
-        "hard": 2,
-        "unknown": 1
+        "clay": 1,
+        "hard": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -30285,7 +30230,7 @@
         "Billy Suarez": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "hard": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -30600,7 +30545,7 @@
         "Glib Sekachov": 2
       },
       "api_surfaces": {
-        "unknown": 2
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -30666,8 +30611,8 @@
         "Yoshka Sborowsky": 3
       },
       "api_surfaces": {
-        "hard": 2,
-        "unknown": 1
+        "clay": 1,
+        "hard": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -30758,7 +30703,7 @@
         "Maximilian Borisov": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -31437,8 +31382,8 @@
         "Tsung-Hao Huang": 7
       },
       "api_surfaces": {
-        "hard": 6,
-        "unknown": 1
+        "clay": 1,
+        "hard": 6
       },
       "confidence": 0.999,
       "gender": "men",
@@ -31505,8 +31450,7 @@
         "Jack Satterfield": 6
       },
       "api_surfaces": {
-        "hard": 4,
-        "unknown": 2
+        "hard": 6
       },
       "confidence": 0.999,
       "gender": "men",
@@ -31552,8 +31496,7 @@
         "Fares Zakaria": 3
       },
       "api_surfaces": {
-        "clay": 2,
-        "unknown": 1
+        "clay": 3
       },
       "confidence": 0.0,
       "gender": "men",
@@ -31601,7 +31544,7 @@
       },
       "api_surfaces": {
         "clay": 2,
-        "unknown": 1
+        "hard": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -31937,8 +31880,7 @@
         "Karlo Kajin": 2
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 1
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -32259,8 +32201,7 @@
         "Luca Castagnola": 6
       },
       "api_surfaces": {
-        "clay": 4,
-        "unknown": 2
+        "clay": 6
       },
       "confidence": 0.999,
       "gender": "men",
@@ -32285,8 +32226,7 @@
       },
       "api_surfaces": {
         "grass": 1,
-        "hard": 3,
-        "unknown": 2
+        "hard": 5
       },
       "confidence": 0.999,
       "gender": "men",
@@ -32739,7 +32679,7 @@
         "Filippo Moroni": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "hard": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -32784,8 +32724,7 @@
         "Lilian Marmousez": 5
       },
       "api_surfaces": {
-        "clay": 3,
-        "unknown": 2
+        "clay": 5
       },
       "confidence": 0.999,
       "gender": "men",
@@ -32829,8 +32768,7 @@
         "Jakub Vrba": 4
       },
       "api_surfaces": {
-        "clay": 2,
-        "unknown": 2
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "men",
@@ -33053,8 +32991,7 @@
         "A. Gabet": 2
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 1
+        "clay": 2
       },
       "confidence": 0.971792,
       "gender": "men",
@@ -33452,8 +33389,7 @@
         "Nathan Cox": 4
       },
       "api_surfaces": {
-        "hard": 2,
-        "unknown": 2
+        "hard": 4
       },
       "confidence": 0.999,
       "gender": "men",
@@ -33900,8 +33836,7 @@
         "Dimitar Kisimov": 3
       },
       "api_surfaces": {
-        "clay": 2,
-        "unknown": 1
+        "clay": 3
       },
       "confidence": 0.999,
       "gender": "men",
@@ -34152,8 +34087,7 @@
         "Vignesh Gogineni": 3
       },
       "api_surfaces": {
-        "hard": 1,
-        "unknown": 2
+        "hard": 3
       },
       "confidence": 0.999,
       "gender": "men",
@@ -34175,8 +34109,7 @@
         "Kelly Giese": 2
       },
       "api_surfaces": {
-        "hard": 1,
-        "unknown": 1
+        "hard": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -34644,7 +34577,7 @@
         "Mathis Bondaz": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -35113,8 +35046,7 @@
         "Marcel Latak": 4
       },
       "api_surfaces": {
-        "hard": 3,
-        "unknown": 1
+        "hard": 4
       },
       "confidence": 0.999,
       "gender": "men",
@@ -35138,8 +35070,7 @@
       },
       "api_surfaces": {
         "clay": 1,
-        "hard": 1,
-        "unknown": 2
+        "hard": 3
       },
       "confidence": 0.999,
       "gender": "men",
@@ -35230,8 +35161,7 @@
         "Elijah Sanogo": 3
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 2
+        "clay": 3
       },
       "confidence": 0.999,
       "gender": "men",
@@ -35345,8 +35275,7 @@
       },
       "api_surfaces": {
         "clay": 2,
-        "hard": 2,
-        "unknown": 1
+        "hard": 3
       },
       "confidence": 0.999,
       "gender": "men",
@@ -36048,8 +35977,7 @@
         "Joshua Peck": 2
       },
       "api_surfaces": {
-        "hard": 1,
-        "unknown": 1
+        "hard": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -36507,8 +36435,7 @@
         "Theo Papamalamis": 8
       },
       "api_surfaces": {
-        "clay": 3,
-        "unknown": 5
+        "clay": 8
       },
       "confidence": 0.999,
       "gender": "men",
@@ -36666,8 +36593,7 @@
         "Bozo Barun": 2
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 1
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -37297,8 +37223,7 @@
         "Mili Poljicak": 7
       },
       "api_surfaces": {
-        "clay": 4,
-        "unknown": 3
+        "clay": 7
       },
       "confidence": 0.999,
       "gender": "men",
@@ -37747,7 +37672,7 @@
       },
       "api_surfaces": {
         "clay": 2,
-        "unknown": 4
+        "hard": 4
       },
       "confidence": 0.999,
       "gender": "men",
@@ -37932,9 +37857,9 @@
       "api_surfaces": {
         "clay": 1
       },
-      "confidence": 0.904419,
+      "confidence": 0.904431,
       "gender": "men",
-      "margin": 0.904419,
+      "margin": 0.904431,
       "method": "initial_surname",
       "sackmann_player_key": "men:sackmann:207676",
       "status": "auto_mapped"
@@ -37954,9 +37879,8 @@
         "Andrej Nedic": 8
       },
       "api_surfaces": {
-        "clay": 2,
-        "hard": 1,
-        "unknown": 5
+        "clay": 7,
+        "hard": 1
       },
       "confidence": 0.999,
       "gender": "men",
@@ -38410,8 +38334,8 @@
         "Axel Garcian": 3
       },
       "api_surfaces": {
-        "hard": 2,
-        "unknown": 1
+        "clay": 1,
+        "hard": 2
       },
       "confidence": 0.999,
       "gender": "men",
@@ -38525,8 +38449,7 @@
         "Imanol Lopez Morillo": 5
       },
       "api_surfaces": {
-        "clay": 4,
-        "unknown": 1
+        "clay": 5
       },
       "confidence": 0.999,
       "gender": "men",
@@ -38549,8 +38472,8 @@
         "Iiro Vasa": 9
       },
       "api_surfaces": {
-        "hard": 8,
-        "unknown": 1
+        "clay": 1,
+        "hard": 8
       },
       "confidence": 0.999,
       "gender": "men",
@@ -39308,8 +39231,7 @@
         "Beatrice Ricci": 4
       },
       "api_surfaces": {
-        "clay": 2,
-        "unknown": 2
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "women",
@@ -40591,7 +40513,7 @@
         "M. Gospodinova": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.0,
       "gender": "women",
@@ -40613,8 +40535,7 @@
         "Ingrid Vojcinakova": 2
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 1
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "women",
@@ -40636,7 +40557,7 @@
         "J. Kolodziejska": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.0,
       "gender": "women",
@@ -40850,7 +40771,7 @@
         "G. Bonaccorso": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.0,
       "gender": "women",
@@ -40946,6 +40867,28 @@
       "method": "no_candidate",
       "sackmann_player_key": null,
       "status": "unmapped"
+    },
+    "women:api:104245": {
+      "api_levels": {
+        "itf": 1
+      },
+      "api_matches": 1,
+      "api_name": "S. Bielinska",
+      "api_name_sources": {
+        "api_source": 1
+      },
+      "api_name_variants": {
+        "S. Bielinska": 1
+      },
+      "api_surfaces": {
+        "hard": 1
+      },
+      "confidence": 0.972639,
+      "gender": "women",
+      "margin": 0.972639,
+      "method": "exact_initial_form",
+      "sackmann_player_key": "women:sackmann:270467",
+      "status": "auto_mapped"
     },
     "women:api:1049": {
       "api_levels": {
@@ -41165,8 +41108,7 @@
         "Irina Balus": 8
       },
       "api_surfaces": {
-        "clay": 6,
-        "unknown": 2
+        "clay": 8
       },
       "confidence": 0.999,
       "gender": "women",
@@ -41280,8 +41222,7 @@
         "Denislava Glushkova": 6
       },
       "api_surfaces": {
-        "clay": 4,
-        "unknown": 2
+        "clay": 6
       },
       "confidence": 0.999,
       "gender": "women",
@@ -41577,7 +41518,7 @@
         "Paula Ormaechea": 2
       },
       "api_surfaces": {
-        "unknown": 2
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "women",
@@ -42526,8 +42467,7 @@
         "Berfu Cengiz": 6
       },
       "api_surfaces": {
-        "clay": 2,
-        "unknown": 4
+        "clay": 6
       },
       "confidence": 0.999,
       "gender": "women",
@@ -43297,8 +43237,7 @@
         "Briana Szabo": 6
       },
       "api_surfaces": {
-        "clay": 3,
-        "unknown": 3
+        "clay": 6
       },
       "confidence": 0.999,
       "gender": "women",
@@ -43436,7 +43375,7 @@
         "Beatris Spasova": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.999,
       "gender": "women",
@@ -43685,9 +43624,8 @@
         "Maria Toma": 4
       },
       "api_surfaces": {
-        "clay": 1,
-        "hard": 2,
-        "unknown": 1
+        "clay": 2,
+        "hard": 2
       },
       "confidence": 0.999,
       "gender": "women",
@@ -44528,7 +44466,7 @@
         "Ivana Sebestova": 2
       },
       "api_surfaces": {
-        "unknown": 2
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "women",
@@ -44715,8 +44653,7 @@
         "Natalija Senic": 8
       },
       "api_surfaces": {
-        "clay": 5,
-        "unknown": 3
+        "clay": 8
       },
       "confidence": 0.999,
       "gender": "women",
@@ -45173,8 +45110,7 @@
         "Zhibek Kulambayeva": 4
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 3
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "women",
@@ -45333,8 +45269,7 @@
         "Angelica Raggi": 3
       },
       "api_surfaces": {
-        "clay": 2,
-        "unknown": 1
+        "clay": 3
       },
       "confidence": 0.999,
       "gender": "women",
@@ -45583,8 +45518,7 @@
         "Valeriya Strakhova": 3
       },
       "api_surfaces": {
-        "clay": 2,
-        "unknown": 1
+        "clay": 3
       },
       "confidence": 0.999,
       "gender": "women",
@@ -45673,8 +45607,7 @@
         "Amy Stevens": 3
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 2
+        "clay": 3
       },
       "confidence": 0.971792,
       "gender": "women",
@@ -45814,8 +45747,7 @@
         "Lia Karatancheva": 3
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 2
+        "clay": 3
       },
       "confidence": 0.999,
       "gender": "women",
@@ -45930,7 +45862,7 @@
         "Sophie Steur Joelle Lilly": 5
       },
       "api_surfaces": {
-        "unknown": 5
+        "clay": 5
       },
       "confidence": 0.999,
       "gender": "women",
@@ -46021,7 +45953,7 @@
         "Anna Ozerova": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.999,
       "gender": "women",
@@ -46226,8 +46158,7 @@
         "Weronika Falkowska": 5
       },
       "api_surfaces": {
-        "clay": 2,
-        "unknown": 3
+        "clay": 5
       },
       "confidence": 0.999,
       "gender": "women",
@@ -46250,8 +46181,7 @@
         "Georgeta Simion Oana": 4
       },
       "api_surfaces": {
-        "clay": 3,
-        "unknown": 1
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "women",
@@ -46938,9 +46868,9 @@
       "api_surfaces": {
         "clay": 2
       },
-      "confidence": 0.975193,
+      "confidence": 0.975198,
       "gender": "women",
-      "margin": 0.003807,
+      "margin": 0.003812,
       "method": "exact_initial_form",
       "sackmann_player_key": null,
       "status": "ambiguous"
@@ -47714,8 +47644,7 @@
         "Martina Capurro Taborda": 7
       },
       "api_surfaces": {
-        "clay": 4,
-        "unknown": 3
+        "clay": 7
       },
       "confidence": 0.999,
       "gender": "women",
@@ -47969,8 +47898,7 @@
         "Khrystyna Vozniak": 3
       },
       "api_surfaces": {
-        "clay": 2,
-        "unknown": 1
+        "clay": 3
       },
       "confidence": 0.999,
       "gender": "women",
@@ -49461,8 +49389,7 @@
         "Federica Bilardo": 4
       },
       "api_surfaces": {
-        "clay": 3,
-        "unknown": 1
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "women",
@@ -49507,8 +49434,7 @@
         "Miriana Tona": 4
       },
       "api_surfaces": {
-        "clay": 3,
-        "unknown": 1
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "women",
@@ -50304,8 +50230,8 @@
         "Selina Atay": 5
       },
       "api_surfaces": {
-        "hard": 4,
-        "unknown": 1
+        "clay": 1,
+        "hard": 4
       },
       "confidence": 0.999,
       "gender": "women",
@@ -50351,8 +50277,7 @@
         "Madelief Hageman": 6
       },
       "api_surfaces": {
-        "clay": 5,
-        "unknown": 1
+        "clay": 6
       },
       "confidence": 0.999,
       "gender": "women",
@@ -50397,8 +50322,7 @@
         "Marian Gomez Pezuela Cano": 2
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 1
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "women",
@@ -50623,8 +50547,7 @@
         "Sofia Rocchetti": 7
       },
       "api_surfaces": {
-        "clay": 3,
-        "unknown": 4
+        "clay": 7
       },
       "confidence": 0.999,
       "gender": "women",
@@ -50694,8 +50617,7 @@
         "Julia Stamatova": 4
       },
       "api_surfaces": {
-        "clay": 3,
-        "unknown": 1
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "women",
@@ -50791,6 +50713,28 @@
       "margin": 0.025865,
       "method": "exact_normalized",
       "sackmann_player_key": "women:sackmann:220497",
+      "status": "auto_mapped"
+    },
+    "women:api:26895": {
+      "api_levels": {
+        "itf": 1
+      },
+      "api_matches": 1,
+      "api_name": "D. Kuczer",
+      "api_name_sources": {
+        "api_cache_short_name": 1
+      },
+      "api_name_variants": {
+        "D. Kuczer": 1
+      },
+      "api_surfaces": {
+        "clay": 1
+      },
+      "confidence": 0.974663,
+      "gender": "women",
+      "margin": 0.974663,
+      "method": "exact_initial_form",
+      "sackmann_player_key": "women:sackmann:214784",
       "status": "auto_mapped"
     },
     "women:api:2692": {
@@ -50965,8 +50909,7 @@
         "Hibah Shaikh": 3
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 2
+        "clay": 3
       },
       "confidence": 0.999,
       "gender": "women",
@@ -50989,8 +50932,7 @@
         "Nadia Podoroska": 11
       },
       "api_surfaces": {
-        "clay": 8,
-        "unknown": 3
+        "clay": 11
       },
       "confidence": 0.999,
       "gender": "women",
@@ -51035,8 +50977,7 @@
         "Andreea Herea Carmen": 4
       },
       "api_surfaces": {
-        "clay": 2,
-        "unknown": 2
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "women",
@@ -51407,8 +51348,7 @@
         "Bianca Barbulescu": 7
       },
       "api_surfaces": {
-        "clay": 6,
-        "unknown": 1
+        "clay": 7
       },
       "confidence": 0.970088,
       "gender": "women",
@@ -51477,8 +51417,7 @@
         "Vittoria Paganetti": 6
       },
       "api_surfaces": {
-        "clay": 3,
-        "unknown": 3
+        "clay": 6
       },
       "confidence": 0.999,
       "gender": "women",
@@ -51501,8 +51440,7 @@
         "Cagla Buyukakcay": 4
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 3
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "women",
@@ -51692,8 +51630,7 @@
         "Dalina Amariei Ilinca": 3
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 2
+        "clay": 3
       },
       "confidence": 0.999,
       "gender": "women",
@@ -51715,7 +51652,7 @@
         "Irina Fetecau": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.999,
       "gender": "women",
@@ -51853,8 +51790,7 @@
         "Julie Pastikova": 6
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 5
+        "clay": 6
       },
       "confidence": 0.999,
       "gender": "women",
@@ -51905,6 +51841,28 @@
       "margin": 0.999,
       "method": "exact_normalized",
       "sackmann_player_key": "women:sackmann:261066",
+      "status": "auto_mapped"
+    },
+    "women:api:31159": {
+      "api_levels": {
+        "itf": 1
+      },
+      "api_matches": 1,
+      "api_name": "H. Shi",
+      "api_name_sources": {
+        "api_cache_short_name": 1
+      },
+      "api_name_variants": {
+        "H. Shi": 1
+      },
+      "api_surfaces": {
+        "hard": 1
+      },
+      "confidence": 0.975298,
+      "gender": "women",
+      "margin": 0.975298,
+      "method": "exact_initial_form",
+      "sackmann_player_key": "women:sackmann:222559",
       "status": "auto_mapped"
     },
     "women:api:3130": {
@@ -52376,8 +52334,7 @@
         "Martha Matoula": 12
       },
       "api_surfaces": {
-        "clay": 7,
-        "unknown": 5
+        "clay": 12
       },
       "confidence": 0.999,
       "gender": "women",
@@ -52421,8 +52378,7 @@
         "Rositsa Dencheva": 3
       },
       "api_surfaces": {
-        "clay": 2,
-        "unknown": 1
+        "clay": 3
       },
       "confidence": 0.999,
       "gender": "women",
@@ -52740,8 +52696,7 @@
         "Ruien Zhang": 5
       },
       "api_surfaces": {
-        "clay": 3,
-        "unknown": 2
+        "clay": 5
       },
       "confidence": 0.999,
       "gender": "women",
@@ -53012,8 +52967,7 @@
         "Elena Korokozidi": 9
       },
       "api_surfaces": {
-        "clay": 7,
-        "unknown": 2
+        "clay": 9
       },
       "confidence": 0.999,
       "gender": "women",
@@ -53148,8 +53102,7 @@
         "Anastasia Abbagnato": 3
       },
       "api_surfaces": {
-        "clay": 2,
-        "unknown": 1
+        "clay": 3
       },
       "confidence": 0.999,
       "gender": "women",
@@ -53184,19 +53137,19 @@
     },
     "women:api:38097": {
       "api_levels": {
-        "itf": 7,
+        "itf": 6,
         "qualifying": 2
       },
-      "api_matches": 9,
+      "api_matches": 8,
       "api_name": "Han Shi",
       "api_name_sources": {
-        "api_cache_full_name": 9
+        "api_cache_full_name": 8
       },
       "api_name_variants": {
-        "Han Shi": 9
+        "Han Shi": 8
       },
       "api_surfaces": {
-        "hard": 9
+        "hard": 8
       },
       "confidence": 0.999,
       "gender": "women",
@@ -53219,7 +53172,7 @@
         "Gina Feistel": 3
       },
       "api_surfaces": {
-        "unknown": 3
+        "clay": 3
       },
       "confidence": 0.999,
       "gender": "women",
@@ -53270,28 +53223,6 @@
       "margin": 0.999,
       "method": "exact_normalized",
       "sackmann_player_key": "women:sackmann:260377",
-      "status": "auto_mapped"
-    },
-    "women:api:38181": {
-      "api_levels": {
-        "itf": 1
-      },
-      "api_matches": 1,
-      "api_name": "D. Kuczer",
-      "api_name_sources": {
-        "api_source": 1
-      },
-      "api_name_variants": {
-        "D. Kuczer": 1
-      },
-      "api_surfaces": {
-        "unknown": 1
-      },
-      "confidence": 0.974663,
-      "gender": "women",
-      "margin": 0.974663,
-      "method": "exact_initial_form",
-      "sackmann_player_key": "women:sackmann:214784",
       "status": "auto_mapped"
     },
     "women:api:38184": {
@@ -53558,8 +53489,7 @@
         "Lucciana Perez Alarcon": 9
       },
       "api_surfaces": {
-        "clay": 5,
-        "unknown": 4
+        "clay": 9
       },
       "confidence": 0.999,
       "gender": "women",
@@ -53582,8 +53512,7 @@
         "Weronika Ewald": 4
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 3
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "women",
@@ -54458,8 +54387,8 @@
         "Yoana Konstantinova": 2
       },
       "api_surfaces": {
-        "hard": 1,
-        "unknown": 1
+        "clay": 1,
+        "hard": 1
       },
       "confidence": 0.999,
       "gender": "women",
@@ -54706,8 +54635,7 @@
         "Victoria Bosio": 7
       },
       "api_surfaces": {
-        "clay": 3,
-        "unknown": 4
+        "clay": 7
       },
       "confidence": 0.999,
       "gender": "women",
@@ -55177,8 +55105,7 @@
         "Dalila Spiteri": 7
       },
       "api_surfaces": {
-        "clay": 4,
-        "unknown": 3
+        "clay": 7
       },
       "confidence": 0.999,
       "gender": "women",
@@ -55708,8 +55635,7 @@
         "Selena Janicijevic": 6
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 5
+        "clay": 6
       },
       "confidence": 0.999,
       "gender": "women",
@@ -55778,8 +55704,7 @@
         "Gabriela Ce": 11
       },
       "api_surfaces": {
-        "clay": 6,
-        "unknown": 5
+        "clay": 11
       },
       "confidence": 0.999,
       "gender": "women",
@@ -56324,7 +56249,7 @@
         "Emilija Tverijonaite": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.999,
       "gender": "women",
@@ -56667,8 +56592,7 @@
         "Lidia Encheva": 9
       },
       "api_surfaces": {
-        "clay": 5,
-        "unknown": 4
+        "clay": 9
       },
       "confidence": 0.999,
       "gender": "women",
@@ -57444,8 +57368,7 @@
         "Anja Stankovic": 5
       },
       "api_surfaces": {
-        "clay": 3,
-        "unknown": 2
+        "clay": 5
       },
       "confidence": 0.999,
       "gender": "women",
@@ -57514,8 +57437,7 @@
         "Isabelle Cherny": 3
       },
       "api_surfaces": {
-        "clay": 2,
-        "unknown": 1
+        "clay": 3
       },
       "confidence": 0.999,
       "gender": "women",
@@ -57713,8 +57635,7 @@
         "Alena Kovackova": 5
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 4
+        "clay": 5
       },
       "confidence": 0.999,
       "gender": "women",
@@ -57897,8 +57818,7 @@
         "Iva Ivanova": 5
       },
       "api_surfaces": {
-        "clay": 3,
-        "unknown": 2
+        "clay": 5
       },
       "confidence": 0.999,
       "gender": "women",
@@ -58124,7 +58044,7 @@
         "I. Heinzova": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.973367,
       "gender": "women",
@@ -58308,8 +58228,7 @@
         "Daria Gorska": 2
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 1
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "women",
@@ -58870,7 +58789,7 @@
         "Amy Sucha": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.999,
       "gender": "women",
@@ -59209,8 +59128,7 @@
         "Sonja Zhenikhova": 4
       },
       "api_surfaces": {
-        "clay": 3,
-        "unknown": 1
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "women",
@@ -60194,8 +60112,8 @@
         "Francesca Gandolfi": 2
       },
       "api_surfaces": {
-        "grass": 1,
-        "unknown": 1
+        "clay": 1,
+        "grass": 1
       },
       "confidence": 0.999,
       "gender": "women",
@@ -60262,8 +60180,7 @@
         "C. Troiano": 2
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 1
+        "clay": 2
       },
       "confidence": 0.973584,
       "gender": "women",
@@ -60828,8 +60745,7 @@
         "Maria Cinalli Luna": 5
       },
       "api_surfaces": {
-        "clay": 4,
-        "unknown": 1
+        "clay": 5
       },
       "confidence": 0.998611,
       "gender": "women",
@@ -61162,9 +61078,8 @@
         "Masha Lazarenko": 8
       },
       "api_surfaces": {
-        "clay": 2,
-        "hard": 4,
-        "unknown": 2
+        "clay": 4,
+        "hard": 4
       },
       "confidence": 0.999,
       "gender": "women",
@@ -62437,8 +62352,7 @@
         "Darya Velikova": 4
       },
       "api_surfaces": {
-        "clay": 3,
-        "unknown": 1
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "women",
@@ -62573,8 +62487,7 @@
         "Irina Anghel Alexandra": 2
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 1
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "women",
@@ -62819,8 +62732,7 @@
         "Barbora Michalkova": 3
       },
       "api_surfaces": {
-        "clay": 2,
-        "unknown": 1
+        "clay": 3
       },
       "confidence": 0.999,
       "gender": "women",
@@ -63203,7 +63115,7 @@
         "Maja Pawelska": 2
       },
       "api_surfaces": {
-        "unknown": 2
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "women",
@@ -63543,8 +63455,7 @@
         "Marta Lombardini": 7
       },
       "api_surfaces": {
-        "clay": 4,
-        "unknown": 3
+        "clay": 7
       },
       "confidence": 0.999,
       "gender": "women",
@@ -63677,7 +63588,7 @@
         "Anna Kmiecik": 2
       },
       "api_surfaces": {
-        "unknown": 2
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "women",
@@ -63722,7 +63633,7 @@
         "Oriana Gniewkowska": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.999,
       "gender": "women",
@@ -63811,7 +63722,7 @@
         "Barbara Straszewska": 2
       },
       "api_surfaces": {
-        "unknown": 2
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "women",
@@ -64013,7 +63924,7 @@
         "Magdalena Baniak": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.999,
       "gender": "women",
@@ -64575,7 +64486,7 @@
         "Melis Rasim": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.999,
       "gender": "women",
@@ -64915,7 +64826,7 @@
         "Romane Longueville": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.999,
       "gender": "women",
@@ -65026,8 +64937,7 @@
         "Valeriia Artemeva": 6
       },
       "api_surfaces": {
-        "clay": 4,
-        "unknown": 2
+        "clay": 6
       },
       "confidence": 0.999,
       "gender": "women",
@@ -65651,8 +65561,7 @@
         "Beatrise Zeltina": 7
       },
       "api_surfaces": {
-        "clay": 2,
-        "unknown": 5
+        "clay": 7
       },
       "confidence": 0.999,
       "gender": "women",
@@ -65896,8 +65805,7 @@
         "Y. Zocco": 2
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 1
+        "clay": 2
       },
       "confidence": 0.972079,
       "gender": "women",
@@ -65919,8 +65827,7 @@
         "K. N. Kucikova": 2
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 1
+        "clay": 2
       },
       "confidence": 0.931904,
       "gender": "women",
@@ -66725,8 +66632,7 @@
         "A. Adeikyte": 2
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 1
+        "clay": 2
       },
       "confidence": 0.972197,
       "gender": "women",
@@ -66792,7 +66698,7 @@
         "Valeria Garnevska": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.999,
       "gender": "women",
@@ -67037,7 +66943,7 @@
         "Lena Ebster Anna": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.999,
       "gender": "women",
@@ -67082,8 +66988,7 @@
         "Inka Wawrzkiewicz": 2
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 1
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "women",
@@ -67127,7 +67032,7 @@
         "Amelia Paszun": 2
       },
       "api_surfaces": {
-        "unknown": 2
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "women",
@@ -67527,7 +67432,7 @@
         "M. K. Tikhonko": 1
       },
       "api_surfaces": {
-        "unknown": 1
+        "clay": 1
       },
       "confidence": 0.922651,
       "gender": "women",
@@ -67788,20 +67693,20 @@
         "qualifying": 1
       },
       "api_matches": 5,
-      "api_name": "C. Dibenedetto",
+      "api_name": "Carolina Dibenedetto",
       "api_name_sources": {
-        "api_cache_short_name": 5
+        "api_cache_full_name": 5
       },
       "api_name_variants": {
-        "C. Dibenedetto": 5
+        "Carolina Dibenedetto": 5
       },
       "api_surfaces": {
         "clay": 5
       },
-      "confidence": 0.972565,
+      "confidence": 0.999,
       "gender": "women",
-      "margin": 0.972565,
-      "method": "exact_initial_form",
+      "margin": 0.999,
+      "method": "exact_normalized",
       "sackmann_player_key": "women:sackmann:270161",
       "status": "auto_mapped"
     },
@@ -67840,7 +67745,7 @@
         "Barbara Kostecka": 2
       },
       "api_surfaces": {
-        "unknown": 2
+        "clay": 2
       },
       "confidence": 0.999,
       "gender": "women",
@@ -68242,8 +68147,7 @@
         "Nika Hurkacz": 3
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 2
+        "clay": 3
       },
       "confidence": 0.999,
       "gender": "women",
@@ -68737,8 +68641,7 @@
         "A. Gentili": 3
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 2
+        "clay": 3
       },
       "confidence": 0.972303,
       "gender": "women",
@@ -69120,8 +69023,7 @@
         "Marcelina Podlinska": 3
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 2
+        "clay": 3
       },
       "confidence": 0.999,
       "gender": "women",
@@ -69864,8 +69766,7 @@
         "Laura Hietaranta": 4
       },
       "api_surfaces": {
-        "clay": 3,
-        "unknown": 1
+        "clay": 4
       },
       "confidence": 0.999,
       "gender": "women",
@@ -70338,8 +70239,7 @@
         "G. Ferro": 2
       },
       "api_surfaces": {
-        "clay": 1,
-        "unknown": 1
+        "clay": 2
       },
       "confidence": 0.971792,
       "gender": "women",
@@ -70843,20 +70743,20 @@
     "women:api:95213": {
       "api_levels": {
         "grand_slam": 4,
-        "itf": 4,
+        "itf": 3,
         "qualifying": 1
       },
-      "api_matches": 9,
+      "api_matches": 8,
       "api_name": "S. Bielinska",
       "api_name_sources": {
-        "api_cache_short_name": 9
+        "api_cache_short_name": 8
       },
       "api_name_variants": {
-        "S. Bielinska": 9
+        "S. Bielinska": 8
       },
       "api_surfaces": {
         "clay": 4,
-        "hard": 5
+        "hard": 4
       },
       "confidence": 0.972639,
       "gender": "women",
@@ -71194,15 +71094,15 @@
   "source": "api_tennis",
   "summary": {
     "ambiguous": 19,
-    "api_gender_men": 1699,
-    "api_gender_women": 1439,
-    "api_player_cache_entries": 5267,
-    "api_player_cache_full_name_used": 10654,
-    "api_player_cache_short_name_used": 887,
-    "api_player_cache_with_full_name": 2603,
-    "api_player_cache_with_short_name": 5267,
-    "api_players": 3138,
-    "auto_mapped": 2959,
+    "api_gender_men": 1700,
+    "api_gender_women": 1441,
+    "api_player_cache_entries": 5280,
+    "api_player_cache_full_name_used": 10657,
+    "api_player_cache_short_name_used": 884,
+    "api_player_cache_with_full_name": 2615,
+    "api_player_cache_with_short_name": 5280,
+    "api_players": 3141,
+    "auto_mapped": 2962,
     "manual_mapped": 9,
     "player_aliases_loaded": 152,
     "rebuild_auto_mapping": 0,

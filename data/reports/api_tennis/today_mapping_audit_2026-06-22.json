@@ -1,0 +1,59 @@
+{
+  "api_player_cache": {
+    "entries": 5280,
+    "exists": true,
+    "path": "data/raw/api_tennis/players/api_players.json",
+    "with_full_name": 2615,
+    "with_short_name": 5280
+  },
+  "blocked_matches": 18,
+  "counters": {
+    "api_player_cache_entries": 5280,
+    "api_player_cache_first_name_changed": 130,
+    "api_player_cache_full_name_used": 262,
+    "api_player_cache_name_changed": 262,
+    "api_player_cache_second_name_changed": 132,
+    "api_player_cache_short_name_used": 6,
+    "api_player_cache_with_full_name": 2615,
+    "api_player_cache_with_short_name": 5280,
+    "blocked_matches": 18,
+    "mapped_from_mapping_json": 246,
+    "mapped_from_overrides": 3,
+    "mapped_players": 249,
+    "match_coverage_both_mapped": 116,
+    "match_coverage_one_mapped": 18,
+    "raw_skipped_non_singles": 19,
+    "review_ambiguous_candidates": 1,
+    "review_candidates_available": 1,
+    "review_no_candidates_suppressed": 17,
+    "today_matches": 134,
+    "today_players": 267,
+    "unmapped_players": 18
+  },
+  "date": "2026-06-22",
+  "generated_at": "2026-06-22T06:02:10+00:00",
+  "mapped_players": 249,
+  "mapping_path": "data/metadata/api_tennis/player_mapping.json",
+  "notes": [
+    "Default audit is singles-only; doubles/team fixtures are skipped for betting scanner mapping.",
+    "Today audit checks both player_mapping.json and player_mapping_overrides.json, so manual daily overrides work immediately.",
+    "Raw-mode audit now enriches display names from data/raw/api_tennis/players/api_players.json.",
+    "Scanner should block/NO_BET every singles match where coverage is not both_mapped."
+  ],
+  "outputs": {
+    "audit_json": "data/reports/api_tennis/today_mapping_audit_2026-06-22.json",
+    "latest_audit_json": "data/reports/api_tennis/today_mapping_audit.json",
+    "latest_no_candidates_csv": "data/reports/api_tennis/today_mapping_no_candidates.csv",
+    "latest_review_csv": "data/reports/api_tennis/today_mapping_review.csv",
+    "no_candidates_csv": "data/reports/api_tennis/today_mapping_no_candidates_2026-06-22.csv",
+    "review_csv": "data/reports/api_tennis/today_mapping_review_2026-06-22.csv"
+  },
+  "overrides_path": "data/metadata/api_tennis/player_mapping_overrides.json",
+  "raw_root": "data/raw/api_tennis",
+  "scanner_ready": false,
+  "source_used": "raw",
+  "status": "ok",
+  "today_matches": 134,
+  "today_players": 267,
+  "unmapped_players": 18
+}

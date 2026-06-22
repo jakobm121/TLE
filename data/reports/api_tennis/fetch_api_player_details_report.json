@@ -1,26 +1,27 @@
 {
   "cache_path": "data/raw/api_tennis/players/api_players.json",
-  "cache_total_after": 5267,
-  "cache_with_full_name_after": 2603,
+  "cache_total_after": 5280,
+  "cache_with_full_name_after": 2615,
   "collect_stats": {
-    "files_seen": 1,
-    "raw_fixtures_seen": 103,
-    "singles_fixtures_used": 98,
-    "skipped_doubles_fixtures": 5
+    "files_seen": 2,
+    "raw_fixtures_seen": 256,
+    "singles_fixtures_used": 232,
+    "skipped_doubles_fixtures": 24
   },
   "counters": {
     "cache_existing_before": 5267,
-    "candidate_player_ids": 192,
-    "fetched": 3,
-    "fetched_missing_full_name": 3,
-    "to_fetch": 3
+    "candidate_player_ids": 412,
+    "fetched": 20,
+    "fetched_missing_full_name": 8,
+    "fetched_with_full_name": 12,
+    "to_fetch": 20
   },
   "date_filter": {
-    "end_date": "2026-06-21",
+    "end_date": "2026-06-22",
     "start_date": "2026-06-21"
   },
   "errors": [],
-  "generated_at": "2026-06-21T22:21:42+00:00",
+  "generated_at": "2026-06-22T06:01:29+00:00",
   "method": "get_players",
   "outputs": {
     "cache": "data/raw/api_tennis/players/api_players.json",
@@ -28,10 +29,151 @@
     "report": "data/reports/api_tennis/fetch_api_player_details_report.json"
   },
   "raw_files": {
-    "2026-06-21.json": 103
+    "2026-06-21.json": 103,
+    "2026-06-22.json": 153
   },
   "raw_results_dir": "data/raw/api_tennis/results",
   "sample_fetched": [
+    {
+      "player_bday": "19.02.1998",
+      "player_country": "Brazil",
+      "player_full_name": "Felipe Meligeni Alves",
+      "player_key": "357",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/357_f-meligeni-alves.jpg",
+      "player_name": "F. Meligeni Alves",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-22T06:01:15+00:00"
+    },
+    {
+      "player_bday": "27.02.1998",
+      "player_country": "Croatia",
+      "player_full_name": "Borna Gojo",
+      "player_key": "377",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/377_b-gojo.jpg",
+      "player_name": "B. Gojo",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-22T06:01:16+00:00"
+    },
+    {
+      "player_bday": "24.04.2000",
+      "player_country": "World",
+      "player_full_name": "Yuliya Hatouka",
+      "player_key": "466",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/466_y-hatouka.jpg",
+      "player_name": "Y. Hatouka",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-22T06:01:17+00:00"
+    },
+    {
+      "player_bday": "14.03.1996",
+      "player_country": "Netherlands",
+      "player_full_name": "Gijs Brouwer",
+      "player_key": "581",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/581_g-brouwer.jpg",
+      "player_name": "G. Brouwer",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-22T06:01:18+00:00"
+    },
+    {
+      "player_bday": "26.11.1996",
+      "player_country": "Argentina",
+      "player_full_name": "Agustin Gomez Federico",
+      "player_key": "717",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/717_f-a-gomez.jpg",
+      "player_name": "F. A. Gomez",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-22T06:01:18+00:00"
+    },
+    {
+      "player_bday": "14.07.1997",
+      "player_country": "USA",
+      "player_full_name": "Nicolas Moreno De Alboran",
+      "player_key": "1179",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/1179_n-moreno-de-alboran.jpg",
+      "player_name": "N. Moreno De Alboran",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-22T06:01:19+00:00"
+    },
+    {
+      "player_bday": "07.12.1990",
+      "player_country": "Belgium",
+      "player_full_name": "David Goffin",
+      "player_key": "2385",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/2385_d-goffin.jpg",
+      "player_name": "D. Goffin",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-22T06:01:20+00:00"
+    },
+    {
+      "player_bday": "",
+      "player_country": "",
+      "player_full_name": "",
+      "player_key": "2576",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/2576_a-kucmova.jpg",
+      "player_name": "A. Kucmova",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-22T06:01:20+00:00"
+    },
+    {
+      "player_bday": "10.05.2000",
+      "player_country": "Czech Republic",
+      "player_full_name": "Aneta Laboutkova",
+      "player_key": "4085",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/4085_a-laboutkova.jpg",
+      "player_name": "A. Laboutkova",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-22T06:01:21+00:00"
+    },
+    {
+      "player_bday": "17.06.1980",
+      "player_country": "USA",
+      "player_full_name": "Venus Williams",
+      "player_key": "5341",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/5341_v-williams.jpg",
+      "player_name": "V. Williams",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-22T06:01:22+00:00"
+    },
+    {
+      "player_bday": "22.12.2001",
+      "player_country": "United Kingdom",
+      "player_full_name": "Jack Draper",
+      "player_key": "7011",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/7011_j-draper.jpg",
+      "player_name": "J. Draper",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-22T06:01:22+00:00"
+    },
+    {
+      "player_bday": "",
+      "player_country": "",
+      "player_full_name": "",
+      "player_key": "31143",
+      "player_logo": "",
+      "player_name": "M. Mrva",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-22T06:01:23+00:00"
+    },
+    {
+      "player_bday": "19.06.2006",
+      "player_country": "Colombia",
+      "player_full_name": "",
+      "player_key": "34386",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/34386_m-tobon.jpg",
+      "player_name": "M. Tobon",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-22T06:01:24+00:00"
+    },
+    {
+      "player_bday": "14.05.1998",
+      "player_country": "United Kingdom",
+      "player_full_name": "Max Benaim",
+      "player_key": "62372",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/62372_m-benaim.jpg",
+      "player_name": "M. Benaim",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-22T06:01:24+00:00"
+    },
     {
       "player_bday": "17.06.2008",
       "player_country": "Brazil",
@@ -40,27 +182,57 @@
       "player_logo": "",
       "player_name": "P. Rodrigues Longobardi",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-21T22:21:41+00:00"
+      "updated_at": "2026-06-22T06:01:25+00:00"
     },
     {
-      "player_bday": "",
-      "player_country": "",
+      "player_bday": "13.03.2009",
+      "player_country": "United Kingdom",
       "player_full_name": "",
-      "player_key": "104198",
-      "player_logo": "",
-      "player_name": "A. Ganchev",
+      "player_key": "70760",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/70760_m-ceban.jpg",
+      "player_name": "M. Ceban",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-21T22:21:41+00:00"
+      "updated_at": "2026-06-22T06:01:26+00:00"
+    },
+    {
+      "player_bday": "01.01.1970",
+      "player_country": "Italy",
+      "player_full_name": "Carolina Dibenedetto",
+      "player_key": "86093",
+      "player_logo": "",
+      "player_name": "C. Dibenedetto",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-22T06:01:26+00:00"
+    },
+    {
+      "player_bday": "01.01.1970",
+      "player_country": "Italy",
+      "player_full_name": "",
+      "player_key": "89599",
+      "player_logo": "",
+      "player_name": "A. Gentili",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-22T06:01:27+00:00"
     },
     {
       "player_bday": "",
       "player_country": "",
       "player_full_name": "",
-      "player_key": "104199",
+      "player_key": "104246",
       "player_logo": "",
       "player_name": "A. Tolev",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-21T22:21:42+00:00"
+      "updated_at": "2026-06-22T06:01:28+00:00"
+    },
+    {
+      "player_bday": "",
+      "player_country": "",
+      "player_full_name": "",
+      "player_key": "104247",
+      "player_logo": "",
+      "player_name": "A. Ganchev",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-22T06:01:29+00:00"
     }
   ],
   "source": "api_tennis"

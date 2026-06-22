@@ -1,34 +1,35 @@
 {
   "api_player_cache": {
-    "entries": 5267,
+    "entries": 5280,
     "exists": true,
     "path": "data/raw/api_tennis/players/api_players.json",
-    "with_full_name": 2603,
-    "with_short_name": 5267
+    "with_full_name": 2615,
+    "with_short_name": 5280
   },
   "counters": {
-    "api_player_cache_entries": 5267,
-    "api_player_cache_first_full_name_used": 5334,
-    "api_player_cache_first_name_changed": 5343,
-    "api_player_cache_first_short_name_used": 566,
-    "api_player_cache_name_changed": 10670,
+    "api_player_cache_entries": 5280,
+    "api_player_cache_first_full_name_used": 5339,
+    "api_player_cache_first_name_changed": 5348,
+    "api_player_cache_first_short_name_used": 562,
+    "api_player_cache_name_changed": 10675,
     "api_player_cache_second_full_name_used": 5320,
     "api_player_cache_second_name_changed": 5327,
-    "api_player_cache_second_short_name_used": 577,
-    "api_player_cache_with_full_name": 2603,
-    "api_player_cache_with_short_name": 5267,
+    "api_player_cache_second_short_name_used": 578,
+    "api_player_cache_with_full_name": 2615,
+    "api_player_cache_with_short_name": 5280,
     "gender_men": 3214,
     "gender_women": 2564,
     "imported": 5778,
-    "input_fixtures": 8538,
+    "input_fixtures": 8691,
     "level_atp_wta": 373,
     "level_challenger": 852,
     "level_grand_slam": 340,
     "level_itf": 3254,
     "level_qualifying": 959,
-    "raw_fixtures": 8538,
-    "skipped_doubles_or_team_match": 2539,
-    "skipped_not_finished": 93,
+    "raw_fixtures": 8691,
+    "skipped_doubles_or_team_match": 2558,
+    "skipped_missing_or_unresolved_winner": 1,
+    "skipped_not_finished": 226,
     "skipped_unknown_level": 66,
     "skipped_unknown_surface_not_allowed": 62,
     "surface_clay": 3286,
@@ -37,7 +38,7 @@
     "tournament_surface_map_entries": 10003,
     "tournament_surface_map_rows": 10064
   },
-  "generated_at": "2026-06-21T23:22:26+00:00",
+  "generated_at": "2026-06-22T06:01:36+00:00",
   "matches": 5778,
   "outputs": {
     "duplicates_csv": "data/reports/api_tennis/duplicate_api_matches.csv",
@@ -79,7 +80,7 @@
   },
   "year_files": [
     {
-      "created_at": "2026-06-21T23:22:26+00:00",
+      "created_at": "2026-06-22T06:01:36+00:00",
       "matches": 5778,
       "path": "data/source/api_tennis/tle_api_matches_2026.jsonl.gz",
       "year": 2026

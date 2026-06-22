@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T22:29:18+00:00",
+  "generated_at": "2026-06-22T06:02:31+00:00",
   "players_men": 5214,
   "players_total": 11894,
   "players_women": 6680,
@@ -10,6 +10,5 @@
   "processed_level_qualifying": 919,
   "processed_matches": 227699,
   "processed_men": 113434,
-  "processed_women": 114265,
-  "unknown_surface": 214
+  "processed_women": 114265
 }

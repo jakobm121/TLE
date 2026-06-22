@@ -1,0 +1,18 @@
+api_player_key,raw_api_player_key,api_name,api_name_source,gender,mapping_status,today_match_count,opponent_name,opponents_today,tournament,event_names,event_type,event_type_types,reason
+women:api:2576,2576,A. Kucmova,api_cache_short_name,women,unmapped,1,Carolina Dibenedetto,Carolina Dibenedetto,W35 Tarvisio,W35 Tarvisio,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
+men:api:104246,104246,A. Tolev,api_cache_short_name,men,unmapped,1,Tomasz Berkieta,Tomasz Berkieta,Plovdiv (Bulgaria) - Qualification,Plovdiv (Bulgaria) - Qualification,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:717,717,Agustin Gomez Federico,api_cache_full_name,men,missing_mapping_entry,1,Clement Tabur,Clement Tabur,Wimbledon,Wimbledon,Atp Singles,Atp Singles,no_sackmann_candidate
+women:api:4085,4085,Aneta Laboutkova,api_cache_full_name,women,missing_mapping_entry,1,A. Gentili,A. Gentili,W35 Tarvisio,W35 Tarvisio,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
+men:api:377,377,Borna Gojo,api_cache_full_name,men,missing_mapping_entry,1,Coleman Wong Chak Lam,Coleman Wong Chak Lam,Wimbledon,Wimbledon,Atp Singles,Atp Singles,no_sackmann_candidate
+men:api:2385,2385,David Goffin,api_cache_full_name,men,missing_mapping_entry,1,Andrea Guerrieri,Andrea Guerrieri,Wimbledon,Wimbledon,Atp Singles,Atp Singles,no_sackmann_candidate
+men:api:55858,55858,Diego Dedura,api_cache_full_name,men,unmapped,1,Alexandre Reco,Alexandre Reco,M25 Bakio,M25 Bakio,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
+men:api:357,357,Felipe Meligeni Alves,api_cache_full_name,men,missing_mapping_entry,1,Mackenzie McDonald,Mackenzie McDonald,Wimbledon,Wimbledon,Atp Singles,Atp Singles,no_sackmann_candidate
+men:api:581,581,Gijs Brouwer,api_cache_full_name,men,missing_mapping_entry,1,Daniel Michalski,Daniel Michalski,Plovdiv (Bulgaria) - Qualification,Plovdiv (Bulgaria) - Qualification,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:7011,7011,Jack Draper,api_cache_full_name,men,missing_mapping_entry,1,Brandon Nakashima,Brandon Nakashima,Eastbourne,Eastbourne,Atp Singles,Atp Singles,no_sackmann_candidate
+men:api:1857,1857,John Fancutt Thomas,api_cache_full_name,men,unmapped,1,Dimitar Kisimov,Dimitar Kisimov,Plovdiv (Bulgaria) - Qualification,Plovdiv (Bulgaria) - Qualification,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:32558,32558,Josef Schwaerzler Joel,api_cache_full_name,men,unmapped,1,Christopher O'Connell,Christopher O'Connell,Wimbledon,Wimbledon,Atp Singles,Atp Singles,no_sackmann_candidate
+men:api:62372,62372,Max Benaim,api_cache_full_name,men,missing_mapping_entry,1,Enrique Carrascosa Diaz,Enrique Carrascosa Diaz,M25 Bakio,M25 Bakio,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
+men:api:1179,1179,Nicolas Moreno De Alboran,api_cache_full_name,men,missing_mapping_entry,1,Harold Mayot,Harold Mayot,Wimbledon,Wimbledon,Atp Singles,Atp Singles,no_sackmann_candidate
+men:api:37897,37897,Rei Sakamoto,api_cache_full_name,men,missing_mapping_entry,1,Anton Matusevich,Anton Matusevich,Wimbledon,Wimbledon,Atp Singles,Atp Singles,no_sackmann_candidate
+women:api:5341,5341,Venus Williams,api_cache_full_name,women,missing_mapping_entry,1,Irina-Camelia Begu,Irina-Camelia Begu,Bad Homburg,Bad Homburg,Wta Singles,Wta Singles,no_sackmann_candidate
+women:api:466,466,Yuliya Hatouka,api_cache_full_name,women,missing_mapping_entry,1,Viola Turini,Viola Turini,W50 Palma del Rio,W50 Palma del Rio,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
