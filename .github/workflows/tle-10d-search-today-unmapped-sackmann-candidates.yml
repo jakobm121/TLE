@@ -2,11 +2,6 @@ name: TLE 10d - Search Today Unmapped Sackmann Candidates
 
 on:
   workflow_dispatch:
-  workflow_run:
-    workflows:
-      - "TLE 10b - Audit Today Player Mapping"
-    types:
-      - completed
 
 permissions:
   contents: write
@@ -14,10 +9,6 @@ permissions:
 jobs:
   search-today-unmapped-sackmann-candidates:
     runs-on: ubuntu-latest
-
-    if: >
-      github.event_name == 'workflow_dispatch' ||
-      github.event.workflow_run.conclusion == 'success'
 
     steps:
       - name: Checkout repo
