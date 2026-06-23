@@ -1,31 +1,32 @@
 {
   "api_player_cache": {
-    "entries": 5280,
+    "entries": 5347,
     "exists": true,
     "path": "data/raw/api_tennis/players/api_players.json",
-    "with_full_name": 2615,
-    "with_short_name": 5280
+    "with_full_name": 2658,
+    "with_short_name": 5347
   },
   "event_type_counts": {
-    "Atp Doubles": 142,
-    "Atp Singles": 360,
+    "Atp Doubles": 150,
+    "Atp Singles": 378,
     "Boys Doubles": 31,
     "Boys Singles": 87,
-    "Challenger Men Doubles": 344,
-    "Challenger Men Singles": 1069,
+    "Challenger Men Doubles": 350,
+    "Challenger Men Singles": 1102,
     "Challenger Women Doubles": 76,
     "Challenger Women Singles": 296,
+    "Exhibition Men": 4,
     "Girls Doubles": 31,
     "Girls Singles": 87,
-    "Itf Men Doubles": 897,
-    "Itf Men Singles": 1864,
-    "Itf Women Doubles": 863,
-    "Itf Women Singles": 1910,
+    "Itf Men Doubles": 976,
+    "Itf Men Singles": 1920,
+    "Itf Women Doubles": 916,
+    "Itf Women Singles": 2006,
     "Mixed Doubles": 33,
     "Teams Men": 66,
     "Teams Women": 71,
-    "Wta Doubles": 137,
-    "Wta Singles": 330
+    "Wta Doubles": 145,
+    "Wta Singles": 401
   },
   "files": {
     "2026-05-26.json": {
@@ -164,45 +165,49 @@
       "skipped": 8
     },
     "2026-06-22.json": {
-      "imported": 5,
-      "raw_fixtures": 156,
-      "skipped": 151
+      "imported": 130,
+      "raw_fixtures": 157,
+      "skipped": 27
+    },
+    "2026-06-23.json": {
+      "imported": 8,
+      "raw_fixtures": 431,
+      "skipped": 423
     }
   },
   "gender_counts": {
-    "men": 3219,
-    "women": 2564
+    "men": 3324,
+    "women": 2592
   },
   "level_counts": {
-    "atp_wta": 373,
-    "challenger": 855,
-    "grand_slam": 340,
-    "itf": 3254,
-    "qualifying": 961
+    "atp_wta": 399,
+    "challenger": 873,
+    "grand_slam": 404,
+    "itf": 3271,
+    "qualifying": 969
   },
   "raw_surface_counts": {
     "<blank>": 62,
-    "api_tournament_metadata:Clay": 3260,
+    "api_tournament_metadata:Clay": 3295,
     "api_tournament_metadata:Clay (Indoor)": 31,
-    "api_tournament_metadata:Grass": 631,
-    "api_tournament_metadata:Hard": 1830,
+    "api_tournament_metadata:Grass": 715,
+    "api_tournament_metadata:Hard": 1844,
     "api_tournament_metadata:hard": 31
   },
   "status_counts": {
-    "<blank>": 124,
-    "Cancelled": 147,
-    "Finished": 8033,
-    "Interrupted": 2,
-    "Retired": 212,
-    "Set 1": 27,
-    "Set 2": 3,
-    "Set 3": 1,
+    "<blank>": 425,
+    "Cancelled": 153,
+    "Finished": 8183,
+    "Interrupted": 1,
+    "Retired": 213,
+    "Set 1": 4,
+    "Set 2": 2,
     "Walk Over": 145
   },
   "surface_counts": {
-    "clay": 3291,
-    "grass": 631,
-    "hard": 1861
+    "clay": 3326,
+    "grass": 715,
+    "hard": 1875
   },
   "tournament_surface_map": {
     "exists": true,
