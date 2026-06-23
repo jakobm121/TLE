@@ -505,7 +505,11 @@ def read_api_tournament_qualification_keys(path: Path = API_TOURNAMENTS_METADATA
 
 
 def infer_surface(match: dict[str, Any], context: dict[str, Any] | None = None) -> tuple[str, str]:
+    if context is None:
+        context = tournament_context(match)
+
     # 1) Direct and nested get_fixtures payload first.
+    # If today's fixture payload contains a surface field, trust it before any cache/map.
     direct_fields = [
         ("event_surface", match.get("event_surface")),
         ("surface", match.get("surface")),
@@ -524,23 +528,23 @@ def infer_surface(match: dict[str, Any], context: dict[str, Any] | None = None) 
         return surf, source
 
     # 2) API tournament metadata from 06a output by tournament_key.
+    # This should be fresh when 06a runs daily before predictions.
     tournament_key = safe_str(match.get("tournament_key"))
     if tournament_key and tournament_key in API_TOURNAMENT_SURFACE_BY_KEY:
         return API_TOURNAMENT_SURFACE_BY_KEY[tournament_key], "api_tournaments_metadata:tournament_sourface"
 
-    # 3) Sometimes surface is hidden in raw text/context.
-    if context is None:
-        context = tournament_context(match)
+    # 3) Known local tournament map fallback/override.
+    # Used only if direct fixture fields and 06a metadata do not provide surface.
     text = safe_str(context.get("context_text")).lower()
+    map_text = normalize_surface_map_key(text)
+    for needle, surf in sorted(TOURNAMENT_SURFACE_MAP.items(), key=lambda x: len(x[0]), reverse=True):
+        if needle and needle in map_text:
+            return surf, "tournament_surface_map"
+
+    # 4) Sometimes surface is hidden in raw text/context.
     context_surf = normalize_surface(text)
     if context_surf != "unknown":
         return context_surf, "context_text"
-
-    # 4) Known local tournament map fallback.
-    map_text = normalize_surface_map_key(text)
-    for needle, surf in TOURNAMENT_SURFACE_MAP.items():
-        if needle and needle in map_text:
-            return surf, "tournament_surface_map"
 
     return "unknown", "missing"
 
