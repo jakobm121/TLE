@@ -6,7 +6,7 @@
     "with_full_name": 2658,
     "with_short_name": 5347
   },
-  "generated_at": "2026-06-23T06:09:18+00:00",
+  "generated_at": "2026-06-23T06:48:27+00:00",
   "mapping": {
     "men:api:100041": {
       "api_levels": {
@@ -42849,9 +42849,6 @@
       "status": "auto_mapped"
     },
     "women:api:126": {
-      "api_levels": {
-        "itf": 3
-      },
       "api_matches": 3,
       "api_name": "Yexin Ma",
       "api_name_sources": {
@@ -42860,15 +42857,12 @@
       "api_name_variants": {
         "Yexin Ma": 3
       },
-      "api_surfaces": {
-        "hard": 3
-      },
-      "confidence": 0.970693,
+      "confidence": 1.0,
       "gender": "women",
-      "margin": 0.016142,
-      "method": "exact_initial_form",
-      "sackmann_player_key": null,
-      "status": "ambiguous"
+      "method": "manual_override",
+      "override_key": "women:api:126",
+      "sackmann_player_key": "women:sackmann:215946",
+      "status": "manual_mapped"
     },
     "women:api:127": {
       "api_levels": {
@@ -44008,10 +44002,6 @@
       "status": "auto_mapped"
     },
     "women:api:1358": {
-      "api_levels": {
-        "itf": 4,
-        "qualifying": 1
-      },
       "api_matches": 5,
       "api_name": "Anne-Christine Lutkemeyer",
       "api_name_sources": {
@@ -44020,15 +44010,12 @@
       "api_name_variants": {
         "Anne-Christine Lutkemeyer": 5
       },
-      "api_surfaces": {
-        "hard": 5
-      },
-      "confidence": 0.789581,
+      "confidence": 1.0,
       "gender": "women",
-      "margin": 0.789581,
-      "method": "fuzzy",
-      "sackmann_player_key": null,
-      "status": "unmapped"
+      "method": "manual_override",
+      "override_key": "women:api:1358",
+      "sackmann_player_key": "women:sackmann:260042",
+      "status": "manual_mapped"
     },
     "women:api:13618": {
       "api_levels": {
@@ -50323,9 +50310,6 @@
       "status": "auto_mapped"
     },
     "women:api:24284": {
-      "api_levels": {
-        "itf": 3
-      },
       "api_matches": 3,
       "api_name": "Rosa Dourado Zimermman Jennifer",
       "api_name_sources": {
@@ -50334,16 +50318,12 @@
       "api_name_variants": {
         "Rosa Dourado Zimermman Jennifer": 3
       },
-      "api_surfaces": {
-        "clay": 2,
-        "hard": 1
-      },
-      "confidence": 0.0,
+      "confidence": 1.0,
       "gender": "women",
-      "margin": null,
-      "method": "no_candidate",
-      "sackmann_player_key": null,
-      "status": "unmapped"
+      "method": "manual_override",
+      "override_key": "women:api:24284",
+      "sackmann_player_key": "women:sackmann:215854",
+      "status": "manual_mapped"
     },
     "women:api:24413": {
       "api_levels": {
@@ -55816,10 +55796,6 @@
       "status": "auto_mapped"
     },
     "women:api:462": {
-      "api_levels": {
-        "atp_wta": 1,
-        "challenger": 1
-      },
       "api_matches": 2,
       "api_name": "Lily Miyazaki Yuriko",
       "api_name_sources": {
@@ -55828,15 +55804,12 @@
       "api_name_variants": {
         "Lily Miyazaki Yuriko": 2
       },
-      "api_surfaces": {
-        "grass": 2
-      },
-      "confidence": 0.0,
+      "confidence": 1.0,
       "gender": "women",
-      "margin": null,
-      "method": "no_candidate",
-      "sackmann_player_key": null,
-      "status": "unmapped"
+      "method": "manual_override",
+      "override_key": "women:api:462",
+      "sackmann_player_key": "women:sackmann:213908",
+      "status": "manual_mapped"
     },
     "women:api:463": {
       "api_levels": {
@@ -67501,9 +67474,6 @@
       "status": "auto_mapped"
     },
     "women:api:84923": {
-      "api_levels": {
-        "itf": 1
-      },
       "api_matches": 1,
       "api_name": "Y. Tsai",
       "api_name_sources": {
@@ -67512,15 +67482,12 @@
       "api_name_variants": {
         "Y. Tsai": 1
       },
-      "api_surfaces": {
-        "hard": 1
-      },
-      "confidence": 0.926687,
+      "confidence": 1.0,
       "gender": "women",
-      "margin": 0.002823,
-      "method": "initial_surname",
-      "sackmann_player_key": null,
-      "status": "ambiguous"
+      "method": "manual_override",
+      "override_key": "women:api:84923",
+      "sackmann_player_key": "women:sackmann:267855",
+      "status": "manual_mapped"
     },
     "women:api:84933": {
       "api_levels": {
@@ -71483,7 +71450,7 @@
   },
   "source": "api_tennis",
   "summary": {
-    "ambiguous": 20,
+    "ambiguous": 18,
     "api_gender_men": 1708,
     "api_gender_women": 1446,
     "api_player_cache_entries": 5347,
@@ -71493,10 +71460,10 @@
     "api_player_cache_with_short_name": 5347,
     "api_players": 3154,
     "auto_mapped": 2961,
-    "manual_mapped": 22,
+    "manual_mapped": 27,
     "player_aliases_loaded": 152,
     "rebuild_auto_mapping": 0,
-    "unmapped": 151
+    "unmapped": 148
   },
   "target": "sackmann"
 }

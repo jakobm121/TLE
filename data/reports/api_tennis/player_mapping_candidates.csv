@@ -1854,8 +1854,6 @@ women:api:124,Sinclair Rogers Anna,women,2,1,women:sackmann:222189,Anna Sinclair
 women:api:1241,Berfu Cengiz,women,6,1,women:sackmann:214507,Berfu Cengiz,168,0.999,exact_normalized
 women:api:125,Anastasia Sysoeva,women,1,1,women:sackmann:221688,Anastasia Sysoeva,7,0.999,exact_normalized
 women:api:12529,Leon Schmidt,women,1,1,women:sackmann:215647,Lara Schmidt,105,0.974663,exact_initial_form
-women:api:126,Yexin Ma,women,3,1,women:sackmann:263143,Yinong Ma,1,0.970693,exact_initial_form
-women:api:126,Yexin Ma,women,3,2,women:sackmann:215946,Ye Xin Ma,228,0.954551,initial_surname
 women:api:127,Akasha Urhobo,women,5,1,women:sackmann:259857,Akasha Urhobo,149,0.999,exact_normalized
 women:api:12716,Mananchaya Sawangkaew,women,6,1,women:sackmann:216566,Mananchaya Sawangkaew,212,0.999,exact_normalized
 women:api:12791,Stefania Rogozinska Dzik,women,2,1,women:sackmann:215970,Stefania Rogozinska Dzik,51,0.999,exact_normalized
@@ -1909,7 +1907,6 @@ women:api:13544,Duru Soke,women,7,1,women:sackmann:224488,Duru Soke,45,0.999,exa
 women:api:13545,Maria Toma,women,4,1,women:sackmann:215966,Maria Toma,152,0.999,exact_normalized
 women:api:13546,Natsumi Kawaguchi,women,2,1,women:sackmann:221229,Natsumi Kawaguchi,142,0.999,exact_normalized
 women:api:1355,Lucie Petruzelova,women,10,1,women:sackmann:221219,Lucie Petruzelova,57,0.999,exact_normalized
-women:api:1358,Anne-Christine Lutkemeyer,women,5,1,women:sackmann:260042,Anne Christine Lutkemeyer Obregon,48,0.789581,fuzzy
 women:api:13618,Aoi Ito,women,5,1,women:sackmann:256684,Aoi Ito,234,0.999,exact_normalized
 women:api:1362,Ching Wu Ho,women,1,1,women:sackmann:211208,Ho Ching Wu,127,0.999,exact_token_set
 women:api:13620,Elena Milovanovic,women,11,1,women:sackmann:220429,Elena Milovanovic,177,0.999,exact_normalized
@@ -3050,9 +3047,6 @@ women:api:84872,A. Lee,women,1,1,women:sackmann:270580,Amy Lee,1,0.970693,exact_
 women:api:84900,Y. Lin,women,5,1,women:sackmann:267507,Yishuang Lin,3,0.971386,exact_initial_form
 women:api:84900,Y. Lin,women,5,2,women:sackmann:268787,Yu Jun Lin,14,0.924375,initial_surname
 women:api:84900,Y. Lin,women,5,3,women:sackmann:267207,Yu Chen Lin,11,0.919985,initial_surname
-women:api:84923,Y. Tsai,women,1,1,women:sackmann:267856,Yu Yun Tsai,2,0.926687,initial_surname
-women:api:84923,Y. Tsai,women,1,2,women:sackmann:267855,Yu Ning Tsai,8,0.923864,initial_surname
-women:api:84923,Y. Tsai,women,1,3,women:sackmann:265621,Yu Chin Tsai,7,0.923746,initial_surname
 women:api:84933,K. Paul,women,1,1,women:sackmann:270138,Kristyna Paul,7,0.972079,exact_initial_form
 women:api:85027,A. Marinescu,women,2,1,women:sackmann:265611,Alessia Marinescu,22,0.973135,exact_initial_form
 women:api:85078,K. Kovgan,women,1,1,women:sackmann:265037,Kristina Kovgan,5,0.971792,exact_initial_form
