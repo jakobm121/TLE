@@ -1,47 +1,48 @@
 {
-  "active_predictions_total": 15,
-  "api_tournament_name_entries": 0,
-  "api_tournament_qualification_keys": 0,
-  "api_tournament_surface_entries": 0,
+  "active_predictions_total": 27,
+  "api_tournament_name_entries": 10064,
+  "api_tournament_qualification_keys": 17,
+  "api_tournament_surface_entries": 10003,
   "api_tournaments_metadata_json": "data/raw/api_tennis/metadata/get_tournaments.json",
   "by_level_scan": {
     "atp_wta": 56,
     "challenger": 36,
-    "itf": 116,
-    "qualifying": 134
+    "itf": 112,
+    "qualifying": 128
   },
   "by_surface_source_scan": {
-    "missing": 88,
-    "tournament_surface_map": 254
+    "api_tournaments_metadata:tournament_sourface": 314,
+    "missing": 18
   },
   "counters": {
-    "fixture_skip_doubles_or_team": 151,
-    "fixture_skip_live": 2,
-    "fixture_skip_starts_too_soon": 10,
+    "fixture_skip_doubles_or_team": 149,
+    "fixture_skip_live": 3,
+    "fixture_skip_starts_too_soon": 15,
     "fixture_skip_status_cancelled": 1,
-    "fixture_skip_status_finished": 10,
-    "fixtures_scanned": 265,
-    "fixtures_with_diagnostics": 171,
-    "fixtures_with_output": 15
+    "fixture_skip_status_finished": 12,
+    "fixtures_scanned": 259,
+    "fixtures_with_diagnostics": 166,
+    "fixtures_with_output": 27
   },
   "date_start": "2026-06-23",
   "days_ahead": 1,
   "decision_counts_scan": {
-    "BET": 5,
-    "NO_BET": 327,
-    "STRONG_BET": 10
+    "BET": 11,
+    "NO_BET": 305,
+    "STRONG_BET": 16
   },
   "fixtures_total": 439,
-  "generated_at": "2026-06-23T07:01:40+00:00",
+  "generated_at": "2026-06-23T07:22:19+00:00",
   "min_start_minutes": 30,
-  "new_added_to_predictions": 15,
-  "new_candidates": 15,
+  "new_added_to_predictions": 27,
+  "new_candidates": 27,
   "notes": [
     "This is standalone: it scans all eligible API fixtures and odds, not only tennis value picks.",
     "Odds are average clean odds after removing bookmaker outliers.",
     "Form and H2H are stored as tracking fields only; they do not affect TLE probability in v1.",
     "Only BET and STRONG_BET rows are stored as active predictions.",
-    "Surface now uses 06a API tournaments metadata by tournament_key before local fallback map."
+    "Surface uses 06a API tournaments metadata by tournament_key before local fallback map.",
+    "Qualification model uses 70% tournament base-level Elo + 30% overall Elo, with base>=10 and overall>=20 support."
   ],
   "odds_rules": {
     "max_odds_deviation_from_median": 0.12,
@@ -60,18 +61,16 @@
     "unresolved_surface_json": "data/reports/elo_standalone/unresolved_surface_report.json"
   },
   "reason_counts_scan": {
-    "elo_edge_too_low": 30,
-    "elo_prob_too_low": 58,
+    "elo_edge_too_low": 40,
+    "elo_prob_too_low": 97,
     "min_level_not_met": 54,
-    "min_overall_not_met": 57,
-    "odds_outside_range": 60,
-    "pass_edge": 5,
-    "pass_strong_edge": 10,
-    "unknown_surface": 12,
+    "odds_outside_range": 58,
+    "pass_edge": 11,
+    "pass_strong_edge": 16,
     "unmapped_player": 56
   },
-  "scan_rows": 342,
+  "scan_rows": 332,
   "status": "ok",
-  "surface_map_entries": 37,
-  "unresolved_surface_count": 2
+  "surface_map_entries": 68,
+  "unresolved_surface_count": 0
 }
