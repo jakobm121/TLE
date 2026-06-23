@@ -1,6 +1,35 @@
 {
-  "count": 0,
-  "generated_at": "2026-06-22T10:55:27+00:00",
-  "items": [],
+  "count": 2,
+  "generated_at": "2026-06-23T07:01:40+00:00",
+  "items": [
+    {
+      "context_text": "wta singles bad homburg wta bad homburg   1/8 finals 4228",
+      "gender": "women",
+      "level": "atp_wta",
+      "matches": [
+        "L. Samsonova - E. Svitolina",
+        "N. Osaka - E. Mertens"
+      ],
+      "raw_event_type_type": "Wta Singles",
+      "raw_tournament_name": "Bad Homburg",
+      "raw_tournament_round": "WTA Bad Homburg - 1/8-finals",
+      "suggested_map_key": "wta singles bad homburg wta bad homburg 1/8 finals 4228"
+    },
+    {
+      "context_text": "atp singles mallorca atp mallorca   1/8 finals 3681",
+      "gender": "men",
+      "level": "atp_wta",
+      "matches": [
+        "L. Darderi - Y. Hanfmann",
+        "J-L. Struff - N. Borges",
+        "L. Sonego - M. Kecmanovic",
+        "F. Marozsan - A. Tabilo"
+      ],
+      "raw_event_type_type": "Atp Singles",
+      "raw_tournament_name": "Mallorca",
+      "raw_tournament_round": "ATP Mallorca - 1/8-finals",
+      "suggested_map_key": "atp singles mallorca atp mallorca 1/8 finals 3681"
+    }
+  ],
   "note": "Add suggested_map_key: hard/clay/grass/carpet to data/metadata/tournament_surface_map.json if API tournaments metadata does not cover these events."
 }

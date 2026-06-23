@@ -1,38 +1,41 @@
 {
-  "active_predictions_total": 7,
-  "api_tournament_surface_entries": 10003,
+  "active_predictions_total": 15,
+  "api_tournament_name_entries": 0,
+  "api_tournament_qualification_keys": 0,
+  "api_tournament_surface_entries": 0,
   "api_tournaments_metadata_json": "data/raw/api_tennis/metadata/get_tournaments.json",
   "by_level_scan": {
-    "atp_wta": 30,
-    "challenger": 18,
-    "itf": 8,
-    "qualifying": 110
+    "atp_wta": 56,
+    "challenger": 36,
+    "itf": 116,
+    "qualifying": 134
   },
   "by_surface_source_scan": {
-    "api_tournaments_metadata:tournament_sourface": 166
+    "missing": 88,
+    "tournament_surface_map": 254
   },
   "counters": {
-    "fixture_skip_doubles_or_team": 17,
-    "fixture_skip_live": 31,
-    "fixture_skip_starts_too_soon": 4,
-    "fixture_skip_status_cancelled": 7,
-    "fixture_skip_status_finished": 8,
-    "fixtures_scanned": 93,
-    "fixtures_with_diagnostics": 83,
-    "fixtures_with_output": 7
+    "fixture_skip_doubles_or_team": 151,
+    "fixture_skip_live": 2,
+    "fixture_skip_starts_too_soon": 10,
+    "fixture_skip_status_cancelled": 1,
+    "fixture_skip_status_finished": 10,
+    "fixtures_scanned": 265,
+    "fixtures_with_diagnostics": 171,
+    "fixtures_with_output": 15
   },
-  "date_start": "2026-06-22",
+  "date_start": "2026-06-23",
   "days_ahead": 1,
   "decision_counts_scan": {
-    "BET": 4,
-    "NO_BET": 159,
-    "STRONG_BET": 3
+    "BET": 5,
+    "NO_BET": 327,
+    "STRONG_BET": 10
   },
-  "fixtures_total": 160,
-  "generated_at": "2026-06-22T10:55:27+00:00",
+  "fixtures_total": 439,
+  "generated_at": "2026-06-23T07:01:40+00:00",
   "min_start_minutes": 30,
-  "new_added_to_predictions": 7,
-  "new_candidates": 7,
+  "new_added_to_predictions": 15,
+  "new_candidates": 15,
   "notes": [
     "This is standalone: it scans all eligible API fixtures and odds, not only tennis value picks.",
     "Odds are average clean odds after removing bookmaker outliers.",
@@ -57,17 +60,18 @@
     "unresolved_surface_json": "data/reports/elo_standalone/unresolved_surface_report.json"
   },
   "reason_counts_scan": {
-    "elo_edge_too_low": 7,
-    "elo_prob_too_low": 17,
-    "min_level_not_met": 74,
-    "min_surface_not_met": 2,
-    "odds_outside_range": 43,
-    "pass_edge": 4,
-    "pass_strong_edge": 3,
-    "unmapped_player": 16
+    "elo_edge_too_low": 30,
+    "elo_prob_too_low": 58,
+    "min_level_not_met": 54,
+    "min_overall_not_met": 57,
+    "odds_outside_range": 60,
+    "pass_edge": 5,
+    "pass_strong_edge": 10,
+    "unknown_surface": 12,
+    "unmapped_player": 56
   },
-  "scan_rows": 166,
+  "scan_rows": 342,
   "status": "ok",
   "surface_map_entries": 37,
-  "unresolved_surface_count": 0
+  "unresolved_surface_count": 2
 }
