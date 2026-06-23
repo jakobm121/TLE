@@ -1,0 +1,9 @@
+[
+  {
+    "tournament_key": "3681",
+    "event_type_type": "Atp Singles",
+    "year": 2026,
+    "surface": "grass",
+    "note": "ATP Mallorca 2026. API-Tennis get_tournaments currently returns Clay, but tournament is played on grass."
+  }
+]
