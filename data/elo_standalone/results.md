@@ -1,16 +1,23 @@
 # Standalone Elo Results
 
-- Settled: 37
-- W-L: 20-17
-- Hit rate: 54.05%
-- Total stake: 43.25
-- Total profit: 3.19
-- ROI: 7.37%
+- Settled: 44
+- W-L: 22-21
+- Hit rate: 51.16%
+- Total stake: 51.00
+- Total profit: 1.01
+- ROI: 1.98%
 
 ## Settled picks
 
 | Date | Time | Result | W-L | ROI | Pick | Opponent | Odds | Stake | Profit | Total Profit | Level | Surface | TLE Prob | TLE Edge | Conf | Score |
 |---|---:|---|---:|---:|---|---|---:|---:|---:|---:|---|---|---:|---:|---|---|
+| 2026-06-22 | 23:30 | win | 22-21 | 1.98% | H. Casanova | E. Ribeiro | 2.09 | 1.00 | 1.09 | 1.01 | challenger | clay | 52.03% | 4.16% | normal | 2 - 0 |
+| 2026-06-22 | 17:30 | loss | 21-21 | -0.16% | A. Eala | E. Mertens | 2.05 | 1.00 | -1.00 | -0.08 | atp_wta | grass | 54.39% | 5.63% | normal | 0 - 2 |
+| 2026-06-22 | 17:00 | loss | 21-20 | 1.88% | J. Munar | Z. Bergs | 2.17 | 1.00 | -1.00 | 0.92 | atp_wta | grass | 50.83% | 4.82% | normal | 2 - 0 |
+| 2026-06-22 | 16:30 | win | 21-19 | 4.00% | M. Kessler | D. Kasatkina | 1.99 | 1.25 | 1.23 | 1.92 | atp_wta | grass | 60.27% | 9.93% | strong | 2 - 0 |
+| 2026-06-22 | 16:00 | void | 20-19 | 1.47% | H. Medjedovic | M. Kecmanovic | 1.58 | 1.00 | 0.00 | 0.69 | atp_wta | clay | 69.26% | 5.84% | normal | - |
+| 2026-06-22 | 13:45 | loss | 20-19 | 1.51% | A. Molcan | F. Marozsan | 2.10 | 1.25 | -1.25 | 0.69 | atp_wta | clay | 69.70% | 22.20% | strong | 2 - 1 |
+| 2026-06-22 | 13:30 | loss | 20-18 | 4.36% | E. Cocciaretto | A. Tomljanovic | 2.48 | 1.25 | -1.25 | 1.94 | atp_wta | grass | 56.67% | 16.40% | strong | 2 - 1 |
 | 2026-06-21 | 17:30 | win | 20-17 | 7.37% | M. Sherif | Xiy. Wang | 2.63 | 1.25 | 2.04 | 3.19 | challenger | clay | 55.03% | 17.05% | strong | 0 - 2 |
 | 2026-06-21 | 12:00 | win | 19-17 | 2.73% | D. Egorova | N. Vargova | 2.82 | 1.25 | 2.27 | 1.15 | itf | unknown | 51.01% | 15.52% | strong | 2 - 1 |
 | 2026-06-20 | 14:30 | loss | 18-17 | -2.76% | M. Maquet | A. Stoyanov | 2.11 | 1.25 | -1.25 | -1.13 | itf | unknown | 65.19% | 17.86% | strong | 0 - 2 |
