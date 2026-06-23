@@ -1,10 +1,10 @@
 {
   "api_player_cache": {
-    "entries": 5347,
+    "entries": 5349,
     "exists": true,
     "path": "data/raw/api_tennis/players/api_players.json",
-    "with_full_name": 2658,
-    "with_short_name": 5347
+    "with_full_name": 2660,
+    "with_short_name": 5349
   },
   "event_type_counts": {
     "Atp Doubles": 150,
@@ -26,7 +26,7 @@
     "Teams Men": 66,
     "Teams Women": 71,
     "Wta Doubles": 145,
-    "Wta Singles": 401
+    "Wta Singles": 409
   },
   "files": {
     "2026-05-26.json": {
@@ -170,20 +170,20 @@
       "skipped": 27
     },
     "2026-06-23.json": {
-      "imported": 8,
-      "raw_fixtures": 431,
-      "skipped": 423
+      "imported": 10,
+      "raw_fixtures": 439,
+      "skipped": 429
     }
   },
   "gender_counts": {
     "men": 3324,
-    "women": 2592
+    "women": 2594
   },
   "level_counts": {
     "atp_wta": 399,
     "challenger": 873,
     "grand_slam": 404,
-    "itf": 3271,
+    "itf": 3273,
     "qualifying": 969
   },
   "raw_surface_counts": {
@@ -191,27 +191,27 @@
     "api_tournament_metadata:Clay": 3295,
     "api_tournament_metadata:Clay (Indoor)": 31,
     "api_tournament_metadata:Grass": 715,
-    "api_tournament_metadata:Hard": 1844,
+    "api_tournament_metadata:Hard": 1846,
     "api_tournament_metadata:hard": 31
   },
   "status_counts": {
-    "<blank>": 425,
+    "<blank>": 421,
     "Cancelled": 153,
-    "Finished": 8183,
+    "Finished": 8191,
     "Interrupted": 1,
     "Retired": 213,
-    "Set 1": 4,
-    "Set 2": 2,
+    "Set 1": 9,
+    "Set 2": 1,
     "Walk Over": 145
   },
   "surface_counts": {
     "clay": 3326,
     "grass": 715,
-    "hard": 1875
+    "hard": 1877
   },
   "tournament_surface_map": {
     "exists": true,
-    "mapped_tournaments": 10003,
+    "mapped_tournaments": 10015,
     "missing_key": 0,
     "path": "data/raw/api_tennis/metadata/get_tournaments.json",
     "raw_surface_field_counts": {
@@ -221,20 +221,20 @@
       "- Qualification": 1,
       "- Relegation": 1,
       "<blank>": 44,
-      "Clay": 4321,
+      "Clay": 4328,
       "Clay (Indoor)": 43,
       "Grass": 147,
       "Grass (Indoor)": 2,
-      "Hard": 4836,
+      "Hard": 4841,
       "Hard (Indoor)": 635,
       "clay": 6,
       "hard": 13
     },
-    "rows": 10064,
+    "rows": 10076,
     "surface_counts": {
-      "clay": 4370,
+      "clay": 4377,
       "grass": 149,
-      "hard": 5484,
+      "hard": 5489,
       "unknown": 61
     }
   }

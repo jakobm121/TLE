@@ -2,10 +2,13 @@ api_player_key,raw_api_player_key,api_name,api_name_source,gender,mapping_status
 women:api:104273,104273,A. Colic,api_cache_short_name,women,missing_mapping_entry,1,G. Djurickovic,G. Djurickovic,W15 Kursumlijska Banja 6,W15 Kursumlijska Banja 6,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
 women:api:27382,27382,C. Romero,api_cache_short_name,women,missing_mapping_entry,1,Isabella Barrera Aguirre,Isabella Barrera Aguirre,W15 Asuncion,W15 Asuncion,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
 women:api:95478,95478,C. Y. Chen,api_cache_short_name,women,unmapped,1,Yi Tsao Chia,Yi Tsao Chia,W35 Taipei 2,W35 Taipei 2,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
+women:api:482,482,Caroline Dolehide,api_cache_full_name,women,missing_mapping_entry,1,Robin Montgomery,Robin Montgomery,Wimbledon,Wimbledon,Wta Singles,Wta Singles,no_sackmann_candidate
+women:api:4802,4802,Caroline Werner,api_cache_full_name,women,unmapped,1,Alice Rame,Alice Rame,Wimbledon,Wimbledon,Wta Singles,Wta Singles,no_sackmann_candidate
 men:api:27347,27347,Darrshan Suresh,api_cache_full_name,men,missing_mapping_entry,1,Oscar Weightman,Oscar Weightman,M25 Bakio,M25 Bakio,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
 men:api:63483,63483,Enzo Kohlmann,api_cache_full_name,men,unmapped,1,Manuel La Serna Juan,Manuel La Serna Juan,Piracicaba,Piracicaba,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
 men:api:104378,104378,F. Bullamah,api_cache_short_name,men,missing_mapping_entry,1,Wilson Leite,Wilson Leite,Piracicaba,Piracicaba,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
 men:api:104271,104271,F. Czyrek,api_cache_short_name,men,missing_mapping_entry,1,Kacper Szymkowiak,Kacper Szymkowiak,M15 Rzeszow (Poland),M15 Rzeszow (Poland),Itf Men Singles,Itf Men Singles,no_sackmann_candidate
+women:api:20540,20540,Fiona Crawley,api_cache_full_name,women,missing_mapping_entry,1,Himeno Sakatsume,Himeno Sakatsume,Wimbledon,Wimbledon,Wta Singles,Wta Singles,no_sackmann_candidate
 women:api:13991,13991,Garbiela Vasilescu Arina,api_cache_full_name,women,unmapped,1,S. Triquart,S. Triquart,W15 Kamen,W15 Kamen,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
 women:api:1807,1807,Georgiana Serban Raluca,api_cache_full_name,women,unmapped,1,Victoria Bosio,Victoria Bosio,W50 Gdansk (Poland),W50 Gdansk (Poland),Itf Women Singles,Itf Women Singles,no_sackmann_candidate
 women:api:104151,104151,J. Zhou,api_cache_short_name,women,unmapped,1,Ma RuoXi,Ma RuoXi,W15 Maanshan 3,W15 Maanshan 3,Itf Women Singles,Itf Women Singles,no_sackmann_candidate

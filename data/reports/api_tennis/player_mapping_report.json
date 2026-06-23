@@ -1,29 +1,29 @@
 {
   "api_player_cache": {
-    "entries": 5347,
+    "entries": 5349,
     "exists": true,
     "path": "data/raw/api_tennis/players/api_players.json",
-    "with_full_name": 2658,
-    "with_short_name": 5347
+    "with_full_name": 2660,
+    "with_short_name": 5349
   },
-  "api_players": 3154,
+  "api_players": 3155,
   "counters": {
     "ambiguous": 18,
     "api_gender_men": 1708,
-    "api_gender_women": 1446,
-    "api_player_cache_entries": 5347,
-    "api_player_cache_full_name_used": 10925,
-    "api_player_cache_short_name_used": 891,
-    "api_player_cache_with_full_name": 2658,
-    "api_player_cache_with_short_name": 5347,
-    "api_players": 3154,
+    "api_gender_women": 1447,
+    "api_player_cache_entries": 5349,
+    "api_player_cache_full_name_used": 10927,
+    "api_player_cache_short_name_used": 892,
+    "api_player_cache_with_full_name": 2660,
+    "api_player_cache_with_short_name": 5349,
+    "api_players": 3155,
     "auto_mapped": 2961,
-    "manual_mapped": 27,
+    "manual_mapped": 28,
     "player_aliases_loaded": 152,
     "rebuild_auto_mapping": 0,
     "unmapped": 148
   },
-  "generated_at": "2026-06-23T06:48:57+00:00",
+  "generated_at": "2026-06-23T08:04:54+00:00",
   "issues_total": 0,
   "outputs": {
     "candidates_csv": "data/reports/api_tennis/player_mapping_candidates.csv",
