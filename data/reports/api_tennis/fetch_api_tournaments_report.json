@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-21T23:18:47+00:00",
+  "generated_at": "2026-06-23T07:51:59+00:00",
   "output": "data/raw/api_tennis/metadata/get_tournaments.json",
   "response_success": 1,
-  "result_count": 10064,
+  "result_count": 10076,
   "status": "ok",
   "surface_counts": {
-    "rows_total": 10064,
-    "rows_with_surface": 10020,
+    "rows_total": 10076,
+    "rows_with_surface": 10032,
     "rows_without_surface": 44
   }
 }

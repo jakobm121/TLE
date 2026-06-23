@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-21T23:18:47+00:00",
+  "fetched_at": "2026-06-23T07:51:59+00:00",
   "method": "get_tournaments",
   "response": {
     "result": [
@@ -1481,6 +1481,13 @@
         "tournament_sourface": "Clay"
       },
       {
+        "event_type_key": 282,
+        "event_type_type": "Challenger Men Doubles",
+        "tournament_key": 13040,
+        "tournament_name": "Athens",
+        "tournament_sourface": "Hard"
+      },
+      {
         "event_type_key": 265,
         "event_type_type": "Atp Singles",
         "tournament_key": 13423,
@@ -1516,11 +1523,18 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 282,
-        "event_type_type": "Challenger Men Doubles",
-        "tournament_key": 13040,
-        "tournament_name": "Athens",
-        "tournament_sourface": "Hard"
+        "event_type_key": 265,
+        "event_type_type": "Atp Singles",
+        "tournament_key": 3661,
+        "tournament_name": "Athens 2",
+        "tournament_sourface": "Clay"
+      },
+      {
+        "event_type_key": 267,
+        "event_type_type": "Atp Doubles",
+        "tournament_key": 9151,
+        "tournament_name": "Athens 2",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 281,
@@ -1535,20 +1549,6 @@
         "tournament_key": 13506,
         "tournament_name": "Athens 2",
         "tournament_sourface": "Hard"
-      },
-      {
-        "event_type_key": 265,
-        "event_type_type": "Atp Singles",
-        "tournament_key": 3661,
-        "tournament_name": "Athens 2",
-        "tournament_sourface": "Clay"
-      },
-      {
-        "event_type_key": 267,
-        "event_type_type": "Atp Doubles",
-        "tournament_key": 9151,
-        "tournament_name": "Athens 2",
-        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 265,
@@ -17450,6 +17450,13 @@
       {
         "event_type_key": 264,
         "event_type_type": "Itf Men Doubles",
+        "tournament_key": 14019,
+        "tournament_name": "M15 Claremont (Usa)",
+        "tournament_sourface": "Hard"
+      },
+      {
+        "event_type_key": 264,
+        "event_type_type": "Itf Men Doubles",
         "tournament_key": 9757,
         "tournament_name": "M15 Cluj Napoca",
         "tournament_sourface": "Clay"
@@ -23360,6 +23367,20 @@
         "event_type_type": "Itf Men Singles",
         "tournament_key": 3959,
         "tournament_name": "M15 Rovinj",
+        "tournament_sourface": "Clay"
+      },
+      {
+        "event_type_key": 264,
+        "event_type_type": "Itf Men Doubles",
+        "tournament_key": 14013,
+        "tournament_name": "M15 Rzeszow (Poland)",
+        "tournament_sourface": "Clay"
+      },
+      {
+        "event_type_key": 270,
+        "event_type_type": "Itf Men Singles",
+        "tournament_key": 14010,
+        "tournament_name": "M15 Rzeszow (Poland)",
         "tournament_sourface": "Clay"
       },
       {
@@ -32185,6 +32206,13 @@
       {
         "event_type_key": 264,
         "event_type_type": "Itf Men Doubles",
+        "tournament_key": 14016,
+        "tournament_name": "M25 Tanger (Morocco)",
+        "tournament_sourface": "Clay"
+      },
+      {
+        "event_type_key": 264,
+        "event_type_type": "Itf Men Doubles",
         "tournament_key": 12653,
         "tournament_name": "M25 Targu Mures",
         "tournament_sourface": "Clay"
@@ -33153,6 +33181,20 @@
         "event_type_type": "Itf Men Singles",
         "tournament_key": 7634,
         "tournament_name": "M25 Ystad",
+        "tournament_sourface": "Clay"
+      },
+      {
+        "event_type_key": 264,
+        "event_type_type": "Itf Men Doubles",
+        "tournament_key": 14014,
+        "tournament_name": "M25 Zagreb (Croatia)",
+        "tournament_sourface": "Clay"
+      },
+      {
+        "event_type_key": 270,
+        "event_type_type": "Itf Men Singles",
+        "tournament_key": 14011,
+        "tournament_name": "M25 Zagreb (Croatia)",
         "tournament_sourface": "Clay"
       },
       {
@@ -37587,16 +37629,16 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 282,
-        "event_type_type": "Challenger Men Doubles",
-        "tournament_key": 3834,
+        "event_type_key": 281,
+        "event_type_type": "Challenger Men Singles",
+        "tournament_key": 3829,
         "tournament_name": "Parma 2",
         "tournament_sourface": "Hard (Indoor)"
       },
       {
-        "event_type_key": 281,
-        "event_type_type": "Challenger Men Singles",
-        "tournament_key": 3829,
+        "event_type_key": 282,
+        "event_type_type": "Challenger Men Doubles",
+        "tournament_key": 3834,
         "tournament_name": "Parma 2",
         "tournament_sourface": "Hard (Indoor)"
       },
@@ -39029,16 +39071,16 @@
         "tournament_sourface": "Hard (Indoor)"
       },
       {
-        "event_type_key": 282,
-        "event_type_type": "Challenger Men Doubles",
-        "tournament_key": 3899,
+        "event_type_key": 281,
+        "event_type_type": "Challenger Men Singles",
+        "tournament_key": 3898,
         "tournament_name": "Quimper 2",
         "tournament_sourface": "Hard (Indoor)"
       },
       {
-        "event_type_key": 281,
-        "event_type_type": "Challenger Men Singles",
-        "tournament_key": 3898,
+        "event_type_key": 282,
+        "event_type_type": "Challenger Men Doubles",
+        "tournament_key": 3899,
         "tournament_name": "Quimper 2",
         "tournament_sourface": "Hard (Indoor)"
       },
@@ -40128,16 +40170,16 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 281,
-        "event_type_type": "Challenger Men Singles",
-        "tournament_key": 2598,
+        "event_type_key": 282,
+        "event_type_type": "Challenger Men Doubles",
+        "tournament_key": 2691,
         "tournament_name": "Salinas",
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 282,
-        "event_type_type": "Challenger Men Doubles",
-        "tournament_key": 2691,
+        "event_type_key": 281,
+        "event_type_type": "Challenger Men Singles",
+        "tournament_key": 2598,
         "tournament_name": "Salinas",
         "tournament_sourface": "Clay"
       },
@@ -48068,8 +48110,15 @@
       {
         "event_type_key": 271,
         "event_type_type": "Itf Women Singles",
-        "tournament_key": 12038,
-        "tournament_name": "W15 Clemson, SC",
+        "tournament_key": 14017,
+        "tournament_name": "W15 Claremont",
+        "tournament_sourface": "Hard"
+      },
+      {
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 14020,
+        "tournament_name": "W15 Claremont",
         "tournament_sourface": "Hard"
       },
       {
@@ -48080,11 +48129,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 12812,
-        "tournament_name": "W15 Cluj Napoca",
-        "tournament_sourface": "Clay"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12038,
+        "tournament_name": "W15 Clemson, SC",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 271,
@@ -48094,11 +48143,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 7322,
-        "tournament_name": "W15 Colorado Springs, CO",
-        "tournament_sourface": "Hard"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 12812,
+        "tournament_name": "W15 Cluj Napoca",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 287,
@@ -48108,11 +48157,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 3559,
-        "tournament_name": "W15 Cordenons",
-        "tournament_sourface": "Clay"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 7322,
+        "tournament_name": "W15 Colorado Springs, CO",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 271,
@@ -48122,10 +48171,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 10429,
-        "tournament_name": "W15 Cordoba",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 3559,
+        "tournament_name": "W15 Cordenons",
         "tournament_sourface": "Clay"
       },
       {
@@ -48136,10 +48185,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 12068,
-        "tournament_name": "W15 Cordoba 2",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 10429,
+        "tournament_name": "W15 Cordoba",
         "tournament_sourface": "Clay"
       },
       {
@@ -48150,10 +48199,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 13461,
-        "tournament_name": "W15 Criciuma",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 12068,
+        "tournament_name": "W15 Cordoba 2",
         "tournament_sourface": "Clay"
       },
       {
@@ -48164,10 +48213,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 4978,
-        "tournament_name": "W15 Cundinamarca",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 13461,
+        "tournament_name": "W15 Criciuma",
         "tournament_sourface": "Clay"
       },
       {
@@ -48178,10 +48227,10 @@
         "tournament_sourface": "Clay (Indoor)"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 5075,
-        "tournament_name": "W15 Curitiba",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 4978,
+        "tournament_name": "W15 Cundinamarca",
         "tournament_sourface": "Clay"
       },
       {
@@ -48192,11 +48241,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 12534,
-        "tournament_name": "W15 Daegu",
-        "tournament_sourface": "Hard"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 5075,
+        "tournament_name": "W15 Curitiba",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 271,
@@ -48206,11 +48255,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 12975,
-        "tournament_name": "W15 Denia",
-        "tournament_sourface": "Clay"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 12534,
+        "tournament_name": "W15 Daegu",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 287,
@@ -48220,10 +48269,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 4636,
-        "tournament_name": "W15 Dijon",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12975,
+        "tournament_name": "W15 Denia",
         "tournament_sourface": "Clay"
       },
       {
@@ -48234,10 +48283,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 11630,
-        "tournament_name": "W15 Dinard",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 4636,
+        "tournament_name": "W15 Dijon",
         "tournament_sourface": "Clay"
       },
       {
@@ -48248,11 +48297,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 4364,
-        "tournament_name": "W15 Don Benito",
-        "tournament_sourface": "Grass"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 11630,
+        "tournament_name": "W15 Dinard",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 271,
@@ -48262,11 +48311,11 @@
         "tournament_sourface": "Grass"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 11430,
-        "tournament_name": "W15 Dublin",
-        "tournament_sourface": "Hard"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 4364,
+        "tournament_name": "W15 Don Benito",
+        "tournament_sourface": "Grass"
       },
       {
         "event_type_key": 287,
@@ -48276,11 +48325,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 7681,
-        "tournament_name": "W15 Duffel",
-        "tournament_sourface": "Clay"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 11430,
+        "tournament_name": "W15 Dublin",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 271,
@@ -48290,10 +48339,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 7670,
-        "tournament_name": "W15 Eindhoven",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 7681,
+        "tournament_name": "W15 Duffel",
         "tournament_sourface": "Clay"
       },
       {
@@ -48304,10 +48353,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 7943,
-        "tournament_name": "W15 Eldorado, Misiones",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 7670,
+        "tournament_name": "W15 Eindhoven",
         "tournament_sourface": "Clay"
       },
       {
@@ -48318,10 +48367,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 8005,
-        "tournament_name": "W15 Eldorado, Misiones 2",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 7943,
+        "tournament_name": "W15 Eldorado, Misiones",
         "tournament_sourface": "Clay"
       },
       {
@@ -48332,10 +48381,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 4490,
-        "tournament_name": "W15 Erwitte",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 8005,
+        "tournament_name": "W15 Eldorado, Misiones 2",
         "tournament_sourface": "Clay"
       },
       {
@@ -48346,11 +48395,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 10526,
-        "tournament_name": "W15 Esch/Alzette",
-        "tournament_sourface": "Hard"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 4490,
+        "tournament_name": "W15 Erwitte",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 287,
@@ -48360,10 +48409,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 13357,
-        "tournament_name": "W15 Essen",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 10526,
+        "tournament_name": "W15 Esch/Alzette",
         "tournament_sourface": "Hard"
       },
       {
@@ -48374,10 +48423,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 11054,
-        "tournament_name": "W15 Estepona",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 13357,
+        "tournament_name": "W15 Essen",
         "tournament_sourface": "Hard"
       },
       {
@@ -48388,11 +48437,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 10105,
-        "tournament_name": "W15 Fiano Romano",
-        "tournament_sourface": "Clay"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 11054,
+        "tournament_name": "W15 Estepona",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 271,
@@ -48402,10 +48451,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 11107,
-        "tournament_name": "W15 Focsani",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 10105,
+        "tournament_name": "W15 Fiano Romano",
         "tournament_sourface": "Clay"
       },
       {
@@ -48416,11 +48465,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 8491,
-        "tournament_name": "W15 Fort-de-France",
-        "tournament_sourface": "Hard"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 11107,
+        "tournament_name": "W15 Focsani",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 271,
@@ -48430,10 +48479,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 7404,
-        "tournament_name": "W15 Fountain Valley, CA",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 8491,
+        "tournament_name": "W15 Fort-de-France",
         "tournament_sourface": "Hard"
       },
       {
@@ -48444,11 +48493,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 4424,
-        "tournament_name": "W15 Frederiksberg",
-        "tournament_sourface": "Clay"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 7404,
+        "tournament_name": "W15 Fountain Valley, CA",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 271,
@@ -48458,11 +48507,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 9482,
-        "tournament_name": "W15 Fukui",
-        "tournament_sourface": "Hard"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 4424,
+        "tournament_name": "W15 Frederiksberg",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 287,
@@ -48472,10 +48521,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 3644,
-        "tournament_name": "W15 Funchal",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 9482,
+        "tournament_name": "W15 Fukui",
         "tournament_sourface": "Hard"
       },
       {
@@ -48486,10 +48535,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 13866,
-        "tournament_name": "W15 Gaborone (Botswana)",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 3644,
+        "tournament_name": "W15 Funchal",
         "tournament_sourface": "Hard"
       },
       {
@@ -48500,10 +48549,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 13902,
-        "tournament_name": "W15 Gaborone 2 (Botswana)",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 13866,
+        "tournament_name": "W15 Gaborone (Botswana)",
         "tournament_sourface": "Hard"
       },
       {
@@ -48514,11 +48563,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 11075,
-        "tournament_name": "W15 Galati",
-        "tournament_sourface": "Clay"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 13902,
+        "tournament_name": "W15 Gaborone 2 (Botswana)",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 287,
@@ -48528,10 +48577,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 11246,
-        "tournament_name": "W15 Galati 2",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 11075,
+        "tournament_name": "W15 Galati",
         "tournament_sourface": "Clay"
       },
       {
@@ -48542,10 +48591,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 9762,
-        "tournament_name": "W15 Gdansk",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 11246,
+        "tournament_name": "W15 Galati 2",
         "tournament_sourface": "Clay"
       },
       {
@@ -48556,10 +48605,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 12695,
-        "tournament_name": "W15 Getxo",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 9762,
+        "tournament_name": "W15 Gdansk",
         "tournament_sourface": "Clay"
       },
       {
@@ -48570,11 +48619,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 5132,
-        "tournament_name": "W15 Giza",
-        "tournament_sourface": "Hard"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 12695,
+        "tournament_name": "W15 Getxo",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 287,
@@ -48584,10 +48633,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 5141,
-        "tournament_name": "W15 Giza 2",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 5132,
+        "tournament_name": "W15 Giza",
         "tournament_sourface": "Hard"
       },
       {
@@ -48598,10 +48647,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 5153,
-        "tournament_name": "W15 Giza 3",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 5141,
+        "tournament_name": "W15 Giza 2",
         "tournament_sourface": "Hard"
       },
       {
@@ -48612,11 +48661,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 3958,
-        "tournament_name": "W15 Gonesse",
-        "tournament_sourface": "Clay (Indoor)"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 5153,
+        "tournament_name": "W15 Giza 3",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 271,
@@ -48626,11 +48675,11 @@
         "tournament_sourface": "Clay (Indoor)"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 13904,
-        "tournament_name": "W15 Grado (Italy)",
-        "tournament_sourface": "Clay"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 3958,
+        "tournament_name": "W15 Gonesse",
+        "tournament_sourface": "Clay (Indoor)"
       },
       {
         "event_type_key": 287,
@@ -48640,11 +48689,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 11280,
-        "tournament_name": "W15 Grodzisk Mazowiecki",
-        "tournament_sourface": "Hard"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 13904,
+        "tournament_name": "W15 Grado (Italy)",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 271,
@@ -48654,10 +48703,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 5029,
-        "tournament_name": "W15 Guatemala",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 11280,
+        "tournament_name": "W15 Grodzisk Mazowiecki",
         "tournament_sourface": "Hard"
       },
       {
@@ -48668,11 +48717,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 7891,
-        "tournament_name": "W15 Guayaquil",
-        "tournament_sourface": "Clay"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 5029,
+        "tournament_name": "W15 Guatemala",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 271,
@@ -48682,10 +48731,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 7939,
-        "tournament_name": "W15 Guayaquil 2",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 7891,
+        "tournament_name": "W15 Guayaquil",
         "tournament_sourface": "Clay"
       },
       {
@@ -48696,11 +48745,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 5265,
-        "tournament_name": "W15 Gurugram",
-        "tournament_sourface": "Hard"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 7939,
+        "tournament_name": "W15 Guayaquil 2",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 271,
@@ -48710,10 +48759,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 13263,
-        "tournament_name": "W15 Gurugram 2",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 5265,
+        "tournament_name": "W15 Gurugram",
         "tournament_sourface": "Hard"
       },
       {
@@ -48724,10 +48773,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 8458,
-        "tournament_name": "W15 Gwalior",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 13263,
+        "tournament_name": "W15 Gurugram 2",
         "tournament_sourface": "Hard"
       },
       {
@@ -48738,11 +48787,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 3851,
-        "tournament_name": "W15 Haabneeme",
-        "tournament_sourface": "Hard (Indoor)"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 8458,
+        "tournament_name": "W15 Gwalior",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 287,
@@ -48752,11 +48801,11 @@
         "tournament_sourface": "Hard (Indoor)"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 12297,
-        "tournament_name": "W15 Hagetmau",
-        "tournament_sourface": "Hard"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 3851,
+        "tournament_name": "W15 Haabneeme",
+        "tournament_sourface": "Hard (Indoor)"
       },
       {
         "event_type_key": 271,
@@ -48766,11 +48815,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 12843,
-        "tournament_name": "W15 Hameenlinna",
-        "tournament_sourface": "Clay"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 12297,
+        "tournament_name": "W15 Hagetmau",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 287,
@@ -48780,11 +48829,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 9100,
-        "tournament_name": "W15 Hamilton",
-        "tournament_sourface": "Hard"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12843,
+        "tournament_name": "W15 Hameenlinna",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 271,
@@ -48794,11 +48843,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 7771,
-        "tournament_name": "W15 Haren",
-        "tournament_sourface": "Clay"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 9100,
+        "tournament_name": "W15 Hamilton",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 287,
@@ -48808,11 +48857,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 4936,
-        "tournament_name": "W15 Helsingborg",
-        "tournament_sourface": "Hard"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 7771,
+        "tournament_name": "W15 Haren",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 271,
@@ -48822,11 +48871,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 3350,
-        "tournament_name": "W15 Heraklion",
-        "tournament_sourface": "Clay"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 4936,
+        "tournament_name": "W15 Helsingborg",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 287,
@@ -48836,10 +48885,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 9290,
-        "tournament_name": "W15 Heraklion 10",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 3350,
+        "tournament_name": "W15 Heraklion",
         "tournament_sourface": "Clay"
       },
       {
@@ -48850,10 +48899,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 3378,
-        "tournament_name": "W15 Heraklion 2",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 9290,
+        "tournament_name": "W15 Heraklion 10",
         "tournament_sourface": "Clay"
       },
       {
@@ -48864,10 +48913,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 7117,
-        "tournament_name": "W15 Heraklion 3",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 3378,
+        "tournament_name": "W15 Heraklion 2",
         "tournament_sourface": "Clay"
       },
       {
@@ -48878,10 +48927,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 3427,
-        "tournament_name": "W15 Heraklion 4",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 7117,
+        "tournament_name": "W15 Heraklion 3",
         "tournament_sourface": "Clay"
       },
       {
@@ -48892,10 +48941,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 3476,
-        "tournament_name": "W15 Heraklion 5",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 3427,
+        "tournament_name": "W15 Heraklion 4",
         "tournament_sourface": "Clay"
       },
       {
@@ -48906,10 +48955,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 4202,
-        "tournament_name": "W15 Heraklion 6",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 3476,
+        "tournament_name": "W15 Heraklion 5",
         "tournament_sourface": "Clay"
       },
       {
@@ -48920,10 +48969,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 4094,
-        "tournament_name": "W15 Heraklion 7",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 4202,
+        "tournament_name": "W15 Heraklion 6",
         "tournament_sourface": "Clay"
       },
       {
@@ -48934,10 +48983,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 4111,
-        "tournament_name": "W15 Heraklion 8",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 4094,
+        "tournament_name": "W15 Heraklion 7",
         "tournament_sourface": "Clay"
       },
       {
@@ -48948,10 +48997,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 4168,
-        "tournament_name": "W15 Heraklion 9",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 4111,
+        "tournament_name": "W15 Heraklion 8",
         "tournament_sourface": "Clay"
       },
       {
@@ -48962,11 +49011,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 11190,
-        "tournament_name": "W15 Hillcrest",
-        "tournament_sourface": "Hard"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 4168,
+        "tournament_name": "W15 Heraklion 9",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 287,
@@ -48976,10 +49025,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 11222,
-        "tournament_name": "W15 Hillcrest 2",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 11190,
+        "tournament_name": "W15 Hillcrest",
         "tournament_sourface": "Hard"
       },
       {
@@ -48990,11 +49039,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 13379,
-        "tournament_name": "W15 Hilton Head Island, SC",
-        "tournament_sourface": "Clay"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 11222,
+        "tournament_name": "W15 Hillcrest 2",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 287,
@@ -49004,10 +49053,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 4739,
-        "tournament_name": "W15 Hilton Head, SC",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 13379,
+        "tournament_name": "W15 Hilton Head Island, SC",
         "tournament_sourface": "Clay"
       },
       {
@@ -49018,11 +49067,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 9373,
-        "tournament_name": "W15 Hinode",
-        "tournament_sourface": "Hard"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 4739,
+        "tournament_name": "W15 Hilton Head, SC",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 287,
@@ -49032,10 +49081,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 11211,
-        "tournament_name": "W15 Hong Kong",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 9373,
+        "tournament_name": "W15 Hinode",
         "tournament_sourface": "Hard"
       },
       {
@@ -49046,10 +49095,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 12696,
-        "tournament_name": "W15 Hong Kong 2",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 11211,
+        "tournament_name": "W15 Hong Kong",
         "tournament_sourface": "Hard"
       },
       {
@@ -49060,10 +49109,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 10275,
-        "tournament_name": "W15 Hua Hin",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12696,
+        "tournament_name": "W15 Hong Kong 2",
         "tournament_sourface": "Hard"
       },
       {
@@ -49074,10 +49123,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 10299,
-        "tournament_name": "W15 Hua Hin 2",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 10275,
+        "tournament_name": "W15 Hua Hin",
         "tournament_sourface": "Hard"
       },
       {
@@ -49088,10 +49137,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 11887,
-        "tournament_name": "W15 Huamantla",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 10299,
+        "tournament_name": "W15 Hua Hin 2",
         "tournament_sourface": "Hard"
       },
       {
@@ -49102,10 +49151,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 11927,
-        "tournament_name": "W15 Huamantla 2",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 11887,
+        "tournament_name": "W15 Huamantla",
         "tournament_sourface": "Hard"
       },
       {
@@ -49116,10 +49165,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 12759,
-        "tournament_name": "W15 Huamantla 3",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 11927,
+        "tournament_name": "W15 Huamantla 2",
         "tournament_sourface": "Hard"
       },
       {
@@ -49130,10 +49179,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 12823,
-        "tournament_name": "W15 Huamantla 4",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 12759,
+        "tournament_name": "W15 Huamantla 3",
         "tournament_sourface": "Hard"
       },
       {
@@ -49144,11 +49193,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 9625,
-        "tournament_name": "W15 Huntsville, AL",
-        "tournament_sourface": "Clay"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12823,
+        "tournament_name": "W15 Huamantla 4",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 271,
@@ -49158,11 +49207,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 12984,
-        "tournament_name": "W15 Hurghada",
-        "tournament_sourface": "Hard"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 9625,
+        "tournament_name": "W15 Huntsville, AL",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 287,
@@ -49172,10 +49221,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 13019,
-        "tournament_name": "W15 Hurghada 2",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12984,
+        "tournament_name": "W15 Hurghada",
         "tournament_sourface": "Hard"
       },
       {
@@ -49186,10 +49235,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 13248,
-        "tournament_name": "W15 Hurghada 3",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 13019,
+        "tournament_name": "W15 Hurghada 2",
         "tournament_sourface": "Hard"
       },
       {
@@ -49200,10 +49249,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 13858,
-        "tournament_name": "W15 Hurghada 4 (Egypt)",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 13248,
+        "tournament_name": "W15 Hurghada 3",
         "tournament_sourface": "Hard"
       },
       {
@@ -49214,10 +49263,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 13911,
-        "tournament_name": "W15 Hurghada 5 (Egypt)",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 13858,
+        "tournament_name": "W15 Hurghada 4 (Egypt)",
         "tournament_sourface": "Hard"
       },
       {
@@ -49228,11 +49277,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 4592,
-        "tournament_name": "W15 Ibague",
-        "tournament_sourface": "Clay"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 13911,
+        "tournament_name": "W15 Hurghada 5 (Egypt)",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 271,
@@ -49242,11 +49291,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 8584,
-        "tournament_name": "W15 Ipoh",
-        "tournament_sourface": "Hard"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 4592,
+        "tournament_name": "W15 Ibague",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 287,
@@ -49256,10 +49305,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 10687,
-        "tournament_name": "W15 Ipoh Perak",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 8584,
+        "tournament_name": "W15 Ipoh",
         "tournament_sourface": "Hard"
       },
       {
@@ -49270,10 +49319,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 9813,
-        "tournament_name": "W15 Irvine, CA",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 10687,
+        "tournament_name": "W15 Ipoh Perak",
         "tournament_sourface": "Hard"
       },
       {
@@ -49284,10 +49333,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 10314,
-        "tournament_name": "W15 Jackson, TN",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 9813,
+        "tournament_name": "W15 Irvine, CA",
         "tournament_sourface": "Hard"
       },
       {
@@ -49298,10 +49347,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 9345,
-        "tournament_name": "W15 Jakarta",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 10314,
+        "tournament_name": "W15 Jackson, TN",
         "tournament_sourface": "Hard"
       },
       {
@@ -49312,10 +49361,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 4042,
-        "tournament_name": "W15 Jerusalem",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 9345,
+        "tournament_name": "W15 Jakarta",
         "tournament_sourface": "Hard"
       },
       {
@@ -49326,11 +49375,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 5236,
-        "tournament_name": "W15 Jhajjar",
-        "tournament_sourface": "Clay"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 4042,
+        "tournament_name": "W15 Jerusalem",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 287,
@@ -49340,10 +49389,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 8579,
-        "tournament_name": "W15 Jhajjar 2",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 5236,
+        "tournament_name": "W15 Jhajjar",
         "tournament_sourface": "Clay"
       },
       {
@@ -49354,10 +49403,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 12127,
-        "tournament_name": "W15 Joinville",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 8579,
+        "tournament_name": "W15 Jhajjar 2",
         "tournament_sourface": "Clay"
       },
       {
@@ -49368,10 +49417,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 12463,
-        "tournament_name": "W15 Kalmar",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12127,
+        "tournament_name": "W15 Joinville",
         "tournament_sourface": "Clay"
       },
       {
@@ -49382,10 +49431,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 12953,
-        "tournament_name": "W15 Kaltenkirchen",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 12463,
+        "tournament_name": "W15 Kalmar",
         "tournament_sourface": "Clay"
       },
       {
@@ -49396,10 +49445,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 11216,
-        "tournament_name": "W15 Kamen",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12953,
+        "tournament_name": "W15 Kaltenkirchen",
         "tournament_sourface": "Clay"
       },
       {
@@ -49410,11 +49459,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 10725,
-        "tournament_name": "W15 Karaganda",
-        "tournament_sourface": "Hard"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 11216,
+        "tournament_name": "W15 Kamen",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 287,
@@ -49424,10 +49473,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 10745,
-        "tournament_name": "W15 Karaganda 2",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 10725,
+        "tournament_name": "W15 Karaganda",
         "tournament_sourface": "Hard"
       },
       {
@@ -49438,10 +49487,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 9676,
-        "tournament_name": "W15 Kashiwa",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 10745,
+        "tournament_name": "W15 Karaganda 2",
         "tournament_sourface": "Hard"
       },
       {
@@ -49452,10 +49501,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 9744,
-        "tournament_name": "W15 Kawaguchi",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 9676,
+        "tournament_name": "W15 Kashiwa",
         "tournament_sourface": "Hard"
       },
       {
@@ -49466,10 +49515,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 11962,
-        "tournament_name": "W15 Kayseri",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 9744,
+        "tournament_name": "W15 Kawaguchi",
         "tournament_sourface": "Hard"
       },
       {
@@ -49480,10 +49529,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 13266,
-        "tournament_name": "W15 Kayseri 10",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 11962,
+        "tournament_name": "W15 Kayseri",
         "tournament_sourface": "Hard"
       },
       {
@@ -49494,10 +49543,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 13302,
-        "tournament_name": "W15 Kayseri 11",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 13266,
+        "tournament_name": "W15 Kayseri 10",
         "tournament_sourface": "Hard"
       },
       {
@@ -49508,10 +49557,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 12566,
-        "tournament_name": "W15 Kayseri 2",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 13302,
+        "tournament_name": "W15 Kayseri 11",
         "tournament_sourface": "Hard"
       },
       {
@@ -49522,10 +49571,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 12584,
-        "tournament_name": "W15 Kayseri 3",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 12566,
+        "tournament_name": "W15 Kayseri 2",
         "tournament_sourface": "Hard"
       },
       {
@@ -49536,10 +49585,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 12640,
-        "tournament_name": "W15 Kayseri 4",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12584,
+        "tournament_name": "W15 Kayseri 3",
         "tournament_sourface": "Hard"
       },
       {
@@ -49550,10 +49599,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 12661,
-        "tournament_name": "W15 Kayseri 5",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 12640,
+        "tournament_name": "W15 Kayseri 4",
         "tournament_sourface": "Hard"
       },
       {
@@ -49564,10 +49613,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 12680,
-        "tournament_name": "W15 Kayseri 6",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12661,
+        "tournament_name": "W15 Kayseri 5",
         "tournament_sourface": "Hard"
       },
       {
@@ -49578,10 +49627,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 12973,
-        "tournament_name": "W15 Kayseri 7",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 12680,
+        "tournament_name": "W15 Kayseri 6",
         "tournament_sourface": "Hard"
       },
       {
@@ -49592,10 +49641,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 13014,
-        "tournament_name": "W15 Kayseri 8",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12973,
+        "tournament_name": "W15 Kayseri 7",
         "tournament_sourface": "Hard"
       },
       {
@@ -49606,10 +49655,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 13242,
-        "tournament_name": "W15 Kayseri 9",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 13014,
+        "tournament_name": "W15 Kayseri 8",
         "tournament_sourface": "Hard"
       },
       {
@@ -49620,11 +49669,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 3460,
-        "tournament_name": "W15 Kazan",
-        "tournament_sourface": "Hard (Indoor)"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 13242,
+        "tournament_name": "W15 Kayseri 9",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 271,
@@ -49634,11 +49683,11 @@
         "tournament_sourface": "Hard (Indoor)"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 5010,
-        "tournament_name": "W15 Kazan 2",
-        "tournament_sourface": "Hard"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 3460,
+        "tournament_name": "W15 Kazan",
+        "tournament_sourface": "Hard (Indoor)"
       },
       {
         "event_type_key": 287,
@@ -49648,11 +49697,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 13861,
-        "tournament_name": "W15 Klagenfurt (Austria)",
-        "tournament_sourface": "Clay"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 5010,
+        "tournament_name": "W15 Kazan 2",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 271,
@@ -49662,10 +49711,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 4384,
-        "tournament_name": "W15 Knokke",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 13861,
+        "tournament_name": "W15 Klagenfurt (Austria)",
         "tournament_sourface": "Clay"
       },
       {
@@ -49676,10 +49725,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 9692,
-        "tournament_name": "W15 Kocevje",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 4384,
+        "tournament_name": "W15 Knokke",
         "tournament_sourface": "Clay"
       },
       {
@@ -49690,10 +49739,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 12492,
-        "tournament_name": "W15 Kotka",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 9692,
+        "tournament_name": "W15 Kocevje",
         "tournament_sourface": "Clay"
       },
       {
@@ -49704,10 +49753,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 7522,
-        "tournament_name": "W15 Kottingbrunn",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12492,
+        "tournament_name": "W15 Kotka",
         "tournament_sourface": "Clay"
       },
       {
@@ -49718,10 +49767,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 7576,
-        "tournament_name": "W15 Kottingbrunn 2",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 7522,
+        "tournament_name": "W15 Kottingbrunn",
         "tournament_sourface": "Clay"
       },
       {
@@ -49732,10 +49781,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 11548,
-        "tournament_name": "W15 Krakow",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 7576,
+        "tournament_name": "W15 Kottingbrunn 2",
         "tournament_sourface": "Clay"
       },
       {
@@ -49746,10 +49795,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 9727,
-        "tournament_name": "W15 Kranjska Gora",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 11548,
+        "tournament_name": "W15 Krakow",
         "tournament_sourface": "Clay"
       },
       {
@@ -49760,10 +49809,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 7125,
-        "tournament_name": "W15 Krsko",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 9727,
+        "tournament_name": "W15 Kranjska Gora",
         "tournament_sourface": "Clay"
       },
       {
@@ -49774,11 +49823,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 8593,
-        "tournament_name": "W15 Kuala Lumpur",
-        "tournament_sourface": "Hard"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 7125,
+        "tournament_name": "W15 Krsko",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 287,
@@ -49788,10 +49837,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 8628,
-        "tournament_name": "W15 Kuching",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 8593,
+        "tournament_name": "W15 Kuala Lumpur",
         "tournament_sourface": "Hard"
       },
       {
@@ -49802,11 +49851,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 9460,
-        "tournament_name": "W15 Kursumlijska Banja",
-        "tournament_sourface": "Clay"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 8628,
+        "tournament_name": "W15 Kuching",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 287,
@@ -49816,10 +49865,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 10136,
-        "tournament_name": "W15 Kursumlijska Banja 10",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 9460,
+        "tournament_name": "W15 Kursumlijska Banja",
         "tournament_sourface": "Clay"
       },
       {
@@ -49830,10 +49879,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 10165,
-        "tournament_name": "W15 Kursumlijska Banja 11",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 10136,
+        "tournament_name": "W15 Kursumlijska Banja 10",
         "tournament_sourface": "Clay"
       },
       {
@@ -49844,10 +49893,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 11097,
-        "tournament_name": "W15 Kursumlijska Banja 12",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 10165,
+        "tournament_name": "W15 Kursumlijska Banja 11",
         "tournament_sourface": "Clay"
       },
       {
@@ -49858,10 +49907,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 11356,
-        "tournament_name": "W15 Kursumlijska Banja 13",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 11097,
+        "tournament_name": "W15 Kursumlijska Banja 12",
         "tournament_sourface": "Clay"
       },
       {
@@ -49872,10 +49921,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 11384,
-        "tournament_name": "W15 Kursumlijska Banja 14",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 11356,
+        "tournament_name": "W15 Kursumlijska Banja 13",
         "tournament_sourface": "Clay"
       },
       {
@@ -49886,10 +49935,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 11427,
-        "tournament_name": "W15 Kursumlijska Banja 15",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 11384,
+        "tournament_name": "W15 Kursumlijska Banja 14",
         "tournament_sourface": "Clay"
       },
       {
@@ -49900,10 +49949,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 11596,
-        "tournament_name": "W15 Kursumlijska Banja 16",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 11427,
+        "tournament_name": "W15 Kursumlijska Banja 15",
         "tournament_sourface": "Clay"
       },
       {
@@ -49914,10 +49963,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 11626,
-        "tournament_name": "W15 Kursumlijska Banja 17",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 11596,
+        "tournament_name": "W15 Kursumlijska Banja 16",
         "tournament_sourface": "Clay"
       },
       {
@@ -49928,16 +49977,23 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 11672,
-        "tournament_name": "W15 Kursumlijska Banja 18",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 11626,
+        "tournament_name": "W15 Kursumlijska Banja 17",
         "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 271,
         "event_type_type": "Itf Women Singles",
         "tournament_key": 11671,
+        "tournament_name": "W15 Kursumlijska Banja 18",
+        "tournament_sourface": "Clay"
+      },
+      {
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 11672,
         "tournament_name": "W15 Kursumlijska Banja 18",
         "tournament_sourface": "Clay"
       },
@@ -62234,11 +62290,25 @@
         "tournament_sourface": "Clay"
       },
       {
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 14021,
+        "tournament_name": "W35 Rome",
+        "tournament_sourface": "Hard"
+      },
+      {
         "event_type_key": 271,
         "event_type_type": "Itf Women Singles",
         "tournament_key": 11256,
         "tournament_name": "W35 Rome",
         "tournament_sourface": "Clay"
+      },
+      {
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 14018,
+        "tournament_name": "W35 Rome",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 271,
@@ -64511,9 +64581,16 @@
       {
         "event_type_key": 271,
         "event_type_type": "Itf Women Singles",
-        "tournament_key": 11039,
-        "tournament_name": "W50 Goyang",
-        "tournament_sourface": "Hard"
+        "tournament_key": 14012,
+        "tournament_name": "W50 Gdansk (Poland)",
+        "tournament_sourface": "Clay"
+      },
+      {
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 14015,
+        "tournament_name": "W50 Gdansk (Poland)",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 287,
@@ -64523,10 +64600,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 13663,
-        "tournament_name": "W50 Grenoble",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 11039,
+        "tournament_name": "W50 Goyang",
         "tournament_sourface": "Hard"
       },
       {
@@ -64537,10 +64614,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 12582,
-        "tournament_name": "W50 Guimaraes",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 13663,
+        "tournament_name": "W50 Grenoble",
         "tournament_sourface": "Hard"
       },
       {
@@ -64551,10 +64628,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 11656,
-        "tournament_name": "W50 Guiyang",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12582,
+        "tournament_name": "W50 Guimaraes",
         "tournament_sourface": "Hard"
       },
       {
@@ -64565,11 +64642,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 13993,
-        "tournament_name": "W50 Haskovo (Bulgaria)",
-        "tournament_sourface": "Clay"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 11656,
+        "tournament_name": "W50 Guiyang",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 287,
@@ -64579,11 +64656,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 13695,
-        "tournament_name": "W50 Helsinki",
-        "tournament_sourface": "Hard"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 13993,
+        "tournament_name": "W50 Haskovo (Bulgaria)",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 271,
@@ -64593,11 +64670,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 13317,
-        "tournament_name": "W50 Heraklion",
-        "tournament_sourface": "Clay"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 13695,
+        "tournament_name": "W50 Helsinki",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 287,
@@ -64607,10 +64684,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 13463,
-        "tournament_name": "W50 Heraklion 2",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 13317,
+        "tournament_name": "W50 Heraklion",
         "tournament_sourface": "Clay"
       },
       {
@@ -64621,11 +64698,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 13967,
-        "tournament_name": "W50 Hurghada (Egypt)",
-        "tournament_sourface": "Grass"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 13463,
+        "tournament_name": "W50 Heraklion 2",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 287,
@@ -64635,11 +64712,11 @@
         "tournament_sourface": "Grass"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 13394,
-        "tournament_name": "W50 Ibague",
-        "tournament_sourface": "Clay"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 13967,
+        "tournament_name": "W50 Hurghada (Egypt)",
+        "tournament_sourface": "Grass"
       },
       {
         "event_type_key": 271,
@@ -64649,10 +64726,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 12469,
-        "tournament_name": "W50 Indian Harbour Beach, FL",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 13394,
+        "tournament_name": "W50 Ibague",
         "tournament_sourface": "Clay"
       },
       {
@@ -64663,11 +64740,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 10596,
-        "tournament_name": "W50 Indore",
-        "tournament_sourface": "Hard"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12469,
+        "tournament_name": "W50 Indian Harbour Beach, FL",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 271,
@@ -64677,10 +64754,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 11576,
-        "tournament_name": "W50 Jinan",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 10596,
+        "tournament_name": "W50 Indore",
         "tournament_sourface": "Hard"
       },
       {
@@ -64691,10 +64768,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 10841,
-        "tournament_name": "W50 Kashiwa",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 11576,
+        "tournament_name": "W50 Jinan",
         "tournament_sourface": "Hard"
       },
       {
@@ -64705,10 +64782,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 11863,
-        "tournament_name": "W50 Kayseri",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 10841,
+        "tournament_name": "W50 Kashiwa",
         "tournament_sourface": "Hard"
       },
       {
@@ -64719,10 +64796,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 10817,
-        "tournament_name": "W50 Kofu",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 11863,
+        "tournament_name": "W50 Kayseri",
         "tournament_sourface": "Hard"
       },
       {
@@ -64733,10 +64810,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 12480,
-        "tournament_name": "W50 Kurume+H",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 10817,
+        "tournament_name": "W50 Kofu",
         "tournament_sourface": "Hard"
       },
       {
@@ -64747,10 +64824,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 12310,
-        "tournament_name": "W50 Kyoto",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12480,
+        "tournament_name": "W50 Kurume+H",
         "tournament_sourface": "Hard"
       },
       {
@@ -64761,10 +64838,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 11115,
-        "tournament_name": "W50 La Marsa",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 12310,
+        "tournament_name": "W50 Kyoto",
         "tournament_sourface": "Hard"
       },
       {
@@ -64775,10 +64852,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 12200,
-        "tournament_name": "W50 La Marsa 2",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 11115,
+        "tournament_name": "W50 La Marsa",
         "tournament_sourface": "Hard"
       },
       {
@@ -64789,10 +64866,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 12977,
-        "tournament_name": "W50 Leiria",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 12200,
+        "tournament_name": "W50 La Marsa 2",
         "tournament_sourface": "Hard"
       },
       {
@@ -64803,10 +64880,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 10916,
-        "tournament_name": "W50 Lopota",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12977,
+        "tournament_name": "W50 Leiria",
         "tournament_sourface": "Hard"
       },
       {
@@ -64817,10 +64894,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 10936,
-        "tournament_name": "W50 Lopota 2",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 10916,
+        "tournament_name": "W50 Lopota",
         "tournament_sourface": "Hard"
       },
       {
@@ -64831,10 +64908,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 10705,
-        "tournament_name": "W50 Macon",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 10936,
+        "tournament_name": "W50 Lopota 2",
         "tournament_sourface": "Hard"
       },
       {
@@ -64845,10 +64922,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 13595,
-        "tournament_name": "W50 Manchester",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 10705,
+        "tournament_name": "W50 Macon",
         "tournament_sourface": "Hard"
       },
       {
@@ -64859,11 +64936,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 11603,
-        "tournament_name": "W50 Meerbusch",
-        "tournament_sourface": "Clay"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 13595,
+        "tournament_name": "W50 Manchester",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 271,
@@ -64873,11 +64950,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 10673,
-        "tournament_name": "W50 Mexico City",
-        "tournament_sourface": "Hard"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 11603,
+        "tournament_name": "W50 Meerbusch",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 287,
@@ -64887,10 +64964,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 13625,
-        "tournament_name": "W50 Monastir",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 10673,
+        "tournament_name": "W50 Mexico City",
         "tournament_sourface": "Hard"
       },
       {
@@ -64901,10 +64978,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 13639,
-        "tournament_name": "W50 Monastir 2",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 13625,
+        "tournament_name": "W50 Monastir",
         "tournament_sourface": "Hard"
       },
       {
@@ -64915,10 +64992,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 11079,
-        "tournament_name": "W50 Montemor-o-Novo",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 13639,
+        "tournament_name": "W50 Monastir 2",
         "tournament_sourface": "Hard"
       },
       {
@@ -64929,10 +65006,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 11111,
-        "tournament_name": "W50 Montemor-o-Novo 2",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 11079,
+        "tournament_name": "W50 Montemor-o-Novo",
         "tournament_sourface": "Hard"
       },
       {
@@ -64943,10 +65020,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 10657,
-        "tournament_name": "W50 Morelia",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 11111,
+        "tournament_name": "W50 Montemor-o-Novo 2",
         "tournament_sourface": "Hard"
       },
       {
@@ -64957,10 +65034,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 10824,
-        "tournament_name": "W50 Murska Sobota",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 10657,
+        "tournament_name": "W50 Morelia",
         "tournament_sourface": "Hard"
       },
       {
@@ -64971,10 +65048,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 11759,
-        "tournament_name": "W50 Nanao",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 10824,
+        "tournament_name": "W50 Murska Sobota",
         "tournament_sourface": "Hard"
       },
       {
@@ -64985,10 +65062,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 11937,
-        "tournament_name": "W50 Nantes",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 11759,
+        "tournament_name": "W50 Nanao",
         "tournament_sourface": "Hard"
       },
       {
@@ -64999,10 +65076,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 12159,
-        "tournament_name": "W50 Navi Mumbai",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 11937,
+        "tournament_name": "W50 Nantes",
         "tournament_sourface": "Hard"
       },
       {
@@ -65013,10 +65090,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 12190,
-        "tournament_name": "W50 New Delhi+H",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 12159,
+        "tournament_name": "W50 Navi Mumbai",
         "tournament_sourface": "Hard"
       },
       {
@@ -65027,10 +65104,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 10509,
-        "tournament_name": "W50 Nonthaburi",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12190,
+        "tournament_name": "W50 New Delhi+H",
         "tournament_sourface": "Hard"
       },
       {
@@ -65041,10 +65118,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 10522,
-        "tournament_name": "W50 Nonthaburi 2",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 10509,
+        "tournament_name": "W50 Nonthaburi",
         "tournament_sourface": "Hard"
       },
       {
@@ -65055,10 +65132,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 11312,
-        "tournament_name": "W50 Nottingham",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 10522,
+        "tournament_name": "W50 Nonthaburi 2",
         "tournament_sourface": "Hard"
       },
       {
@@ -65069,11 +65146,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 11594,
-        "tournament_name": "W50 Oldenzaal",
-        "tournament_sourface": "Clay"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 11312,
+        "tournament_name": "W50 Nottingham",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 287,
@@ -65083,11 +65160,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 13652,
-        "tournament_name": "W50 Orlando, FL",
-        "tournament_sourface": "Hard"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 11594,
+        "tournament_name": "W50 Oldenzaal",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 271,
@@ -65097,10 +65174,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 13514,
-        "tournament_name": "W50 Ortisei",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 13652,
+        "tournament_name": "W50 Orlando, FL",
         "tournament_sourface": "Hard"
       },
       {
@@ -65111,11 +65188,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 11037,
-        "tournament_name": "W50 Otocec",
-        "tournament_sourface": "Clay"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 13514,
+        "tournament_name": "W50 Ortisei",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 271,
@@ -65125,10 +65202,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 11064,
-        "tournament_name": "W50 Otocec 2",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 11037,
+        "tournament_name": "W50 Otocec",
         "tournament_sourface": "Clay"
       },
       {
@@ -65139,11 +65216,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 11456,
-        "tournament_name": "W50 Ourense",
-        "tournament_sourface": "Hard"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 11064,
+        "tournament_name": "W50 Otocec 2",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 271,
@@ -65153,10 +65230,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 11208,
-        "tournament_name": "W50 Palma del Rio",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 11456,
+        "tournament_name": "W50 Ourense",
         "tournament_sourface": "Hard"
       },
       {
@@ -65167,11 +65244,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 12520,
-        "tournament_name": "W50 Pelham, AL",
-        "tournament_sourface": "Clay"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 11208,
+        "tournament_name": "W50 Palma del Rio",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 271,
@@ -65181,10 +65258,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 11757,
-        "tournament_name": "W50 Pilar",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 12520,
+        "tournament_name": "W50 Pelham, AL",
         "tournament_sourface": "Clay"
       },
       {
@@ -65195,11 +65272,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 10603,
-        "tournament_name": "W50 Porto",
-        "tournament_sourface": "Hard"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 11757,
+        "tournament_name": "W50 Pilar",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 271,
@@ -65209,10 +65286,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 12216,
-        "tournament_name": "W50 Porto+H",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 10603,
+        "tournament_name": "W50 Porto",
         "tournament_sourface": "Hard"
       },
       {
@@ -65223,11 +65300,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 12509,
-        "tournament_name": "W50 Portoroz",
-        "tournament_sourface": "Clay"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12216,
+        "tournament_name": "W50 Porto+H",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 271,
@@ -65237,11 +65314,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 10663,
-        "tournament_name": "W50 Pretoria",
-        "tournament_sourface": "Hard"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 12509,
+        "tournament_name": "W50 Portoroz",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 287,
@@ -65251,10 +65328,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 10712,
-        "tournament_name": "W50 Pretoria 2",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 10663,
+        "tournament_name": "W50 Pretoria",
         "tournament_sourface": "Hard"
       },
       {
@@ -65265,10 +65342,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 10562,
-        "tournament_name": "W50 Pune",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 10712,
+        "tournament_name": "W50 Pretoria 2",
         "tournament_sourface": "Hard"
       },
       {
@@ -65279,10 +65356,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 11842,
-        "tournament_name": "W50 Quinta do Lago",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 10562,
+        "tournament_name": "W50 Pune",
         "tournament_sourface": "Hard"
       },
       {
@@ -65293,10 +65370,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 13310,
-        "tournament_name": "W50 Rancho Santa Fe, CA",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 11842,
+        "tournament_name": "W50 Quinta do Lago",
         "tournament_sourface": "Hard"
       },
       {
@@ -65307,10 +65384,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 10654,
-        "tournament_name": "W50 Roehampton",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 13310,
+        "tournament_name": "W50 Rancho Santa Fe, CA",
         "tournament_sourface": "Hard"
       },
       {
@@ -65321,11 +65398,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 11634,
-        "tournament_name": "W50 Saint-Palais-sur-Mer",
-        "tournament_sourface": "Clay"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 10654,
+        "tournament_name": "W50 Roehampton",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 287,
@@ -65335,10 +65412,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 11744,
-        "tournament_name": "W50 San Miguel de Tucuman",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 11634,
+        "tournament_name": "W50 Saint-Palais-sur-Mer",
         "tournament_sourface": "Clay"
       },
       {
@@ -65349,11 +65426,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 12328,
-        "tournament_name": "W50 Santo Domingo",
-        "tournament_sourface": "Hard"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 11744,
+        "tournament_name": "W50 San Miguel de Tucuman",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 287,
@@ -65363,10 +65440,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 12367,
-        "tournament_name": "W50 Santo Domingo 2",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12328,
+        "tournament_name": "W50 Santo Domingo",
         "tournament_sourface": "Hard"
       },
       {
@@ -65377,11 +65454,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 10823,
-        "tournament_name": "W50 Sao Paulo",
-        "tournament_sourface": "Clay"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 12367,
+        "tournament_name": "W50 Santo Domingo 2",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 287,
@@ -65391,11 +65468,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 12894,
-        "tournament_name": "W50 Saskatoon",
-        "tournament_sourface": "Hard"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 10823,
+        "tournament_name": "W50 Sao Paulo",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 271,
@@ -65405,10 +65482,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 12084,
-        "tournament_name": "W50 Selva Gardena",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 12894,
+        "tournament_name": "W50 Saskatoon",
         "tournament_sourface": "Hard"
       },
       {
@@ -65419,10 +65496,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 10863,
-        "tournament_name": "W50 Shenzhen",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12084,
+        "tournament_name": "W50 Selva Gardena",
         "tournament_sourface": "Hard"
       },
       {
@@ -65433,10 +65510,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 10897,
-        "tournament_name": "W50 Shenzhen 2",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 10863,
+        "tournament_name": "W50 Shenzhen",
         "tournament_sourface": "Hard"
       },
       {
@@ -65447,11 +65524,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 11610,
-        "tournament_name": "W50 Slobozia",
-        "tournament_sourface": "Clay"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 10897,
+        "tournament_name": "W50 Shenzhen 2",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 271,
@@ -65461,11 +65538,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 12254,
-        "tournament_name": "W50 Spring, TX",
-        "tournament_sourface": "Hard"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 11610,
+        "tournament_name": "W50 Slobozia",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 287,
@@ -65475,10 +65552,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 11138,
-        "tournament_name": "W50 Taizhou",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12254,
+        "tournament_name": "W50 Spring, TX",
         "tournament_sourface": "Hard"
       },
       {
@@ -65489,11 +65566,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 12130,
-        "tournament_name": "W50 Tampa, FL",
-        "tournament_sourface": "Clay"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 11138,
+        "tournament_name": "W50 Taizhou",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 287,
@@ -65503,11 +65580,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 10703,
-        "tournament_name": "W50 Trnava",
-        "tournament_sourface": "Hard"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12130,
+        "tournament_name": "W50 Tampa, FL",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 271,
@@ -65517,10 +65594,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 12066,
-        "tournament_name": "W50 Trnava 2",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 10703,
+        "tournament_name": "W50 Trnava",
         "tournament_sourface": "Hard"
       },
       {
@@ -65531,11 +65608,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 11086,
-        "tournament_name": "W50 Troisdorf",
-        "tournament_sourface": "Clay"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12066,
+        "tournament_name": "W50 Trnava 2",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 271,
@@ -65545,10 +65622,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 12340,
-        "tournament_name": "W50 Vacaria",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 11086,
+        "tournament_name": "W50 Troisdorf",
         "tournament_sourface": "Clay"
       },
       {
@@ -65559,11 +65636,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 12014,
-        "tournament_name": "W50 Veracruz",
-        "tournament_sourface": "Hard"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12340,
+        "tournament_name": "W50 Vacaria",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 271,
@@ -65573,10 +65650,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 10920,
-        "tournament_name": "W50 Wuning",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 12014,
+        "tournament_name": "W50 Veracruz",
         "tournament_sourface": "Hard"
       },
       {
@@ -65587,10 +65664,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 12449,
-        "tournament_name": "W50 Yecla",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 10920,
+        "tournament_name": "W50 Wuning",
         "tournament_sourface": "Hard"
       },
       {
@@ -65601,10 +65678,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 12109,
-        "tournament_name": "W50 Yokohama",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 12449,
+        "tournament_name": "W50 Yecla",
         "tournament_sourface": "Hard"
       },
       {
@@ -65615,11 +65692,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 11194,
-        "tournament_name": "W50 Ystad",
-        "tournament_sourface": "Clay"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12109,
+        "tournament_name": "W50 Yokohama",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 271,
@@ -65629,10 +65706,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 11406,
-        "tournament_name": "W50 Zagreb",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 11194,
+        "tournament_name": "W50 Ystad",
         "tournament_sourface": "Clay"
       },
       {
@@ -65643,10 +65720,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 12411,
-        "tournament_name": "W50 Zephyrhills, FL",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 11406,
+        "tournament_name": "W50 Zagreb",
         "tournament_sourface": "Clay"
       },
       {
@@ -65657,11 +65734,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 10907,
-        "tournament_name": "W50+H Calvi",
-        "tournament_sourface": "Hard"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 12411,
+        "tournament_name": "W50 Zephyrhills, FL",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 287,
@@ -65671,11 +65748,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 12847,
-        "tournament_name": "W50+H Koksijde",
-        "tournament_sourface": "Clay"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 10907,
+        "tournament_name": "W50+H Calvi",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 271,
@@ -65685,10 +65762,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 12848,
-        "tournament_name": "W50+H Leipzig",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 12847,
+        "tournament_name": "W50+H Koksijde",
         "tournament_sourface": "Clay"
       },
       {
@@ -65699,11 +65776,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 12279,
-        "tournament_name": "W50+H Macon",
-        "tournament_sourface": "Hard"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12848,
+        "tournament_name": "W50+H Leipzig",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 271,
@@ -65713,10 +65790,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 12654,
-        "tournament_name": "W50+H Palma del Rio",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 12279,
+        "tournament_name": "W50+H Macon",
         "tournament_sourface": "Hard"
       },
       {
@@ -65727,11 +65804,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 13235,
-        "tournament_name": "W50+H Pazardzhik",
-        "tournament_sourface": "Clay"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 12654,
+        "tournament_name": "W50+H Palma del Rio",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 271,
@@ -65741,10 +65818,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 13269,
-        "tournament_name": "W50+H Pazardzhik 2",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 13235,
+        "tournament_name": "W50+H Pazardzhik",
         "tournament_sourface": "Clay"
       },
       {
@@ -65755,11 +65832,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 5268,
-        "tournament_name": "W60 Altenkirchen",
-        "tournament_sourface": "Hard (Indoor)"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 13269,
+        "tournament_name": "W50+H Pazardzhik 2",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 271,
@@ -65769,11 +65846,11 @@
         "tournament_sourface": "Hard (Indoor)"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 4295,
-        "tournament_name": "W60 Amstelveen",
-        "tournament_sourface": "Clay"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 5268,
+        "tournament_name": "W60 Altenkirchen",
+        "tournament_sourface": "Hard (Indoor)"
       },
       {
         "event_type_key": 287,
@@ -65783,11 +65860,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 3293,
-        "tournament_name": "W60 Andrezieux-Boutheon",
-        "tournament_sourface": "Hard (Indoor)"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 4295,
+        "tournament_name": "W60 Amstelveen",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 271,
@@ -65797,11 +65874,11 @@
         "tournament_sourface": "Hard (Indoor)"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 5307,
-        "tournament_name": "W60 Arcadia, CA",
-        "tournament_sourface": "Hard"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 3293,
+        "tournament_name": "W60 Andrezieux-Boutheon",
+        "tournament_sourface": "Hard (Indoor)"
       },
       {
         "event_type_key": 287,
@@ -65811,10 +65888,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 9320,
-        "tournament_name": "W60 Astana",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 5307,
+        "tournament_name": "W60 Arcadia, CA",
         "tournament_sourface": "Hard"
       },
       {
@@ -65825,10 +65902,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 9936,
-        "tournament_name": "W60 Barcelona",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 9320,
+        "tournament_name": "W60 Astana",
         "tournament_sourface": "Hard"
       },
       {
@@ -65839,10 +65916,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 8194,
-        "tournament_name": "W60 Barranquilla",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 9936,
+        "tournament_name": "W60 Barcelona",
         "tournament_sourface": "Hard"
       },
       {
@@ -65853,11 +65930,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 3992,
-        "tournament_name": "W60 Bellinzona",
-        "tournament_sourface": "Clay"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 8194,
+        "tournament_name": "W60 Barranquilla",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 287,
@@ -65867,11 +65944,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 4698,
-        "tournament_name": "W60 Berkeley, CA",
-        "tournament_sourface": "Hard"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 3992,
+        "tournament_name": "W60 Bellinzona",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 271,
@@ -65881,11 +65958,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 4326,
-        "tournament_name": "W60 Biarritz",
-        "tournament_sourface": "Clay"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 4698,
+        "tournament_name": "W60 Berkeley, CA",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 287,
@@ -65895,10 +65972,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 9572,
-        "tournament_name": "W60 Bodrum",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 4326,
+        "tournament_name": "W60 Biarritz",
         "tournament_sourface": "Clay"
       },
       {
@@ -65909,6 +65986,20 @@
         "tournament_sourface": "Clay"
       },
       {
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 9572,
+        "tournament_name": "W60 Bodrum",
+        "tournament_sourface": "Clay"
+      },
+      {
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 5016,
+        "tournament_name": "W60 Brasilia",
+        "tournament_sourface": "Clay"
+      },
+      {
         "event_type_key": 271,
         "event_type_type": "Itf Women Singles",
         "tournament_key": 5001,
@@ -65916,10 +66007,10 @@
         "tournament_sourface": "Clay (Indoor)"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 5016,
-        "tournament_name": "W60 Brasilia",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 7167,
+        "tournament_name": "W60 Brasov",
         "tournament_sourface": "Clay"
       },
       {
@@ -65930,11 +66021,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 7167,
-        "tournament_name": "W60 Brasov",
-        "tournament_sourface": "Clay"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 8284,
+        "tournament_name": "W60 Bratislava",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 271,
@@ -65944,11 +66035,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 8284,
-        "tournament_name": "W60 Bratislava",
-        "tournament_sourface": "Hard"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 7170,
+        "tournament_name": "W60 Brescia",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 287,
@@ -65958,20 +66049,6 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 7170,
-        "tournament_name": "W60 Brescia",
-        "tournament_sourface": "Clay"
-      },
-      {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 10399,
-        "tournament_name": "W60 Brisbane",
-        "tournament_sourface": "Hard"
-      },
-      {
         "event_type_key": 287,
         "event_type_type": "Itf Women Doubles",
         "tournament_key": 10400,
@@ -65979,10 +66056,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 7679,
-        "tournament_name": "W60 Bronx, NY",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 10399,
+        "tournament_name": "W60 Brisbane",
         "tournament_sourface": "Hard"
       },
       {
@@ -65993,10 +66070,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 3282,
-        "tournament_name": "W60 Burnie",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 7679,
+        "tournament_name": "W60 Bronx, NY",
         "tournament_sourface": "Hard"
       },
       {
@@ -66007,10 +66084,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 9111,
-        "tournament_name": "W60 Cairo",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 3282,
+        "tournament_name": "W60 Burnie",
         "tournament_sourface": "Hard"
       },
       {
@@ -66021,10 +66098,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 8226,
-        "tournament_name": "W60 Calgary",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 9111,
+        "tournament_name": "W60 Cairo",
         "tournament_sourface": "Hard"
       },
       {
@@ -66035,6 +66112,20 @@
         "tournament_sourface": "Hard"
       },
       {
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 8226,
+        "tournament_name": "W60 Calgary",
+        "tournament_sourface": "Hard"
+      },
+      {
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 3552,
+        "tournament_name": "W60 Canberra",
+        "tournament_sourface": "Clay"
+      },
+      {
         "event_type_key": 287,
         "event_type_type": "Itf Women Doubles",
         "tournament_key": 5367,
@@ -66042,10 +66133,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 3552,
-        "tournament_name": "W60 Canberra",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 5393,
+        "tournament_name": "W60 Canberra 2",
         "tournament_sourface": "Clay"
       },
       {
@@ -66056,10 +66147,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 5393,
-        "tournament_name": "W60 Canberra 2",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 9348,
+        "tournament_name": "W60 Canberra 3",
         "tournament_sourface": "Clay"
       },
       {
@@ -66070,10 +66161,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 9348,
-        "tournament_name": "W60 Canberra 3",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 7219,
+        "tournament_name": "W60 Caserta",
         "tournament_sourface": "Clay"
       },
       {
@@ -66084,10 +66175,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 7219,
-        "tournament_name": "W60 Caserta",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 4210,
+        "tournament_name": "W60 Ceska Lipa",
         "tournament_sourface": "Clay"
       },
       {
@@ -66098,10 +66189,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 4210,
-        "tournament_name": "W60 Ceska Lipa",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 4251,
+        "tournament_name": "W60 Charleston, SC",
         "tournament_sourface": "Clay"
       },
       {
@@ -66112,10 +66203,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 4251,
-        "tournament_name": "W60 Charleston, SC",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 4022,
+        "tournament_name": "W60 Charlottesville, VA",
         "tournament_sourface": "Clay"
       },
       {
@@ -66126,10 +66217,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 4022,
-        "tournament_name": "W60 Charlottesville, VA",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 5448,
+        "tournament_name": "W60 Chiasso",
         "tournament_sourface": "Clay"
       },
       {
@@ -66140,10 +66231,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 5448,
-        "tournament_name": "W60 Chiasso",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 4569,
+        "tournament_name": "W60 Collonge-Bellerive",
         "tournament_sourface": "Clay"
       },
       {
@@ -66154,10 +66245,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 4569,
-        "tournament_name": "W60 Collonge-Bellerive",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 7502,
+        "tournament_name": "W60 Cordenons",
         "tournament_sourface": "Clay"
       },
       {
@@ -66168,20 +66259,6 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 7502,
-        "tournament_name": "W60 Cordenons",
-        "tournament_sourface": "Clay"
-      },
-      {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 5403,
-        "tournament_name": "W60 Croissy-Beaubourg",
-        "tournament_sourface": "Hard"
-      },
-      {
         "event_type_key": 271,
         "event_type_type": "Itf Women Singles",
         "tournament_key": 5395,
@@ -66189,10 +66266,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 9914,
-        "tournament_name": "W60 Dallas, TX",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 5403,
+        "tournament_name": "W60 Croissy-Beaubourg",
         "tournament_sourface": "Hard"
       },
       {
@@ -66203,10 +66280,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 7484,
-        "tournament_name": "W60 Evansville, IN",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 9914,
+        "tournament_name": "W60 Dallas, TX",
         "tournament_sourface": "Hard"
       },
       {
@@ -66217,10 +66294,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 9916,
-        "tournament_name": "W60 Feira de Santana",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 7484,
+        "tournament_name": "W60 Evansville, IN",
         "tournament_sourface": "Hard"
       },
       {
@@ -66231,10 +66308,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 9543,
-        "tournament_name": "W60 Fukuoka",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 9916,
+        "tournament_name": "W60 Feira de Santana",
         "tournament_sourface": "Hard"
       },
       {
@@ -66245,10 +66322,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 8091,
-        "tournament_name": "W60 Glasgow",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 9543,
+        "tournament_name": "W60 Fukuoka",
         "tournament_sourface": "Hard"
       },
       {
@@ -66259,10 +66336,10 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 10435,
-        "tournament_name": "W60 Gold Coast",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 8091,
+        "tournament_name": "W60 Glasgow",
         "tournament_sourface": "Hard"
       },
       {
@@ -66273,11 +66350,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 7131,
-        "tournament_name": "W60 Grado",
-        "tournament_sourface": "Clay"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 10435,
+        "tournament_name": "W60 Gold Coast",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 287,
@@ -66287,11 +66364,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 5241,
-        "tournament_name": "W60 Grenoble",
-        "tournament_sourface": "Hard"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 7131,
+        "tournament_name": "W60 Grado",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 271,
@@ -66301,11 +66378,11 @@
         "tournament_sourface": "Hard"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 4383,
-        "tournament_name": "W60 Grodzisk Mazowiecki",
-        "tournament_sourface": "Clay"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 5241,
+        "tournament_name": "W60 Grenoble",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 287,
@@ -66315,11 +66392,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 8089,
-        "tournament_name": "W60 Hamburg",
-        "tournament_sourface": "Hard"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 4383,
+        "tournament_name": "W60 Grodzisk Mazowiecki",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 271,
@@ -66329,11 +66406,11 @@
         "tournament_sourface": "Hard (Indoor)"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 7588,
-        "tournament_name": "W60 Hechingen",
-        "tournament_sourface": "Clay"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 8089,
+        "tournament_name": "W60 Hamburg",
+        "tournament_sourface": "Hard"
       },
       {
         "event_type_key": 287,
@@ -66343,10 +66420,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 5480,
-        "tournament_name": "W60 Istanbul",
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 7588,
+        "tournament_name": "W60 Hechingen",
         "tournament_sourface": "Clay"
       },
       {
@@ -66357,10 +66434,10 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 5526,
-        "tournament_name": "W60 Koper",
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 5480,
+        "tournament_name": "W60 Istanbul",
         "tournament_sourface": "Clay"
       },
       {
@@ -66371,11 +66448,11 @@
         "tournament_sourface": "Clay"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 9568,
-        "tournament_name": "W60 Kurume",
-        "tournament_sourface": "Grass"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 5526,
+        "tournament_name": "W60 Koper",
+        "tournament_sourface": "Clay"
       },
       {
         "event_type_key": 271,
@@ -66385,11 +66462,11 @@
         "tournament_sourface": "Grass"
       },
       {
-        "event_type_key": 271,
-        "event_type_type": "Itf Women Singles",
-        "tournament_key": 3364,
-        "tournament_name": "W60 Kyoto",
-        "tournament_sourface": "Hard (Indoor)"
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 9568,
+        "tournament_name": "W60 Kurume",
+        "tournament_sourface": "Grass"
       },
       {
         "event_type_key": 287,
@@ -66399,16 +66476,23 @@
         "tournament_sourface": "Hard (Indoor)"
       },
       {
-        "event_type_key": 287,
-        "event_type_type": "Itf Women Doubles",
-        "tournament_key": 4731,
-        "tournament_name": "W60 Las Vegas, NV",
-        "tournament_sourface": "Hard"
+        "event_type_key": 271,
+        "event_type_type": "Itf Women Singles",
+        "tournament_key": 3364,
+        "tournament_name": "W60 Kyoto",
+        "tournament_sourface": "Hard (Indoor)"
       },
       {
         "event_type_key": 271,
         "event_type_type": "Itf Women Singles",
         "tournament_key": 4730,
+        "tournament_name": "W60 Las Vegas, NV",
+        "tournament_sourface": "Hard"
+      },
+      {
+        "event_type_key": 287,
+        "event_type_type": "Itf Women Doubles",
+        "tournament_key": 4731,
         "tournament_name": "W60 Las Vegas, NV",
         "tournament_sourface": "Hard"
       },
