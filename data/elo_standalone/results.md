@@ -1,16 +1,42 @@
 # Standalone Elo Results
 
-- Settled: 44
-- W-L: 22-21
-- Hit rate: 51.16%
-- Total stake: 51.00
-- Total profit: 1.01
-- ROI: 1.98%
+- Settled: 70
+- W-L: 33-34
+- Hit rate: 49.25%
+- Total stake: 80.75
+- Total profit: 3.09
+- ROI: 3.83%
 
 ## Settled picks
 
 | Date | Time | Result | W-L | ROI | Pick | Opponent | Odds | Stake | Profit | Total Profit | Level | Surface | TLE Prob | TLE Edge | Conf | Score |
 |---|---:|---|---:|---:|---|---|---:|---:|---:|---:|---|---|---:|---:|---|---|
+| 2026-06-23 | 17:30 | win | 33-34 | 3.83% | L. Darderi | Y. Hanfmann | 2.08 | 1.00 | 1.08 | 3.09 | atp_wta | clay | 55.82% | 7.69% | normal | 2 - 0 |
+| 2026-06-23 | 17:30 | win | 32-34 | 2.53% | E. Svitolina | L. Samsonova | 1.40 | 1.00 | 0.40 | 2.02 | atp_wta | grass | 77.83% | 6.19% | normal | 1 - 2 |
+| 2026-06-23 | 16:30 | loss | 31-34 | 2.06% | L. Radivojevic | M. Bassols | 1.97 | 1.00 | -1.00 | 1.62 | qualifying | grass | 56.70% | 5.89% | normal | 1 - 2 |
+| 2026-06-23 | 15:00 | loss | 31-33 | 3.37% | L. Samson | K. Volynets | 3.25 | 1.25 | -1.25 | 2.62 | qualifying | grass | 60.41% | 29.60% | strong | 2 - 0 |
+| 2026-06-23 | 15:00 | win | 31-32 | 5.06% | I. Buse | S. Tsitsipas | 2.26 | 1.25 | 1.57 | 3.87 | atp_wta | clay | 53.79% | 9.48% | strong | 0 - 2 |
+| 2026-06-23 | 15:00 | win | 30-32 | 3.05% | Z. Sonmez | H. Dart | 1.42 | 1.00 | 0.41 | 2.30 | atp_wta | grass | 77.44% | 6.77% | normal | 2 - 1 |
+| 2026-06-23 | 13:30 | loss | 29-32 | 2.54% | P. Hon | N. Hibino | 1.72 | 1.00 | -1.00 | 1.88 | qualifying | grass | 64.00% | 5.92% | normal | 0 - 2 |
+| 2026-06-23 | 13:30 | loss | 29-31 | 3.94% | M. Inglis | L. Bronzetti | 1.76 | 1.25 | -1.25 | 2.88 | qualifying | grass | 67.03% | 10.12% | strong | 1 - 2 |
+| 2026-06-23 | 13:30 | win | 29-30 | 5.74% | E. Jones | L. Fruhvirtova | 1.94 | 1.25 | 1.17 | 4.13 | qualifying | grass | 65.99% | 14.39% | strong | 0 - 2 |
+| 2026-06-23 | 13:30 | loss | 28-30 | 4.18% | S. Bandecchi | K. Kawa | 2.10 | 1.00 | -1.00 | 2.96 | qualifying | grass | 53.74% | 6.04% | normal | 2 - 0 |
+| 2026-06-23 | 13:30 | win | 28-29 | 5.68% | F. Jorge | D. Galfi | 4.48 | 1.25 | 4.35 | 3.96 | qualifying | grass | 60.44% | 38.12% | strong | 0 - 2 |
+| 2026-06-23 | 13:30 | win | 27-29 | -0.57% | Y. Chainykova | M. Villet | 2.87 | 1.25 | 2.34 | -0.39 | itf | hard | 54.22% | 19.43% | strong | 2 - 1 |
+| 2026-06-23 | 13:30 | loss | 26-29 | -4.06% | J-L. Struff | N. Borges | 2.33 | 1.00 | -1.00 | -2.73 | atp_wta | clay | 50.51% | 7.67% | normal | 0 - 2 |
+| 2026-06-23 | 13:30 | void | 26-28 | -2.61% | P. Udvardy | A. Bondar | 2.30 | 1.25 | 0.00 | -1.73 | atp_wta | grass | 52.88% | 9.34% | strong | 1 - 0 |
+| 2026-06-23 | 13:00 | win | 26-28 | -2.67% | H. Shaikh | G. Garcia-Perez | 1.49 | 1.25 | 0.61 | -1.73 | itf | unknown | 77.38% | 10.15% | strong | 2 - 0 |
+| 2026-06-23 | 12:00 | loss | 25-28 | -3.67% | L. Klimovicova | L. Sun | 2.70 | 1.25 | -1.25 | -2.34 | qualifying | grass | 60.68% | 23.66% | strong | 2 - 0 |
+| 2026-06-23 | 12:00 | win | 25-27 | -1.75% | J. Garland | C. Naef | 3.13 | 1.25 | 2.66 | -1.09 | qualifying | grass | 55.01% | 23.06% | strong | 1 - 2 |
+| 2026-06-23 | 12:00 | win | 24-27 | -6.13% | V. Kopriva | D. Dzumhur | 1.81 | 1.00 | 0.81 | -3.75 | atp_wta | clay | 59.93% | 4.81% | normal | 0 - 2 |
+| 2026-06-23 | 12:00 | void | 23-27 | -7.58% | T. A. Tirante | J. Fearnley | 2.74 | 1.25 | 0.00 | -4.57 | atp_wta | grass | 52.84% | 16.36% | strong | - |
+| 2026-06-23 | 12:00 | loss | 23-27 | -7.74% | J. Paolini | T. Maria | 1.88 | 1.25 | -1.25 | -4.57 | atp_wta | grass | 61.77% | 8.50% | strong | 0 - 2 |
+| 2026-06-23 | 11:30 | loss | 23-26 | -5.75% | I. Simakin | M. Topo | 2.32 | 1.00 | -1.00 | -3.32 | challenger | clay | 50.10% | 6.98% | normal | 1 - 2 |
+| 2026-06-23 | 11:30 | loss | 23-25 | -4.09% | A. Li | E. Alexandrova | 2.23 | 1.00 | -1.00 | -2.32 | atp_wta | grass | 50.29% | 5.40% | normal | 1 - 2 |
+| 2026-06-23 | 10:30 | loss | 23-24 | -2.36% | S. Mikaca | L. Sevcikova | 1.84 | 1.25 | -1.25 | -1.32 | itf | clay | 67.73% | 13.48% | strong | 2 - 1 |
+| 2026-06-23 | 10:30 | loss | 23-23 | -0.13% | T. Gadamauri | A. Firman | 1.86 | 1.00 | -1.00 | -0.07 | itf | clay | 59.80% | 6.00% | normal | 1 - 2 |
+| 2026-06-23 | 10:30 | win | 23-22 | 1.74% | M. Hopp | N. Barsukov | 1.94 | 1.25 | 1.17 | 0.93 | itf | clay | 61.43% | 9.80% | strong | 2 - 0 |
+| 2026-06-23 | 10:00 | loss | 22-22 | -0.46% | N. Jadoun | D. Sakellaridis | 2.29 | 1.25 | -1.25 | -0.24 | itf | unknown | 54.63% | 10.99% | strong | 1 - 2 |
 | 2026-06-22 | 23:30 | win | 22-21 | 1.98% | H. Casanova | E. Ribeiro | 2.09 | 1.00 | 1.09 | 1.01 | challenger | clay | 52.03% | 4.16% | normal | 2 - 0 |
 | 2026-06-22 | 17:30 | loss | 21-21 | -0.16% | A. Eala | E. Mertens | 2.05 | 1.00 | -1.00 | -0.08 | atp_wta | grass | 54.39% | 5.63% | normal | 0 - 2 |
 | 2026-06-22 | 17:00 | loss | 21-20 | 1.88% | J. Munar | Z. Bergs | 2.17 | 1.00 | -1.00 | 0.92 | atp_wta | grass | 50.83% | 4.82% | normal | 2 - 0 |
