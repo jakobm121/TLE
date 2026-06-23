@@ -1,79 +1,17 @@
 api_player_key,raw_api_player_key,api_name,api_name_source,gender,mapping_status,today_match_count,opponent_name,opponents_today,tournament,event_names,event_type,event_type_types,reason
 women:api:104273,104273,A. Colic,api_cache_short_name,women,missing_mapping_entry,1,G. Djurickovic,G. Djurickovic,W15 Kursumlijska Banja 6,W15 Kursumlijska Banja 6,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-women:api:92058,92058,A. Donnell,api_cache_short_name,women,missing_mapping_entry,1,Eva Lopez,Eva Lopez,W15 Monastir 19,W15 Monastir 19,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-men:api:10859,10859,Alessio Basile,api_cache_full_name,men,missing_mapping_entry,1,Robert Strombachs,Robert Strombachs,M25 Brussels,M25 Brussels,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
-women:api:21360,21360,Amelie Van Impe,api_cache_full_name,women,missing_mapping_entry,1,Anastasiya Kuparev,Anastasiya Kuparev,W15 Alkmaar,W15 Alkmaar,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-women:api:218,218,Anna Siskova,api_cache_full_name,women,missing_mapping_entry,1,Darja Semenistaja,Darja Semenistaja,Wimbledon,Wimbledon,Wta Singles,Wta Singles,no_sackmann_candidate
-women:api:508,508,Arantxa Rus,api_cache_full_name,women,missing_mapping_entry,1,Veronika Podrez,Veronika Podrez,Wimbledon,Wimbledon,Wta Singles,Wta Singles,no_sackmann_candidate
-men:api:1759,1759,Arthur Fils,api_cache_full_name,men,missing_mapping_entry,1,Jakub Mensik,Jakub Mensik,Exhibition Boodles Challenge,Exhibition Boodles Challenge,Exhibition Men,Exhibition Men,no_sackmann_candidate
-men:api:2216,2216,Arvid Nordquist,api_cache_full_name,men,missing_mapping_entry,1,Xiaoyin Yang,Xiaoyin Yang,M15 Wuning 3,M15 Wuning 3,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
-women:api:85028,85028,C. Hermanns,api_cache_short_name,women,missing_mapping_entry,1,Ksenia Laskutova,Ksenia Laskutova,W15 Kayseri 6,W15 Kayseri 6,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
 women:api:27382,27382,C. Romero,api_cache_short_name,women,missing_mapping_entry,1,Isabella Barrera Aguirre,Isabella Barrera Aguirre,W15 Asuncion,W15 Asuncion,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
 women:api:95478,95478,C. Y. Chen,api_cache_short_name,women,unmapped,1,Yi Tsao Chia,Yi Tsao Chia,W35 Taipei 2,W35 Taipei 2,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-women:api:39110,39110,Carmen Zamburek Ana,api_cache_full_name,women,missing_mapping_entry,1,Fernanda Herazo Gonzalez Maria,Fernanda Herazo Gonzalez Maria,W15 Asuncion,W15 Asuncion,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-women:api:32551,32551,Christasha McNeil,api_cache_full_name,women,missing_mapping_entry,1,Bella Payne,Bella Payne,W35 Rome,W35 Rome,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
 men:api:27347,27347,Darrshan Suresh,api_cache_full_name,men,missing_mapping_entry,1,Oscar Weightman,Oscar Weightman,M25 Bakio,M25 Bakio,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
-men:api:13796,13796,Dorian Tremblay,api_cache_full_name,men,missing_mapping_entry,1,N. Oliynykov,N. Oliynykov,M25 Zagreb (Croatia),M25 Zagreb (Croatia),Itf Men Singles,Itf Men Singles,no_sackmann_candidate
-men:api:39929,39929,Elgin Khoeblal,api_cache_full_name,men,missing_mapping_entry,1,Abel Forger,Abel Forger,M15 Alkmaar,M15 Alkmaar,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
-men:api:39675,39675,Elmer Moller,api_cache_full_name,men,missing_mapping_entry,1,Luca Potenza,Luca Potenza,Targu Mures,Targu Mures,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
-women:api:13500,13500,Elza Tomase,api_cache_full_name,women,missing_mapping_entry,1,Mina Hodzic,Mina Hodzic,W50 Gdansk (Poland),W50 Gdansk (Poland),Itf Women Singles,Itf Women Singles,no_sackmann_candidate
 men:api:63483,63483,Enzo Kohlmann,api_cache_full_name,men,unmapped,1,Manuel La Serna Juan,Manuel La Serna Juan,Piracicaba,Piracicaba,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
 men:api:104378,104378,F. Bullamah,api_cache_short_name,men,missing_mapping_entry,1,Wilson Leite,Wilson Leite,Piracicaba,Piracicaba,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
 men:api:104271,104271,F. Czyrek,api_cache_short_name,men,missing_mapping_entry,1,Kacper Szymkowiak,Kacper Szymkowiak,M15 Rzeszow (Poland),M15 Rzeszow (Poland),Itf Men Singles,Itf Men Singles,no_sackmann_candidate
-women:api:15370,15370,Federica Trevisan,api_cache_full_name,women,missing_mapping_entry,1,V. Proietti,V. Proietti,W35 Tarvisio,W35 Tarvisio,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-women:api:102543,102543,G. Djurickovic,api_cache_short_name,women,missing_mapping_entry,1,A. Colic,A. Colic,W15 Kursumlijska Banja 6,W15 Kursumlijska Banja 6,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-women:api:84311,84311,Gabriela Kawano Cho,api_cache_full_name,women,missing_mapping_entry,1,Mia Wainwright,Mia Wainwright,W15 Monastir 19,W15 Monastir 19,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-women:api:78523,78523,Gabriella Mikaul,api_cache_full_name,women,missing_mapping_entry,1,A. J. Lopez Ocampos,A. J. Lopez Ocampos,W15 Asuncion,W15 Asuncion,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
 women:api:13991,13991,Garbiela Vasilescu Arina,api_cache_full_name,women,unmapped,1,S. Triquart,S. Triquart,W15 Kamen,W15 Kamen,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-men:api:77249,77249,Garcia Carbajal Alejandro,api_cache_full_name,men,missing_mapping_entry,1,Sergi Perez Contri,Sergi Perez Contri,M25 Bakio,M25 Bakio,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
 women:api:1807,1807,Georgiana Serban Raluca,api_cache_full_name,women,unmapped,1,Victoria Bosio,Victoria Bosio,W50 Gdansk (Poland),W50 Gdansk (Poland),Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-women:api:31159,31159,H. Shi,api_cache_short_name,women,missing_mapping_entry,1,Vaishnavi Adkar,Vaishnavi Adkar,W50 Palma del Rio,W50 Palma del Rio,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-men:api:1337,1337,Hazem Naw,api_cache_full_name,men,missing_mapping_entry,1,Adrian Oetzbach,Adrian Oetzbach,M15 Kamen,M15 Kamen,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
-women:api:22590,22590,Helena Bueno,api_cache_full_name,women,missing_mapping_entry,1,C. Delmas Schaerer,C. Delmas Schaerer,W15 Asuncion,W15 Asuncion,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-men:api:104370,104370,I. Pedersen Lozano,api_cache_short_name,men,missing_mapping_entry,1,Iker Urribarrens Ramirez,Iker Urribarrens Ramirez,M25 Bakio,M25 Bakio,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
-women:api:76640,76640,J. Marcos Cattoni,api_cache_short_name,women,missing_mapping_entry,1,Julia Konishi Camargo Silva,Julia Konishi Camargo Silva,W15 Asuncion,W15 Asuncion,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-men:api:85494,85494,J. Soetebier,api_cache_short_name,men,missing_mapping_entry,1,Michael Agwi,Michael Agwi,M15 Kamen,M15 Kamen,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
-men:api:53618,53618,J. Torres Espinosa,api_cache_short_name,men,missing_mapping_entry,1,Alejandro Arcila,Alejandro Arcila,M25 Bakio,M25 Bakio,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
 women:api:104151,104151,J. Zhou,api_cache_short_name,women,unmapped,1,Ma RuoXi,Ma RuoXi,W15 Maanshan 3,W15 Maanshan 3,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-women:api:472,472,Jessika Ponchet,api_cache_full_name,women,missing_mapping_entry,1,Polina Kudermetova,Polina Kudermetova,Wimbledon,Wimbledon,Wta Singles,Wta Singles,no_sackmann_candidate
-women:api:54718,54718,Joy De Zeeuw,api_cache_full_name,women,missing_mapping_entry,1,Louise Van den Broek Isis,Louise Van den Broek Isis,W15 Alkmaar,W15 Alkmaar,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-women:api:21,21,Judith Visscher Stephanie,api_cache_full_name,women,missing_mapping_entry,1,Elena Micic,Elena Micic,W50 Palma del Rio,W50 Palma del Rio,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-women:api:62135,62135,Julia Caffarena,api_cache_full_name,women,missing_mapping_entry,1,Ana Candiotto,Ana Candiotto,W15 Asuncion,W15 Asuncion,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-women:api:76626,76626,Julia Khramtsova,api_cache_full_name,women,missing_mapping_entry,1,Esina Samardzic Ayline,Esina Samardzic Ayline,W15 Kayseri 6,W15 Kayseri 6,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-women:api:53141,53141,K. Chung,api_cache_short_name,women,missing_mapping_entry,1,Andy Nguyen,Andy Nguyen,W15 Claremont,W15 Claremont,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
 women:api:104272,104272,L. Barendse,api_cache_short_name,women,missing_mapping_entry,1,Camilla Zanolini,Camilla Zanolini,W15 Alkmaar,W15 Alkmaar,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
 men:api:104263,104263,L. Mouffe,api_cache_short_name,men,missing_mapping_entry,1,Hans Rehberg Max,Hans Rehberg Max,M25 Brussels,M25 Brussels,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
-men:api:15241,15241,Liam Hignett,api_cache_full_name,men,missing_mapping_entry,1,Roberto Perez Socas,Roberto Perez Socas,M25 Bakio,M25 Bakio,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
-women:api:13212,13212,Lian Tran,api_cache_full_name,women,missing_mapping_entry,1,Lena Ebster Anna,Lena Ebster Anna,W15 Alkmaar,W15 Alkmaar,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-women:api:462,462,Lily Miyazaki Yuriko,api_cache_full_name,women,unmapped,1,Elizara Yaneva,Elizara Yaneva,Wimbledon,Wimbledon,Wta Singles,Wta Singles,no_sackmann_candidate
-men:api:5784,5784,Louis Allen,api_cache_full_name,men,missing_mapping_entry,1,Isaac Becroft,Isaac Becroft,M15 Monastir 24,M15 Monastir 24,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
-women:api:88186,88186,M. Lo Pumo,api_cache_short_name,women,missing_mapping_entry,1,Marente Sijbesma,Marente Sijbesma,W15 Alkmaar,W15 Alkmaar,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-women:api:85502,85502,Ma RuoXi,api_cache_full_name,women,missing_mapping_entry,1,J. Zhou,J. Zhou,W15 Maanshan 3,W15 Maanshan 3,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-women:api:62374,62374,Madhurima Sawant,api_cache_full_name,women,missing_mapping_entry,1,Marta Soriano Santiago,Marta Soriano Santiago,W15 Galati,W15 Galati,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-women:api:39006,39006,Marente Sijbesma,api_cache_full_name,women,missing_mapping_entry,1,M. Lo Pumo,M. Lo Pumo,W15 Alkmaar,W15 Alkmaar,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-women:api:40229,40229,Mary Lewis,api_cache_full_name,women,missing_mapping_entry,1,Savannah Broadus,Savannah Broadus,W35 Rome,W35 Rome,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-women:api:9395,9395,Matilde Paoletti,api_cache_full_name,women,missing_mapping_entry,1,Lucija Ciric Bagaric,Lucija Ciric Bagaric,W35 Tarvisio,W35 Tarvisio,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-men:api:38006,38006,Michael Agwi,api_cache_full_name,men,missing_mapping_entry,1,J. Soetebier,J. Soetebier,M15 Kamen,M15 Kamen,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
-men:api:936,936,Michael Gloeckler,api_cache_full_name,men,missing_mapping_entry,1,Jeff Planinsek Filip,Jeff Planinsek Filip,M15 Slovenska Bistrica,M15 Slovenska Bistrica,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
-women:api:69530,69530,N. Weng,api_cache_short_name,women,missing_mapping_entry,1,Anne-Christine Lutkemeyer,Anne-Christine Lutkemeyer,W15 Claremont,W15 Claremont,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-women:api:523,523,Oceane Dodin,api_cache_full_name,women,missing_mapping_entry,1,Laura Pigossi,Laura Pigossi,Wimbledon,Wimbledon,Wta Singles,Wta Singles,no_sackmann_candidate
-men:api:88946,88946,P. Moise,api_cache_short_name,men,missing_mapping_entry,1,Vincent Marysko,Vincent Marysko,M15 Kamen,M15 Kamen,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
-women:api:23289,23289,P. Ortega Redondo,api_cache_short_name,women,missing_mapping_entry,1,Celia Cervino Ruiz,Celia Cervino Ruiz,W50 Palma del Rio,W50 Palma del Rio,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-men:api:72520,72520,P. Roche Alcaya,api_cache_short_name,men,missing_mapping_entry,1,Emile Hudd,Emile Hudd,M25 Bakio,M25 Bakio,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
-women:api:74126,74126,Paulina Montiel,api_cache_full_name,women,missing_mapping_entry,1,Sophie Suh,Sophie Suh,W15 Claremont,W15 Claremont,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-women:api:2819,2819,Polona Hercog,api_cache_full_name,women,missing_mapping_entry,1,Bianca Andreescu,Bianca Andreescu,Wimbledon,Wimbledon,Wta Singles,Wta Singles,no_sackmann_candidate
 men:api:17461,17461,R. I. Orgiles G.,api_cache_short_name,men,unmapped,1,Edward Winter,Edward Winter,M25 Bakio,M25 Bakio,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
-men:api:89618,89618,Remy Dugardin,api_cache_full_name,men,missing_mapping_entry,1,Tim Handel,Tim Handel,M25 Brussels,M25 Brussels,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
-men:api:93178,93178,Roberto Perez Socas,api_cache_full_name,men,missing_mapping_entry,1,Liam Hignett,Liam Hignett,M25 Bakio,M25 Bakio,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
-women:api:24284,24284,Rosa Dourado Zimermman Jennifer,api_cache_full_name,women,unmapped,1,Antonia Vergara Rivera,Antonia Vergara Rivera,W15 Asuncion,W15 Asuncion,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-men:api:89404,89404,S. Guinau,api_cache_short_name,men,missing_mapping_entry,1,Sander Jong,Sander Jong,M15 Alkmaar,M15 Alkmaar,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
-women:api:91509,91509,S. Triquart,api_cache_short_name,women,missing_mapping_entry,1,Garbiela Vasilescu Arina,Garbiela Vasilescu Arina,W15 Kamen,W15 Kamen,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-women:api:1413,1413,Sina Herrmann,api_cache_full_name,women,missing_mapping_entry,1,Carolin Raschdorf,Carolin Raschdorf,W15 Kamen,W15 Kamen,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-men:api:56578,56578,Stijn Paardekooper,api_cache_full_name,men,missing_mapping_entry,1,Mac Visser,Mac Visser,M15 Alkmaar,M15 Alkmaar,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
 women:api:104244,104244,V. Proietti,api_cache_short_name,women,missing_mapping_entry,1,Federica Trevisan,Federica Trevisan,W35 Tarvisio,W35 Tarvisio,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-women:api:50044,50044,Valentina Mediorreal Arias,api_cache_full_name,women,missing_mapping_entry,1,Chiara Di Genova,Chiara Di Genova,W15 Asuncion,W15 Asuncion,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-men:api:703,703,Valerio Aboian,api_cache_full_name,men,missing_mapping_entry,1,Valentin Basel,Valentin Basel,Piracicaba,Piracicaba,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
-women:api:70675,70675,Vlada Kozak,api_cache_full_name,women,missing_mapping_entry,1,Mia Horvit,Mia Horvit,W15 Kursumlijska Banja 6,W15 Kursumlijska Banja 6,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
 women:api:104385,104385,Y. Chiang,api_cache_short_name,women,unmapped,1,Aunchisa Chanta,Aunchisa Chanta,W35 Taipei 2,W35 Taipei 2,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-women:api:67675,67675,Ying Ruan Zi,api_cache_full_name,women,missing_mapping_entry,1,Ksenia Zaytseva,Ksenia Zaytseva,W15 Kursumlijska Banja 6,W15 Kursumlijska Banja 6,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
 women:api:38969,38969,Youngsuh Lee Carol,api_cache_full_name,women,unmapped,1,Sarah Rakotomanga Rajaonah Tiantsoa,Sarah Rakotomanga Rajaonah Tiantsoa,Wimbledon,Wimbledon,Wta Singles,Wta Singles,no_sackmann_candidate
