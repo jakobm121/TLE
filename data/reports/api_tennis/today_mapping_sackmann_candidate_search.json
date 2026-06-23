@@ -1,20 +1,21 @@
 {
   "counters": {
-    "manual_review": 2,
-    "no_candidate": 2,
-    "review_likely": 2,
-    "review_players": 18,
-    "safe_override": 11,
-    "very_weak_candidate": 1
+    "manual_review": 5,
+    "no_candidate": 12,
+    "review_likely": 3,
+    "review_players": 82,
+    "safe_override": 59,
+    "very_weak_candidate": 2,
+    "weak_candidate": 1
   },
-  "generated_at": "2026-06-22T17:00:33+00:00",
+  "generated_at": "2026-06-23T06:28:17+00:00",
   "outputs": {
     "csv": "data/reports/api_tennis/today_mapping_sackmann_candidate_search.csv",
     "json": "data/reports/api_tennis/today_mapping_sackmann_candidate_search.json",
     "suggested_overrides_json": "data/reports/api_tennis/today_mapping_suggested_overrides.json"
   },
-  "players_in_review": 18,
-  "rows_written": 26,
+  "players_in_review": 82,
+  "rows_written": 97,
   "sackmann_index": {
     "by_gender": {
       "men": 5265,
@@ -35,7 +36,7 @@
   "sackmann_manifest": "data/source/sackmann/manifest.json",
   "safety_note": "This script only suggests candidates/overrides. It does not modify player_mapping.json or player_mapping_overrides.json.",
   "status": "ok",
-  "suggested_overrides": 13,
+  "suggested_overrides": 62,
   "today_no_candidates": "data/reports/api_tennis/today_mapping_no_candidates.csv",
   "today_review": "data/reports/api_tennis/today_mapping_review.csv"
 }
