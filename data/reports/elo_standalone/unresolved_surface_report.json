@@ -1,6 +1,91 @@
 {
-  "count": 0,
-  "generated_at": "2026-06-23T07:22:19+00:00",
-  "items": [],
+  "count": 5,
+  "generated_at": "2026-06-24T07:00:58+00:00",
+  "items": [
+    {
+      "context_text": "wta singles bad homburg wta bad homburg   1/8 finals 4228",
+      "gender": "women",
+      "level": "atp_wta",
+      "matches": [
+        "Q. Zheng - C. Tauson",
+        "E. Alexandrova - M. Andreeva",
+        "A. Kalinskaya - G. Ruse",
+        "I. Swiatek - E. Navarro"
+      ],
+      "raw_event_type_type": "Wta Singles",
+      "raw_tournament_name": "Bad Homburg",
+      "raw_tournament_round": "WTA Bad Homburg - 1/8-finals",
+      "suggested_map_key": "wta singles bad homburg wta bad homburg 1/8 finals 4228"
+    },
+    {
+      "context_text": "wta singles eastbourne wta eastbourne   1/8 finals 1358",
+      "gender": "women",
+      "level": "atp_wta",
+      "matches": [
+        "T. Valentova - A. Tomljanovic",
+        "M. Kessler - A. Kalinina",
+        "Z. Sonmez - S. Bejlek",
+        "J. Ostapenko - P. Udvardy",
+        "C. McNally - E. Arango",
+        "T. Maria - A. Zakharova",
+        "J. Bouzas Maneiro - M. Keys",
+        "P. Marcinko - K. Birrell"
+      ],
+      "raw_event_type_type": "Wta Singles",
+      "raw_tournament_name": "Eastbourne",
+      "raw_tournament_round": "WTA Eastbourne - 1/8-finals",
+      "suggested_map_key": "wta singles eastbourne wta eastbourne 1/8 finals 1358"
+    },
+    {
+      "context_text": "atp singles eastbourne atp eastbourne   1/8 finals 2052",
+      "gender": "men",
+      "level": "atp_wta",
+      "matches": [
+        "J. Draper - J. Pinnington Jones",
+        "G. Diallo - T. M. Etcheverry",
+        "T. Samuel - T. A. Tirante",
+        "A. Fery - J. M. Cerundolo",
+        "D. Altmaier - Z. Bergs",
+        "U. Humbert - J. Brooksby"
+      ],
+      "raw_event_type_type": "Atp Singles",
+      "raw_tournament_name": "Eastbourne",
+      "raw_tournament_round": "ATP Eastbourne - 1/8-finals",
+      "suggested_map_key": "atp singles eastbourne atp eastbourne 1/8 finals 2052"
+    },
+    {
+      "context_text": "atp singles mallorca atp mallorca   1/8 finals 3681",
+      "gender": "men",
+      "level": "atp_wta",
+      "matches": [
+        "M. Cassone - E. Quinn",
+        "A. Walton - A. Davidovich Fokina",
+        "V. Kopriva - I. Buse"
+      ],
+      "raw_event_type_type": "Atp Singles",
+      "raw_tournament_name": "Mallorca",
+      "raw_tournament_round": "ATP Mallorca - 1/8-finals",
+      "suggested_map_key": "atp singles mallorca atp mallorca 1/8 finals 3681"
+    },
+    {
+      "context_text": "challenger men singles targu mures targu mures   1/8 finals 12993",
+      "gender": "men",
+      "level": "challenger",
+      "matches": [
+        "S. Gueymard Wayenburg - M. Alcala Gurri",
+        "A. Guillen Meza - C. Cretu",
+        "M. Topo - M. Krumich",
+        "N. McDonald - F. Passaro",
+        "D. Ajdukovic - F. Agamenone",
+        "B. Hassan - S. Nagal",
+        "E. Moller - F. Balshaw",
+        "A. Nedic - S. Gima"
+      ],
+      "raw_event_type_type": "Challenger Men Singles",
+      "raw_tournament_name": "Targu Mures",
+      "raw_tournament_round": "Targu Mures - 1/8-finals",
+      "suggested_map_key": "challenger men singles targu mures targu mures 1/8 finals 12993"
+    }
+  ],
   "note": "Add suggested_map_key: hard/clay/grass/carpet to data/metadata/tournament_surface_map.json if API tournaments metadata does not cover these events."
 }
