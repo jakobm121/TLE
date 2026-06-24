@@ -1,7 +1,7 @@
 {
-  "active_after": 1,
-  "active_before": 27,
-  "generated_at": "2026-06-23T21:37:14+00:00",
+  "active_after": 2,
+  "active_before": 31,
+  "generated_at": "2026-06-24T21:21:22+00:00",
   "notes": [
     "Standalone settle uses API-Tennis get_fixtures and matches by event_key.",
     "Settled picks are removed from predictions.json.",
@@ -16,26 +16,26 @@
     "results_md": "data/elo_standalone/results.md"
   },
   "roi_summary": {
-    "hit_rate": 0.492537,
-    "losses": 34,
-    "pending": 1,
-    "roi": 0.038298,
-    "settled": 70,
-    "total_profit": 3.092525,
-    "total_stake": 80.75,
-    "total_tracked": 77,
-    "w_l": "33-34",
-    "wins": 33
+    "hit_rate": 0.4375,
+    "losses": 54,
+    "pending": 2,
+    "roi": -0.081309,
+    "settled": 99,
+    "total_profit": -9.411475,
+    "total_stake": 115.75,
+    "total_tracked": 110,
+    "w_l": "42-54",
+    "wins": 42
   },
   "settle_counts": {
     "dates_fetched": 8,
     "fixture_not_found": 1,
-    "fixtures_fetched": 2772,
-    "settled_loss": 13,
-    "settled_void": 2,
-    "settled_win": 11
+    "fixtures_fetched": 2817,
+    "settled_loss": 20,
+    "settled_win": 9,
+    "unknown": 1
   },
-  "settled_this_run": 26,
+  "settled_this_run": 29,
   "source": "API-Tennis get_fixtures",
   "status": "ok"
 }

@@ -1,16 +1,45 @@
 # Standalone Elo Results
 
-- Settled: 70
-- W-L: 33-34
-- Hit rate: 49.25%
-- Total stake: 80.75
-- Total profit: 3.09
-- ROI: 3.83%
+- Settled: 99
+- W-L: 42-54
+- Hit rate: 43.75%
+- Total stake: 115.75
+- Total profit: -9.41
+- ROI: -8.13%
 
 ## Settled picks
 
 | Date | Time | Result | W-L | ROI | Pick | Opponent | Odds | Stake | Profit | Total Profit | Level | Surface | TLE Prob | TLE Edge | Conf | Score |
 |---|---:|---|---:|---:|---|---|---:|---:|---:|---:|---|---|---:|---:|---|---|
+| 2026-06-24 | 16:30 | loss | 42-54 | -8.13% | T. Rakotomanga Rajaonah | L. Zhu | 3.31 | 1.25 | -1.25 | -9.41 | qualifying | grass | 58.51% | 28.34% | strong | 0 - 2 |
+| 2026-06-24 | 16:30 | loss | 42-53 | -7.13% | J. Teichmann | B. Andreescu | 2.48 | 1.25 | -1.25 | -8.16 | qualifying | grass | 58.55% | 18.30% | strong | 2 - 1 |
+| 2026-06-24 | 16:30 | loss | 42-52 | -6.10% | S. Hunter | A. Sasnovich | 2.26 | 1.25 | -1.25 | -6.91 | qualifying | grass | 54.10% | 9.89% | strong | 2 - 1 |
+| 2026-06-24 | 16:30 | loss | 42-51 | -5.05% | T. M. Etcheverry | G. Diallo | 2.31 | 1.25 | -1.25 | -5.66 | atp_wta | grass | 56.46% | 13.20% | strong | 2 - 1 |
+| 2026-06-24 | 15:00 | win | 42-50 | -3.98% | V. Gaubas | H. Searle | 3.43 | 1.25 | 3.03 | -4.41 | qualifying | grass | 53.73% | 24.55% | strong | 2 - 0 |
+| 2026-06-24 | 15:00 | loss | 41-50 | -6.80% | A. Pellegrino | T. Boyer | 2.51 | 1.25 | -1.25 | -7.44 | qualifying | grass | 60.28% | 20.48% | strong | 2 - 0 |
+| 2026-06-24 | 15:00 | loss | 41-49 | -5.72% | A. Gea | S. Kwon | 1.98 | 1.00 | -1.00 | -6.19 | qualifying | grass | 55.71% | 5.23% | normal | 2 - 1 |
+| 2026-06-24 | 15:00 | win | 41-48 | -4.84% | D. Semenistaja | N. Hibino | 1.87 | 1.25 | 1.08 | -5.19 | qualifying | grass | 61.91% | 8.33% | strong | 2 - 1 |
+| 2026-06-24 | 14:30 | loss | 40-48 | -5.92% | I. Burillo Escorihuela | B. Zeltina | 1.98 | 1.25 | -1.25 | -6.28 | itf | clay | 58.76% | 8.35% | strong | 2 - 0 |
+| 2026-06-24 | 13:30 | loss | 40-47 | -4.80% | K. Coppejans | R. Safiullin | 4.37 | 1.25 | -1.25 | -5.03 | qualifying | grass | 55.36% | 32.46% | strong | 2 - 0 |
+| 2026-06-24 | 13:30 | loss | 40-46 | -3.65% | K. Quevedo | C. Liu | 2.03 | 1.25 | -1.25 | -3.78 | qualifying | grass | 62.97% | 13.69% | strong | 0 - 2 |
+| 2026-06-24 | 13:30 | win | 40-45 | -2.47% | E. Pridankina | S. Lamens | 2.03 | 1.00 | 1.03 | -2.53 | qualifying | grass | 54.31% | 5.11% | normal | 2 - 1 |
+| 2026-06-24 | 13:30 | loss | 39-45 | -3.52% | A. Lazaro Garcia | A. Korneeva | 2.79 | 1.25 | -1.25 | -3.56 | qualifying | grass | 53.88% | 18.07% | strong | 2 - 1 |
+| 2026-06-24 | 13:30 | loss | 39-44 | -2.31% | L. Branger | A. Frusina | 1.77 | 1.25 | -1.25 | -2.31 | itf | hard | 66.91% | 10.41% | strong | 2 - 0 |
+| 2026-06-24 | 13:30 | loss | 39-43 | -1.07% | N. Bruna | V. Jankanj | 2.92 | 1.25 | -1.25 | -1.06 | itf | clay | 53.12% | 18.85% | strong | 2 - 0 |
+| 2026-06-24 | 13:00 | win | 39-42 | 0.19% | J. Domingues | M. McKennon | 1.59 | 1.00 | 0.59 | 0.19 | itf | hard | 70.97% | 7.99% | normal | 2 - 1 |
+| 2026-06-24 | 13:00 | loss | 38-42 | -0.41% | K. Singh | F. Rocha | 2.37 | 1.25 | -1.25 | -0.40 | itf | hard | 71.98% | 29.81% | strong | 2 - 0 |
+| 2026-06-24 | 12:30 | win | 38-41 | 0.89% | F. Gettwart | L. Claeys | 2.19 | 1.25 | 1.49 | 0.85 | itf | clay | 54.59% | 8.98% | strong | 0 - 2 |
+| 2026-06-24 | 12:30 | win | 37-41 | -0.68% | T. Compagnucci | T. Berkieta | 1.54 | 1.25 | 0.68 | -0.64 | qualifying | clay | 73.75% | 8.81% | strong | 0 - 2 |
+| 2026-06-24 | 12:30 | loss | 36-41 | -1.42% | Q. Zheng | C. Tauson | 1.74 | 1.00 | -1.00 | -1.31 | atp_wta | grass | 64.76% | 7.43% | normal | 1 - 2 |
+| 2026-06-24 | 12:00 | loss | 36-40 | -0.34% | Z. Piros | B. Harris | 2.39 | 1.25 | -1.25 | -0.31 | qualifying | grass | 62.48% | 20.72% | strong | 0 - 2 |
+| 2026-06-24 | 12:00 | win | 36-39 | 1.03% | R. Bertola | J. Rodionov | 2.58 | 1.25 | 1.97 | 0.94 | qualifying | grass | 57.97% | 19.16% | strong | 2 - 1 |
+| 2026-06-24 | 12:00 | loss | 35-39 | -1.16% | G. Onclin | S. Mochizuki | 1.97 | 1.25 | -1.25 | -1.03 | qualifying | grass | 61.18% | 10.30% | strong | 1 - 2 |
+| 2026-06-24 | 12:00 | loss | 35-38 | 0.25% | D. Evans | T. Schoolkate | 2.45 | 1.25 | -1.25 | 0.22 | qualifying | grass | 53.33% | 12.50% | strong | 0 - 2 |
+| 2026-06-24 | 11:30 | win | 35-37 | 1.69% | M. Krumich | M. Topo | 1.69 | 1.00 | 0.69 | 1.47 | challenger | clay | 64.05% | 4.87% | normal | 0 - 2 |
+| 2026-06-24 | 11:00 | loss | 34-37 | 0.90% | D. Klok | L. Rottoli | 1.74 | 1.25 | -1.25 | 0.78 | itf | unknown | 70.09% | 12.62% | strong | 2 - 0 |
+| 2026-06-24 | 11:00 | loss | 34-36 | 2.40% | M. Kumar | M. Mikovic | 3.50 | 1.25 | -1.25 | 2.03 | itf | clay | 53.09% | 24.49% | strong | 0 - 2 |
+| 2026-06-24 | 10:00 | loss | 34-35 | 3.94% | D. Petrovic | M. Dimic | 1.95 | 1.25 | -1.25 | 3.28 | itf | clay | 65.37% | 14.16% | strong | 2 - 1 |
+| 2026-06-24 | 10:00 | win | 34-34 | 5.52% | A. Caruso | S. Mencaglia | 2.15 | 1.25 | 1.43 | 4.53 | itf | clay | 55.16% | 8.58% | strong | 1 - 2 |
 | 2026-06-23 | 17:30 | win | 33-34 | 3.83% | L. Darderi | Y. Hanfmann | 2.08 | 1.00 | 1.08 | 3.09 | atp_wta | clay | 55.82% | 7.69% | normal | 2 - 0 |
 | 2026-06-23 | 17:30 | win | 32-34 | 2.53% | E. Svitolina | L. Samsonova | 1.40 | 1.00 | 0.40 | 2.02 | atp_wta | grass | 77.83% | 6.19% | normal | 1 - 2 |
 | 2026-06-23 | 16:30 | loss | 31-34 | 2.06% | L. Radivojevic | M. Bassols | 1.97 | 1.00 | -1.00 | 1.62 | qualifying | grass | 56.70% | 5.89% | normal | 1 - 2 |
