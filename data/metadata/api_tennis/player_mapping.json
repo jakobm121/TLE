@@ -6,7 +6,7 @@
     "with_full_name": 2760,
     "with_short_name": 5511
   },
-  "generated_at": "2026-06-24T06:16:38+00:00",
+  "generated_at": "2026-06-24T06:47:21+00:00",
   "mapping": {
     "men:api:100041": {
       "api_levels": {
@@ -7433,10 +7433,6 @@
       "status": "auto_mapped"
     },
     "men:api:14638": {
-      "api_levels": {
-        "itf": 8,
-        "qualifying": 2
-      },
       "api_matches": 10,
       "api_name": "Nikita Mashtakov",
       "api_name_sources": {
@@ -7445,15 +7441,12 @@
       "api_name_variants": {
         "Nikita Mashtakov": 10
       },
-      "api_surfaces": {
-        "clay": 10
-      },
-      "confidence": 0.0,
+      "confidence": 1.0,
       "gender": "men",
-      "margin": null,
-      "method": "no_candidate",
-      "sackmann_player_key": null,
-      "status": "unmapped"
+      "method": "manual_override",
+      "override_key": "men:api:14638",
+      "sackmann_player_key": "men:sackmann:200125",
+      "status": "manual_mapped"
     },
     "men:api:14641": {
       "api_levels": {
@@ -47217,10 +47210,6 @@
       "status": "auto_mapped"
     },
     "women:api:17": {
-      "api_levels": {
-        "challenger": 1,
-        "itf": 3
-      },
       "api_matches": 4,
       "api_name": "Francesca Dell'Edera",
       "api_name_sources": {
@@ -47229,16 +47218,12 @@
       "api_name_variants": {
         "Francesca Dell'Edera": 4
       },
-      "api_surfaces": {
-        "clay": 1,
-        "hard": 3
-      },
-      "confidence": 0.780682,
+      "confidence": 1.0,
       "gender": "women",
-      "margin": 0.780682,
-      "method": "fuzzy",
-      "sackmann_player_key": null,
-      "status": "unmapped"
+      "method": "manual_override",
+      "override_key": "women:api:17",
+      "sackmann_player_key": "women:sackmann:214974",
+      "status": "manual_mapped"
     },
     "women:api:170": {
       "api_levels": {
@@ -72986,10 +72971,10 @@
     "api_player_cache_with_short_name": 5511,
     "api_players": 3229,
     "auto_mapped": 2975,
-    "manual_mapped": 83,
+    "manual_mapped": 85,
     "player_aliases_loaded": 152,
     "rebuild_auto_mapping": 0,
-    "unmapped": 153
+    "unmapped": 151
   },
   "target": "sackmann"
 }
