@@ -1,9 +1,9 @@
 api_player_key,raw_api_player_key,api_name,api_name_source,gender,mapping_status,today_match_count,opponent_name,opponents_today,tournament,event_names,event_type,event_type_types,reason
-women:api:101857,101857,A. Ishii,api_cache_short_name,women,missing_mapping_entry,1,Ayumi Miyamoto,Ayumi Miyamoto,W15 Sapporo 2,W15 Sapporo 2,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
 women:api:104445,104445,A. M. Mitu,api_cache_short_name,women,missing_mapping_entry,1,I. Boian,I. Boian,W15 Galati,W15 Galati,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
 men:api:58548,58548,Aaron Gil Garcia,api_cache_full_name,men,missing_mapping_entry,1,Giannicola Misasi,Giannicola Misasi,M15 Kursumlijska Banja 6,M15 Kursumlijska Banja 6,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
 women:api:70150,70150,Alessia Popescu,api_cache_full_name,women,missing_mapping_entry,1,O. Panasa,O. Panasa,W15 Kursumlijska Banja 6,W15 Kursumlijska Banja 6,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
 women:api:13987,13987,Anastasiia Sobolieva,api_cache_full_name,women,unmapped,1,Marcelina Podlinska,Marcelina Podlinska,W50 Gdansk (Poland),W50 Gdansk (Poland),Itf Women Singles,Itf Women Singles,no_sackmann_candidate
+men:api:84676,84676,B. Tallakson,api_cache_short_name,men,missing_mapping_entry,1,Aidan Kim,Aidan Kim,"M15 Claremont (Usa), Hard","M15 Claremont (Usa), Hard",Itf Men - Singles,Itf Men - Singles,no_sackmann_candidate
 men:api:76298,76298,Bogdan Seleznev,api_cache_full_name,men,unmapped,1,Constantin Bittoun Kouzmine,Constantin Bittoun Kouzmine,M15 Kayseri 6,M15 Kayseri 6,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
 men:api:102991,102991,C. Thies,api_cache_short_name,men,unmapped,1,T. Hammes,T. Hammes,M15 Kamen,M15 Kamen,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
 men:api:104466,104466,C. V. Pantic,api_cache_short_name,men,missing_mapping_entry,1,Boris Butulija,Boris Butulija,M15 Kursumlijska Banja 6,M15 Kursumlijska Banja 6,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
@@ -21,23 +21,31 @@ men:api:104378,104378,F. Bullamah,api_cache_short_name,men,missing_mapping_entry
 women:api:104425,104425,F. Willemse,api_cache_short_name,women,missing_mapping_entry,1,Romane Longueville,Romane Longueville,W15 Alkmaar,W15 Alkmaar,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
 men:api:104447,104447,G. Delattre,api_cache_short_name,men,missing_mapping_entry,1,Benoit Torcq,Benoit Torcq,M25 Brussels,M25 Brussels,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
 women:api:103747,103747,H. Shabanpour,api_cache_short_name,women,unmapped,1,Duru Soke,Duru Soke,W15 Kayseri 6,W15 Kayseri 6,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
+men:api:104490,104490,H. Wilson,api_cache_short_name,men,missing_mapping_entry,1,Bryce Nakashima,Bryce Nakashima,"M15 Claremont (Usa), Hard","M15 Claremont (Usa), Hard",Itf Men - Singles,Itf Men - Singles,no_sackmann_candidate
+men:api:53987,53987,Hiroki Sakagawa,api_cache_full_name,men,missing_mapping_entry,1,R. Santhosh,R. Santhosh,"M15 Claremont (Usa), Hard","M15 Claremont (Usa), Hard",Itf Men - Singles,Itf Men - Singles,no_sackmann_candidate
 men:api:104470,104470,I. Haddouch,api_cache_short_name,men,missing_mapping_entry,1,Walid Ahouda,Walid Ahouda,M25 Tanger (Morocco),M25 Tanger (Morocco),Itf Men Singles,Itf Men Singles,no_sackmann_candidate
 men:api:104475,104475,J. Januchowski,api_cache_short_name,men,missing_mapping_entry,1,Adam Majchrzak,Adam Majchrzak,M15 Rzeszow (Poland),M15 Rzeszow (Poland),Itf Men Singles,Itf Men Singles,no_sackmann_candidate
-women:api:3133,3133,Jin Ahn Yu,api_cache_full_name,women,missing_mapping_entry,1,Chenting Zhu,Chenting Zhu,W15 Maanshan 3,W15 Maanshan 3,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
+men:api:8686,8686,Jacob Brumm,api_cache_full_name,men,missing_mapping_entry,1,Vignesh Gogineni,Vignesh Gogineni,"M15 Claremont (Usa), Hard","M15 Claremont (Usa), Hard",Itf Men - Singles,Itf Men - Singles,no_sackmann_candidate
+men:api:58210,58210,Jagger Leach,api_cache_full_name,men,missing_mapping_entry,1,Alexander Petrov,Alexander Petrov,"M15 Claremont (Usa), Hard","M15 Claremont (Usa), Hard",Itf Men - Singles,Itf Men - Singles,no_sackmann_candidate
 women:api:104411,104411,K. Jiananxi,api_cache_short_name,women,missing_mapping_entry,1,Onyu Choi,Onyu Choi,W15 Maanshan 3,W15 Maanshan 3,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
 men:api:104465,104465,L. Nikodijevic,api_cache_short_name,men,missing_mapping_entry,1,Stefan Popovic,Stefan Popovic,M15 Kursumlijska Banja 6,M15 Kursumlijska Banja 6,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
+men:api:25008,25008,Liam Krall,api_cache_full_name,men,missing_mapping_entry,1,Lorenzo Claverie,Lorenzo Claverie,"M15 Claremont (Usa), Hard","M15 Claremont (Usa), Hard",Itf Men - Singles,Itf Men - Singles,no_sackmann_candidate
+men:api:1856,1856,Lorenzo Claverie,api_cache_full_name,men,missing_mapping_entry,1,Liam Krall,Liam Krall,"M15 Claremont (Usa), Hard","M15 Claremont (Usa), Hard",Itf Men - Singles,Itf Men - Singles,no_sackmann_candidate
 women:api:104482,104482,M. Cleary,api_cache_short_name,women,missing_mapping_entry,1,B. Kwon,B. Kwon,W15 Claremont,W15 Claremont,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
 men:api:104459,104459,M. Reyniak,api_cache_short_name,men,missing_mapping_entry,1,Theo Herrmann,Theo Herrmann,M15 Kayseri 6,M15 Kayseri 6,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
 men:api:55588,55588,M. Zvech Flaborea,api_cache_short_name,men,missing_mapping_entry,1,Jan Kupcic,Jan Kupcic,M15 Slovenska Bistrica,M15 Slovenska Bistrica,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
 men:api:14460,14460,Muhamad Rifqi Fitriadi,api_cache_full_name,men,unmapped,1,Jun Kim Geun,Jun Kim Geun,M15 Wuning 3,M15 Wuning 3,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
 men:api:104472,104472,N. Walters,api_cache_short_name,men,missing_mapping_entry,1,Yassine Smiej,Yassine Smiej,M25 Tanger (Morocco),M25 Tanger (Morocco),Itf Men Singles,Itf Men Singles,no_sackmann_candidate
+men:api:83821,83821,Nav Dayal,api_cache_full_name,men,missing_mapping_entry,1,Kenta Miyoshi,Kenta Miyoshi,"M15 Claremont (Usa), Hard","M15 Claremont (Usa), Hard",Itf Men - Singles,Itf Men - Singles,no_sackmann_candidate
 men:api:8655,8655,Nazim Makhlouf,api_cache_full_name,men,unmapped,1,Roger Pascual Ferra,Roger Pascual Ferra,M15 Monastir 24,M15 Monastir 24,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
+men:api:9375,9375,Nicholas Godsick,api_cache_full_name,men,missing_mapping_entry,1,Benjamin O'Connell,Benjamin O'Connell,"M15 Claremont (Usa), Hard","M15 Claremont (Usa), Hard",Itf Men - Singles,Itf Men - Singles,no_sackmann_candidate
 men:api:82785,82785,Nicolas Robert,api_cache_full_name,men,unmapped,1,Louay Makke,Louay Makke,M15 Monastir 24,M15 Monastir 24,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
 men:api:33234,33234,O. Bezzaz,api_cache_short_name,men,missing_mapping_entry,1,Massimo Giunta,Massimo Giunta,M25 Tanger (Morocco),M25 Tanger (Morocco),Itf Men Singles,Itf Men Singles,no_sackmann_candidate
 men:api:104427,104427,O. Houthuyse,api_cache_short_name,men,missing_mapping_entry,1,Edward Etty,Edward Etty,M15 Alkmaar,M15 Alkmaar,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
 men:api:95164,95164,O. Majdandzic,api_cache_short_name,men,unmapped,1,Benito Sanchez Martinez,Benito Sanchez Martinez,M15 Kamen,M15 Kamen,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
 women:api:24515,24515,Onyu Choi,api_cache_full_name,women,missing_mapping_entry,1,K. Jiananxi,K. Jiananxi,W15 Maanshan 3,W15 Maanshan 3,Itf Women Singles,Itf Women Singles,no_sackmann_candidate
 men:api:104471,104471,R. El Aouni,api_cache_short_name,men,missing_mapping_entry,1,M. A. Machado,M. A. Machado,M25 Tanger (Morocco),M25 Tanger (Morocco),Itf Men Singles,Itf Men Singles,no_sackmann_candidate
+men:api:85579,85579,R. Krishna,api_cache_short_name,men,missing_mapping_entry,1,Joshua Peck,Joshua Peck,"M15 Claremont (Usa), Hard","M15 Claremont (Usa), Hard",Itf Men - Singles,Itf Men - Singles,no_sackmann_candidate
 men:api:104426,104426,S. Put,api_cache_short_name,men,missing_mapping_entry,1,Nino Ehrenschneider,Nino Ehrenschneider,M15 Alkmaar,M15 Alkmaar,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
 men:api:104429,104429,T. Hammes,api_cache_short_name,men,missing_mapping_entry,1,C. Thies,C. Thies,M15 Kamen,M15 Kamen,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
 women:api:40904,40904,T. Lemaitre,api_cache_short_name,women,unmapped,1,Kristina Mladenovic,Kristina Mladenovic,W50 Palma del Rio,W50 Palma del Rio,Itf Women Singles,Itf Women Singles,no_sackmann_candidate

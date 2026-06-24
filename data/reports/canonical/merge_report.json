@@ -1,20 +1,20 @@
 {
   "counters": {
-    "api_added": 5810,
+    "api_added": 5819,
     "api_added_level_atp_wta": 420,
     "api_added_level_challenger": 795,
     "api_added_level_grand_slam": 410,
-    "api_added_level_itf": 3242,
+    "api_added_level_itf": 3251,
     "api_added_level_qualifying": 943,
     "api_added_surface_clay": 3191,
     "api_added_surface_grass": 783,
-    "api_added_surface_hard": 1836,
+    "api_added_surface_hard": 1845,
     "api_duplicate_sackmann": 73,
     "api_duplicate_strategy_date_gender_players": 73,
-    "api_input": 6193,
-    "api_mapping_both_mapped": 5883,
+    "api_input": 6203,
+    "api_mapping_both_mapped": 5892,
     "api_mapping_none_mapped": 14,
-    "api_mapping_one_mapped": 296,
+    "api_mapping_one_mapped": 297,
     "player_aliases_loaded": 152,
     "sackmann_alias_resolved_matches": 1540,
     "sackmann_alias_resolved_player_keys": 1549,
@@ -24,10 +24,10 @@
     "sackmann_skipped_winner_loser_same_player_key": 1
   },
   "genders": {
-    "men": 113648,
-    "women": 114476
+    "men": 113651,
+    "women": 114482
   },
-  "generated_at": "2026-06-24T06:50:04+00:00",
+  "generated_at": "2026-06-24T08:02:05+00:00",
   "inputs": {
     "api_manifest": "data/source/api_tennis/manifest.json",
     "player_aliases": "data/metadata/sackmann/player_aliases.json",
@@ -38,10 +38,10 @@
     "atp_wta": 19787,
     "challenger": 40730,
     "grand_slam": 6878,
-    "itf": 159786,
+    "itf": 159795,
     "qualifying": 943
   },
-  "matches": 228124,
+  "matches": 228133,
   "outputs": {
     "api_merge_added_csv": "data/reports/canonical/api_merge_added.csv",
     "api_merge_conflicts_csv": "data/reports/canonical/api_merge_conflicts.csv",
@@ -2826,37 +2826,37 @@
   },
   "source": "canonical_combined",
   "sources": {
-    "api_tennis": 5810,
+    "api_tennis": 5819,
     "sackmann": 222314
   },
   "surfaces": {
     "carpet": 2314,
     "clay": 98942,
     "grass": 5679,
-    "hard": 121189
+    "hard": 121198
   },
   "year_files": [
     {
-      "created_at": "2026-06-24T06:49:59+00:00",
+      "created_at": "2026-06-24T08:02:00+00:00",
       "matches": 68250,
       "path": "data/canonical/tle_matches_2023.jsonl.gz",
       "year": 2023
     },
     {
-      "created_at": "2026-06-24T06:50:01+00:00",
+      "created_at": "2026-06-24T08:02:02+00:00",
       "matches": 73997,
       "path": "data/canonical/tle_matches_2024.jsonl.gz",
       "year": 2024
     },
     {
-      "created_at": "2026-06-24T06:50:03+00:00",
+      "created_at": "2026-06-24T08:02:04+00:00",
       "matches": 55948,
       "path": "data/canonical/tle_matches_2025.jsonl.gz",
       "year": 2025
     },
     {
-      "created_at": "2026-06-24T06:50:04+00:00",
-      "matches": 29929,
+      "created_at": "2026-06-24T08:02:05+00:00",
+      "matches": 29938,
       "path": "data/canonical/tle_matches_2026.jsonl.gz",
       "year": 2026
     }

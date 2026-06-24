@@ -1,10 +1,10 @@
 {
   "api_player_cache": {
-    "entries": 5511,
+    "entries": 5520,
     "exists": true,
     "path": "data/raw/api_tennis/players/api_players.json",
-    "with_full_name": 2760,
-    "with_short_name": 5511
+    "with_full_name": 2766,
+    "with_short_name": 5520
   },
   "event_type_counts": {
     "Atp Doubles": 159,
@@ -18,6 +18,7 @@
     "Exhibition Men": 9,
     "Girls Doubles": 31,
     "Girls Singles": 87,
+    "Itf Men - Singles": 16,
     "Itf Men Doubles": 1010,
     "Itf Men Singles": 2094,
     "Itf Women Doubles": 955,
@@ -175,20 +176,20 @@
       "skipped": 156
     },
     "2026-06-24.json": {
-      "imported": 28,
-      "raw_fixtures": 572,
-      "skipped": 544
+      "imported": 38,
+      "raw_fixtures": 588,
+      "skipped": 550
     }
   },
   "gender_counts": {
-    "men": 3421,
-    "women": 2772
+    "men": 3424,
+    "women": 2779
   },
   "level_counts": {
     "atp_wta": 427,
     "challenger": 885,
     "grand_slam": 468,
-    "itf": 3432,
+    "itf": 3442,
     "qualifying": 981
   },
   "raw_surface_counts": {
@@ -196,23 +197,23 @@
     "api_tournament_metadata:Clay": 3407,
     "api_tournament_metadata:Clay (Indoor)": 31,
     "api_tournament_metadata:Grass": 800,
-    "api_tournament_metadata:Hard": 1924,
+    "api_tournament_metadata:Hard": 1934,
     "api_tournament_metadata:hard": 31
   },
   "status_counts": {
-    "1": 7,
-    "<blank>": 539,
+    "<blank>": 537,
     "Cancelled": 165,
-    "Finished": 8594,
+    "Finished": 8609,
     "Interrupted": 4,
     "Retired": 219,
-    "Set 1": 4,
+    "Set 1": 12,
+    "Set 2": 2,
     "Walk Over": 148
   },
   "surface_counts": {
     "clay": 3438,
     "grass": 800,
-    "hard": 1955
+    "hard": 1965
   },
   "tournament_surface_map": {
     "exists": true,

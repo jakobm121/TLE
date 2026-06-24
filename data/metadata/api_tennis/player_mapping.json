@@ -1,12 +1,12 @@
 {
   "api_player_cache": {
-    "entries": 5511,
+    "entries": 5520,
     "exists": true,
     "path": "data/raw/api_tennis/players/api_players.json",
-    "with_full_name": 2760,
-    "with_short_name": 5511
+    "with_full_name": 2766,
+    "with_short_name": 5520
   },
-  "generated_at": "2026-06-24T06:47:21+00:00",
+  "generated_at": "2026-06-24T08:01:17+00:00",
   "mapping": {
     "men:api:100041": {
       "api_levels": {
@@ -559,18 +559,18 @@
     },
     "men:api:10215": {
       "api_levels": {
-        "itf": 4
+        "itf": 5
       },
-      "api_matches": 4,
+      "api_matches": 5,
       "api_name": "Joshua Charlton",
       "api_name_sources": {
-        "api_cache_full_name": 4
+        "api_cache_full_name": 5
       },
       "api_name_variants": {
-        "Joshua Charlton": 4
+        "Joshua Charlton": 5
       },
       "api_surfaces": {
-        "hard": 4
+        "hard": 5
       },
       "confidence": 0.999,
       "gender": "men",
@@ -929,9 +929,9 @@
       "api_surfaces": {
         "clay": 3
       },
-      "confidence": 0.971386,
+      "confidence": 0.971609,
       "gender": "men",
-      "margin": 0.971386,
+      "margin": 0.971609,
       "method": "exact_initial_form",
       "sackmann_player_key": "men:sackmann:214588",
       "status": "auto_mapped"
@@ -5548,18 +5548,18 @@
     },
     "men:api:12909": {
       "api_levels": {
-        "itf": 2
+        "itf": 3
       },
-      "api_matches": 2,
+      "api_matches": 3,
       "api_name": "Zhao Zhao",
       "api_name_sources": {
-        "api_cache_full_name": 2
+        "api_cache_full_name": 3
       },
       "api_name_variants": {
-        "Zhao Zhao": 2
+        "Zhao Zhao": 3
       },
       "api_surfaces": {
-        "hard": 2
+        "hard": 3
       },
       "confidence": 0.999,
       "gender": "men",
@@ -6199,9 +6199,9 @@
       "api_surfaces": {
         "clay": 2
       },
-      "confidence": 0.998871,
+      "confidence": 0.998892,
       "gender": "men",
-      "margin": 0.998871,
+      "margin": 0.998892,
       "method": "exact_token_set",
       "sackmann_player_key": "men:sackmann:210429",
       "status": "auto_mapped"
@@ -6877,9 +6877,9 @@
       "api_surfaces": {
         "hard": 3
       },
-      "confidence": 0.971386,
+      "confidence": 0.971609,
       "gender": "men",
-      "margin": 0.971386,
+      "margin": 0.971609,
       "method": "exact_initial_form",
       "sackmann_player_key": "men:sackmann:209858",
       "status": "auto_mapped"
@@ -7178,7 +7178,7 @@
       },
       "confidence": 0.999,
       "gender": "men",
-      "margin": 0.023417,
+      "margin": 0.023413,
       "method": "exact_normalized",
       "sackmann_player_key": "men:sackmann:202334",
       "status": "auto_mapped"
@@ -7827,19 +7827,19 @@
     },
     "men:api:15304": {
       "api_levels": {
-        "itf": 2,
+        "itf": 3,
         "qualifying": 1
       },
-      "api_matches": 3,
+      "api_matches": 4,
       "api_name": "Kuan-Yi Lee",
       "api_name_sources": {
-        "api_cache_full_name": 3
+        "api_cache_full_name": 4
       },
       "api_name_variants": {
-        "Kuan-Yi Lee": 3
+        "Kuan-Yi Lee": 4
       },
       "api_surfaces": {
-        "hard": 3
+        "hard": 4
       },
       "confidence": 0.999,
       "gender": "men",
@@ -8233,9 +8233,9 @@
       "api_surfaces": {
         "hard": 4
       },
-      "confidence": 0.998332,
+      "confidence": 0.998367,
       "gender": "men",
-      "margin": 0.998332,
+      "margin": 0.998367,
       "method": "exact_token_set",
       "sackmann_player_key": "men:sackmann:210531",
       "status": "auto_mapped"
@@ -8328,7 +8328,7 @@
       },
       "confidence": 0.999,
       "gender": "men",
-      "margin": 0.023593,
+      "margin": 0.023588,
       "method": "exact_normalized",
       "sackmann_player_key": "men:sackmann:210464",
       "status": "auto_mapped"
@@ -8808,7 +8808,7 @@
       },
       "confidence": 0.999,
       "gender": "men",
-      "margin": 0.025633,
+      "margin": 0.025599,
       "method": "exact_normalized",
       "sackmann_player_key": "men:sackmann:202290",
       "status": "auto_mapped"
@@ -8997,19 +8997,19 @@
     },
     "men:api:1869": {
       "api_levels": {
-        "itf": 4,
+        "itf": 5,
         "qualifying": 1
       },
-      "api_matches": 5,
+      "api_matches": 6,
       "api_name": "Grigoriy Lomakin",
       "api_name_sources": {
-        "api_cache_full_name": 5
+        "api_cache_full_name": 6
       },
       "api_name_variants": {
-        "Grigoriy Lomakin": 5
+        "Grigoriy Lomakin": 6
       },
       "api_surfaces": {
-        "hard": 5
+        "hard": 6
       },
       "confidence": 0.999,
       "gender": "men",
@@ -18073,7 +18073,7 @@
       },
       "confidence": 0.999,
       "gender": "men",
-      "margin": 0.08133,
+      "margin": 0.08132,
       "method": "exact_token_set",
       "sackmann_player_key": "men:sackmann:210731",
       "status": "auto_mapped"
@@ -19788,9 +19788,9 @@
       "api_surfaces": {
         "clay": 3
       },
-      "confidence": 0.972485,
+      "confidence": 0.972565,
       "gender": "men",
-      "margin": 0.972485,
+      "margin": 0.972565,
       "method": "exact_initial_form",
       "sackmann_player_key": "men:sackmann:212138",
       "status": "auto_mapped"
@@ -20400,7 +20400,7 @@
       },
       "confidence": 0.999,
       "gender": "men",
-      "margin": 0.230742,
+      "margin": 0.230704,
       "method": "exact_normalized",
       "sackmann_player_key": "men:sackmann:213137",
       "status": "auto_mapped"
@@ -25097,9 +25097,9 @@
       "api_surfaces": {
         "clay": 9
       },
-      "confidence": 0.998611,
+      "confidence": 0.998638,
       "gender": "men",
-      "margin": 0.998611,
+      "margin": 0.998638,
       "method": "exact_token_set",
       "sackmann_player_key": "men:sackmann:213066",
       "status": "auto_mapped"
@@ -26095,9 +26095,9 @@
       "api_surfaces": {
         "grass": 1
       },
-      "confidence": 0.975407,
+      "confidence": 0.975412,
       "gender": "men",
-      "margin": 0.000451,
+      "margin": 0.000456,
       "method": "exact_initial_form",
       "sackmann_player_key": null,
       "status": "ambiguous"
@@ -34072,18 +34072,18 @@
     },
     "men:api:84922": {
       "api_levels": {
-        "itf": 2
+        "itf": 3
       },
-      "api_matches": 2,
+      "api_matches": 3,
       "api_name": "Hao Luo Jun",
       "api_name_sources": {
-        "api_cache_full_name": 2
+        "api_cache_full_name": 3
       },
       "api_name_variants": {
-        "Hao Luo Jun": 2
+        "Hao Luo Jun": 3
       },
       "api_surfaces": {
-        "hard": 2
+        "hard": 3
       },
       "confidence": 0.997565,
       "gender": "men",
@@ -34328,9 +34328,9 @@
         "clay": 1,
         "hard": 1
       },
-      "confidence": 0.971946,
+      "confidence": 0.972079,
       "gender": "men",
-      "margin": 0.070336,
+      "margin": 0.07047,
       "method": "exact_initial_form",
       "sackmann_player_key": "men:sackmann:213392",
       "status": "auto_mapped"
@@ -34832,6 +34832,22 @@
       "method": "exact_normalized",
       "sackmann_player_key": "men:sackmann:214013",
       "status": "auto_mapped"
+    },
+    "men:api:87026": {
+      "api_matches": 1,
+      "api_name": "Shixun Zhu",
+      "api_name_sources": {
+        "api_cache_full_name": 1
+      },
+      "api_name_variants": {
+        "Shixun Zhu": 1
+      },
+      "confidence": 1.0,
+      "gender": "men",
+      "method": "manual_override",
+      "override_key": "men:api:87026",
+      "sackmann_player_key": "men:sackmann:214010",
+      "status": "manual_mapped"
     },
     "men:api:87070": {
       "api_levels": {
@@ -39294,7 +39310,7 @@
       },
       "confidence": 0.999,
       "gender": "women",
-      "margin": 0.024766,
+      "margin": 0.024752,
       "method": "exact_normalized",
       "sackmann_player_key": "women:sackmann:203288",
       "status": "auto_mapped"
@@ -39625,12 +39641,34 @@
       "api_surfaces": {
         "hard": 1
       },
-      "confidence": 0.972833,
+      "confidence": 0.97289,
       "gender": "women",
-      "margin": 0.972833,
+      "margin": 0.97289,
       "method": "exact_initial_form",
       "sackmann_player_key": "women:sackmann:260068",
       "status": "auto_mapped"
+    },
+    "women:api:101857": {
+      "api_levels": {
+        "itf": 1
+      },
+      "api_matches": 1,
+      "api_name": "A. Ishii",
+      "api_name_sources": {
+        "api_cache_short_name": 1
+      },
+      "api_name_variants": {
+        "A. Ishii": 1
+      },
+      "api_surfaces": {
+        "hard": 1
+      },
+      "confidence": 0.971609,
+      "gender": "women",
+      "margin": 0.000916,
+      "method": "exact_initial_form",
+      "sackmann_player_key": null,
+      "status": "ambiguous"
     },
     "women:api:101858": {
       "api_levels": {
@@ -40842,9 +40880,9 @@
       "api_surfaces": {
         "clay": 3
       },
-      "confidence": 0.932285,
+      "confidence": 0.932467,
       "gender": "women",
-      "margin": 0.932285,
+      "margin": 0.932467,
       "method": "initial_surname",
       "sackmann_player_key": "women:sackmann:270569",
       "status": "auto_mapped"
@@ -42879,9 +42917,9 @@
       "api_surfaces": {
         "clay": 5
       },
-      "confidence": 0.998434,
+      "confidence": 0.998466,
       "gender": "women",
-      "margin": 0.998434,
+      "margin": 0.998466,
       "method": "exact_token_set",
       "sackmann_player_key": "women:sackmann:222513",
       "status": "auto_mapped"
@@ -43124,19 +43162,19 @@
     },
     "women:api:11583": {
       "api_levels": {
-        "itf": 8,
+        "itf": 9,
         "qualifying": 2
       },
-      "api_matches": 10,
+      "api_matches": 11,
       "api_name": "Ayumi Miyamoto",
       "api_name_sources": {
-        "api_cache_full_name": 10
+        "api_cache_full_name": 11
       },
       "api_name_variants": {
-        "Ayumi Miyamoto": 10
+        "Ayumi Miyamoto": 11
       },
       "api_surfaces": {
-        "hard": 10
+        "hard": 11
       },
       "confidence": 0.999,
       "gender": "women",
@@ -44090,19 +44128,19 @@
     },
     "women:api:13333": {
       "api_levels": {
-        "itf": 4,
+        "itf": 5,
         "qualifying": 1
       },
-      "api_matches": 5,
+      "api_matches": 6,
       "api_name": "Mayuka Aikawa",
       "api_name_sources": {
-        "api_cache_full_name": 5
+        "api_cache_full_name": 6
       },
       "api_name_variants": {
-        "Mayuka Aikawa": 5
+        "Mayuka Aikawa": 6
       },
       "api_surfaces": {
-        "hard": 5
+        "hard": 6
       },
       "confidence": 0.999,
       "gender": "women",
@@ -45670,7 +45708,7 @@
       },
       "confidence": 0.999,
       "gender": "women",
-      "margin": 0.078801,
+      "margin": 0.078796,
       "method": "exact_normalized",
       "sackmann_player_key": "women:sackmann:221454",
       "status": "auto_mapped"
@@ -47844,9 +47882,9 @@
         "clay": 2,
         "grass": 2
       },
-      "confidence": 0.975198,
+      "confidence": 0.975204,
       "gender": "women",
-      "margin": 0.003812,
+      "margin": 0.003818,
       "method": "exact_initial_form",
       "sackmann_player_key": null,
       "status": "ambiguous"
@@ -50030,9 +50068,9 @@
         "clay": 6,
         "grass": 1
       },
-      "confidence": 0.975308,
+      "confidence": 0.975313,
       "gender": "women",
-      "margin": 0.975308,
+      "margin": 0.975313,
       "method": "exact_initial_form",
       "sackmann_player_key": "women:sackmann:220446",
       "status": "auto_mapped"
@@ -51273,9 +51311,9 @@
       "api_surfaces": {
         "grass": 9
       },
-      "confidence": 0.967528,
+      "confidence": 0.967532,
       "gender": "women",
-      "margin": 0.967528,
+      "margin": 0.967532,
       "method": "initial_surname",
       "sackmann_player_key": "women:sackmann:213873",
       "status": "auto_mapped"
@@ -51888,9 +51926,9 @@
       "api_surfaces": {
         "clay": 1
       },
-      "confidence": 0.975069,
+      "confidence": 0.975075,
       "gender": "women",
-      "margin": 0.066042,
+      "margin": 0.066049,
       "method": "exact_initial_form",
       "sackmann_player_key": "women:sackmann:214713",
       "status": "auto_mapped"
@@ -52986,22 +53024,6 @@
       "sackmann_player_key": "women:sackmann:261066",
       "status": "auto_mapped"
     },
-    "women:api:31159": {
-      "api_matches": 1,
-      "api_name": "H. Shi",
-      "api_name_sources": {
-        "api_cache_short_name": 1
-      },
-      "api_name_variants": {
-        "H. Shi": 1
-      },
-      "confidence": 1.0,
-      "gender": "women",
-      "method": "manual_override",
-      "override_key": "women:api:31159",
-      "sackmann_player_key": "women:sackmann:222559",
-      "status": "manual_mapped"
-    },
     "women:api:3130": {
       "api_levels": {
         "itf": 1
@@ -53022,6 +53044,28 @@
       "margin": 0.026292,
       "method": "exact_normalized",
       "sackmann_player_key": "women:sackmann:222215",
+      "status": "auto_mapped"
+    },
+    "women:api:3133": {
+      "api_levels": {
+        "itf": 1
+      },
+      "api_matches": 1,
+      "api_name": "Jin Ahn Yu",
+      "api_name_sources": {
+        "api_cache_full_name": 1
+      },
+      "api_name_variants": {
+        "Jin Ahn Yu": 1
+      },
+      "api_surfaces": {
+        "hard": 1
+      },
+      "confidence": 0.999,
+      "gender": "women",
+      "margin": 0.079743,
+      "method": "exact_token_set",
+      "sackmann_player_key": "women:sackmann:213775",
       "status": "auto_mapped"
     },
     "women:api:31462": {
@@ -53245,19 +53289,19 @@
     },
     "women:api:32808": {
       "api_levels": {
-        "itf": 5,
+        "itf": 6,
         "qualifying": 1
       },
-      "api_matches": 6,
+      "api_matches": 7,
       "api_name": "Gaeul Jang",
       "api_name_sources": {
-        "api_cache_full_name": 6
+        "api_cache_full_name": 7
       },
       "api_name_variants": {
-        "Gaeul Jang": 6
+        "Gaeul Jang": 7
       },
       "api_surfaces": {
-        "hard": 6
+        "hard": 7
       },
       "confidence": 0.999,
       "gender": "women",
@@ -53422,9 +53466,9 @@
         "grass": 1,
         "hard": 3
       },
-      "confidence": 0.975176,
+      "confidence": 0.975182,
       "gender": "women",
-      "margin": 0.975176,
+      "margin": 0.975182,
       "method": "exact_initial_form",
       "sackmann_player_key": "women:sackmann:213525",
       "status": "auto_mapped"
@@ -53649,9 +53693,9 @@
       "api_surfaces": {
         "grass": 1
       },
-      "confidence": 0.974736,
+      "confidence": 0.974745,
       "gender": "women",
-      "margin": 0.974736,
+      "margin": 0.974745,
       "method": "exact_initial_form",
       "sackmann_player_key": "women:sackmann:223168",
       "status": "auto_mapped"
@@ -53718,9 +53762,9 @@
         "clay": 2,
         "grass": 4
       },
-      "confidence": 0.975328,
+      "confidence": 0.975333,
       "gender": "women",
-      "margin": 0.975328,
+      "margin": 0.975333,
       "method": "exact_initial_form",
       "sackmann_player_key": "women:sackmann:236955",
       "status": "auto_mapped"
@@ -53742,9 +53786,9 @@
         "clay": 2,
         "grass": 2
       },
-      "confidence": 0.971386,
+      "confidence": 0.971609,
       "gender": "women",
-      "margin": 0.971386,
+      "margin": 0.971609,
       "method": "exact_initial_form",
       "sackmann_player_key": "women:sackmann:270485",
       "status": "auto_mapped"
@@ -54296,19 +54340,19 @@
     },
     "women:api:38097": {
       "api_levels": {
-        "itf": 7,
+        "itf": 8,
         "qualifying": 2
       },
-      "api_matches": 9,
+      "api_matches": 10,
       "api_name": "Han Shi",
       "api_name_sources": {
-        "api_cache_full_name": 9
+        "api_cache_full_name": 10
       },
       "api_name_variants": {
-        "Han Shi": 9
+        "Han Shi": 10
       },
       "api_surfaces": {
-        "hard": 9
+        "hard": 10
       },
       "confidence": 0.999,
       "gender": "women",
@@ -54477,18 +54521,18 @@
     },
     "women:api:38235": {
       "api_levels": {
-        "itf": 1
+        "itf": 2
       },
-      "api_matches": 1,
+      "api_matches": 2,
       "api_name": "Heerae Im",
       "api_name_sources": {
-        "api_cache_full_name": 1
+        "api_cache_full_name": 2
       },
       "api_name_variants": {
-        "Heerae Im": 1
+        "Heerae Im": 2
       },
       "api_surfaces": {
-        "hard": 1
+        "hard": 2
       },
       "confidence": 0.999,
       "gender": "women",
@@ -57794,9 +57838,9 @@
         "grass": 3,
         "hard": 3
       },
-      "confidence": 0.975434,
+      "confidence": 0.975438,
       "gender": "women",
-      "margin": 0.975434,
+      "margin": 0.975438,
       "method": "exact_initial_form",
       "sackmann_player_key": "women:sackmann:214149",
       "status": "auto_mapped"
@@ -58290,9 +58334,9 @@
       "api_surfaces": {
         "hard": 3
       },
-      "confidence": 0.998932,
+      "confidence": 0.998951,
       "gender": "women",
-      "margin": 0.998932,
+      "margin": 0.998951,
       "method": "exact_token_set",
       "sackmann_player_key": "women:sackmann:260528",
       "status": "auto_mapped"
@@ -59321,19 +59365,19 @@
     },
     "women:api:53060": {
       "api_levels": {
-        "itf": 7,
+        "itf": 8,
         "qualifying": 1
       },
-      "api_matches": 8,
+      "api_matches": 9,
       "api_name": "Chenting Zhu",
       "api_name_sources": {
-        "api_cache_full_name": 8
+        "api_cache_full_name": 9
       },
       "api_name_variants": {
-        "Chenting Zhu": 8
+        "Chenting Zhu": 9
       },
       "api_surfaces": {
-        "hard": 8
+        "hard": 9
       },
       "confidence": 0.999,
       "gender": "women",
@@ -59532,6 +59576,22 @@
       "method": "exact_token_set",
       "sackmann_player_key": "women:sackmann:260708",
       "status": "auto_mapped"
+    },
+    "women:api:53528": {
+      "api_matches": 1,
+      "api_name": "Ke Ren",
+      "api_name_sources": {
+        "api_cache_full_name": 1
+      },
+      "api_name_variants": {
+        "Ke Ren": 1
+      },
+      "confidence": 1.0,
+      "gender": "women",
+      "method": "manual_override",
+      "override_key": "women:api:53528",
+      "sackmann_player_key": "women:sackmann:260621",
+      "status": "manual_mapped"
     },
     "women:api:53625": {
       "api_levels": {
@@ -61918,9 +61978,9 @@
       "api_surfaces": {
         "clay": 4
       },
-      "confidence": 0.998219,
+      "confidence": 0.998258,
       "gender": "women",
-      "margin": 0.998219,
+      "margin": 0.998258,
       "method": "exact_token_set",
       "sackmann_player_key": "women:sackmann:211600",
       "status": "auto_mapped"
@@ -62144,9 +62204,9 @@
       "api_surfaces": {
         "hard": 2
       },
-      "confidence": 0.998466,
+      "confidence": 0.998497,
       "gender": "women",
-      "margin": 0.998466,
+      "margin": 0.998497,
       "method": "exact_token_set",
       "sackmann_player_key": "women:sackmann:267449",
       "status": "auto_mapped"
@@ -62781,18 +62841,18 @@
     },
     "women:api:65787": {
       "api_levels": {
-        "itf": 1
+        "itf": 2
       },
-      "api_matches": 1,
+      "api_matches": 2,
       "api_name": "Yui Ohwaki",
       "api_name_sources": {
-        "api_cache_full_name": 1
+        "api_cache_full_name": 2
       },
       "api_name_variants": {
-        "Yui Ohwaki": 1
+        "Yui Ohwaki": 2
       },
       "api_surfaces": {
-        "hard": 1
+        "hard": 2
       },
       "confidence": 0.999,
       "gender": "women",
@@ -63467,18 +63527,18 @@
     },
     "women:api:68": {
       "api_levels": {
-        "itf": 2
+        "itf": 3
       },
-      "api_matches": 2,
+      "api_matches": 3,
       "api_name": "Natsuho Arakawa",
       "api_name_sources": {
-        "api_cache_full_name": 2
+        "api_cache_full_name": 3
       },
       "api_name_variants": {
-        "Natsuho Arakawa": 2
+        "Natsuho Arakawa": 3
       },
       "api_surfaces": {
-        "hard": 2
+        "hard": 3
       },
       "confidence": 0.999,
       "gender": "women",
@@ -64213,9 +64273,9 @@
       "api_surfaces": {
         "hard": 1
       },
-      "confidence": 0.972303,
+      "confidence": 0.972398,
       "gender": "women",
-      "margin": 0.972303,
+      "margin": 0.972398,
       "method": "exact_initial_form",
       "sackmann_player_key": "women:sackmann:267448",
       "status": "auto_mapped"
@@ -64257,9 +64317,9 @@
       "api_surfaces": {
         "clay": 3
       },
-      "confidence": 0.973219,
+      "confidence": 0.973258,
       "gender": "women",
-      "margin": 0.973219,
+      "margin": 0.973258,
       "method": "exact_initial_form",
       "sackmann_player_key": "women:sackmann:267443",
       "status": "auto_mapped"
@@ -65108,9 +65168,9 @@
       "api_surfaces": {
         "clay": 2
       },
-      "confidence": 0.972079,
+      "confidence": 0.972197,
       "gender": "women",
-      "margin": 0.972079,
+      "margin": 0.972197,
       "method": "exact_initial_form",
       "sackmann_player_key": "women:sackmann:269868",
       "status": "auto_mapped"
@@ -65130,9 +65190,9 @@
       "api_surfaces": {
         "hard": 1
       },
-      "confidence": 0.972398,
+      "confidence": 0.972485,
       "gender": "women",
-      "margin": 0.972398,
+      "margin": 0.972485,
       "method": "exact_initial_form",
       "sackmann_player_key": "women:sackmann:263861",
       "status": "auto_mapped"
@@ -66012,18 +66072,18 @@
     },
     "women:api:74867": {
       "api_levels": {
-        "itf": 2
+        "itf": 3
       },
-      "api_matches": 2,
+      "api_matches": 3,
       "api_name": "S. Y. Choi",
       "api_name_sources": {
-        "api_cache_short_name": 2
+        "api_cache_short_name": 3
       },
       "api_name_variants": {
-        "S. Y. Choi": 2
+        "S. Y. Choi": 3
       },
       "api_surfaces": {
-        "hard": 2
+        "hard": 3
       },
       "confidence": 0.935466,
       "gender": "women",
@@ -66484,6 +66544,22 @@
       "sackmann_player_key": "women:sackmann:261968",
       "status": "auto_mapped"
     },
+    "women:api:76617": {
+      "api_matches": 1,
+      "api_name": "M. Shikhanova",
+      "api_name_sources": {
+        "api_cache_short_name": 1
+      },
+      "api_name_variants": {
+        "M. Shikhanova": 1
+      },
+      "confidence": 1.0,
+      "gender": "women",
+      "method": "manual_override",
+      "override_key": "women:api:76617",
+      "sackmann_player_key": "women:sackmann:269845",
+      "status": "manual_mapped"
+    },
     "women:api:76626": {
       "api_matches": 1,
       "api_name": "Julia Khramtsova",
@@ -66515,9 +66591,9 @@
       "api_surfaces": {
         "clay": 2
       },
-      "confidence": 0.971386,
+      "confidence": 0.971609,
       "gender": "women",
-      "margin": 0.971386,
+      "margin": 0.971609,
       "method": "exact_initial_form",
       "sackmann_player_key": "women:sackmann:269867",
       "status": "auto_mapped"
@@ -66642,9 +66718,9 @@
       "api_surfaces": {
         "clay": 3
       },
-      "confidence": 0.942339,
+      "confidence": 0.942562,
       "gender": "women",
-      "margin": 0.942339,
+      "margin": 0.942562,
       "method": "initial_surname",
       "sackmann_player_key": "women:sackmann:269888",
       "status": "auto_mapped"
@@ -67089,6 +67165,22 @@
       "method": "exact_normalized",
       "sackmann_player_key": "women:sackmann:261061",
       "status": "auto_mapped"
+    },
+    "women:api:78942": {
+      "api_matches": 1,
+      "api_name": "A. Watanabe",
+      "api_name_sources": {
+        "api_cache_short_name": 1
+      },
+      "api_name_variants": {
+        "A. Watanabe": 1
+      },
+      "confidence": 1.0,
+      "gender": "women",
+      "method": "manual_override",
+      "override_key": "women:api:78942",
+      "sackmann_player_key": "women:sackmann:267682",
+      "status": "manual_mapped"
     },
     "women:api:78971": {
       "api_levels": {
@@ -68981,9 +69073,9 @@
       "api_surfaces": {
         "hard": 3
       },
-      "confidence": 0.972303,
+      "confidence": 0.972398,
       "gender": "women",
-      "margin": 0.972303,
+      "margin": 0.972398,
       "method": "exact_initial_form",
       "sackmann_player_key": "women:sackmann:267916",
       "status": "auto_mapped"
@@ -69025,9 +69117,9 @@
       "api_surfaces": {
         "clay": 2
       },
-      "confidence": 0.971946,
+      "confidence": 0.972079,
       "gender": "women",
-      "margin": 0.971946,
+      "margin": 0.972079,
       "method": "exact_initial_form",
       "sackmann_player_key": "women:sackmann:267630",
       "status": "auto_mapped"
@@ -69641,9 +69733,9 @@
       "api_surfaces": {
         "clay": 5
       },
-      "confidence": 0.972303,
+      "confidence": 0.972398,
       "gender": "women",
-      "margin": 0.972303,
+      "margin": 0.972398,
       "method": "exact_initial_form",
       "sackmann_player_key": "women:sackmann:270167",
       "status": "auto_mapped"
@@ -69888,9 +69980,9 @@
       "api_surfaces": {
         "hard": 1
       },
-      "confidence": 0.972079,
+      "confidence": 0.972197,
       "gender": "women",
-      "margin": 0.972079,
+      "margin": 0.972197,
       "method": "exact_initial_form",
       "sackmann_player_key": "women:sackmann:267508",
       "status": "auto_mapped"
@@ -70701,18 +70793,18 @@
     },
     "women:api:90141": {
       "api_levels": {
-        "itf": 2
+        "itf": 3
       },
-      "api_matches": 2,
+      "api_matches": 3,
       "api_name": "Liu Yuhan",
       "api_name_sources": {
-        "api_cache_full_name": 2
+        "api_cache_full_name": 3
       },
       "api_name_variants": {
-        "Liu Yuhan": 2
+        "Liu Yuhan": 3
       },
       "api_surfaces": {
-        "hard": 2
+        "hard": 3
       },
       "confidence": 0.999,
       "gender": "women",
@@ -70917,9 +71009,9 @@
       "api_surfaces": {
         "clay": 3
       },
-      "confidence": 0.972197,
+      "confidence": 0.972303,
       "gender": "women",
-      "margin": 0.972197,
+      "margin": 0.972303,
       "method": "exact_initial_form",
       "sackmann_player_key": "women:sackmann:267776",
       "status": "auto_mapped"
@@ -71074,7 +71166,7 @@
       },
       "confidence": 0.999,
       "gender": "women",
-      "margin": 0.023796,
+      "margin": 0.023791,
       "method": "exact_normalized",
       "sackmann_player_key": "women:sackmann:216156",
       "status": "auto_mapped"
@@ -72106,9 +72198,9 @@
       "api_surfaces": {
         "clay": 3
       },
-      "confidence": 0.971609,
+      "confidence": 0.971792,
       "gender": "women",
-      "margin": 0.971609,
+      "margin": 0.971792,
       "method": "exact_initial_form",
       "sackmann_player_key": "women:sackmann:270329",
       "status": "auto_mapped"
@@ -72491,9 +72583,9 @@
         "grass": 1,
         "hard": 11
       },
-      "confidence": 0.955636,
+      "confidence": 0.955641,
       "gender": "women",
-      "margin": 0.955636,
+      "margin": 0.955641,
       "method": "initial_surname",
       "sackmann_player_key": "women:sackmann:220454",
       "status": "auto_mapped"
@@ -72961,17 +73053,17 @@
   },
   "source": "api_tennis",
   "summary": {
-    "ambiguous": 18,
-    "api_gender_men": 1732,
-    "api_gender_women": 1497,
-    "api_player_cache_entries": 5511,
-    "api_player_cache_full_name_used": 11441,
-    "api_player_cache_short_name_used": 933,
-    "api_player_cache_with_full_name": 2760,
-    "api_player_cache_with_short_name": 5511,
-    "api_players": 3229,
-    "auto_mapped": 2975,
-    "manual_mapped": 85,
+    "ambiguous": 19,
+    "api_gender_men": 1733,
+    "api_gender_women": 1501,
+    "api_player_cache_entries": 5520,
+    "api_player_cache_full_name_used": 11458,
+    "api_player_cache_short_name_used": 936,
+    "api_player_cache_with_full_name": 2766,
+    "api_player_cache_with_short_name": 5520,
+    "api_players": 3234,
+    "auto_mapped": 2976,
+    "manual_mapped": 88,
     "player_aliases_loaded": 152,
     "rebuild_auto_mapping": 0,
     "unmapped": 151
