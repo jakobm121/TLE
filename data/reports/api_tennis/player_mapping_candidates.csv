@@ -70,7 +70,7 @@ men:api:103311,F. Zimmer,men,1,1,men:sackmann:214612,Florian Zimmer,2,0.971099,e
 men:api:103312,L. Frunza,men,1,1,men:sackmann:214595,Luca Frunza,2,0.971099,exact_initial_form
 men:api:103313,E. A. Neagos,men,1,1,men:sackmann:214594,Edward Ayan Neagos,2,0.924527,initial_surname
 men:api:10334,Yuki Mochizuki,men,2,1,men:sackmann:211460,Yuki Mochizuki,178,0.999,exact_normalized
-men:api:10335,Yuta Kawahashi,men,4,1,men:sackmann:200665,Yuta Kawahashi,138,0.999,exact_normalized
+men:api:10335,Yuta Kawahashi,men,5,1,men:sackmann:200665,Yuta Kawahashi,138,0.999,exact_normalized
 men:api:103354,D. Popa,men,1,1,men:sackmann:214593,David Popa,2,0.971099,exact_initial_form
 men:api:103442,Pablo Perez Ramos,men,4,1,men:sackmann:214558,Pablo Perez Ramos,15,0.999,exact_normalized
 men:api:103442,Pablo Perez Ramos,men,4,2,men:sackmann:133185,Pol Amoros Ramos,8,0.914803,initial_surname
@@ -170,7 +170,7 @@ men:api:1240,Federico Arnaboldi,men,3,1,men:sackmann:206467,Federico Arnaboldi,2
 men:api:1242,Maks Kasnikowski,men,7,1,men:sackmann:209874,Maks Kasnikowski,222,0.999,exact_normalized
 men:api:1243,Max Houkes,men,3,1,men:sackmann:208069,Max Houkes,260,0.999,exact_normalized
 men:api:1245,Gabriele Piraino,men,10,1,men:sackmann:210042,Gabriele Piraino,211,0.999,exact_normalized
-men:api:1247,Matt Kuhar,men,4,1,men:sackmann:208386,Matt Kuhar,112,0.999,exact_normalized
+men:api:1247,Matt Kuhar,men,5,1,men:sackmann:208386,Matt Kuhar,112,0.999,exact_normalized
 men:api:1249,Bryce Nakashima,men,6,1,men:sackmann:210416,Bryce Nakashima,31,0.999,exact_normalized
 men:api:1249,Bryce Nakashima,men,6,2,men:sackmann:206909,Brandon Nakashima,238,0.975476,exact_initial_form
 men:api:1250,Alexander Bernard,men,3,1,men:sackmann:209060,Alexander Bernard,42,0.999,exact_normalized
@@ -256,7 +256,7 @@ men:api:13923,Sebastian Osorio Juan,men,3,2,men:sackmann:211390,Sergi Fita Juan,
 men:api:13973,V. Osminkin,men,3,1,men:sackmann:209858,Vladimir Osminkin,4,0.971609,exact_initial_form
 men:api:13986,Daniil Ostapenkov,men,5,1,men:sackmann:209867,Daniil Ostapenkov,125,0.999,exact_normalized
 men:api:14018,Facundo Yunis,men,2,1,men:sackmann:209947,Facundo Yunis,18,0.999,exact_normalized
-men:api:14021,Yaojie Zeng,men,9,1,men:sackmann:210483,Yaojie Zeng,90,0.999,exact_normalized
+men:api:14021,Yaojie Zeng,men,10,1,men:sackmann:210483,Yaojie Zeng,90,0.999,exact_normalized
 men:api:14024,Alexandre Aubriot,men,4,1,men:sackmann:208147,Alexandre Aubriot,204,0.999,exact_normalized
 men:api:14025,Benito Sanchez Martinez,men,2,1,men:sackmann:209917,Benito Sanchez Martinez,21,0.999,exact_normalized
 men:api:14085,Joaquin Rodriguez Lorenzo,men,3,1,men:sackmann:202271,Lorenzo Joaquin Rodriguez,214,0.999,exact_token_set
@@ -296,8 +296,8 @@ men:api:15277,Daniel Milavsky,men,6,1,men:sackmann:212251,Daniel Milavsky,114,0.
 men:api:15278,Giulio Perego,men,4,1,men:sackmann:212280,Giulio Perego ,55,0.999,exact_normalized
 men:api:15283,Gabrielius Guzauskas,men,1,1,men:sackmann:212237,Gabrielius Guzauskas,15,0.999,exact_normalized
 men:api:15290,Enzo Aguiard,men,8,1,men:sackmann:212174,Enzo Aguiard,64,0.999,exact_normalized
-men:api:15304,Kuan-Yi Lee,men,4,1,men:sackmann:134120,Kuan Yi Lee,107,0.999,exact_normalized
-men:api:15304,Kuan-Yi Lee,men,4,2,men:sackmann:212293,Karl Kazuma Lee,26,0.909142,initial_surname
+men:api:15304,Kuan-Yi Lee,men,5,1,men:sackmann:134120,Kuan Yi Lee,107,0.999,exact_normalized
+men:api:15304,Kuan-Yi Lee,men,5,2,men:sackmann:212293,Karl Kazuma Lee,26,0.909142,initial_surname
 men:api:15332,Keaton Hance,men,5,1,men:sackmann:213825,Keaton Hance,29,0.999,exact_normalized
 men:api:15381,P. Rodrigues,men,4,1,men:sackmann:109946,Pedro Rodrigues,60,0.974111,exact_initial_form
 men:api:15387,Diogo Marques,men,1,1,men:sackmann:202081,Diogo Marques,85,0.999,exact_normalized
@@ -321,7 +321,7 @@ men:api:17462,Pedro Rodenas,men,4,1,men:sackmann:210203,Pedro Rodenas,75,0.999,e
 men:api:17463,Darwin Blanch,men,5,1,men:sackmann:210464,Darwin Blanch,141,0.999,exact_normalized
 men:api:17463,Darwin Blanch,men,5,2,men:sackmann:209898,Dali Blanch,223,0.975412,exact_initial_form
 men:api:1748,Pierre-Hugues Herbert,men,4,1,men:sackmann:105732,Pierre Hugues Herbert,193,0.999,exact_normalized
-men:api:1749,Max Purcell,men,4,1,men:sackmann:126845,Max Purcell,129,0.999,exact_normalized
+men:api:1749,Max Purcell,men,5,1,men:sackmann:126845,Max Purcell,129,0.999,exact_normalized
 men:api:1751,Mitchell Krueger,men,2,1,men:sackmann:106283,Mitchell Krueger,212,0.999,exact_normalized
 men:api:1754,Dalibor Svrcina,men,6,1,men:sackmann:207494,Dalibor Svrcina,241,0.999,exact_normalized
 men:api:1756,Nicolas Kicker,men,6,1,men:sackmann:106044,Nicolas Kicker,147,0.999,exact_normalized
@@ -349,7 +349,7 @@ men:api:1854,Dan Added,men,6,1,men:sackmann:200385,Dan Added,268,0.999,exact_nor
 men:api:1858,Jack Pinnington Jones,men,6,1,men:sackmann:209957,Jack Pinnington Jones,130,0.999,exact_normalized
 men:api:1861,Evgenii Tiurnev,men,2,1,men:sackmann:126185,Evgenii Tiurnev,157,0.999,exact_normalized
 men:api:1863,Ergi Kirkin,men,6,1,men:sackmann:144985,Ergi Kirkin,237,0.999,exact_normalized
-men:api:1869,Grigoriy Lomakin,men,6,1,men:sackmann:200441,Grigoriy Lomakin,179,0.999,exact_normalized
+men:api:1869,Grigoriy Lomakin,men,7,1,men:sackmann:200441,Grigoriy Lomakin,179,0.999,exact_normalized
 men:api:1872,Petros Tsitsipas,men,5,1,men:sackmann:202065,Petros Tsitsipas,62,0.999,exact_normalized
 men:api:1872,Petros Tsitsipas,men,5,2,men:sackmann:210409,Pavlos Tsitsipas,92,0.974533,exact_initial_form
 men:api:1873,Raul Brancaccio,men,6,1,men:sackmann:134840,Raul Brancaccio,226,0.999,exact_normalized
@@ -472,6 +472,7 @@ men:api:2460,Makoto Ochi,men,1,1,men:sackmann:200024,Makoto Ochi,122,0.999,exact
 men:api:2467,Isaac Becroft,men,4,1,men:sackmann:208653,Isaac Becroft,96,0.999,exact_normalized
 men:api:24770,Leo Raquillet,men,4,1,men:sackmann:210447,Leo Raquillet,129,0.999,exact_normalized
 men:api:2500,Jonathan Mridha,men,3,1,men:sackmann:111197,Jonathan Mridha,68,0.999,exact_normalized
+men:api:25008,Liam Krall,men,1,1,men:sackmann:210740,Liam Krall,32,0.999,exact_normalized
 men:api:2501,Tom Gentzsch,men,6,1,men:sackmann:210167,Tom Gentzsch,274,0.999,exact_normalized
 men:api:25015,Sam Ryan Ziegann,men,7,1,men:sackmann:208160,Sam Ryan Ziegann,87,0.999,exact_normalized
 men:api:2502,Johannes Ingildsen,men,1,1,men:sackmann:134087,Johannes Ingildsen,66,0.999,exact_normalized
@@ -482,7 +483,7 @@ men:api:2517,Toby Martin,men,3,1,men:sackmann:106132,Toby Martin,93,0.999,exact_
 men:api:25272,Jan Kupcic,men,9,1,men:sackmann:209314,Jan Kupcic,92,0.999,exact_normalized
 men:api:25278,Constantin Spiridon Denis,men,2,1,men:sackmann:212591,Denis Constantin Spiridon ,59,0.999,exact_token_set
 men:api:25386,M. U. Kask,men,2,1,men:sackmann:210490,Matthias Uwe Kask,4,0.917609,initial_surname
-men:api:25650,Jun Kim Geun,men,4,1,men:sackmann:208130,Geun Jun Kim,43,0.998784,exact_token_set
+men:api:25650,Jun Kim Geun,men,5,1,men:sackmann:208130,Geun Jun Kim,43,0.998784,exact_token_set
 men:api:25726,Niccolo Baroni,men,3,1,men:sackmann:210526,Niccolo Baroni,50,0.999,exact_normalized
 men:api:25740,Thantub Suksumrarn,men,2,1,men:sackmann:209171,Thantub Suksumrarn,84,0.999,exact_normalized
 men:api:26613,Paul Barbier Gazeu,men,3,1,men:sackmann:210746,Paul Barbier Gazeu,35,0.999,exact_normalized
@@ -513,8 +514,8 @@ men:api:2844,Matteo Berrettini,men,4,1,men:sackmann:126610,Matteo Berrettini,146
 men:api:2846,Frances Tiafoe,men,11,1,men:sackmann:126207,Frances Tiafoe,213,0.999,exact_normalized
 men:api:2847,Andrey Rublev,men,4,1,men:sackmann:126094,Andrey Rublev,248,0.999,exact_normalized
 men:api:2848,Miomir Kecmanovic,men,4,1,men:sackmann:200175,Miomir Kecmanovic,209,0.999,exact_normalized
-men:api:2851,Spencer Johnson,men,13,1,men:sackmann:212958,Spencer Johnson,49,0.999,exact_normalized
-men:api:2851,Spencer Johnson,men,13,2,men:sackmann:105449,Steve Johnson,45,0.973829,exact_initial_form
+men:api:2851,Spencer Johnson,men,14,1,men:sackmann:212958,Spencer Johnson,49,0.999,exact_normalized
+men:api:2851,Spencer Johnson,men,14,2,men:sackmann:105449,Steve Johnson,45,0.973829,exact_initial_form
 men:api:28511,Arthur Bonnaud,men,2,1,men:sackmann:210733,Arthur Bonnaud,64,0.999,exact_normalized
 men:api:28596,Oliver Bonding,men,7,1,men:sackmann:212839,Oliver Bonding,47,0.999,exact_normalized
 men:api:28597,Henry Jefferson,men,3,1,men:sackmann:213890,Henry Jefferson,6,0.999,exact_normalized
@@ -588,7 +589,7 @@ men:api:373,Franco Agamenone,men,8,1,men:sackmann:106162,Franco Agamenone,214,0.
 men:api:374,Alexandre Muller,men,1,1,men:sackmann:124186,Alexandre Muller,226,0.999,exact_normalized
 men:api:37856,Francesco Ferrari,men,4,1,men:sackmann:133224,Francesco Ferrari,88,0.999,exact_normalized
 men:api:37857,Ryan Colby,men,3,1,men:sackmann:210242,Ryan Colby,41,0.999,exact_normalized
-men:api:37866,Chase Ferguson,men,3,1,men:sackmann:207994,Chase Ferguson,107,0.999,exact_normalized
+men:api:37866,Chase Ferguson,men,4,1,men:sackmann:207994,Chase Ferguson,107,0.999,exact_normalized
 men:api:37882,Mika Brunold,men,3,1,men:sackmann:209983,Mika Brunold,196,0.999,exact_normalized
 men:api:37883,Jan Hrazdil,men,5,1,men:sackmann:210754,Jan Hrazdil,82,0.999,exact_normalized
 men:api:37890,William Jansen,men,3,1,men:sackmann:210522,William Jansen,40,0.999,exact_normalized
@@ -821,7 +822,7 @@ men:api:50819,Piet Steveker,men,1,1,men:sackmann:212128,Piet Steveker,4,0.999,ex
 men:api:51078,Maxence Rivet,men,4,1,men:sackmann:212134,Maxence Rivet,118,0.999,exact_normalized
 men:api:51377,Nik Mikovic,men,2,1,men:sackmann:212119,Nik Mikovic ,37,0.999,exact_normalized
 men:api:51438,Oskar Jansson,men,3,1,men:sackmann:212150,Oskar Jansson,17,0.999,exact_normalized
-men:api:51618,Maxwell Exsted,men,6,1,men:sackmann:212142,Maxwell Exsted,44,0.999,exact_normalized
+men:api:51618,Maxwell Exsted,men,7,1,men:sackmann:212142,Maxwell Exsted,44,0.999,exact_normalized
 men:api:51626,Marko Maksimovic,men,6,1,men:sackmann:210554,Marko Maksimovic,77,0.999,exact_normalized
 men:api:5181,Gonzalo Villanueva,men,12,1,men:sackmann:106380,Gonzalo Villanueva,276,0.999,exact_normalized
 men:api:51949,Nikola Djosic,men,5,1,men:sackmann:212149,Nikola Djosic,47,0.999,exact_normalized
@@ -1023,7 +1024,7 @@ men:api:59244,Miles Clark,men,1,1,men:sackmann:212473,Miles Clark,15,0.999,exact
 men:api:59291,William Rejchtman Vinciguerra,men,4,1,men:sackmann:212478,William Rejchtman Vinciguerra,44,0.999,exact_normalized
 men:api:593,Roberto Carballes Baena,men,12,1,men:sackmann:106148,Roberto Carballes Baena,202,0.999,exact_normalized
 men:api:59301,Minghui Zhang,men,4,1,men:sackmann:212471,Minghui Zhang,27,0.999,exact_normalized
-men:api:59305,Xirui Han,men,4,1,men:sackmann:212472,Xirui Han,22,0.999,exact_normalized
+men:api:59305,Xirui Han,men,5,1,men:sackmann:212472,Xirui Han,22,0.999,exact_normalized
 men:api:59410,Salvador Price,men,6,1,men:sackmann:212832,Salvador Price,61,0.999,exact_normalized
 men:api:59599,Ludovico Vaccari,men,3,1,men:sackmann:212488,Ludovico Vaccari,15,0.999,exact_normalized
 men:api:59643,Pablo Aunion,men,4,1,men:sackmann:213758,Pablo Aunion,16,0.999,exact_normalized
@@ -1285,7 +1286,7 @@ men:api:73580,Patrick Jozwicki,men,1,1,men:sackmann:213168,Patrick Jozwicki,9,0.
 men:api:73645,Leonardo Cattaneo,men,1,1,men:sackmann:213180,Leonardo Cattaneo,22,0.999,exact_normalized
 men:api:73806,Makar Krivoshchekov,men,1,1,men:sackmann:213185,Makar Krivoshchekov,17,0.999,exact_normalized
 men:api:73841,Jacopo Vasami,men,9,1,men:sackmann:213635,Jacopo Vasami,70,0.999,exact_normalized
-men:api:73842,Ronit Karki,men,3,1,men:sackmann:213838,Ronit Karki,26,0.999,exact_normalized
+men:api:73842,Ronit Karki,men,4,1,men:sackmann:213838,Ronit Karki,26,0.999,exact_normalized
 men:api:73843,Maximus Dussault,men,3,1,men:sackmann:213655,Maximus Dussault,7,0.999,exact_normalized
 men:api:73844,R. Cozad,men,2,1,men:sackmann:213743,Ryan Cozad,4,0.971609,exact_initial_form
 men:api:73845,Jack Secord,men,1,1,men:sackmann:213761,Jack Secord,5,0.999,exact_normalized
@@ -1379,7 +1380,7 @@ men:api:78933,Ashton McLeod,men,5,1,men:sackmann:213916,Ashton Mcleod,26,0.999,e
 men:api:78934,Michele Mecarelli,men,3,1,men:sackmann:213356,Michele Mecarelli,32,0.999,exact_normalized
 men:api:78981,Zangar Nurlanuly,men,3,1,men:sackmann:213930,Zangar Nurlanuly,13,0.999,exact_normalized
 men:api:78985,Jamie Mackenzie,men,6,1,men:sackmann:214018,Jamie Mackenzie,29,0.999,exact_normalized
-men:api:7912,Moerani Bouzige,men,6,1,men:sackmann:207728,Moerani Bouzige,255,0.999,exact_normalized
+men:api:7912,Moerani Bouzige,men,7,1,men:sackmann:207728,Moerani Bouzige,255,0.999,exact_normalized
 men:api:792,Tsung-Hao Huang,men,7,1,men:sackmann:202356,Tsung Hao Huang,194,0.999,exact_normalized
 men:api:793,Ryuki Matsuda,men,8,1,men:sackmann:207987,Ryuki Matsuda,234,0.999,exact_normalized
 men:api:79317,I. Maltsev,men,1,1,men:sackmann:213734,Ilya Maltsev,4,0.971609,exact_initial_form
@@ -1444,7 +1445,7 @@ men:api:83534,Woo Cho Seung,men,3,1,men:sackmann:212649,Seung Woo Cho,34,0.99855
 men:api:83545,Jakub Vrba,men,5,1,men:sackmann:213551,Jakub Vrba ,10,0.999,exact_normalized
 men:api:837,Lorenzo Rottoli,men,4,1,men:sackmann:209164,Lorenzo Rottoli,174,0.999,exact_normalized
 men:api:83821,Nav Dayal,men,1,1,men:sackmann:213885,Nav Dayal,8,0.999,exact_normalized
-men:api:83845,R. Santhosh,men,1,1,men:sackmann:213886,Roshan Santhosh,5,0.971792,exact_initial_form
+men:api:83845,R. Santhosh,men,2,1,men:sackmann:213886,Roshan Santhosh,5,0.971792,exact_initial_form
 men:api:83883,Richard Antoni,men,4,1,men:sackmann:213898,Richard Antoni,21,0.999,exact_normalized
 men:api:83886,V. Martishev,men,1,1,men:sackmann:213897,Valeriy Martishev,3,0.971386,exact_initial_form
 men:api:83913,Xavi Palomar,men,2,1,men:sackmann:214015,Xavi Palomar,14,0.999,exact_normalized
@@ -1502,7 +1503,7 @@ men:api:86770,Kelly Giese,men,2,1,men:sackmann:213985,Kelly Giese,7,0.999,exact_
 men:api:868,Akira Santillan,men,7,1,men:sackmann:117361,Akira Santillan,187,0.999,exact_normalized
 men:api:86805,Oskari Eerola,men,2,1,men:sackmann:210601,Oskari Eerola,17,0.999,exact_normalized
 men:api:869,Matas Vasiliauskas,men,7,1,men:sackmann:209977,Matas Vasiliauskas,53,0.999,exact_normalized
-men:api:87025,Fanming Meng,men,7,1,men:sackmann:214013,Fanming Meng,38,0.999,exact_normalized
+men:api:87025,Fanming Meng,men,8,1,men:sackmann:214013,Fanming Meng,38,0.999,exact_normalized
 men:api:87070,F. Garla,men,1,1,men:sackmann:106339,Felipe Assuncao Garla,6,0.906946,initial_surname
 men:api:87098,Daniel Tazabekov,men,1,1,men:sackmann:214068,Daniel Tazabekov,4,0.999,exact_normalized
 men:api:87117,J. Borsoi,men,2,1,men:sackmann:214042,Jacobo Borsoi,8,0.972197,exact_initial_form
@@ -1512,7 +1513,7 @@ men:api:87145,M. V. Chelemen,men,1,1,men:sackmann:214027,Matei Victor Chelemen,2
 men:api:87263,Matei Varbanciu,men,2,1,men:sackmann:214028,Matei Varbanciu,9,0.999,exact_normalized
 men:api:87316,Laurence Teunissen,men,5,1,men:sackmann:214038,Laurence Teunissen,16,0.999,exact_normalized
 men:api:8733,Oleg Prihodko,men,3,1,men:sackmann:144716,Oleg Prihodko,203,0.999,exact_normalized
-men:api:87371,Chen Ye,men,2,1,men:sackmann:214029,Ye Chen,11,0.997485,exact_token_set
+men:api:87371,Chen Ye,men,3,1,men:sackmann:214029,Ye Chen,11,0.997485,exact_token_set
 men:api:8742,Ryota Tanuma,men,2,1,men:sackmann:133291,Ryota Tanuma,53,0.999,exact_normalized
 men:api:87421,Djordje Sapic,men,1,1,men:sackmann:214024,Djordje Sapic,3,0.999,exact_normalized
 men:api:87538,Y. Naydenov,men,1,1,men:sackmann:213396,Yoan Naydenov,5,0.971792,exact_initial_form
@@ -1726,7 +1727,7 @@ women:api:102150,M. Nishiwaki,women,3,1,women:sackmann:270538,Miyu Nishiwaki,7,0
 women:api:102151,A. OKUDE,women,1,1,women:sackmann:270534,Ayaho Okude,3,0.971386,exact_initial_form
 women:api:102171,T. Marcu,women,3,1,women:sackmann:270551,Thea Marcu,5,0.971792,exact_initial_form
 women:api:10227,Chengyiyi Yuan,women,3,1,women:sackmann:215134,Chengyiyi Yuan,179,0.999,exact_normalized
-women:api:1023,Yi Yang Ya,women,4,1,women:sackmann:222390,Ya Yi Yang,151,0.999,exact_token_set
+women:api:1023,Yi Yang Ya,women,5,1,women:sackmann:222390,Ya Yi Yang,151,0.999,exact_token_set
 women:api:102356,S. Aksu,women,7,1,women:sackmann:220798,Semra Aksu,9,0.972303,exact_initial_form
 women:api:102357,D. Kuznetsova,women,3,1,women:sackmann:267337,Daria Kuznetsova,13,0.972639,exact_initial_form
 women:api:102358,M. Azizyan,women,1,1,women:sackmann:270546,Maria Azizyan,4,0.971609,exact_initial_form
@@ -1921,7 +1922,7 @@ women:api:13538,Aunchisa Chanta,women,6,1,women:sackmann:220598,Aunchisa Chanta,
 women:api:13538,Aunchisa Chanta,women,6,2,women:sackmann:223005,Anchisa Chanta,131,0.974883,exact_initial_form
 women:api:13544,Duru Soke,women,8,1,women:sackmann:224488,Duru Soke,51,0.999,exact_normalized
 women:api:13545,Maria Toma,women,5,1,women:sackmann:215966,Maria Toma,157,0.999,exact_normalized
-women:api:13546,Natsumi Kawaguchi,women,2,1,women:sackmann:221229,Natsumi Kawaguchi,144,0.999,exact_normalized
+women:api:13546,Natsumi Kawaguchi,women,3,1,women:sackmann:221229,Natsumi Kawaguchi,144,0.999,exact_normalized
 women:api:1355,Lucie Petruzelova,women,10,1,women:sackmann:221219,Lucie Petruzelova,67,0.999,exact_normalized
 women:api:13618,Aoi Ito,women,5,1,women:sackmann:256684,Aoi Ito,239,0.999,exact_normalized
 women:api:1362,Ching Wu Ho,women,1,1,women:sackmann:211208,Ho Ching Wu,128,0.999,exact_token_set
@@ -2153,7 +2154,7 @@ women:api:2088,Eva Lys,women,4,1,women:sackmann:220332,Eva Lys,167,0.999,exact_n
 women:api:2089,Magdalena Frech,women,5,1,women:sackmann:211684,Magdalena Frech,214,0.999,exact_normalized
 women:api:209,Elizabeth Mandlik,women,7,1,women:sackmann:216097,Elizabeth Mandlik,201,0.999,exact_normalized
 women:api:20923,Dayeon Back,women,6,1,women:sackmann:220432,Dayeon Back,238,0.999,exact_normalized
-women:api:2114,Evialina Laskevich,women,6,1,women:sackmann:222184,Evialina Laskevich,122,0.999,exact_normalized
+women:api:2114,Evialina Laskevich,women,7,1,women:sackmann:222184,Evialina Laskevich,122,0.999,exact_normalized
 women:api:2116,Franziska Sziedat,women,8,1,women:sackmann:220645,Franziska Sziedat,137,0.999,exact_normalized
 women:api:2117,Eszter Meri,women,5,1,women:sackmann:221150,Eszter Meri,121,0.999,exact_normalized
 women:api:21178,Jennifer Ruggeri,women,10,1,women:sackmann:221411,Jennifer Ruggeri,179,0.999,exact_normalized
@@ -2239,8 +2240,8 @@ women:api:2415,Ella Seidel,women,4,1,women:sackmann:230870,Ella Seidel,247,0.999
 women:api:24413,Lourdes Ayala,women,8,1,women:sackmann:236968,Lourdes Ayala,87,0.999,exact_normalized
 women:api:24470,Stefanie Auer,women,2,1,women:sackmann:222558,Stefanie Auer,96,0.999,exact_normalized
 women:api:24512,Arina Arifullina,women,5,1,women:sackmann:239160,Arina Arifullina,101,0.999,exact_normalized
-women:api:24515,Onyu Choi,women,1,1,women:sackmann:266529,Onyu Choi,120,0.999,exact_normalized
-women:api:24515,Onyu Choi,women,1,2,women:sackmann:265011,Ona Choi,3,0.971386,exact_initial_form
+women:api:24515,Onyu Choi,women,2,1,women:sackmann:266529,Onyu Choi,120,0.999,exact_normalized
+women:api:24515,Onyu Choi,women,2,2,women:sackmann:265011,Ona Choi,3,0.971386,exact_initial_form
 women:api:24523,Marta Soriano Santiago,women,10,1,women:sackmann:259105,Marta Soriano Santiago,98,0.999,exact_normalized
 women:api:24582,Chrystal Lopez,women,2,1,women:sackmann:263838,Chrystal Lopez,69,0.999,exact_normalized
 women:api:24733,Ella McDonald,women,4,1,women:sackmann:259591,Ella Mcdonald,133,0.999,exact_normalized
@@ -2339,8 +2340,8 @@ women:api:32283,S. H. Jang,women,1,3,women:sackmann:204294,Su Jeong Jang,145,0.9
 women:api:32561,Capucine Jauffret,women,3,1,women:sackmann:263981,Capucine Jauffret,31,0.999,exact_normalized
 women:api:32562,Shannon Lam,women,5,1,women:sackmann:260845,Shannon Lam,64,0.999,exact_normalized
 women:api:32728,T. Ahamout,women,1,1,women:sackmann:260608,Tasnime Ahamout,7,0.972079,exact_initial_form
-women:api:32808,Gaeul Jang,women,7,1,women:sackmann:260638,Gaeul Jang,90,0.999,exact_normalized
-women:api:32808,Gaeul Jang,women,7,2,women:sackmann:239428,Gio Jang,45,0.973829,exact_initial_form
+women:api:32808,Gaeul Jang,women,8,1,women:sackmann:260638,Gaeul Jang,90,0.999,exact_normalized
+women:api:32808,Gaeul Jang,women,8,2,women:sackmann:239428,Gio Jang,45,0.973829,exact_initial_form
 women:api:33,Tilwith Di Girolami,women,3,1,women:sackmann:228910,Tilwith Di Girolami,145,0.999,exact_normalized
 women:api:33202,Lucie Urbanova,women,1,1,women:sackmann:256686,Lucie Urbanova,44,0.999,exact_normalized
 women:api:3324,Taylah Preston,women,9,1,women:sackmann:223194,Taylah Preston,233,0.999,exact_normalized
@@ -2569,8 +2570,8 @@ women:api:50670,Kurea Hayasaka,women,4,1,women:sackmann:263865,Kurea Hayasaka,14
 women:api:50682,Lidia Encheva,women,9,1,women:sackmann:260565,Lidia Encheva,158,0.999,exact_normalized
 women:api:507,Dalma Galfi,women,5,1,women:sackmann:213646,Dalma Galfi,209,0.999,exact_normalized
 women:api:50791,Kanon Sawashiro,women,7,1,women:sackmann:263905,Kanon Sawashiro,53,0.999,exact_normalized
-women:api:50792,Reina Goto,women,8,1,women:sackmann:260737,Reina Goto,68,0.999,exact_normalized
-women:api:50792,Reina Goto,women,8,2,women:sackmann:270536,Riho Goto,1,0.970693,exact_initial_form
+women:api:50792,Reina Goto,women,9,1,women:sackmann:260737,Reina Goto,68,0.999,exact_normalized
+women:api:50792,Reina Goto,women,9,2,women:sackmann:270536,Riho Goto,1,0.970693,exact_initial_form
 women:api:5085,Ayano Shimizu,women,2,1,women:sackmann:215550,Ayano Shimizu,177,0.999,exact_normalized
 women:api:5088,Haruka Kaji,women,6,1,women:sackmann:211844,Haruka Kaji,237,0.999,exact_normalized
 women:api:509,Claire Liu,women,5,1,women:sackmann:214906,Claire Liu,158,0.999,exact_normalized
@@ -2582,7 +2583,7 @@ women:api:51004,Kira Matushkina,women,1,1,women:sackmann:262886,Kira Matushkina,
 women:api:51161,C. Plakk,women,2,1,women:sackmann:216115,Carol Plakk,26,0.973296,exact_initial_form
 women:api:512,Martina Trevisan,women,6,1,women:sackmann:203354,Martina Trevisan,145,0.999,exact_normalized
 women:api:51324,Arina Bulatova,women,1,1,women:sackmann:256712,Arina Bulatova,158,0.999,exact_normalized
-women:api:51325,Tian Deng Tiana,women,3,1,women:sackmann:260528,Tiana Tian Deng,51,0.998951,exact_token_set
+women:api:51325,Tian Deng Tiana,women,4,1,women:sackmann:260528,Tiana Tian Deng,51,0.998951,exact_token_set
 women:api:51326,Jana Otzipka,women,4,1,women:sackmann:260445,Jana Otzipka,106,0.999,exact_normalized
 women:api:51328,Lea Nilsson,women,6,1,women:sackmann:263909,Lea Nilsson,47,0.999,exact_normalized
 women:api:51378,Alevtina Ibragimova,women,10,1,women:sackmann:260581,Alevtina Ibragimova,193,0.999,exact_normalized
@@ -2616,7 +2617,7 @@ women:api:52648,Delia Gaillard,women,3,1,women:sackmann:238084,Delia Gaillard,71
 women:api:52683,Alena Kovackova,women,5,1,women:sackmann:266800,Alena Kovackova,79,0.999,exact_normalized
 women:api:52683,Alena Kovackova,women,5,2,women:sackmann:270058,Jana Kovackova,52,0.769488,fuzzy_same_last
 women:api:52684,Dune Vaissaud,women,3,1,women:sackmann:266642,Dune Vaissaud,72,0.999,exact_normalized
-women:api:52686,Marie Desvignes Eva,women,2,1,women:sackmann:261082,Eva Marie Desvignes,69,0.999,exact_token_set
+women:api:52686,Marie Desvignes Eva,women,3,1,women:sackmann:261082,Eva Marie Desvignes,69,0.999,exact_token_set
 women:api:52688,Ottavia Ghirardato Emma,women,9,1,women:sackmann:264270,Emma Ottavia Ghirardato,47,0.998871,exact_token_set
 women:api:52689,Maya Joint,women,4,1,women:sackmann:233741,Maya Joint,206,0.999,exact_normalized
 women:api:527,Aliaksandra Sasnovich,women,4,1,women:sackmann:205925,Aliaksandra Sasnovich,193,0.999,exact_normalized
@@ -2627,7 +2628,7 @@ women:api:52840,Anna Sedysheva,women,4,1,women:sackmann:264073,Anna Sedysheva,51
 women:api:53,Luisa Meyer Auf Der Heide,women,5,1,women:sackmann:220053,Luisa Meyer Auf Der Heide,149,0.999,exact_normalized
 women:api:53035,Xi Luo,women,3,1,women:sackmann:264069,Xi Luo,56,0.999,exact_normalized
 women:api:53046,Lilli Tagger,women,1,1,women:sackmann:260172,Lilli Tagger,106,0.999,exact_normalized
-women:api:53060,Chenting Zhu,women,9,1,women:sackmann:264064,Chenting Zhu,113,0.999,exact_normalized
+women:api:53060,Chenting Zhu,women,10,1,women:sackmann:264064,Chenting Zhu,113,0.999,exact_normalized
 women:api:53147,Yiming Dang,women,2,1,women:sackmann:222330,Yiming Dang,89,0.999,exact_normalized
 women:api:53165,Ela Plosnik,women,3,1,women:sackmann:263809,Ela Plosnik,39,0.999,exact_normalized
 women:api:53278,Natsuki Yoshimoto,women,8,1,women:sackmann:264144,Natsuki Yoshimoto,64,0.999,exact_normalized
@@ -2738,7 +2739,7 @@ women:api:60664,Paola Lopez,women,2,2,women:sackmann:266690,Pia Vargas Lopez,1,0
 women:api:60799,Kali Supova,women,4,1,women:sackmann:266378,Kali Supova,35,0.999,exact_normalized
 women:api:61034,Mia Pohankova,women,5,1,women:sackmann:266376,Mia Pohankova,52,0.999,exact_normalized
 women:api:61144,Matylda Burylo,women,3,1,women:sackmann:222845,Matylda Burylo,49,0.999,exact_normalized
-women:api:61314,Maria Kalyakina,women,2,1,women:sackmann:252535,Maria Kalyakina,136,0.999,exact_normalized
+women:api:61314,Maria Kalyakina,women,3,1,women:sackmann:252535,Maria Kalyakina,136,0.999,exact_normalized
 women:api:61315,Francesca Gandolfi,women,2,1,women:sackmann:260984,Francesca Gandolfi,50,0.999,exact_normalized
 women:api:61356,Micol Salvadori,women,3,1,women:sackmann:266406,Micol Salvadori,34,0.999,exact_normalized
 women:api:61490,Vlada Mincheva,women,3,1,women:sackmann:260214,Vlada Mincheva,90,0.999,exact_normalized
@@ -2769,7 +2770,7 @@ women:api:63057,Tahlia Kokkinis,women,2,1,women:sackmann:260667,Tahlia Kokkinis,
 women:api:63288,Johanna Brockmann Tessa,women,6,1,women:sackmann:260598,Tessa Johanna Brockmann,167,0.999,exact_token_set
 women:api:63412,Maaya Rajeshwaran Revathi,women,2,1,women:sackmann:266722,Maaya Rajeshwaran Revathi,25,0.999,exact_normalized
 women:api:63416,Victoria Milovanova,women,9,1,women:sackmann:269870,Victoria Milovanova,74,0.999,exact_normalized
-women:api:63417,Wen Wan I,women,2,1,women:sackmann:267449,I Wen Wan,32,0.998497,exact_token_set
+women:api:63417,Wen Wan I,women,3,1,women:sackmann:267449,I Wen Wan,32,0.998497,exact_token_set
 women:api:63419,Daria Egorova,women,6,1,women:sackmann:266864,Daria Egorova,90,0.999,exact_normalized
 women:api:63420,Junhan Zhang,women,7,1,women:sackmann:260694,Junhan Zhang,97,0.999,exact_normalized
 women:api:63420,Junhan Zhang,women,7,2,women:sackmann:260795,Jiale Zhang,52,0.97397,exact_initial_form
@@ -2908,7 +2909,7 @@ women:api:72030,Marta Lombardini,women,7,1,women:sackmann:267409,Marta Lombardin
 women:api:72037,Remika Ohashi,women,1,1,women:sackmann:260957,Remika Ohashi,49,0.999,exact_normalized
 women:api:72055,G. Fenyves,women,2,1,women:sackmann:261126,Greta Fenyves,22,0.973135,exact_initial_form
 women:api:72129,C. Delmas Schaerer,women,3,1,women:sackmann:269868,Catalina Delmas Schaerer,8,0.972197,exact_initial_form
-women:api:72444,R. Kosaka,women,1,1,women:sackmann:263861,Rira Kosaka,11,0.972485,exact_initial_form
+women:api:72444,R. Kosaka,women,2,1,women:sackmann:263861,Rira Kosaka,11,0.972485,exact_initial_form
 women:api:72448,Victoria Balan Sara,women,8,1,women:sackmann:267431,Sara Victoria Balan,50,0.998932,exact_token_set
 women:api:72449,E. D. Finak,women,1,1,women:sackmann:266731,Eszter Dorka Finak,22,0.921802,initial_surname
 women:api:72749,Anna Kmiecik,women,2,1,women:sackmann:267734,Anna Kmiecik,26,0.999,exact_normalized
@@ -3029,9 +3030,9 @@ women:api:81859,V. Krebs Hyllested,women,1,1,women:sackmann:241716,Vilma Krebs H
 women:api:81860,L. Piskun,women,1,1,women:sackmann:270077,Liliya Piskun,4,0.971609,exact_initial_form
 women:api:821,David Petrovic,women,3,1,women:sackmann:239385,Doroteja Petrovic,61,0.974127,exact_initial_form
 women:api:82378,Karla Bartel,women,8,1,women:sackmann:264107,Karla Bartel,39,0.999,exact_normalized
-women:api:8238,Jing-Jing Lu,women,1,1,women:sackmann:201582,Jing Jing Lu,69,0.999,exact_normalized
-women:api:8238,Jing-Jing Lu,women,1,2,women:sackmann:203288,Jia Jing Lu,205,0.975328,exact_initial_form
-women:api:8238,Jing-Jing Lu,women,1,3,women:sackmann:214724,Jiaxi Lu,3,0.921386,initial_surname
+women:api:8238,Jing-Jing Lu,women,2,1,women:sackmann:201582,Jing Jing Lu,69,0.999,exact_normalized
+women:api:8238,Jing-Jing Lu,women,2,2,women:sackmann:203288,Jia Jing Lu,205,0.975328,exact_initial_form
+women:api:8238,Jing-Jing Lu,women,2,3,women:sackmann:214724,Jiaxi Lu,3,0.921386,initial_surname
 women:api:82380,Bella Payne,women,3,1,women:sackmann:270080,Bella Payne,43,0.999,exact_normalized
 women:api:82543,M. Knight,women,1,1,women:sackmann:270084,Megan Knight,4,0.971609,exact_initial_form
 women:api:82564,Xinran Sun,women,9,1,women:sackmann:270082,Xinran Sun,35,0.999,exact_normalized
@@ -3141,9 +3142,9 @@ women:api:88825,E. Gurianova,women,3,1,women:sackmann:222555,Elizaveta Gurianova
 women:api:88829,Viola Bedini,women,2,1,women:sackmann:270207,Viola Bedini,18,0.999,exact_normalized
 women:api:88830,Charlotte Narti,women,2,1,women:sackmann:270203,Charlotte Narti,7,0.999,exact_normalized
 women:api:89,Ana Grubor,women,5,1,women:sackmann:258191,Ana Grubor,142,0.999,exact_normalized
-women:api:8910,Ying Zhang,women,4,1,women:sackmann:213947,Ying Zhang,155,0.999,exact_normalized
-women:api:8910,Ying Zhang,women,4,2,women:sackmann:220498,Yuxin Zhang,7,0.972079,exact_initial_form
-women:api:8910,Ying Zhang,women,4,3,women:sackmann:264209,Yixin Zhang,2,0.971099,exact_initial_form
+women:api:8910,Ying Zhang,women,5,1,women:sackmann:213947,Ying Zhang,155,0.999,exact_normalized
+women:api:8910,Ying Zhang,women,5,2,women:sackmann:220498,Yuxin Zhang,7,0.972079,exact_initial_form
+women:api:8910,Ying Zhang,women,5,3,women:sackmann:264209,Yixin Zhang,2,0.971099,exact_initial_form
 women:api:89145,Anna Shkutova,women,3,1,women:sackmann:270216,Anna Shkutova,14,0.999,exact_normalized
 women:api:89146,Ava Schueller,women,2,1,women:sackmann:260443,Ava Schueller,19,0.999,exact_normalized
 women:api:89210,R. Yoshida,women,3,1,women:sackmann:267680,Riyo Yoshida,1,0.970693,exact_initial_form
@@ -3185,7 +3186,7 @@ women:api:9092,Himari Sato,women,2,1,women:sackmann:216156,Himari Sato,82,0.999,
 women:api:9092,Himari Sato,women,2,2,women:sackmann:221141,Hikaru Sato,182,0.975209,exact_initial_form
 women:api:9106,Shuo Feng,women,1,1,women:sackmann:215937,Shuo Feng,84,0.999,exact_normalized
 women:api:9107,Zhuoxuan Bai,women,5,1,women:sackmann:222296,Zhuoxuan Bai,135,0.999,exact_normalized
-women:api:9108,Meiqi Guo,women,3,1,women:sackmann:216162,Meiqi Guo,180,0.999,exact_normalized
+women:api:9108,Meiqi Guo,women,4,1,women:sackmann:216162,Meiqi Guo,180,0.999,exact_normalized
 women:api:91151,Sofia Johnson,women,3,1,women:sackmann:260338,Sofia Johnson,41,0.999,exact_normalized
 women:api:9118,Leolia Jeanjean,women,3,1,women:sackmann:206417,Leolia Jeanjean,236,0.999,exact_normalized
 women:api:9119,Margaux Rouvroy,women,2,1,women:sackmann:221191,Margaux Rouvroy,206,0.999,exact_normalized
@@ -3218,7 +3219,7 @@ women:api:9258,Maria Sholokhova,women,5,1,women:sackmann:233718,Maria Sholokhova
 women:api:9259,Polina Kudermetova,women,5,1,women:sackmann:221236,Polina Kudermetova,231,0.999,exact_normalized
 women:api:9260,Darja Vidmanova,women,9,1,women:sackmann:221307,Darja Vidmanova,129,0.999,exact_normalized
 women:api:92606,S. Kova,women,2,1,women:sackmann:270337,Sofia Kova,5,0.971792,exact_initial_form
-women:api:9261,Madelyn Nugroho Priska,women,5,1,women:sackmann:221187,Priska Madelyn Nugroho,155,0.999,exact_token_set
+women:api:9261,Madelyn Nugroho Priska,women,6,1,women:sackmann:221187,Priska Madelyn Nugroho,155,0.999,exact_token_set
 women:api:92610,A. D. Duarte,women,1,1,women:sackmann:265618,Agustina Daniela Duarte,11,0.915091,initial_surname
 women:api:9264,Polina Iatcenko,women,7,1,women:sackmann:223325,Polina Iatcenko,211,0.999,exact_normalized
 women:api:9265,Aliona Falei,women,7,1,women:sackmann:221434,Aliona Falei,203,0.999,exact_normalized

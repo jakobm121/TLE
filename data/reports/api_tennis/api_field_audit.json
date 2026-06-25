@@ -175,49 +175,51 @@
       "skipped": 152
     },
     "2026-06-24.json": {
-      "imported": 446,
+      "imported": 450,
       "raw_fixtures": 570,
-      "skipped": 124
+      "skipped": 120
     },
     "2026-06-25.json": {
-      "imported": 8,
+      "imported": 24,
       "raw_fixtures": 441,
-      "skipped": 433
+      "skipped": 417
     }
   },
   "gender_counts": {
-    "men": 3662,
-    "women": 2957
+    "men": 3672,
+    "women": 2967
   },
   "level_counts": {
     "atp_wta": 452,
     "challenger": 893,
     "grand_slam": 532,
-    "itf": 3752,
+    "itf": 3772,
     "qualifying": 990
   },
   "raw_surface_counts": {
-    "<blank>": 90,
+    "<blank>": 94,
     "api_tournament_metadata:Clay": 3591,
     "api_tournament_metadata:Clay (Indoor)": 31,
     "api_tournament_metadata:Grass": 886,
-    "api_tournament_metadata:Hard": 2052,
+    "api_tournament_metadata:Hard": 2068,
     "api_tournament_metadata:hard": 31
   },
   "status_counts": {
-    "<blank>": 435,
+    "<blank>": 406,
     "Cancelled": 171,
-    "Finished": 9113,
-    "Interrupted": 1,
+    "Finished": 9131,
+    "Interrupted": 3,
     "Retired": 232,
-    "Set 1": 2,
+    "Set 1": 7,
+    "Set 2": 2,
+    "Set 3": 2,
     "Walk Over": 161
   },
   "surface_counts": {
     "clay": 3622,
     "grass": 886,
-    "hard": 2083,
-    "unknown": 28
+    "hard": 2099,
+    "unknown": 32
   },
   "tournament_surface_map": {
     "exists": true,
