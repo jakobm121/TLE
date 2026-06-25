@@ -1,27 +1,27 @@
 {
   "cache_path": "data/raw/api_tennis/players/api_players.json",
-  "cache_total_after": 5520,
-  "cache_with_full_name_after": 2766,
+  "cache_total_after": 5522,
+  "cache_with_full_name_after": 2767,
   "collect_stats": {
-    "files_seen": 2,
-    "raw_fixtures_seen": 1001,
-    "singles_fixtures_used": 738,
-    "skipped_doubles_fixtures": 263
+    "files_seen": 1,
+    "raw_fixtures_seen": 441,
+    "singles_fixtures_used": 306,
+    "skipped_doubles_fixtures": 135
   },
   "counters": {
-    "cache_existing_before": 5511,
-    "candidate_player_ids": 1324,
-    "fetched": 150,
-    "fetched_missing_full_name": 144,
-    "fetched_with_full_name": 6,
-    "to_fetch": 150
+    "cache_existing_before": 5520,
+    "candidate_player_ids": 609,
+    "fetched": 31,
+    "fetched_missing_full_name": 30,
+    "fetched_with_full_name": 1,
+    "to_fetch": 31
   },
   "date_filter": {
-    "end_date": "2026-06-24",
-    "start_date": "2026-06-23"
+    "end_date": "2026-06-25",
+    "start_date": "2026-06-25"
   },
   "errors": [],
-  "generated_at": "2026-06-24T08:01:08+00:00",
+  "generated_at": "2026-06-25T05:20:07+00:00",
   "method": "get_players",
   "outputs": {
     "cache": "data/raw/api_tennis/players/api_players.json",
@@ -29,60 +29,29 @@
     "report": "data/reports/api_tennis/fetch_api_player_details_report.json"
   },
   "raw_files": {
-    "2026-06-23.json": 413,
-    "2026-06-24.json": 588
+    "2026-06-25.json": 441
   },
   "raw_results_dir": "data/raw/api_tennis/results",
   "sample_fetched": [
     {
-      "player_bday": "28.09.2002",
-      "player_country": "Italy",
-      "player_full_name": "Lorenzo Claverie",
-      "player_key": "1856",
-      "player_logo": "",
-      "player_name": "L. Claverie",
+      "player_bday": "",
+      "player_country": "",
+      "player_full_name": "",
+      "player_key": "2576",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/2576_a-kucmova.jpg",
+      "player_name": "A. Kucmova",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-24T07:59:31+00:00"
+      "updated_at": "2026-06-25T05:19:45+00:00"
     },
     {
       "player_bday": "01.01.1970",
-      "player_country": "United Kingdom",
-      "player_full_name": "",
-      "player_key": "3663",
+      "player_country": "Netherlands",
+      "player_full_name": "Sander Jong",
+      "player_key": "12848",
       "player_logo": "",
-      "player_name": "D. Britton",
+      "player_name": "S. Jong",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-24T07:59:32+00:00"
-    },
-    {
-      "player_bday": "25.06.1992",
-      "player_country": "Serbia",
-      "player_full_name": "",
-      "player_key": "6825",
-      "player_logo": "",
-      "player_name": "I. Sabanov",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-24T07:59:32+00:00"
-    },
-    {
-      "player_bday": "15.09.2004",
-      "player_country": "USA",
-      "player_full_name": "Nicholas Godsick",
-      "player_key": "9375",
-      "player_logo": "https://api.api-tennis.com/logo-tennis/9375_n-godsick.jpg",
-      "player_name": "N. Godsick",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-24T07:59:33+00:00"
-    },
-    {
-      "player_bday": "20.12.2002",
-      "player_country": "USA",
-      "player_full_name": "",
-      "player_key": "13030",
-      "player_logo": "",
-      "player_name": "A. N. Isaacs",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-24T07:59:34+00:00"
+      "updated_at": "2026-06-25T05:19:46+00:00"
     },
     {
       "player_bday": "01.01.1970",
@@ -92,7 +61,7 @@
       "player_logo": "",
       "player_name": "V. Osminkin",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-24T07:59:34+00:00"
+      "updated_at": "2026-06-25T05:19:47+00:00"
     },
     {
       "player_bday": "02.11.2003",
@@ -102,57 +71,7 @@
       "player_logo": "",
       "player_name": "L. Munzarova",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-24T07:59:35+00:00"
-    },
-    {
-      "player_bday": "05.04.2004",
-      "player_country": "Spain",
-      "player_full_name": "",
-      "player_key": "17461",
-      "player_logo": "",
-      "player_name": "R. I. Orgiles G.",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-24T07:59:36+00:00"
-    },
-    {
-      "player_bday": "29.04.2000",
-      "player_country": "Germany",
-      "player_full_name": "",
-      "player_key": "19419",
-      "player_logo": "https://api.api-tennis.com/logo-tennis/19419_e-jaeger.jpg",
-      "player_name": "E. Jaeger",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-24T07:59:36+00:00"
-    },
-    {
-      "player_bday": "20.11.2001",
-      "player_country": "Spain",
-      "player_full_name": "",
-      "player_key": "23289",
-      "player_logo": "",
-      "player_name": "P. Ortega Redondo",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-24T07:59:37+00:00"
-    },
-    {
-      "player_bday": "20.05.2002",
-      "player_country": "USA",
-      "player_full_name": "Liam Krall",
-      "player_key": "25008",
-      "player_logo": "https://api.api-tennis.com/logo-tennis/25008_l-krall.jpg",
-      "player_name": "L. Krall",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-24T07:59:37+00:00"
-    },
-    {
-      "player_bday": "",
-      "player_country": "",
-      "player_full_name": "",
-      "player_key": "26615",
-      "player_logo": "",
-      "player_name": "P. Inchauspe",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-24T07:59:38+00:00"
+      "updated_at": "2026-06-25T05:19:47+00:00"
     },
     {
       "player_bday": "09.03.1995",
@@ -162,77 +81,157 @@
       "player_logo": "",
       "player_name": "D. Ciobanu",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-24T07:59:39+00:00"
+      "updated_at": "2026-06-25T05:19:48+00:00"
     },
     {
       "player_bday": "",
       "player_country": "",
       "player_full_name": "",
-      "player_key": "27382",
+      "player_key": "31159",
       "player_logo": "",
-      "player_name": "C. Romero",
+      "player_name": "H. Shi",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-24T07:59:39+00:00"
+      "updated_at": "2026-06-25T05:19:49+00:00"
     },
     {
-      "player_bday": "03.10.2002",
+      "player_bday": "",
+      "player_country": "",
+      "player_full_name": "",
+      "player_key": "32144",
+      "player_logo": "",
+      "player_name": "N. Senic",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-25T05:19:50+00:00"
+    },
+    {
+      "player_bday": "",
+      "player_country": "",
+      "player_full_name": "",
+      "player_key": "40904",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/40904_t-lemaitre.jpg",
+      "player_name": "T. Lemaitre",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-25T05:19:50+00:00"
+    },
+    {
+      "player_bday": "10.06.2006",
+      "player_country": "Spain",
+      "player_full_name": "",
+      "player_key": "62687",
+      "player_logo": "",
+      "player_name": "M. A. Machado",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-25T05:19:51+00:00"
+    },
+    {
+      "player_bday": "03.04.2004",
+      "player_country": "France",
+      "player_full_name": "",
+      "player_key": "70353",
+      "player_logo": "",
+      "player_name": "M. Chambonniere",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-25T05:19:52+00:00"
+    },
+    {
+      "player_bday": "16.07.2009",
       "player_country": "USA",
       "player_full_name": "",
-      "player_key": "28541",
+      "player_key": "71133",
       "player_logo": "",
-      "player_name": "A. Catanzarite",
+      "player_name": "B. Kwon",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-24T07:59:40+00:00"
+      "updated_at": "2026-06-25T05:19:52+00:00"
     },
     {
-      "player_bday": "",
-      "player_country": "",
+      "player_bday": "01.01.1970",
+      "player_country": "Japan",
       "player_full_name": "",
-      "player_key": "32954",
-      "player_logo": "https://api.api-tennis.com/logo-tennis/32954_e-yaneva.jpg",
-      "player_name": "E. Yaneva",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-24T07:59:41+00:00"
-    },
-    {
-      "player_bday": "",
-      "player_country": "",
-      "player_full_name": "",
-      "player_key": "33234",
+      "player_key": "72444",
       "player_logo": "",
-      "player_name": "O. Bezzaz",
+      "player_name": "R. Kosaka",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-24T07:59:41+00:00"
+      "updated_at": "2026-06-25T05:19:53+00:00"
     },
     {
-      "player_bday": "",
-      "player_country": "",
+      "player_bday": "01.01.1970",
+      "player_country": "South Korea",
       "player_full_name": "",
-      "player_key": "33667",
-      "player_logo": "https://api.api-tennis.com/logo-tennis/33667_j-teichmann.jpg",
-      "player_name": "J. Teichmann",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-24T07:59:42+00:00"
-    },
-    {
-      "player_bday": "",
-      "player_country": "",
-      "player_full_name": "",
-      "player_key": "36452",
-      "player_logo": "https://api.api-tennis.com/logo-tennis/36452_t-prozorova.jpg",
-      "player_name": "T. Prozorova",
-      "source": "api_tennis:get_players",
-      "updated_at": "2026-06-24T07:59:43+00:00"
-    },
-    {
-      "player_bday": "",
-      "player_country": "",
-      "player_full_name": "",
-      "player_key": "37460",
+      "player_key": "74867",
       "player_logo": "",
-      "player_name": "J. Chiripal",
+      "player_name": "S. Y. Choi",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-24T07:59:43+00:00"
+      "updated_at": "2026-06-25T05:19:54+00:00"
+    },
+    {
+      "player_bday": "27.12.2002",
+      "player_country": "Japan",
+      "player_full_name": "",
+      "player_key": "76393",
+      "player_logo": "",
+      "player_name": "N. Suzuki",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-25T05:19:55+00:00"
+    },
+    {
+      "player_bday": "27.01.2006",
+      "player_country": "World",
+      "player_full_name": "",
+      "player_key": "76617",
+      "player_logo": "",
+      "player_name": "M. Shikhanova",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-25T05:19:55+00:00"
+    },
+    {
+      "player_bday": "24.10.2009",
+      "player_country": "Denmark",
+      "player_full_name": "",
+      "player_key": "85028",
+      "player_logo": "",
+      "player_name": "C. Hermanns",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-25T05:19:56+00:00"
+    },
+    {
+      "player_bday": "01.01.1970",
+      "player_country": "USA",
+      "player_full_name": "",
+      "player_key": "85208",
+      "player_logo": "",
+      "player_name": "C. Driscoll",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-25T05:19:57+00:00"
+    },
+    {
+      "player_bday": "01.01.1970",
+      "player_country": "Germany",
+      "player_full_name": "",
+      "player_key": "85378",
+      "player_logo": "",
+      "player_name": "L. Solakov",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-25T05:19:57+00:00"
+    },
+    {
+      "player_bday": "01.01.1970",
+      "player_country": "Germany",
+      "player_full_name": "",
+      "player_key": "85494",
+      "player_logo": "",
+      "player_name": "J. Soetebier",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-25T05:19:58+00:00"
+    },
+    {
+      "player_bday": "20.01.2001",
+      "player_country": "Belgium",
+      "player_full_name": "",
+      "player_key": "85611",
+      "player_logo": "",
+      "player_name": "D. Tixhon",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-25T05:19:59+00:00"
     }
   ],
   "source": "api_tennis"
