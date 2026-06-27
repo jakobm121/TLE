@@ -8617,7 +8617,7 @@
     "player_logo": "",
     "player_name": "R. Sancilio",
     "source": "api_tennis:get_players",
-    "updated_at": "2026-06-26T08:08:00+00:00"
+    "updated_at": "2026-06-27T07:35:36+00:00"
   },
   "103302": {
     "player_bday": "",
@@ -20777,7 +20777,7 @@
     "player_logo": "",
     "player_name": "L. Munzarova",
     "source": "api_tennis:get_players",
-    "updated_at": "2026-06-26T08:07:48+00:00"
+    "updated_at": "2026-06-27T07:35:35+00:00"
   },
   "15270": {
     "player_bday": "02.05.2005",
@@ -28328,6 +28328,16 @@
     "player_name": "Romero/ Zeballos",
     "source": "api_tennis:get_players",
     "updated_at": "2026-06-16T11:04:53+00:00"
+  },
+  "36534": {
+    "player_bday": "",
+    "player_country": "",
+    "player_full_name": "",
+    "player_key": "36534",
+    "player_logo": "",
+    "player_name": "A. Santamarta Roig",
+    "source": "api_tennis:get_players",
+    "updated_at": "2026-06-27T07:35:35+00:00"
   },
   "366": {
     "player_bday": "10.04.2001",
@@ -50637,7 +50647,7 @@
     "player_logo": "",
     "player_name": "T. Gowda",
     "source": "api_tennis:get_players",
-    "updated_at": "2026-06-26T08:07:57+00:00"
+    "updated_at": "2026-06-27T07:35:36+00:00"
   },
   "89213": {
     "player_bday": "01.01.1970",

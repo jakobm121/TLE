@@ -3144,9 +3144,9 @@ source_file,raw_index,api_event_key,date,gender,event_status,event_type_type,tou
 2026-06-25.json,267,12140370,2026-06-25,,Finished,Itf Women Doubles,W50 Gdansk (Poland),,W50 Gdansk - Quarter-finals,,,,88396,Gniewkowska/ Husar,104361,Kulambayeva/ Toth,,,,0 - 2,doubles_or_team_match
 2026-06-25.json,268,12140371,2026-06-25,,Finished,Itf Women Doubles,W50 Gdansk (Poland),,W50 Gdansk - Quarter-finals,,,,104367,Falkowska/ Garcia-Perez,89098,Bakhmutkina/ Hodzic,,,,2 - 0,doubles_or_team_match
 2026-06-25.json,276,12140380,2026-06-25,men,Finished,Exhibition Men,Exhibition Hurlingham,,,,unknown,,1103,C. Norrie,2959,J. Lehecka,second,Jiri Lehecka,Cameron Norrie,0 - 2,unknown_level
-2026-06-25.json,288,12140392,2026-06-25,,,Exhibition Men,Exhibition Boodles Challenge,,,,,,902,J. Mensik,2841,H. Hurkacz,,,,-,not_finished
-2026-06-25.json,289,12140393,2026-06-25,,,Exhibition Men,Exhibition Boodles Challenge,,,,,,1101,S. Baez,566,A. Shevchenko,,,,-,not_finished
-2026-06-25.json,290,12140394,2026-06-25,,,Exhibition Men,Exhibition Boodles Challenge,,,,,,401,C. Ugo Carabelli,2112,M. Bellucci,,,,-,not_finished
+2026-06-25.json,288,12140392,2026-06-25,men,Finished,Exhibition Men,Exhibition Boodles Challenge,,,,unknown,,902,J. Mensik,2841,H. Hurkacz,first,Jakub Mensik,Hubert Hurkacz,2 - 1,unknown_level
+2026-06-25.json,289,12140393,2026-06-25,men,Finished,Exhibition Men,Exhibition Boodles Challenge,,,,unknown,,1101,S. Baez,566,A. Shevchenko,first,Sebastian Baez,Alexander Shevchenko,2 - 0,unknown_level
+2026-06-25.json,290,12140394,2026-06-25,men,Finished,Exhibition Men,Exhibition Boodles Challenge,,,,unknown,,401,C. Ugo Carabelli,2112,M. Bellucci,second,Mattia Bellucci,Camilo Ugo Carabelli,1 - 2,unknown_level
 2026-06-25.json,291,12140395,2026-06-25,men,Finished,Exhibition Men,Exhibition Hurlingham,,,,unknown,,430,C. Ruud,2973,B. Shelton,second,Ben Shelton,Casper Ruud,0 - 2,unknown_level
 2026-06-25.json,293,12140397,2026-06-25,,Finished,Challenger Men Doubles,Targu Mures,,Targu Mures - 1/8-finals,,,,104499,Guillen Meza/ Tobon,104218,Cornea/ Ribero,,,,2 - 0,doubles_or_team_match
 2026-06-25.json,294,12140398,2026-06-25,,Finished,Challenger Men Doubles,Targu Mures,,Targu Mures - Quarter-finals,,,,87899,Ajdukovic/ Kalender,104220,Latinovic/ Vrbensky,,,,1 - 2,doubles_or_team_match
@@ -3196,211 +3196,192 @@ source_file,raw_index,api_event_key,date,gender,event_status,event_type_type,tou
 2026-06-25.json,435,12140550,2026-06-25,,Finished,Challenger Men Doubles,Targu Mures,,Targu Mures - Quarter-finals,,,,104499,Guillen Meza/ Tobon,10064,Prashanth/ Ramanathan,,,,0 - 2,doubles_or_team_match
 2026-06-25.json,437,12140552,2026-06-25,,Finished,Itf Women Doubles,W15 Sapporo 2,,W15 Sapporo 2 - Quarter-finals,,,,104494,Nishimoto/ Ohwaki Yui,104495,Aikawa/ Yodpetch,,,,0 - 2,doubles_or_team_match
 2026-06-25.json,438,12140553,2026-06-25,,Finished,Challenger Men Doubles,Targu Mures,,Targu Mures - Quarter-finals,,,,82595,Jecan/ Pavel,104214,Loof/ Uesugi,,,,0 - 2,doubles_or_team_match
-2026-06-26.json,0,12139179,2026-06-26,,,Challenger Men Doubles,Piracicaba,,Piracicaba - 1/8-finals,,,,104233,Barbiero/ Bullamah,66602,Britto/ Villanueva,,,,-,doubles_or_team_match
-2026-06-26.json,1,12139180,2026-06-26,,,Challenger Men Doubles,Piracicaba,,Piracicaba - 1/8-finals,,,,95037,Oliveira/ Pucinelli de Almeida,103813,Basel/ Carou,,,,-,doubles_or_team_match
-2026-06-26.json,2,12139184,2026-06-26,,Cancelled,Challenger Men Doubles,Piracicaba,,Piracicaba - 1/8-finals,,,,10301,Rodriguez/ Urrea,101936,Monzon/ Villalon,,,,-,doubles_or_team_match
-2026-06-26.json,3,12139185,2026-06-26,,,Challenger Men Doubles,Piracicaba,,Piracicaba - 1/8-finals,,,,86793,Soto/ Zeballos,104235,Ribeiro de Almeida/ Kohlmann,,,,-,doubles_or_team_match
-2026-06-26.json,4,12139186,2026-06-26,,,Challenger Men Doubles,Piracicaba,,Piracicaba - 1/8-finals,,,,100564,La Serna/ Zeitune,82887,Huertas Del Pino/ Huertas Del Pino Cordova,,,,-,doubles_or_team_match
-2026-06-26.json,5,12139633,2026-06-26,,,Challenger Men Singles,Piracicaba,,Piracicaba - 1/8-finals,,,,9035,M. Soto,5181,G. Villanueva,,,,-,not_finished
-2026-06-26.json,6,12140043,2026-06-26,,,Itf Men Doubles,M25 Porto,,M25 Porto - Quarter-finals,,,,78201,Hands/ Summers,103940,Domingues/ Torres,,,,-,doubles_or_team_match
-2026-06-26.json,7,12140052,2026-06-26,,,Challenger Men Doubles,Piracicaba,,Piracicaba - 1/8-finals,,,,93215,Loureiro/ Rodrigues,24442,Braga/ Braga,,,,-,doubles_or_team_match
-2026-06-26.json,8,12140053,2026-06-26,,Cancelled,Challenger Men Doubles,Piracicaba,,Piracicaba - 1/8-finals,,,,9619,Casanova/ Rodriguez Taverna,104473,Martinez/ Remondy Pagotto,,,,-,doubles_or_team_match
-2026-06-26.json,9,12140237,2026-06-26,,,Wta Doubles,Eastbourne,,WTA Eastbourne - Semi-finals,,,,2887,Dabrowski/ Stefani,102254,Muhammad/ Stollar,,,,-,doubles_or_team_match
-2026-06-26.json,10,12140313,2026-06-26,,,Itf Women Doubles,W35 Tarvisio,,W35 Tarvisio - Semi-finals,,,,104239,Dibenedetto/ Tsygourova,40781,Sakellaridi/ Zelnickova,,,,-,doubles_or_team_match
-2026-06-26.json,11,12140452,2026-06-26,,,Itf Women Doubles,W35 Tarvisio,,W35 Tarvisio - Semi-finals,,,,35469,Kucmova/ Laboutkova,104237,Senica/ Sevcikova,,,,-,doubles_or_team_match
-2026-06-26.json,12,12140514,2026-06-26,,Finished,Itf Women Doubles,W50 Palma del Rio,,W50 Palma del Rio - Semi-finals,,,,104477,Lemaitre/ Wagner,69657,Bhosale/ Tian,,,,0 - 2,doubles_or_team_match
-2026-06-26.json,13,12140524,2026-06-26,,Finished,Itf Women Doubles,W15 Claremont,,"W15 Claremont, CA - Quarter-finals",,,,104401,Lopez/ Zhu,82390,Bhopal/ Tabunshchyk,,,,2 - 0,doubles_or_team_match
-2026-06-26.json,14,12140525,2026-06-26,,Finished,Itf Women Doubles,W15 Claremont,,"W15 Claremont, CA - Quarter-finals",,,,104483,Arora/ Ostrzygalo,104507,Lutkemeyer/ Sahdiieva,,,,0 - 2,doubles_or_team_match
-2026-06-26.json,15,12140534,2026-06-26,,Walk Over,Itf Men Doubles,M15 Claremont (Usa),,M15 Claremont - Quarter-finals,,,,104488,Blando/ Hashimoto,102981,Johnson/ van Loben Sels,,,,-,doubles_or_team_match
-2026-06-26.json,16,12140535,2026-06-26,,Finished,Itf Men Doubles,M15 Claremont (Usa),,M15 Claremont - Quarter-finals,,,,83950,Karki/ Satterfield,104395,Claverie/ Cox,,,,0 - 2,doubles_or_team_match
-2026-06-26.json,17,12140542,2026-06-26,,Finished,Itf Women Doubles,W15 Asuncion,,W15 Asuncion - Quarter-finals,,,,100067,Danilova/ Massardo Brain,104481,Estevez/ Gonzalez Daniele,,,,0 - 2,doubles_or_team_match
-2026-06-26.json,18,12140543,2026-06-26,,Finished,Itf Women Doubles,W15 Asuncion,,W15 Asuncion - Quarter-finals,,,,104061,Barrera Aguirre/ Meabe,11526,Britez Risso/ Franco Martinessi,,,,2 - 0,doubles_or_team_match
-2026-06-26.json,19,12140548,2026-06-26,,Finished,Itf Women Doubles,W15 Claremont,,"W15 Claremont, CA - Quarter-finals",,,,104486,Chung/ Guichard,104487,Ahn/ Driscoll,,,,2 - 1,doubles_or_team_match
-2026-06-26.json,20,12140549,2026-06-26,,Finished,Itf Women Doubles,W15 Sapporo 2,,W15 Sapporo 2 - Quarter-finals,,,,104257,Furutani/ Oigawa,85111,Noguchi/ Sawashiro,,,,0 - 2,doubles_or_team_match
-2026-06-26.json,21,12140557,2026-06-26,,,Challenger Men Singles,Piracicaba,,Piracicaba - 1/8-finals,,,,2085,J. B. Torres,38832,J. Aguilar Cardozo,,,,-,not_finished
-2026-06-26.json,22,12140558,2026-06-26,,,Challenger Men Singles,Piracicaba,,Piracicaba - 1/8-finals,,,,10508,P. A. Saraiva Dos Santos,1743,M. Pucinelli de Almeida,,,,-,not_finished
-2026-06-26.json,23,12140559,2026-06-26,,,Challenger Men Singles,Piracicaba,,Piracicaba - 1/8-finals,,,,703,V. Aboian,560,H. Casanova,,,,-,not_finished
-2026-06-26.json,24,12140560,2026-06-26,,,Challenger Men Singles,Piracicaba,,Piracicaba - 1/8-finals,,,,1853,N. Hardt,5469,W. Leite,,,,-,not_finished
-2026-06-26.json,25,12140561,2026-06-26,,,Wta Singles,Eastbourne,,WTA Eastbourne - Semi-finals,,,,2414,T. Maria,2802,J. Ostapenko,,,,-,not_finished
-2026-06-26.json,26,12140562,2026-06-26,,,Atp Doubles,Eastbourne,,ATP Eastbourne - Final,,,,27070,Nys/ Roger-Vasselin,89221,Andreozzi/ Guinard,,,,-,doubles_or_team_match
-2026-06-26.json,27,12140563,2026-06-26,,,Wta Doubles,Eastbourne,,WTA Eastbourne - Semi-finals,,,,73425,Maleckova/ Skoch,82933,Haverlag/ Lumsden,,,,-,doubles_or_team_match
-2026-06-26.json,28,12140564,2026-06-26,,,Atp Singles,Eastbourne,,ATP Eastbourne - Semi-finals,,,,7011,J. Draper,1105,U. Humbert,,,,-,not_finished
-2026-06-26.json,29,12140565,2026-06-26,,,Atp Singles,Eastbourne,,ATP Eastbourne - Semi-finals,,,,1064,Z. Bergs,15184,T. Samuel,,,,-,not_finished
-2026-06-26.json,30,12140566,2026-06-26,,,Itf Women Singles,W15 Alkmaar,,W15 Alkmaar - Quarter-finals,,,,88830,C. Narti,2296,M. Hoedt,,,,-,not_finished
-2026-06-26.json,31,12140567,2026-06-26,,,Itf Women Singles,W15 Alkmaar,,W15 Alkmaar - Quarter-finals,,,,21360,A. Van Impe,69067,M. Maquet,,,,-,not_finished
-2026-06-26.json,32,12140568,2026-06-26,,,Itf Men Singles,M15 Alkmaar,,M15 Alkmaar - Quarter-finals,,,,52681,M. Majdandzic,63487,R. Tabata,,,,-,not_finished
-2026-06-26.json,33,12140569,2026-06-26,,,Itf Men Singles,M15 Alkmaar,,M15 Alkmaar - Quarter-finals,,,,13024,J. De Jager,39928,S. Jong,,,,-,not_finished
-2026-06-26.json,34,12140570,2026-06-26,,,Itf Men Singles,M25 Porto,,M25 Porto - Quarter-finals,,,,20568,C. E. Overbeck,13986,D. Ostapenkov,,,,-,not_finished
-2026-06-26.json,35,12140571,2026-06-26,,,Atp Singles,Mallorca,,ATP Mallorca - Semi-finals,,,,10148,F. Marozsan,2842,A. Davidovich Fokina,,,,-,not_finished
-2026-06-26.json,36,12140572,2026-06-26,,,Atp Singles,Mallorca,,ATP Mallorca - Semi-finals,,,,358,N. Borges,9225,E. Quinn,,,,-,not_finished
-2026-06-26.json,37,12140573,2026-06-26,,,Atp Doubles,Mallorca,,ATP Mallorca - Semi-finals,,,,91199,Arribage/ Olivetti,100106,Pavlasek/ Rikl,,,,-,doubles_or_team_match
-2026-06-26.json,38,12140574,2026-06-26,,,Atp Doubles,Mallorca,,ATP Mallorca - Semi-finals,,,,86393,Frantzen/ Haase,100272,Goransson/ King,,,,-,doubles_or_team_match
-2026-06-26.json,39,12140575,2026-06-26,,,Itf Men Singles,M15 Monastir 24,,M15 Monastir 24 - Quarter-finals,,,,73861,D. Mosejczuk,92463,M. Picard,,,,-,not_finished
-2026-06-26.json,40,12140576,2026-06-26,,,Itf Men Singles,M15 Monastir 24,,M15 Monastir 24 - Quarter-finals,,,,22430,A. Frusina,17585,R. Pascual Ferra,,,,-,not_finished
-2026-06-26.json,41,12140577,2026-06-26,,,Itf Men Singles,M15 Monastir 24,,M15 Monastir 24 - Quarter-finals,,,,935,L. Pokorny,6857,B. Pietri,,,,-,not_finished
-2026-06-26.json,42,12140578,2026-06-26,,,Itf Men Singles,M15 Monastir 24,,M15 Monastir 24 - Quarter-finals,,,,62793,C. Bertimon,37917,J. Eriksson Ziverts,,,,-,not_finished
-2026-06-26.json,43,12140579,2026-06-26,,,Itf Men Doubles,M15 Monastir 24,,M15 Monastir 24 - Semi-finals,,,,73341,Habib/ Ianin,103516,Beamish/ Becroft,,,,-,doubles_or_team_match
-2026-06-26.json,44,12140580,2026-06-26,,,Itf Men Doubles,M15 Monastir 24,,M15 Monastir 24 - Semi-finals,,,,104310,Eriksson Ziverts/ Photiadis,85424,Bouchelaghem/ Gales,,,,-,doubles_or_team_match
-2026-06-26.json,45,12140581,2026-06-26,,,Wta Singles,Bad Homburg,,WTA Bad Homburg - Semi-finals,,,,1812,Xin. Wang,2685,N. Osaka,,,,-,not_finished
-2026-06-26.json,46,12140582,2026-06-26,,,Wta Singles,Bad Homburg,,WTA Bad Homburg - Semi-finals,,,,1151,G. Ruse,2807,K. Muchova,,,,-,not_finished
-2026-06-26.json,47,12140583,2026-06-26,,,Wta Doubles,Bad Homburg,,WTA Bad Homburg - Semi-finals,,,,102266,Sutjiadi/ Zvonareva,52018,Hsieh S-/Wang,,,,-,doubles_or_team_match
-2026-06-26.json,48,12140584,2026-06-26,,,Wta Doubles,Bad Homburg,,WTA Bad Homburg - Semi-finals,,,,94824,Perez/ Schuurs,69174,Mihalikova/ Nicholls,,,,-,doubles_or_team_match
-2026-06-26.json,49,12140585,2026-06-26,,,Itf Men Doubles,M25 Bakio,,M25 Bakio - Final,,,,104224,Arcila/ Rojas,104226,Hignett/ Howse,,,,-,doubles_or_team_match
-2026-06-26.json,50,12140586,2026-06-26,,,Itf Women Singles,W15 Monastir 19,,W15 Monastir 19 - Quarter-finals,,,,2545,A. Reguer,73865,E. Sartz-Lunde,,,,-,not_finished
-2026-06-26.json,51,12140587,2026-06-26,,,Itf Women Singles,W15 Monastir 19,,W15 Monastir 19 - Quarter-finals,,,,2024,Mat. Mariani,15268,L. Munzarova,,,,-,not_finished
-2026-06-26.json,52,12140588,2026-06-26,,,Itf Women Singles,W15 Monastir 19,,W15 Monastir 19 - Quarter-finals,,,,24413,L. Ayala,82378,K. Bartel,,,,-,not_finished
-2026-06-26.json,53,12140589,2026-06-26,,,Itf Women Singles,W15 Monastir 19,,W15 Monastir 19 - Quarter-finals,,,,24512,A. Arifullina,65412,Y. Chainykova,,,,-,not_finished
-2026-06-26.json,54,12140590,2026-06-26,,,Itf Men Singles,M15 Kamen,,M15 Kamen - Quarter-finals,,,,54889,V. Marysko,57709,A. Funk,,,,-,not_finished
-2026-06-26.json,55,12140591,2026-06-26,,,Itf Men Singles,M15 Kamen,,M15 Kamen - Quarter-finals,,,,1177,O. Krutykh,912,M. Hopp,,,,-,not_finished
-2026-06-26.json,56,12140592,2026-06-26,,,Itf Men Singles,M15 Kamen,,M15 Kamen - Quarter-finals,,,,14025,B. Sanchez Martinez,57536,J. Filip,,,,-,not_finished
-2026-06-26.json,57,12140593,2026-06-26,,,Itf Men Singles,M15 Kamen,,M15 Kamen - Quarter-finals,,,,32507,B. Bozemoj,40212,D. Salazar,,,,-,not_finished
-2026-06-26.json,58,12140594,2026-06-26,,,Itf Men Doubles,M15 Kamen,,M15 Kamen - Semi-finals,,,,70168,Al-Amin/ Ruland,104289,Sabanin/ Seitz,,,,-,doubles_or_team_match
-2026-06-26.json,59,12140595,2026-06-26,,,Itf Women Doubles,W15 Monastir 19,,W15 Monastir 19 - Semi-finals,,,,104398,Bartel/ Seye,104506,Feldmane/ Nozdrachova,,,,-,doubles_or_team_match
-2026-06-26.json,60,12140596,2026-06-26,,,Itf Women Doubles,W15 Monastir 19,,W15 Monastir 19 - Semi-finals,,,,71107,Villet/ Wildgruber,104430,Avataneo/ Lopez,,,,-,doubles_or_team_match
-2026-06-26.json,61,12140597,2026-06-26,,,Itf Men Singles,M15 Kursumlijska Banja 6,,M15 Kursumlijska Banja 6 - Quarter-finals,,,,1861,E. Tiurnev,38020,A. Peiro Serrano,,,,-,not_finished
-2026-06-26.json,62,12140598,2026-06-26,,,Itf Men Singles,M15 Kursumlijska Banja 6,,M15 Kursumlijska Banja 6 - Quarter-finals,,,,21354,G. Misasi,21806,G. Lazarov,,,,-,not_finished
-2026-06-26.json,63,12140599,2026-06-26,,,Itf Men Singles,M15 Kursumlijska Banja 6,,M15 Kursumlijska Banja 6 - Quarter-finals,,,,63398,A. de Marchi,1283,S. Hamza Reguig,,,,-,not_finished
-2026-06-26.json,64,12140600,2026-06-26,,,Itf Men Doubles,M15 Kursumlijska Banja 6,,M15 Kursumlijska Banja 6 - Semi-finals,,,,104301,de Marchi/ Derepasko,104442,Gil Garcia/ Trongcharoenchaikul,,,,-,doubles_or_team_match
-2026-06-26.json,65,12140601,2026-06-26,,,Itf Men Doubles,M15 Kursumlijska Banja 6,,M15 Kursumlijska Banja 6 - Semi-finals,,,,64962,Maric/ Radovanovic,85116,Jovic/ Markovski,,,,-,doubles_or_team_match
-2026-06-26.json,70,12140606,2026-06-26,,Finished,Itf Women Doubles,W15 Sapporo 2,,W15 Sapporo 2 - Quarter-finals,,,,54863,Leong/ Shin,104256,Chikaraishi/ Negishi,,,,2 - 0,doubles_or_team_match
-2026-06-26.json,71,12140607,2026-06-26,,Finished,Itf Women Doubles,W15 Sapporo 2,,W15 Sapporo 2 - Quarter-finals,,,,58337,Im/ Kim Eunchae,48233,Sugiyama/ Yoshida,,,,2 - 0,doubles_or_team_match
-2026-06-26.json,72,12140608,2026-06-26,,,Itf Women Singles,W15 Galati,,W15 Galati - Quarter-finals,,,,68315,L. Luciano,14380,A. Safta,,,,-,not_finished
-2026-06-26.json,73,12140609,2026-06-26,,,Itf Women Singles,W15 Galati,,W15 Galati - Quarter-finals,,,,3000,I. Fetecau,69063,G. S. Popa,,,,-,not_finished
-2026-06-26.json,74,12140610,2026-06-26,,,Itf Women Singles,W15 Galati,,W15 Galati - Quarter-finals,,,,72448,S. V. Balan,91359,A. Korpanec Davies,,,,-,not_finished
-2026-06-26.json,75,12140611,2026-06-26,,,Itf Women Doubles,W15 Galati,,W15 Galati - Semi-finals,,,,87606,Breaz/ Todoni,57518,Iancu/ Puiac,,,,-,doubles_or_team_match
-2026-06-26.json,76,12140612,2026-06-26,,,Itf Women Doubles,W15 Galati,,W15 Galati - Semi-finals,,,,104262,Brunkel/ Sagmar,104128,Boyden/ Sawant,,,,-,doubles_or_team_match
-2026-06-26.json,77,12140613,2026-06-26,,,Itf Women Singles,W15 Kamen,,W15 Kamen - Quarter-finals,,,,55087,V. Pohle,22282,K. Evans,,,,-,not_finished
-2026-06-26.json,78,12140614,2026-06-26,,,Itf Women Singles,W15 Kamen,,W15 Kamen - Quarter-finals,,,,3215,V. Ivanov,8334,M. Guth,,,,-,not_finished
-2026-06-26.json,79,12140615,2026-06-26,,,Itf Women Singles,W15 Kamen,,W15 Kamen - Quarter-finals,,,,69527,A. Firman,58571,E. M. Voracek,,,,-,not_finished
-2026-06-26.json,80,12140616,2026-06-26,,,Itf Women Singles,W15 Kamen,,W15 Kamen - Quarter-finals,,,,40135,J. Daems,13991,A. Vasilescu,,,,-,not_finished
-2026-06-26.json,81,12140617,2026-06-26,,,Itf Women Doubles,W15 Kamen,,W15 Kamen - Semi-finals,,,,104498,Rodero/ Zhenikhova,79800,Boehner/ Voracek,,,,-,doubles_or_team_match
-2026-06-26.json,82,12140618,2026-06-26,,,Itf Women Doubles,W15 Kamen,,W15 Kamen - Semi-finals,,,,63232,Daems/ Firman,104346,Kostina/ Solakov,,,,-,doubles_or_team_match
-2026-06-26.json,83,12140619,2026-06-26,,,Itf Women Singles,W35 Tarvisio,,W35 Tarvisio - Semi-finals,,,,231,D. Chiesa,4085,A. Laboutkova,,,,-,not_finished
-2026-06-26.json,84,12140620,2026-06-26,men,Set 2,Itf Men Singles,M25 Brussels,,M25 Brussels - Quarter-finals,,,,7349,M. Moeller,82368,T. Zeuch,,,,1 - 0,missing_or_unresolved_winner
-2026-06-26.json,85,12140621,2026-06-26,,,Itf Men Singles,M25 Brussels,,M25 Brussels - Quarter-finals,,,,58948,F. Bidan,10865,D. Dietrich,,,,-,not_finished
-2026-06-26.json,86,12140622,2026-06-26,,,Itf Men Doubles,M25 Brussels,,M25 Brussels - Semi-finals,,,,90594,Wehnelt/ Zeuch,68217,Alujas/ Freire Da Silva,,,,-,doubles_or_team_match
-2026-06-26.json,87,12140623,2026-06-26,,Set 2,Itf Men Doubles,M25 Brussels,,M25 Brussels - Semi-finals,,,,85034,Ifi/ Stanke,60398,Inui/ Masabayashi,,,,0 - 1,doubles_or_team_match
-2026-06-26.json,88,12140624,2026-06-26,women,Set 3,Itf Women Singles,W35 Taipei 2,,W35 Taipei 2 - Quarter-finals,,,,1049,C. Y. Tsao,39108,G. S. Lee,,,,1 - 1,missing_or_unresolved_winner
-2026-06-26.json,89,12140625,2026-06-26,women,Set 1,Itf Women Singles,W35 Taipei 2,,W35 Taipei 2 - Quarter-finals,,,,39077,H. Sato,62582,A. Das,,,,0 - 0,missing_or_unresolved_winner
-2026-06-26.json,90,12140626,2026-06-26,,,Itf Women Singles,W35 Taipei 2,,W35 Taipei 2 - Quarter-finals,,,,9261,P. M. Nugroho,20923,D. Back,,,,-,not_finished
-2026-06-26.json,91,12140627,2026-06-26,,,Itf Women Singles,W35 Taipei 2,,W35 Taipei 2 - Quarter-finals,,,,1399,S. Hosogi,1023,Y. Y. Yang,,,,-,not_finished
-2026-06-26.json,92,12140628,2026-06-26,,,Itf Women Doubles,W35 Taipei 2,,W35 Taipei 2 - Semi-finals,,,,104387,Hu/ Lee,104410,Kozaki/ Mushika Mao,,,,-,doubles_or_team_match
-2026-06-26.json,93,12140629,2026-06-26,,,Itf Women Doubles,W35 Taipei 2,,W35 Taipei 2 - Semi-finals,,,,33181,Lee/ Tsao,27546,Nagata/ Sato,,,,-,doubles_or_team_match
-2026-06-26.json,98,12140634,2026-06-26,,,Itf Women Doubles,W15 Maanshan 3,,W15 Maanshan 3 - Semi-finals,,,,104418,Wan I/ Wang,66459,Guo/ Zhu,,,,-,doubles_or_team_match
-2026-06-26.json,99,12140635,2026-06-26,,Retired,Itf Women Doubles,W15 Maanshan 3,,W15 Maanshan 3 - Semi-finals,,,,104251,Wang/ Yashina,81707,Li/ Luo,,,,0 - 1,doubles_or_team_match
-2026-06-26.json,100,12140636,2026-06-26,,,Itf Women Singles,W15 Kayseri 6,,W15 Kayseri 6 - Quarter-finals,,,,68363,A. Subasic,73851,D. Dilek,,,,-,not_finished
-2026-06-26.json,101,12140637,2026-06-26,,,Itf Women Singles,W15 Kayseri 6,,W15 Kayseri 6 - Quarter-finals,,,,13544,D. Soke,68334,L. Mi,,,,-,not_finished
-2026-06-26.json,102,12140638,2026-06-26,,,Itf Women Singles,W15 Kayseri 6,,W15 Kayseri 6 - Quarter-finals,,,,38153,K. Lazarenko,13028,D. Turkmen,,,,-,not_finished
-2026-06-26.json,103,12140639,2026-06-26,,,Itf Women Singles,W15 Kayseri 6,,W15 Kayseri 6 - Quarter-finals,,,,65066,J. Hossam Salah,13034,I. Kurt,,,,-,not_finished
-2026-06-26.json,104,12140640,2026-06-26,,,Itf Women Doubles,W15 Kayseri 6,,W15 Kayseri 6 - Semi-finals,,,,83797,Soke/ Turkmen,75484,Kenzhibayeva/ Lazarenko,,,,-,doubles_or_team_match
-2026-06-26.json,105,12140641,2026-06-26,,,Itf Women Doubles,W15 Kayseri 6,,W15 Kayseri 6 - Semi-finals,,,,104349,Kurt/ Subasic,104452,Isaacs/ Mi,,,,-,doubles_or_team_match
-2026-06-26.json,106,12140642,2026-06-26,,,Itf Men Singles,M15 Kayseri 6,,M15 Kayseri 6 - Quarter-finals,,,,19520,B. Sengul,63910,R. P. Senthil Kumar,,,,-,not_finished
-2026-06-26.json,107,12140643,2026-06-26,,,Itf Men Singles,M15 Kayseri 6,,M15 Kayseri 6 - Quarter-finals,,,,103301,R. Sancilio,72360,T. Herrmann,,,,-,not_finished
-2026-06-26.json,108,12140644,2026-06-26,,,Itf Men Singles,M15 Kayseri 6,,M15 Kayseri 6 - Quarter-finals,,,,13283,C. Bittoun,65986,K. Yilmaz,,,,-,not_finished
-2026-06-26.json,109,12140645,2026-06-26,,,Itf Men Singles,M15 Kayseri 6,,M15 Kayseri 6 - Quarter-finals,,,,22255,D. Azoidis,40189,K. Chopra,,,,-,not_finished
-2026-06-26.json,110,12140646,2026-06-26,,,Itf Men Doubles,M15 Kayseri 6,,M15 Kayseri 6 - Semi-finals,,,,102391,Herrmann/ Tepmahc,104296,Chopra/ Murtaza,,,,-,doubles_or_team_match
-2026-06-26.json,111,12140647,2026-06-26,,,Itf Men Doubles,M15 Kayseri 6,,M15 Kayseri 6 - Semi-finals,,,,94660,Bulut/ Sengul,84560,Anavatan/ Yilmaz,,,,-,doubles_or_team_match
-2026-06-26.json,116,12140652,2026-06-26,,,Itf Men Doubles,M15 Wuning 3,,M15 Wuning 3 - Semi-finals,,,,27362,Jeong/ Kim,104328,Alcantara/ Hsieh,,,,-,doubles_or_team_match
-2026-06-26.json,117,12140653,2026-06-26,,Finished,Itf Men Doubles,M15 Wuning 3,,M15 Wuning 3 - Semi-finals,,,,104412,Charlton/ Ferguson,104329,Purcell/ Zhao,,,,0 - 2,doubles_or_team_match
-2026-06-26.json,118,12140654,2026-06-26,,,Challenger Men Singles,Targu Mures,,Targu Mures - Semi-finals,,,,1077,S. Nagal,972,C. Cretu,,,,-,not_finished
-2026-06-26.json,119,12140655,2026-06-26,,,Challenger Men Singles,Targu Mures,,Targu Mures - Semi-finals,,,,52682,F. Balshaw,9640,A. Nedic,,,,-,not_finished
-2026-06-26.json,120,12140656,2026-06-26,,,Challenger Men Doubles,Targu Mures,,Targu Mures - Semi-finals,,,,37499,Barrientos/ Behar,104214,Loof/ Uesugi,,,,-,doubles_or_team_match
-2026-06-26.json,121,12140657,2026-06-26,,,Challenger Men Singles,Plovdiv (Bulgaria) - Qualification,,Plovdiv - Semi-finals,,,,848,S. Kopp,9220,P. Nesterov,,,,-,not_finished
-2026-06-26.json,122,12140658,2026-06-26,,,Challenger Men Singles,Plovdiv (Bulgaria) - Qualification,,Plovdiv - Semi-finals,,,,71815,A. Santamarta Roig,10232,I. Montes-De La Torre,,,,-,not_finished
-2026-06-26.json,123,12140659,2026-06-26,,,Challenger Men Doubles,Plovdiv (Bulgaria),,Plovdiv - Semi-finals,,,,19676,Fancutt/ Rai,18097,Dev S D/ Sinha,,,,-,doubles_or_team_match
-2026-06-26.json,124,12140660,2026-06-26,,,Challenger Men Doubles,Plovdiv (Bulgaria),,Plovdiv - Semi-finals,,,,10117,Blancaneaux/ Martineau,58409,Jans/ Visker,,,,-,doubles_or_team_match
-2026-06-26.json,125,12140661,2026-06-26,,,Itf Men Singles,M25 Zagreb (Croatia),,M25 Zagreb - Quarter-finals,,,,22921,S. Sorger,6983,K. Sultanov,,,,-,not_finished
-2026-06-26.json,126,12140662,2026-06-26,,,Itf Men Singles,M25 Zagreb (Croatia),,M25 Zagreb - Quarter-finals,,,,8733,O. Prihodko,38623,D. Sakellaridis,,,,-,not_finished
-2026-06-26.json,127,12140663,2026-06-26,,,Itf Men Singles,M25 Zagreb (Croatia),,M25 Zagreb - Quarter-finals,,,,1296,K. Ivanovski,1877,J. Barranco Cosano,,,,-,not_finished
-2026-06-26.json,128,12140664,2026-06-26,,,Itf Men Singles,M25 Zagreb (Croatia),,M25 Zagreb - Quarter-finals,,,,929,B. Barun,4061,A. Chepelev,,,,-,not_finished
-2026-06-26.json,129,12140665,2026-06-26,,,Itf Women Singles,W50 Gdansk (Poland),,W50 Gdansk - Quarter-finals,,,,28034,H. Shaikh,147,M. Hodzic,,,,-,not_finished
-2026-06-26.json,130,12140666,2026-06-26,,,Itf Women Singles,W50 Gdansk (Poland),,W50 Gdansk - Quarter-finals,,,,1142,C. Paquet,13987,A. Sobolieva,,,,-,not_finished
-2026-06-26.json,131,12140667,2026-06-26,,,Itf Women Singles,W50 Gdansk (Poland),,W50 Gdansk - Quarter-finals,,,,38149,G. Feistel,38181,D. Kuczer,,,,-,not_finished
-2026-06-26.json,132,12140668,2026-06-26,,,Itf Women Singles,W50 Gdansk (Poland),,W50 Gdansk - Quarter-finals,,,,38788,W. Ewald,2280,B. Palicova,,,,-,not_finished
-2026-06-26.json,133,12140669,2026-06-26,,,Itf Men Doubles,M25 Zagreb (Croatia),,M25 Zagreb - Semi-finals,,,,97146,Neos/ Tsitsipas,56223,Huseinovic/ Ivanovski,,,,-,doubles_or_team_match
-2026-06-26.json,134,12140670,2026-06-26,,,Itf Men Doubles,M25 Zagreb (Croatia),,M25 Zagreb - Semi-finals,,,,531,Sabanov/ Sabanov,104365,Kumstat/ Vrba,,,,-,doubles_or_team_match
-2026-06-26.json,135,12140671,2026-06-26,,,Itf Women Doubles,W50 Gdansk (Poland),,W50 Gdansk - Semi-finals,,,,104362,Hietaranta/ Steur,104367,Falkowska/ Garcia-Perez,,,,-,doubles_or_team_match
-2026-06-26.json,136,12140672,2026-06-26,,,Itf Women Doubles,W50 Gdansk (Poland),,W50 Gdansk - Semi-finals,,,,104464,Malygina/ Sebestova,104361,Kulambayeva/ Toth,,,,-,doubles_or_team_match
-2026-06-26.json,137,12140673,2026-06-26,,,Itf Men Doubles,M25 Tanger (Morocco),,M25 Tanger - Semi-finals,,,,39949,Perfetti/ Rottoli,103851,Chambonniere/ Villoslada,,,,-,doubles_or_team_match
-2026-06-26.json,138,12140674,2026-06-26,,,Itf Women Singles,W35 Rome,,"W35 Rome, GA - Quarter-finals",,,,13919,S. Yamalapalli,30106,S. Broadus,,,,-,not_finished
-2026-06-26.json,139,12140675,2026-06-26,,,Itf Women Singles,W35 Rome,,"W35 Rome, GA - Quarter-finals",,,,40075,E. Koike,53646,A. Akli,,,,-,not_finished
-2026-06-26.json,140,12140676,2026-06-26,,,Itf Women Singles,W35 Rome,,"W35 Rome, GA - Quarter-finals",,,,2391,M. Brengle,9526,A. Honer,,,,-,not_finished
-2026-06-26.json,141,12140677,2026-06-26,,,Itf Women Singles,W35 Rome,,"W35 Rome, GA - Quarter-finals",,,,185,A. Arseneault,84315,J. Chan,,,,-,not_finished
-2026-06-26.json,142,12140678,2026-06-26,,,Itf Men Singles,M25 Tanger (Morocco),,M25 Tanger - Quarter-finals,,,,37933,M. Giunta,837,L. Rottoli,,,,-,not_finished
-2026-06-26.json,143,12140679,2026-06-26,,,Itf Men Singles,M25 Tanger (Morocco),,M25 Tanger - Quarter-finals,,,,15199,F. Broska,14468,Y. Dlimi,,,,-,not_finished
-2026-06-26.json,144,12140680,2026-06-26,,,Itf Men Singles,M25 Tanger (Morocco),,M25 Tanger - Quarter-finals,,,,38261,R. Bennani,382,S. Cuenin,,,,-,not_finished
-2026-06-26.json,145,12140681,2026-06-26,,,Itf Men Singles,M25 Tanger (Morocco),,M25 Tanger - Quarter-finals,,,,38298,K. Bennani,428,J. Nikles,,,,-,not_finished
-2026-06-26.json,146,12140682,2026-06-26,,,Challenger Men Singles,Piracicaba,,Piracicaba - 1/8-finals,,,,361,S. Rodriguez Taverna,10017,J. M. La Serna,,,,-,not_finished
-2026-06-26.json,147,12140683,2026-06-26,,,Wta Singles,Eastbourne,,WTA Eastbourne - Semi-finals,,,,1143,P. Marcinko,2692,M. Keys,,,,-,not_finished
-2026-06-26.json,148,12140684,2026-06-26,,,Itf Men Singles,M25 Brussels,,M25 Brussels - Quarter-finals,,,,3604,M. H. Rehberg,20697,S. Pieri,,,,-,not_finished
-2026-06-26.json,149,12140685,2026-06-26,,,Itf Men Singles,M15 Alkmaar,,M15 Alkmaar - Quarter-finals,,,,70517,M. Lazaro Juncadella,20017,J. Penzlin,,,,-,not_finished
-2026-06-26.json,150,12140686,2026-06-26,,,Itf Men Singles,M15 Kursumlijska Banja 6,,M15 Kursumlijska Banja 6 - Quarter-finals,,,,37896,B. Djuric,52644,N. Novakovic,,,,-,not_finished
-2026-06-26.json,151,12140687,2026-06-26,,,Itf Men Singles,M15 Slovenska Bistrica,,M15 Slovenska Bistrica - Quarter-finals,,,,10022,L. Ratti,76950,V. Dullinger,,,,-,not_finished
-2026-06-26.json,152,12140688,2026-06-26,,,Itf Men Singles,M15 Slovenska Bistrica,,M15 Slovenska Bistrica - Quarter-finals,,,,21176,M. Homberg,40154,F. J. Planinsek,,,,-,not_finished
-2026-06-26.json,153,12140689,2026-06-26,,,Itf Men Singles,M15 Slovenska Bistrica,,M15 Slovenska Bistrica - Quarter-finals,,,,30785,D. Petak,51377,N. Mikovic,,,,-,not_finished
-2026-06-26.json,154,12140690,2026-06-26,,,Itf Men Singles,M15 Slovenska Bistrica,,M15 Slovenska Bistrica - Quarter-finals,,,,54748,A. Jeran,10846,B. Artnak,,,,-,not_finished
-2026-06-26.json,155,12140691,2026-06-26,,,Itf Men Singles,M25 Bakio,,M25 Bakio - Semi-finals,,,,770,O. Weightman,4254,S. Perez Contri,,,,-,not_finished
-2026-06-26.json,156,12140692,2026-06-26,,,Itf Men Singles,M25 Brussels,,M25 Brussels - Quarter-finals,,,,38142,H. Huens,38131,O. Wallin,,,,-,not_finished
-2026-06-26.json,157,12140693,2026-06-26,,,Itf Men Singles,M25 Porto,,M25 Porto - Quarter-finals,,,,8972,M. Alkaya,9568,F. Andaloro,,,,-,not_finished
-2026-06-26.json,158,12140694,2026-06-26,,,Itf Men Singles,M25 Porto,,M25 Porto - Quarter-finals,,,,11110,E. Coulibaly,12972,F. Rocha,,,,-,not_finished
-2026-06-26.json,159,12140695,2026-06-26,,,Itf Women Singles,W15 Alkmaar,,W15 Alkmaar - Quarter-finals,,,,13212,L. Tran,52684,D. Vaissaud,,,,-,not_finished
-2026-06-26.json,160,12140696,2026-06-26,,,Itf Women Singles,W15 Alkmaar,,W15 Alkmaar - Quarter-finals,,,,10898,I. Balus,55590,I. L. Van den Broek,,,,-,not_finished
-2026-06-26.json,161,12140697,2026-06-26,,,Itf Women Singles,W15 Kursumlijska Banja 6,,W15 Kursumlijska Banja 6 - Quarter-finals,,,,38670,M. Horvit,13073,N. Radovanovic,,,,-,not_finished
-2026-06-26.json,162,12140698,2026-06-26,,,Itf Women Singles,W15 Kursumlijska Banja 6,,W15 Kursumlijska Banja 6 - Quarter-finals,,,,69107,T. Jialin,68680,D. Popovski,,,,-,not_finished
-2026-06-26.json,163,12140699,2026-06-26,,,Itf Women Singles,W15 Kursumlijska Banja 6,,W15 Kursumlijska Banja 6 - Quarter-finals,,,,14152,N. Senic,2526,K. Zaytseva,,,,-,not_finished
-2026-06-26.json,164,12140700,2026-06-26,,,Itf Women Singles,W15 Kursumlijska Banja 6,,W15 Kursumlijska Banja 6 - Quarter-finals,,,,2600,J. Stamatova,52257,A. Stankovic,,,,-,not_finished
-2026-06-26.json,165,12140701,2026-06-26,,,Itf Women Singles,W35 Tarvisio,,W35 Tarvisio - Semi-finals,,,,13420,N. Basiletti,1363,R. Zelnickova,,,,-,not_finished
-2026-06-26.json,166,12140702,2026-06-26,,,Itf Men Doubles,M15 Slovenska Bistrica,,M15 Slovenska Bistrica - Semi-finals,,,,69977,Garcia Mestre/ Naharro,104324,Parizzia/ Ratti,,,,-,doubles_or_team_match
-2026-06-26.json,167,12140703,2026-06-26,,,Itf Men Doubles,M15 Slovenska Bistrica,,M15 Slovenska Bistrica - Semi-finals,,,,104500,Homberg/ Slavic,103151,Battiston/ Kovac,,,,-,doubles_or_team_match
-2026-06-26.json,168,12140704,2026-06-26,,,Itf Men Doubles,M25 Tanger (Morocco),,M25 Tanger - Semi-finals,,,,104373,Lalami Laaroussi/ Nikles,68533,Ferrari/ Valle,,,,-,doubles_or_team_match
-2026-06-26.json,169,12140705,2026-06-26,,,Itf Women Doubles,W15 Kursumlijska Banja 6,,W15 Kursumlijska Banja 6 - Semi-finals,,,,104437,Gobbi Monllau/ Kozak,104434,Goina/ Hejtmanek,,,,-,doubles_or_team_match
-2026-06-26.json,170,12140706,2026-06-26,,,Itf Women Doubles,W15 Kursumlijska Banja 6,,W15 Kursumlijska Banja 6 - Semi-finals,,,,31459,Senic/ Stankovic,104438,Horvit/ Yemshanova,,,,-,doubles_or_team_match
-2026-06-26.json,171,12140707,2026-06-26,,,Itf Women Doubles,W35 Rome,,"W35 Rome, GA - Semi-finals",,,,86308,Payne/ Shumate,96156,Broadus/ Collins,,,,-,doubles_or_team_match
-2026-06-26.json,172,12140708,2026-06-26,,,Itf Men Singles,M15 Alkmaar,,M15 Alkmaar - Quarter-finals,,,,38110,F. Van Sambeek,71108,P. De Lange,,,,-,not_finished
-2026-06-26.json,173,12140709,2026-06-26,,,Itf Men Singles,M25 Porto,,M25 Porto - Quarter-finals,,,,14435,T. Torres,37938,L. Maxted,,,,-,not_finished
-2026-06-26.json,174,12140710,2026-06-26,,,Itf Men Singles,M25 Bakio,,M25 Bakio - Semi-finals,,,,50705,H. S. Callejon,17436,P. Inchauspe,,,,-,not_finished
-2026-06-26.json,175,12140711,2026-06-26,,,Itf Men Doubles,M15 Alkmaar,,M15 Alkmaar - Semi-finals,,,,104276,De Jager/ Lootsma,104279,Gustafsson/ Penzlin,,,,-,doubles_or_team_match
-2026-06-26.json,176,12140712,2026-06-26,,,Itf Men Doubles,M15 Kamen,,M15 Kamen - Semi-finals,,,,23622,Horak/ Pecak,57307,Al Azmeh/ Naw,,,,-,doubles_or_team_match
-2026-06-26.json,177,12140713,2026-06-26,,,Itf Women Singles,W50 Palma del Rio,,W50 Palma del Rio - Quarter-finals,,,,10904,E. Micic,40166,C. Ansari,,,,-,not_finished
-2026-06-26.json,178,12140714,2026-06-26,,,Challenger Men Doubles,Targu Mures,,Targu Mures - Semi-finals,,,,10064,Prashanth/ Ramanathan,104220,Latinovic/ Vrbensky,,,,-,doubles_or_team_match
-2026-06-26.json,179,12140715,2026-06-26,,,Itf Women Doubles,W35 Rome,,"W35 Rome, GA - Semi-finals",,,,104384,Daniel/ Fairclough,104405,Allen/ Lewis,,,,-,doubles_or_team_match
-2026-06-26.json,180,12140716,2026-06-26,,,Itf Men Singles,M15 Bergamo,,M15 Bergamo - Quarter-finals,,,,1322,M. Donald,1295,F. Tabacco,,,,-,not_finished
-2026-06-26.json,181,12140717,2026-06-26,,,Itf Men Singles,M15 Bergamo,,M15 Bergamo - Quarter-finals,,,,862,G. Oradini,971,M. Serafini,,,,-,not_finished
-2026-06-26.json,182,12140718,2026-06-26,,,Itf Men Singles,M15 Bergamo,,M15 Bergamo - Quarter-finals,,,,1240,F. Arnaboldi,39919,F. Fumagalli,,,,-,not_finished
-2026-06-26.json,183,12140719,2026-06-26,,,Itf Men Singles,M15 Rzeszow (Poland),,M15 Rzeszow - Quarter-finals,,,,10487,A. Braynin,70317,H. Hoeyeraal,,,,-,not_finished
-2026-06-26.json,184,12140720,2026-06-26,,,Itf Men Singles,M15 Rzeszow (Poland),,M15 Rzeszow - Quarter-finals,,,,5967,S. Seifert,20776,L. Rivera,,,,-,not_finished
-2026-06-26.json,185,12140721,2026-06-26,,,Itf Men Singles,M15 Rzeszow (Poland),,M15 Rzeszow - Quarter-finals,,,,67375,K. Szymkowiak,6023,N. Guttau,,,,-,not_finished
-2026-06-26.json,186,12140722,2026-06-26,,,Itf Men Singles,M15 Rzeszow (Poland),,M15 Rzeszow - Quarter-finals,,,,71082,A. Wazny,15548,K. Filar,,,,-,not_finished
-2026-06-26.json,187,12140723,2026-06-26,,,Itf Women Singles,W50 Palma del Rio,,W50 Palma del Rio - Quarter-finals,,,,13672,F. Tian,2990,A. Hesse,,,,-,not_finished
-2026-06-26.json,188,12140724,2026-06-26,,,Itf Women Singles,W50 Palma del Rio,,W50 Palma del Rio - Quarter-finals,,,,2277,E. Vedder,31159,H. Shi,,,,-,not_finished
-2026-06-26.json,189,12140725,2026-06-26,,,Itf Women Singles,W50 Palma del Rio,,W50 Palma del Rio - Quarter-finals,,,,4363,A. Aksu,1417,A. Kubareva,,,,-,not_finished
-2026-06-26.json,190,12140726,2026-06-26,,,Itf Men Doubles,M15 Alkmaar,,M15 Alkmaar - Semi-finals,,,,104280,Karthik/ Lakshmanan,74047,Forger/ Khoeblal,,,,-,doubles_or_team_match
-2026-06-26.json,191,12140727,2026-06-26,,,Itf Men Doubles,M15 Bergamo,,M15 Bergamo - Semi-finals,,,,97214,Bilardo/ Ingarao,104282,Denitto/ Vedovelli,,,,-,doubles_or_team_match
-2026-06-26.json,192,12140728,2026-06-26,,,Itf Men Doubles,M15 Bergamo,,M15 Bergamo - Semi-finals,,,,104468,Oradini/ Perego,73605,Bocchi/ De Bernardis,,,,-,doubles_or_team_match
-2026-06-26.json,193,12140729,2026-06-26,,,Itf Men Doubles,M15 Rzeszow (Poland),,M15 Rzeszow - Semi-finals,,,,104497,Homola/ Hrazdil,77904,Hoeyeraal/ Rivera,,,,-,doubles_or_team_match
-2026-06-26.json,194,12140730,2026-06-26,,,Itf Men Doubles,M15 Rzeszow (Poland),,M15 Rzeszow - Semi-finals,,,,88328,Guttau/ Larwig,71310,Molder/ Tamm,,,,-,doubles_or_team_match
-2026-06-26.json,195,12140731,2026-06-26,,,Itf Men Doubles,M25 Porto,,M25 Porto - Semi-finals,,,,86956,Andaloro/ Moroni,100993,Fradkin/ McKennon,,,,-,doubles_or_team_match
-2026-06-26.json,196,12140732,2026-06-26,,,Itf Women Doubles,W15 Alkmaar,,W15 Alkmaar - Semi-finals,,,,74770,Coppez/ Van Impe,104505,Anson Sanchez/ Ros Parres,,,,-,doubles_or_team_match
-2026-06-26.json,197,12140733,2026-06-26,,,Challenger Men Singles,Piracicaba,,Piracicaba - 1/8-finals,,,,57484,L. Andrade da Silva,1086,T. Seyboth Wild,,,,-,not_finished
-2026-06-26.json,198,12140734,2026-06-26,,,Exhibition Men,Exhibition Hurlingham,,,,,,1894,T. Paul,1905,N. Djokovic,,,,-,not_finished
-2026-06-26.json,199,12140735,2026-06-26,,,Exhibition Men,Exhibition Hurlingham,,,,,,2959,J. Lehecka,10520,L. Tien,,,,-,not_finished
-2026-06-26.json,200,12140736,2026-06-26,,,Itf Men Singles,M15 Bergamo,,M15 Bergamo - Quarter-finals,,,,13196,P. R. Scomparin,25278,D. C. Spiridon,,,,-,not_finished
-2026-06-26.json,201,12140737,2026-06-26,,,Itf Women Doubles,W50 Palma del Rio,,W50 Palma del Rio - Final,,,,69657,Bhosale/ Tian,89849,Micic/ Thompson,,,,-,doubles_or_team_match
-2026-06-26.json,202,12140738,2026-06-26,,,Itf Women Singles,W15 Asuncion,,W15 Asuncion - Semi-finals,,,,40060,L. Moyano,22529,C. Romero,,,,-,not_finished
-2026-06-26.json,203,12140739,2026-06-26,,,Itf Women Singles,W15 Asuncion,,W15 Asuncion - Semi-finals,,,,11486,L. F. Britez Risso,10902,A. Candiotto,,,,-,not_finished
-2026-06-26.json,204,12140740,2026-06-26,,,Itf Women Singles,W15 Claremont,,"W15 Claremont, CA - Quarter-finals",,,,90153,M. Castillo Meza,133,A. Zhu,,,,-,not_finished
-2026-06-26.json,205,12140741,2026-06-26,,,Itf Women Singles,W15 Claremont,,"W15 Claremont, CA - Quarter-finals",,,,1358,A. Lutkemeyer,52653,A. Nguyen,,,,-,not_finished
-2026-06-26.json,206,12140742,2026-06-26,,,Itf Women Singles,W15 Claremont,,"W15 Claremont, CA - Quarter-finals",,,,48889,A. Ahn,38259,S. Ewing,,,,-,not_finished
-2026-06-26.json,207,12140743,2026-06-26,,,Challenger Men Singles,Piracicaba,,Piracicaba - 1/8-finals,,,,1756,N. Kicker,14273,N. Zanellato,,,,-,not_finished
-2026-06-26.json,208,12140744,2026-06-26,,,Itf Men Singles,M15 Claremont (Usa),,M15 Claremont - Quarter-finals,,,,55609,S. Rozin,86747,V. Gogineni,,,,-,not_finished
-2026-06-26.json,209,12140745,2026-06-26,,,Itf Men Singles,M15 Claremont (Usa),,M15 Claremont - Quarter-finals,,,,79358,J. Satterfield,1856,L. Claverie,,,,-,not_finished
-2026-06-26.json,210,12140746,2026-06-26,,,Itf Men Singles,M15 Claremont (Usa),,M15 Claremont - Quarter-finals,,,,9381,A. Kim,2851,S. Johnson,,,,-,not_finished
-2026-06-26.json,211,12140747,2026-06-26,,,Itf Men Singles,M15 Claremont (Usa),,M15 Claremont - Quarter-finals,,,,52071,O. Ojakaar,58210,J. Leach,,,,-,not_finished
-2026-06-26.json,212,12140748,2026-06-26,,,Itf Men Doubles,M15 Claremont (Usa),,M15 Claremont - Semi-finals,,,,104395,Claverie/ Cox,104488,Blando/ Hashimoto,,,,-,doubles_or_team_match
-2026-06-26.json,213,12140749,2026-06-26,,,Itf Men Doubles,M15 Claremont (Usa),,M15 Claremont - Semi-finals,,,,104393,Kuhar/ Lieberman,104390,Horwood/ Rozin,,,,-,doubles_or_team_match
-2026-06-26.json,214,12140750,2026-06-26,,,Itf Women Singles,W15 Claremont,,"W15 Claremont, CA - Quarter-finals",,,,7035,A. Vagramov,89211,T. Gowda,,,,-,not_finished
-2026-06-26.json,215,12140751,2026-06-26,,,Itf Women Doubles,W15 Asuncion,,W15 Asuncion - Semi-finals,,,,104481,Estevez/ Gonzalez Daniele,104054,Ccuno/ Konishi Silva,,,,-,doubles_or_team_match
-2026-06-26.json,216,12140753,2026-06-26,,,Itf Women Doubles,W15 Claremont,,"W15 Claremont, CA - Semi-finals",,,,104486,Chung/ Guichard,104507,Lutkemeyer/ Sahdiieva,,,,-,doubles_or_team_match
-2026-06-26.json,217,12140754,2026-06-26,,,Itf Women Doubles,W15 Claremont,,"W15 Claremont, CA - Semi-finals",,,,104401,Lopez/ Zhu,104484,Lee/ Weng,,,,-,doubles_or_team_match
-2026-06-26.json,218,12140755,2026-06-26,,Finished,Itf Women Doubles,W15 Sapporo 2,,W15 Sapporo 2 - Semi-finals,,,,58337,Im/ Kim Eunchae,54863,Leong/ Shin,,,,2 - 0,doubles_or_team_match
-2026-06-26.json,219,12140756,2026-06-26,,Finished,Itf Women Doubles,W15 Sapporo 2,,W15 Sapporo 2 - Semi-finals,,,,104495,Aikawa/ Yodpetch,85111,Noguchi/ Sawashiro,,,,2 - 1,doubles_or_team_match
+2026-06-26.json,0,12139184,2026-06-26,,Cancelled,Challenger Men Doubles,Piracicaba,,Piracicaba - 1/8-finals,,,,10301,Rodriguez/ Urrea,101936,Monzon/ Villalon,,,,-,doubles_or_team_match
+2026-06-26.json,1,12139185,2026-06-26,,Finished,Challenger Men Doubles,Piracicaba,,Piracicaba - 1/8-finals,,,,86793,Soto/ Zeballos,104235,Ribeiro de Almeida/ Kohlmann,,,,1 - 2,doubles_or_team_match
+2026-06-26.json,3,12140043,2026-06-26,,Walk Over,Itf Men Doubles,M25 Porto,,M25 Porto - Quarter-finals,,,,78201,Hands/ Summers,103940,Domingues/ Torres,,,,-,doubles_or_team_match
+2026-06-26.json,4,12140052,2026-06-26,,Finished,Challenger Men Doubles,Piracicaba,,Piracicaba - 1/8-finals,,,,93215,Loureiro/ Rodrigues,24442,Braga/ Braga,,,,2 - 0,doubles_or_team_match
+2026-06-26.json,5,12140053,2026-06-26,,Cancelled,Challenger Men Doubles,Piracicaba,,Piracicaba - 1/8-finals,,,,9619,Casanova/ Rodriguez Taverna,104473,Martinez/ Remondy Pagotto,,,,-,doubles_or_team_match
+2026-06-26.json,6,12140237,2026-06-26,,Finished,Wta Doubles,Eastbourne,,WTA Eastbourne - Semi-finals,,,,2887,Dabrowski/ Stefani,102254,Muhammad/ Stollar,,,,2 - 0,doubles_or_team_match
+2026-06-26.json,7,12140313,2026-06-26,,Finished,Itf Women Doubles,W35 Tarvisio,,W35 Tarvisio - Semi-finals,,,,104239,Dibenedetto/ Tsygourova,40781,Sakellaridi/ Zelnickova,,,,0 - 2,doubles_or_team_match
+2026-06-26.json,8,12140452,2026-06-26,,Finished,Itf Women Doubles,W35 Tarvisio,,W35 Tarvisio - Semi-finals,,,,35469,Kucmova/ Laboutkova,104237,Senica/ Sevcikova,,,,2 - 0,doubles_or_team_match
+2026-06-26.json,9,12140514,2026-06-26,,Finished,Itf Women Doubles,W50 Palma del Rio,,W50 Palma del Rio - Semi-finals,,,,104477,Lemaitre/ Wagner,69657,Bhosale/ Tian,,,,0 - 2,doubles_or_team_match
+2026-06-26.json,10,12140524,2026-06-26,,Finished,Itf Women Doubles,W15 Claremont,,"W15 Claremont, CA - Quarter-finals",,,,104401,Lopez/ Zhu,82390,Bhopal/ Tabunshchyk,,,,2 - 0,doubles_or_team_match
+2026-06-26.json,11,12140525,2026-06-26,,Finished,Itf Women Doubles,W15 Claremont,,"W15 Claremont, CA - Quarter-finals",,,,104483,Arora/ Ostrzygalo,104507,Lutkemeyer/ Sahdiieva,,,,0 - 2,doubles_or_team_match
+2026-06-26.json,12,12140534,2026-06-26,,Walk Over,Itf Men Doubles,M15 Claremont (Usa),,M15 Claremont - Quarter-finals,,,,104488,Blando/ Hashimoto,102981,Johnson/ van Loben Sels,,,,-,doubles_or_team_match
+2026-06-26.json,13,12140535,2026-06-26,,Finished,Itf Men Doubles,M15 Claremont (Usa),,M15 Claremont - Quarter-finals,,,,83950,Karki/ Satterfield,104395,Claverie/ Cox,,,,0 - 2,doubles_or_team_match
+2026-06-26.json,14,12140542,2026-06-26,,Finished,Itf Women Doubles,W15 Asuncion,,W15 Asuncion - Quarter-finals,,,,100067,Danilova/ Massardo Brain,104481,Estevez/ Gonzalez Daniele,,,,0 - 2,doubles_or_team_match
+2026-06-26.json,15,12140543,2026-06-26,,Finished,Itf Women Doubles,W15 Asuncion,,W15 Asuncion - Quarter-finals,,,,104061,Barrera Aguirre/ Meabe,11526,Britez Risso/ Franco Martinessi,,,,2 - 0,doubles_or_team_match
+2026-06-26.json,16,12140548,2026-06-26,,Finished,Itf Women Doubles,W15 Claremont,,"W15 Claremont, CA - Quarter-finals",,,,104486,Chung/ Guichard,104487,Ahn/ Driscoll,,,,2 - 1,doubles_or_team_match
+2026-06-26.json,17,12140549,2026-06-26,,Finished,Itf Women Doubles,W15 Sapporo 2,,W15 Sapporo 2 - Quarter-finals,,,,104257,Furutani/ Oigawa,85111,Noguchi/ Sawashiro,,,,0 - 2,doubles_or_team_match
+2026-06-26.json,23,12140562,2026-06-26,,Finished,Atp Doubles,Eastbourne,,ATP Eastbourne - Final,,,,27070,Nys/ Roger-Vasselin,89221,Andreozzi/ Guinard,,,,2 - 1,doubles_or_team_match
+2026-06-26.json,24,12140563,2026-06-26,,Finished,Wta Doubles,Eastbourne,,WTA Eastbourne - Semi-finals,,,,73425,Maleckova/ Skoch,82933,Haverlag/ Lumsden,,,,2 - 0,doubles_or_team_match
+2026-06-26.json,34,12140573,2026-06-26,,Finished,Atp Doubles,Mallorca,,ATP Mallorca - Semi-finals,,,,91199,Arribage/ Olivetti,100106,Pavlasek/ Rikl,,,,2 - 0,doubles_or_team_match
+2026-06-26.json,35,12140574,2026-06-26,,Finished,Atp Doubles,Mallorca,,ATP Mallorca - Semi-finals,,,,86393,Frantzen/ Haase,100272,Goransson/ King,,,,1 - 2,doubles_or_team_match
+2026-06-26.json,40,12140579,2026-06-26,,Finished,Itf Men Doubles,M15 Monastir 24,,M15 Monastir 24 - Semi-finals,,,,73341,Habib/ Ianin,103516,Beamish/ Becroft,,,,0 - 2,doubles_or_team_match
+2026-06-26.json,41,12140580,2026-06-26,,Finished,Itf Men Doubles,M15 Monastir 24,,M15 Monastir 24 - Semi-finals,,,,104310,Eriksson Ziverts/ Photiadis,85424,Bouchelaghem/ Gales,,,,1 - 2,doubles_or_team_match
+2026-06-26.json,44,12140583,2026-06-26,,Walk Over,Wta Doubles,Bad Homburg,,WTA Bad Homburg - Semi-finals,,,,102266,Sutjiadi/ Zvonareva,52018,Hsieh S-/Wang,,,,-,doubles_or_team_match
+2026-06-26.json,45,12140584,2026-06-26,,Finished,Wta Doubles,Bad Homburg,,WTA Bad Homburg - Semi-finals,,,,94824,Perez/ Schuurs,69174,Mihalikova/ Nicholls,,,,2 - 0,doubles_or_team_match
+2026-06-26.json,46,12140585,2026-06-26,,Finished,Itf Men Doubles,M25 Bakio,,M25 Bakio - Final,,,,104224,Arcila/ Rojas,104226,Hignett/ Howse,,,,2 - 1,doubles_or_team_match
+2026-06-26.json,55,12140594,2026-06-26,,Finished,Itf Men Doubles,M15 Kamen,,M15 Kamen - Semi-finals,,,,70168,Al-Amin/ Ruland,104289,Sabanin/ Seitz,,,,2 - 0,doubles_or_team_match
+2026-06-26.json,56,12140595,2026-06-26,,Finished,Itf Women Doubles,W15 Monastir 19,,W15 Monastir 19 - Semi-finals,,,,104398,Bartel/ Seye,104506,Feldmane/ Nozdrachova,,,,0 - 2,doubles_or_team_match
+2026-06-26.json,57,12140596,2026-06-26,,Finished,Itf Women Doubles,W15 Monastir 19,,W15 Monastir 19 - Semi-finals,,,,71107,Villet/ Wildgruber,104430,Avataneo/ Lopez,,,,2 - 0,doubles_or_team_match
+2026-06-26.json,61,12140600,2026-06-26,,Finished,Itf Men Doubles,M15 Kursumlijska Banja 6,,M15 Kursumlijska Banja 6 - Semi-finals,,,,104301,de Marchi/ Derepasko,104442,Gil Garcia/ Trongcharoenchaikul,,,,2 - 1,doubles_or_team_match
+2026-06-26.json,62,12140601,2026-06-26,,Finished,Itf Men Doubles,M15 Kursumlijska Banja 6,,M15 Kursumlijska Banja 6 - Semi-finals,,,,64962,Maric/ Radovanovic,85116,Jovic/ Markovski,,,,1 - 2,doubles_or_team_match
+2026-06-26.json,67,12140606,2026-06-26,,Finished,Itf Women Doubles,W15 Sapporo 2,,W15 Sapporo 2 - Quarter-finals,,,,54863,Leong/ Shin,104256,Chikaraishi/ Negishi,,,,2 - 0,doubles_or_team_match
+2026-06-26.json,68,12140607,2026-06-26,,Finished,Itf Women Doubles,W15 Sapporo 2,,W15 Sapporo 2 - Quarter-finals,,,,58337,Im/ Kim Eunchae,48233,Sugiyama/ Yoshida,,,,2 - 0,doubles_or_team_match
+2026-06-26.json,72,12140611,2026-06-26,,Finished,Itf Women Doubles,W15 Galati,,W15 Galati - Semi-finals,,,,87606,Breaz/ Todoni,57518,Iancu/ Puiac,,,,2 - 0,doubles_or_team_match
+2026-06-26.json,73,12140612,2026-06-26,,Finished,Itf Women Doubles,W15 Galati,,W15 Galati - Semi-finals,,,,104262,Brunkel/ Sagmar,104128,Boyden/ Sawant,,,,0 - 2,doubles_or_team_match
+2026-06-26.json,78,12140617,2026-06-26,,Finished,Itf Women Doubles,W15 Kamen,,W15 Kamen - Semi-finals,,,,104498,Rodero/ Zhenikhova,79800,Boehner/ Voracek,,,,2 - 1,doubles_or_team_match
+2026-06-26.json,79,12140618,2026-06-26,,Finished,Itf Women Doubles,W15 Kamen,,W15 Kamen - Semi-finals,,,,63232,Daems/ Firman,104346,Kostina/ Solakov,,,,2 - 0,doubles_or_team_match
+2026-06-26.json,83,12140622,2026-06-26,,Finished,Itf Men Doubles,M25 Brussels,,M25 Brussels - Semi-finals,,,,90594,Wehnelt/ Zeuch,68217,Alujas/ Freire Da Silva,,,,2 - 1,doubles_or_team_match
+2026-06-26.json,84,12140623,2026-06-26,,Finished,Itf Men Doubles,M25 Brussels,,M25 Brussels - Semi-finals,,,,85034,Ifi/ Stanke,60398,Inui/ Masabayashi,,,,2 - 1,doubles_or_team_match
+2026-06-26.json,89,12140628,2026-06-26,,Finished,Itf Women Doubles,W35 Taipei 2,,W35 Taipei 2 - Semi-finals,,,,104387,Hu/ Lee,104410,Kozaki/ Mushika Mao,,,,1 - 2,doubles_or_team_match
+2026-06-26.json,90,12140629,2026-06-26,,Finished,Itf Women Doubles,W35 Taipei 2,,W35 Taipei 2 - Semi-finals,,,,33181,Lee/ Tsao,27546,Nagata/ Sato,,,,2 - 0,doubles_or_team_match
+2026-06-26.json,95,12140634,2026-06-26,,Finished,Itf Women Doubles,W15 Maanshan 3,,W15 Maanshan 3 - Semi-finals,,,,104418,Wan I/ Wang,66459,Guo/ Zhu,,,,1 - 2,doubles_or_team_match
+2026-06-26.json,96,12140635,2026-06-26,,Retired,Itf Women Doubles,W15 Maanshan 3,,W15 Maanshan 3 - Semi-finals,,,,104251,Wang/ Yashina,81707,Li/ Luo,,,,0 - 1,doubles_or_team_match
+2026-06-26.json,101,12140640,2026-06-26,,Finished,Itf Women Doubles,W15 Kayseri 6,,W15 Kayseri 6 - Semi-finals,,,,83797,Soke/ Turkmen,75484,Kenzhibayeva/ Lazarenko,,,,2 - 1,doubles_or_team_match
+2026-06-26.json,102,12140641,2026-06-26,,Finished,Itf Women Doubles,W15 Kayseri 6,,W15 Kayseri 6 - Semi-finals,,,,104349,Kurt/ Subasic,104452,Isaacs/ Mi,,,,2 - 1,doubles_or_team_match
+2026-06-26.json,107,12140646,2026-06-26,,Walk Over,Itf Men Doubles,M15 Kayseri 6,,M15 Kayseri 6 - Semi-finals,,,,102391,Herrmann/ Tepmahc,104296,Chopra/ Murtaza,,,,-,doubles_or_team_match
+2026-06-26.json,108,12140647,2026-06-26,,Finished,Itf Men Doubles,M15 Kayseri 6,,M15 Kayseri 6 - Semi-finals,,,,94660,Bulut/ Sengul,84560,Anavatan/ Yilmaz,,,,1 - 2,doubles_or_team_match
+2026-06-26.json,113,12140652,2026-06-26,,Finished,Itf Men Doubles,M15 Wuning 3,,M15 Wuning 3 - Semi-finals,,,,27362,Jeong/ Kim,104328,Alcantara/ Hsieh,,,,1 - 2,doubles_or_team_match
+2026-06-26.json,114,12140653,2026-06-26,,Finished,Itf Men Doubles,M15 Wuning 3,,M15 Wuning 3 - Semi-finals,,,,104412,Charlton/ Ferguson,104329,Purcell/ Zhao,,,,0 - 2,doubles_or_team_match
+2026-06-26.json,117,12140656,2026-06-26,,Finished,Challenger Men Doubles,Targu Mures,,Targu Mures - Semi-finals,,,,37499,Barrientos/ Behar,104214,Loof/ Uesugi,,,,0 - 2,doubles_or_team_match
+2026-06-26.json,120,12140659,2026-06-26,,Finished,Challenger Men Doubles,Plovdiv (Bulgaria),,Plovdiv - Semi-finals,,,,19676,Fancutt/ Rai,18097,Dev S D/ Sinha,,,,2 - 1,doubles_or_team_match
+2026-06-26.json,121,12140660,2026-06-26,,Finished,Challenger Men Doubles,Plovdiv (Bulgaria),,Plovdiv - Semi-finals,,,,10117,Blancaneaux/ Martineau,58409,Jans/ Visker,,,,1 - 2,doubles_or_team_match
+2026-06-26.json,130,12140669,2026-06-26,,Walk Over,Itf Men Doubles,M25 Zagreb (Croatia),,M25 Zagreb - Semi-finals,,,,97146,Neos/ Tsitsipas,56223,Huseinovic/ Ivanovski,,,,-,doubles_or_team_match
+2026-06-26.json,131,12140670,2026-06-26,,Finished,Itf Men Doubles,M25 Zagreb (Croatia),,M25 Zagreb - Semi-finals,,,,531,Sabanov/ Sabanov,104365,Kumstat/ Vrba,,,,1 - 2,doubles_or_team_match
+2026-06-26.json,132,12140671,2026-06-26,,Finished,Itf Women Doubles,W50 Gdansk (Poland),,W50 Gdansk - Semi-finals,,,,104362,Hietaranta/ Steur,104367,Falkowska/ Garcia-Perez,,,,0 - 2,doubles_or_team_match
+2026-06-26.json,133,12140672,2026-06-26,,Finished,Itf Women Doubles,W50 Gdansk (Poland),,W50 Gdansk - Semi-finals,,,,104464,Malygina/ Sebestova,104361,Kulambayeva/ Toth,,,,0 - 2,doubles_or_team_match
+2026-06-26.json,134,12140673,2026-06-26,,Finished,Itf Men Doubles,M25 Tanger (Morocco),,M25 Tanger - Semi-finals,,,,39949,Perfetti/ Rottoli,103851,Chambonniere/ Villoslada,,,,0 - 2,doubles_or_team_match
+2026-06-26.json,163,12140702,2026-06-26,,Finished,Itf Men Doubles,M15 Slovenska Bistrica,,M15 Slovenska Bistrica - Semi-finals,,,,69977,Garcia Mestre/ Naharro,104324,Parizzia/ Ratti,,,,1 - 2,doubles_or_team_match
+2026-06-26.json,164,12140703,2026-06-26,,Finished,Itf Men Doubles,M15 Slovenska Bistrica,,M15 Slovenska Bistrica - Semi-finals,,,,104500,Homberg/ Slavic,103151,Battiston/ Kovac,,,,2 - 1,doubles_or_team_match
+2026-06-26.json,165,12140704,2026-06-26,,Finished,Itf Men Doubles,M25 Tanger (Morocco),,M25 Tanger - Semi-finals,,,,104373,Lalami Laaroussi/ Nikles,68533,Ferrari/ Valle,,,,2 - 1,doubles_or_team_match
+2026-06-26.json,166,12140705,2026-06-26,,Finished,Itf Women Doubles,W15 Kursumlijska Banja 6,,W15 Kursumlijska Banja 6 - Semi-finals,,,,104437,Gobbi Monllau/ Kozak,104434,Goina/ Hejtmanek,,,,0 - 2,doubles_or_team_match
+2026-06-26.json,167,12140706,2026-06-26,,Finished,Itf Women Doubles,W15 Kursumlijska Banja 6,,W15 Kursumlijska Banja 6 - Semi-finals,,,,31459,Senic/ Stankovic,104438,Horvit/ Yemshanova,,,,2 - 1,doubles_or_team_match
+2026-06-26.json,168,12140707,2026-06-26,,Finished,Itf Women Doubles,W35 Rome,,"W35 Rome, GA - Semi-finals",,,,86308,Payne/ Shumate,96156,Broadus/ Collins,,,,0 - 2,doubles_or_team_match
+2026-06-26.json,172,12140711,2026-06-26,,Walk Over,Itf Men Doubles,M15 Alkmaar,,M15 Alkmaar - Semi-finals,,,,104276,De Jager/ Lootsma,104279,Gustafsson/ Penzlin,,,,-,doubles_or_team_match
+2026-06-26.json,173,12140712,2026-06-26,,Finished,Itf Men Doubles,M15 Kamen,,M15 Kamen - Semi-finals,,,,23622,Horak/ Pecak,57307,Al Azmeh/ Naw,,,,2 - 0,doubles_or_team_match
+2026-06-26.json,175,12140714,2026-06-26,,Finished,Challenger Men Doubles,Targu Mures,,Targu Mures - Semi-finals,,,,10064,Prashanth/ Ramanathan,104220,Latinovic/ Vrbensky,,,,0 - 2,doubles_or_team_match
+2026-06-26.json,176,12140715,2026-06-26,,Finished,Itf Women Doubles,W35 Rome,,"W35 Rome, GA - Semi-finals",,,,104384,Daniel/ Fairclough,104405,Allen/ Lewis,,,,2 - 0,doubles_or_team_match
+2026-06-26.json,187,12140726,2026-06-26,,Finished,Itf Men Doubles,M15 Alkmaar,,M15 Alkmaar - Semi-finals,,,,104280,Karthik/ Lakshmanan,74047,Forger/ Khoeblal,,,,0 - 2,doubles_or_team_match
+2026-06-26.json,188,12140727,2026-06-26,,Finished,Itf Men Doubles,M15 Bergamo,,M15 Bergamo - Semi-finals,,,,97214,Bilardo/ Ingarao,104282,Denitto/ Vedovelli,,,,2 - 0,doubles_or_team_match
+2026-06-26.json,189,12140728,2026-06-26,,Finished,Itf Men Doubles,M15 Bergamo,,M15 Bergamo - Semi-finals,,,,104468,Oradini/ Perego,73605,Bocchi/ De Bernardis,,,,0 - 2,doubles_or_team_match
+2026-06-26.json,190,12140729,2026-06-26,,Finished,Itf Men Doubles,M15 Rzeszow (Poland),,M15 Rzeszow - Semi-finals,,,,104497,Homola/ Hrazdil,77904,Hoeyeraal/ Rivera,,,,2 - 0,doubles_or_team_match
+2026-06-26.json,191,12140730,2026-06-26,,Finished,Itf Men Doubles,M15 Rzeszow (Poland),,M15 Rzeszow - Semi-finals,,,,88328,Guttau/ Larwig,71310,Molder/ Tamm,,,,0 - 2,doubles_or_team_match
+2026-06-26.json,192,12140731,2026-06-26,,Finished,Itf Men Doubles,M25 Porto,,M25 Porto - Semi-finals,,,,86956,Andaloro/ Moroni,100993,Fradkin/ McKennon,,,,2 - 0,doubles_or_team_match
+2026-06-26.json,193,12140732,2026-06-26,,Finished,Itf Women Doubles,W15 Alkmaar,,W15 Alkmaar - Semi-finals,,,,74770,Coppez/ Van Impe,104505,Anson Sanchez/ Ros Parres,,,,2 - 0,doubles_or_team_match
+2026-06-26.json,195,12140734,2026-06-26,men,Finished,Exhibition Men,Exhibition Hurlingham,,,,unknown,,1894,T. Paul,1905,N. Djokovic,second,Novak Djokovic,Tommy Paul,1 - 2,unknown_level
+2026-06-26.json,196,12140735,2026-06-26,,Cancelled,Exhibition Men,Exhibition Hurlingham,,,,,,2959,J. Lehecka,10520,L. Tien,,,,-,not_finished
+2026-06-26.json,198,12140737,2026-06-26,,Finished,Itf Women Doubles,W50 Palma del Rio,,W50 Palma del Rio - Final,,,,69657,Bhosale/ Tian,89849,Micic/ Thompson,,,,2 - 0,doubles_or_team_match
+2026-06-26.json,209,12140749,2026-06-26,,Finished,Itf Men Doubles,M15 Claremont (Usa),,M15 Claremont - Semi-finals,,,,104393,Kuhar/ Lieberman,104390,Horwood/ Rozin,,,,2 - 1,doubles_or_team_match
+2026-06-26.json,211,12140751,2026-06-26,,Finished,Itf Women Doubles,W15 Asuncion,,W15 Asuncion - Semi-finals,,,,104481,Estevez/ Gonzalez Daniele,104054,Ccuno/ Konishi Silva,,,,0 - 2,doubles_or_team_match
+2026-06-26.json,212,12140753,2026-06-26,,Finished,Itf Women Doubles,W15 Claremont,,"W15 Claremont, CA - Semi-finals",,,,104486,Chung/ Guichard,104507,Lutkemeyer/ Sahdiieva,,,,2 - 0,doubles_or_team_match
+2026-06-26.json,213,12140754,2026-06-26,,Finished,Itf Women Doubles,W15 Claremont,,"W15 Claremont, CA - Semi-finals",,,,104401,Lopez/ Zhu,104484,Lee/ Weng,,,,2 - 1,doubles_or_team_match
+2026-06-26.json,214,12140755,2026-06-26,,Finished,Itf Women Doubles,W15 Sapporo 2,,W15 Sapporo 2 - Semi-finals,,,,58337,Im/ Kim Eunchae,54863,Leong/ Shin,,,,2 - 0,doubles_or_team_match
+2026-06-26.json,215,12140756,2026-06-26,,Finished,Itf Women Doubles,W15 Sapporo 2,,W15 Sapporo 2 - Semi-finals,,,,104495,Aikawa/ Yodpetch,85111,Noguchi/ Sawashiro,,,,2 - 1,doubles_or_team_match
+2026-06-26.json,216,12140757,2026-06-26,,,Exhibition Men,Exhibition Boodles Challenge,,,,,,2734,R. Bautista-Agut,9222,G. Mpetshi Perricard,,,,-,not_finished
+2026-06-26.json,217,12140758,2026-06-26,,,Exhibition Men,Exhibition Boodles Challenge,,,,,,1906,S. Tsitsipas,10869,D. Prizmic,,,,-,not_finished
+2026-06-26.json,218,12140759,2026-06-26,,,Exhibition Women,Boodles Challenge (United Kingdom),,,,,,1434,M. Chwalinska,1154,M. Linette,,,,-,not_finished
+2026-06-26.json,219,12140976,2026-06-26,,Finished,Itf Men Doubles,M25 Porto,,M25 Porto - Semi-finals,,,,104331,Ostapenkov/ Pereira,78201,Hands/ Summers,,,,1 - 2,doubles_or_team_match
+2026-06-26.json,220,12140977,2026-06-26,,Finished,Itf Women Doubles,W35 Tarvisio,,W35 Tarvisio - Final,,,,35469,Kucmova/ Laboutkova,40781,Sakellaridi/ Zelnickova,,,,2 - 0,doubles_or_team_match
+2026-06-26.json,222,12140982,2026-06-26,men,Finished,Exhibition Men,Exhibition Hurlingham,,,,unknown,,8781,L. Darderi,10520,L. Tien,second,Learner Tien,Luciano Darderi,0 - 2,unknown_level
+2026-06-26.json,224,12140987,2026-06-26,,Finished,Challenger Men Doubles,Piracicaba,,Piracicaba - 1/8-finals,,,,10301,Rodriguez/ Urrea,104533,Bini/ de Camargo Silva,,,,2 - 0,doubles_or_team_match
+2026-06-26.json,225,12140988,2026-06-26,,Cancelled,Challenger Men Doubles,Piracicaba,,Piracicaba - 1/8-finals,,,,9619,Casanova/ Rodriguez Taverna,90518,Tosetto/ Zanellato,,,,-,doubles_or_team_match
+2026-06-26.json,228,12141041,2026-06-26,,Finished,Challenger Men Doubles,Piracicaba,,Piracicaba - 1/8-finals,,,,104534,Bojicic Ono/ Ortenblad Nogueira,90518,Tosetto/ Zanellato,,,,0 - 2,doubles_or_team_match
+2026-06-27.json,0,12139179,2026-06-27,,,Challenger Men Doubles,Piracicaba,,Piracicaba - 1/8-finals,,,,104233,Barbiero/ Bullamah,66602,Britto/ Villanueva,,,,-,doubles_or_team_match
+2026-06-27.json,1,12139180,2026-06-27,,,Challenger Men Doubles,Piracicaba,,Piracicaba - 1/8-finals,,,,95037,Oliveira/ Pucinelli de Almeida,103813,Basel/ Carou,,,,-,doubles_or_team_match
+2026-06-27.json,2,12139186,2026-06-27,,Walk Over,Challenger Men Doubles,Piracicaba,,Piracicaba - 1/8-finals,,,,100564,La Serna/ Zeitune,82887,Huertas Del Pino/ Huertas Del Pino Cordova,,,,-,doubles_or_team_match
+2026-06-27.json,3,12140748,2026-06-27,,Finished,Itf Men Doubles,M15 Claremont (Usa),,M15 Claremont - Semi-finals,,,,104395,Claverie/ Cox,104488,Blando/ Hashimoto,,,,0 - 2,doubles_or_team_match
+2026-06-27.json,4,12140752,2026-06-27,,,Itf Women Doubles,W15 Asuncion,,W15 Asuncion - Semi-finals,,,,62065,Moyano/ Romero,104061,Barrera Aguirre/ Meabe,,,,-,doubles_or_team_match
+2026-06-27.json,5,12140760,2026-06-27,,,Atp Doubles,Mallorca,,ATP Mallorca - Final,,,,100272,Goransson/ King,91199,Arribage/ Olivetti,,,,-,doubles_or_team_match
+2026-06-27.json,6,12140761,2026-06-27,,,Challenger Men Doubles,Plovdiv (Bulgaria),,Plovdiv - Final,,,,19676,Fancutt/ Rai,58409,Jans/ Visker,,,,-,doubles_or_team_match
+2026-06-27.json,9,12140764,2026-06-27,,,Itf Men Singles,M25 Zagreb (Croatia),,M25 Zagreb - Semi-finals,,,,8733,O. Prihodko,6983,K. Sultanov,,,,-,not_finished
+2026-06-27.json,10,12140765,2026-06-27,,,Itf Women Singles,W15 Galati,,W15 Galati - Semi-finals,,,,72448,S. V. Balan,38893,C. Fornasieri,,,,-,not_finished
+2026-06-27.json,11,12140766,2026-06-27,,,Itf Women Singles,W15 Galati,,W15 Galati - Semi-finals,,,,69063,G. S. Popa,14380,A. Safta,,,,-,not_finished
+2026-06-27.json,18,12140773,2026-06-27,,Finished,Itf Men Doubles,M15 Wuning 3,,M15 Wuning 3 - Final,,,,104329,Purcell/ Zhao,104328,Alcantara/ Hsieh,,,,2 - 1,doubles_or_team_match
+2026-06-27.json,19,12140774,2026-06-27,,,Itf Women Doubles,W15 Galati,,W15 Galati - Final,,,,87606,Breaz/ Todoni,104128,Boyden/ Sawant,,,,-,doubles_or_team_match
+2026-06-27.json,20,12140775,2026-06-27,,,Itf Women Doubles,W15 Maanshan 3,,W15 Maanshan 3 - Final,,,,81707,Li/ Luo,66459,Guo/ Zhu,,,,-,doubles_or_team_match
+2026-06-27.json,21,12140776,2026-06-27,,Finished,Itf Women Doubles,W15 Sapporo 2,,W15 Sapporo 2 - Final,,,,58337,Im/ Kim Eunchae,104495,Aikawa/ Yodpetch,,,,1 - 2,doubles_or_team_match
+2026-06-27.json,22,12140777,2026-06-27,,,Itf Women Doubles,W50 Gdansk (Poland),,W50 Gdansk - Final,,,,104361,Kulambayeva/ Toth,104367,Falkowska/ Garcia-Perez,,,,-,doubles_or_team_match
+2026-06-27.json,23,12140778,2026-06-27,,,Itf Women Singles,W35 Tarvisio,,W35 Tarvisio - Final,,,,231,D. Chiesa,1363,R. Zelnickova,,,,-,not_finished
+2026-06-27.json,24,12140946,2026-06-27,,,Itf Men Singles,M25 Zagreb (Croatia),,M25 Zagreb - Semi-finals,,,,1296,K. Ivanovski,929,B. Barun,,,,-,not_finished
+2026-06-27.json,25,12140947,2026-06-27,,,Itf Women Singles,W15 Alkmaar,,W15 Alkmaar - Semi-finals,,,,88830,C. Narti,69067,M. Maquet,,,,-,not_finished
+2026-06-27.json,26,12140948,2026-06-27,,,Itf Women Singles,W15 Alkmaar,,W15 Alkmaar - Semi-finals,,,,13212,L. Tran,55590,I. L. Van den Broek,,,,-,not_finished
+2026-06-27.json,27,12140949,2026-06-27,,,Itf Women Singles,W15 Kamen,,W15 Kamen - Semi-finals,,,,3215,V. Ivanov,58571,E. M. Voracek,,,,-,not_finished
+2026-06-27.json,28,12140950,2026-06-27,,,Itf Women Singles,W15 Kamen,,W15 Kamen - Semi-finals,,,,55087,V. Pohle,40135,J. Daems,,,,-,not_finished
+2026-06-27.json,29,12140978,2026-06-27,,,Itf Men Singles,M15 Kamen,,M15 Kamen - Semi-finals,,,,40212,D. Salazar,14025,B. Sanchez Martinez,,,,-,not_finished
+2026-06-27.json,30,12140979,2026-06-27,,,Itf Men Singles,M15 Kamen,,M15 Kamen - Semi-finals,,,,1177,O. Krutykh,54889,V. Marysko,,,,-,not_finished
+2026-06-27.json,31,12140980,2026-06-27,,,Itf Men Doubles,M15 Kamen,,M15 Kamen - Final,,,,23622,Horak/ Pecak,70168,Al-Amin/ Ruland,,,,-,doubles_or_team_match
+2026-06-27.json,32,12140984,2026-06-27,,,Itf Women Singles,W15 Kursumlijska Banja 6,,W15 Kursumlijska Banja 6 - Semi-finals,,,,2526,K. Zaytseva,68680,D. Popovski,,,,-,not_finished
+2026-06-27.json,33,12140985,2026-06-27,,,Itf Women Singles,W15 Kursumlijska Banja 6,,W15 Kursumlijska Banja 6 - Semi-finals,,,,13073,N. Radovanovic,52257,A. Stankovic,,,,-,not_finished
+2026-06-27.json,34,12140986,2026-06-27,,,Itf Women Doubles,W15 Kursumlijska Banja 6,,W15 Kursumlijska Banja 6 - Final,,,,31459,Senic/ Stankovic,104434,Goina/ Hejtmanek,,,,-,doubles_or_team_match
+2026-06-27.json,35,12140989,2026-06-27,,,Itf Men Singles,M15 Kursumlijska Banja 6,,M15 Kursumlijska Banja 6 - Semi-finals,,,,38020,A. Peiro Serrano,37896,B. Djuric,,,,-,not_finished
+2026-06-27.json,36,12140990,2026-06-27,,,Itf Men Singles,M15 Kursumlijska Banja 6,,M15 Kursumlijska Banja 6 - Semi-finals,,,,63398,A. de Marchi,21354,G. Misasi,,,,-,not_finished
+2026-06-27.json,37,12140991,2026-06-27,,,Itf Men Doubles,M15 Kursumlijska Banja 6,,M15 Kursumlijska Banja 6 - Final,,,,85116,Jovic/ Markovski,104301,de Marchi/ Derepasko,,,,-,doubles_or_team_match
+2026-06-27.json,38,12140992,2026-06-27,,,Atp Singles,Mallorca,,ATP Mallorca - Final,,,,9225,E. Quinn,2842,A. Davidovich Fokina,,,,-,not_finished
+2026-06-27.json,39,12140993,2026-06-27,,,Wta Singles,Eastbourne,,WTA Eastbourne - Final,,,,2414,T. Maria,2692,M. Keys,,,,-,not_finished
+2026-06-27.json,40,12140994,2026-06-27,,,Wta Doubles,Eastbourne,,WTA Eastbourne - Final,,,,2887,Dabrowski/ Stefani,73425,Maleckova/ Skoch,,,,-,doubles_or_team_match
+2026-06-27.json,41,12140995,2026-06-27,,,Itf Men Singles,M15 Alkmaar,,M15 Alkmaar - Semi-finals,,,,52681,M. Majdandzic,13024,J. De Jager,,,,-,not_finished
+2026-06-27.json,42,12140996,2026-06-27,,,Itf Men Singles,M15 Alkmaar,,M15 Alkmaar - Semi-finals,,,,71108,P. De Lange,70517,M. Lazaro Juncadella,,,,-,not_finished
+2026-06-27.json,43,12140997,2026-06-27,,,Itf Men Doubles,M25 Porto,,M25 Porto - Final,,,,78201,Hands/ Summers,86956,Andaloro/ Moroni,,,,-,doubles_or_team_match
+2026-06-27.json,44,12140998,2026-06-27,,,Itf Men Singles,M25 Porto,,M25 Porto - Semi-finals,,,,14435,T. Torres,20568,C. E. Overbeck,,,,-,not_finished
+2026-06-27.json,45,12140999,2026-06-27,,,Itf Men Singles,M25 Porto,,M25 Porto - Semi-finals,,,,12972,F. Rocha,8972,M. Alkaya,,,,-,not_finished
+2026-06-27.json,46,12141000,2026-06-27,,,Itf Men Singles,M15 Monastir 24,,M15 Monastir 24 - Semi-finals,,,,935,L. Pokorny,92463,M. Picard,,,,-,not_finished
+2026-06-27.json,47,12141001,2026-06-27,,,Itf Men Singles,M15 Monastir 24,,M15 Monastir 24 - Semi-finals,,,,17585,R. Pascual Ferra,62793,C. Bertimon,,,,-,not_finished
+2026-06-27.json,48,12141002,2026-06-27,,,Itf Men Doubles,M15 Monastir 24,,M15 Monastir 24 - Final,,,,85424,Bouchelaghem/ Gales,103516,Beamish/ Becroft,,,,-,doubles_or_team_match
+2026-06-27.json,49,12141003,2026-06-27,,,Wta Singles,Bad Homburg,,WTA Bad Homburg - Final,,,,2807,K. Muchova,2685,N. Osaka,,,,-,not_finished
+2026-06-27.json,50,12141004,2026-06-27,,,Wta Doubles,Bad Homburg,,WTA Bad Homburg - Final,,,,102266,Sutjiadi/ Zvonareva,94824,Perez/ Schuurs,,,,-,doubles_or_team_match
+2026-06-27.json,51,12141005,2026-06-27,,,Itf Men Singles,M15 Bergamo,,M15 Bergamo - Semi-finals,,,,1295,F. Tabacco,1240,F. Arnaboldi,,,,-,not_finished
+2026-06-27.json,52,12141006,2026-06-27,,,Itf Men Singles,M15 Bergamo,,M15 Bergamo - Semi-finals,,,,13196,P. R. Scomparin,862,G. Oradini,,,,-,not_finished
+2026-06-27.json,53,12141007,2026-06-27,,,Itf Men Doubles,M15 Bergamo,,M15 Bergamo - Final,,,,73605,Bocchi/ De Bernardis,97214,Bilardo/ Ingarao,,,,-,doubles_or_team_match
+2026-06-27.json,54,12141008,2026-06-27,,,Itf Women Singles,W15 Monastir 19,,W15 Monastir 19 - Semi-finals,,,,2545,A. Reguer,82378,K. Bartel,,,,-,not_finished
+2026-06-27.json,55,12141009,2026-06-27,,,Itf Women Singles,W15 Monastir 19,,W15 Monastir 19 - Semi-finals,,,,15268,L. Munzarova,24512,A. Arifullina,,,,-,not_finished
+2026-06-27.json,56,12141010,2026-06-27,,,Itf Women Doubles,W15 Monastir 19,,,,,,71107,Villet/ Wildgruber,104506,Feldmane/ Nozdrachova,,,,-,doubles_or_team_match
+2026-06-27.json,57,12141011,2026-06-27,,,Itf Women Doubles,W15 Kamen,,W15 Kamen - Final,,,,63232,Daems/ Firman,104498,Rodero/ Zhenikhova,,,,-,doubles_or_team_match
+2026-06-27.json,58,12141012,2026-06-27,,,Itf Men Singles,M25 Brussels,,M25 Brussels - Semi-finals,,,,7349,M. Moeller,10865,D. Dietrich,,,,-,not_finished
+2026-06-27.json,59,12141013,2026-06-27,,Finished,Itf Women Doubles,W35 Taipei 2,,W35 Taipei 2 - Final,,,,33181,Lee/ Tsao,104410,Kozaki/ Mushika Mao,,,,2 - 0,doubles_or_team_match
+2026-06-27.json,60,12141014,2026-06-27,,,Itf Men Singles,M15 Slovenska Bistrica,,M15 Slovenska Bistrica - Semi-finals,,,,40154,F. J. Planinsek,10846,B. Artnak,,,,-,not_finished
+2026-06-27.json,61,12141015,2026-06-27,,,Itf Men Singles,M15 Slovenska Bistrica,,M15 Slovenska Bistrica - Semi-finals,,,,10022,L. Ratti,30785,D. Petak,,,,-,not_finished
+2026-06-27.json,62,12141016,2026-06-27,,,Itf Men Doubles,M15 Slovenska Bistrica,,M15 Slovenska Bistrica - Final,,,,104500,Homberg/ Slavic,104324,Parizzia/ Ratti,,,,-,doubles_or_team_match
+2026-06-27.json,63,12141017,2026-06-27,,,Itf Women Singles,W15 Kayseri 6,,W15 Kayseri 6 - Semi-finals,,,,68363,A. Subasic,38153,K. Lazarenko,,,,-,not_finished
+2026-06-27.json,64,12141018,2026-06-27,,,Itf Women Singles,W15 Kayseri 6,,W15 Kayseri 6 - Semi-finals,,,,65066,J. Hossam Salah,13544,D. Soke,,,,-,not_finished
+2026-06-27.json,65,12141019,2026-06-27,,,Itf Women Doubles,W15 Kayseri 6,,W15 Kayseri 6 - Final,,,,104349,Kurt/ Subasic,83797,Soke/ Turkmen,,,,-,doubles_or_team_match
+2026-06-27.json,66,12141020,2026-06-27,,,Itf Men Singles,M15 Kayseri 6,,M15 Kayseri 6 - Semi-finals,,,,13283,C. Bittoun,40189,K. Chopra,,,,-,not_finished
+2026-06-27.json,67,12141021,2026-06-27,,,Itf Men Singles,M15 Kayseri 6,,M15 Kayseri 6 - Semi-finals,,,,63910,R. P. Senthil Kumar,72360,T. Herrmann,,,,-,not_finished
+2026-06-27.json,68,12141022,2026-06-27,,,Itf Men Doubles,M15 Kayseri 6,,M15 Kayseri 6 - Final,,,,84560,Anavatan/ Yilmaz,102391,Herrmann/ Tepmahc,,,,-,doubles_or_team_match
+2026-06-27.json,69,12141023,2026-06-27,,,Challenger Men Singles,Targu Mures,,Targu Mures - Final,,,,52682,F. Balshaw,1077,S. Nagal,,,,-,not_finished
+2026-06-27.json,70,12141024,2026-06-27,,,Challenger Men Doubles,Targu Mures,,Targu Mures - Final,,,,104214,Loof/ Uesugi,104220,Latinovic/ Vrbensky,,,,-,doubles_or_team_match
+2026-06-27.json,71,12141025,2026-06-27,,,Itf Women Singles,W50 Gdansk (Poland),,W50 Gdansk - Semi-finals,,,,147,M. Hodzic,13987,A. Sobolieva,,,,-,not_finished
+2026-06-27.json,72,12141026,2026-06-27,,,Itf Women Singles,W50 Gdansk (Poland),,W50 Gdansk - Semi-finals,,,,38788,W. Ewald,38149,G. Feistel,,,,-,not_finished
+2026-06-27.json,73,12141027,2026-06-27,,,Itf Men Doubles,M25 Zagreb (Croatia),,M25 Zagreb - Final,,,,104365,Kumstat/ Vrba,97146,Neos/ Tsitsipas,,,,-,doubles_or_team_match
+2026-06-27.json,74,12141028,2026-06-27,,,Itf Women Singles,W35 Rome,,"W35 Rome, GA - Semi-finals",,,,9526,A. Honer,13919,S. Yamalapalli,,,,-,not_finished
+2026-06-27.json,75,12141029,2026-06-27,,,Itf Women Singles,W35 Rome,,"W35 Rome, GA - Semi-finals",,,,84315,J. Chan,53646,A. Akli,,,,-,not_finished
+2026-06-27.json,76,12141030,2026-06-27,,,Itf Men Singles,M25 Tanger (Morocco),,M25 Tanger - Semi-finals,,,,14468,Y. Dlimi,837,L. Rottoli,,,,-,not_finished
+2026-06-27.json,77,12141031,2026-06-27,,,Itf Men Singles,M25 Tanger (Morocco),,M25 Tanger - Semi-finals,,,,38298,K. Bennani,382,S. Cuenin,,,,-,not_finished
+2026-06-27.json,78,12141034,2026-06-27,,,Atp Singles,Eastbourne,,ATP Eastbourne - Final,,,,1064,Z. Bergs,1105,U. Humbert,,,,-,not_finished
+2026-06-27.json,79,12141035,2026-06-27,,,Challenger Men Singles,Plovdiv (Bulgaria) - Qualification,,Plovdiv - Final,,,,10232,I. Montes-De La Torre,848,S. Kopp,,,,-,not_finished
+2026-06-27.json,80,12141036,2026-06-27,,,Itf Men Singles,M25 Bakio,,M25 Bakio - Final,,,,17436,P. Inchauspe,770,O. Weightman,,,,-,not_finished
+2026-06-27.json,81,12141037,2026-06-27,,,Itf Men Singles,M25 Brussels,,M25 Brussels - Semi-finals,,,,38131,O. Wallin,3604,M. H. Rehberg,,,,-,not_finished
+2026-06-27.json,82,12141038,2026-06-27,,,Itf Men Doubles,M15 Alkmaar,,M15 Alkmaar - Final,,,,104279,Gustafsson/ Penzlin,74047,Forger/ Khoeblal,,,,-,doubles_or_team_match
+2026-06-27.json,83,12141039,2026-06-27,,,Itf Men Doubles,M25 Brussels,,M25 Brussels - Final,,,,90594,Wehnelt/ Zeuch,85034,Ifi/ Stanke,,,,-,doubles_or_team_match
+2026-06-27.json,84,12141040,2026-06-27,,,Itf Men Doubles,M25 Tanger (Morocco),,M25 Tanger - Final,,,,104373,Lalami Laaroussi/ Nikles,103851,Chambonniere/ Villoslada,,,,-,doubles_or_team_match
+2026-06-27.json,85,12141042,2026-06-27,,Finished,Challenger Men Doubles,Piracicaba,,Piracicaba - Quarter-finals,,,,104235,Ribeiro de Almeida/ Kohlmann,104234,Miguel/ Saraiva Dos Santos,,,,0 - 2,doubles_or_team_match
+2026-06-27.json,86,12141043,2026-06-27,,,Challenger Men Singles,Piracicaba,,Piracicaba - Semi-finals,,,,1743,M. Pucinelli de Almeida,5181,G. Villanueva,,,,-,not_finished
+2026-06-27.json,87,12141044,2026-06-27,,,Itf Women Singles,W50 Palma del Rio,,W50 Palma del Rio - Semi-finals,,,,2277,E. Vedder,2990,A. Hesse,,,,-,not_finished
+2026-06-27.json,88,12141045,2026-06-27,,,Itf Women Doubles,W35 Rome,,"W35 Rome, GA - Final",,,,104384,Daniel/ Fairclough,96156,Broadus/ Collins,,,,-,doubles_or_team_match
+2026-06-27.json,89,12141046,2026-06-27,,,Challenger Men Singles,Piracicaba,,Piracicaba - Semi-finals,,,,1086,T. Seyboth Wild,10017,J. M. La Serna,,,,-,not_finished
+2026-06-27.json,90,12141047,2026-06-27,,,Itf Men Singles,M15 Rzeszow (Poland),,M15 Rzeszow - Semi-finals,,,,5967,S. Seifert,70317,H. Hoeyeraal,,,,-,not_finished
+2026-06-27.json,91,12141048,2026-06-27,,,Itf Men Singles,M15 Rzeszow (Poland),,M15 Rzeszow - Semi-finals,,,,67375,K. Szymkowiak,71082,A. Wazny,,,,-,not_finished
+2026-06-27.json,92,12141049,2026-06-27,,,Itf Women Singles,W50 Palma del Rio,,W50 Palma del Rio - Semi-finals,,,,10904,E. Micic,4363,A. Aksu,,,,-,not_finished
+2026-06-27.json,93,12141050,2026-06-27,,,Itf Men Doubles,M15 Rzeszow (Poland),,M15 Rzeszow - Final,,,,104497,Homola/ Hrazdil,71310,Molder/ Tamm,,,,-,doubles_or_team_match
+2026-06-27.json,94,12141051,2026-06-27,,,Itf Women Doubles,W15 Alkmaar,,,,,,74770,Coppez/ Van Impe,104502,Barth/ De Boer,,,,-,doubles_or_team_match
+2026-06-27.json,95,12141052,2026-06-27,,Finished,Challenger Men Doubles,Piracicaba,,Piracicaba - Quarter-finals,,,,90518,Tosetto/ Zanellato,10301,Rodriguez/ Urrea,,,,0 - 2,doubles_or_team_match
+2026-06-27.json,96,12141053,2026-06-27,,,Challenger Men Doubles,Piracicaba,,Piracicaba - Semi-finals,,,,104234,Miguel/ Saraiva Dos Santos,10301,Rodriguez/ Urrea,,,,-,doubles_or_team_match
+2026-06-27.json,97,12141054,2026-06-27,,,Itf Women Singles,W15 Claremont,,"W15 Claremont, CA - Semi-finals",,,,48889,A. Ahn,90153,M. Castillo Meza,,,,-,not_finished
+2026-06-27.json,98,12141055,2026-06-27,,,Itf Women Singles,W15 Claremont,,"W15 Claremont, CA - Semi-finals",,,,7035,A. Vagramov,52653,A. Nguyen,,,,-,not_finished
+2026-06-27.json,99,12141056,2026-06-27,,,Itf Men Singles,M15 Claremont (Usa),,M15 Claremont - Semi-finals,,,,79358,J. Satterfield,55609,S. Rozin,,,,-,not_finished
+2026-06-27.json,100,12141057,2026-06-27,,,Itf Women Singles,W15 Asuncion,,W15 Asuncion - Final,,,,10902,A. Candiotto,40060,L. Moyano,,,,-,not_finished
+2026-06-27.json,101,12141058,2026-06-27,,,Itf Women Doubles,W15 Asuncion,,W15 Asuncion - Semi-finals,,,,104061,Barrera Aguirre/ Meabe,104054,Ccuno/ Konishi Silva,,,,-,doubles_or_team_match
+2026-06-27.json,102,12141059,2026-06-27,,,Itf Women Doubles,W15 Claremont,,"W15 Claremont, CA - Final",,,,104401,Lopez/ Zhu,104486,Chung/ Guichard,,,,-,doubles_or_team_match
+2026-06-27.json,103,12141060,2026-06-27,,,Itf Men Singles,M15 Claremont (Usa),,M15 Claremont - Semi-finals,,,,2851,S. Johnson,58210,J. Leach,,,,-,not_finished
+2026-06-27.json,104,12141061,2026-06-27,,,Itf Men Doubles,M15 Claremont (Usa),,M15 Claremont - Final,,,,104393,Kuhar/ Lieberman,104488,Blando/ Hashimoto,,,,-,doubles_or_team_match
