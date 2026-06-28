@@ -1,26 +1,27 @@
 {
   "cache_path": "data/raw/api_tennis/players/api_players.json",
-  "cache_total_after": 5523,
-  "cache_with_full_name_after": 2767,
+  "cache_total_after": 5543,
+  "cache_with_full_name_after": 2778,
   "collect_stats": {
     "files_seen": 2,
-    "raw_fixtures_seen": 334,
-    "singles_fixtures_used": 208,
-    "skipped_doubles_fixtures": 126
+    "raw_fixtures_seen": 195,
+    "singles_fixtures_used": 151,
+    "skipped_doubles_fixtures": 44
   },
   "counters": {
-    "cache_existing_before": 5522,
-    "candidate_player_ids": 277,
-    "fetched": 4,
-    "fetched_missing_full_name": 4,
-    "to_fetch": 4
+    "cache_existing_before": 5523,
+    "candidate_player_ids": 245,
+    "fetched": 23,
+    "fetched_missing_full_name": 12,
+    "fetched_with_full_name": 11,
+    "to_fetch": 23
   },
   "date_filter": {
-    "end_date": "2026-06-27",
-    "start_date": "2026-06-26"
+    "end_date": "2026-06-28",
+    "start_date": "2026-06-27"
   },
   "errors": [],
-  "generated_at": "2026-06-27T07:35:36+00:00",
+  "generated_at": "2026-06-28T08:03:22+00:00",
   "method": "get_players",
   "outputs": {
     "cache": "data/raw/api_tennis/players/api_players.json",
@@ -28,11 +29,81 @@
     "report": "data/reports/api_tennis/fetch_api_player_details_report.json"
   },
   "raw_files": {
-    "2026-06-26.json": 229,
-    "2026-06-27.json": 105
+    "2026-06-27.json": 105,
+    "2026-06-28.json": 90
   },
   "raw_results_dir": "data/raw/api_tennis/results",
   "sample_fetched": [
+    {
+      "player_bday": "14.06.1997",
+      "player_country": "Argentina",
+      "player_full_name": "Fermin Tenti",
+      "player_key": "684",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/684_f-tenti.jpg",
+      "player_name": "F. Tenti",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-28T08:03:07+00:00"
+    },
+    {
+      "player_bday": "17.05.1996",
+      "player_country": "Czech Republic",
+      "player_full_name": "David Poljak",
+      "player_key": "895",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/895_d-poljak.jpg",
+      "player_name": "D. Poljak",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-28T08:03:07+00:00"
+    },
+    {
+      "player_bday": "02.10.2003",
+      "player_country": "USA",
+      "player_full_name": "Samir Banerjee",
+      "player_key": "2974",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/2974_s-banerjee.jpg",
+      "player_name": "S. Banerjee",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-28T08:03:08+00:00"
+    },
+    {
+      "player_bday": "02.06.1988",
+      "player_country": "Romania",
+      "player_full_name": "Alexandru Jecan Mircea",
+      "player_key": "8127",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/8127_m-a-jecan.jpg",
+      "player_name": "M. A. Jecan",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-28T08:03:09+00:00"
+    },
+    {
+      "player_bday": "",
+      "player_country": "",
+      "player_full_name": "",
+      "player_key": "10501",
+      "player_logo": "",
+      "player_name": "J. Ruiz",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-28T08:03:10+00:00"
+    },
+    {
+      "player_bday": "16.10.2006",
+      "player_country": "France",
+      "player_full_name": "Charlie Camus",
+      "player_key": "10841",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/10841_c-camus.jpg",
+      "player_name": "C. Camus",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-28T08:03:10+00:00"
+    },
+    {
+      "player_bday": "31.08.1994",
+      "player_country": "Colombia",
+      "player_full_name": "Andres Urrea",
+      "player_key": "13928",
+      "player_logo": "",
+      "player_name": "A. Urrea",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-28T08:03:11+00:00"
+    },
     {
       "player_bday": "02.11.2003",
       "player_country": "Czech Republic",
@@ -41,37 +112,127 @@
       "player_logo": "",
       "player_name": "L. Munzarova",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-27T07:35:35+00:00"
+      "updated_at": "2026-06-28T08:03:12+00:00"
     },
     {
       "player_bday": "",
       "player_country": "",
       "player_full_name": "",
-      "player_key": "36534",
+      "player_key": "26573",
       "player_logo": "",
-      "player_name": "A. Santamarta Roig",
+      "player_name": "F. Ribero",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-27T07:35:35+00:00"
+      "updated_at": "2026-06-28T08:03:12+00:00"
+    },
+    {
+      "player_bday": "30.08.1989",
+      "player_country": "Spain",
+      "player_full_name": "",
+      "player_key": "28241",
+      "player_logo": "",
+      "player_name": "A. Hernandez-Aguila",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-28T08:03:13+00:00"
+    },
+    {
+      "player_bday": "06.10.1989",
+      "player_country": "Ecuador",
+      "player_full_name": "Patricio Alvarado",
+      "player_key": "37929",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/37929_p-alvarado.jpg",
+      "player_name": "P. Alvarado",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-28T08:03:14+00:00"
+    },
+    {
+      "player_bday": "16.08.2006",
+      "player_country": "Italy",
+      "player_full_name": "Samuele Seghetti",
+      "player_key": "56184",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/56184_s-seghetti.jpg",
+      "player_name": "S. Seghetti",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-28T08:03:15+00:00"
+    },
+    {
+      "player_bday": "30.11.2006",
+      "player_country": "USA",
+      "player_full_name": "Ian Mayew",
+      "player_key": "66627",
+      "player_logo": "https://api.api-tennis.com/logo-tennis/66627_i-mayew.jpg",
+      "player_name": "I. Mayew",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-28T08:03:15+00:00"
+    },
+    {
+      "player_bday": "01.02.2008",
+      "player_country": "Romania",
+      "player_full_name": "Alejandro Berge",
+      "player_key": "67560",
+      "player_logo": "",
+      "player_name": "A. M. Berge N.",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-28T08:03:16+00:00"
+    },
+    {
+      "player_bday": "04.03.2006",
+      "player_country": "France",
+      "player_full_name": "",
+      "player_key": "70442",
+      "player_logo": "",
+      "player_name": "L. Erler",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-28T08:03:17+00:00"
+    },
+    {
+      "player_bday": "21.03.2008",
+      "player_country": "Ecuador",
+      "player_full_name": "",
+      "player_key": "76358",
+      "player_logo": "",
+      "player_name": "L. Yunez",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-28T08:03:17+00:00"
     },
     {
       "player_bday": "01.01.1970",
-      "player_country": "USA",
+      "player_country": "France",
       "player_full_name": "",
-      "player_key": "89211",
+      "player_key": "83917",
       "player_logo": "",
-      "player_name": "T. Gowda",
+      "player_name": "B. Geldof",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-27T07:35:36+00:00"
+      "updated_at": "2026-06-28T08:03:18+00:00"
+    },
+    {
+      "player_bday": "10.01.2001",
+      "player_country": "Ecuador",
+      "player_full_name": "Martin Maldonado",
+      "player_key": "86639",
+      "player_logo": "",
+      "player_name": "M. Maldonado",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-28T08:03:19+00:00"
+    },
+    {
+      "player_bday": "01.01.1970",
+      "player_country": "Italy",
+      "player_full_name": "",
+      "player_key": "100050",
+      "player_logo": "",
+      "player_name": "F. G. Colasanto",
+      "source": "api_tennis:get_players",
+      "updated_at": "2026-06-28T08:03:20+00:00"
     },
     {
       "player_bday": "",
       "player_country": "",
       "player_full_name": "",
-      "player_key": "103301",
+      "player_key": "104553",
       "player_logo": "",
-      "player_name": "R. Sancilio",
+      "player_name": "J. P. Sinescu",
       "source": "api_tennis:get_players",
-      "updated_at": "2026-06-27T07:35:36+00:00"
+      "updated_at": "2026-06-28T08:03:20+00:00"
     }
   ],
   "source": "api_tennis"

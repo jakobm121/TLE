@@ -1,3 +1,24 @@
 api_player_key,raw_api_player_key,api_name,api_name_source,gender,mapping_status,today_match_count,opponent_name,opponents_today,tournament,event_names,event_type,event_type_types,reason
-women:api:13987,13987,Anastasiia Sobolieva,api_cache_full_name,women,unmapped,1,Mina Hodzic,Mina Hodzic,W50 Gdansk (Poland),W50 Gdansk (Poland),Itf Women Singles,Itf Women Singles,no_sackmann_candidate
-men:api:40212,40212,Daniel Salazar,api_cache_full_name,men,unmapped,1,Benito Sanchez Martinez,Benito Sanchez Martinez,M15 Kamen,M15 Kamen,Itf Men Singles,Itf Men Singles,no_sackmann_candidate
+men:api:104554,104554,A. Damonte,api_cache_short_name,men,missing_mapping_entry,1,Svyatoslav Gulin,Svyatoslav Gulin,Troyes,Troyes,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:28241,28241,A. Hernandez-Aguila,api_cache_short_name,men,missing_mapping_entry,1,Luca Staeheli,Luca Staeheli,Troyes,Troyes,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:67560,67560,Alejandro Berge,api_cache_full_name,men,missing_mapping_entry,1,Akira Santillan,Akira Santillan,Brasov,Brasov,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:8127,8127,Alexandru Jecan Mircea,api_cache_full_name,men,missing_mapping_entry,1,Sergey Fomin,Sergey Fomin,Brasov,Brasov,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+women:api:13987,13987,Anastasiia Sobolieva,api_cache_full_name,women,unmapped,1,Gina Feistel,Gina Feistel,W50 Gdansk (Poland),W50 Gdansk (Poland),Itf Women Singles,Itf Women Singles,no_sackmann_candidate
+men:api:13928,13928,Andres Urrea,api_cache_full_name,men,missing_mapping_entry,1,Federico Zeballos,Federico Zeballos,Quito,Quito,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:83917,83917,B. Geldof,api_cache_short_name,men,unmapped,1,F. Ribero,F. Ribero,Troyes,Troyes,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:104578,104578,C. A. Hidalgo Aguirre,api_cache_short_name,men,missing_mapping_entry,1,Fermin Tenti,Fermin Tenti,Quito,Quito,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:10841,10841,Charlie Camus,api_cache_full_name,men,missing_mapping_entry,1,Dylan Hara Friend Jay,Dylan Hara Friend Jay,Cary,Cary,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:104579,104579,D. A. Macias Elizalde,api_cache_short_name,men,missing_mapping_entry,1,Alejandro Hayen,Alejandro Hayen,Quito,Quito,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:895,895,David Poljak,api_cache_full_name,men,missing_mapping_entry,1,Dominik Palan,Dominik Palan,Brasov,Brasov,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:100050,100050,F. G. Colasanto,api_cache_short_name,men,missing_mapping_entry,1,Tommaso Compagnucci,Tommaso Compagnucci,Milan,Milan,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:26573,26573,F. Ribero,api_cache_short_name,men,missing_mapping_entry,1,B. Geldof,B. Geldof,Troyes,Troyes,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:1253,1253,Federico Zeballos,api_cache_full_name,men,missing_mapping_entry,1,Andres Urrea,Andres Urrea,Quito,Quito,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:684,684,Fermin Tenti,api_cache_full_name,men,missing_mapping_entry,1,C. A. Hidalgo Aguirre,C. A. Hidalgo Aguirre,Quito,Quito,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:66627,66627,Ian Mayew,api_cache_full_name,men,missing_mapping_entry,1,Edward Winter,Edward Winter,Cary,Cary,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:104553,104553,J. P. Sinescu,api_cache_short_name,men,missing_mapping_entry,1,Denis Yevseyev,Denis Yevseyev,Brasov,Brasov,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:10501,10501,J. Ruiz,api_cache_short_name,men,missing_mapping_entry,1,Lucas Andrade da Silva,Lucas Andrade da Silva,Quito,Quito,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:70442,70442,L. Erler,api_cache_short_name,men,missing_mapping_entry,1,Fernando Rubio Fierros Alan,Fernando Rubio Fierros Alan,Troyes,Troyes,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:86639,86639,Martin Maldonado,api_cache_full_name,men,missing_mapping_entry,1,Salvador Price,Salvador Price,Quito,Quito,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:37929,37929,Patricio Alvarado,api_cache_full_name,men,missing_mapping_entry,1,Tomas Martinez,Tomas Martinez,Quito,Quito,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:2974,2974,Samir Banerjee,api_cache_full_name,men,missing_mapping_entry,1,Christian Langmo,Christian Langmo,Cary,Cary,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:56184,56184,Samuele Seghetti,api_cache_full_name,men,missing_mapping_entry,1,Oriol Roca Batalla,Oriol Roca Batalla,Milan,Milan,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate

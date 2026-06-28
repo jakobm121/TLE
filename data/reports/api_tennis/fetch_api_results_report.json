@@ -1,23 +1,15 @@
 {
   "counters": {
-    "downloaded_fixtures": 2050,
-    "kept_existing_files": 8,
+    "downloaded_fixtures": 1555,
+    "kept_existing_files": 9,
     "requested_days": 14,
-    "skipped_finalized_existing_days": 8,
-    "successful_days": 6,
-    "written_files": 6
+    "skipped_finalized_existing_days": 9,
+    "successful_days": 5,
+    "written_files": 5
   },
-  "date_start": "2026-06-14",
-  "date_stop": "2026-06-27",
+  "date_start": "2026-06-15",
+  "date_stop": "2026-06-28",
   "days": [
-    {
-      "date": "2026-06-14",
-      "downloaded_count": 143,
-      "old_count": 143,
-      "path": "data/raw/api_tennis/results/2026-06-14.json",
-      "reason": "existing_day_not_finalized",
-      "status": "written"
-    },
     {
       "date": "2026-06-15",
       "downloaded_count": 0,
@@ -100,31 +92,39 @@
     },
     {
       "date": "2026-06-25",
-      "downloaded_count": 442,
+      "downloaded_count": 0,
       "old_count": 442,
       "path": "data/raw/api_tennis/results/2026-06-25.json",
-      "reason": "existing_day_not_finalized",
-      "status": "written"
+      "reason": "existing_day_finalized",
+      "status": "skipped_finalized_existing"
     },
     {
       "date": "2026-06-26",
       "downloaded_count": 229,
-      "old_count": 220,
+      "old_count": 229,
       "path": "data/raw/api_tennis/results/2026-06-26.json",
-      "reason": "inside_recent_refresh_window",
+      "reason": "existing_day_not_finalized",
       "status": "written"
     },
     {
       "date": "2026-06-27",
       "downloaded_count": 105,
-      "old_count": 0,
+      "old_count": 105,
       "path": "data/raw/api_tennis/results/2026-06-27.json",
+      "reason": "inside_recent_refresh_window",
+      "status": "written"
+    },
+    {
+      "date": "2026-06-28",
+      "downloaded_count": 90,
+      "old_count": 0,
+      "path": "data/raw/api_tennis/results/2026-06-28.json",
       "reason": "missing_existing_file",
       "status": "written"
     }
   ],
   "errors": [],
-  "generated_at": "2026-06-27T07:35:34+00:00",
+  "generated_at": "2026-06-28T08:03:06+00:00",
   "method": "get_fixtures",
   "options": {
     "always_refresh_recent_days": 2,
