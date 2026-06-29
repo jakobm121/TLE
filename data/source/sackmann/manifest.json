@@ -21,31 +21,31 @@
     "surface_hard": 119677
   },
   "end_year": 2026,
-  "generated_at": "2026-06-22T11:11:23+00:00",
+  "generated_at": "2026-06-29T10:04:24+00:00",
   "matches": 223145,
   "source": "sackmann",
   "start_year": 2023,
   "year_files": [
     {
-      "created_at": "2026-06-22T11:11:19+00:00",
+      "created_at": "2026-06-29T10:04:21+00:00",
       "matches": 68354,
       "path": "/home/runner/work/TLE/TLE/data/source/sackmann/tle_sackmann_matches_2023.jsonl.gz",
       "year": 2023
     },
     {
-      "created_at": "2026-06-22T11:11:21+00:00",
+      "created_at": "2026-06-29T10:04:23+00:00",
       "matches": 74192,
       "path": "/home/runner/work/TLE/TLE/data/source/sackmann/tle_sackmann_matches_2024.jsonl.gz",
       "year": 2024
     },
     {
-      "created_at": "2026-06-22T11:11:22+00:00",
+      "created_at": "2026-06-29T10:04:24+00:00",
       "matches": 56263,
       "path": "/home/runner/work/TLE/TLE/data/source/sackmann/tle_sackmann_matches_2025.jsonl.gz",
       "year": 2025
     },
     {
-      "created_at": "2026-06-22T11:11:23+00:00",
+      "created_at": "2026-06-29T10:04:24+00:00",
       "matches": 24336,
       "path": "/home/runner/work/TLE/TLE/data/source/sackmann/tle_sackmann_matches_2026.jsonl.gz",
       "year": 2026
