@@ -1,0 +1,8 @@
+api_player_key,raw_api_player_key,api_name,api_name_source,gender,mapping_status,today_match_count,opponent_name,opponents_today,tournament,event_names,event_type,event_type_types,reason
+men:api:76577,76577,Angel Veliz,api_cache_full_name,men,missing_mapping_entry,1,Antonio Nunez Daniel,Antonio Nunez Daniel,Quito,Quito,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:10514,10514,Carlos Alvarez Valdes Luis,api_cache_full_name,men,missing_mapping_entry,1,Jose Rivadeneira Gallegos Felipe,Jose Rivadeneira Gallegos Felipe,Quito,Quito,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:55858,55858,Diego Dedura,api_cache_full_name,men,unmapped,1,Miguel Damas,Miguel Damas,Milan,Milan,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:3679,3679,Igor Marcondes,api_cache_full_name,men,missing_mapping_entry,1,Thomas Faurel,Thomas Faurel,Troyes,Troyes,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:93298,93298,Jose Rivadeneira Gallegos Felipe,api_cache_full_name,men,unmapped,1,Carlos Alvarez Valdes Luis,Carlos Alvarez Valdes Luis,Quito,Quito,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:719,719,Mwendwa Mbithi,api_cache_full_name,men,missing_mapping_entry,1,Matias Soto,Matias Soto,Quito,Quito,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
+men:api:391,391,Pablo Varillas Juan,api_cache_full_name,men,missing_mapping_entry,1,Dmitry Popko,Dmitry Popko,Quito,Quito,Challenger Men Singles,Challenger Men Singles,no_sackmann_candidate
