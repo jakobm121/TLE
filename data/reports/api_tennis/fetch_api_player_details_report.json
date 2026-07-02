@@ -3,69 +3,29 @@
   "cache_total_after": 5608,
   "cache_with_full_name_after": 2823,
   "collect_stats": {
-    "files_seen": 1,
-    "raw_fixtures_seen": 416,
-    "singles_fixtures_used": 280,
-    "skipped_doubles_fixtures": 136
+    "files_seen": 0,
+    "raw_fixtures_seen": 0,
+    "singles_fixtures_used": 0,
+    "skipped_doubles_fixtures": 0
   },
   "counters": {
-    "api_not_success": 36,
     "cache_existing_before": 5608,
-    "candidate_player_ids": 556,
-    "to_fetch": 36
+    "candidate_player_ids": 0,
+    "to_fetch": 0
   },
   "date_filter": {
-    "end_date": "2026-07-01",
-    "start_date": "2026-06-30"
+    "end_date": "2026-07-02",
+    "start_date": "2026-07-01"
   },
-  "errors": [
-    "9130: API success flag not true",
-    "28889: API success flag not true",
-    "34386: API success flag not true",
-    "40561: API success flag not true",
-    "53286: API success flag not true",
-    "64295: API success flag not true",
-    "69715: API success flag not true",
-    "70750: API success flag not true",
-    "70914: API success flag not true",
-    "71659: API success flag not true",
-    "77543: API success flag not true",
-    "77847: API success flag not true",
-    "78075: API success flag not true",
-    "78628: API success flag not true",
-    "80354: API success flag not true",
-    "81792: API success flag not true",
-    "82994: API success flag not true",
-    "83845: API success flag not true",
-    "85025: API success flag not true",
-    "85611: API success flag not true",
-    "88162: API success flag not true",
-    "90527: API success flag not true",
-    "95682: API success flag not true",
-    "96927: API success flag not true",
-    "103886: API success flag not true",
-    "104450: API success flag not true",
-    "104619: API success flag not true",
-    "104629: API success flag not true",
-    "104630: API success flag not true",
-    "104631: API success flag not true",
-    "104632: API success flag not true",
-    "104633: API success flag not true",
-    "104634: API success flag not true",
-    "104736: API success flag not true",
-    "104737: API success flag not true",
-    "104738: API success flag not true"
-  ],
-  "generated_at": "2026-07-01T08:36:01+00:00",
+  "errors": [],
+  "generated_at": "2026-07-02T07:50:30+00:00",
   "method": "get_players",
   "outputs": {
     "cache": "data/raw/api_tennis/players/api_players.json",
     "raw_responses": "",
     "report": "data/reports/api_tennis/fetch_api_player_details_report.json"
   },
-  "raw_files": {
-    "2026-06-30.json": 416
-  },
+  "raw_files": {},
   "raw_results_dir": "data/raw/api_tennis/results",
   "sample_fetched": [],
   "source": "api_tennis"
