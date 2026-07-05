@@ -14,11 +14,11 @@
     "to_fetch": 0
   },
   "date_filter": {
-    "end_date": "2026-07-04",
-    "start_date": "2026-07-03"
+    "end_date": "2026-07-05",
+    "start_date": "2026-07-04"
   },
   "errors": [],
-  "generated_at": "2026-07-04T07:22:01+00:00",
+  "generated_at": "2026-07-05T07:44:04+00:00",
   "method": "get_players",
   "outputs": {
     "cache": "data/raw/api_tennis/players/api_players.json",
