@@ -1,21 +1,13 @@
 {
   "counters": {
-    "failed_days": 11,
-    "kept_existing_files": 4,
+    "failed_days": 12,
+    "kept_existing_files": 3,
     "requested_days": 14,
-    "skipped_finalized_existing_days": 3
+    "skipped_finalized_existing_days": 2
   },
-  "date_start": "2026-06-27",
-  "date_stop": "2026-07-10",
+  "date_start": "2026-06-28",
+  "date_stop": "2026-07-11",
   "days": [
-    {
-      "date": "2026-06-27",
-      "downloaded_count": 0,
-      "old_count": 105,
-      "path": "data/raw/api_tennis/results/2026-06-27.json",
-      "reason": "existing_day_finalized",
-      "status": "skipped_finalized_existing"
-    },
     {
       "date": "2026-06-28",
       "downloaded_count": 0,
@@ -130,6 +122,15 @@
       "path": "data/raw/api_tennis/results/2026-07-10.json",
       "reason": "missing_existing_file",
       "status": "rejected_api_not_success"
+    },
+    {
+      "date": "2026-07-11",
+      "downloaded_count": 1,
+      "error": "1",
+      "old_count": 0,
+      "path": "data/raw/api_tennis/results/2026-07-11.json",
+      "reason": "missing_existing_file",
+      "status": "rejected_api_not_success"
     }
   ],
   "errors": [
@@ -143,9 +144,10 @@
     "2026-07-07: 1",
     "2026-07-08: 1",
     "2026-07-09: 1",
-    "2026-07-10: 1"
+    "2026-07-10: 1",
+    "2026-07-11: 1"
   ],
-  "generated_at": "2026-07-10T07:58:50+00:00",
+  "generated_at": "2026-07-11T06:34:41+00:00",
   "method": "get_fixtures",
   "options": {
     "always_refresh_recent_days": 2,
