@@ -20,7 +20,7 @@
     "surface_hard": 119353,
     "winner_loser_same_after_alias_skipped": 1
   },
-  "generated_at": "2026-07-27T08:52:09+00:00",
+  "generated_at": "2026-08-03T08:45:56+00:00",
   "player_aliases": {
     "loaded": 152,
     "path": "data/metadata/sackmann/player_aliases.json"
@@ -30,25 +30,25 @@
   },
   "year_files": [
     {
-      "created_at": "2026-07-27T08:52:05+00:00",
+      "created_at": "2026-08-03T08:45:52+00:00",
       "matches": 68250,
       "path": "/home/runner/work/TLE/TLE/data/canonical/tle_matches_2023.jsonl.gz",
       "year": 2023
     },
     {
-      "created_at": "2026-07-27T08:52:07+00:00",
+      "created_at": "2026-08-03T08:45:54+00:00",
       "matches": 73997,
       "path": "/home/runner/work/TLE/TLE/data/canonical/tle_matches_2024.jsonl.gz",
       "year": 2024
     },
     {
-      "created_at": "2026-07-27T08:52:09+00:00",
+      "created_at": "2026-08-03T08:45:55+00:00",
       "matches": 55948,
       "path": "/home/runner/work/TLE/TLE/data/canonical/tle_matches_2025.jsonl.gz",
       "year": 2025
     },
     {
-      "created_at": "2026-07-27T08:52:09+00:00",
+      "created_at": "2026-08-03T08:45:56+00:00",
       "matches": 24119,
       "path": "/home/runner/work/TLE/TLE/data/canonical/tle_matches_2026.jsonl.gz",
       "year": 2026
